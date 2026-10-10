@@ -1,5 +1,11 @@
 <!-- 本 PR 正文按 .agents/skills/dsh-pr-description/SKILL.md 填写。 -->
 
+## Branch target
+
+<!-- Follow [the branch policy](branching.md). -->
+
+- [ ] The base branch matches this change's branch type.
+
 ## Motivation
 
 <!-- 引用同仓库 Issue：Fixes #N 或 Refs #N。 -->
