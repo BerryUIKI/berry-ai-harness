@@ -4,18 +4,26 @@ import { join, resolve } from 'node:path'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   AGENTS_HOME_DIR_NAME,
+  BERRY_HOME_DIR_NAME,
+  BERRY_HOME_ENV,
   DEFAULT_AGENTS_HOME_DISPLAY,
+  DEFAULT_BERRY_HOME_DISPLAY,
   DEFAULT_DSH_HOME_DISPLAY,
   DSH_HOME_DIR_NAME,
   agentsHomeDisplay,
+  berryCachePath,
+  berryHomeDisplay,
+  berryHomePath,
   canonicalizeWatchPath,
   defaultAgentsHome,
+  defaultBerryHome,
   defaultDshHome,
   dshCachePath,
   dshHomeDisplay,
   dshHomePath,
   expandHomePath,
   resolveAgentsHome,
+  resolveBerryHome,
   resolveDshHome,
 } from '@deepseek-ai/dsh-home-paths'
 
@@ -60,6 +68,44 @@ describe('dsh path helpers', () => {
   it('labels a resolved home by whether it is the default root', () => {
     expect(dshHomeDisplay(resolve(defaultDshHome()))).toBe('~/.dsh')
     expect(dshHomeDisplay('/some/other/root')).toBe('$DSH_HOME')
+  })
+
+  it('owns the default Berry home directory name and env', () => {
+    expect(BERRY_HOME_DIR_NAME).toBe('.berry')
+    expect(DEFAULT_BERRY_HOME_DISPLAY).toBe('~/.berry')
+    expect(BERRY_HOME_ENV).toBe('BERRY_HOME')
+    expect(defaultBerryHome()).toBe(join(homedir(), '.berry'))
+  })
+
+  it('resolves explicit path before BERRY_HOME and the default', () => {
+    const envHome = join(homedir(), 'env-berry')
+
+    expect(resolveBerryHome('/tmp/explicit-berry', { BERRY_HOME: '~/env-berry' })).toBe(resolve('/tmp/explicit-berry'))
+    expect(resolveBerryHome(undefined, { BERRY_HOME: '~/env-berry' })).toBe(envHome)
+    expect(resolveBerryHome(undefined, {})).toBe(defaultBerryHome())
+  })
+
+  it('treats an empty or whitespace-only BERRY_HOME as unset', () => {
+    expect(resolveBerryHome(undefined, { BERRY_HOME: '' })).toBe(defaultBerryHome())
+    expect(resolveBerryHome(undefined, { BERRY_HOME: '   ' })).toBe(defaultBerryHome())
+  })
+
+  it('joins child segments onto the resolved BERRY_HOME', () => {
+    vi.stubEnv('BERRY_HOME', '~/env-berry')
+    expect(berryHomePath()).toBe(join(homedir(), 'env-berry'))
+    expect(berryHomePath('storages', 'cache')).toBe(join(homedir(), 'env-berry', 'storages', 'cache'))
+  })
+
+  it('labels a resolved berry home by whether it is the default root', () => {
+    expect(berryHomeDisplay(resolve(defaultBerryHome()))).toBe('~/.berry')
+    expect(berryHomeDisplay('/some/other/root')).toBe('$BERRY_HOME')
+  })
+
+  it('resolves berry cache paths', () => {
+    vi.stubEnv('BERRY_HOME', '~/env-berry')
+    expect(berryCachePath()).toBe(join(homedir(), 'env-berry', 'cache'))
+    expect(berryCachePath('models', 'index.json')).toBe(join(homedir(), 'env-berry', 'cache', 'models', 'index.json'))
+    expect(berryCachePath({ berryHome: '~/custom' }, 'item')).toBe(join(homedir(), 'custom', 'cache', 'item'))
   })
 
   it('owns the shared default agents home directory name', () => {

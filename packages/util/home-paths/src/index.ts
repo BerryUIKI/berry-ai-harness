@@ -8,6 +8,15 @@ import { opendir, realpath } from 'node:fs/promises'
 import { homedir } from 'node:os'
 import { basename, dirname, join, resolve } from 'node:path'
 
+/** Directory name for the default Berry AI Harness home under the OS home. */
+export const BERRY_HOME_DIR_NAME = '.berry'
+
+/** Stable user-facing display form for the default Berry AI Harness home. */
+export const DEFAULT_BERRY_HOME_DISPLAY = `~/${BERRY_HOME_DIR_NAME}`
+
+/** Environment variable that overrides the default Berry AI Harness home. */
+export const BERRY_HOME_ENV = 'BERRY_HOME'
+
 /** Directory name for the default DeepSeek Harness home under the OS home. */
 export const DSH_HOME_DIR_NAME = '.dsh'
 
@@ -61,6 +70,14 @@ export async function canonicalizeWatchPath(path: string): Promise<string> {
       current = parent
     }
   }
+}
+
+/**
+ * Resolve the default Berry AI Harness home using Node's platform path rules.
+ * @returns the absolute default Berry harness home path.
+ */
+export function defaultBerryHome(): string {
+  return join(homedir(), BERRY_HOME_DIR_NAME)
 }
 
 /**
@@ -122,6 +139,19 @@ function rootDisplay(resolvedRoot: string, defaultRoot: string, defaultLabel: st
 }
 
 /**
+ * Resolve the single-root Berry AI Harness home.
+ *
+ * Precedence, highest first: an explicit configured path, `$BERRY_HOME`, then
+ * `~/.berry`.
+ * @param configured - explicit harness-home override, which has highest precedence.
+ * @param env - environment mapping used to read `BERRY_HOME`.
+ * @returns the normalized absolute harness home path.
+ */
+export function resolveBerryHome(configured?: string, env: Record<string, string | undefined> = process.env): string {
+  return resolveRoot(configured, env, BERRY_HOME_ENV, defaultBerryHome)
+}
+
+/**
  * Resolve the single-root DeepSeek Harness home.
  *
  * Precedence, highest first: an explicit configured path, `$DSH_HOME`, then
@@ -150,6 +180,38 @@ export function resolveDshHome(configured?: string, env: Record<string, string |
  */
 export function resolveAgentsHome(configured?: string, env: Record<string, string | undefined> = process.env): string {
   return resolveRoot(configured, env, AGENTS_HOME_ENV, defaultAgentsHome)
+}
+
+/**
+ * Join path segments onto the resolved Berry AI Harness home.
+ * @param segments - path segments appended to the Berry home; an empty list returns the home itself.
+ * @returns the normalized absolute joined path.
+ */
+export function berryHomePath(...segments: string[]): string {
+  return join(resolveBerryHome(), ...segments)
+}
+
+/**
+ * Join path segments onto the resolved Berry home's `cache` directory without creating it; no arguments returns the directory itself.
+ * @param optionsOrSegment - explicit home override, or the first path segment; omission uses the default home resolution.
+ * @param segments - additional path segments after the first child, if any.
+ * @returns the normalized absolute cache path.
+ */
+export function berryCachePath(optionsOrSegment: { berryHome?: string } | string = {}, ...segments: string[]): string {
+  if (typeof optionsOrSegment === 'string') return berryHomePath('cache', optionsOrSegment, ...segments)
+  return join(resolveBerryHome(optionsOrSegment.berryHome), 'cache', ...segments)
+}
+
+/**
+ * Describe a resolved Berry harness home symbolically for user-facing display.
+ *
+ * It never returns an absolute machine path: the default home is labelled
+ * `~/.berry`, and any configured home is labelled `$BERRY_HOME`.
+ * @param resolvedHome - the absolute path returned by {@link resolveBerryHome}.
+ * @returns `~/.berry` for the default home, otherwise `$BERRY_HOME`.
+ */
+export function berryHomeDisplay(resolvedHome: string): string {
+  return rootDisplay(resolvedHome, defaultBerryHome(), DEFAULT_BERRY_HOME_DISPLAY, BERRY_HOME_ENV)
 }
 
 /**
