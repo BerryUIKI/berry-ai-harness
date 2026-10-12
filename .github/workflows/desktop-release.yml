@@ -1,0 +1,63 @@
+name: Desktop Release (Tauri)
+
+on:
+  pull_request:
+    paths:
+      - 'apps/desktop/src-tauri/**'
+      - '.github/workflows/desktop-release.yml'
+  push:
+    branches: [main, dev]
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-tauri:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: 'windows-latest'
+            args: '--target x86_64-pc-windows-msvc'
+          - platform: 'macos-latest'
+            args: '--target aarch64-apple-darwin'
+          - platform: 'ubuntu-24.04'
+            args: '--target x86_64-unknown-linux-gnu'
+
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin' || '' }}
+
+      - name: Install dependencies (Ubuntu only)
+        if: matrix.platform == 'ubuntu-24.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+
+      - name: Setup Node and pnpm
+        uses: pnpm/action-setup@v5.0.0
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 24
+
+      - name: Build frontend placeholder assets
+        run: |
+          pnpm install --frozen-lockfile=false
+          mkdir -p apps/desktop/dist
+          echo '<!DOCTYPE html><html><body>Berry AI Harness</body></html>' > apps/desktop/dist/index.html
+
+      - name: Check Rust compilation
+        working-directory: apps/desktop/src-tauri
+        run: cargo check
