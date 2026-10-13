@@ -57,8 +57,15 @@ interface PluginInvocation {
   args: string[]
 }
 
+/** Run legacy user data migration into Berry home. */
+interface MigrateInvocation {
+  mode: 'migrate'
+  from?: string | undefined
+  to?: string | undefined
+}
+
 /** The resolved `dsh` invocation. Help, version, and errors exit inside {@link parseDshArgs}. */
-export type DshInvocation = ProfileInvocation | DumpConfigInvocation | DumpConfigSchemaInvocation | PluginInvocation
+export type DshInvocation = ProfileInvocation | DumpConfigInvocation | DumpConfigSchemaInvocation | PluginInvocation | MigrateInvocation
 
 /** Launcher flags for profile boot and configuration dumps. */
 interface BootOptions {
@@ -202,8 +209,19 @@ export function parseDshArgs(argv: readonly string[], version: string, manageDes
       })
   }
 
+  if (first === 'migrate') {
+    const migrate = program.command('migrate').description('migrate legacy DeepSeek Harness data into Berry home')
+    migrate
+      .helpOption('-h, --help', 'show this help')
+      .option('--from <path>', 'custom legacy source directory')
+      .option('--to <path>', 'custom target Berry home directory')
+      .action((options: { from?: string; to?: string }) => {
+        resolved = { mode: 'migrate', from: options.from, to: options.to }
+      })
+  }
+
   try {
-    const expanded = first !== undefined && !first.startsWith('-') && first !== 'plugin'
+    const expanded = first !== undefined && !first.startsWith('-') && first !== 'plugin' && first !== 'migrate'
       ? ['--profile', ...argv]
       : argv
     program.parse(expanded, { from: 'user' })
