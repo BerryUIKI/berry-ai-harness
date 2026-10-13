@@ -7,7 +7,7 @@ import { describe, expect, it } from 'vitest'
 import { gatesForMode } from '../run-gates.ts'
 
 const root = resolve(import.meta.dirname, '../..')
-const masterPush = "github.event_name == 'push' && github.ref == 'refs/heads/master'"
+const primaryPush = "github.event_name == 'push' && contains(fromJSON('[\"main\",\"dev\",\"master\"]'), github.ref_name)"
 const runtimeBuilder = './.github/workflows/build-exe-for-python-sdk.yml'
 
 interface Job {
@@ -37,19 +37,20 @@ function commands(job: Job): string[] {
 
 // These boolean/string cases share Actions and JavaScript semantics. GitHub
 // supplies status functions; this probe is not a general Actions interpreter.
-function evaluateCondition(expression: string, cancelled: boolean, results: string[], event = 'pull_request'): boolean {
+function evaluateCondition(expression: string, cancelled: boolean, results: string[], event = 'pull_request', refName = 'master'): boolean {
   const source = expression.trim().replace(/^[$][{][{]|[}][}]$/g, '')
     .replaceAll('needs.*.result', 'results')
   return runInNewContext(source, {
     cancelled: () => cancelled,
     always: () => true,
     contains: (values: string[], value: string) => values.includes(value),
+    fromJSON: JSON.parse,
     results,
-    github: { event_name: event },
+    github: { event_name: event, ref_name: refName },
   }, { timeout: 1000 }) as boolean
 }
 
-describe('master-only platform scheduling', () => {
+describe('post-merge platform scheduling', () => {
   it.each(['success', 'failure', 'skipped', 'cancelled'])(
     'reports %s dependencies in active runs but never starts a cancelled-run verdict', (result) => {
       const aggregate = workflow('ci.yml').jobs['all-checks-passed']!
@@ -92,19 +93,23 @@ describe('master-only platform scheduling', () => {
     }))
   })
 
-  it('runs all three deferred carriers on master pushes with fail-loud API credentials', () => {
+  it('runs all three deferred carriers on primary-branch pushes with fail-loud API credentials', () => {
     const master = workflow('ci-master.yml')
-    expect(master.on.push).toEqual({ branches: ['master'] })
+    expect(master.on.push).toEqual({ branches: ['main', 'dev', 'master'] })
     expect(Object.keys(master.on).sort()).toEqual(['push', 'workflow_dispatch'])
     const runtime = master.jobs['python-runtime']!
     expect(runtime).toMatchObject({
-      if: masterPush,
+      if: primaryPush,
       uses: runtimeBuilder,
       with: { ci: true, targets: 'node24-linux-arm64,node24-macos-arm64,node24-macos-x64' },
       secrets: { DEEPSEEK_API_KEY_EXTERNAL: '${{ secrets.DEEPSEEK_API_KEY_EXTERNAL }}' },
     })
     expect(runtime.needs).toBeUndefined()
     expect(runtime['continue-on-error']).toBeUndefined()
+    for (const refName of ['main', 'dev', 'master']) {
+      expect(evaluateCondition(runtime.if as string, false, [], 'push', refName)).toBe(true)
+    }
+    expect(evaluateCondition(runtime.if as string, false, [], 'push', 'feature/test')).toBe(false)
     const builder = workflow('build-exe-for-python-sdk.yml')
     expect(builder.concurrency?.['cancel-in-progress']).toBe(
       '${{ !inputs.release }}',
@@ -118,10 +123,14 @@ describe('master-only platform scheduling', () => {
     expect(preflight.run).toContain('exit 1')
   })
 
-  it('runs Wine once on hosted master CI and seeds its own apt cache', () => {
+  it('runs Wine once on hosted primary-branch CI and seeds its own apt cache', () => {
     const master = workflow('ci-master.yml')
     const wine = master.jobs.windows!
-    expect(wine).toMatchObject({ if: masterPush, 'runs-on': 'ubuntu-latest' })
+    expect(wine).toMatchObject({ if: primaryPush, 'runs-on': 'ubuntu-latest' })
+    for (const refName of ['main', 'dev', 'master']) {
+      expect(evaluateCondition(wine.if as string, false, [], 'push', refName)).toBe(true)
+    }
+    expect(evaluateCondition(wine.if as string, false, [], 'push', 'feature/test')).toBe(false)
     expect(wine.needs).toBeUndefined()
     expect(wine['continue-on-error']).toBeUndefined()
     expect(master.jobs['wine-apt-cache']).toBeUndefined()
