@@ -11,8 +11,8 @@ from .models import JsonObject, Notification
 
 
 @dataclass(slots=True)
-class DeepSeekHarnessConfig:
-    """Configuration for launching the local DeepSeek Harness SDK runtime.
+class BerryAIHarnessConfig:
+    """Configuration for launching the local Berry AI Harness SDK runtime.
 
     The runtime inherits the caller's environment by default, so existing
     DEEPSEEK_API_KEY and DEEPSEEK_BASE_URL settings keep working. Use ``env`` to
@@ -26,15 +26,21 @@ class DeepSeekHarnessConfig:
     cwd: str | None = None
     runtime_cwd: str | None = None
     dsh_bin: str | None = None
+    berry_bin: str | None = None
     profile: str = "sdk"
     patches: tuple[str, ...] = ()
     dsh_home: str | None = None
+    berry_home: str | None = None
     env: dict[str, str] = field(default_factory=dict)
     initialize_timeout_seconds: float = 30.0
     request_timeout_seconds: float | None = None
     shutdown_timeout_seconds: float | None = 1.0
     base_url: str | None = None
     api_key: str | None = None
+
+
+# Backward-compatibility alias
+DeepSeekHarnessConfig = BerryAIHarnessConfig
 
 
 @dataclass(slots=True)
@@ -46,8 +52,8 @@ class RunResult:
     notifications: list[Notification]
 
 
-class DeepSeekHarness:
-    """Reusable synchronous SDK for running DeepSeek Harness agent turns.
+class BerryAIHarness:
+    """Reusable synchronous SDK for running Berry AI Harness agent turns.
 
     The runtime subprocess starts lazily and remains owned by this instance
     across calls to :meth:`run`. Use the instance as a context manager, or call
@@ -56,14 +62,14 @@ class DeepSeekHarness:
 
     def __init__(
         self,
-        config: DeepSeekHarnessConfig | None = None,
+        config: BerryAIHarnessConfig | None = None,
         *,
         _launch_args: tuple[str, ...] | None = None,
         **kwargs: object,
     ) -> None:
         if config is not None and kwargs:
-            raise TypeError("pass either DeepSeekHarnessConfig or keyword options, not both")
-        self.config = config or DeepSeekHarnessConfig(**kwargs)
+            raise TypeError("pass either BerryAIHarnessConfig or keyword options, not both")
+        self.config = config or BerryAIHarnessConfig(**kwargs)
         cwd = str(Path(self.config.cwd or Path.cwd()).resolve())
         runtime_cwd = str(Path(self.config.runtime_cwd).resolve()) if self.config.runtime_cwd is not None else cwd
         self._cwd = cwd
@@ -75,10 +81,10 @@ class DeepSeekHarness:
 
         self._client = HarnessClient(
             HarnessConfig(
-                dsh_bin=self.config.dsh_bin,
+                dsh_bin=self.config.berry_bin or self.config.dsh_bin,
                 profile=self.config.profile,
                 patches=self.config.patches,
-                dsh_home=self.config.dsh_home,
+                dsh_home=self.config.berry_home or self.config.dsh_home,
                 cwd=runtime_cwd,
                 env=env,
                 initialize_timeout_seconds=self.config.initialize_timeout_seconds,
@@ -89,7 +95,7 @@ class DeepSeekHarness:
         )
         self._initialized = False
 
-    def __enter__(self) -> "DeepSeekHarness":
+    def __enter__(self) -> "BerryAIHarness":
         self.start()
         return self
 
@@ -132,7 +138,7 @@ class DeepSeekHarness:
 
 
 class Session:
-    def __init__(self, harness: DeepSeekHarness, session_id: str) -> None:
+    def __init__(self, harness: BerryAIHarness, session_id: str) -> None:
         self.harness = harness
         self.id = session_id
 
@@ -256,3 +262,7 @@ def finish_reason(events: list[JsonObject]) -> str | None:
             raise SdkProtocolError("turn/end event requires a string data.reason.kind")
         return kind
     return None
+
+
+# Backward-compatibility alias
+DeepSeekHarness = BerryAIHarness
