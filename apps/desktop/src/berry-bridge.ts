@@ -14,6 +14,11 @@ export interface DesktopSystemInfo {
 declare global {
   interface Window {
     __TAURI_INTERNALS__?: unknown
+    __TAURI__?: {
+      core?: {
+        invoke: <T>(command: string, args?: Record<string, unknown>) => Promise<T>
+      }
+    }
     berryDesktop?: {
       getDesktopInfo: () => Promise<DesktopSystemInfo>
       notifyBackendReady: (port: number) => Promise<void>
@@ -29,9 +34,8 @@ declare global {
  * @returns Command result promise.
  */
 export async function invokeBerryCommand<T>(command: string, args: Record<string, unknown> = {}): Promise<T> {
-  if (typeof window !== 'undefined' && window.__TAURI_INTERNALS__) {
-    const { invoke } = await import('@tauri-apps/api/core')
-    return invoke<T>(command, args)
+  if (typeof window !== 'undefined' && window.__TAURI__?.core?.invoke) {
+    return window.__TAURI__.core.invoke<T>(command, args)
   }
   throw new Error(`Berry Desktop bridge unavailable: cannot invoke ${command} outside native shell`)
 }

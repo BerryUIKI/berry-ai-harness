@@ -10,8 +10,8 @@ import { resolve, join } from 'node:path'
 import { resolveBerryHome, resolveDshHome } from '@deepseek-ai/dsh-home-paths'
 
 export interface MigrateOptions {
-  from?: string
-  to?: string
+  from?: string | undefined
+  to?: string | undefined
 }
 
 export interface MigrateResult {

@@ -60,8 +60,8 @@ interface PluginInvocation {
 /** Run legacy user data migration into Berry home. */
 interface MigrateInvocation {
   mode: 'migrate'
-  from?: string
-  to?: string
+  from?: string | undefined
+  to?: string | undefined
 }
 
 /** The resolved `dsh` invocation. Help, version, and errors exit inside {@link parseDshArgs}. */
