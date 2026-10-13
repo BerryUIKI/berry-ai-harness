@@ -1,6 +1,6 @@
 {
-  "name": "@deepseek-ai/dsh",
-  "description": "dsh CLI: profile launch, plugin management, and configuration inspection",
+  "name": "@berry-ai/harness",
+  "description": "Berry AI Harness CLI: profile launch, plugin management, and configuration inspection",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
     "access": "public"
@@ -45,7 +45,7 @@
     "@deepseek-ai/dsh-goal": "workspace:*",
     "@deepseek-ai/dsh-goal-round-driver": "workspace:*",
     "@deepseek-ai/dsh-headless": "workspace:*",
-    "@deepseek-ai/dsh-home-paths": "workspace:*",
+    "@berry-ai/harness-home-paths": "workspace:*",
     "@deepseek-ai/dsh-jobs-local": "workspace:*",
     "@deepseek-ai/dsh-launch-environment": "workspace:*",
     "@deepseek-ai/dsh-mcp-client": "workspace:*",

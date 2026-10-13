@@ -26,7 +26,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, readlinkSync, realpat
 import { basename, dirname, join, relative, resolve, sep } from 'node:path'
 import type { EntryOptions } from '@deepseek-ai/cordis-plugin-loader'
 import { applyEntryPatches, type PatchOptions } from '@deepseek-ai/cordis-plugin-include'
-import { resolveDshHome } from '@deepseek-ai/dsh-home-paths'
+import { resolveDshHome } from '@berry-ai/harness-home-paths'
 import type { DshBundleManifest, DshPackageManifest } from '@deepseek-ai/dsh-package-manifest'
 import { evaluatePluginCompatibility, pluginCompatibilityWarning } from './plugin-compatibility.ts'
 import { readProfileVersionExemptions } from './profile-compatibility.ts'
@@ -639,12 +639,20 @@ function sameBundles(left: readonly string[], right: readonly string[]): boolean
 
 /** Return `manifest` with `dsh.profile.bundles` replaced, preserving all other fields. */
 function withBundles(manifest: ProfileManifest, bundles: readonly string[]): ProfileManifest {
+  const custom = manifest.berry ?? manifest.dsh
   return {
     ...manifest,
-    dsh: {
-      ...manifest.dsh,
+    berry: {
+      ...custom,
       profile: {
-        ...manifest.dsh?.profile,
+        ...custom?.profile,
+        bundles: [...bundles],
+      },
+    },
+    dsh: {
+      ...custom,
+      profile: {
+        ...custom?.profile,
         bundles: [...bundles],
       },
     },
@@ -658,7 +666,7 @@ function withBundles(manifest: ProfileManifest, bundles: readonly string[]): Pro
 function normalizeShippedProfile(name: string, dir: string, manifest: ProfileManifest): ProfileManifest {
   const installationOwned = INSTALLATION_OWNED_PROFILE_TUPLES[name]
   const template = PROFILE_TEMPLATES[name]
-  const bundles = manifest.dsh?.profile?.bundles
+  const bundles = (manifest.berry ?? manifest.dsh)?.profile?.bundles
   if (template === undefined || bundles === undefined) return manifest
   const isRetiredTuple = installationOwned !== undefined && sameBundles(bundles, installationOwned)
   if (!isRetiredTuple) return manifest
@@ -672,7 +680,7 @@ function normalizeShippedProfile(name: string, dir: string, manifest: ProfileMan
  * manifest back only when it listed one.
  */
 function dropRetiredBundles(dir: string, manifest: ProfileManifest): ProfileManifest {
-  const bundles = manifest.dsh?.profile?.bundles ?? []
+  const bundles = (manifest.berry ?? manifest.dsh)?.profile?.bundles ?? []
   const kept = bundles.filter(bundle => !RETIRED_BUNDLES.has(bundle))
   if (kept.length === bundles.length) return manifest
   const normalized = withBundles(manifest, kept)
@@ -743,7 +751,7 @@ export function loadProfileDirectory(
   options: { userLayer?: boolean } = {},
 ): Profile {
   const manifest = dropRetiredBundles(dir, readProfileManifest(binName, dir))
-  const bundles = manifest.dsh?.profile?.bundles ?? []
+  const bundles = (manifest.berry ?? manifest.dsh)?.profile?.bundles ?? []
   const layers: ProfileLayer[] = []
   const skippedBundles: SkippedBundle[] = []
   const exemptions = bundles.length === 0 ? {} : readProfileVersionExemptions(dir)
@@ -751,7 +759,7 @@ export function loadProfileDirectory(
     try {
       const packageDir = resolveBundleDir(binName, packageName, installAnchor, dir)
       const bundleManifest = readProfileManifest(binName, packageDir)
-      const bundle = bundleManifest.dsh?.bundle
+      const bundle = (bundleManifest.berry ?? bundleManifest.dsh)?.bundle
       if (bundle === undefined) {
         throw new Error(`${binName}: profile bundle ${JSON.stringify(packageName)} declares no dsh.bundle in its package.json`)
       }

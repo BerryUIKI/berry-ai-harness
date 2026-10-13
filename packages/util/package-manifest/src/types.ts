@@ -22,11 +22,31 @@ export interface DshPackageManifest {
   peerDependencies?: Record<string, string>
   /** Runtime requirements; DSH compatibility is declarative until a reader enforces it. */
   engines?: DshEnginesManifest
-  /** DSH-specific author declarations. */
+  /** DSH-specific author declarations (legacy). */
   dsh?: DshManifest
+  /** Berry-specific author declarations (preferred). */
+  berry?: DshManifest
 }
 
-/** Public author fields under `package.json.dsh`; a package may declare several roles. */
+/** Berry author declarations alias for DshManifest. */
+export type BerryManifest = DshManifest
+
+/** Berry package manifest alias for DshPackageManifest. */
+export type BerryPackageManifest = DshPackageManifest
+
+/** Berry bundle manifest alias for DshBundleManifest. */
+export type BerryBundleManifest = DshBundleManifest
+
+/** Berry profile manifest alias for DshProfileManifest. */
+export type BerryProfileManifest = DshProfileManifest
+
+/** Berry client manifest alias for DshClientManifest. */
+export type BerryClientManifest = DshClientManifest
+
+/** Berry engines manifest alias for DshEnginesManifest. */
+export type BerryEnginesManifest = DshEnginesManifest
+
+/** Public author fields under `package.json.dsh` or `package.json.berry`; a package may declare several roles. */
 export interface DshManifest {
   /** Manifest format version, independent of the npm package and Session format versions. */
   manifestVersion?: 1

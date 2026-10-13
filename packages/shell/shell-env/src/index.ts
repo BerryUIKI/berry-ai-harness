@@ -12,7 +12,7 @@ import { Service, type Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { DSH_ENV_PREFIX } from '@deepseek-ai/dsh-shell'
 import type { DshEnvironment, DshEnvironmentKey } from '@deepseek-ai/dsh-shell'
-import { DSH_HOME_ENV, resolveDshHome } from '@deepseek-ai/dsh-home-paths'
+import { DSH_HOME_ENV, resolveDshHome } from '@berry-ai/harness-home-paths'
 import type { ToolExecution } from '@deepseek-ai/dsh-tools'
 // Declares `Context.profileContext`, the launcher-provided profile the built-ins read.
 import type {} from '@deepseek-ai/dsh-app-boot'

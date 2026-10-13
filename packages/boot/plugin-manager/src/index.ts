@@ -127,8 +127,8 @@ interface InstallationManifest {
 
 /** What a package manifest says about the package: identity, one-liner, and whether it is a bundle. */
 function inspectionOf(kind: 'registry' | 'path', manifest: object, registry: Registry): Extract<PluginSpecInspection, { status: 'accepted' }> {
-  const dsh = (manifest as { dsh?: unknown }).dsh
-  const declared = typeof dsh === 'object' && dsh !== null ? dsh as { bundle?: unknown } : undefined
+  const custom = (manifest as { berry?: unknown }).berry ?? (manifest as { dsh?: unknown }).dsh
+  const declared = typeof custom === 'object' && custom !== null ? custom as { bundle?: unknown } : undefined
   const bundle = declared !== undefined && typeof declared.bundle === 'object' && declared.bundle !== null
   const name = stringField(manifest, 'name')
   const version = stringField(manifest, 'version')
@@ -282,7 +282,7 @@ export class PluginManager extends TypertRemoteService {
   listBundles(): Promise<BundleInfo[]> {
     const manifest = readProfileManifest('dsh', this.profile.dir)
     const exemptions = readProfileVersionExemptions(this.profile.dir)
-    const selected = manifest.dsh?.profile?.bundles ?? []
+    const selected = (manifest.berry ?? manifest.dsh)?.profile?.bundles ?? []
     const recorded = manifest.dependencies ?? {}
     const dependencies = Object.keys(recorded)
     const installation = JSON.parse(readFileSync(this.profile.installAnchor, 'utf8')) as InstallationManifest
@@ -382,8 +382,11 @@ export class PluginManager extends TypertRemoteService {
     }
     const manifest = readProfileManifest('dsh', this.profile.dir)
     const installation = JSON.parse(readFileSync(this.profile.installAnchor, 'utf8')) as InstallationManifest
+    const harness = manifest.berry ?? manifest.dsh
     const known = new Set([
-      ...manifest.dsh?.profile?.bundles ?? [], ...Object.keys(manifest.dependencies ?? {}), ...Object.keys(installation.dependencies ?? {}),
+      ...harness?.profile?.bundles ?? [],
+      ...Object.keys(manifest.dependencies ?? {}),
+      ...Object.keys(installation.dependencies ?? {}),
     ])
     const plan = registryPlan(options?.registry, await this.registries())
     const registry = plan[0] as Registry
@@ -582,10 +585,12 @@ export class PluginManager extends TypertRemoteService {
         name = target
         const dir = resolveBundleDir('dsh', name, this.profile.installAnchor, this.profile.dir)
         const manifest = bundleManifest(name, this.profile.dir, this.profile.installAnchor)
-        if (manifest?.dsh?.bundle === undefined) throw new ManagementFailure('not-bundle')
+        if (manifest === undefined) throw new ManagementFailure('not-bundle')
+        const custom = manifest.berry ?? manifest.dsh
+        if (custom?.bundle === undefined) throw new ManagementFailure('not-bundle')
         const compatibility = evaluatePluginCompatibility(manifest, readProfileVersionExemptions(this.profile.dir))
         if (compatibility !== undefined && !compatibility.exempted) throw new ManagementFailure('incompatible-version', [incompatiblePlugin(compatibility)])
-        for (const file of bundlePatchPaths(dir, manifest.dsh.bundle)) loadOverlayPatches('dsh', file)
+        for (const file of bundlePatchPaths(dir, custom.bundle)) loadOverlayPatches('dsh', file)
         version = manifest.version
       } catch (error) {
         // pnpm has exited by now, so the files it rewrote go back as they were.
@@ -762,7 +767,7 @@ export class PluginManager extends TypertRemoteService {
 
   private async selectBundle(name: string, enabled: boolean): Promise<void> {
     const manifest = readProfileManifest('dsh', this.profile.dir)
-    const previous = manifest.dsh?.profile?.bundles ?? []
+    const previous = (manifest.berry ?? manifest.dsh)?.profile?.bundles ?? []
     if (enabled || !previous.includes(name)) {
       const metadata = bundleManifest(name, this.profile.dir, this.profile.installAnchor)
       if (metadata === undefined) throw new ManagementFailure('not-bundle')
@@ -777,16 +782,20 @@ export class PluginManager extends TypertRemoteService {
     }
     const bundles = enabled ? [...previous, ...previous.includes(name) ? [] : [name]] : previous.filter(item => item !== name)
     if (JSON.stringify(previous) === JSON.stringify(bundles)) return
-    manifest.dsh = { ...manifest.dsh, profile: { ...manifest.dsh?.profile, bundles } }
+    const custom = manifest.berry ?? manifest.dsh
+    const profile = { ...custom?.profile, bundles }
+    manifest.berry = { ...custom, profile }
+    manifest.dsh = { ...custom, profile }
     await saveManifest(this.profile.dir, manifest)
     if (enabled) this.protectsManager(name)
   }
 
   private bundleRows(name: string): EntryOptions[] {
     const info = bundleManifest(name, this.profile.dir, this.profile.installAnchor)
-    if (info?.dsh?.bundle === undefined) return []
+    const custom = info?.berry ?? info?.dsh
+    if (custom?.bundle === undefined) return []
     const dir = resolveBundleDir('dsh', name, this.profile.installAnchor, this.profile.dir)
-    return flatten(composeEntries([bundlePatchPaths(dir, info.dsh.bundle).flatMap(file => loadOverlayPatches('dsh', file))]))
+    return flatten(composeEntries([bundlePatchPaths(dir, custom.bundle).flatMap(file => loadOverlayPatches('dsh', file))]))
   }
 
   private protectsManager(name: string): boolean {

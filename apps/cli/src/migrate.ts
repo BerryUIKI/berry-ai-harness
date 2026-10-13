@@ -7,7 +7,7 @@
 import { existsSync } from 'node:fs'
 import { cp, mkdir, readdir } from 'node:fs/promises'
 import { resolve, join } from 'node:path'
-import { resolveBerryHome, resolveDshHome } from '@deepseek-ai/dsh-home-paths'
+import { resolveBerryHome, resolveDshHome } from '@berry-ai/harness-home-paths'
 
 export interface MigrateOptions {
   from?: string | undefined

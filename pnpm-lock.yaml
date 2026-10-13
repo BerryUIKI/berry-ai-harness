@@ -115,12 +115,12 @@ importers:
       '@types/node':
         specifier: ^22.20.1
         version: 22.20.1
-      '@types/semver':
-        specifier: ^7.8.0
-        version: 7.8.0
       '@types/papaparse':
         specifier: ^5.5.2
         version: 5.5.2
+      '@types/semver':
+        specifier: ^7.8.0
+        version: 7.8.0
       '@types/spdx-expression-parse':
         specifier: ^4.0.0
         version: 4.0.0
@@ -229,6 +229,9 @@ importers:
 
   apps/cli:
     dependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../packages/util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../vendor/cordis
@@ -334,9 +337,6 @@ importers:
       '@deepseek-ai/dsh-hmr':
         specifier: workspace:*
         version: link:../../packages/boot/hmr
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../packages/util/home-paths
       '@deepseek-ai/dsh-http-proxy':
         specifier: workspace:*
         version: link:../../packages/util/http-proxy
@@ -663,6 +663,9 @@ importers:
         specifier: ^8.21.3
         version: 8.21.3
     devDependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../packages/util/home-paths
       '@deepseek-ai/dsh-app-boot':
         specifier: workspace:*
         version: link:../../packages/boot/app-boot
@@ -690,9 +693,6 @@ importers:
       '@deepseek-ai/dsh-deepseek-account':
         specifier: workspace:*
         version: link:../../packages/credentials/deepseek-account
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../packages/util/home-paths
       '@deepseek-ai/node-addon-system':
         specifier: workspace:~
         version: link:../../native/system/packages/entry
@@ -762,12 +762,15 @@ importers:
 
   apps/desktop-host:
     dependencies:
+      '@berry-ai/harness':
+        specifier: workspace:*
+        version: link:../cli
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../packages/util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../vendor/cordis
-      '@deepseek-ai/dsh':
-        specifier: workspace:*
-        version: link:../cli
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../packages/core/agent
@@ -780,9 +783,6 @@ importers:
       '@deepseek-ai/dsh-deepseek-account':
         specifier: workspace:*
         version: link:../../packages/credentials/deepseek-account
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../packages/util/home-paths
       '@deepseek-ai/dsh-host-webserver':
         specifier: workspace:*
         version: link:../../packages/host/webserver
@@ -1763,15 +1763,15 @@ importers:
         specifier: ^0.35.5
         version: 0.35.5(@types/node@22.20.1)
     devDependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-attachment':
         specifier: workspace:*
         version: link:../attachment
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../util/home-paths
 
   packages/boot/app-boot:
     dependencies:
@@ -1800,6 +1800,9 @@ importers:
         specifier: ^7.8.5
         version: 7.8.5
     devDependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1815,9 +1818,6 @@ importers:
       '@deepseek-ai/cordis-plugin-timer':
         specifier: workspace:~
         version: link:../../../vendor/timer
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../util/home-paths
       '@deepseek-ai/dsh-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
@@ -6665,6 +6665,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6686,9 +6689,6 @@ importers:
       '@deepseek-ai/dsh-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../util/home-paths
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -7199,6 +7199,9 @@ importers:
         specifier: ^2.9.0
         version: 2.9.0
     devDependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7208,9 +7211,6 @@ importers:
       '@deepseek-ai/dsh-credentials':
         specifier: workspace:*
         version: link:../credentials
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../util/home-paths
       '@deepseek-ai/dsh-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
@@ -9236,15 +9236,15 @@ importers:
 
   packages/experimental/webworker-packer:
     dependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../util/home-paths
       '@deepseek-ai/cordis-plugin-include':
         specifier: workspace:~
         version: link:../../../vendor/include
       '@deepseek-ai/dsh-experimental-webworker-runtime':
         specifier: workspace:*
         version: link:../webworker-runtime
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../util/home-paths
       '@deepseek-ai/dsh-session-format':
         specifier: workspace:*
         version: link:../../session/session-format
@@ -10307,15 +10307,15 @@ importers:
 
   packages/identity/anonymous-user-id:
     devDependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../util/home-paths
 
   packages/interaction/commands:
     dependencies:
@@ -10625,6 +10625,9 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0
     devDependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10667,9 +10670,6 @@ importers:
       '@deepseek-ai/dsh-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../util/home-paths
       '@deepseek-ai/dsh-http-proxy':
         specifier: workspace:*
         version: link:../../util/http-proxy
@@ -11589,7 +11589,7 @@ importers:
 
   packages/sdk/client:
     dependencies:
-      '@deepseek-ai/dsh':
+      '@berry-ai/harness':
         specifier: workspace:*
         version: link:../../../apps/cli
     devDependencies:
@@ -12588,6 +12588,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12597,9 +12600,6 @@ importers:
       '@deepseek-ai/dsh-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../util/home-paths
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -12912,15 +12912,15 @@ importers:
         specifier: ^2.4.2
         version: 2.9.0
     devDependencies:
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../util/home-paths
       '@deepseek-ai/dsh-skill':
         specifier: workspace:*
         version: link:../skill
@@ -15017,6 +15017,12 @@ importers:
 
   python/sdk-runtime:
     dependencies:
+      '@berry-ai/harness':
+        specifier: workspace:*
+        version: link:../../apps/cli
+      '@berry-ai/harness-home-paths':
+        specifier: workspace:*
+        version: link:../../packages/util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../vendor/cordis
@@ -15035,9 +15041,6 @@ importers:
       '@deepseek-ai/cosmokit':
         specifier: link:../../vendor/cosmokit
         version: link:../../vendor/cosmokit
-      '@deepseek-ai/dsh':
-        specifier: workspace:*
-        version: link:../../apps/cli
       '@deepseek-ai/dsh-acp':
         specifier: workspace:*
         version: link:../../packages/acp/acp
@@ -15158,9 +15161,6 @@ importers:
       '@deepseek-ai/dsh-goal-round-driver':
         specifier: workspace:*
         version: link:../../packages/goal/goal-round-driver
-      '@deepseek-ai/dsh-home-paths':
-        specifier: workspace:*
-        version: link:../../packages/util/home-paths
       '@deepseek-ai/dsh-host-plugin-inventory':
         specifier: workspace:*
         version: link:../../packages/host/plugin-inventory
@@ -15640,10 +15640,6 @@ importers:
         version: 3.5.42(typescript@6.0.3)
 
 packages:
-
-  papaparse@5.5.3:
-    resolution: {integrity: sha512-5QvjGxYVjxO59MGU2lHVYpRWBBtKHnlIAcSe1uNFCkkptUh63NFRj0FJQm7nR67puEruUci/ZkjmEFrjCAyP4A==}
-
 
   '@agentclientprotocol/sdk@1.4.0':
     resolution: {integrity: sha512-/eufudw+aFY1LKLolT6yFE6UMmYRl7fMJ/DEONSIyR6wI3slHWITBsANRGqXEY8FRzqUxwh7QEaGiZHcJPVThg==}
@@ -21701,6 +21697,9 @@ packages:
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
+  papaparse@5.5.3:
+    resolution: {integrity: sha512-5QvjGxYVjxO59MGU2lHVYpRWBBtKHnlIAcSe1uNFCkkptUh63NFRj0FJQm7nR67puEruUci/ZkjmEFrjCAyP4A==}
+
   papaparse@5.7.0:
     resolution: {integrity: sha512-qBGxg/7Q3Kl9Wfhrz2Z74UnvnHTXLNG6jmKJFeBvP2+y4lV7So+7SR62+Zd47JvdrCkX+nDcnr0ObPzek/+6RA==}
 
@@ -23226,9 +23225,6 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
 snapshots:
-
-  papaparse@5.5.3: {}
-
 
   '@agentclientprotocol/sdk@1.4.0(zod@4.4.3)':
     dependencies:
@@ -29442,6 +29438,8 @@ snapshots:
   pako@0.2.9: {}
 
   pako@1.0.11: {}
+
+  papaparse@5.5.3: {}
 
   papaparse@5.7.0: {}
 

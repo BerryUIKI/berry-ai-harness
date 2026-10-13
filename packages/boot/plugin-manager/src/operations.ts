@@ -74,7 +74,8 @@ export function anchorPathSpec(argument: string, cwd: string): string {
 export function bundleManifest(name: string, dir: string, anchor: string): ProfileManifest | undefined {
   const packageDir = resolveBundleDir('dsh', name, anchor, dir)
   const manifest = readProfileManifest('dsh', packageDir)
-  return manifest.dsh?.bundle?.patch === undefined ? undefined : manifest
+  const harness = manifest.berry ?? manifest.dsh
+  return harness?.bundle?.patch === undefined ? undefined : manifest
 }
 
 /** Atomically save a profile manifest while retaining unrelated fields.
@@ -98,11 +99,12 @@ async function reconcile(before: ProfileManifest, dir: string, anchor: string, o
   for (const name of dependencies) {
     if (beforeDeps.has(name)) continue
     const metadata = bundleManifest(name, dir, anchor)
-    if (metadata?.dsh?.bundle === undefined) {
-      options.onOutput?.(`dsh: warning: ${name} declares no dsh.bundle — installed as a plain dependency, not a profile layer\n`, 'stderr')
+    const bundle = (metadata?.berry ?? metadata?.dsh)?.bundle
+    if (bundle === undefined) {
+      options.onOutput?.(`dsh: warning: ${name} declares no bundle — installed as a plain dependency, not a profile layer\n`, 'stderr')
       continue
     }
-    for (const file of bundlePatchPaths(resolveBundleDir('dsh', name, anchor, dir), metadata.dsh.bundle)) loadOverlayPatches('dsh', file)
+    for (const file of bundlePatchPaths(resolveBundleDir('dsh', name, anchor, dir), bundle)) loadOverlayPatches('dsh', file)
     if (!bundles.includes(name)) {
       bundles.push(name)
     }
@@ -247,7 +249,7 @@ function directDependencies(manifest: ProfileManifest): Record<string, string> {
 
 /** Inspect only plugin rows contributed by the changed bundle, not its dependency closure. */
 function bundleComponentManifests(manifest: ProfileManifest, dir: string, anchor: string): ProfileManifest[] {
-  const bundle = manifest.dsh?.bundle
+  const bundle = (manifest.berry ?? manifest.dsh)?.bundle
   if (bundle === undefined) return []
   const patches = bundlePatchPaths(dir, bundle).flatMap(file => loadOverlayPatches('dsh', file))
   const names = new Set<string>()
