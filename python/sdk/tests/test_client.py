@@ -1098,7 +1098,7 @@ for line in sys.stdin:
 """.strip()
     )
 
-    module_dir = tmp_path / "deepseek_harness_runtime"
+    module_dir = tmp_path / "berry_ai_harness_runtime"
     module_dir.mkdir()
     (module_dir / "__init__.py").write_text(
         f"""
@@ -1107,7 +1107,17 @@ def resolve_bundled_launch_args(mode=None):
 """.strip()
     )
 
+    legacy_module_dir = tmp_path / "deepseek_harness_runtime"
+    legacy_module_dir.mkdir()
+    (legacy_module_dir / "__init__.py").write_text(
+        f"""
+def resolve_bundled_launch_args(mode=None):
+    return ({sys.executable!r}, {str(runtime)!r})
+""".strip()
+    )
+
     monkeypatch.syspath_prepend(str(tmp_path))
+    monkeypatch.delitem(sys.modules, "berry_ai_harness_runtime", raising=False)
     monkeypatch.delitem(sys.modules, "deepseek_harness_runtime", raising=False)
 
 
@@ -1162,15 +1172,17 @@ def test_client_rejects_an_implicit_default_dsh_home(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
     _install_fake_bundled_dsh(tmp_path, monkeypatch)
+    monkeypatch.delenv("BERRY_HOME", raising=False)
     monkeypatch.delenv("DSH_HOME", raising=False)
 
-    with pytest.raises(ValueError, match="explicit dsh_home or non-empty DSH_HOME"):
+    with pytest.raises(ValueError, match="explicit (berry_home/)?dsh_home or non-empty (BERRY_HOME/)?DSH_HOME"):
         HarnessClient(HarnessConfig(env={})).start()
 
 
 def test_client_reports_missing_bundled_runtime_dependency(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delitem(sys.modules, "berry_ai_harness_runtime", raising=False)
     monkeypatch.delitem(sys.modules, "deepseek_harness_runtime", raising=False)
     monkeypatch.setattr(sys, "path", [])
 
-    with pytest.raises(FileNotFoundError, match="Install deepseek-harness-runtime-bin"):
+    with pytest.raises(FileNotFoundError, match="Install (berry-ai-harness-runtime-bin|deepseek-harness-runtime-bin)"):
         HarnessClient(HarnessConfig(dsh_home="/explicit/home")).start()

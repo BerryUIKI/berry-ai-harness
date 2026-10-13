@@ -3,36 +3,39 @@ requires = ["hatchling==1.32.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "deepseek-harness-runtime-bin"
+name = "berry-ai-harness-runtime-bin"
 version = "0.0.0.dev0"
-description = "Bundled dsh CLI runtime for the DeepSeek Harness Python SDK"
+description = "Bundled berry CLI runtime for the Berry AI Harness Python SDK"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
-authors = [{ name = "DeepSeek" }]
+authors = [{ name = "Berry" }]
 
 [project.urls]
-Homepage = "https://github.com/deepseek-ai/deepseek-harness"
-Documentation = "https://github.com/deepseek-ai/deepseek-harness/blob/master/python/sdk-runtime/README.md"
-Issues = "https://github.com/deepseek-ai/deepseek-harness/issues"
-Source = "https://github.com/deepseek-ai/deepseek-harness"
+Homepage = "https://github.com/BerryUIKI/berry-ai-harness"
+Documentation = "https://github.com/BerryUIKI/berry-ai-harness/blob/master/python/sdk-runtime/README.md"
+Issues = "https://github.com/BerryUIKI/berry-ai-harness/issues"
+Source = "https://github.com/BerryUIKI/berry-ai-harness"
 
 [project.scripts]
-dsh = "deepseek_harness_runtime:main"
+berry = "berry_ai_harness_runtime:main"
+dsh = "berry_ai_harness_runtime:main"
 
-# Include the injected dsh executable and sidecars; exclude the dev-only node closure.
+# Include the injected berry executable and sidecars; exclude the dev-only node closure.
 [tool.hatch.build]
 artifacts = [
-  "src/deepseek_harness_runtime/runtime/deepseek-harness-sdk-runtime-*",
-  "src/deepseek_harness_runtime/runtime/deepseek-harness-sdk-runtime-*/**",
-  "src/deepseek_harness_runtime/runtime/linux-*/**",
-  "src/deepseek_harness_runtime/runtime/macos-*/**",
-  "src/deepseek_harness_runtime/runtime/win-*/**",
+  "src/berry_ai_harness_runtime/runtime/berry-ai-harness-sdk-runtime-*",
+  "src/berry_ai_harness_runtime/runtime/berry-ai-harness-sdk-runtime-*/**",
+  "src/berry_ai_harness_runtime/runtime/deepseek-harness-sdk-runtime-*",
+  "src/berry_ai_harness_runtime/runtime/deepseek-harness-sdk-runtime-*/**",
+  "src/berry_ai_harness_runtime/runtime/linux-*/**",
+  "src/berry_ai_harness_runtime/runtime/macos-*/**",
+  "src/berry_ai_harness_runtime/runtime/win-*/**",
 ]
-exclude = ["src/deepseek_harness_runtime/runtime/node"]
+exclude = ["src/berry_ai_harness_runtime/runtime/node"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/deepseek_harness_runtime"]
+packages = ["src/berry_ai_harness_runtime"]
 # The release job uses Twine 6.2.0, which accepts core metadata through 2.4.
 core-metadata-version = "2.4"
 

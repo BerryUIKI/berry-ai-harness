@@ -16,8 +16,12 @@ from dataclasses import dataclass, fields
 from pathlib import Path
 from typing import Literal, TypeVar
 
-import deepseek_harness_runtime
-from deepseek_harness_runtime._resources import run_office_process
+try:
+    import berry_ai_harness_runtime as harness_runtime
+    from berry_ai_harness_runtime._resources import run_office_process
+except ImportError:
+    import deepseek_harness_runtime as harness_runtime
+    from deepseek_harness_runtime._resources import run_office_process
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from .errors import HarnessError, SdkProtocolError
@@ -134,7 +138,7 @@ _Result = TypeVar("_Result", bound=_OfficeModel)
 
 def _run(arguments: list[str], options: OfficeOptions | None, result_type: type[_Result]) -> _Result:
     process = run_office_process(
-        [*deepseek_harness_runtime.resolve_office_launch_args(), *arguments,
+        [*harness_runtime.resolve_office_launch_args(), *arguments,
          *(options._arguments() if options is not None else [])],
     )
     stdout, stderr = process.stdout, process.stderr

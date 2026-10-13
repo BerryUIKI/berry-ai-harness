@@ -476,25 +476,32 @@ class HarnessClient:
     def _default_launch_args(self, env: dict[str, str]) -> tuple[str, ...]:
         if self.config.dsh_bin is None:
             try:
-                from deepseek_harness_runtime import resolve_bundled_launch_args
-            except ImportError as exc:
-                raise FileNotFoundError(
-                    "Unable to locate the bundled DeepSeek Harness dsh runtime. "
-                    "Install deepseek-harness-runtime-bin."
-                ) from exc
+                from berry_ai_harness_runtime import resolve_bundled_launch_args
+            except ImportError:
+                try:
+                    from deepseek_harness_runtime import resolve_bundled_launch_args
+                except ImportError as exc:
+                    raise FileNotFoundError(
+                        "Unable to locate the bundled Berry AI Harness runtime. "
+                        "Install berry-ai-harness-runtime-bin."
+                    ) from exc
             base = resolve_bundled_launch_args()
         else:
             base = (str(Path(self.config.dsh_bin).expanduser().resolve()),)
 
-        if self.config.dsh_home is not None:
-            if not self.config.dsh_home.strip():
-                raise ValueError("HarnessConfig requires a non-empty dsh_home")
-            env["DSH_HOME"] = str(Path(self.config.dsh_home).expanduser().resolve())
-        elif not env.get("DSH_HOME", "").strip():
+        home = (
+            self.config.dsh_home
+            or env.get("BERRY_HOME", "").strip()
+            or env.get("DSH_HOME", "").strip()
+        )
+        if not home:
             raise ValueError(
-                "HarnessConfig requires an explicit dsh_home or non-empty DSH_HOME; "
-                "the Python SDK never uses ~/.dsh implicitly"
+                "HarnessConfig requires an explicit berry_home/dsh_home or non-empty BERRY_HOME/DSH_HOME; "
+                "the Python SDK never uses ~/.berry implicitly"
             )
+        resolved_home = str(Path(home).expanduser().resolve())
+        env["BERRY_HOME"] = resolved_home
+        env["DSH_HOME"] = resolved_home
 
         patches = tuple(
             argument
