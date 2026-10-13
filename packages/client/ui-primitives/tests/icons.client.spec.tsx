@@ -136,6 +136,18 @@ describe('FishLogo', () => {
   })
 })
 
+describe('BerryMonogram', () => {
+  it('renders the Berry B monogram path in currentColor at square 1024 viewBox', () => {
+    const { container } = render(<primitives.BerryMonogram size={32} />)
+    const svg = container.querySelector('svg')!
+    expect(svg.getAttribute('width')).toBe('32')
+    expect(svg.getAttribute('height')).toBe('32')
+    expect(svg.getAttribute('viewBox')).toBe('0 0 1024 1024')
+    expect(container.querySelectorAll('path')).toHaveLength(1)
+    expect(container.innerHTML).toContain('currentColor')
+  })
+})
+
 describe('BrandWordmark', () => {
   it('can render the name artwork with or without its leading mark', () => {
     const view = render(<primitives.BrandWordmark />)
