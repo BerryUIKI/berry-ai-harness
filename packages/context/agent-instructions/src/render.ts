@@ -10,7 +10,7 @@ import {
   DEFAULT_AGENTS_HOME_DISPLAY,
   DEFAULT_DSH_HOME_DISPLAY,
   DSH_HOME_ENV,
-} from '@deepseek-ai/dsh-home-paths'
+} from '@berry-ai/harness-home-paths'
 import type { InstructionFile, LoadedInstructionFile } from './files.ts'
 
 const SYSTEM_REMINDER_OPEN = '<system-reminder>'

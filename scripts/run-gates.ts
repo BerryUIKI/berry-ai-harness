@@ -595,8 +595,8 @@ function electronInstallGate(): Gate {
   return {
     id: 'electron-install',
     label: 'Electron binary',
-    displayCommand: 'pnpm --filter @deepseek-ai/dsh-desktop exec install-electron',
-    ...pnpmInvocation(['--filter', '@deepseek-ai/dsh-desktop', 'exec', 'install-electron']),
+    displayCommand: 'pnpm --filter @berry-ai/harness-desktop exec install-electron',
+    ...pnpmInvocation(['--filter', '@berry-ai/harness-desktop', 'exec', 'install-electron']),
     env: { ELECTRON_GET_USE_PROXY: '1' },
   }
 }

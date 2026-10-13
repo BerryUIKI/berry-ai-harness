@@ -15,7 +15,7 @@ import type {
   SaveImageAttachment,
   StoredImageAttachment,
 } from '@deepseek-ai/dsh-attachment'
-import { dshCachePath, resolveDshHome } from '@deepseek-ai/dsh-home-paths'
+import { dshCachePath, resolveDshHome } from '@berry-ai/harness-home-paths'
 import type { NormalizationPolicy } from './normalization.ts'
 import { CompressionLimiter, compressionFailure } from './compression-limiter.ts'
 import { commitPreparedImageFile, normalizedImagePath, prepareImageFile, readImageFile, validateImageFile } from './store.ts'

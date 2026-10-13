@@ -55,6 +55,9 @@ const publicationSourceAllowlist: Readonly<Record<string, readonly string[]>> = 
 }
 /** Public source home recorded in maintained package manifests. */
 const publishedRepositoryUrl = 'git+https://github.com/deepseek-ai/deepseek-harness.git'
+const berryPublishedRepositoryUrl = 'git+https://github.com/BerryUIKI/berry-ai-harness.git'
+const isPublishedRepositoryUrl = (url?: string): boolean =>
+  url === publishedRepositoryUrl || url === berryPublishedRepositoryUrl
 /** Packages that participate in the experimental policy. */
 const experimentalPackageDirectory = /^packages\/experimental\/[^/]+$/
 /** Ordinary directories whose packages this repository publishes: one release member each. */
@@ -64,6 +67,7 @@ const desktopApplicationDirectory = 'apps/desktop'
 const localArtifactDirs = new Set(['node_modules'])
 const appPackageFiles: Readonly<Record<string, readonly string[]>> = {
   '@deepseek-ai/dsh': ['lib/*.js', 'lib/types/*.d.ts'],
+  '@berry-ai/harness': ['lib/*.js', 'lib/types/*.d.ts'],
   '@deepseek-ai/dsh-desktop-host': [
     'lib/index.js', 'lib/cli.js',
   ],
@@ -398,7 +402,7 @@ function isReleaseMemberDirectory(dir: string): boolean {
  */
 export function checkDshFamilyVersion(manifest: PackageManifest, expected: string | undefined): string | undefined {
   const name = manifest.name
-  if (name !== '@deepseek-ai/dsh' && name?.startsWith('@deepseek-ai/dsh-') !== true) return undefined
+  if (name !== '@deepseek-ai/dsh' && name !== '@berry-ai/harness' && name?.startsWith('@deepseek-ai/dsh-') !== true && name?.startsWith('@berry-ai/harness-') !== true) return undefined
   if (manifest.version !== expected) {
     return `${name}: package.json version must match root version ${expected ?? '(missing)'}`
   }
@@ -429,9 +433,9 @@ export function checkWorkspaceManifest({ dir, manifest }: WorkspaceManifest): st
     }
     const expectedDirectory = dir
     if (manifest.repository?.type !== 'git'
-      || manifest.repository.url !== publishedRepositoryUrl
+      || !isPublishedRepositoryUrl(manifest.repository.url)
       || manifest.repository.directory !== expectedDirectory) {
-      errors.push(`${label}: published Landlock package repository must use ${publishedRepositoryUrl} with directory ${expectedDirectory}`)
+      errors.push(`${label}: published Landlock package repository must use a valid repository URL with directory ${expectedDirectory}`)
     }
   } else if (isReleaseMemberDirectory(dir)) {
     // Release members state that they are publishable: npm refuses a private
@@ -450,9 +454,9 @@ export function checkWorkspaceManifest({ dir, manifest }: WorkspaceManifest): st
       errors.push(`${label}: release member must set publishConfig.access to "public"`)
     }
     if (manifest.repository?.type !== 'git'
-      || manifest.repository.url !== publishedRepositoryUrl
+      || !isPublishedRepositoryUrl(manifest.repository.url)
       || manifest.repository.directory !== dir) {
-      errors.push(`${label}: release member repository must use ${publishedRepositoryUrl} with directory ${dir}`)
+      errors.push(`${label}: release member repository must use a valid repository URL with directory ${dir}`)
     }
   } else if (!experimentalPackageDirectory.test(dir) && manifest.private !== true) {
     errors.push(`${label}: package.json must set "private": true`)
@@ -462,7 +466,7 @@ export function checkWorkspaceManifest({ dir, manifest }: WorkspaceManifest): st
     return errors
   }
 
-  if (manifest.name?.startsWith('@deepseek-ai/')) {
+  if (manifest.name?.startsWith('@deepseek-ai/') || manifest.name?.startsWith('@berry-ai/')) {
     const allowedSources = publicationSourceAllowlist[manifest.name] ?? []
     for (const file of manifest.files ?? []) {
       if (isForbiddenPublicationFile(file) && !allowedSources.includes(file)) {
@@ -471,7 +475,7 @@ export function checkWorkspaceManifest({ dir, manifest }: WorkspaceManifest): st
     }
   }
 
-  if (dir.startsWith('apps/') && dir !== desktopApplicationDirectory && manifest.name?.startsWith('@deepseek-ai/')) {
+  if (dir.startsWith('apps/') && dir !== desktopApplicationDirectory && (manifest.name?.startsWith('@deepseek-ai/') || manifest.name?.startsWith('@berry-ai/'))) {
     const expectedFiles = appPackageFiles[manifest.name]
     if (expectedFiles === undefined) {
       errors.push(`${label}: app package has no publication files policy`)
@@ -489,7 +493,7 @@ export function checkWorkspaceManifest({ dir, manifest }: WorkspaceManifest): st
     }
   }
 
-  if (dir.startsWith('packages/') && manifest.name?.startsWith('@deepseek-ai/dsh-')) {
+  if (dir.startsWith('packages/') && (manifest.name?.startsWith('@deepseek-ai/dsh-') || manifest.name?.startsWith('@berry-ai/harness-'))) {
     const peer = manifest.peerDependencies?.['@deepseek-ai/cordis']
     const dev = manifest.devDependencies?.['@deepseek-ai/cordis']
 
@@ -579,7 +583,7 @@ export function checkExperimentalDependencyIsolation(
   const errors: string[] = []
   for (const { dir, manifest } of manifests) {
     if (!standardReleaseMemberDirectory.test(dir) && dir !== 'python/sdk-runtime') continue
-    const offered = manifest.name === '@deepseek-ai/dsh' ? new Set(optionalBundles) : new Set<string>()
+    const offered = (manifest.name === '@deepseek-ai/dsh' || manifest.name === '@berry-ai/harness') ? new Set(optionalBundles) : new Set<string>()
     for (const section of runtimeDependencySections) {
       for (const [name, range] of Object.entries(manifest[section] ?? {})) {
         const experimental = experimentalNames.has(name) || isExperimentalPackageName(name)
@@ -613,7 +617,7 @@ export function checkWorkspaceProtocol(manifests: readonly WorkspaceManifest[]):
     for (const section of dependencySections) {
       for (const [name, range] of Object.entries(manifest[section] ?? {})) {
         if (!members.has(name)) continue
-        const expected = name === '@deepseek-ai/dsh' || name.startsWith('@deepseek-ai/dsh-')
+        const expected = name === '@deepseek-ai/dsh' || name === '@berry-ai/harness' || name.startsWith('@deepseek-ai/dsh-') || name.startsWith('@berry-ai/harness-')
           ? 'workspace:*'
           : vendors.has(name) ? 'workspace:~' : undefined
         if (expected !== undefined ? range === expected : range.startsWith('workspace:')) continue

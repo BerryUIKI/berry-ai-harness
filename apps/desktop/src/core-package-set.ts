@@ -39,7 +39,7 @@ const VERSION_PATTERN = /^[0-9A-Za-z][0-9A-Za-z.+_-]*$/u
 const FILE_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9._-]*\.tgz$/u
 const INTEGRITY_PATTERN = /^sha512-[A-Za-z0-9+/]+={0,2}$/u
 const DSH_PACKAGE = '@deepseek-ai/dsh'
-const RELEASE_PACKAGES = [DSH_PACKAGE, DESKTOP_HOST_PACKAGE] as const
+const BERRY_PACKAGE = '@berry-ai/harness'
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
@@ -83,12 +83,15 @@ export function parseDesktopCorePackageSet(
   if (JSON.stringify(sorted) !== JSON.stringify(packages)) {
     throw new Error('desktop package set: packages must be sorted by name')
   }
-  for (const name of RELEASE_PACKAGES) {
-    const entry = packages.find(candidate => candidate.name === name)
-    if (entry === undefined) throw new Error(`desktop package set: missing ${name}`)
-    if (expectedReleaseVersion !== undefined && entry.version !== expectedReleaseVersion) {
-      throw new Error(`desktop package set: ${name}@${entry.version} does not match Desktop ${expectedReleaseVersion}`)
-    }
+  const releaseCliPackage = packages.find(candidate => candidate.name === BERRY_PACKAGE || candidate.name === DSH_PACKAGE)
+  if (releaseCliPackage === undefined) throw new Error(`desktop package set: missing ${BERRY_PACKAGE}`)
+  if (expectedReleaseVersion !== undefined && releaseCliPackage.version !== expectedReleaseVersion) {
+    throw new Error(`desktop package set: ${releaseCliPackage.name}@${releaseCliPackage.version} does not match Desktop ${expectedReleaseVersion}`)
+  }
+  const hostEntry = packages.find(candidate => candidate.name === DESKTOP_HOST_PACKAGE)
+  if (hostEntry === undefined) throw new Error(`desktop package set: missing ${DESKTOP_HOST_PACKAGE}`)
+  if (expectedReleaseVersion !== undefined && hostEntry.version !== expectedReleaseVersion) {
+    throw new Error(`desktop package set: ${DESKTOP_HOST_PACKAGE}@${hostEntry.version} does not match Desktop ${expectedReleaseVersion}`)
   }
   return { schemaVersion: 1, packages }
 }

@@ -110,7 +110,7 @@ describe('desktop development project', () => {
     mkdirSync(join(cli, 'lib'), { recursive: true })
     mkdirSync(join(host, 'lib'), { recursive: true })
     mkdirSync(dependencies, { recursive: true })
-    writeFileSync(join(cli, 'package.json'), '{"name":"@deepseek-ai/dsh","version":"2.0.0"}\n')
+    writeFileSync(join(cli, 'package.json'), '{"name":"@berry-ai/harness","version":"2.0.0"}\n')
     writeFileSync(join(host, 'package.json'), '{"name":"@deepseek-ai/dsh-desktop-host","version":"1.2.3"}\n')
     writeFileSync(join(host, 'lib', 'index.js'), '')
     expect(() => prepareDevelopmentProject({
@@ -120,6 +120,6 @@ describe('desktop development project', () => {
       dependencyDir: dependencies,
       release: release(),
       target: 'mac-x64',
-    })).toThrow(/must be @deepseek-ai\/dsh@1\.2\.3/u)
+    })).toThrow(/must be @berry-ai\/harness@1\.2\.3/u)
   })
 })

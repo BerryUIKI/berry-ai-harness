@@ -124,9 +124,9 @@ function mirrorWorkspaceDependencies(roots: readonly string[], destinationRoot: 
  */
 export function prepareDevelopmentProject(options: DevelopmentProjectOptions): string {
   const cliManifest = readManifest(join(options.cliDir, 'package.json'))
-  if (cliManifest.name !== '@deepseek-ai/dsh' || cliManifest.version !== options.release.version) {
+  if ((cliManifest.name !== '@berry-ai/harness' && cliManifest.name !== '@deepseek-ai/dsh') || cliManifest.version !== options.release.version) {
     throw new Error(
-      `desktop development: apps/cli must be @deepseek-ai/dsh@${options.release.version}, found `
+      `desktop development: apps/cli must be @berry-ai/harness@${options.release.version}, found `
       + `${String(cliManifest.name)}@${String(cliManifest.version)}`,
     )
   }
@@ -155,10 +155,13 @@ export function prepareDevelopmentProject(options: DevelopmentProjectOptions): s
   const dshLink = join(destinationModules, '@deepseek-ai', 'dsh')
   removeOwnedPath(dshLink)
   linkDirectory(options.cliDir, dshLink)
+  const berryLink = join(destinationModules, '@berry-ai', 'harness')
+  removeOwnedPath(berryLink)
+  linkDirectory(options.cliDir, berryLink)
   const hostLink = join(destinationModules, '@deepseek-ai', 'dsh-desktop-host')
   removeOwnedPath(hostLink)
   linkDirectory(options.hostDir, hostLink)
-  const sharedPackages = [...new Set([...names, '@deepseek-ai/dsh', '@deepseek-ai/dsh-desktop-host'])].flatMap((name) => {
+  const sharedPackages = [...new Set([...names, '@deepseek-ai/dsh', '@berry-ai/harness', '@deepseek-ai/dsh-desktop-host'])].flatMap((name) => {
     const manifest = readManifest(join(destinationModules, name, 'package.json'))
     return typeof manifest.version === 'string' ? [{ name, version: manifest.version, path: `node_modules/${name}` }] : []
   })
