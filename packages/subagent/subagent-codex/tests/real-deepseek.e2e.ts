@@ -18,8 +18,8 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { SubprocessHandle } from '@deepseek-ai/dsh-subprocess'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
+import type { SubprocessHandle } from '@berry-ai/harness-subprocess'
+import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import * as codex from '../src/index.ts'
 import {
   startDeepSeekResponsesBridge,

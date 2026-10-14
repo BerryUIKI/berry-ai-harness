@@ -2,7 +2,7 @@
 import { Buffer } from 'node:buffer'
 import { performance } from 'node:perf_hooks'
 import { Readable } from 'node:stream'
-import type { SubprocessOutcome, SubprocessTerminalHandle } from '@deepseek-ai/dsh-subprocess'
+import type { SubprocessOutcome, SubprocessTerminalHandle } from '@berry-ai/harness-subprocess'
 import { assertBuiltBenchmarkRuntime } from '../support/built-worker.ts'
 import { LocalPtySession } from './session-adapter.ts'
 

@@ -17,7 +17,7 @@ const HOST_DEPENDENCY_PACKAGES: readonly string[] = [
 
 /** Required Cordis services whose Host imports are type-only. */
 const REQUIRED_SERVICE_PEERS = {
-  '@deepseek-ai/dsh-api-terminal-controller': ['@deepseek-ai/dsh-subprocess'],
+  '@deepseek-ai/dsh-api-terminal-controller': ['@berry-ai/harness-subprocess'],
 } as const satisfies Readonly<Record<string, readonly string[]>>
 
 /** Development-only package relationships not represented by source imports. */

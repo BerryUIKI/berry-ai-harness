@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-ssh-helper-runtime",
+  "name": "@berry-ai/harness-ssh-helper-runtime",
   "description": "Private executable carrier for the POSIX SSH helper and managed workers",
   "version": "0.2.1-alpha.2",
   "private": true,
@@ -24,9 +24,9 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-fs-ssh": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-ssh": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-ssh": "workspace:*"
+    "@berry-ai/harness-fs-ssh": "workspace:*",
+    "@berry-ai/harness-subprocess-ssh": "workspace:*",
+    "@berry-ai/harness-sandbox-ssh": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -49,15 +49,15 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-skill": "workspace:*",
-    "@deepseek-ai/dsh-ssh": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
+    "@berry-ai/harness-ssh": "workspace:*",
+    "@berry-ai/harness-subprocess": "workspace:*",
+    "@berry-ai/harness-subprocess-local": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
     "@berry-ai/harness-util-crypto": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
-    "@deepseek-ai/dsh-win32-process": "workspace:*",
+    "@berry-ai/harness-win32-process": "workspace:*",
     "@deepseek-ai/node-addon-system": "workspace:~",
     "@deepseek-ai/schemastery": "workspace:~"
   }

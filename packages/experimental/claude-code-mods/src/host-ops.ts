@@ -11,7 +11,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 // Type-only: activate the `ctx.get('subprocess')` and `ctx.get('sessionProjections')` Context declarations.
-import type {} from '@deepseek-ai/dsh-subprocess'
+import type {} from '@berry-ai/harness-subprocess'
 import type {} from '@deepseek-ai/dsh-session-projection'
 import type { SessionProjectionStateMap } from '@deepseek-ai/dsh-session-projection/types'
 import type { CommandDefinition } from '@deepseek-ai/dsh-commands'

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-win32-process",
+  "name": "@berry-ai/harness-win32-process",
   "description": "Shared low-level Win32 process, stdio, and Job Object primitives",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

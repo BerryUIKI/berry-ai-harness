@@ -134,7 +134,7 @@ When launched with the subprocess control marker, the runner forwards fd 7 throu
 
 ### Header verification and source map
 
-The sandbox-owned SID, ACL, token, file, and lock declarations are checked against Windows headers by [`verify/abi-probe.cpp`](verify/abi-probe.cpp). The shared process, stdio, and Job ABI is owned and verified by [`@deepseek-ai/dsh-win32-process`](../../subprocess/win32-process/README.md#header-verification).
+The sandbox-owned SID, ACL, token, file, and lock declarations are checked against Windows headers by [`verify/abi-probe.cpp`](verify/abi-probe.cpp). The shared process, stdio, and Job ABI is owned and verified by [`@berry-ai/harness-win32-process`](../../subprocess/win32-process/README.md#header-verification).
 
 | File | Role |
 |---|---|

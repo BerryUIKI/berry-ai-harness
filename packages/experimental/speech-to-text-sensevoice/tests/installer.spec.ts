@@ -5,7 +5,7 @@ import { access, mkdtemp, mkdir, readFile, rename, rm, writeFile } from 'node:fs
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import LocalSubprocess from '@deepseek-ai/dsh-subprocess-local'
+import LocalSubprocess from '@berry-ai/harness-subprocess-local'
 import SpeechToText from '@deepseek-ai/dsh-experimental-speech-to-text'
 import { afterEach, expect, it, vi } from 'vitest'
 import type { SpeechPreparationState } from '@deepseek-ai/dsh-experimental-speech-to-text/types'

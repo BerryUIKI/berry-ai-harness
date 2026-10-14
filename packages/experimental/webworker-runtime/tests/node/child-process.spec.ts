@@ -24,7 +24,7 @@ import { hostFileSystem } from '@deepseek-ai/dsh-experimental-webworker-runtime/
 import {
   LANDLOCK_EXECUTABLE, landlockFileSystem, parseLandlockArguments,
 } from '@deepseek-ai/dsh-experimental-webworker-runtime/src/shell/process/landlock.ts'
-import { spawnSubprocess } from '@deepseek-ai/dsh-subprocess-local/src/spawn.ts'
+import { spawnSubprocess } from '@berry-ai/harness-subprocess-local/src/spawn.ts'
 
 vi.mock('node:child_process', async () =>
   await import('@deepseek-ai/dsh-experimental-webworker-runtime/src/node/builtin_modules/implemented/child_process.ts'))

@@ -553,6 +553,30 @@
       ]
     },
     {
+      "name": "@berry-ai/harness-subprocess",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-subprocess",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-subprocess-local",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-subprocess-local",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
       "name": "@berry-ai/harness-tool-goal",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -583,6 +607,18 @@
         {
           "location": "node_modules/@berry-ai/harness-tool-workflow",
           "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-win32-process",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-win32-process",
+          "direct": false,
           "optional": false,
           "peer": false
         }
@@ -2689,30 +2725,6 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-subprocess",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-subprocess",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-subprocess-local",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-subprocess-local",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
       "name": "@deepseek-ai/dsh-system-prompt",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -3199,18 +3211,6 @@
         {
           "location": "node_modules/@deepseek-ai/dsh-webhook-github",
           "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-win32-process",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-win32-process",
-          "direct": false,
           "optional": false,
           "peer": false
         }

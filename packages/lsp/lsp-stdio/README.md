@@ -33,7 +33,7 @@ The `servers` record maps each stable provider id to one server command. The pro
 
 ```yaml
 - name: '@deepseek-ai/dsh-fs-local'
-- name: '@deepseek-ai/dsh-subprocess-local'
+- name: '@berry-ai/harness-subprocess-local'
 - name: '@deepseek-ai/dsh-lsp'
 - name: '@deepseek-ai/dsh-lsp-stdio'
   config:

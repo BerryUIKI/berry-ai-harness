@@ -26,7 +26,7 @@ import type {
   SubprocessHandle,
   SubprocessOutcome,
   SubprocessSpawnSpec,
-} from '@deepseek-ai/dsh-subprocess'
+} from '@berry-ai/harness-subprocess'
 import {
   CodexAppServerWire,
   type CodexWireFailureFacts,

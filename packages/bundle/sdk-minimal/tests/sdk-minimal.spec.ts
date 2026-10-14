@@ -38,7 +38,7 @@ describe('dsh-sdk-minimal bundle', () => {
       ['tool-working-directory', '@deepseek-ai/dsh-tool-working-directory'],
       ['session-projection', '@deepseek-ai/dsh-session-projection'],
       ['sandbox-policy', '@deepseek-ai/dsh-sandbox-policy'],
-      ['subprocess', '@deepseek-ai/dsh-subprocess-local'],
+      ['subprocess', '@berry-ai/harness-subprocess-local'],
       ['pty', '@berry-ai/harness-terminal'],
       ['terminal-bash', '@berry-ai/harness-terminal-bash'],
       ['terminal-pwsh', '@berry-ai/harness-terminal-bash'],

@@ -34,7 +34,7 @@ Mount the tools after a `ctx.subprocess` backend; no host `rg` install is needed
 A subprocess backend, then the tools; the spill backend is optional and makes capped results fully recoverable.
 
 ```yaml
-- name: '@deepseek-ai/dsh-subprocess-local'
+- name: '@berry-ai/harness-subprocess-local'
 - name: '@deepseek-ai/dsh-tool-fs-search'
   config:
     sampleOverCapGlobResults: false

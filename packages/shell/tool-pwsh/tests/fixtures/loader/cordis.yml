@@ -16,7 +16,7 @@
   name: '@deepseek-ai/dsh-tools'
 
 - id: subprocess
-  name: '@deepseek-ai/dsh-subprocess-local'
+  name: '@berry-ai/harness-subprocess-local'
 
 - id: bash
   name: '@deepseek-ai/dsh-pwsh-local'

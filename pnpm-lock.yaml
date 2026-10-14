@@ -494,6 +494,9 @@ importers:
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../packages/settings/settings
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../packages/subprocess/subprocess-local
       '@deepseek-ai/dsh-acp':
         specifier: workspace:*
         version: link:../../packages/acp/acp
@@ -608,9 +611,6 @@ importers:
       '@deepseek-ai/dsh-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../packages/subagent/subagent-spawn-in-process
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../packages/subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../packages/core/system-prompt
@@ -826,6 +826,9 @@ importers:
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../packages/util/launch-environment
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../packages/subprocess/subprocess-local
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../packages/util/values
@@ -898,9 +901,6 @@ importers:
       '@deepseek-ai/dsh-session-projection-cache':
         specifier: workspace:*
         version: link:../../packages/session/session-projection-cache
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../packages/subprocess/subprocess-local
       '@types/node':
         specifier: ^22.20.1
         version: 22.20.1
@@ -967,6 +967,9 @@ importers:
       '@berry-ai/harness-storage-json':
         specifier: workspace:*
         version: link:../packages/storage/storage-json
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../packages/subprocess/subprocess
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../packages/terminal/terminal
@@ -1045,9 +1048,6 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../packages/subagent/subagent
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../packages/subprocess/subprocess
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../packages/llm/token-meter
@@ -1601,6 +1601,12 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
@@ -1634,12 +1640,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -1962,6 +1962,9 @@ importers:
       '@berry-ai/harness-package-manifest':
         specifier: workspace:*
         version: link:../../util/package-manifest
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1989,9 +1992,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -2098,6 +2098,9 @@ importers:
       '@berry-ai/harness-storage-json':
         specifier: workspace:*
         version: link:../../storage/storage-json
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-tool-call-timeout-policy':
         specifier: workspace:*
         version: link:../../guard/timeout-policy
@@ -2254,9 +2257,6 @@ importers:
       '@deepseek-ai/dsh-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../subagent/subagent-spawn-in-process
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -2410,6 +2410,9 @@ importers:
       '@berry-ai/harness-mcp-resources':
         specifier: workspace:*
         version: link:../../mcp/mcp-resources
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../terminal/terminal
@@ -2470,9 +2473,6 @@ importers:
       '@deepseek-ai/dsh-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -2534,6 +2534,9 @@ importers:
       '@berry-ai/harness-schedule':
         specifier: workspace:*
         version: link:../../schedule/schedule
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../terminal/terminal
@@ -2834,9 +2837,6 @@ importers:
       '@deepseek-ai/dsh-skill-filesystem':
         specifier: workspace:*
         version: link:../../skill/skill-filesystem
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
       '@deepseek-ai/dsh-time-context':
         specifier: workspace:*
         version: link:../../context/time-context
@@ -6854,6 +6854,9 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6887,9 +6890,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -7310,6 +7310,12 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
     devDependencies:
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7340,12 +7346,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-tool-fs':
         specifier: workspace:*
         version: link:../../fs/tool-fs
@@ -7498,6 +7498,9 @@ importers:
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7561,9 +7564,6 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -7760,6 +7760,9 @@ importers:
       '@berry-ai/harness-mcp-client':
         specifier: workspace:*
         version: link:../../mcp/mcp-client
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -7769,9 +7772,6 @@ importers:
       '@deepseek-ai/dsh-experimental-browser-use-runtime':
         specifier: workspace:*
         version: link:../browser-use-runtime
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -7855,6 +7855,12 @@ importers:
       '@berry-ai/harness-storage-json':
         specifier: workspace:*
         version: link:../../storage/storage-json
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7897,12 +7903,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -8322,6 +8322,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -8361,9 +8364,6 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -8377,6 +8377,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -8410,9 +8413,6 @@ importers:
       '@deepseek-ai/dsh-shell':
         specifier: workspace:*
         version: link:../../shell/shell
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -8746,18 +8746,18 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-experimental-speech-to-text':
         specifier: workspace:*
         version: link:../speech-to-text
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       tsx:
         specifier: ^4.23.13
         version: 4.23.13
@@ -8961,6 +8961,9 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../terminal/terminal
@@ -9000,9 +9003,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -9019,6 +9019,9 @@ importers:
         specifier: workspace:*
         version: link:../worktree
     devDependencies:
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9058,9 +9061,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -9301,6 +9301,9 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9343,9 +9346,6 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/node-addon-system':
         specifier: workspace:~
         version: link:../../../native/system/packages/entry
@@ -9368,6 +9368,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9398,12 +9404,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -9800,6 +9800,12 @@ importers:
       '@berry-ai/harness-spill':
         specifier: workspace:*
         version: link:../../spill/spill
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -9821,12 +9827,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -9934,6 +9934,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9970,9 +9973,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
@@ -10201,7 +10201,7 @@ importers:
       '@berry-ai/harness-native-command':
         specifier: workspace:*
         version: link:../../util/native-command
-      '@deepseek-ai/dsh-subprocess':
+      '@berry-ai/harness-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
       '@deepseek-ai/schemastery':
@@ -10973,6 +10973,12 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -10991,12 +10997,6 @@ importers:
       '@deepseek-ai/dsh-lsp':
         specifier: workspace:*
         version: link:../lsp
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -11013,6 +11013,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -11043,9 +11046,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -11080,6 +11080,9 @@ importers:
       '@berry-ai/harness-mcp-resources':
         specifier: workspace:*
         version: link:../mcp-resources
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -11092,9 +11095,6 @@ importers:
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -11341,6 +11341,12 @@ importers:
       '@berry-ai/harness-ptc-runtime':
         specifier: workspace:*
         version: link:../ptc-runtime
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -11368,12 +11374,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
 
   packages/sandbox/sandbox:
     dependencies:
@@ -11452,7 +11452,7 @@ importers:
       '@berry-ai/harness-lazy-require':
         specifier: workspace:*
         version: link:../../util/lazy-require
-      '@deepseek-ai/dsh-win32-process':
+      '@berry-ai/harness-win32-process':
         specifier: workspace:*
         version: link:../../subprocess/win32-process
       koffi:
@@ -11462,6 +11462,12 @@ importers:
         specifier: ^2.4.2
         version: 2.9.0
     devDependencies:
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11480,12 +11486,6 @@ importers:
       '@deepseek-ai/dsh-skill':
         specifier: workspace:*
         version: link:../../skill/skill
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
 
   packages/schedule/schedule:
     dependencies:
@@ -12177,6 +12177,9 @@ importers:
       '@berry-ai/harness-otel':
         specifier: workspace:*
         version: link:../../telemetry/otel
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12207,9 +12210,6 @@ importers:
       '@deepseek-ai/dsh-session-telemetry':
         specifier: workspace:*
         version: link:../session-telemetry
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
 
   packages/session/session-title:
     dependencies:
@@ -12475,6 +12475,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -12484,15 +12490,12 @@ importers:
       '@deepseek-ai/dsh-shell':
         specifier: workspace:*
         version: link:../shell
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
 
   packages/shell/bash-sandbox:
     devDependencies:
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12514,9 +12517,6 @@ importers:
       '@deepseek-ai/dsh-shell':
         specifier: workspace:*
         version: link:../shell
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/node-addon-system':
         specifier: workspace:~
         version: link:../../../native/system/packages/entry
@@ -12527,6 +12527,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -12536,15 +12542,12 @@ importers:
       '@deepseek-ai/dsh-shell':
         specifier: workspace:*
         version: link:../shell
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
 
   packages/shell/pwsh-sandbox:
     devDependencies:
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12566,21 +12569,18 @@ importers:
       '@deepseek-ai/dsh-shell':
         specifier: workspace:*
         version: link:../shell
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
 
   packages/shell/shell:
     devDependencies:
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-sandbox':
         specifier: workspace:*
         version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
 
   packages/shell/shell-env:
     dependencies:
@@ -12625,6 +12625,9 @@ importers:
       '@berry-ai/harness-ptc-runtime':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
@@ -12667,9 +12670,6 @@ importers:
       '@deepseek-ai/dsh-shell-env':
         specifier: workspace:*
         version: link:../shell-env
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -12692,6 +12692,9 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../terminal/terminal
@@ -12731,9 +12734,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -12759,6 +12759,9 @@ importers:
       '@berry-ai/harness-jobs-local':
         specifier: workspace:*
         version: link:../../jobs/jobs-local
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
@@ -12801,9 +12804,6 @@ importers:
       '@deepseek-ai/dsh-shell-env':
         specifier: workspace:*
         version: link:../shell-env
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -12826,6 +12826,9 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../terminal/terminal
@@ -12868,9 +12871,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -13088,6 +13088,9 @@ importers:
       '@berry-ai/harness-spill-local':
         specifier: workspace:*
         version: link:../spill-local
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13121,9 +13124,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../llm/token-meter
@@ -13146,6 +13146,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-ssh':
+        specifier: workspace:*
+        version: link:../ssh
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13158,9 +13161,6 @@ importers:
       '@deepseek-ai/dsh-sandbox-policy':
         specifier: workspace:*
         version: link:../../sandbox/sandbox-policy
-      '@deepseek-ai/dsh-ssh':
-        specifier: workspace:*
-        version: link:../ssh
 
   packages/ssh/sandbox-ssh:
     dependencies:
@@ -13171,15 +13171,15 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-ssh':
+        specifier: workspace:*
+        version: link:../ssh
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-sandbox':
         specifier: workspace:*
         version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-ssh':
-        specifier: workspace:*
-        version: link:../ssh
 
   packages/ssh/ssh:
     dependencies:
@@ -13193,9 +13193,24 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-fs-ssh':
+        specifier: workspace:*
+        version: link:../fs-ssh
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-sandbox-ssh':
+        specifier: workspace:*
+        version: link:../sandbox-ssh
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
+      '@berry-ai/harness-subprocess-ssh':
+        specifier: workspace:*
+        version: link:../subprocess-ssh
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -13211,9 +13226,6 @@ importers:
       '@deepseek-ai/dsh-fs-sandbox':
         specifier: workspace:*
         version: link:../../fs/fs-sandbox
-      '@deepseek-ai/dsh-fs-ssh':
-        specifier: workspace:*
-        version: link:../fs-ssh
       '@deepseek-ai/dsh-lsp':
         specifier: workspace:*
         version: link:../../lsp/lsp
@@ -13229,21 +13241,9 @@ importers:
       '@deepseek-ai/dsh-sandbox-policy':
         specifier: workspace:*
         version: link:../../sandbox/sandbox-policy
-      '@deepseek-ai/dsh-sandbox-ssh':
-        specifier: workspace:*
-        version: link:../sandbox-ssh
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
-      '@deepseek-ai/dsh-subprocess-ssh':
-        specifier: workspace:*
-        version: link:../subprocess-ssh
 
   packages/ssh/ssh-helper-runtime:
     dependencies:
@@ -13262,6 +13262,15 @@ importers:
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-ssh':
+        specifier: workspace:*
+        version: link:../ssh
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -13271,6 +13280,9 @@ importers:
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
+      '@berry-ai/harness-win32-process':
+        specifier: workspace:*
+        version: link:../../subprocess/win32-process
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13316,24 +13328,12 @@ importers:
       '@deepseek-ai/dsh-skill':
         specifier: workspace:*
         version: link:../../skill/skill
-      '@deepseek-ai/dsh-ssh':
-        specifier: workspace:*
-        version: link:../ssh
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-win32-process':
-        specifier: workspace:*
-        version: link:../../subprocess/win32-process
       '@deepseek-ai/node-addon-system':
         specifier: workspace:~
         version: link:../../../native/system/packages/entry
@@ -13344,13 +13344,13 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
-      '@deepseek-ai/dsh-fs-ssh':
+      '@berry-ai/harness-fs-ssh':
         specifier: workspace:*
         version: link:../fs-ssh
-      '@deepseek-ai/dsh-sandbox-ssh':
+      '@berry-ai/harness-sandbox-ssh':
         specifier: workspace:*
         version: link:../sandbox-ssh
-      '@deepseek-ai/dsh-subprocess-ssh':
+      '@berry-ai/harness-subprocess-ssh':
         specifier: workspace:*
         version: link:../subprocess-ssh
 
@@ -13363,18 +13363,18 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-ssh':
+        specifier: workspace:*
+        version: link:../ssh
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-ssh':
-        specifier: workspace:*
-        version: link:../ssh
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
 
   packages/storage/storage:
     devDependencies:
@@ -13539,6 +13539,12 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -13572,12 +13578,6 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-tool-subagent':
         specifier: workspace:*
         version: link:../tool-subagent
@@ -13609,6 +13609,12 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -13648,12 +13654,6 @@ importers:
       '@deepseek-ai/dsh-subagent-codex':
         specifier: workspace:*
         version: link:../subagent-codex
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -13679,6 +13679,12 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -13715,12 +13721,6 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -13737,6 +13737,9 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13785,9 +13788,6 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -13838,6 +13838,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13877,9 +13880,6 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-tool-bash':
         specifier: workspace:*
         version: link:../../shell/tool-bash
@@ -14005,7 +14005,7 @@ importers:
       '@berry-ai/harness-lazy-require':
         specifier: workspace:*
         version: link:../../util/lazy-require
-      '@deepseek-ai/dsh-win32-process':
+      '@berry-ai/harness-win32-process':
         specifier: workspace:*
         version: link:../win32-process
       koffi:
@@ -14015,6 +14015,9 @@ importers:
         specifier: 1.2.0-beta.15
         version: 1.2.0-beta.15(patch_hash=9d30053266d0f39d3debe894c675867f6782da6bcadbc94a693b3cfb9eff8ed0)
     devDependencies:
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../subprocess
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -14024,9 +14027,6 @@ importers:
       '@deepseek-ai/dsh-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../subprocess
 
   packages/subprocess/win32-process:
     dependencies:
@@ -14111,6 +14111,12 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
     devDependencies:
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../terminal
@@ -14132,12 +14138,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -14920,6 +14920,12 @@ importers:
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../subprocess/subprocess-local
       '@berry-ai/harness-workflow':
         specifier: workspace:*
         version: link:../workflow
@@ -14971,12 +14977,6 @@ importers:
       '@deepseek-ai/dsh-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../subagent/subagent-spawn-in-process
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -15119,6 +15119,12 @@ importers:
       '@berry-ai/harness-storage-domain':
         specifier: workspace:*
         version: link:../../packages/storage/storage-domain
+      '@berry-ai/harness-subprocess':
+        specifier: workspace:*
+        version: link:../../packages/subprocess/subprocess
+      '@berry-ai/harness-subprocess-local':
+        specifier: workspace:*
+        version: link:../../packages/subprocess/subprocess-local
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../packages/terminal/terminal
@@ -15383,12 +15389,6 @@ importers:
       '@deepseek-ai/dsh-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../packages/subagent/subagent-spawn-in-process
-      '@deepseek-ai/dsh-subprocess':
-        specifier: workspace:*
-        version: link:../../packages/subprocess/subprocess
-      '@deepseek-ai/dsh-subprocess-local':
-        specifier: workspace:*
-        version: link:../../packages/subprocess/subprocess-local
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../packages/core/system-prompt

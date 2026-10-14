@@ -34,7 +34,7 @@ kind: "package-reference"
 一个子进程后端，然后是工具；spill 后端为可选，使达到上限的结果可完整恢复。
 
 ```yaml
-- name: '@deepseek-ai/dsh-subprocess-local'
+- name: '@berry-ai/harness-subprocess-local'
 - name: '@deepseek-ai/dsh-tool-fs-search'
   config:
     sampleOverCapGlobResults: false

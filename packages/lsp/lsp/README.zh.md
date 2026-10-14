@@ -37,7 +37,7 @@ seam 需要提供方与消费方才能发挥作用。最小组合挂载服务、
 
 ```yaml
 - name: '@deepseek-ai/dsh-fs-local'
-- name: '@deepseek-ai/dsh-subprocess-local'
+- name: '@berry-ai/harness-subprocess-local'
 - name: '@deepseek-ai/dsh-lsp'
 - name: '@deepseek-ai/dsh-lsp-stdio'
 - name: '@deepseek-ai/dsh-tool-lsp'

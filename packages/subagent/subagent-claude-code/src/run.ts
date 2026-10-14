@@ -31,7 +31,7 @@ import {
   type SubprocessHandle,
   type SubprocessOutcome,
   type SubprocessSpawnSpec,
-} from '@deepseek-ai/dsh-subprocess'
+} from '@berry-ai/harness-subprocess'
 import {
   claudeSpawnSpec,
   ManagedClaudeCodeProcess,

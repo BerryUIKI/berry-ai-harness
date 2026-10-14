@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { SandboxExecutionPolicy } from '@deepseek-ai/dsh-sandbox'
-import type { SubprocessCollectedOutputs } from '@deepseek-ai/dsh-subprocess'
+import type { SubprocessCollectedOutputs } from '@berry-ai/harness-subprocess'
 import { deadline } from '@berry-ai/harness-timeout'
 
 /** Resolved process resource limits owned by the worktree service. */

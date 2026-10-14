@@ -2,7 +2,7 @@
 import { isAbsolute } from 'node:path'
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/dsh-experimental-speech-to-text'
-import type {} from '@deepseek-ai/dsh-subprocess'
+import type {} from '@berry-ai/harness-subprocess'
 import type { SpeechProviderId } from '@deepseek-ai/dsh-experimental-speech-to-text/types'
 import { Config } from './config.ts'
 import { SenseVoiceWorker } from './recognizer.ts'
