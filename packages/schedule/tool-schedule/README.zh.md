@@ -3,13 +3,13 @@ description: "预设作用域的提醒管理工具（schedule_create、schedule_
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-schedule
+# @berry-ai/harness-tool-schedule
 
 [English](README.md) | 中文
 
 ## 概述
 
-使用 `dsh-tool-schedule`，可通过 `schedule_create`、`schedule_list`、`schedule_update` 与 `schedule_delete` 让 agent（智能体）创建、列出、编辑和删除宿主持久提醒。本包把四个工具注册进挂载它的 preset 或 Agent 作用域，因此由组合决定哪些 agent 获得这些工具；`minimal` 不获得。每次调用都作用于调用方 Agent 的 Session，并且只管理已存储的提醒——存储、调度与投递由宿主 `@deepseek-ai/dsh-schedule` 服务负责。失败时返回一个结构化错误码，而不是存储细节。
+使用 `dsh-tool-schedule`，可通过 `schedule_create`、`schedule_list`、`schedule_update` 与 `schedule_delete` 让 agent（智能体）创建、列出、编辑和删除宿主持久提醒。本包把四个工具注册进挂载它的 preset 或 Agent 作用域，因此由组合决定哪些 agent 获得这些工具；`minimal` 不获得。每次调用都作用于调用方 Agent 的 Session，并且只管理已存储的提醒——存储、调度与投递由宿主 `@berry-ai/harness-schedule` 服务负责。失败时返回一个结构化错误码，而不是存储细节。
 
 ## 目录
 
@@ -29,7 +29,7 @@ kind: "package-reference"
 
 ### 何时选用
 
-当 preset 的 agent 需要在自己的 Session 中安排未来工作时选用它，并在同一进程内加载 `@deepseek-ai/dsh-schedule`：本包只是该服务面向模型的消费方。需要保持能力精简的 preset——随产品发布的例子是 `minimal`——会省略该行，其 agent 完全看不到提醒工具。
+当 preset 的 agent 需要在自己的 Session 中安排未来工作时选用它，并在同一进程内加载 `@berry-ai/harness-schedule`：本包只是该服务面向模型的消费方。需要保持能力精简的 preset——随产品发布的例子是 `minimal`——会省略该行，其 agent 完全看不到提醒工具。
 
 ### 四个工具
 
@@ -41,7 +41,7 @@ kind: "package-reference"
 ### 最小配置
 
 ```yaml
-- name: '@deepseek-ai/dsh-tool-schedule'
+- name: '@berry-ai/harness-tool-schedule'
 ```
 
 本包不声明任何 `Config` 字段。它注入 `ctx.tools`，并在作用域解析到宿主 `ctx.schedule` 服务后注册这四个工具，因此保持该服务关闭的组合不会挂载任何提醒工具。每次调用都作用于派发该调用的 Agent 的 Session。

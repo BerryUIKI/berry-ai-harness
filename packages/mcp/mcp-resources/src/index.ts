@@ -1,7 +1,7 @@
 /**
  * Scoped MCP resource providers and the shared model-facing resource tools.
  *
- * @module @deepseek-ai/dsh-mcp-resources
+ * @module @berry-ai/harness-mcp-resources
  */
 
 import { Service, type Context } from '@deepseek-ai/cordis'

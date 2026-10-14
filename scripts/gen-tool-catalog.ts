@@ -56,8 +56,8 @@ import * as ToolStrReplaceEditor from '@deepseek-ai/dsh-tool-str-replace-editor'
 import TerminalSessionService from '@berry-ai/harness-terminal'
 import * as ToolPty from '@deepseek-ai/dsh-tool-terminal'
 import * as ToolGoal from '@deepseek-ai/dsh-tool-goal'
-import * as ToolSchedule from '@deepseek-ai/dsh-tool-schedule'
-import type ScheduleService from '@deepseek-ai/dsh-schedule'
+import * as ToolSchedule from '@berry-ai/harness-tool-schedule'
+import type ScheduleService from '@berry-ai/harness-schedule'
 import Lsp from '@deepseek-ai/dsh-lsp'
 import * as ToolLsp from '@deepseek-ai/dsh-tool-lsp'
 import * as ToolSkill from '@deepseek-ai/dsh-tool-skill'
@@ -71,7 +71,7 @@ import * as ToolTodo from '@berry-ai/harness-tool-todo'
 import type PluginManager from '@berry-ai/harness-plugin-manager'
 import * as PluginManagerTools from '@berry-ai/harness-plugin-manager/tools'
 import SandboxPolicy from '@deepseek-ai/dsh-sandbox-policy'
-import McpResources from '@deepseek-ai/dsh-mcp-resources'
+import McpResources from '@berry-ai/harness-mcp-resources'
 import * as ToolSubagent from '@deepseek-ai/dsh-tool-subagent'
 import { registerListSubagentModels } from '../packages/subagent/tool-subagent/src/list-models.ts'
 import * as ToolWeb from '@deepseek-ai/dsh-tool-web'
@@ -201,7 +201,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
     },
   },
   {
-    pkg: '@deepseek-ai/dsh-mcp-resources',
+    pkg: '@berry-ai/harness-mcp-resources',
     dir: 'mcp-resources',
     source: 'packages/mcp/mcp-resources/src/tools.ts',
     requires: ['ctx.tools', 'ctx.mcpResources'],
@@ -427,7 +427,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'create, edit, pause, and resume require direct-human root authority; complete and blocked also accept the exact current goal round. The default blocked lower bound is three admitted rounds.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-schedule',
+    pkg: '@berry-ai/harness-tool-schedule',
     dir: 'tool-schedule',
     source: 'packages/schedule/tool-schedule/src/index.ts',
     requires: ['ctx.tools', 'ctx.schedule'],

@@ -63,7 +63,7 @@
     "@deepseek-ai/dsh-llm-deepseek-account": "workspace:*",
     "@deepseek-ai/dsh-llm-pi-ai": "workspace:*",
     "@deepseek-ai/dsh-llm-retry": "workspace:*",
-    "@deepseek-ai/dsh-mcp-resources": "workspace:*",
+    "@berry-ai/harness-mcp-resources": "workspace:*",
     "@deepseek-ai/dsh-permission-presets": "workspace:*",
     "@berry-ai/harness-plan-mode": "workspace:*",
     "@deepseek-ai/dsh-pwsh-sandbox": "workspace:*",

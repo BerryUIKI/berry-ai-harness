@@ -12,8 +12,8 @@ const fake = vi.hoisted(() => ({
   configurations: [] as unknown[],
 }))
 
-vi.mock('@deepseek-ai/dsh-mcp-client', async (importOriginal) => {
-  const original = await importOriginal<typeof import('@deepseek-ai/dsh-mcp-client')>()
+vi.mock('@berry-ai/harness-mcp-client', async (importOriginal) => {
+  const original = await importOriginal<typeof import('@berry-ai/harness-mcp-client')>()
   return {
     ...original,
     async apply(ctx: Context, config: unknown) {

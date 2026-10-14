@@ -19,7 +19,7 @@
  * deliveries are not.
  */
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { ScheduleId } from '@deepseek-ai/dsh-schedule/client'
+import type { ScheduleId } from '@berry-ai/harness-schedule/client'
 
 /** The Sidebar fields that identify one task tab page across a reload. */
 export interface TaskTabPage {

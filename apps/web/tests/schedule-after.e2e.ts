@@ -14,7 +14,7 @@ import { entryListSchema } from '@deepseek-ai/cordis-plugin-include'
 import { bundlePatchPaths, composeEntries, loadOverlayPatches } from '@berry-ai/harness-app-boot'
 import { MessageId, ToolCallId, createUserMessage, LlmAdapter } from '@deepseek-ai/dsh-llm'
 import { appendDelivery } from '../../../packages/schedule/schedule/src/delivery-history.ts'
-import type { ScheduleTask } from '@deepseek-ai/dsh-schedule'
+import type { ScheduleTask } from '@berry-ai/harness-schedule'
 import type { ContextFormed, GenerateOptions, StreamChunk } from '@deepseek-ai/dsh-llm'
 import { SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
 import {
@@ -22,7 +22,7 @@ import {
   createEveryScheduleRecord,
   foldScheduleEvents,
   type EveryScheduleRecord,
-} from '@deepseek-ai/dsh-schedule'
+} from '@berry-ai/harness-schedule'
 import {
   assertFixtureInventory,
   captureStableAria,
@@ -900,7 +900,7 @@ describe.skipIf(MODE === 'record')('web e2e: active Schedule catalog', () => {
     // The delivered composition carries the Schedule service and its task page;
     // the clock stays preset-level, so no Host row declares it.
     for (const row of [
-      { id: 'schedule', name: '@deepseek-ai/dsh-schedule' },
+      { id: 'schedule', name: '@berry-ai/harness-schedule' },
       { id: 'ui-schedule', name: '@deepseek-ai/dsh-client-ui-schedule' },
     ]) {
       expect(shipped.filter(entry => entry.id === row.id && entry.name === row.name && entry.disabled !== true))
@@ -919,15 +919,15 @@ describe.skipIf(MODE === 'record')('web e2e: active Schedule catalog', () => {
       expect(plugins.filter(row => row.id === 'time-context'
         && row.name === '@deepseek-ai/dsh-time-context')).toHaveLength(1)
       expect(plugins.filter(row => row.id === 'tool-schedule'
-        && row.name === '@deepseek-ai/dsh-tool-schedule')).toHaveLength(1)
-      for (const name of ['@deepseek-ai/dsh-time-context', '@deepseek-ai/dsh-tool-schedule']) {
+        && row.name === '@berry-ai/harness-tool-schedule')).toHaveLength(1)
+      for (const name of ['@deepseek-ai/dsh-time-context', '@berry-ai/harness-tool-schedule']) {
         const matches = plugins.filter(row => row.name === name)
         expect(matches).toHaveLength(1)
         expect(matches[0]?.disabled).not.toBe(true)
       }
     }
     expect(presetPlugins('preset-minimal').some(row => row.name === '@deepseek-ai/dsh-time-context'
-      || row.name === '@deepseek-ai/dsh-tool-schedule')).toBe(false)
+      || row.name === '@berry-ai/harness-tool-schedule')).toBe(false)
 
     await page.getByRole('button', { name: 'Automation tasks', exact: true }).click()
     const manager = page.getByTestId('task-manager-page')

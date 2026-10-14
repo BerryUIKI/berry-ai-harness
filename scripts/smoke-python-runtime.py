@@ -276,7 +276,7 @@ def write_mcp_patch(root: Path, sessions: Path, server_script: Path) -> Path:
     return write_profile_patch(root, "mcp.patch.yml", sessions, [{
         "insert": [{
             "id": "mcp-fixture",
-            "name": "@deepseek-ai/dsh-mcp-client",
+            "name": "@berry-ai/harness-mcp-client",
             "config": {
                 "serverName": "fixture",
                 "transport": "stdio",

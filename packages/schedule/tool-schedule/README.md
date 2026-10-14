@@ -3,13 +3,13 @@ description: "Preset-scoped reminder management tools (schedule_create, schedule
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-schedule
+# @berry-ai/harness-tool-schedule
 
 English | [中文](README.zh.md)
 
 ## Summary
 
-Use `dsh-tool-schedule` to let an agent create, list, edit, and delete durable Host reminders through `schedule_create`, `schedule_list`, `schedule_update`, and `schedule_delete`. The package registers the four tools in the preset or Agent scope that mounts it, so the composition decides which agents receive them; `minimal` keeps none. Each call acts on the calling Agent's Session and only manages stored reminders — the Host `@deepseek-ai/dsh-schedule` service owns storage, scheduling, and delivery. Failures return one structured error code instead of storage details.
+Use `dsh-tool-schedule` to let an agent create, list, edit, and delete durable Host reminders through `schedule_create`, `schedule_list`, `schedule_update`, and `schedule_delete`. The package registers the four tools in the preset or Agent scope that mounts it, so the composition decides which agents receive them; `minimal` keeps none. Each call acts on the calling Agent's Session and only manages stored reminders — the Host `@berry-ai/harness-schedule` service owns storage, scheduling, and delivery. Failures return one structured error code instead of storage details.
 
 ## Table of Contents
 
@@ -29,7 +29,7 @@ Add the row below to a preset's plugin list when that preset's agents should man
 
 ### When to choose it
 
-Choose it for any preset whose agents need to schedule future work in their own Session, and load `@deepseek-ai/dsh-schedule` in the same process: this package is only the model-facing consumer of that service. A preset that should stay capability-poor — `minimal` is the shipped example — omits the row, and its agents see no reminder tool at all.
+Choose it for any preset whose agents need to schedule future work in their own Session, and load `@berry-ai/harness-schedule` in the same process: this package is only the model-facing consumer of that service. A preset that should stay capability-poor — `minimal` is the shipped example — omits the row, and its agents see no reminder tool at all.
 
 ### The four tools
 
@@ -41,7 +41,7 @@ Choose it for any preset whose agents need to schedule future work in their own 
 ### Minimal configuration
 
 ```yaml
-- name: '@deepseek-ai/dsh-tool-schedule'
+- name: '@berry-ai/harness-tool-schedule'
 ```
 
 The package declares no `Config` fields. It injects `ctx.tools` and registers the four tools once the scope resolves the Host `ctx.schedule` service, so a composition that keeps that service off mounts no reminder tool. Each call acts on the Session of the Agent that dispatched it.

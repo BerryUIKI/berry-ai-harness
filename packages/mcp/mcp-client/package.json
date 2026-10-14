@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-mcp-client",
+  "name": "@berry-ai/harness-mcp-client",
   "description": "MCP client bridge: connects to MCP servers and registers their tools on ctx.tools",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "url": "git+https://github.com/BerryUIKI/berry-ai-harness.git",
     "directory": "packages/mcp/mcp-client"
   },
   "type": "module",
@@ -34,7 +34,7 @@
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-mcp-resources": "workspace:*",
+    "@berry-ai/harness-mcp-resources": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*"
   },
   "dependencies": {
@@ -57,11 +57,11 @@
     "@modelcontextprotocol/server": "2.2.0",
     "@modelcontextprotocol/node": "2.0.0",
     "zod": "^4.4.3",
-    "@deepseek-ai/dsh-mcp-resources": "workspace:*",
+    "@berry-ai/harness-mcp-resources": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-mcp-resources": {
+    "@berry-ai/harness-mcp-resources": {
       "optional": true
     },
     "@deepseek-ai/dsh-system-prompt": {

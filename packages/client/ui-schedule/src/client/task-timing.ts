@@ -5,7 +5,7 @@
 import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
 import type {
   ScheduleRecord, ScheduleUpdateRequest, ScheduleUpdateResult,
-} from '@deepseek-ai/dsh-schedule/client'
+} from '@berry-ai/harness-schedule/client'
 import { assertNever } from '@berry-ai/harness-util-values'
 import type { TaskManagerKey } from './task-manager-locales.ts'
 

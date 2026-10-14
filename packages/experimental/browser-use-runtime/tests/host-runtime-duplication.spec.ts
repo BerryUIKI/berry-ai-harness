@@ -69,7 +69,7 @@ it('reproduces the second-Agent failure a profile install causes', async () => {
   // in the profile, so the copy's client resolves the copy's scope module.
   vi.resetModules()
   const profileScope = await import('@deepseek-ai/dsh-scope')
-  const profileMcpClient = await import('@deepseek-ai/dsh-mcp-client')
+  const profileMcpClient = await import('@berry-ai/harness-mcp-client')
   ctx.on('agent/created', async ({ agent }) => {
     await profileScope.createScope(ctx, agent).ctx.plugin(profileMcpClient, profileMcpClient.Config({
       transport: 'stdio', serverName: 'browser-fixture', command: process.execPath, args: [FIXTURE, root],

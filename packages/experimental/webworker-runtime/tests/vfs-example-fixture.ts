@@ -15,7 +15,7 @@ import {
   eventLines, generationLogFilename, projectKey, toHeaderLine,
 } from '@deepseek-ai/dsh-session-persistence-jsonl/src/format.ts'
 import { projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
-import { scheduleDomain } from '@deepseek-ai/dsh-schedule'
+import { scheduleDomain } from '@berry-ai/harness-schedule'
 import { snapshotSubagentDescriptor, SUBAGENT_DESCRIPTOR_VERSION } from '@deepseek-ai/dsh-subagent'
 
 /** Root copied by the preview image's repository adapter. */

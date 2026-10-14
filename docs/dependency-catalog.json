@@ -1873,11 +1873,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-mcp-client",
+      "name": "@berry-ai/harness-mcp-client",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-mcp-client",
+          "location": "node_modules/@berry-ai/harness-mcp-client",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2065,11 +2065,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-schedule",
+      "name": "@berry-ai/harness-schedule",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-schedule",
+          "location": "node_modules/@berry-ai/harness-schedule",
           "direct": true,
           "optional": false,
           "peer": false
