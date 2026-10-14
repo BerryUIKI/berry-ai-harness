@@ -3,7 +3,7 @@ description: "ctx.lsp 的 stdio 语言服务器提供方：配置好的服务器
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-lsp-stdio
+# @berry-ai/harness-lsp-stdio
 
 [English](README.md) | 中文
 
@@ -34,8 +34,8 @@ kind: "package-reference"
 ```yaml
 - name: '@berry-ai/harness-fs-local'
 - name: '@berry-ai/harness-subprocess-local'
-- name: '@deepseek-ai/dsh-lsp'
-- name: '@deepseek-ai/dsh-lsp-stdio'
+- name: '@berry-ai/harness-lsp'
+- name: '@berry-ai/harness-lsp-stdio'
   config:
     servers:
       typescript:
@@ -43,7 +43,7 @@ kind: "package-reference"
         args: ['--stdio']
         extensionToLanguage:
           '.ts': typescript
-- name: '@deepseek-ai/dsh-tool-lsp'
+- name: '@berry-ai/harness-tool-lsp'
 ```
 
 | 字段 | 默认值 | 含义 |

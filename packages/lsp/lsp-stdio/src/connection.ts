@@ -7,7 +7,7 @@
  * fatal close, and exposes managed-range termination through the handle so the
  * instance owns teardown; platform mechanics live in the subprocess
  * Service Provider.
- * @module @deepseek-ai/dsh-lsp-stdio/connection
+ * @module @berry-ai/harness-lsp-stdio/connection
  */
 
 import type { Writable } from 'node:stream'

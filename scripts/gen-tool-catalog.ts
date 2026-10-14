@@ -58,8 +58,8 @@ import * as ToolPty from '@deepseek-ai/dsh-tool-terminal'
 import * as ToolGoal from '@berry-ai/harness-tool-goal'
 import * as ToolSchedule from '@berry-ai/harness-tool-schedule'
 import type ScheduleService from '@berry-ai/harness-schedule'
-import Lsp from '@deepseek-ai/dsh-lsp'
-import * as ToolLsp from '@deepseek-ai/dsh-tool-lsp'
+import Lsp from '@berry-ai/harness-lsp'
+import * as ToolLsp from '@berry-ai/harness-tool-lsp'
 import * as ToolSkill from '@deepseek-ai/dsh-tool-skill'
 import * as ToolSessionQuery from '@deepseek-ai/dsh-tool-session-query'
 import * as ToolJobs from '@berry-ai/harness-tool-jobs'
@@ -446,7 +446,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       + 'Management uses the Host storage domain; due messages resume the original Session.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-lsp',
+    pkg: '@berry-ai/harness-tool-lsp',
     dir: 'tool-lsp',
     source: 'packages/lsp/tool-lsp/src/index.ts',
     requires: ['ctx.workingDirectory', 'ctx.tools', 'ctx.lsp', 'ctx.systemPrompt'],
@@ -457,7 +457,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       await ctx.plugin(ToolLsp)
     },
     note:
-      'The lsp tool keeps provider selection and language-server subprocesses behind ctx.lsp, so its model-visible schema stays stable across providers. Requires a registered provider (e.g. `@deepseek-ai/dsh-lsp-stdio`) at runtime; without one, a query returns the structured `LSP_UNAVAILABLE` error rather than changing the schema.',
+      'The lsp tool keeps provider selection and language-server subprocesses behind ctx.lsp, so its model-visible schema stays stable across providers. Requires a registered provider (e.g. `@berry-ai/harness-lsp-stdio`) at runtime; without one, a query returns the structured `LSP_UNAVAILABLE` error rather than changing the schema.',
   },
   {
     pkg: '@deepseek-ai/dsh-tool-ralph',

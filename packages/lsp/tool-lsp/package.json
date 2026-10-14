@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tool-lsp",
+  "name": "@berry-ai/harness-tool-lsp",
   "description": "Model-facing lsp tool over the DeepSeek Harness LSP capability seam (ctx.lsp) \u2014 one read-only tool with goToDefinition/findReferences/goToImplementation/hover operations, one-based UTF-16 cursor coordinates, bounded location rendering, and hover normalization",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -29,7 +29,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-lsp": "workspace:*",
+    "@berry-ai/harness-lsp": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
@@ -44,8 +44,8 @@
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-lsp": "workspace:*",
-    "@deepseek-ai/dsh-lsp-stdio": "workspace:*",
+    "@berry-ai/harness-lsp": "workspace:*",
+    "@berry-ai/harness-lsp-stdio": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",

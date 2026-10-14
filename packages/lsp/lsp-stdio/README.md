@@ -3,7 +3,7 @@ description: "The stdio language-server provider for ctx.lsp: configured server 
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-lsp-stdio
+# @berry-ai/harness-lsp-stdio
 
 English | [中文](README.zh.md)
 
@@ -34,8 +34,8 @@ The `servers` record maps each stable provider id to one server command. The pro
 ```yaml
 - name: '@berry-ai/harness-fs-local'
 - name: '@berry-ai/harness-subprocess-local'
-- name: '@deepseek-ai/dsh-lsp'
-- name: '@deepseek-ai/dsh-lsp-stdio'
+- name: '@berry-ai/harness-lsp'
+- name: '@berry-ai/harness-lsp-stdio'
   config:
     servers:
       typescript:
@@ -43,7 +43,7 @@ The `servers` record maps each stable provider id to one server command. The pro
         args: ['--stdio']
         extensionToLanguage:
           '.ts': typescript
-- name: '@deepseek-ai/dsh-tool-lsp'
+- name: '@berry-ai/harness-tool-lsp'
 ```
 
 | Field | Default | Meaning |

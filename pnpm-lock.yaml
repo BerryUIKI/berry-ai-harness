@@ -10994,7 +10994,7 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-lsp':
+      '@berry-ai/harness-lsp':
         specifier: workspace:*
         version: link:../lsp
       typescript:
@@ -11037,10 +11037,10 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-lsp':
+      '@berry-ai/harness-lsp':
         specifier: workspace:*
         version: link:../lsp
-      '@deepseek-ai/dsh-lsp-stdio':
+      '@berry-ai/harness-lsp-stdio':
         specifier: workspace:*
         version: link:../lsp-stdio
       '@deepseek-ai/dsh-session':
@@ -13235,10 +13235,10 @@ importers:
       '@berry-ai/harness-fs-sandbox':
         specifier: workspace:*
         version: link:../../fs/fs-sandbox
-      '@deepseek-ai/dsh-lsp':
+      '@berry-ai/harness-lsp':
         specifier: workspace:*
         version: link:../../lsp/lsp
-      '@deepseek-ai/dsh-lsp-stdio':
+      '@berry-ai/harness-lsp-stdio':
         specifier: workspace:*
         version: link:../../lsp/lsp-stdio
       '@deepseek-ai/dsh-session-projection':

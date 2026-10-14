@@ -9,10 +9,10 @@ import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import Lsp from '@deepseek-ai/dsh-lsp'
-import * as LspLocal from '@deepseek-ai/dsh-lsp-stdio'
+import Lsp from '@berry-ai/harness-lsp'
+import * as LspLocal from '@berry-ai/harness-lsp-stdio'
 import * as TimeoutPolicy from '@berry-ai/harness-tool-call-timeout-policy'
-import * as ToolLsp from '@deepseek-ai/dsh-tool-lsp'
+import * as ToolLsp from '@berry-ai/harness-tool-lsp'
 
 /**
  * Focused in-process integration of the model-facing tool, seam, local provider, and timeout policy.

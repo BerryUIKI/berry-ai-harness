@@ -1,6 +1,6 @@
 /**
  * Shared cancellation helpers for the local LSP provider's host-I/O, queue, and protocol phases.
- * @module @deepseek-ai/dsh-lsp-stdio/abort
+ * @module @berry-ai/harness-lsp-stdio/abort
  */
 
 import { timeoutOf } from '@berry-ai/harness-timeout'

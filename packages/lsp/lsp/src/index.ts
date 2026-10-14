@@ -8,7 +8,7 @@
  * invalid or conflicting registration publishes nothing, and its disposer releases every
  * reservation together. Selection routes a query by the file's final extension; it never depends on
  * registration order. The seam exposes exactly the four operations and no JSON-RPC escape hatch.
- * @module @deepseek-ai/dsh-lsp
+ * @module @berry-ai/harness-lsp
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'

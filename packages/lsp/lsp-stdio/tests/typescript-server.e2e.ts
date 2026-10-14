@@ -12,8 +12,8 @@ import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
-import Lsp, { type LspQueryRequest, type LspQueryResult } from '@deepseek-ai/dsh-lsp'
-import * as LspLocal from '@deepseek-ai/dsh-lsp-stdio'
+import Lsp, { type LspQueryRequest, type LspQueryResult } from '@berry-ai/harness-lsp'
+import * as LspLocal from '@berry-ai/harness-lsp-stdio'
 
 // The server binary is a dev dependency of this package; resolve its pnpm-hoisted .bin path.
 const serverBin = join(

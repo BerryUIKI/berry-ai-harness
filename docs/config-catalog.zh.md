@@ -357,6 +357,49 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-jobs-local -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-lsp-stdio -->
+<a id="berry-aiharness-lsp-stdio"></a>
+
+## `@berry-ai/harness-lsp-stdio`
+
+- `inject`: `fs` · `lsp` · `subprocess`
+- `source`: [`packages/lsp/lsp-stdio/src/index.ts:82`](../packages/lsp/lsp-stdio/src/index.ts)
+
+```ts config-catalog
+/** Plugin configuration: provider id → local language-server configuration. */
+export interface Config {
+  /** Non-empty table of stable provider ids to independent local server configurations. */
+  servers: Record<string, LspLocalServerConfig>
+}
+
+/** One configured local language server and its host bounds. */
+export interface LspLocalServerConfig {
+  /** Executable to spawn (absolute, or resolved on PATH at load). */
+  command: string
+  /** Lowercase leading-dot extension → LSP language id (e.g. `{ '.ts': 'typescript' }`). */
+  extensionToLanguage: Record<string, string>
+  /** Arguments passed to the executable (no shell). Default `[]`. */
+  args?: string[]
+  /** Extra env vars merged on top of the scrubbed ambient env. Default `{}`. */
+  env?: Record<string, string>
+  /** Static `initialize` options forwarded to the server. Default `null`. */
+  initializationOptions?: unknown
+  /** Static answer to every `workspace/configuration` item. Default `null`. */
+  configuration?: unknown
+  /** Largest single framed message accepted from the server (bytes). Default 16000000. */
+  maxMessageBytes?: number
+  /** Largest stderr tail retained for diagnostics (bytes). Default 1000000. */
+  maxStderrBytes?: number
+  /** Largest source file this host will open (bytes). Default 4000000. */
+  maxDocumentBytes?: number
+  /** Graceful `shutdown`/`exit` budget before escalation (ms). Default 5000. */
+  shutdownTimeoutMs?: number
+  /** Request-cancel and SIGTERM→SIGKILL grace (ms). Default 2000. */
+  killGraceMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-lsp-stdio -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-mcp-client -->
 <a id="berry-aiharness-mcp-client"></a>
 
@@ -1354,6 +1397,27 @@ export interface Config {
 export type CompletionDelivery = 'quiet' | 'wakeup'
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-tool-jobs -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-lsp -->
+<a id="berry-aiharness-tool-lsp"></a>
+
+## `@berry-ai/harness-tool-lsp`
+
+- `inject`: `tools` · `lsp` · `systemPrompt` · `workingDirectory`
+- `source`: [`packages/lsp/tool-lsp/src/index.ts:56`](../packages/lsp/tool-lsp/src/index.ts)
+
+```ts config-catalog
+/** Plugin configuration: result caps and the timeout budget. */
+export interface Config {
+  /** Largest number of rendered locations before an omission marker (default 100). */
+  maxLocations?: number
+  /** Largest complete rendered result in characters, including truncation metadata (default 16000). */
+  maxResultChars?: number
+  /** Tool-call timeout budget in ms (default 60000). */
+  timeoutMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-lsp -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-present -->
 <a id="berry-aiharness-tool-present"></a>
@@ -3331,49 +3395,6 @@ export type Config = Readonly<Record<string, never>>
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-llm-retry -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-lsp-stdio -->
-<a id="deepseek-aidsh-lsp-stdio"></a>
-
-## `@deepseek-ai/dsh-lsp-stdio`
-
-- `inject`: `fs` · `lsp` · `subprocess`
-- `source`: [`packages/lsp/lsp-stdio/src/index.ts:82`](../packages/lsp/lsp-stdio/src/index.ts)
-
-```ts config-catalog
-/** Plugin configuration: provider id → local language-server configuration. */
-export interface Config {
-  /** Non-empty table of stable provider ids to independent local server configurations. */
-  servers: Record<string, LspLocalServerConfig>
-}
-
-/** One configured local language server and its host bounds. */
-export interface LspLocalServerConfig {
-  /** Executable to spawn (absolute, or resolved on PATH at load). */
-  command: string
-  /** Lowercase leading-dot extension → LSP language id (e.g. `{ '.ts': 'typescript' }`). */
-  extensionToLanguage: Record<string, string>
-  /** Arguments passed to the executable (no shell). Default `[]`. */
-  args?: string[]
-  /** Extra env vars merged on top of the scrubbed ambient env. Default `{}`. */
-  env?: Record<string, string>
-  /** Static `initialize` options forwarded to the server. Default `null`. */
-  initializationOptions?: unknown
-  /** Static answer to every `workspace/configuration` item. Default `null`. */
-  configuration?: unknown
-  /** Largest single framed message accepted from the server (bytes). Default 16000000. */
-  maxMessageBytes?: number
-  /** Largest stderr tail retained for diagnostics (bytes). Default 1000000. */
-  maxStderrBytes?: number
-  /** Largest source file this host will open (bytes). Default 4000000. */
-  maxDocumentBytes?: number
-  /** Graceful `shutdown`/`exit` budget before escalation (ms). Default 5000. */
-  shutdownTimeoutMs?: number
-  /** Request-cancel and SIGTERM→SIGKILL grace (ms). Default 2000. */
-  killGraceMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-lsp-stdio -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-plugin-package-inventory-deepseek -->
 <a id="deepseek-aidsh-plugin-package-inventory-deepseek"></a>
 
@@ -4026,27 +4047,6 @@ export type TokenMeterConfig = Record<string, never>
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-token-meter -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-lsp -->
-<a id="deepseek-aidsh-tool-lsp"></a>
-
-## `@deepseek-ai/dsh-tool-lsp`
-
-- `inject`: `tools` · `lsp` · `systemPrompt` · `workingDirectory`
-- `source`: [`packages/lsp/tool-lsp/src/index.ts:56`](../packages/lsp/tool-lsp/src/index.ts)
-
-```ts config-catalog
-/** Plugin configuration: result caps and the timeout budget. */
-export interface Config {
-  /** Largest number of rendered locations before an omission marker (default 100). */
-  maxLocations?: number
-  /** Largest complete rendered result in characters, including truncation metadata (default 16000). */
-  maxResultChars?: number
-  /** Tool-call timeout budget in ms (default 60000). */
-  timeoutMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-lsp -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-ralph -->
 <a id="deepseek-aidsh-tool-ralph"></a>
 
@@ -4509,6 +4509,7 @@ export interface Config {
 | `@berry-ai/harness-fs-observation-policy` | — | [`packages/fs/fs-observation-policy/src/index.ts`](../packages/fs/fs-observation-policy/src/index.ts) |
 | `@berry-ai/harness-fs-ssh` | `ssh` · `sandboxPolicy` | [`packages/ssh/fs-ssh/src/index.ts`](../packages/ssh/fs-ssh/src/index.ts) |
 | `@berry-ai/harness-goal-round-driver` | `agents` · `goals` · `sessions` | [`packages/goal/goal-round-driver/src/index.ts`](../packages/goal/goal-round-driver/src/index.ts) |
+| `@berry-ai/harness-lsp` | — | [`packages/lsp/lsp/src/index.ts`](../packages/lsp/lsp/src/index.ts) |
 | `@berry-ai/harness-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
 | `@berry-ai/harness-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
 | `@berry-ai/harness-sandbox-ssh` | `ssh` | [`packages/ssh/sandbox-ssh/src/index.ts`](../packages/ssh/sandbox-ssh/src/index.ts) |
@@ -4590,7 +4591,6 @@ export interface Config {
 | `@deepseek-ai/dsh-host-directory-picker-native` | — | [`packages/host/directory-picker-native/src/index.ts`](../packages/host/directory-picker-native/src/index.ts) |
 | `@deepseek-ai/dsh-host-plugin-inventory` | `loader` | [`packages/host/plugin-inventory/src/index.ts`](../packages/host/plugin-inventory/src/index.ts) |
 | `@deepseek-ai/dsh-llm` | — | [`packages/llm/llm/src/index.ts`](../packages/llm/llm/src/index.ts) |
-| `@deepseek-ai/dsh-lsp` | — | [`packages/lsp/lsp/src/index.ts`](../packages/lsp/lsp/src/index.ts) |
 | `@deepseek-ai/dsh-session` | — | [`packages/core/session/src/index.ts`](../packages/core/session/src/index.ts) |
 | `@deepseek-ai/dsh-session-checkpoint-policy` | `llm` · `sessionPersistence` · `sessions` · `tools` | [`packages/session/session-checkpoint-policy/src/index.ts`](../packages/session/session-checkpoint-policy/src/index.ts) |
 | `@deepseek-ai/dsh-session-projection` | — | [`packages/session/session-projection/src/index.ts`](../packages/session/session-projection/src/index.ts) |
