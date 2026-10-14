@@ -420,7 +420,7 @@ describe('WorkspaceController', () => {
 })
 
 // The wire relays whatever families the Host's providers report; this suite merges its own.
-declare module '@deepseek-ai/dsh-workspace/types' {
+declare module '@berry-ai/harness-workspace/types' {
   interface SessionActivityKindMap {
     probe: true
     'probe-items': true

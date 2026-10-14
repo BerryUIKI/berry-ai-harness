@@ -73,7 +73,7 @@
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/dsh-credentials-local": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-deepseek-account": "workspace:*"
   },
   "peerDependenciesMeta": {

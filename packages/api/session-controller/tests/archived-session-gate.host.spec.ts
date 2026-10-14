@@ -4,7 +4,7 @@ import type { Agent } from '@deepseek-ai/dsh-agent'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import type { Session } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-workspace'
+import type {} from '@berry-ai/harness-workspace'
 import { describe, expect, it } from 'vitest'
 import { ArchivedSessionGate } from '../src/archived-session-gate.ts'
 

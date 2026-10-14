@@ -48,7 +48,7 @@ kind: "package-reference"
 - name: '@deepseek-ai/dsh-tool-terminal'
 ```
 
-工具需要 `ctx.terminals`——必须挂载一个后端——以及用于指引章节的系统提示词服务。后台发送还额外要求任务服务及其面向模型的控制器（`@deepseek-ai/dsh-tool-jobs`）。
+工具需要 `ctx.terminals`——必须挂载一个后端——以及用于指引章节的系统提示词服务。后台发送还额外要求任务服务及其面向模型的控制器（`@berry-ai/harness-tool-jobs`）。
 
 ### 配置
 
@@ -173,7 +173,7 @@ spawn 返回 id 与有界启动输出。发送与读取返回有界终端文本�
 这些限制说明缺失的面向模型接口面。它们是当前包约束，不是任务积压。
 
 - **没有 TUI 或按键序列接口面**——具名按键序列、全屏 TUI 交互、BEL、调整大小与自动启动均未出现在任何 schema 中。
-- **后台模式要求任务接口面**——`run_in_background` 同时需要 `@deepseek-ai/dsh-jobs` 及其面向模型的控制器（`@deepseek-ai/dsh-tool-jobs`）；缺少时会拒绝该参数。
+- **后台模式要求任务接口面**——`run_in_background` 同时需要 `@berry-ai/harness-jobs` 及其面向模型的控制器（`@berry-ai/harness-tool-jobs`）；缺少时会拒绝该参数。
 
 <a id="dev-note"></a>
 ### 开发备注

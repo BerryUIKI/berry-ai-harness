@@ -104,6 +104,35 @@ export interface HmrConfig extends ChokidarOptions {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-hmr -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-jobs-local -->
+<a id="berry-aiharness-jobs-local"></a>
+
+## `@berry-ai/harness-jobs-local`
+
+- `source`: [`packages/jobs/jobs-local/src/index.ts:45`](../packages/jobs/jobs-local/src/index.ts)
+
+```ts config-catalog
+/** Configuration for the process-local job registry. */
+export interface Config {
+  /**
+   * Maximum `running` plus `stopping` jobs per exact owner or in the shared unowned bucket;
+   * omission defaults to 10.
+   */
+  maxConcurrentJobsPerOwner?: number
+  /** Live ring retention per job in UTF-8 bytes; omission defaults to 262144. */
+  retainBytes?: number
+  /**
+   * Ring retention kept after a job settles, in UTF-8 bytes; omission defaults to 16384.
+   * Settlement keeps every byte the model cursor has not consumed on top of
+   * this cap; the first terminal model read then trims to it.
+   */
+  settledRetainBytes?: number
+  /** Poll interval for a job's pull sources, in milliseconds; omission defaults to 150. */
+  pumpPollMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-jobs-local -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-mcp-client -->
 <a id="berry-aiharness-mcp-client"></a>
 
@@ -634,6 +663,43 @@ export interface Config {
 export type ShellDialect = 'bash' | 'pwsh'
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-terminal-bash -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-jobs -->
+<a id="berry-aiharness-tool-jobs"></a>
+
+## `@berry-ai/harness-tool-jobs`
+
+- `inject`: `tools` · `jobs` · `systemPrompt`
+- `source`: [`packages/jobs/tool-jobs/src/index.ts:41`](../packages/jobs/tool-jobs/src/index.ts)
+
+```ts config-catalog
+/** Configures bounded `job_output` waits and completion-notice delivery. */
+export interface Config {
+  /** Wait duration applied when `job_output` sets `wait` without `timeout_ms` (default 30s). */
+  waitTimeoutMs?: number
+  /** Hard cap on any single wait; a larger model-supplied `timeout_ms` is clamped down to it (default 10min). */
+  maxWaitTimeoutMs?: number
+  /** Whether a completion opens a turn on an idle owner (default `wakeup`). */
+  completionDelivery?: CompletionDelivery
+  /**
+   * Turns one owner may have opened by completion wakes before the next
+   * notice degrades to injection, reset by any user-authored input. Absent by
+   * default: every idle completion wakes its owner. Set it to bound the
+   * self-exciting chain where a woken turn starts the job whose completion
+   * wakes it again, at the cost of notices past the cap waiting silently for
+   * the next user input.
+   */
+  maxConsecutiveWakes?: number
+}
+
+/**
+ * How an uncollected completion reaches an owner that is already idle: `wakeup`
+ * opens a turn for it, `quiet` leaves it pending until something else wakes the
+ * owner. A busy owner is injected either way.
+ */
+export type CompletionDelivery = 'quiet' | 'wakeup'
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-jobs -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-present -->
 <a id="berry-aiharness-tool-present"></a>
@@ -2273,35 +2339,6 @@ export interface TlsConfig {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-webserver -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-jobs-local -->
-<a id="deepseek-aidsh-jobs-local"></a>
-
-## `@deepseek-ai/dsh-jobs-local`
-
-- `source`: [`packages/jobs/jobs-local/src/index.ts:45`](../packages/jobs/jobs-local/src/index.ts)
-
-```ts config-catalog
-/** Configuration for the process-local job registry. */
-export interface Config {
-  /**
-   * Maximum `running` plus `stopping` jobs per exact owner or in the shared unowned bucket;
-   * omission defaults to 10.
-   */
-  maxConcurrentJobsPerOwner?: number
-  /** Live ring retention per job in UTF-8 bytes; omission defaults to 262144. */
-  retainBytes?: number
-  /**
-   * Ring retention kept after a job settles, in UTF-8 bytes; omission defaults to 16384.
-   * Settlement keeps every byte the model cursor has not consumed on top of
-   * this cap; the first terminal model read then trims to it.
-   */
-  settledRetainBytes?: number
-  /** Poll interval for a job's pull sources, in milliseconds; omission defaults to 150. */
-  pumpPollMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-jobs-local -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-llm-deepseek-account -->
 <a id="deepseek-aidsh-llm-deepseek-account"></a>
 
@@ -3830,43 +3867,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-goal -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-jobs -->
-<a id="deepseek-aidsh-tool-jobs"></a>
-
-## `@deepseek-ai/dsh-tool-jobs`
-
-- `inject`: `tools` · `jobs` · `systemPrompt`
-- `source`: [`packages/jobs/tool-jobs/src/index.ts:41`](../packages/jobs/tool-jobs/src/index.ts)
-
-```ts config-catalog
-/** Configures bounded `job_output` waits and completion-notice delivery. */
-export interface Config {
-  /** Wait duration applied when `job_output` sets `wait` without `timeout_ms` (default 30s). */
-  waitTimeoutMs?: number
-  /** Hard cap on any single wait; a larger model-supplied `timeout_ms` is clamped down to it (default 10min). */
-  maxWaitTimeoutMs?: number
-  /** Whether a completion opens a turn on an idle owner (default `wakeup`). */
-  completionDelivery?: CompletionDelivery
-  /**
-   * Turns one owner may have opened by completion wakes before the next
-   * notice degrades to injection, reset by any user-authored input. Absent by
-   * default: every idle completion wakes its owner. Set it to bound the
-   * self-exciting chain where a woken turn starts the job whose completion
-   * wakes it again, at the cost of notices past the cap waiting silently for
-   * the next user input.
-   */
-  maxConsecutiveWakes?: number
-}
-
-/**
- * How an uncollected completion reaches an owner that is already idle: `wakeup`
- * opens a turn for it, `quiet` leaves it pending until something else wakes the
- * owner. A busy owner is injected either way.
- */
-export type CompletionDelivery = 'quiet' | 'wakeup'
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-jobs -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-lsp -->
 <a id="deepseek-aidsh-tool-lsp"></a>
 
@@ -4503,10 +4503,12 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@berry-ai/harness-config-editor` | `loader` · `profileContext` | [`packages/boot/config-editor/src/index.ts`](../packages/boot/config-editor/src/index.ts) |
 | `@berry-ai/harness-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
 | `@berry-ai/harness-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
+| `@berry-ai/harness-settings` | `configEditor` · `profileContext` | [`packages/settings/settings/src/index.ts`](../packages/settings/settings/src/index.ts) |
 | `@berry-ai/harness-storage` | — | [`packages/storage/storage/src/index.ts`](../packages/storage/storage/src/index.ts) |
 | `@berry-ai/harness-terminal` | — | [`packages/terminal/terminal/src/index.ts`](../packages/terminal/terminal/src/index.ts) |
 | `@berry-ai/harness-tool-call-timeout-policy` | `tools` | [`packages/guard/timeout-policy/src/index.ts`](../packages/guard/timeout-policy/src/index.ts) |
 | `@berry-ai/harness-tool-schedule` | `tools` | [`packages/schedule/tool-schedule/src/index.ts`](../packages/schedule/tool-schedule/src/index.ts) |
+| `@berry-ai/harness-workspace` | `storageDomain` · `sessionPersistence` | [`packages/workspace/workspace/src/index.ts`](../packages/workspace/workspace/src/index.ts) |
 | `@deepseek-ai/dsh-acp-app` | `cmdlineArgs` | [`packages/bundle/acp-app/src/index.ts`](../packages/bundle/acp-app/src/index.ts) |
 | `@deepseek-ai/dsh-agent` | — | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
 | `@deepseek-ai/dsh-api-account-controller` | `deepseekAccount` · `agents` | [`packages/api/account-controller/src/index.ts`](../packages/api/account-controller/src/index.ts) |
@@ -4589,7 +4591,6 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@deepseek-ai/dsh-session-projection` | — | [`packages/session/session-projection/src/index.ts`](../packages/session/session-projection/src/index.ts) |
 | `@deepseek-ai/dsh-session-stats` | `sessionProjections` | [`packages/session/session-stats/src/index.ts`](../packages/session/session-stats/src/index.ts) |
 | `@deepseek-ai/dsh-session-turn-outline` | `sessionProjections` | [`packages/session/session-turn-outline/src/index.ts`](../packages/session/session-turn-outline/src/index.ts) |
-| `@deepseek-ai/dsh-settings` | `configEditor` · `profileContext` | [`packages/settings/settings/src/index.ts`](../packages/settings/settings/src/index.ts) |
 | `@deepseek-ai/dsh-skill-badge` | `skills` | [`packages/experimental/skill-badge/src/index.ts`](../packages/experimental/skill-badge/src/index.ts) |
 | `@deepseek-ai/dsh-subprocess-local` | — | [`packages/subprocess/subprocess-local/src/index.ts`](../packages/subprocess/subprocess-local/src/index.ts) |
 | `@deepseek-ai/dsh-subprocess-ssh` | `ssh` | [`packages/ssh/subprocess-ssh/src/index.ts`](../packages/ssh/subprocess-ssh/src/index.ts) |
@@ -4598,7 +4599,6 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@deepseek-ai/dsh-tool-working-directory` | `tools` · `workingDirectory` | [`packages/session/tool-working-directory/src/index.ts`](../packages/session/tool-working-directory/src/index.ts) |
 | `@deepseek-ai/dsh-user-questions` | — | [`packages/interaction/user-questions/src/index.ts`](../packages/interaction/user-questions/src/index.ts) |
 | `@deepseek-ai/dsh-webhook` | `agents` · `agentDefaultModel` · `agentPresets` · `permissionPresets` · `sessionTitle` · `workspaceRegistry` | [`packages/experimental/webhook/src/index.ts`](../packages/experimental/webhook/src/index.ts) |
-| `@deepseek-ai/dsh-workspace` | `storageDomain` · `sessionPersistence` | [`packages/workspace/workspace/src/index.ts`](../packages/workspace/workspace/src/index.ts) |
 <!-- END GENERATED config-catalog:no-config -->
 
 ## Seam packages (not directly loadable)
@@ -4609,6 +4609,7 @@ Abstract service classes — a deployment loads a concrete implementation packag
 | `package` | `class` | `inject` | `source` |
 | --- | --- | --- | --- |
 | `@berry-ai/harness-attachment` | `AttachmentStore` | — | [`packages/attachment/attachment/src/index.ts`](../packages/attachment/attachment/src/index.ts) |
+| `@berry-ai/harness-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
 | `@berry-ai/harness-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
 | `@berry-ai/harness-spill` | `SpillStore` | — | [`packages/spill/spill/src/index.ts`](../packages/spill/spill/src/index.ts) |
 | `@deepseek-ai/dsh-compaction` | `CompactionEngine` | — | [`packages/compaction/compaction/src/index.ts`](../packages/compaction/compaction/src/index.ts) |
@@ -4617,7 +4618,6 @@ Abstract service classes — a deployment loads a concrete implementation packag
 | `@deepseek-ai/dsh-file-reference` | `FileReferenceService` | — | [`packages/context/file-reference/src/index.ts`](../packages/context/file-reference/src/index.ts) |
 | `@deepseek-ai/dsh-fs` | `FileSystem` | — | [`packages/fs/fs/src/index.ts`](../packages/fs/fs/src/index.ts) |
 | `@deepseek-ai/dsh-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
-| `@deepseek-ai/dsh-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
 | `@deepseek-ai/dsh-sandbox` | `SandboxProvider` | — | [`packages/sandbox/sandbox/src/index.ts`](../packages/sandbox/sandbox/src/index.ts) |
 | `@deepseek-ai/dsh-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |
 | `@deepseek-ai/dsh-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |

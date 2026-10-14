@@ -78,8 +78,8 @@
     "@deepseek-ai/dsh-api-gateway": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@deepseek-ai/dsh-client-store": "workspace:*",
-    "@deepseek-ai/dsh-jobs": "workspace:*",
-    "@deepseek-ai/dsh-jobs-local": "workspace:*",
+    "@berry-ai/harness-jobs": "workspace:*",
+    "@berry-ai/harness-jobs-local": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-typert-registry": "workspace:*"
   }

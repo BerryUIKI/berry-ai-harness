@@ -9,7 +9,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { JobHandle } from '@deepseek-ai/dsh-jobs'
+import type { JobHandle } from '@berry-ai/harness-jobs'
 import type { WorkflowRunId } from '@deepseek-ai/dsh-workflow'
 
 /** Job-ring taps for the background runs the tool tracks. */

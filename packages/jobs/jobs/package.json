@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-jobs",
+  "name": "@berry-ai/harness-jobs",
   "description": "Background job registry (ctx.jobs) for the DeepSeek Harness — shared ids, owner isolation, polling, cancellation, and completion listeners for long-running tool work",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -39,11 +39,11 @@
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-workspace": "workspace:*",
+    "@berry-ai/harness-workspace": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-workspace": {
+    "@berry-ai/harness-workspace": {
       "optional": true
     }
   },
@@ -51,7 +51,7 @@
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-workspace": "workspace:*",
+    "@berry-ai/harness-workspace": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

@@ -41,7 +41,7 @@ import * as ToolSubagentControl from '@deepseek-ai/dsh-tool-subagent-control'
 import * as ToolSubagentListAgents from '@deepseek-ai/dsh-tool-subagent-control/list-agents'
 import SkillRegistry from '@deepseek-ai/dsh-skill'
 import * as SkillFileSystem from '@deepseek-ai/dsh-skill-filesystem'
-import LocalJobRegistry from '@deepseek-ai/dsh-jobs-local'
+import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import * as ToolAskUser from '@deepseek-ai/dsh-tool-ask-user'
 import * as ToolBash from '@deepseek-ai/dsh-tool-bash'
 import * as ToolPwsh from '@deepseek-ai/dsh-tool-pwsh'
@@ -62,7 +62,7 @@ import Lsp from '@deepseek-ai/dsh-lsp'
 import * as ToolLsp from '@deepseek-ai/dsh-tool-lsp'
 import * as ToolSkill from '@deepseek-ai/dsh-tool-skill'
 import * as ToolSessionQuery from '@deepseek-ai/dsh-tool-session-query'
-import * as ToolJobs from '@deepseek-ai/dsh-tool-jobs'
+import * as ToolJobs from '@berry-ai/harness-tool-jobs'
 import BrowserUseRegistry from '@berry-ai/harness-browser-use'
 import * as StagehandBrowserTools from '@deepseek-ai/dsh-experimental-browser-use-stagehand-native'
 import type TeamService from '@deepseek-ai/dsh-experimental-agent-team'
@@ -282,7 +282,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       await ctx.plugin(ToolBash)
     },
     note:
-      'The bash tool is the model-facing consumer of the bash executor seam. With a job registry composed every call registers with the generic `ctx.jobs` runtime as it starts, collected/stopped through the `job_*` tools from `@deepseek-ai/dsh-tool-jobs`; without one, or with `enableRunInBackground: false`, the tool registers a foreground-only schema without the `run_in_background` parameter.',
+      'The bash tool is the model-facing consumer of the bash executor seam. With a job registry composed every call registers with the generic `ctx.jobs` runtime as it starts, collected/stopped through the `job_*` tools from `@berry-ai/harness-tool-jobs`; without one, or with `enableRunInBackground: false`, the tool registers a foreground-only schema without the `run_in_background` parameter.',
   },
   {
     pkg: '@berry-ai/harness-tool-present',
@@ -546,7 +546,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'The globally named discovery, interruption, and local-message tools over managed subagents: provider-bound `tool-subagent` instances register distinct delegation tools, while this package registers `send_message` and `interrupt_agent` once, plus `list_agents` from its separately loaded `/list-agents` plugin (whose catalog rows use the sessionProjections and live Agent registries).',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-jobs',
+    pkg: '@berry-ai/harness-tool-jobs',
     dir: 'tool-jobs',
     source: 'packages/jobs/tool-jobs/src/index.ts',
     requires: ['ctx.tools', 'ctx.jobs', 'ctx.systemPrompt'],

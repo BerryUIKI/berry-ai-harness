@@ -5,7 +5,7 @@
  * @module @deepseek-ai/dsh-tool-terminal/background
  */
 
-import type { JobOutputSource } from '@deepseek-ai/dsh-jobs'
+import type { JobOutputSource } from '@berry-ai/harness-jobs'
 import type { TerminalSendOperation } from '@berry-ai/harness-terminal'
 import { renderSendRead } from './render.ts'
 

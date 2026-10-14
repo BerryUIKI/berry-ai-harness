@@ -78,7 +78,7 @@ export type {} from '@deepseek-ai/dsh-credentials/types'
 export type {} from '@deepseek-ai/dsh-llm/types'
 export type {} from '@berry-ai/harness-agent-preset-registry/types'
 export type {} from '@deepseek-ai/dsh-permission-presets/types'
-export type {} from '@deepseek-ai/dsh-settings/types'
+export type {} from '@berry-ai/harness-settings/types'
 export type {} from '@deepseek-ai/dsh-user-approval/types'
 export type {} from '@deepseek-ai/dsh-user-questions/types'
 export type {} from '@deepseek-ai/dsh-api-session-controller/types'
@@ -140,7 +140,7 @@ export type { CredentialInfo } from '@deepseek-ai/dsh-credentials/types'
 // it). It travels with its seam, whose `./types` the Client face already reads.
 export type {
   SettingsDescribeValue, SettingsNamespaceView, SettingsPathOpView, SettingsSecretView,
-} from '@deepseek-ai/dsh-settings/types'
+} from '@berry-ai/harness-settings/types'
 // Provider registry and discovery vocabulary for the llm namespace.
 export type {
   LlmConfigurableProvider, LlmDiscoveredModel,

@@ -250,6 +250,9 @@ importers:
       '@berry-ai/harness-http-proxy':
         specifier: workspace:*
         version: link:../../packages/util/http-proxy
+      '@berry-ai/harness-jobs-local':
+        specifier: workspace:*
+        version: link:../../packages/jobs/jobs-local
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../packages/util/launch-environment
@@ -277,6 +280,9 @@ importers:
       '@berry-ai/harness-terminal-bash':
         specifier: workspace:*
         version: link:../../packages/terminal/terminal-bash
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../packages/jobs/tool-jobs
       '@berry-ai/harness-tool-present':
         specifier: workspace:*
         version: link:../../packages/deliverables/tool-present
@@ -376,9 +382,6 @@ importers:
       '@deepseek-ai/dsh-headless':
         specifier: workspace:*
         version: link:../../packages/bundle/headless
-      '@deepseek-ai/dsh-jobs-local':
-        specifier: workspace:*
-        version: link:../../packages/jobs/jobs-local
       '@deepseek-ai/dsh-pwsh-local':
         specifier: workspace:*
         version: link:../../packages/shell/pwsh-local
@@ -436,9 +439,6 @@ importers:
       '@deepseek-ai/dsh-tool-goal':
         specifier: workspace:*
         version: link:../../packages/goal/tool-goal
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../packages/jobs/tool-jobs
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh
@@ -491,6 +491,9 @@ importers:
       '@berry-ai/harness-attachment-local':
         specifier: workspace:*
         version: link:../../packages/attachment/attachment-local
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../packages/settings/settings
       '@deepseek-ai/dsh-acp':
         specifier: workspace:*
         version: link:../../packages/acp/acp
@@ -590,9 +593,6 @@ importers:
       '@deepseek-ai/dsh-session-query':
         specifier: workspace:*
         version: link:../../packages/session-query/session-query
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../packages/settings/settings
       '@deepseek-ai/dsh-shell-env':
         specifier: workspace:*
         version: link:../../packages/shell/shell-env
@@ -771,9 +771,15 @@ importers:
       '@berry-ai/harness-home-paths':
         specifier: workspace:*
         version: link:../../packages/util/home-paths
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../../packages/jobs/jobs
       '@berry-ai/harness-schedule':
         specifier: workspace:*
         version: link:../../packages/schedule/schedule
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../packages/workspace/workspace
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../vendor/cordis
@@ -789,18 +795,12 @@ importers:
       '@deepseek-ai/dsh-host-webserver':
         specifier: workspace:*
         version: link:../../packages/host/webserver
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../../packages/jobs/jobs
       '@deepseek-ai/dsh-skill-office':
         specifier: workspace:*
         version: link:../../packages/skill/skill-office
       '@deepseek-ai/dsh-tool-workspace-dependencies':
         specifier: workspace:*
         version: link:../../packages/skill/tool-workspace-dependencies
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../packages/workspace/workspace
       '@deepseek-ai/libreoffice-kit':
         specifier: ^0.1.5
         version: 0.1.5
@@ -1243,6 +1243,12 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/jobs
+      '@berry-ai/harness-jobs-local':
+        specifier: workspace:*
+        version: link:../../jobs/jobs-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1258,12 +1264,6 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/jobs
-      '@deepseek-ai/dsh-jobs-local':
-        specifier: workspace:*
-        version: link:../../jobs/jobs-local
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -1298,6 +1298,9 @@ importers:
       '@berry-ai/harness-schedule':
         specifier: workspace:*
         version: link:../../schedule/schedule
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1373,9 +1376,6 @@ importers:
       '@deepseek-ai/dsh-session-reference':
         specifier: workspace:*
         version: link:../../context/session-reference
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
@@ -1419,6 +1419,9 @@ importers:
       '@berry-ai/harness-native-command':
         specifier: workspace:*
         version: link:../../util/native-command
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@berry-ai/harness-storage':
         specifier: workspace:*
         version: link:../../storage/storage
@@ -1440,6 +1443,9 @@ importers:
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../workspace/workspace
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1518,9 +1524,6 @@ importers:
       '@deepseek-ai/dsh-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-skill':
         specifier: workspace:*
         version: link:../../skill/skill
@@ -1536,9 +1539,6 @@ importers:
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../workspace/workspace
       '@types/mime-types':
         specifier: ^3.0.1
         version: 3.0.1
@@ -1558,6 +1558,9 @@ importers:
       '@berry-ai/harness-native-command':
         specifier: workspace:*
         version: link:../../util/native-command
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1567,9 +1570,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
@@ -1662,6 +1662,9 @@ importers:
       '@berry-ai/harness-storage-domain':
         specifier: workspace:*
         version: link:../../storage/storage-domain
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../workspace/workspace
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1689,9 +1692,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../workspace/workspace
 
   packages/api/workspace-files:
     dependencies:
@@ -2050,6 +2050,9 @@ importers:
       '@berry-ai/harness-hmr':
         specifier: workspace:*
         version: link:../../boot/hmr
+      '@berry-ai/harness-jobs-local':
+        specifier: workspace:*
+        version: link:../../jobs/jobs-local
       '@berry-ai/harness-mcp-resources':
         specifier: workspace:*
         version: link:../../mcp/mcp-resources
@@ -2068,6 +2071,9 @@ importers:
       '@berry-ai/harness-repeat-tool-reminder':
         specifier: workspace:*
         version: link:../../guard/repeat-tool-reminder
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@berry-ai/harness-spill-local':
         specifier: workspace:*
         version: link:../../spill/spill-local
@@ -2086,6 +2092,9 @@ importers:
       '@berry-ai/harness-tool-call-timeout-policy':
         specifier: workspace:*
         version: link:../../guard/timeout-policy
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/tool-jobs
       '@berry-ai/harness-tool-present':
         specifier: workspace:*
         version: link:../../deliverables/tool-present
@@ -2158,9 +2167,6 @@ importers:
       '@deepseek-ai/dsh-goal-round-driver':
         specifier: workspace:*
         version: link:../../goal/goal-round-driver
-      '@deepseek-ai/dsh-jobs-local':
-        specifier: workspace:*
-        version: link:../../jobs/jobs-local
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -2221,9 +2227,6 @@ importers:
       '@deepseek-ai/dsh-session-title-first-prompt-llm':
         specifier: workspace:*
         version: link:../../session/session-title-first-prompt-llm
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-shell-env':
         specifier: workspace:*
         version: link:../../shell/shell-env
@@ -2263,9 +2266,6 @@ importers:
       '@deepseek-ai/dsh-tool-goal':
         specifier: workspace:*
         version: link:../../goal/tool-goal
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/tool-jobs
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh
@@ -2404,6 +2404,9 @@ importers:
 
   packages/bundle/sdk-minimal:
     dependencies:
+      '@berry-ai/harness-jobs-local':
+        specifier: workspace:*
+        version: link:../../jobs/jobs-local
       '@berry-ai/harness-mcp-resources':
         specifier: workspace:*
         version: link:../../mcp/mcp-resources
@@ -2428,9 +2431,6 @@ importers:
       '@deepseek-ai/dsh-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-jobs-local':
-        specifier: workspace:*
-        version: link:../../jobs/jobs-local
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -2537,6 +2537,9 @@ importers:
       '@berry-ai/harness-terminal-bash':
         specifier: workspace:*
         version: link:../../terminal/terminal-bash
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/tool-jobs
       '@berry-ai/harness-tool-present':
         specifier: workspace:*
         version: link:../../deliverables/tool-present
@@ -2546,6 +2549,9 @@ importers:
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../todo/tool-todo
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../workspace/workspace
       '@berry-ai/harness-workspace-changes':
         specifier: workspace:*
         version: link:../../deliverables/workspace-changes
@@ -2846,9 +2852,6 @@ importers:
       '@deepseek-ai/dsh-tool-goal':
         specifier: workspace:*
         version: link:../../goal/tool-goal
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/tool-jobs
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh
@@ -2876,9 +2879,6 @@ importers:
       '@deepseek-ai/dsh-workflow-ptc':
         specifier: workspace:*
         version: link:../../workflow/workflow-ptc
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../workspace/workspace
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -3031,6 +3031,9 @@ importers:
       '@berry-ai/harness-package-manifest':
         specifier: workspace:*
         version: link:../../util/package-manifest
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -3058,9 +3061,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -3101,6 +3101,9 @@ importers:
       '@berry-ai/harness-otel':
         specifier: workspace:*
         version: link:../../telemetry/otel
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -3128,9 +3131,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
 
   packages/client/resources:
     devDependencies:
@@ -3394,6 +3394,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -3487,9 +3490,6 @@ importers:
       '@deepseek-ai/dsh-session-turn-outline':
         specifier: workspace:*
         version: link:../../session/session-turn-outline
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
@@ -3590,6 +3590,9 @@ importers:
       '@berry-ai/harness-plan-mode':
         specifier: workspace:*
         version: link:../../plan/plan-mode
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../todo/tool-todo
@@ -3602,6 +3605,9 @@ importers:
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../workspace/workspace
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -3674,15 +3680,9 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../llm/token-meter
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../workspace/workspace
       '@lexical/headless':
         specifier: ^0.49.0
         version: 0.49.0(typescript@6.0.3)
@@ -4032,6 +4032,9 @@ importers:
 
   packages/client/ui-jobs:
     devDependencies:
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/jobs
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -4059,9 +4062,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/jobs
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -4826,6 +4826,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -4844,9 +4847,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -4860,6 +4860,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -4908,9 +4911,6 @@ importers:
       '@deepseek-ai/dsh-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@testing-library/react':
         specifier: ^16.3.3
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4978,6 +4978,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -5020,9 +5023,6 @@ importers:
       '@deepseek-ai/dsh-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -5980,6 +5980,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6013,9 +6016,6 @@ importers:
       '@deepseek-ai/dsh-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -6040,6 +6040,9 @@ importers:
       '@berry-ai/harness-spill-policy':
         specifier: workspace:*
         version: link:../../spill/spill-policy
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/tool-jobs
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -6097,9 +6100,6 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../llm/token-meter
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/tool-jobs
       '@deepseek-ai/dsh-tool-session-query':
         specifier: workspace:*
         version: link:../../experimental/tool-session-query
@@ -6334,6 +6334,9 @@ importers:
 
   packages/client/ui-workspace:
     devDependencies:
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/jobs
       '@berry-ai/harness-schedule':
         specifier: workspace:*
         version: link:../../schedule/schedule
@@ -6397,9 +6400,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/jobs
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -6936,6 +6936,9 @@ importers:
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../workspace/workspace
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6960,9 +6963,6 @@ importers:
       '@deepseek-ai/dsh-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../workspace/workspace
 
   packages/core/agent-default-model:
     dependencies:
@@ -6973,6 +6973,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6982,9 +6985,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
 
   packages/core/agent-loop:
     dependencies:
@@ -8042,6 +8042,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -8093,9 +8096,6 @@ importers:
       '@deepseek-ai/dsh-session-query':
         specifier: workspace:*
         version: link:../../session-query/session-query
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
@@ -8721,15 +8721,15 @@ importers:
       '@berry-ai/harness-config-editor':
         specifier: workspace:*
         version: link:../../boot/config-editor
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
 
   packages/experimental/speech-to-text-sensevoice:
     dependencies:
@@ -8952,6 +8952,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/jobs
+      '@berry-ai/harness-jobs-local':
+        specifier: workspace:*
+        version: link:../../jobs/jobs-local
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
@@ -8961,6 +8967,9 @@ importers:
       '@berry-ai/harness-terminal-bash':
         specifier: workspace:*
         version: link:../../terminal/terminal-bash
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/tool-jobs
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -8976,12 +8985,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/jobs
-      '@deepseek-ai/dsh-jobs-local':
-        specifier: workspace:*
-        version: link:../../jobs/jobs-local
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -9003,9 +9006,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/tool-jobs
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -9169,6 +9169,9 @@ importers:
       '@berry-ai/harness-agent-preset-registry':
         specifier: workspace:*
         version: link:../../preset/agent-preset-registry
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../workspace/workspace
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9196,9 +9199,6 @@ importers:
       '@deepseek-ai/dsh-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../workspace/workspace
 
   packages/experimental/webhook-github:
     dependencies:
@@ -10360,6 +10360,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10378,9 +10381,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-shell':
         specifier: workspace:*
         version: link:../../shell/shell
@@ -10486,6 +10486,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../workspace/workspace
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10495,9 +10498,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../workspace/workspace
 
   packages/jobs/jobs-local:
     dependencies:
@@ -10508,6 +10508,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../jobs
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -10526,9 +10529,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../jobs
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
@@ -10542,6 +10542,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../jobs
+      '@berry-ai/harness-jobs-local':
+        specifier: workspace:*
+        version: link:../jobs-local
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
@@ -10551,12 +10557,6 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../jobs
-      '@deepseek-ai/dsh-jobs-local':
-        specifier: workspace:*
-        version: link:../jobs-local
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -10646,6 +10646,9 @@ importers:
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -10700,9 +10703,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -10783,6 +10783,9 @@ importers:
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -10810,9 +10813,6 @@ importers:
       '@deepseek-ai/dsh-llm-deepseek-api-key':
         specifier: workspace:*
         version: link:../llm-deepseek-api-key
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
 
   packages/llm/llm-retry:
     dependencies:
@@ -11249,6 +11249,9 @@ importers:
       '@berry-ai/harness-hmr':
         specifier: workspace:*
         version: link:../../boot/hmr
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11285,9 +11288,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -11511,6 +11511,9 @@ importers:
       '@berry-ai/harness-storage-json':
         specifier: workspace:*
         version: link:../../storage/storage-json
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../workspace/workspace
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11556,9 +11559,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../workspace/workspace
 
   packages/schedule/tool-schedule:
     devDependencies:
@@ -12616,9 +12616,18 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/jobs
+      '@berry-ai/harness-jobs-local':
+        specifier: workspace:*
+        version: link:../../jobs/jobs-local
       '@berry-ai/harness-ptc-runtime':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/tool-jobs
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12634,12 +12643,6 @@ importers:
       '@deepseek-ai/dsh-bash-local':
         specifier: workspace:*
         version: link:../bash-local
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/jobs
-      '@deepseek-ai/dsh-jobs-local':
-        specifier: workspace:*
-        version: link:../../jobs/jobs-local
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -12670,9 +12673,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/tool-jobs
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -12753,6 +12753,15 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/jobs
+      '@berry-ai/harness-jobs-local':
+        specifier: workspace:*
+        version: link:../../jobs/jobs-local
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/tool-jobs
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12768,12 +12777,6 @@ importers:
       '@deepseek-ai/dsh-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/jobs
-      '@deepseek-ai/dsh-jobs-local':
-        specifier: workspace:*
-        version: link:../../jobs/jobs-local
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -12804,9 +12807,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/tool-jobs
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -13451,6 +13451,9 @@ importers:
       '@berry-ai/harness-util-time':
         specifier: workspace:*
         version: link:../../util/time
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../workspace/workspace
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13520,9 +13523,6 @@ importers:
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../workspace/workspace
 
   packages/subagent/subagent-acp:
     dependencies:
@@ -13612,6 +13612,9 @@ importers:
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/tool-jobs
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13651,9 +13654,6 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/tool-jobs
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -13682,6 +13682,9 @@ importers:
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/tool-jobs
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13718,9 +13721,6 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/tool-jobs
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -14193,6 +14193,9 @@ importers:
       '@berry-ai/harness-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -14262,9 +14265,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
@@ -14838,6 +14838,15 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/jobs
+      '@berry-ai/harness-jobs-local':
+        specifier: workspace:*
+        version: link:../../jobs/jobs-local
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../jobs/tool-jobs
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -14847,12 +14856,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/jobs
-      '@deepseek-ai/dsh-jobs-local':
-        specifier: workspace:*
-        version: link:../../jobs/jobs-local
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -14868,9 +14871,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../jobs/tool-jobs
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -15053,6 +15053,12 @@ importers:
       '@berry-ai/harness-http-proxy':
         specifier: workspace:*
         version: link:../../packages/util/http-proxy
+      '@berry-ai/harness-jobs':
+        specifier: workspace:*
+        version: link:../../packages/jobs/jobs
+      '@berry-ai/harness-jobs-local':
+        specifier: workspace:*
+        version: link:../../packages/jobs/jobs-local
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../packages/util/launch-environment
@@ -15092,6 +15098,9 @@ importers:
       '@berry-ai/harness-schedule':
         specifier: workspace:*
         version: link:../../packages/schedule/schedule
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../packages/settings/settings
       '@berry-ai/harness-spill':
         specifier: workspace:*
         version: link:../../packages/spill/spill
@@ -15113,6 +15122,9 @@ importers:
       '@berry-ai/harness-tool-call-timeout-policy':
         specifier: workspace:*
         version: link:../../packages/guard/timeout-policy
+      '@berry-ai/harness-tool-jobs':
+        specifier: workspace:*
+        version: link:../../packages/jobs/tool-jobs
       '@berry-ai/harness-tool-present':
         specifier: workspace:*
         version: link:../../packages/deliverables/tool-present
@@ -15131,6 +15143,9 @@ importers:
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../packages/util/workspace-path
+      '@berry-ai/harness-workspace':
+        specifier: workspace:*
+        version: link:../../packages/workspace/workspace
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../vendor/cordis
@@ -15248,12 +15263,6 @@ importers:
       '@deepseek-ai/dsh-host-webserver':
         specifier: workspace:*
         version: link:../../packages/host/webserver
-      '@deepseek-ai/dsh-jobs':
-        specifier: workspace:*
-        version: link:../../packages/jobs/jobs
-      '@deepseek-ai/dsh-jobs-local':
-        specifier: workspace:*
-        version: link:../../packages/jobs/jobs-local
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../packages/llm/llm
@@ -15335,9 +15344,6 @@ importers:
       '@deepseek-ai/dsh-session-title-llm':
         specifier: workspace:*
         version: link:../../packages/session/session-title-llm
-      '@deepseek-ai/dsh-settings':
-        specifier: workspace:*
-        version: link:../../packages/settings/settings
       '@deepseek-ai/dsh-shell':
         specifier: workspace:*
         version: link:../../packages/shell/shell
@@ -15401,9 +15407,6 @@ importers:
       '@deepseek-ai/dsh-tool-goal':
         specifier: workspace:*
         version: link:../../packages/goal/tool-goal
-      '@deepseek-ai/dsh-tool-jobs':
-        specifier: workspace:*
-        version: link:../../packages/jobs/tool-jobs
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh
@@ -15473,9 +15476,6 @@ importers:
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../packages/session/working-directory
-      '@deepseek-ai/dsh-workspace':
-        specifier: workspace:*
-        version: link:../../packages/workspace/workspace
       '@deepseek-ai/schemastery':
         specifier: link:../../vendor/schemastery
         version: link:../../vendor/schemastery

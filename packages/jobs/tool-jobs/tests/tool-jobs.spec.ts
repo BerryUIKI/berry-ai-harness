@@ -8,13 +8,13 @@ import type { Agent } from '@deepseek-ai/dsh-agent'
 import { createUserMessage } from '@deepseek-ai/dsh-llm'
 import { SessionId } from '@deepseek-ai/dsh-session'
 import { bindScopeParent, createScope, scopeOf } from '@deepseek-ai/dsh-scope'
-import { JobId } from '@deepseek-ai/dsh-jobs'
-import LocalJobRegistry from '@deepseek-ai/dsh-jobs-local'
-import type { JobAppendOptions, JobHandle, JobHooks, JobOutcome, JobOutputSource, JobSpec, JobView } from '@deepseek-ai/dsh-jobs'
-import * as ToolJobs from '@deepseek-ai/dsh-tool-jobs'
+import { JobId } from '@berry-ai/harness-jobs'
+import LocalJobRegistry from '@berry-ai/harness-jobs-local'
+import type { JobAppendOptions, JobHandle, JobHooks, JobOutcome, JobOutputSource, JobSpec, JobView } from '@berry-ai/harness-jobs'
+import * as ToolJobs from '@berry-ai/harness-tool-jobs'
 import { publicJob, renderModelDelta, statusLine } from '../src/render.ts'
 
-declare module '@deepseek-ai/dsh-jobs' {
+declare module '@berry-ai/harness-jobs' {
   interface JobKindMap {
     'test-task': 'test-task'
   }

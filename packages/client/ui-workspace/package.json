@@ -68,7 +68,7 @@
     "@deepseek-ai/dsh-client-ui-session": "workspace:*",
     "@deepseek-ai/dsh-client-ui-sidebar": "workspace:*",
     "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
-    "@deepseek-ai/dsh-jobs": "workspace:*",
+    "@berry-ai/harness-jobs": "workspace:*",
     "@berry-ai/harness-schedule": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",

@@ -53,7 +53,7 @@
     "@deepseek-ai/dsh-credentials": "workspace:*",
     "@berry-ai/harness-native-command": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*"
   },
   "devDependencies": {
@@ -62,7 +62,7 @@
     "@deepseek-ai/dsh-credentials": "workspace:*",
     "@berry-ai/harness-native-command": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*"
   }
 }

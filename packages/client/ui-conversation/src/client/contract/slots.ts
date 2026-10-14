@@ -14,7 +14,7 @@ import type {
 import type { SessionPendingInteraction } from '@deepseek-ai/dsh-client-ui-session/client'
 import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { WorkspaceId } from '@deepseek-ai/dsh-workspace/types'
+import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import type { ComposerBlock } from './composer-blocks.ts'
 import type { DraftAttachmentId, InputActions, InputNotice, InputState } from './input.ts'
 import type { ComposerKeyboard, DraftSnapshot, EditSelection } from './draft-editor.ts'

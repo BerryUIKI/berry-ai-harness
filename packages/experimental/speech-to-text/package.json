@@ -43,14 +43,14 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-config-editor": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~"
   },
   "peerDependenciesMeta": {

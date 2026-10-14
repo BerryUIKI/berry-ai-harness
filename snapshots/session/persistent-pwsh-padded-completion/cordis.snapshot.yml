@@ -52,7 +52,7 @@
     personaPrefix: You are a concise snapshot agent.
 
 - id: tool-jobs
-  name: '@deepseek-ai/dsh-tool-jobs'
+  name: '@berry-ai/harness-tool-jobs'
   disabled: true
 
 - id: goal

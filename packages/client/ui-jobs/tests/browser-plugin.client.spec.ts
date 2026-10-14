@@ -5,7 +5,7 @@
  */
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { Context } from '@deepseek-ai/cordis'
-import { JobId } from '@deepseek-ai/dsh-jobs/brand'
+import { JobId } from '@berry-ai/harness-jobs/brand'
 import { SessionId } from '@deepseek-ai/dsh-session/types'
 import { describe, expect, it } from 'vitest'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'

@@ -12,13 +12,13 @@ import type { Agent } from '@deepseek-ai/dsh-agent'
 import type { ContentBlock } from '@deepseek-ai/dsh-llm'
 import { TerminalSessionId } from '@berry-ai/harness-terminal'
 import type { TerminalSendOperation, TerminalSendResult, TerminalSessionId as TerminalSessionIdType, TerminalSignal } from '@berry-ai/harness-terminal'
-import type {} from '@deepseek-ai/dsh-jobs'
+import type {} from '@berry-ai/harness-jobs'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import type { ToolDefinition } from '@deepseek-ai/dsh-tools'
 import { sendSource } from './background.ts'
 import { boundTerminalText, renderList, renderRead, renderSend, renderSpawn } from './render.ts'
 
-declare module '@deepseek-ai/dsh-jobs' {
+declare module '@berry-ai/harness-jobs' {
   interface JobKindMap {
     'pty-send': 'pty-send'
   }
@@ -255,7 +255,7 @@ export function apply(ctx: Context, config: Config = {}): void {
       if (args.run_in_background === true) {
         if (!enableRunInBackground) throw new Error('background terminal sends are disabled by tool-terminal configuration')
         const jobs = ctx.get('jobs')
-        if (jobs === undefined) throw new Error('background terminal sends require @deepseek-ai/dsh-jobs and @deepseek-ai/dsh-tool-jobs')
+        if (jobs === undefined) throw new Error('background terminal sends require @berry-ai/harness-jobs and @berry-ai/harness-tool-jobs')
         let cancelRequested = false
         let operation: TerminalSendOperation | undefined
         const jobId = jobs.start({

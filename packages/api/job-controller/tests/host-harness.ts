@@ -2,8 +2,8 @@ import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { JobAppendOptions, JobHandle, JobOutcome } from '@deepseek-ai/dsh-jobs'
-import LocalJobRegistry from '@deepseek-ai/dsh-jobs-local'
+import type { JobAppendOptions, JobHandle, JobOutcome } from '@berry-ai/harness-jobs'
+import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import { Session, SessionId } from '@deepseek-ai/dsh-session'
 
 /** A registry with a tiny ring so eviction is cheap to reach. */

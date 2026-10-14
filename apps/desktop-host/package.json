@@ -20,12 +20,12 @@
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@deepseek-ai/dsh-host-webserver": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
-    "@deepseek-ai/dsh-jobs": "workspace:*",
+    "@berry-ai/harness-jobs": "workspace:*",
     "@berry-ai/harness-schedule": "workspace:*",
     "@deepseek-ai/dsh-tool-workspace-dependencies": "workspace:*",
     "@deepseek-ai/dsh-skill-office": "workspace:*",
     "@deepseek-ai/dsh-deepseek-account": "workspace:*",
-    "@deepseek-ai/dsh-workspace": "workspace:*"
+    "@berry-ai/harness-workspace": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",

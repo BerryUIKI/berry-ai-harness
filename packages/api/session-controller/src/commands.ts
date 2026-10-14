@@ -23,7 +23,7 @@ import { SessionTitleInvalidError } from '@deepseek-ai/dsh-session-title'
 import { canonicalClientTimeZone } from '@berry-ai/harness-util-time'
 import { assertNever } from '@berry-ai/harness-util-values'
 import { RemoteError, remoteErrorOf } from '@deepseek-ai/dsh-typert-protocol'
-import type { Workspace } from '@deepseek-ai/dsh-workspace'
+import type { Workspace } from '@berry-ai/harness-workspace'
 import {
   ApiSessionAgentController,
   ApiSessionCwdConflict,

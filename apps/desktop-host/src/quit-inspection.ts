@@ -1,7 +1,7 @@
 /** Quit-time inspection of interruptible work and armed scheduled reminders for the Electron shell. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-workspace'
+import type {} from '@berry-ai/harness-workspace'
 import type {} from '@berry-ai/harness-schedule'
 import { hasDesktopActiveTasks } from './update-tasks.ts'
 

@@ -51,7 +51,7 @@ describe('dsh-sdk-minimal bundle', () => {
       ['mcp-resources', '@berry-ai/harness-mcp-resources'],
       ['agent', '@deepseek-ai/dsh-agent'],
       ['llm-retry', '@deepseek-ai/dsh-llm-retry'],
-      ['jobs', '@deepseek-ai/dsh-jobs-local'],
+      ['jobs', '@berry-ai/harness-jobs-local'],
       ['agent-loop', '@deepseek-ai/dsh-agent-loop'],
       ['persistent-bash', '@deepseek-ai/dsh-tool-bash-persistent'],
       ['persistent-pwsh', '@deepseek-ai/dsh-tool-pwsh-persistent'],

@@ -31,7 +31,7 @@
             config:
               sampleOverCapGlobResults: false
           - id: tool-jobs
-            name: '@deepseek-ai/dsh-tool-jobs'
+            name: '@berry-ai/harness-tool-jobs'
           - id: tool-schedule
             name: '@berry-ai/harness-tool-schedule'
           - id: skill-filesystem

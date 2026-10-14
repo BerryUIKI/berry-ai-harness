@@ -48,7 +48,7 @@ Enable these tools when the composition mounts a terminal backend and the model 
 - name: '@deepseek-ai/dsh-tool-terminal'
 ```
 
-The tools need `ctx.terminals` — a backend must be mounted — and the system-prompt service for the guidance section. Background sends additionally require the jobs service and its model-facing controller (`@deepseek-ai/dsh-tool-jobs`).
+The tools need `ctx.terminals` — a backend must be mounted — and the system-prompt service for the guidance section. Background sends additionally require the jobs service and its model-facing controller (`@berry-ai/harness-tool-jobs`).
 
 ### Configuration
 
@@ -173,7 +173,7 @@ Append-only; new results follow the reusable request prefix.
 These limits define the model-facing surface that is absent. They are current package constraints, not a task backlog.
 
 - **No TUI or key-sequence surface** — named key sequences, full-screen TUI interaction, BEL, resize, and auto-start are not exposed in any schema.
-- **Background mode requires the jobs surface** — `run_in_background` needs both `@deepseek-ai/dsh-jobs` and its model-facing controller (`@deepseek-ai/dsh-tool-jobs`); without them the argument is rejected.
+- **Background mode requires the jobs surface** — `run_in_background` needs both `@berry-ai/harness-jobs` and its model-facing controller (`@berry-ai/harness-tool-jobs`); without them the argument is rejected.
 
 <a id="dev-note"></a>
 ### Dev Note

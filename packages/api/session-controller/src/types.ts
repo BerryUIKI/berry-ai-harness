@@ -10,7 +10,7 @@ import type { TextBlock } from '@deepseek-ai/dsh-llm'
 import type { SessionId, SessionSeqCursor } from '@deepseek-ai/dsh-session/types'
 import type { SessionProjectionMap } from '@deepseek-ai/dsh-session-projection/types'
 import type { JsonValue } from '@berry-ai/harness-util-values'
-import type { WorkspaceId } from '@deepseek-ai/dsh-workspace/types'
+import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 
 declare module '@deepseek-ai/dsh-session-projection/types' {
   interface SessionProjectionStateMap {

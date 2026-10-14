@@ -19,8 +19,8 @@ import { join, resolve as resolvePath } from 'node:path'
 import { ToolCallId } from '@deepseek-ai/dsh-llm'
 import SystemPrompt, { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime, { TOOL_ABORTED, TOOL_ABORTED_BEFORE_DISPATCH } from '@deepseek-ai/dsh-tools'
-import LocalJobRegistry from '@deepseek-ai/dsh-jobs-local'
-import * as ToolJobs from '@deepseek-ai/dsh-tool-jobs'
+import LocalJobRegistry from '@berry-ai/harness-jobs-local'
+import * as ToolJobs from '@berry-ai/harness-tool-jobs'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
@@ -845,7 +845,7 @@ describe('background execution through the job runtime', () => {
     const { ctx } = await setup() // no LocalJobRegistry / ToolJobs
     const result = await call(ctx, 'pwsh', { command: 'Start-Sleep -Seconds 60', description: 'test command', run_in_background: true })
     expect(result.isError).toBe(true)
-    expect(text(result)).toContain('background jobs unavailable: load @deepseek-ai/dsh-jobs and @deepseek-ai/dsh-tool-jobs')
+    expect(text(result)).toContain('background jobs unavailable: load @berry-ai/harness-jobs and @berry-ai/harness-tool-jobs')
   })
 
   it('a pre-aborted call is skipped before the process starts', async () => {

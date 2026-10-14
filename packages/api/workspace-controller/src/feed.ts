@@ -3,12 +3,12 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { Deque } from '@berry-ai/harness-deque'
 import type { DomainChanged } from '@berry-ai/harness-storage-domain'
-import type { Workspace, WorkspaceRecord } from '@deepseek-ai/dsh-workspace'
+import type { Workspace, WorkspaceRecord } from '@berry-ai/harness-workspace'
 import {
   workspaceDomainState,
   workspaceRecord,
   WorkspaceId,
-} from '@deepseek-ai/dsh-workspace'
+} from '@berry-ai/harness-workspace'
 import type {
   WorkspaceBaseline,
   WorkspaceFollowFrame,

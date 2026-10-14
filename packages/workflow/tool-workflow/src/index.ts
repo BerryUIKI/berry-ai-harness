@@ -18,7 +18,7 @@ import { defineTool } from '@deepseek-ai/dsh-tools'
 import type { ToolCallView, ToolResultView } from '@deepseek-ai/dsh-tools'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import type { ContentBlock } from '@deepseek-ai/dsh-llm'
-import type { JobId, JobOutcome } from '@deepseek-ai/dsh-jobs'
+import type { JobId, JobOutcome } from '@berry-ai/harness-jobs'
 import type { Session, SessionEventMap } from '@deepseek-ai/dsh-session'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type {
@@ -31,7 +31,7 @@ import type {
   ToolWorkflowRunEndData, ToolWorkflowRunStartData,
 } from './types.ts'
 
-declare module '@deepseek-ai/dsh-jobs' {
+declare module '@berry-ai/harness-jobs' {
   interface JobKindMap {
     workflow: 'workflow'
   }
@@ -268,7 +268,7 @@ function startBackgroundRun(
 ): { kind: 'background'; jobId: JobId; runId: WorkflowRunId } {
   const jobs = ctx.get('jobs')
   if (jobs === undefined) {
-    throw new Error('background jobs unavailable: load @deepseek-ai/dsh-jobs and @deepseek-ai/dsh-tool-jobs')
+    throw new Error('background jobs unavailable: load @berry-ai/harness-jobs and @berry-ai/harness-tool-jobs')
   }
   let run!: WorkflowRun
   const jobId = jobs.start({

@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
-import { JobId, JobRegistry } from '@deepseek-ai/dsh-jobs'
-import type { JobStatus, JobView } from '@deepseek-ai/dsh-jobs'
+import { JobId, JobRegistry } from '@berry-ai/harness-jobs'
+import type { JobStatus, JobView } from '@berry-ai/harness-jobs'
 import { SessionId } from '@deepseek-ai/dsh-session/types'
 import { Readable } from 'node:stream'
 import type { IncomingMessage, ServerResponse } from 'node:http'

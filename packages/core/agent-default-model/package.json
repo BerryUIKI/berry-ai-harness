@@ -39,6 +39,6 @@
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-settings": "workspace:*"
+    "@berry-ai/harness-settings": "workspace:*"
   }
 }

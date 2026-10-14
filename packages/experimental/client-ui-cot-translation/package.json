@@ -57,7 +57,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-experimental-translator": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-api-session-controller": "workspace:*"
@@ -69,7 +69,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-experimental-translator": "workspace:*",
     "@deepseek-ai/dsh-api-remotes": "workspace:*",
     "@deepseek-ai/dsh-client-locale": "workspace:*",

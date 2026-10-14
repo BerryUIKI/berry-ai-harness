@@ -8,7 +8,7 @@ import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
 import type { Branded } from '@berry-ai/harness-brand'
 import type {} from '@deepseek-ai/dsh-session/types'
 // Type-only: the Workspace registry's archive-admission family map this plugin merges `schedule` into.
-import type {} from '@deepseek-ai/dsh-workspace/types'
+import type {} from '@berry-ai/harness-workspace/types'
 
 /** Stable globally unique reminder identity. */
 export type ScheduleId = Branded<'ScheduleId'>
@@ -349,7 +349,7 @@ export type ScheduleDeleteResult =
 /** Canonical `schedule_delete` value. */
 export type ScheduleDeleteValue = ScheduleDeleteResult | ScheduleToolError
 
-declare module '@deepseek-ai/dsh-workspace/types' {
+declare module '@berry-ai/harness-workspace/types' {
   interface SessionActivityKindMap {
     /** A scheduled follow-up for this session is still active. */
     schedule: true

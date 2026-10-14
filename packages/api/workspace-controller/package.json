@@ -82,7 +82,7 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-workspace": "workspace:*"
+    "@berry-ai/harness-workspace": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -95,6 +95,6 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-workspace": "workspace:*"
+    "@berry-ai/harness-workspace": "workspace:*"
   }
 }

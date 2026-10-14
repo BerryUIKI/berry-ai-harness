@@ -56,7 +56,7 @@
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-http-proxy": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-settings": "workspace:*"
+    "@berry-ai/harness-settings": "workspace:*"
   },
   "peerDependenciesMeta": {
     "@deepseek-ai/cordis-plugin-loader": {
