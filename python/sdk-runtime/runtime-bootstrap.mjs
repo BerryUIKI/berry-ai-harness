@@ -91,7 +91,7 @@ if (resource !== undefined) {
   await import('@deepseek-ai/dsh-sandbox-windows-acl/runner')
 } else if (process.env.DSH_PTC_RUNTIME_NODE === '1') {
   Reflect.deleteProperty(process.env, 'DSH_PTC_RUNTIME_NODE')
-  await import('@deepseek-ai/dsh-ptc-runtime-node/process')
+  await import('@berry-ai/harness-ptc-runtime-node/process')
 } else if (selection === undefined) {
   if (cache !== undefined && existsSync(join(cache, 'primary', 'complete'))) {
     process.env.DSH_BUNDLED_PRIMARY_RUNTIME = join(cache, 'primary', 'primary-runtime')

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { execa } from 'execa'
 import { describe, expect, it } from 'vitest'
 import { runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
-import { readImageFile } from '@deepseek-ai/dsh-attachment-local'
+import { readImageFile } from '@berry-ai/harness-attachment-local'
 import { parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 

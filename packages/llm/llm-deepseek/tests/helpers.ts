@@ -1,6 +1,6 @@
 /** Deterministic Messages fixtures and loopback transport with explicit teardown. */
 import { Context } from '@deepseek-ai/cordis'
-import AttachmentStore from '@deepseek-ai/dsh-attachment'
+import AttachmentStore from '@berry-ai/harness-attachment'
 import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
 import type { AnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import { createServer } from 'node:http'

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import type { ImageAttachmentRef } from '@deepseek-ai/dsh-attachment'
+import type { ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import { IconLoadingOutlineRegular, IconRefreshOutlineRegular } from '@deepseek-ai/dsh-client-ui-primitives'
 import { ImageLightbox } from '@deepseek-ai/dsh-client-ui-primitives'
 import type { ImageLightboxLabels } from '@deepseek-ai/dsh-client-ui-primitives'

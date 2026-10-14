@@ -12,7 +12,7 @@ import type { ContentBlock, ImageBlock, LlmImageRequestPrice, ToolCallId } from 
 import { estimateContent } from '@deepseek-ai/dsh-token-meter/estimate'
 import type { SpillRef } from '@deepseek-ai/dsh-spill'
 import type { PostToolDecision, ToolExecution } from '@deepseek-ai/dsh-tools'
-import type {} from '@deepseek-ai/dsh-attachment'
+import type {} from '@berry-ai/harness-attachment'
 import type {} from '@deepseek-ai/dsh-fs'
 import type { SpillPolicyExec } from './types.ts'
 import { formatSpillNotice } from './notice.ts'

@@ -9,7 +9,7 @@ import type {} from '@deepseek-ai/dsh-ssh'
 import type {} from '@deepseek-ai/dsh-fs-ssh'
 import type {} from '@deepseek-ai/dsh-subprocess-ssh'
 import type {} from '@deepseek-ai/dsh-sandbox-ssh'
-import type {} from '@deepseek-ai/dsh-ptc-runtime-node'
+import type {} from '@berry-ai/harness-ptc-runtime-node'
 
 const [configPath, reportPath, sandbox] = process.argv.slice(2)
 if (configPath === undefined || reportPath === undefined || !['required', 'unavailable', 'portable'].includes(sandbox ?? '')) throw new Error('Artifact driver requires config, report, and expected sandbox availability')

@@ -5,7 +5,7 @@
  * @module @deepseek-ai/dsh-subagent/control-types
  */
 
-import type { PromptContentPart } from '@deepseek-ai/dsh-attachment/types'
+import type { PromptContentPart } from '@berry-ai/harness-attachment/types'
 import type { Branded } from '@berry-ai/harness-brand'
 import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'

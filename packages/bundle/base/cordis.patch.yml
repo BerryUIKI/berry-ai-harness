@@ -139,7 +139,7 @@
     # keep content-addressed references that this shared backend resolves for
     # provider requests and authorized history reads.
     - id: attachment-local
-      name: '@deepseek-ai/dsh-attachment-local'
+      name: '@berry-ai/harness-attachment-local'
 
     # Full-text session search is opt-in. `openAt: never` keeps
     # ctx.sessionQuery mounted — exact reads, titles, and lineage traces
@@ -390,7 +390,7 @@
         toolName: subagent_fork
 
     - id: ptc-runtime
-      name: '@deepseek-ai/dsh-ptc-runtime-node'
+      name: '@berry-ai/harness-ptc-runtime-node'
 
     - id: workflow-ptc
       name: '@deepseek-ai/dsh-workflow-ptc'

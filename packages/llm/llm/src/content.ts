@@ -5,7 +5,7 @@ import type { RequestMessage } from './types.ts'
 import type { Message } from './message.ts'
 import type {
   AttachmentStore, FileAttachmentRef, ImageAttachmentRef, ImageMediaType, RequestImageAttachment,
-} from '@deepseek-ai/dsh-attachment'
+} from '@berry-ai/harness-attachment'
 import { assertNever } from '@berry-ai/harness-util-values'
 
 /** Execution-world path that model tools can use to read one normalized attachment. */

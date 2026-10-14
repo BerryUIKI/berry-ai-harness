@@ -4,8 +4,8 @@ import { mkdtempSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import { AttachmentId, ImageVariantId } from '@deepseek-ai/dsh-attachment'
-import type { AttachmentStore, ImageAttachmentRef, RequestImageAttachment } from '@deepseek-ai/dsh-attachment'
+import { AttachmentId, ImageVariantId } from '@berry-ai/harness-attachment'
+import type { AttachmentStore, ImageAttachmentRef, RequestImageAttachment } from '@berry-ai/harness-attachment'
 import { createLaunchEnvironmentSnapshot } from '@berry-ai/harness-launch-environment'
 import LlmRuntime, { ToolCallId, createUserMessage,
   CONTEXT_WINDOW_EXCEEDED_CODE,

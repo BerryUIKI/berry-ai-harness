@@ -41,4 +41,4 @@
       Keep answers brief and factual.
 
 - id: attachment-local
-  name: '@deepseek-ai/dsh-attachment-local'
+  name: '@berry-ai/harness-attachment-local'

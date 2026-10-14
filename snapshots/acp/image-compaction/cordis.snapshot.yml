@@ -52,7 +52,7 @@
                 imageRequestTokens: 384
 
 - id: attachment-local
-  name: '@deepseek-ai/dsh-attachment-local'
+  name: '@berry-ai/harness-attachment-local'
 
 # Tight automatic compaction budget sized to the route-priced visual tokens of
 # the scenario's inline images: the text-only history stays under the

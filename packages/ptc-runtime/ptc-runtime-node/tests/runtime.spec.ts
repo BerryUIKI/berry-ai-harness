@@ -6,7 +6,7 @@ import { Context } from '@deepseek-ai/cordis'
 import Sandbox from '@deepseek-ai/dsh-sandbox-local'
 import { SandboxUnavailableError } from '@deepseek-ai/dsh-sandbox'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import type { PtcBindingFunction, PtcBindingNamespace, PtcRunRequest } from '@deepseek-ai/dsh-ptc-runtime'
+import type { PtcBindingFunction, PtcBindingNamespace, PtcRunRequest } from '@berry-ai/harness-ptc-runtime'
 import type { Config } from '../src/index.ts'
 import { mountRuntime } from './setup.ts'
 

@@ -73,9 +73,9 @@
     "@deepseek-ai/dsh-client-ui-session": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
-    "@deepseek-ai/dsh-attachment": "workspace:*",
+    "@berry-ai/harness-attachment": "workspace:*",
     "clsx": "^2.0.0",
-    "@deepseek-ai/dsh-ptc-runtime": "workspace:*",
+    "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@deepseek-ai/dsh-token-meter": "workspace:*",
     "@deepseek-ai/dsh-user-questions": "workspace:*"
   },

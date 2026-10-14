@@ -36,7 +36,7 @@ try {
     await ctx.plugin((await import('@deepseek-ai/dsh-' + name)).default, {})
   }
   await ctx.plugin((await import('@deepseek-ai/dsh-sandbox-policy')).default, { mode: 'read-only', workspaceRoot: process.argv[2] })
-  await ctx.plugin((await import('@deepseek-ai/dsh-ptc-runtime-node')).default, {})
+  await ctx.plugin((await import('@berry-ai/harness-ptc-runtime-node')).default, {})
   await ctx.plugin((await import('@deepseek-ai/dsh-subagent')).default, {})
   let selectedStarts = 0
   ctx.subagents.registerProvider({

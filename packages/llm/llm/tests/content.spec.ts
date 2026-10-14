@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { AttachmentId, ImageVariantId } from '@deepseek-ai/dsh-attachment'
-import type { AttachmentStore, ImageMediaType } from '@deepseek-ai/dsh-attachment'
+import { AttachmentId, ImageVariantId } from '@berry-ai/harness-attachment'
+import type { AttachmentStore, ImageMediaType } from '@berry-ai/harness-attachment'
 import {
   ToolCallId,
   contentHasFile,

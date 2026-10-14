@@ -1,8 +1,8 @@
 /** Messages file-reference admission, bounded recovery and request-wide inline fallback. */
 import type { AnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { AttachmentId, ImageVariantId } from '@deepseek-ai/dsh-attachment'
-import type { ImageAttachmentRef, RequestImageAttachment } from '@deepseek-ai/dsh-attachment'
+import { AttachmentId, ImageVariantId } from '@berry-ai/harness-attachment'
+import type { ImageAttachmentRef, RequestImageAttachment } from '@berry-ai/harness-attachment'
 import { createAssistantMessage, createToolResultMessage, LlmError, ToolCallId } from '@deepseek-ai/dsh-llm'
 import { DeepSeekFileId } from '../src/file-id.ts'
 import { DeepSeekFileStore } from '../src/file-store.ts'

@@ -1,6 +1,6 @@
 /** Browser-safe request and receipt types for staged file uploads. */
 
-import type { FileAttachmentRef } from '@deepseek-ai/dsh-attachment/types'
+import type { FileAttachmentRef } from '@berry-ai/harness-attachment/types'
 import type { Branded } from '@berry-ai/harness-brand'
 
 /** Canonical encoded upload accepted by the Remote fallback. */

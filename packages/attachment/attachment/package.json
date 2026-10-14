@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-attachment",
+  "name": "@berry-ai/harness-attachment",
   "description": "Durable immutable attachment storage seam for the DeepSeek Harness",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

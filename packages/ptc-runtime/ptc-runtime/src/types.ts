@@ -3,7 +3,7 @@
  * {@link ../index.ts | PtcRuntime} and what it gets back. Pure types — no
  * runtime code lives here.
  *
- * @module @deepseek-ai/dsh-ptc-runtime/src/types
+ * @module @berry-ai/harness-ptc-runtime/src/types
  */
 
 import type { SandboxEnforcement, SandboxExecutionPolicy, SandboxMode } from '@deepseek-ai/dsh-sandbox'

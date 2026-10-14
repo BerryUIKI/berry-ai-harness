@@ -17,7 +17,7 @@ import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import AgentLoop from '@deepseek-ai/dsh-agent-loop'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import LocalAttachmentStore from '@deepseek-ai/dsh-attachment-local'
+import LocalAttachmentStore from '@berry-ai/harness-attachment-local'
 import * as Provider from '../src/index.ts'
 
 const TOOL = 'mcp__cua-driver-mcp__screenshot'
@@ -68,7 +68,7 @@ async function load(mode?: string): Promise<{ ctx: Context; root: string; model:
     ['@deepseek-ai/dsh-agent', AgentRegistry],
     ['@deepseek-ai/dsh-agent-loop', AgentLoop],
     ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
-    ['@deepseek-ai/dsh-attachment-local', LocalAttachmentStore],
+    ['@berry-ai/harness-attachment-local', LocalAttachmentStore],
     ['@fixture/model', { inject: ['llm'], apply(ctx: Context) { ctx.effect(() => ctx.llm.registerAdapter(['fixture'], model)) } }],
     ['@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp', Provider],
   ])
@@ -82,7 +82,7 @@ async function load(mode?: string): Promise<{ ctx: Context; root: string; model:
         args: [fixture, root, ...(mode === undefined ? [] : [mode])],
         reconnect: { initialDelayMs: 20, maxDelayMs: 40, maxAttempts: 2 },
       }
-      : name === '@deepseek-ai/dsh-attachment-local'
+      : name === '@berry-ai/harness-attachment-local'
         ? { dshHome: root }
         : name === '@deepseek-ai/dsh-agent-loop' ? { agents: [] } : {},
   }))))
