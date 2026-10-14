@@ -5,7 +5,7 @@
  * @module @berry-ai/harness-fs/types
  */
 
-import { HarnessError } from '@deepseek-ai/dsh-llm'
+import { HarnessError } from '@berry-ai/harness-llm'
 import type { Branded } from '@berry-ai/harness-brand'
 
 /**

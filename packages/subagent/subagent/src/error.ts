@@ -4,7 +4,7 @@
  * @module @deepseek-ai/dsh-subagent
  */
 
-import { HarnessError } from '@deepseek-ai/dsh-llm'
+import { HarnessError } from '@berry-ai/harness-llm'
 
 /** Typed failure for the subagent seam. */
 export class SubagentError extends HarnessError {

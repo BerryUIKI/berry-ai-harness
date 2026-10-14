@@ -58,7 +58,7 @@
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-mcp-resources": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@berry-ai/harness-attachment-local": "workspace:*",

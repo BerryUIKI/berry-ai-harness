@@ -50,7 +50,7 @@
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-attachment-local": "workspace:*",
     "@berry-ai/harness-computer-use": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",

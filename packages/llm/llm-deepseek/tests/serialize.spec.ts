@@ -1,7 +1,7 @@
 /** Request conversion and durable replay validation. */
 import { describe, expect, it, vi } from 'vitest'
-import { createDeveloperMessage, createUserMessage, createAssistantMessage, createMessage, createSystemMessage, createToolResultMessage, ReasoningEffortId, ToolCallId } from '@deepseek-ai/dsh-llm'
-import type { ContentBlock, GenerateOptions, ImageBlock, Message, RequestMessage, RequestUserInput } from '@deepseek-ai/dsh-llm'
+import { createDeveloperMessage, createUserMessage, createAssistantMessage, createMessage, createSystemMessage, createToolResultMessage, ReasoningEffortId, ToolCallId } from '@berry-ai/harness-llm'
+import type { ContentBlock, GenerateOptions, ImageBlock, Message, RequestMessage, RequestUserInput } from '@berry-ai/harness-llm'
 import { AttachmentId, ImageVariantId } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentRef, RequestImageAttachment } from '@berry-ai/harness-attachment'
 import { resolveAdapterOptions } from '../src/config.ts'

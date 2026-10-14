@@ -6,10 +6,10 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
+import LlmRuntime from '@berry-ai/harness-llm'
 import SessionStore from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import TokenMeter from '@deepseek-ai/dsh-token-meter'
+import TokenMeter from '@berry-ai/harness-token-meter'
 import BasicCompactionEngine from '@berry-ai/harness-compaction-basic'
 import ToolResultPruner from '@berry-ai/harness-compaction-tool-result-pruner'
 
@@ -33,10 +33,10 @@ async function loadYaml(lines: readonly string[]): Promise<Context> {
   await context.plugin(Loader)
   context.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-llm', LlmRuntime],
+    ['@berry-ai/harness-llm', LlmRuntime],
     ['@deepseek-ai/dsh-session', SessionStore],
     ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
-    ['@deepseek-ai/dsh-token-meter', TokenMeter],
+    ['@berry-ai/harness-token-meter', TokenMeter],
     ['@berry-ai/harness-compaction-tool-result-pruner', ToolResultPruner],
     ['@berry-ai/harness-compaction-basic', BasicCompactionEngine],
   ])
@@ -58,10 +58,10 @@ async function loadYaml(lines: readonly string[]): Promise<Context> {
 describe('real Loader composition', () => {
   it('loads the shipped token-meter, pruning, and compaction-basic YAML order', async () => {
     const loaded = await loadYaml([
-      "- name: '@deepseek-ai/dsh-llm'",
+      "- name: '@berry-ai/harness-llm'",
       "- name: '@deepseek-ai/dsh-session'",
       "- name: '@deepseek-ai/dsh-session-projection'",
-      "- name: '@deepseek-ai/dsh-token-meter'",
+      "- name: '@berry-ai/harness-token-meter'",
       "- name: '@berry-ai/harness-compaction-tool-result-pruner'",
       '  config:',
       '    thresholdChars: 100',

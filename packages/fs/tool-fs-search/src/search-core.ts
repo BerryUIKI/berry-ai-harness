@@ -22,7 +22,7 @@
 import { existsSync } from 'node:fs'
 import { isAbsolute, join, parse, relative, sep } from 'node:path'
 import type { Context } from '@deepseek-ai/cordis'
-import { HarnessError } from '@deepseek-ai/dsh-llm'
+import { HarnessError } from '@berry-ai/harness-llm'
 import { ItemRetainer, TextRetainer } from '@berry-ai/harness-output-retention'
 import type { RetainedItems } from '@berry-ai/harness-output-retention'
 import type { SubprocessHandle, SubprocessOutcome, SubprocessOutputRead, SubprocessSpawnSpec } from '@berry-ai/harness-subprocess'

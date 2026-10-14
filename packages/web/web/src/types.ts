@@ -5,7 +5,7 @@
  * @module @berry-ai/harness-web/types
  */
 
-import { HarnessError } from '@deepseek-ai/dsh-llm'
+import { HarnessError } from '@berry-ai/harness-llm'
 
 /**
  * What one search-capable backend is asked to search. Each request carries one

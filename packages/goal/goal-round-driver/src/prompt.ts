@@ -1,6 +1,6 @@
 /** Model-visible continuation prompt for one same-session goal round. */
 
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { GoalView } from '@berry-ai/harness-goal'
 
 /**

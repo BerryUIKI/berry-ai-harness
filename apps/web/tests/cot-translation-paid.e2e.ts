@@ -139,7 +139,7 @@ it.skipIf(MODE === 'record')('reuses saved native Account Flash translations acr
   resources.restoreAuth = () => { auth.mockRestore() }
   scaffold.ctx.emit('llm/adapters-updated')
   const owner = [...scaffold.ctx.loader.entries()].find(entry => entry.options.id === 'llm-deepseek-account')
-  expect(owner?.options.name).toBe('@deepseek-ai/dsh-llm-deepseek-account')
+  expect(owner?.options.name).toBe('@berry-ai/harness-llm-deepseek-account')
   expect(await scaffold.ctx.llm.listModels('deepseek-account')).toContainEqual(expect.objectContaining({ id: 'deepseek-flash' }))
   const browser = await chromium.launch(); resources.browser = browser
   const context = await browser.newContext({ viewport: { width: 1680, height: 1000 }, locale: ZH_BROWSER_LOCALE, timezoneId: 'Asia/Shanghai' })

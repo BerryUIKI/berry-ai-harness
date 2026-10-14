@@ -7,15 +7,15 @@
  */
 
 import { brandString } from '@berry-ai/harness-brand'
-import { createUserMessage, HarnessError } from '@deepseek-ai/dsh-llm'
-declare module '@deepseek-ai/dsh-llm' {
+import { createUserMessage, HarnessError } from '@berry-ai/harness-llm'
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     /** Images deferred from a successful PTC subcall's final result. */
     'ptc-mode': { kind: 'ptc-mode' }
   }
 }
 
-import type { ContentBlock, ToolCallId, ToolSchema } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock, ToolCallId, ToolSchema } from '@berry-ai/harness-llm'
 import type { PtcBindingFunction, PtcRunResult, PtcRunSandbox, PtcRuntime } from '@berry-ai/harness-ptc-runtime'
 import { approveEscalation, ESCALATION_TARGETS, validateEscalationArgs } from '@berry-ai/harness-sandbox'
 import type { SandboxExecutionPolicy } from '@berry-ai/harness-sandbox'

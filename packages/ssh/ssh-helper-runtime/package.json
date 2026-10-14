@@ -38,7 +38,7 @@
     "@berry-ai/harness-fs-sandbox": "workspace:*",
     "@berry-ai/harness-http-proxy": "workspace:*",
     "@berry-ai/harness-lazy-require": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-ptc-runtime-node": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",

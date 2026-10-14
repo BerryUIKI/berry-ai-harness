@@ -14,7 +14,7 @@ import {
   type ConversationViewDefinition, type ConversationViewNode, type ToolResultNode, type TurnLocation,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { SessionLiveEventEntry } from '@deepseek-ai/dsh-api-session-controller/client'
-import { createToolResultMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
+import { createToolResultMessage, ToolCallId } from '@berry-ai/harness-llm'
 import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
 import type { ScheduleCatalogEntry, ScheduleId } from '@berry-ai/harness-schedule/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'

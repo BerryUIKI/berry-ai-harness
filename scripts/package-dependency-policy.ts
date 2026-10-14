@@ -11,7 +11,7 @@ const CLIENT_FACE_EXCLUDE: readonly string[] = [
 
 /** Host-only packages whose peer relays are deliberately flattened. */
 const HOST_DEPENDENCY_PACKAGES: readonly string[] = [
-  '@deepseek-ai/dsh-llm',
+  '@berry-ai/harness-llm',
   '@deepseek-ai/dsh-session',
 ]
 
@@ -54,7 +54,7 @@ const SAFE_HOST_DEPENDENCY_EXPORTS = {
   '@berry-ai/harness-deque': ['Deque'],
   '@berry-ai/harness-timeout': ['MAX_TIMER_DELAY_MS'],
   '@berry-ai/harness-credentials': ['credentialKey'],
-  '@deepseek-ai/dsh-llm': ['callConfigEquals'],
+  '@berry-ai/harness-llm': ['callConfigEquals'],
   '@deepseek-ai/dsh-session-format': ['sessionFormatLogFilename'],
   '@deepseek-ai/schemastery': ['default'],
 } as const satisfies HostDependencyExports

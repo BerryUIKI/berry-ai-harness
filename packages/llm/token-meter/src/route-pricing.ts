@@ -2,10 +2,10 @@
  * Request-projected surface pricing: replaces attachment-block heuristics with
  * the image and file representations sent to the routed model.
  *
- * @module @deepseek-ai/dsh-token-meter/route-pricing
+ * @module @berry-ai/harness-token-meter/route-pricing
  */
 
-import type { ContentBlock, LlmImageRequestPricing } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock, LlmImageRequestPricing } from '@berry-ai/harness-llm'
 import { estimateContent } from './estimate.ts'
 import type { MeterSurfaceNode } from './surface-fold.ts'
 import type { TokenSurfaceNode } from './types.ts'

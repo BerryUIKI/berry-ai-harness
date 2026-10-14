@@ -52,7 +52,7 @@ export interface GoalMessageSource {
   readonly round: number
 }
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     goal: GoalMessageSource
   }

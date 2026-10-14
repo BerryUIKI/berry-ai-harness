@@ -1,5 +1,5 @@
 /** Approval composer and optional correlated-detail contracts. */
-import type { ToolCallId } from '@deepseek-ai/dsh-llm'
+import type { ToolCallId } from '@berry-ai/harness-llm'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type {
   PropsLocale, PropsRenderSlots, PropsRuntime,

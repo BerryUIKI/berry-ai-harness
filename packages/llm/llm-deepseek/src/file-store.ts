@@ -1,7 +1,7 @@
 /** DeepSeek Files API upload reuse, invalidation, and quota recovery. @module dsh-llm-deepseek/file-store */
 
 import type { RequestImageAttachment } from '@berry-ai/harness-attachment'
-import { LlmError } from '@deepseek-ai/dsh-llm'
+import { LlmError } from '@berry-ai/harness-llm'
 import { DeepSeekFilesClient, isFilesQuotaError } from './files-api.ts'
 import type { DeepSeekFileId } from './file-id.ts'
 import { messagesApiRoot } from './messages-api.ts'

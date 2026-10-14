@@ -4,8 +4,8 @@ import type {
   ConversationMatch, ConversationNodeContext, ConversationNodeDefinition,
   RequestView,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { StreamChunk } from '@deepseek-ai/dsh-llm'
-import { assistantStreamFirstTokenTime } from '@deepseek-ai/dsh-llm/assistant-stream'
+import type { StreamChunk } from '@berry-ai/harness-llm'
+import { assistantStreamFirstTokenTime } from '@berry-ai/harness-llm/assistant-stream'
 import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
 import { trajectoryNode } from './trajectory-definition-common.ts'
 import type { TrajectoryPartialAssistant } from './trajectory-contract.ts'

@@ -1,5 +1,5 @@
-import { AssistantStreamAccumulator } from '@deepseek-ai/dsh-llm'
-import type { AssistantStreamRecord } from '@deepseek-ai/dsh-llm'
+import { AssistantStreamAccumulator } from '@berry-ai/harness-llm'
+import type { AssistantStreamRecord } from '@berry-ai/harness-llm'
 import {
   SessionFormatUnsupportedMigrationError,
   defineSessionFormatMigration,

@@ -7,9 +7,9 @@
  */
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { createUserMessage, resolveImageAttachmentAccess } from '@deepseek-ai/dsh-llm'
-import type { ContentBlock, ImageBlock, LlmImageRequestPrice, ToolCallId } from '@deepseek-ai/dsh-llm'
-import { estimateContent } from '@deepseek-ai/dsh-token-meter/estimate'
+import { createUserMessage, resolveImageAttachmentAccess } from '@berry-ai/harness-llm'
+import type { ContentBlock, ImageBlock, LlmImageRequestPrice, ToolCallId } from '@berry-ai/harness-llm'
+import { estimateContent } from '@berry-ai/harness-token-meter/estimate'
 import type { SpillRef } from '@berry-ai/harness-spill'
 import type { PostToolDecision, ToolExecution } from '@deepseek-ai/dsh-tools'
 import type {} from '@berry-ai/harness-attachment'

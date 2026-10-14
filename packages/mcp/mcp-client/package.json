@@ -28,7 +28,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@berry-ai/harness-attachment": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-scope": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
@@ -45,7 +45,7 @@
   "devDependencies": {
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-attachment-local": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-scope": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",

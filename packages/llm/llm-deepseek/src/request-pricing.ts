@@ -9,8 +9,8 @@
  * @module dsh-llm-deepseek/request-pricing
  */
 
-import { offloadedImageText, requestImageHandleText, textOnlyImageText } from '@deepseek-ai/dsh-llm'
-import type { ImageAttachmentAccessResolver, ImageBlock, LlmImageRequestPrice, LlmImageRequestPricing } from '@deepseek-ai/dsh-llm'
+import { offloadedImageText, requestImageHandleText, textOnlyImageText } from '@berry-ai/harness-llm'
+import type { ImageAttachmentAccessResolver, ImageBlock, LlmImageRequestPrice, LlmImageRequestPricing } from '@berry-ai/harness-llm'
 import { longEdgeDimensions, requestImageDimensions } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentRef, ImageRequestTarget } from '@berry-ai/harness-attachment'
 import { deepSeekImageTokens, deepSeekRequestImageDimensions } from './image-tokens.ts'

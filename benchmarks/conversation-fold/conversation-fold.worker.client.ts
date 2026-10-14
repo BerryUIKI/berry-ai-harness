@@ -2,9 +2,9 @@
 
 import { performance } from 'node:perf_hooks'
 import { Context } from '@deepseek-ai/cordis'
-import { AssistantStreamAccumulator } from '@deepseek-ai/dsh-llm/assistant-stream'
-import { LlmAttemptId, ToolCallId } from '@deepseek-ai/dsh-llm/brand'
-import type { StreamChunk } from '@deepseek-ai/dsh-llm'
+import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'
+import { LlmAttemptId, ToolCallId } from '@berry-ai/harness-llm/brand'
+import type { StreamChunk } from '@berry-ai/harness-llm'
 import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
 import type { ChatNode, ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
 import type { SessionEventLikeEntry } from '@deepseek-ai/dsh-api-session-controller/client'
@@ -260,9 +260,9 @@ function preparingTool(tool: 'write' | 'bash', characters: number, definitions: 
 assertBuiltBenchmarkRuntime(import.meta.url, {
   '@berry-ai/harness-brand': import.meta.resolve('@berry-ai/harness-brand'),
   '@deepseek-ai/dsh-client-store': import.meta.resolve('@deepseek-ai/dsh-client-store'),
-  '@deepseek-ai/dsh-llm/assistant-stream': import.meta.resolve('@deepseek-ai/dsh-llm/assistant-stream'),
+  '@berry-ai/harness-llm/assistant-stream': import.meta.resolve('@berry-ai/harness-llm/assistant-stream'),
   '@deepseek-ai/dsh-session/surface': import.meta.resolve('@deepseek-ai/dsh-session/surface'),
-  '@deepseek-ai/dsh-token-meter/client': import.meta.resolve('@deepseek-ai/dsh-token-meter/client'),
+  '@berry-ai/harness-token-meter/client': import.meta.resolve('@berry-ai/harness-token-meter/client'),
   '@berry-ai/harness-util-values': import.meta.resolve('@berry-ai/harness-util-values'),
 })
 const scope = new Context()

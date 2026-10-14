@@ -5,7 +5,7 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import { RetryId } from '@deepseek-ai/dsh-llm-retry'
+import { RetryId } from '@berry-ai/harness-llm-retry'
 import type {} from '../src/index.ts'
 
 const dirs: string[] = []

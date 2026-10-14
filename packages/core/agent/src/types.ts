@@ -4,7 +4,7 @@
  * @module @deepseek-ai/dsh-agent/types
  */
 
-import type { UserMessage } from '@deepseek-ai/dsh-llm/types'
+import type { UserMessage } from '@berry-ai/harness-llm/types'
 // Type-only: the Workspace registry's archive-admission family map this registry merges `turn` into.
 import type {} from '@berry-ai/harness-workspace/types'
 import type { OptionalSessionSeq, SessionId, SessionSeq } from '@deepseek-ai/dsh-session/types'

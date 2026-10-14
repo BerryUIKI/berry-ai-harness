@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-llm-deepseek",
+  "name": "@berry-ai/harness-llm-deepseek",
   "description": "DeepSeek Messages adapter",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -31,11 +31,11 @@
     "@berry-ai/harness-anonymous-user-id": "workspace:*",
     "@berry-ai/harness-atomic-write": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
-    "@deepseek-ai/dsh-deepseek-llm-api-extensions": "workspace:*",
+    "@berry-ai/harness-deepseek-llm-api-extensions": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~"
   },
@@ -47,8 +47,8 @@
     "eventsource-parser": "^3.1.0"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-llm-deepseek-api-key": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek-account": "workspace:*",
+    "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
+    "@berry-ai/harness-llm-deepseek-account": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@berry-ai/harness-anonymous-user-id": "workspace:*",
@@ -56,12 +56,12 @@
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-attachment-local": "workspace:*",
     "@berry-ai/harness-credentials": "workspace:*",
-    "@deepseek-ai/dsh-deepseek-llm-api-extensions": "workspace:*",
+    "@berry-ai/harness-deepseek-llm-api-extensions": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-plugin-package-inventory-deepseek": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-plugin-package-inventory-deepseek": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-log-deepseek": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",

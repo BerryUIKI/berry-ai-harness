@@ -2,7 +2,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type { KvTable } from '@berry-ai/harness-storage-domain'
 import { SessionId } from '@deepseek-ai/dsh-session'
-import { MessageId } from '@deepseek-ai/dsh-llm/brand'
+import { MessageId } from '@berry-ai/harness-llm/brand'
 import { afterEach, beforeEach, expect, it, vi } from 'vitest'
 import { createDailyScheduleRecord, createEveryScheduleRecord, ScheduleId } from '../src/domain.ts'
 import { scheduleDomain, type ScheduleTask } from '../src/storage.ts'

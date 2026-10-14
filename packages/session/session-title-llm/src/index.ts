@@ -8,9 +8,9 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { createUserMessage, BlockAssembler } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-declare module '@deepseek-ai/dsh-llm' {
+import { createUserMessage, BlockAssembler } from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'dsh-session-title-llm': { kind: 'dsh-session-title-llm' } & ContextFormed
   }
@@ -23,7 +23,7 @@ import type {
   LlmResolvedModelInfo,
   Message,
   ReasoningEffortId,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import { deadline, MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import { assertNever, deepFreeze } from '@berry-ai/harness-util-values'
 import type { SessionSeq } from '@deepseek-ai/dsh-session'

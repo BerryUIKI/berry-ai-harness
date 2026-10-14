@@ -1,7 +1,7 @@
 /** Compiled production Client fold for a reconnect during a long Assistant attempt. */
 import { performance } from 'node:perf_hooks'
-import { AssistantStreamAccumulator } from '@deepseek-ai/dsh-llm/assistant-stream'
-import { LlmAttemptId } from '@deepseek-ai/dsh-llm/brand'
+import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'
+import { LlmAttemptId } from '@berry-ai/harness-llm/brand'
 import type { SessionAssistantStreamBaseline } from '@deepseek-ai/dsh-api-session-controller/types'
 // The Client implementation has no plain-Node export; only this adapter is bundled.
 import { ClientAssistantStream } from '../../packages/api/session-controller/src/client/sessions/assistant-stream.ts'
@@ -18,7 +18,7 @@ export interface ReconnectReport {
 }
 
 assertBuiltBenchmarkRuntime(import.meta.url, {
-  '@deepseek-ai/dsh-llm/assistant-stream': import.meta.resolve('@deepseek-ai/dsh-llm/assistant-stream'),
+  '@berry-ai/harness-llm/assistant-stream': import.meta.resolve('@berry-ai/harness-llm/assistant-stream'),
 })
 const deltas = 100000
 const accumulator = new AssistantStreamAccumulator()

@@ -68,7 +68,7 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-client-ui-tool": "workspace:*",
     "@berry-ai/harness-tool-present": "workspace:*",
     "@berry-ai/harness-workspace-changes": "workspace:*",

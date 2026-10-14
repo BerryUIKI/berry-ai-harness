@@ -4,7 +4,7 @@
  * @module @berry-ai/harness-compaction-basic/config
  */
 
-import type { LlmCallConfig } from '@deepseek-ai/dsh-llm'
+import type { LlmCallConfig } from '@berry-ai/harness-llm'
 import { deepFreeze } from '@berry-ai/harness-util-values'
 import type {
   BasicCompactionConfig,

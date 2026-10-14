@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-llm-pi-ai",
+  "name": "@berry-ai/harness-llm-pi-ai",
   "description": "pi-ai-backed DeepSeek adapter for the DeepSeek Harness LLM seam (design-verification twin of dsh-llm-deepseek)",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -33,7 +33,7 @@
     "@berry-ai/harness-credentials": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~"
   },
@@ -50,9 +50,9 @@
     "@berry-ai/harness-credentials": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek-api-key": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-llm-deepseek": "workspace:*",
+    "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-http-proxy": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",

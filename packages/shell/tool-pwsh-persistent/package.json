@@ -42,7 +42,7 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-output-retention": "workspace:*",
     "@berry-ai/harness-terminal": "workspace:*",
     "@berry-ai/harness-terminal-bash": "workspace:*",

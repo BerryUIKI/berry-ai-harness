@@ -1,4 +1,4 @@
-import { MessageId } from '@deepseek-ai/dsh-llm/brand'
+import { MessageId } from '@berry-ai/harness-llm/brand'
 // @vitest-environment jsdom
 /** Chat inject factories exercised over independently mounted Conversation and Chat plugins. */
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'

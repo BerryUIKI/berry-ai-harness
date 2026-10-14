@@ -1,8 +1,8 @@
 /** Model-facing discovery of LLM routes available to child Agents. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type LlmRuntime from '@deepseek-ai/dsh-llm'
-import type { LlmProviderInfo } from '@deepseek-ai/dsh-llm'
+import type LlmRuntime from '@berry-ai/harness-llm'
+import type { LlmProviderInfo } from '@berry-ai/harness-llm'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import type { ModelSelectionPolicy } from './model-selection.ts'
 

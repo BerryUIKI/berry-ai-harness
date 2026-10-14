@@ -1,7 +1,7 @@
 /** Child LLM route selection for the subagent tool. */
 
-import { ReasoningEffortId } from '@deepseek-ai/dsh-llm'
-import type { LlmRuntime } from '@deepseek-ai/dsh-llm'
+import { ReasoningEffortId } from '@berry-ai/harness-llm'
+import type { LlmRuntime } from '@berry-ai/harness-llm'
 import type { AgentOptions } from '@deepseek-ai/dsh-agent'
 import z from '@deepseek-ai/schemastery'
 

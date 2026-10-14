@@ -8,7 +8,7 @@ import { join } from 'node:path'
 import type { Browser, Locator, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
 import { abbreviateHomePath } from '@berry-ai/harness-util-workspace-path'
 import {
   SESSION_FORMAT_VERSION,

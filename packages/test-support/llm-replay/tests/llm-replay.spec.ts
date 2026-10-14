@@ -6,7 +6,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { SESSION_FORMAT_VERSION, SessionSeq } from '@deepseek-ai/dsh-session'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 import { CompactionId } from '@berry-ai/harness-compaction'
-import DeepSeekLlmApiExtensionRegistry from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
+import DeepSeekLlmApiExtensionRegistry from '@berry-ai/harness-deepseek-llm-api-extensions'
 import LlmRuntime, {
   AssistantStreamAccumulator,
   BlockAssembler,
@@ -18,7 +18,7 @@ import LlmRuntime, {
   LlmAdapter,
   StreamChunk,
   type ToolResultMessage,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import {
   type Config,
   type ReplayEntry,
@@ -36,7 +36,7 @@ import {
   resolveScriptedEntry,
 } from '../src/index.ts'
 
-declare module '@deepseek-ai/dsh-deepseek-llm-api-extensions/types' {
+declare module '@berry-ai/harness-deepseek-llm-api-extensions/types' {
   interface DeepSeekLlmApiExtensionMap {
     test_replay: { readonly version: 1 }
   }

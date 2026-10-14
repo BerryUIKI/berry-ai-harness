@@ -1,6 +1,6 @@
 /** Immutable application of the image occurrences recorded by image/offload. */
 
-import type { ContentBlock, Message } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock, Message } from '@berry-ai/harness-llm'
 import { deepFreeze } from '@berry-ai/harness-util-values'
 
 /**

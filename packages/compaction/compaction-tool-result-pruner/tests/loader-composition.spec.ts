@@ -7,7 +7,7 @@ import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import TokenMeter from '@deepseek-ai/dsh-token-meter'
+import TokenMeter from '@berry-ai/harness-token-meter'
 import ToolResultPruner from '@berry-ai/harness-compaction-tool-result-pruner'
 
 let root: string | undefined
@@ -26,7 +26,7 @@ describe('compaction-tool-result-pruner real Loader composition', () => {
     const configPath = join(root, 'cordis.yml')
     await writeFile(configPath, [
       "- name: '@deepseek-ai/dsh-session-projection'",
-      "- name: '@deepseek-ai/dsh-token-meter'",
+      "- name: '@berry-ai/harness-token-meter'",
       "- name: '@berry-ai/harness-compaction-tool-result-pruner'",
       '  config:',
       '    thresholdChars: 100',
@@ -43,7 +43,7 @@ describe('compaction-tool-result-pruner real Loader composition', () => {
       version: 'v2',
       async import(specifier: string) {
         if (specifier === '@deepseek-ai/dsh-session-projection') return SessionProjectionRegistry
-        if (specifier === '@deepseek-ai/dsh-token-meter') return TokenMeter
+        if (specifier === '@berry-ai/harness-token-meter') return TokenMeter
         if (specifier === '@berry-ai/harness-compaction-tool-result-pruner') return ToolResultPruner
         throw new Error(`unexpected Loader import: ${specifier}`)
       },

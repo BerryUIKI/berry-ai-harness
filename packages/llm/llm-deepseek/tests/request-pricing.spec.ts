@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { offloadedImageText, requestImageHandleText, textOnlyImageText } from '@deepseek-ai/dsh-llm'
-import type { ImageBlock } from '@deepseek-ai/dsh-llm'
+import { offloadedImageText, requestImageHandleText, textOnlyImageText } from '@berry-ai/harness-llm'
+import type { ImageBlock } from '@berry-ai/harness-llm'
 import { AttachmentId } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import { deepSeekImageRequestPricing } from '../src/request-pricing.ts'

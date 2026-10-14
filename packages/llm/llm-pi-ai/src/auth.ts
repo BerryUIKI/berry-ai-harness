@@ -18,7 +18,7 @@ import {
 } from '@berry-ai/harness-credentials'
 import type { CredentialKey, CredentialProvider, CredentialRecord } from '@berry-ai/harness-credentials'
 import { launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
-import { LlmError } from '@deepseek-ai/dsh-llm'
+import { LlmError } from '@berry-ai/harness-llm'
 
 /**
  * The record scope every credential this adapter family stores is written

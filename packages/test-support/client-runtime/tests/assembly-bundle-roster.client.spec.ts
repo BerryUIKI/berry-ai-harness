@@ -34,7 +34,7 @@ describe('webApp (the real web profile)', () => {
       .toEqual(['@berry-ai/harness-typert-registry', '@deepseek-ai/dsh-client-connection'])
     const names = webApp.rows.map(row => row.name)
     expect(names).toContain('@deepseek-ai/dsh-client-ui-settings-general')
-    expect(names).not.toContain('@deepseek-ai/dsh-llm') // Host only
+    expect(names).not.toContain('@berry-ai/harness-llm') // Host only
     expect(names).toContain('@deepseek-ai/dsh-client-ui-schedule')
     expect(names).not.toContain('@berry-ai/harness-web-app') // Host runtime glue, its `/startup` row is a subpath
   })

@@ -1,14 +1,14 @@
 /** Real Loader/native adapters with fixture-owned credentials and a bounded loopback wire. */
 import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
 import { boot } from '@berry-ai/harness-app-boot'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
+import LlmRuntime from '@berry-ai/harness-llm'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionSeq, type Session, type SessionEvent, type SessionHeader } from '@deepseek-ai/dsh-session'
 import JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import SqliteSessionQuery from '@berry-ai/harness-session-query-sqlite'
-import * as Official from '@deepseek-ai/dsh-llm-deepseek-api-key'
-import * as Account from '@deepseek-ai/dsh-llm-deepseek-account'
+import * as Official from '@berry-ai/harness-llm-deepseek-api-key'
+import * as Account from '@berry-ai/harness-llm-deepseek-account'
 import type { DeepSeekAccount } from '@berry-ai/harness-deepseek-account'
-import DeepSeekLlmApiExtensionRegistry from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
+import DeepSeekLlmApiExtensionRegistry from '@berry-ai/harness-deepseek-llm-api-extensions'
 import * as SessionLogDeepSeek from '@deepseek-ai/dsh-session-log-deepseek'
 import { createLaunchEnvironmentSnapshot } from '@berry-ai/harness-launch-environment'
 import { once } from 'node:events'
@@ -119,13 +119,13 @@ export async function paidFixture(cleanups: Array<() => Promise<void>>, options:
   const configPath = join(root, 'cordis.yml'), storedRoot = join(root, 'sessions')
   let translator = options.translator ?? {}, withNativeOwners = true
   const rows = () => [
-    { id: 'llm', name: '@deepseek-ai/dsh-llm' },
+    { id: 'llm', name: '@berry-ai/harness-llm' },
     { id: 'session', name: '@deepseek-ai/dsh-session' },
     { id: 'storage', name: '@deepseek-ai/dsh-session-persistence-jsonl', config: { root: storedRoot, compression: 'none' } },
-    { id: 'official-custom-id', name: options.officialName ?? '@deepseek-ai/dsh-llm-deepseek-api-key', disabled: !withNativeOwners, config: {
+    { id: 'official-custom-id', name: options.officialName ?? '@berry-ai/harness-llm-deepseek-api-key', disabled: !withNativeOwners, config: {
       baseURL, apiKeyEnv: 'PAID_TRANSLATION_FIXTURE_KEY', models: options.officialModels ?? [{ id: 'deepseek-flash', name: 'Flash version-independent name' }],
     } },
-    { id: 'account-custom-id', name: '@deepseek-ai/dsh-llm-deepseek-account', disabled: !withNativeOwners, config: {
+    { id: 'account-custom-id', name: '@berry-ai/harness-llm-deepseek-account', disabled: !withNativeOwners, config: {
       baseURL, models: options.accountModels ?? [{ id: 'deepseek-flash', name: 'Another arbitrary Flash version' }],
     } },
     { id: 'translator', name: '@deepseek-ai/dsh-experimental-translator', config: translator },
@@ -133,17 +133,17 @@ export async function paidFixture(cleanups: Array<() => Promise<void>>, options:
       { id: 'query', name: '@berry-ai/harness-session-query-sqlite', config: { path: join(root, 'query.sqlite'), openAt: 'never' } },
     ] : [],
     ...options.withSessionLog === true ? [
-      { id: 'deepseek-llm-api-extensions', name: '@deepseek-ai/dsh-deepseek-llm-api-extensions' },
+      { id: 'deepseek-llm-api-extensions', name: '@berry-ai/harness-deepseek-llm-api-extensions' },
       { id: 'session-log-deepseek', name: '@deepseek-ai/dsh-session-log-deepseek' },
     ] : [],
   ]
   await writeFile(configPath, JSON.stringify(rows()))
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-llm', LlmRuntime], ['@deepseek-ai/dsh-session', SessionStore],
+    ['@berry-ai/harness-llm', LlmRuntime], ['@deepseek-ai/dsh-session', SessionStore],
     ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlPersistence], ['@berry-ai/harness-session-query-sqlite', SqliteSessionQuery],
-    [options.officialName ?? '@deepseek-ai/dsh-llm-deepseek-api-key', Official],
-    ['@deepseek-ai/dsh-llm-deepseek-account', Account], ['@deepseek-ai/dsh-experimental-translator', Translator],
-    ['@deepseek-ai/dsh-deepseek-llm-api-extensions', DeepSeekLlmApiExtensionRegistry],
+    [options.officialName ?? '@berry-ai/harness-llm-deepseek-api-key', Official],
+    ['@berry-ai/harness-llm-deepseek-account', Account], ['@deepseek-ai/dsh-experimental-translator', Translator],
+    ['@berry-ai/harness-deepseek-llm-api-extensions', DeepSeekLlmApiExtensionRegistry],
     ['@deepseek-ai/dsh-session-log-deepseek', SessionLogDeepSeek],
   ])
   const start = () => boot('paid-translator-composition', configPath, [], (host) => {

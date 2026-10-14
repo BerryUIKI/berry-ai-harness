@@ -6,8 +6,8 @@ import AttachmentStore, { AttachmentId } from '@berry-ai/harness-attachment'
 import type {
   FileAttachmentRef, ImageAttachmentRef, SaveFileAttachment, SaveFileStreamAttachment,
 } from '@berry-ai/harness-attachment'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { UserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
+import type { UserMessage } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import CommandRuntime from '@berry-ai/harness-commands'
 import { createScope } from '@deepseek-ai/dsh-scope'

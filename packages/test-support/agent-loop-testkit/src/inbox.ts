@@ -1,5 +1,5 @@
 import type { Inbox, InboxTarget } from '@deepseek-ai/dsh-agent'
-import type { MessageId } from '@deepseek-ai/dsh-llm'
+import type { MessageId } from '@berry-ai/harness-llm'
 import type { UserMessage } from '@deepseek-ai/dsh-session'
 
 /**

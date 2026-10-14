@@ -30,7 +30,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-lsp": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*"
@@ -44,7 +44,7 @@
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-lsp": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",

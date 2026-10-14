@@ -1,6 +1,6 @@
 # Keyless headless replay uses the model script in this scenario's Session fixture.
 - id: llm-deepseek
-  name: '@deepseek-ai/dsh-llm-deepseek-api-key'
+  name: '@berry-ai/harness-llm-deepseek-api-key'
   disabled: true
 
 - id: agent-default-model

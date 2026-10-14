@@ -1,7 +1,7 @@
 /** Compile-time calls to the public plugin-record writer; excluded from production declarations. */
 import { appendPluginRecord, pluginRecordOf } from '@deepseek-ai/dsh-session'
 import type { Session, SessionEvent } from '@deepseek-ai/dsh-session'
-import type { LlmCallConfig, RequestUserInput } from '@deepseek-ai/dsh-llm'
+import type { LlmCallConfig, RequestUserInput } from '@berry-ai/harness-llm'
 
 /** An independent request with domain interfaces and immutable message arrays. */
 export interface PluginRequestFixture {

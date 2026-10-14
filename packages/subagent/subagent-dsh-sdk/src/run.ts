@@ -20,7 +20,7 @@ import {
   TransportClosedError,
   validatedSessionEvent,
 } from '@deepseek-ai/dsh-sdk-client'
-import type { ContentBlock, ReasoningEffortId } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock, ReasoningEffortId } from '@berry-ai/harness-llm'
 import type { SessionId, TurnEndReason } from '@deepseek-ai/dsh-session'
 import type { SubagentResult, SubagentRun, SubagentStartRequest, SubagentStopReason } from '@deepseek-ai/dsh-subagent'
 import { AssistantOutputFold, settleRunResult, subprocessRunHandle } from '@deepseek-ai/dsh-subagent'

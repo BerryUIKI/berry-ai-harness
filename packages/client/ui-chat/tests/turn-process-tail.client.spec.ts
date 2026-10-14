@@ -1,7 +1,7 @@
 /** Turn-node Locations and Assistant timing across partial windows and transient retirement. */
 import { describe, expect, it } from 'vitest'
-import { createAssistantMessage, createToolResultMessage, LlmAttemptId, ToolCallId } from '@deepseek-ai/dsh-llm'
-import { AssistantStreamAccumulator } from '@deepseek-ai/dsh-llm/assistant-stream'
+import { createAssistantMessage, createToolResultMessage, LlmAttemptId, ToolCallId } from '@berry-ai/harness-llm'
+import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'
 import { SessionSeq, type SessionEvent } from '@deepseek-ai/dsh-session/types'
 import type {
   SessionAssistantSettlementEntry, SessionEventLikeEntry, SessionLiveEventEntry, SessionTransientEventEntry,

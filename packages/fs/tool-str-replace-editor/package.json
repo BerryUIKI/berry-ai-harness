@@ -43,7 +43,7 @@
     "@berry-ai/harness-fs-local": "workspace:*",
     "@berry-ai/harness-fs-observation-policy": "workspace:*",
     "@berry-ai/harness-fs-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-output-retention": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",

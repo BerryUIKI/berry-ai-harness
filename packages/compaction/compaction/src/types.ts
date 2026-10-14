@@ -7,7 +7,7 @@
  * @module @berry-ai/harness-compaction/types
  */
 
-import type { ContentBlock, TokenUsage } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock, TokenUsage } from '@berry-ai/harness-llm'
 import type { CommandId } from '@berry-ai/harness-commands/brand'
 import type { SessionSeq } from '@deepseek-ai/dsh-session/types'
 import type { CompactionId } from './brand.ts'

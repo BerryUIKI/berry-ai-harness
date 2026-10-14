@@ -13,7 +13,7 @@ import type {
   ToolResultMessage,
   ToolSchema,
   UserMessage,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 
 /** Identifies one session in the store (and its persistence artifacts). */

@@ -1,17 +1,17 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createMessage, createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { TokenUsage } from '@deepseek-ai/dsh-llm'
+import { createMessage, createUserMessage } from '@berry-ai/harness-llm'
+import type { TokenUsage } from '@berry-ai/harness-llm'
 import SessionStore from '@deepseek-ai/dsh-session'
 import type { Session, SessionSeq } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import TokenMeter from '@deepseek-ai/dsh-token-meter'
-import type { ContextPressureProjection, TokenUsageProjection } from '@deepseek-ai/dsh-token-meter/client'
-import { RetryId } from '@deepseek-ai/dsh-llm-retry'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import TokenMeter from '@berry-ai/harness-token-meter'
+import type { ContextPressureProjection, TokenUsageProjection } from '@berry-ai/harness-token-meter/client'
+import { RetryId } from '@berry-ai/harness-llm-retry'
+import type { ContextFormed } from '@berry-ai/harness-llm'
 import { CompactionId } from '@berry-ai/harness-compaction'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'test': { kind: 'test' } & ContextFormed
   }

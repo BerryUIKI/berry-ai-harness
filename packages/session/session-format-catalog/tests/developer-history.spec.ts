@@ -1,7 +1,7 @@
 /** Initial and incremental tool definitions survive current-format restoration and forks. */
 import { describe, expect, expectTypeOf, it } from 'vitest'
-import { createDeveloperMessage } from '@deepseek-ai/dsh-llm'
-import type { ToolAdditionBlock, ToolSchema } from '@deepseek-ai/dsh-llm'
+import { createDeveloperMessage } from '@berry-ai/harness-llm'
+import type { ToolAdditionBlock, ToolSchema } from '@berry-ai/harness-llm'
 import { Session, SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
 import type { SessionEvent, SessionHeader } from '@deepseek-ai/dsh-session'
 import { buildForkSeed } from '@deepseek-ai/dsh-session/fork'

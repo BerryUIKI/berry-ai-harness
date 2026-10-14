@@ -6,7 +6,7 @@
  */
 
 import { brandString } from '@berry-ai/harness-brand'
-import type { MessageId, ToolCallId, ToolResultMessage } from '@deepseek-ai/dsh-llm'
+import type { MessageId, ToolCallId, ToolResultMessage } from '@berry-ai/harness-llm'
 import { deepFreeze } from '@berry-ai/harness-util-values'
 import { SessionSeq } from './types.ts'
 import type { SessionEvent, SessionSeq as SessionSeqType } from './types.ts'

@@ -39,7 +39,7 @@ const repoRoot = fileURLToPath(new URL('../../../../', import.meta.url))
 const SUBJECT = '@berry-ai/harness-timeout'
 const LANDLOCK = '@deepseek-ai/node-addon-system'
 const LANDLOCK_ENTRY = `${LANDLOCK}/landlock-run`
-const PLUGIN_INVENTORY = '@deepseek-ai/dsh-plugin-package-inventory-deepseek'
+const PLUGIN_INVENTORY = '@berry-ai/harness-plugin-package-inventory-deepseek'
 const WEB_SERVER = '@deepseek-ai/dsh-host-webserver'
 
 const workspaces = indexWorkspacePackages(repoRoot)

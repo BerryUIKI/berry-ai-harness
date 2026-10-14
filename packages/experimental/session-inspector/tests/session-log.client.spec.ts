@@ -3,7 +3,7 @@
 import { MutableSessionEventSource } from '@deepseek-ai/dsh-api-session-controller/client'
 import type { SessionEventLikeEntry } from '@deepseek-ai/dsh-api-session-controller/client'
 import { SessionSeq } from '@deepseek-ai/dsh-session/types'
-import type { LlmAttemptId, StreamChunk, ToolCallId } from '@deepseek-ai/dsh-llm'
+import type { LlmAttemptId, StreamChunk, ToolCallId } from '@berry-ai/harness-llm'
 import { expect, it, onTestFinished, vi } from 'vitest'
 import { SessionLogModel } from '../src/client/views/session-log/model.ts'
 import { InspectorTableHierarchy } from '../src/client/views/table-model.ts'

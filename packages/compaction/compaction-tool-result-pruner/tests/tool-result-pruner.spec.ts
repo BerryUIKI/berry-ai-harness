@@ -1,8 +1,8 @@
 import { imageOffloadProjection } from '@berry-ai/harness-compaction-image-offload/projection'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { ToolCallId , createMessage, createToolResultMessage } from '@deepseek-ai/dsh-llm'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import { ToolCallId , createMessage, createToolResultMessage } from '@berry-ai/harness-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import {
   Session,
   SessionId,
@@ -10,7 +10,7 @@ import {
 } from '@deepseek-ai/dsh-session'
 import type { SurfaceEvent } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import TokenMeter from '@deepseek-ai/dsh-token-meter'
+import TokenMeter from '@berry-ai/harness-token-meter'
 import ToolResultPruner, {
   codePointLength,
   DEFAULTS,

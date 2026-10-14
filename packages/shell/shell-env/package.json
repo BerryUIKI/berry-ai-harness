@@ -41,7 +41,7 @@
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-shell": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*"
   }

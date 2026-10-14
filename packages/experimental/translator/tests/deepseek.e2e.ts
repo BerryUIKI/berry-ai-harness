@@ -1,10 +1,10 @@
 /** Explicitly enabled billed Flash smoke through the actual native official provider. */
 import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
 import { boot } from '@berry-ai/harness-app-boot'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
+import LlmRuntime from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import * as Official from '@deepseek-ai/dsh-llm-deepseek-api-key'
+import * as Official from '@berry-ai/harness-llm-deepseek-api-key'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -21,16 +21,16 @@ it.skipIf(!enabled)('translates a small independent billed query with exact Flas
   try {
     const configPath = join(root, 'cordis.yml')
     await writeFile(configPath, JSON.stringify([
-      { id: 'llm', name: '@deepseek-ai/dsh-llm' },
+      { id: 'llm', name: '@berry-ai/harness-llm' },
       { id: 'sessions', name: '@deepseek-ai/dsh-session' },
       { id: 'storage', name: '@deepseek-ai/dsh-session-persistence-jsonl', config: { root: join(root, 'sessions'), compression: 'none' } },
-      { id: 'official-live-owner', name: '@deepseek-ai/dsh-llm-deepseek-api-key' },
+      { id: 'official-live-owner', name: '@berry-ai/harness-llm-deepseek-api-key' },
       { id: 'translator', name: '@deepseek-ai/dsh-experimental-translator', config: { deepseekMaxOutputTokens: 128 } },
     ]))
     const modules = new Map<string, unknown>([
-      ['@deepseek-ai/dsh-llm', LlmRuntime], ['@deepseek-ai/dsh-session', SessionStore],
+      ['@berry-ai/harness-llm', LlmRuntime], ['@deepseek-ai/dsh-session', SessionStore],
       ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlPersistence],
-      ['@deepseek-ai/dsh-llm-deepseek-api-key', Official], ['@deepseek-ai/dsh-experimental-translator', Translator],
+      ['@berry-ai/harness-llm-deepseek-api-key', Official], ['@deepseek-ai/dsh-experimental-translator', Translator],
     ])
     const ctx = await boot('paid-translation-live', configPath, [], (host) => {
       const source: ModuleLoaderV2 = {

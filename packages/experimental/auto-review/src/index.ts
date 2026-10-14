@@ -20,7 +20,7 @@ import {
   type StreamChunk,
   type ToolCallId,
   type ToolSchema,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import { deepFreeze } from '@berry-ai/harness-util-values'
 import { AUTO_PRESET } from '@berry-ai/harness-permission-presets'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'

@@ -1,7 +1,7 @@
 /**
  * Pure client-safe token-projection vocabulary.
  *
- * @module @deepseek-ai/dsh-token-meter/projection
+ * @module @berry-ai/harness-token-meter/projection
  */
 
 /**

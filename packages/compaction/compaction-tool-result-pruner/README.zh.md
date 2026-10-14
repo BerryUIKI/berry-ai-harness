@@ -32,7 +32,7 @@ kind: "package-reference"
 按此顺序挂载 token 测量、本包与后端：
 
 ```yaml
-- name: '@deepseek-ai/dsh-token-meter'
+- name: '@berry-ai/harness-token-meter'
 - name: '@berry-ai/harness-compaction-tool-result-pruner'
 - name: '@berry-ai/harness-compaction-basic'
 ```

@@ -4,8 +4,8 @@ import { mkdir, rm, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 import { Context } from '@deepseek-ai/cordis'
-import { createUserMessage, ToolCallId, type Message } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed, MessageSource } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, ToolCallId, type Message } from '@berry-ai/harness-llm'
+import type { ContextFormed, MessageSource } from '@berry-ai/harness-llm'
 import { createScope, type Scope } from '@deepseek-ai/dsh-scope'
 import {
   SESSION_FORMAT_VERSION, Session, SessionId, type SessionEvent, type UserMessage,
@@ -17,7 +17,7 @@ import SkillRegistry from '@berry-ai/harness-skill'
 import * as SkillFileSystem from '@berry-ai/harness-skill-filesystem'
 import * as toolSkill from '@berry-ai/harness-tool-skill'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'dsh-tool-skill': { kind: 'dsh-tool-skill' } & ContextFormed
     'later-contribution': { kind: 'later-contribution' } & ContextFormed

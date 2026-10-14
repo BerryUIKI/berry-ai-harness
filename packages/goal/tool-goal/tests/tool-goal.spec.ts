@@ -6,9 +6,9 @@ import type { Agent, AgentStatus, Inbox } from '@deepseek-ai/dsh-agent'
 import { turnBoundaryProjectionDefinition } from '@deepseek-ai/dsh-agent-loop'
 import GoalService, { GoalId } from '@berry-ai/harness-goal'
 import type { GoalRef } from '@berry-ai/harness-goal'
-import { createUserMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
-import type { MessageSource } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
+import type { MessageSource } from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
 import SessionStore, {
   SESSION_FORMAT_VERSION,
   Session,
@@ -22,7 +22,7 @@ import type { ToolExecutionResult } from '@deepseek-ai/dsh-tools'
 import * as toolGoal from '@berry-ai/harness-tool-goal'
 import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'test': { kind: 'test' } & ContextFormed
   }

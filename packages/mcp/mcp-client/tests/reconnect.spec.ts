@@ -9,7 +9,7 @@ import { Context } from '@deepseek-ai/cordis'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
 import McpResources from '@berry-ai/harness-mcp-resources'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
+import { ToolCallId } from '@berry-ai/harness-llm'
 import type { Config } from '@berry-ai/harness-mcp-client'
 
 // ---- Mock MCP SDK ----

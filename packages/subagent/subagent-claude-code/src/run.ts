@@ -15,7 +15,7 @@ import {
   type SDKResultMessage,
   type SpawnOptions,
 } from '@anthropic-ai/claude-agent-sdk'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import { brandString } from '@berry-ai/harness-brand'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 import {

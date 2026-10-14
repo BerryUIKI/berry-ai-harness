@@ -11,7 +11,7 @@ import Include from '@deepseek-ai/cordis-plugin-include'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import AgentLoop from '@deepseek-ai/dsh-agent-loop'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
-import LlmRuntime, { ToolCallId } from '@deepseek-ai/dsh-llm'
+import LlmRuntime, { ToolCallId } from '@berry-ai/harness-llm'
 import LocalSandbox from '@berry-ai/harness-sandbox-local'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
@@ -55,7 +55,7 @@ describe('worktree tool through real Loader composition', () => {
       ['@deepseek-ai/dsh-session', SessionStore],
       ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
       ['@deepseek-ai/dsh-system-prompt', SystemPrompt],
-      ['@deepseek-ai/dsh-llm', LlmRuntime],
+      ['@berry-ai/harness-llm', LlmRuntime],
       ['@deepseek-ai/dsh-tools', ToolRuntime],
       ['@berry-ai/harness-fs-local', LocalFileSystem],
       ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],

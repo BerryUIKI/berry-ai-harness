@@ -9,7 +9,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import { lastAssistantStreamChunk } from '@deepseek-ai/dsh-llm/assistant-stream'
+import { lastAssistantStreamChunk } from '@berry-ai/harness-llm/assistant-stream'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 
 /** Default per-string and per-key cap applied to every bounded projected payload. */

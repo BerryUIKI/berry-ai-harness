@@ -24,7 +24,7 @@
  */
 
 import { z } from 'zod'
-import { assistantStreamFirstTokenTime } from '@deepseek-ai/dsh-llm'
+import { assistantStreamFirstTokenTime } from '@berry-ai/harness-llm'
 import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
 
 

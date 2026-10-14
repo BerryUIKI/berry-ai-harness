@@ -2209,11 +2209,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-deepseek-llm-api-extensions",
+      "name": "@berry-ai/harness-deepseek-llm-api-extensions",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-deepseek-llm-api-extensions",
+          "location": "node_modules/@berry-ai/harness-deepseek-llm-api-extensions",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2425,11 +2425,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-llm",
+      "name": "@berry-ai/harness-llm",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-llm",
+          "location": "node_modules/@berry-ai/harness-llm",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2437,11 +2437,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-llm-deepseek",
+      "name": "@berry-ai/harness-llm-deepseek",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-llm-deepseek",
+          "location": "node_modules/@berry-ai/harness-llm-deepseek",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2449,11 +2449,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-llm-pi-ai",
+      "name": "@berry-ai/harness-llm-pi-ai",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-llm-pi-ai",
+          "location": "node_modules/@berry-ai/harness-llm-pi-ai",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2461,11 +2461,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-llm-retry",
+      "name": "@berry-ai/harness-llm-retry",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-llm-retry",
+          "location": "node_modules/@berry-ai/harness-llm-retry",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2557,11 +2557,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-plugin-package-inventory-deepseek",
+      "name": "@berry-ai/harness-plugin-package-inventory-deepseek",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-plugin-package-inventory-deepseek",
+          "location": "node_modules/@berry-ai/harness-plugin-package-inventory-deepseek",
           "direct": false,
           "optional": false,
           "peer": false
@@ -3025,11 +3025,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-token-meter",
+      "name": "@berry-ai/harness-token-meter",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-token-meter",
+          "location": "node_modules/@berry-ai/harness-token-meter",
           "direct": true,
           "optional": false,
           "peer": false
