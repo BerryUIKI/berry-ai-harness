@@ -10,11 +10,11 @@ import * as ToolBash from '@berry-ai/harness-tool-bash'
 import * as ToolTodo from '@berry-ai/harness-tool-todo'
 import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
 import TokenMeter from '@deepseek-ai/dsh-token-meter'
-import ToolResultPruner from '@deepseek-ai/dsh-compaction-tool-result-pruner'
+import ToolResultPruner from '@berry-ai/harness-compaction-tool-result-pruner'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import * as SessionCheckpointPolicy from '@deepseek-ai/dsh-session-checkpoint-policy'
-import { BasicCompactionEngine } from '@deepseek-ai/dsh-compaction-basic'
-import type { BasicCompactionConfig } from '@deepseek-ai/dsh-compaction-basic'
+import { BasicCompactionEngine } from '@berry-ai/harness-compaction-basic'
+import type { BasicCompactionConfig } from '@berry-ai/harness-compaction-basic'
 
 /**
  * Shared harness for the headless-agent e2e suites: the full plugin stack

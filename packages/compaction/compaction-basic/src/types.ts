@@ -1,7 +1,7 @@
 /**
  * Configuration vocabulary for the replay-aware basic compaction backend.
  *
- * @module @deepseek-ai/dsh-compaction-basic/types
+ * @module @berry-ai/harness-compaction-basic/types
  */
 
 import type { LlmCallConfig } from '@deepseek-ai/dsh-llm'

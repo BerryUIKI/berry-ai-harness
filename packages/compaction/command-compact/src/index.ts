@@ -1,11 +1,11 @@
 /**
  * Human-facing `/compact` command over the backend-independent compaction seam.
- * @module @deepseek-ai/dsh-command-compact
+ * @module @berry-ai/harness-command-compact
  */
 
 import type { Context } from '@deepseek-ai/cordis'
 import { CommandDefinitionId } from '@berry-ai/harness-commands/brand'
-import { ManualCompactionError } from '@deepseek-ai/dsh-compaction'
+import { ManualCompactionError } from '@berry-ai/harness-compaction'
 import type { CommandInvocation, CommandResult } from '@berry-ai/harness-commands'
 
 export const name = 'command-compact'
@@ -99,7 +99,7 @@ export function apply(ctx: Context): void {
     // invocation can enter while already-started handler promises quiesce.
     yield async () => { await Promise.allSettled(active) }
     yield ctx.commands.register({
-      definitionId: CommandDefinitionId('@deepseek-ai/dsh-command-compact'),
+      definitionId: CommandDefinitionId('@berry-ai/harness-command-compact'),
       name: 'compact',
       description: 'Compact older conversation history',
       handler,

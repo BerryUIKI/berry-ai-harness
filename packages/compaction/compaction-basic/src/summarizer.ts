@@ -1,7 +1,7 @@
 /**
  * Default one-shot summarization and durable checkpoint framing.
  *
- * @module @deepseek-ai/dsh-compaction-basic/summarizer
+ * @module @berry-ai/harness-compaction-basic/summarizer
  */
 
 import type { Context } from '@deepseek-ai/cordis'

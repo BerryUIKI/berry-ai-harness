@@ -397,13 +397,13 @@ importers:
       '@deepseek-ai/dsh-client-ui-cordis':
         specifier: workspace:*
         version: link:../../packages/extensions/ui-cordis
-      '@deepseek-ai/dsh-command-compact':
+      '@berry-ai/harness-command-compact':
         specifier: workspace:*
         version: link:../../packages/compaction/command-compact
-      '@deepseek-ai/dsh-compaction-basic':
+      '@berry-ai/harness-compaction-basic':
         specifier: workspace:*
         version: link:../../packages/compaction/compaction-basic
-      '@deepseek-ai/dsh-compaction-tool-result-pruner':
+      '@berry-ai/harness-compaction-tool-result-pruner':
         specifier: workspace:*
         version: link:../../packages/compaction/compaction-tool-result-pruner
       '@deepseek-ai/dsh-cordis-client-runner':
@@ -2206,16 +2206,16 @@ importers:
       '@deepseek-ai/dsh-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
-      '@deepseek-ai/dsh-command-compact':
+      '@berry-ai/harness-command-compact':
         specifier: workspace:*
         version: link:../../compaction/command-compact
-      '@deepseek-ai/dsh-compaction-basic':
+      '@berry-ai/harness-compaction-basic':
         specifier: workspace:*
         version: link:../../compaction/compaction-basic
-      '@deepseek-ai/dsh-compaction-image-offload':
+      '@berry-ai/harness-compaction-image-offload':
         specifier: workspace:*
         version: link:../../compaction/compaction-image-offload
-      '@deepseek-ai/dsh-compaction-tool-result-pruner':
+      '@berry-ai/harness-compaction-tool-result-pruner':
         specifier: workspace:*
         version: link:../../compaction/compaction-tool-result-pruner
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
@@ -2816,13 +2816,13 @@ importers:
       '@deepseek-ai/dsh-client-ui-workspace':
         specifier: workspace:*
         version: link:../../client/ui-workspace
-      '@deepseek-ai/dsh-command-compact':
+      '@berry-ai/harness-command-compact':
         specifier: workspace:*
         version: link:../../compaction/command-compact
-      '@deepseek-ai/dsh-compaction-basic':
+      '@berry-ai/harness-compaction-basic':
         specifier: workspace:*
         version: link:../../compaction/compaction-basic
-      '@deepseek-ai/dsh-compaction-tool-result-pruner':
+      '@berry-ai/harness-compaction-tool-result-pruner':
         specifier: workspace:*
         version: link:../../compaction/compaction-tool-result-pruner
       '@deepseek-ai/dsh-cordis-client-runner':
@@ -3116,7 +3116,7 @@ importers:
       '@deepseek-ai/dsh-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
       '@deepseek-ai/dsh-host-product-telemetry-otel':
@@ -3472,7 +3472,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
       '@deepseek-ai/dsh-llm':
@@ -6172,7 +6172,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
       '@deepseek-ai/dsh-llm':
@@ -6481,7 +6481,7 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../compaction
       '@deepseek-ai/dsh-llm':
@@ -6539,13 +6539,13 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../compaction
-      '@deepseek-ai/dsh-compaction-image-offload':
+      '@berry-ai/harness-compaction-image-offload':
         specifier: workspace:*
         version: link:../compaction-image-offload
-      '@deepseek-ai/dsh-compaction-tool-result-pruner':
+      '@berry-ai/harness-compaction-tool-result-pruner':
         specifier: workspace:*
         version: link:../compaction-tool-result-pruner
       '@deepseek-ai/dsh-llm':
@@ -6588,10 +6588,10 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../compaction
-      '@deepseek-ai/dsh-compaction-basic':
+      '@berry-ai/harness-compaction-basic':
         specifier: workspace:*
         version: link:../compaction-basic
       '@deepseek-ai/dsh-llm':
@@ -6628,10 +6628,10 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../compaction
-      '@deepseek-ai/dsh-compaction-image-offload':
+      '@berry-ai/harness-compaction-image-offload':
         specifier: workspace:*
         version: link:../compaction-image-offload
       '@deepseek-ai/dsh-llm':
@@ -6799,7 +6799,7 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
       '@deepseek-ai/dsh-llm':
@@ -7552,7 +7552,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
       '@deepseek-ai/dsh-llm':
@@ -10930,10 +10930,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
-      '@deepseek-ai/dsh-compaction-image-offload':
+      '@berry-ai/harness-compaction-image-offload':
         specifier: workspace:*
         version: link:../../compaction/compaction-image-offload
       '@deepseek-ai/dsh-llm':
@@ -11215,7 +11215,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-compaction-tool-result-pruner':
+      '@berry-ai/harness-compaction-tool-result-pruner':
         specifier: workspace:*
         version: link:../../compaction/compaction-tool-result-pruner
       '@types/js-yaml':
@@ -11868,7 +11868,7 @@ importers:
 
   packages/session/session-format-catalog:
     dependencies:
-      '@deepseek-ai/dsh-compaction-image-offload':
+      '@berry-ai/harness-compaction-image-offload':
         specifier: workspace:*
         version: link:../../compaction/compaction-image-offload
       '@deepseek-ai/dsh-session-format':
@@ -14308,7 +14308,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
@@ -14419,7 +14419,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
       '@deepseek-ai/dsh-llm':
@@ -15326,19 +15326,19 @@ importers:
       '@deepseek-ai/dsh-client-file-upload':
         specifier: workspace:*
         version: link:../../packages/client/file-upload
-      '@deepseek-ai/dsh-command-compact':
+      '@berry-ai/harness-command-compact':
         specifier: workspace:*
         version: link:../../packages/compaction/command-compact
-      '@deepseek-ai/dsh-compaction':
+      '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../packages/compaction/compaction
-      '@deepseek-ai/dsh-compaction-basic':
+      '@berry-ai/harness-compaction-basic':
         specifier: workspace:*
         version: link:../../packages/compaction/compaction-basic
-      '@deepseek-ai/dsh-compaction-image-offload':
+      '@berry-ai/harness-compaction-image-offload':
         specifier: workspace:*
         version: link:../../packages/compaction/compaction-image-offload
-      '@deepseek-ai/dsh-compaction-tool-result-pruner':
+      '@berry-ai/harness-compaction-tool-result-pruner':
         specifier: workspace:*
         version: link:../../packages/compaction/compaction-tool-result-pruner
       '@deepseek-ai/dsh-cordis-host-runner':

@@ -55,7 +55,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-api-gateway": "workspace:*",
-    "@deepseek-ai/dsh-compaction": "workspace:*",
+    "@berry-ai/harness-compaction": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-host-product-telemetry-otel": "workspace:*",

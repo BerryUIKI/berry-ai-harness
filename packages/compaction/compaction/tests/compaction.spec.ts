@@ -7,12 +7,12 @@ import {
   CompactionEngine,
   compactCheckpointSource,
   isCompactCheckpointSource,
-} from '@deepseek-ai/dsh-compaction'
-import type { CompactionResult, CompactionTrigger } from '@deepseek-ai/dsh-compaction'
+} from '@berry-ai/harness-compaction'
+import type { CompactionResult, CompactionTrigger } from '@berry-ai/harness-compaction'
 import { Session, SessionId } from '@deepseek-ai/dsh-session'
 import type { SessionSeq } from '@deepseek-ai/dsh-session'
-import type { CompactionAgentContext } from '@deepseek-ai/dsh-compaction'
-import type { ManualCompactAgentContext } from '@deepseek-ai/dsh-compaction'
+import type { CompactionAgentContext } from '@berry-ai/harness-compaction'
+import type { ManualCompactAgentContext } from '@berry-ai/harness-compaction'
 
 declare module '@deepseek-ai/dsh-llm' {
   interface MessageSourceMap {

@@ -9,7 +9,7 @@ import TokenMeter from '@deepseek-ai/dsh-token-meter'
 import type { ContextPressureProjection, TokenUsageProjection } from '@deepseek-ai/dsh-token-meter/client'
 import { RetryId } from '@deepseek-ai/dsh-llm-retry'
 import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-import { CompactionId } from '@deepseek-ai/dsh-compaction'
+import { CompactionId } from '@berry-ai/harness-compaction'
 
 declare module '@deepseek-ai/dsh-llm' {
   interface MessageSourceMap {

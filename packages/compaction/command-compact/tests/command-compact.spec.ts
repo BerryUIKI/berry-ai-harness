@@ -11,9 +11,9 @@ import {
   type CompactionResult,
   type CompactionTrigger,
   type ManualCompactAgentContext,
-} from '@deepseek-ai/dsh-compaction'
+} from '@berry-ai/harness-compaction'
 import { Session, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
-import * as commandCompact from '@deepseek-ai/dsh-command-compact'
+import * as commandCompact from '@berry-ai/harness-command-compact'
 
 const COMPACTION_ID = CompactionId('command-compact-test')
 
@@ -153,7 +153,7 @@ function expectLastLifecycle(
   return runEvent.data.commandId
 }
 
-describe('@deepseek-ai/dsh-command-compact registration', () => {
+describe('@berry-ai/harness-command-compact registration', () => {
   it('registers one argument-free command with Loader-safe exports and disposes it', async () => {
     const test = await harness()
     expect(commandCompact.name).toBe('command-compact')
@@ -162,7 +162,7 @@ describe('@deepseek-ai/dsh-command-compact registration', () => {
     const loader = Object.create(Loader.prototype) as Loader
     expect(loader.unwrapExports(commandCompact)).toBe(commandCompact)
     expect(test.ctx.commands.list(test.agent)).toContainEqual({
-      definitionId: '@deepseek-ai/dsh-command-compact',
+      definitionId: '@berry-ai/harness-command-compact',
       name: 'compact',
       description: 'Compact older conversation history',
     })

@@ -15,8 +15,8 @@ import {
   type CompactionResult,
   type CompactionTrigger,
   type ManualCompactAgentContext,
-} from '@deepseek-ai/dsh-compaction'
-import * as commandCompact from '@deepseek-ai/dsh-command-compact'
+} from '@berry-ai/harness-compaction'
+import * as commandCompact from '@berry-ai/harness-command-compact'
 import { Session, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
 
 const COMPACTION_ID = CompactionId('loader-command-compact-test')
@@ -86,7 +86,7 @@ describe('command-compact real Loader composition', () => {
     await writeFile(configPath, [
       "- name: '@berry-ai/harness-commands'",
       "- name: '@test/compact-backend'",
-      "- name: '@deepseek-ai/dsh-command-compact'",
+      "- name: '@berry-ai/harness-command-compact'",
       '',
     ].join('\n'))
 
@@ -97,7 +97,7 @@ describe('command-compact real Loader composition', () => {
     const modules = new Map<string, unknown>([
       ['@berry-ai/harness-commands', CommandRuntime],
       ['@test/compact-backend', LoaderCompactionEngine],
-      ['@deepseek-ai/dsh-command-compact', commandCompact],
+      ['@berry-ai/harness-command-compact', commandCompact],
     ])
     context.loader.internal = {
       version: 'v2',
@@ -120,7 +120,7 @@ describe('command-compact real Loader composition', () => {
       reserveTurnAdmission: () => () => undefined,
     } as unknown as Agent
     expect(context.commands.list(agent)).toContainEqual({
-      definitionId: '@deepseek-ai/dsh-command-compact',
+      definitionId: '@berry-ai/harness-command-compact',
       name: 'compact',
       description: 'Compact older conversation history',
     })

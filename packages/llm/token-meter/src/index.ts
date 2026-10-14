@@ -5,7 +5,7 @@
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-compaction-image-offload/projection'
+import type {} from '@berry-ai/harness-compaction-image-offload/projection'
 import z from '@deepseek-ai/schemastery'
 import { assembleAssistantStream } from '@deepseek-ai/dsh-llm'
 import type { LlmImageRequestPricing, LlmRuntime, Message, TokenUsage } from '@deepseek-ai/dsh-llm'

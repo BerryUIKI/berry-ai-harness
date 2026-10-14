@@ -4,7 +4,7 @@ import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-test
 import { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import type {} from '@berry-ai/harness-agent-instructions'
-import { compactCheckpointSource, CompactionId } from '@deepseek-ai/dsh-compaction'
+import { compactCheckpointSource, CompactionId } from '@berry-ai/harness-compaction'
 import LlmRuntime, {
   createMessage,
   createSystemMessage,

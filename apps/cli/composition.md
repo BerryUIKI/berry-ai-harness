@@ -132,9 +132,9 @@ flowchart LR
   cfg --> plugin_dsh_base_plan_mode
   plugin_dsh_base_token_meter["token-meter<br/>@deepseek-ai/dsh-token-meter"]
   cfg --> plugin_dsh_base_token_meter
-  plugin_dsh_base_compaction_basic["compaction-basic<br/>@deepseek-ai/dsh-compaction-basic"]
+  plugin_dsh_base_compaction_basic["compaction-basic<br/>@berry-ai/harness-compaction-basic"]
   cfg --> plugin_dsh_base_compaction_basic
-  plugin_dsh_base_command_compact["command-compact<br/>@deepseek-ai/dsh-command-compact"]
+  plugin_dsh_base_command_compact["command-compact<br/>@berry-ai/harness-command-compact"]
   cfg --> plugin_dsh_base_command_compact
   plugin_dsh_base_subagent["subagent<br/>@deepseek-ai/dsh-subagent"]
   cfg --> plugin_dsh_base_subagent
@@ -164,9 +164,9 @@ flowchart LR
   cfg --> plugin_dsh_base_spill_policy
   plugin_dsh_base_session_checkpoint_policy["session-checkpoint-policy<br/>@deepseek-ai/dsh-session-checkpoint-policy"]
   cfg --> plugin_dsh_base_session_checkpoint_policy
-  plugin_dsh_base_tool_result_pruner["tool-result-pruner<br/>@deepseek-ai/dsh-compaction-tool-result-pruner"]
+  plugin_dsh_base_tool_result_pruner["tool-result-pruner<br/>@berry-ai/harness-compaction-tool-result-pruner"]
   cfg --> plugin_dsh_base_tool_result_pruner
-  plugin_dsh_base_image_offload["image-offload<br/>@deepseek-ai/dsh-compaction-image-offload"]
+  plugin_dsh_base_image_offload["image-offload<br/>@berry-ai/harness-compaction-image-offload"]
   cfg --> plugin_dsh_base_image_offload
   plugin_dsh_base_tool_todo["tool-todo<br/>@berry-ai/harness-tool-todo"]
   cfg --> plugin_dsh_base_tool_todo
@@ -262,8 +262,8 @@ flowchart LR
 | `command-goal` | `@berry-ai/harness-command-goal` |
 | `plan-mode` | `@berry-ai/harness-plan-mode` |
 | `token-meter` | `@deepseek-ai/dsh-token-meter` |
-| `compaction-basic` | `@deepseek-ai/dsh-compaction-basic` |
-| `command-compact` | `@deepseek-ai/dsh-command-compact` |
+| `compaction-basic` | `@berry-ai/harness-compaction-basic` |
+| `command-compact` | `@berry-ai/harness-command-compact` |
 | `subagent` | `@deepseek-ai/dsh-subagent` |
 | `subagent-spawn-in-process` | `@deepseek-ai/dsh-subagent-spawn-in-process` |
 | `subagent-fork-in-process` | `@deepseek-ai/dsh-subagent-fork-in-process` |
@@ -278,8 +278,8 @@ flowchart LR
 | `spill-local` | `@berry-ai/harness-spill-local` |
 | `spill-policy` | `@berry-ai/harness-spill-policy` |
 | `session-checkpoint-policy` | `@deepseek-ai/dsh-session-checkpoint-policy` |
-| `tool-result-pruner` | `@deepseek-ai/dsh-compaction-tool-result-pruner` |
-| `image-offload` | `@deepseek-ai/dsh-compaction-image-offload` |
+| `tool-result-pruner` | `@berry-ai/harness-compaction-tool-result-pruner` |
+| `image-offload` | `@berry-ai/harness-compaction-image-offload` |
 | `tool-todo` | `@berry-ai/harness-tool-todo` |
 | `tool-goal` | `@berry-ai/harness-tool-goal` |
 | `repeat-tool-reminder` | `@berry-ai/harness-repeat-tool-reminder` |

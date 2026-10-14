@@ -4,7 +4,7 @@
  * {@link CompactionEngine}. This interface necessarily depends on session and LLM
  * vocabulary; the dependency rule is documented in the
  * [compaction reference](../README.md#understand-the-implementation).
- * @module @deepseek-ai/dsh-compaction
+ * @module @berry-ai/harness-compaction
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'

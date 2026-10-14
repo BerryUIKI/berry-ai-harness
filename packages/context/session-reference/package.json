@@ -52,7 +52,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-compaction": "workspace:*",
+    "@berry-ai/harness-compaction": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@berry-ai/harness-output-retention": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
@@ -78,7 +78,7 @@
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-compaction": "workspace:*",
+    "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@berry-ai/harness-output-retention": "workspace:*",

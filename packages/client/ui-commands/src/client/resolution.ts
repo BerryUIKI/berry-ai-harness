@@ -7,7 +7,7 @@ const BUILTINS = {
   goal: '@berry-ai/harness-command-goal',
   plan: '@berry-ai/harness-plan-mode',
   feedback: '@berry-ai/harness-command-feedback',
-  compact: '@deepseek-ai/dsh-command-compact',
+  compact: '@berry-ai/harness-command-compact',
   permission: '@berry-ai/harness-permission-presets',
   export: '@deepseek-ai/dsh-session-log-export',
 } as const

@@ -1,7 +1,7 @@
 /**
  * Load-time validation and routed-model policy resolution for compaction-basic.
  *
- * @module @deepseek-ai/dsh-compaction-basic/config
+ * @module @berry-ai/harness-compaction-basic/config
  */
 
 import type { LlmCallConfig } from '@deepseek-ai/dsh-llm'

@@ -3,7 +3,7 @@ description: "面向交互式组合的按需 /compact 命令：它做什么、�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-command-compact
+# @berry-ai/harness-command-compact
 
 [English](README.md) | 中文
 
@@ -57,9 +57,9 @@ kind: "package-reference"
 - id: commands
   name: '@berry-ai/harness-commands'
 - id: compaction-basic
-  name: '@deepseek-ai/dsh-compaction-basic'
+  name: '@berry-ai/harness-compaction-basic'
 - id: command-compact
-  name: '@deepseek-ai/dsh-command-compact'
+  name: '@berry-ai/harness-command-compact'
 ```
 
 随附 `dsh` 基础配置把它挂载在默认后端旁，Web 客户端提供命令适配器。未组合命令适配器的自动化接口只保留自动压缩。

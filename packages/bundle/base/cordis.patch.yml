@@ -344,12 +344,12 @@
       name: '@deepseek-ai/dsh-token-meter'
 
     - id: compaction-basic
-      name: '@deepseek-ai/dsh-compaction-basic'
+      name: '@berry-ai/harness-compaction-basic'
 
     # Human `/compact`: one useful reduction below the automatic threshold. Backend
     # independent, so it follows whichever compaction service this leaf mounts.
     - id: command-compact
-      name: '@deepseek-ai/dsh-command-compact'
+      name: '@berry-ai/harness-command-compact'
 
     - id: subagent
       name: '@deepseek-ai/dsh-subagent'
@@ -418,7 +418,7 @@
     # Compacts oversized tool results before the broader conversation compactor
     # runs, preserving the model-visible result within the configured budget.
     - id: tool-result-pruner
-      name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
+      name: '@berry-ai/harness-compaction-tool-result-pruner'
       config:
         thresholdChars: 8192
         headChars: 4096
@@ -427,7 +427,7 @@
     # When an image-capable route rejects a request as over its image budget,
     # replace the oldest images with placeholders on the surface and retry.
     - id: image-offload
-      name: '@deepseek-ai/dsh-compaction-image-offload'
+      name: '@berry-ai/harness-compaction-image-offload'
 
     - id: tool-todo
       name: '@berry-ai/harness-tool-todo'
