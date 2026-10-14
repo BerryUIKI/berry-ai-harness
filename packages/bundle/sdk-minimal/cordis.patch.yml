@@ -31,7 +31,7 @@
         streamIdleTimeoutMs: 172800000
 
     - id: sandbox
-      name: '@deepseek-ai/dsh-sandbox-local'
+      name: '@berry-ai/harness-sandbox-local'
 
     # Shared projection registry: sandbox-policy and terminal-bash fold
     # sandbox-mode state through its units and require it as a hard injection.
@@ -48,7 +48,7 @@
       name: '@deepseek-ai/dsh-session-projection'
 
     - id: sandbox-policy
-      name: '@deepseek-ai/dsh-sandbox-policy'
+      name: '@berry-ai/harness-sandbox-policy'
       config:
         mode: danger-full-access
         workspaceRoot: !!js process.cwd()

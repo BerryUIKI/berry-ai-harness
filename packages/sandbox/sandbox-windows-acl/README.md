@@ -3,7 +3,7 @@ description: "The Windows write-restriction sandbox backend for users and mainta
 kind: "package-library"
 ---
 
-# @deepseek-ai/dsh-sandbox-windows-acl
+# @berry-ai/harness-sandbox-windows-acl
 
 English | [中文](README.zh.md)
 
@@ -39,7 +39,7 @@ Choose it for Windows compositions that confine subprocess file effects under `r
 import { mkdtempSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { AclSandbox, tempWriteSid, workspaceWriteSid } from '@deepseek-ai/dsh-sandbox-windows-acl'
+import { AclSandbox, tempWriteSid, workspaceWriteSid } from '@berry-ai/harness-sandbox-windows-acl'
 
 const workspaceRoot = process.cwd()
 const tempDir = mkdtempSync(join(tmpdir(), 'dsh-'))

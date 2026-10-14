@@ -194,7 +194,7 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/dsh-fs": "workspace:*",
     "@deepseek-ai/dsh-fs-local": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-shell-env": "workspace:*",

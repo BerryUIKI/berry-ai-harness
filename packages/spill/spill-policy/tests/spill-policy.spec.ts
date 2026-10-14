@@ -27,8 +27,8 @@ import * as SpillPolicy from '@berry-ai/harness-spill-policy'
 import NodeRuntime, { type Config as NodeRuntimeConfig } from '@berry-ai/harness-ptc-runtime-node'
 import FileSystem from '@deepseek-ai/dsh-fs-local'
 import Subprocess from '@berry-ai/harness-subprocess-local'
-import Sandbox from '@deepseek-ai/dsh-sandbox-local'
-import SandboxPolicy from '@deepseek-ai/dsh-sandbox-policy'
+import Sandbox from '@berry-ai/harness-sandbox-local'
+import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
 import SessionProjections from '@deepseek-ai/dsh-session-projection'
 
 declare module '@deepseek-ai/dsh-llm' {

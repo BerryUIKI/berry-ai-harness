@@ -18,7 +18,7 @@
     compression: none
 
 - id: sandbox
-  name: '@deepseek-ai/dsh-sandbox-local'
+  name: '@berry-ai/harness-sandbox-local'
   config:
     runnerCommand:
       - bash

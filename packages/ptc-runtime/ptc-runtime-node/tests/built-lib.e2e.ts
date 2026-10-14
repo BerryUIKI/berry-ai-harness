@@ -25,7 +25,7 @@ describe.skipIf(!built)('built lib real load path (plain node)', () => {
         const plugin = await import('@deepseek-ai/dsh-' + name)
         await ctx.plugin(plugin.default, {})
       }
-      const { default: SandboxPolicy } = await import('@deepseek-ai/dsh-sandbox-policy')
+      const { default: SandboxPolicy } = await import('@berry-ai/harness-sandbox-policy')
       await ctx.plugin(SandboxPolicy, { mode: 'read-only' })
       await ctx.plugin(NodePtcRuntime, {})
       const result = await ctx.ptcRuntime.run(ctx.ptcRuntime.resolve({

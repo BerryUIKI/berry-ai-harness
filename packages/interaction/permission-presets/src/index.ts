@@ -21,8 +21,8 @@ import z from '@deepseek-ai/schemastery'
 import { z as zod } from 'zod'
 import { Remote, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
 import type { Session, SessionEvent } from '@deepseek-ai/dsh-session'
-import type { SandboxMode } from '@deepseek-ai/dsh-sandbox'
-import { SANDBOX_MODES, setSandboxMode } from '@deepseek-ai/dsh-sandbox-policy'
+import type { SandboxMode } from '@berry-ai/harness-sandbox'
+import { SANDBOX_MODES, setSandboxMode } from '@berry-ai/harness-sandbox-policy'
 // Side-effect type import: declaration-merges `ctx.shell` (the capability fact
 // `sandboxMode` this service reads), without a value dependency on the seam.
 import type {} from '@deepseek-ai/dsh-shell'

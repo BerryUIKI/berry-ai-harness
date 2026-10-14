@@ -14,7 +14,7 @@
 
 import { Context } from '@deepseek-ai/cordis'
 import type { ShellExecRequest, ShellExecSpec, ShellExecution, ShellProcess, ShellRunResult } from '@deepseek-ai/dsh-shell'
-import { SandboxUnavailableError } from '@deepseek-ai/dsh-sandbox'
+import { SandboxUnavailableError } from '@berry-ai/harness-sandbox'
 import type {
   ConfinedArgv,
   ConfinedSandboxMode,
@@ -23,8 +23,8 @@ import type {
   SandboxExecutionPolicy,
   SandboxMode,
   SandboxPolicy,
-} from '@deepseek-ai/dsh-sandbox'
-import type {} from '@deepseek-ai/dsh-sandbox-policy'
+} from '@berry-ai/harness-sandbox'
+import type {} from '@berry-ai/harness-sandbox-policy'
 import { PwshLocalExecutor } from '@deepseek-ai/dsh-pwsh-local'
 import type { Config as LocalConfig } from '@deepseek-ai/dsh-pwsh-local'
 import { classifyDenial, classifyRunnerFailure, isRunnerSpawnFailure, matchesSignature } from './helpers.ts'
@@ -32,7 +32,7 @@ import { classifyDenial, classifyRunnerFailure, isRunnerSpawnFailure, matchesSig
 /**
  * Plugin config: the local executor's knobs, verbatim. The sandbox policy —
  * the default mode and fallback `workspace-write` root — is NOT here: it lives
- * on `ctx.sandboxPolicy` (`@deepseek-ai/dsh-sandbox-policy`), which resolves
+ * on `ctx.sandboxPolicy` (`@berry-ai/harness-sandbox-policy`), which resolves
  * each calling session's mode and cwd for every enforcing capability. The
  * runner choice is likewise the `ctx.sandbox` provider's config, not this
  * executor's.

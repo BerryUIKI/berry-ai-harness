@@ -6,8 +6,8 @@ import { join } from 'node:path'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { launcherPath } from '@deepseek-ai/node-addon-system/landlock-run'
-import { LocalSandboxProvider } from '@deepseek-ai/dsh-sandbox-local'
-import { SandboxPolicyService } from '@deepseek-ai/dsh-sandbox-policy'
+import { LocalSandboxProvider } from '@berry-ai/harness-sandbox-local'
+import { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { SandboxBashExecutor } from '@deepseek-ai/dsh-bash-sandbox'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
@@ -30,7 +30,7 @@ function start(x: { execute(spec: ShellExecSpec): Promise<ShellExecution> }, spe
  * REAL `SandboxBashExecutor`, driven through the executor's public run/start
  * paths. Verifies the WORLD (files exist or don't) plus the stamped result
  * facts; the backend-only confinement proofs live with
- * `@deepseek-ai/dsh-sandbox-local`.
+ * `@berry-ai/harness-sandbox-local`.
  *
  * Self-skips when the running kernel does not enforce Landlock. CI builds the launcher from
  * `native/system` before running this file.

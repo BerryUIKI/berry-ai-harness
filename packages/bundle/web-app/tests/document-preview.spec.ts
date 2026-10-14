@@ -13,7 +13,7 @@ import * as DocumentPreview from '@deepseek-ai/dsh-client-ui-sidebar-documentpre
 import type { IndexInjection } from '@deepseek-ai/dsh-host-webserver'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SandboxPolicyService from '@deepseek-ai/dsh-sandbox-policy'
+import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import LocalFileSystem from '@deepseek-ai/dsh-fs-local'
 import { FsError } from '@deepseek-ai/dsh-fs'
 import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
@@ -48,7 +48,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
   await writeFile(configPath, JSON.stringify([
     { name: '@deepseek-ai/dsh-session' },
     { name: '@deepseek-ai/dsh-session-projection' },
-    { name: '@deepseek-ai/dsh-sandbox-policy', config: { workspaceRoot: directory } },
+    { name: '@berry-ai/harness-sandbox-policy', config: { workspaceRoot: directory } },
     { name: '@deepseek-ai/dsh-fs-local', config: { cwd: directory } },
     { name: '@deepseek-ai/dsh-typert-registry' },
     { name: '@deepseek-ai/dsh-api-workspace-files', config: { maxFileBytes: 1 } },
@@ -73,7 +73,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
   const modules = new Map<string, unknown>([
     ['@deepseek-ai/dsh-session', SessionStore],
     ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
-    ['@deepseek-ai/dsh-sandbox-policy', SandboxPolicyService],
+    ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
     ['@deepseek-ai/dsh-fs-local', LocalFileSystem],
     ['@deepseek-ai/dsh-typert-registry', TypertRegistry],
     ['@deepseek-ai/dsh-api-workspace-files', WorkspaceFiles],

@@ -11,8 +11,8 @@
  */
 
 import type { ShellSandboxInfo, CollectedOutput } from '@deepseek-ai/dsh-shell'
-import type { SandboxMode } from '@deepseek-ai/dsh-sandbox'
-import { escalationHintMarker, sandboxDenialMarker } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxMode } from '@berry-ai/harness-sandbox'
+import { escalationHintMarker, sandboxDenialMarker } from '@berry-ai/harness-sandbox'
 
 /* jscpd:ignore-start -- deliberate twin of dsh-tool-bash/render.ts (Agent Note). */
 

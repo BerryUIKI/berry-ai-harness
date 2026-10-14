@@ -32,7 +32,7 @@ kind: "package-reference"
 先加载共享策略服务，再加载此后端，最后加载工具；编辑前读取策略插件仍为可选。
 
 ```yaml
-- name: '@deepseek-ai/dsh-sandbox-policy'
+- name: '@berry-ai/harness-sandbox-policy'
 - name: '@deepseek-ai/dsh-fs-sandbox'
   config:
     cwd: /absolute/path/to/workspace

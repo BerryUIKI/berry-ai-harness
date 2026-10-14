@@ -16,7 +16,7 @@ import type { UserMessage } from '@deepseek-ai/dsh-session'
 import { assertNever, deepFreeze, snapshotJsonValue, type JsonValue } from '@berry-ai/harness-util-values'
 import type { PromptSection, ToolProviderResult } from '@deepseek-ai/dsh-system-prompt'
 import type { PtcRuntime } from '@berry-ai/harness-ptc-runtime'
-import type {} from '@deepseek-ai/dsh-sandbox-policy'
+import type {} from '@berry-ai/harness-sandbox-policy'
 // Type-only: makes `ctx.get('approval')` resolve to the ApprovalService
 // augmentation. The seam stays optional at runtime — see `serviceAsk`.
 import type {} from '@deepseek-ai/dsh-user-approval'

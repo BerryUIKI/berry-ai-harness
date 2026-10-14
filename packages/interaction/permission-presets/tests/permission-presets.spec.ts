@@ -5,7 +5,7 @@ import SessionStore, {
   SessionId,
 } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { SandboxMode } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxMode } from '@berry-ai/harness-sandbox'
 import type { ApprovalPolicy } from '@deepseek-ai/dsh-user-approval'
 import PermissionPresetService, {
   AUTO_PRESET, CUSTOM_PRESET,

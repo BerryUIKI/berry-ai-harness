@@ -79,7 +79,7 @@
     "@deepseek-ai/dsh-fs": "workspace:*",
     "@deepseek-ai/dsh-fs-local": "workspace:*",
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-client-ui-settings": "workspace:*"
   },
   "files": [

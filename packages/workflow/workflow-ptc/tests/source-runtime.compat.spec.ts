@@ -5,7 +5,7 @@ import { join } from 'node:path'
 import { expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'
-import type { SandboxMode } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxMode } from '@berry-ai/harness-sandbox'
 import PtcWorkflowEngine from '../src/index.ts'
 import { fakeParent, mountPtcRuntime } from './setup.ts'
 

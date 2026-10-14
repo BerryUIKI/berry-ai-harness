@@ -14,7 +14,7 @@
         inputModalities: [text, image]
 
 - id: sandbox-policy
-  name: '@deepseek-ai/dsh-sandbox-policy'
+  name: '@berry-ai/harness-sandbox-policy'
   config:
     mode: !!js "process.env.DSH_PERMISSION_MODE ?? (process.env.DSH_SNAPSHOT === undefined ? 'workspace-write' : 'danger-full-access')"
     workspaceRoot: !!js process.cwd()

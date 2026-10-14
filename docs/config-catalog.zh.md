@@ -463,6 +463,69 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-repeat-tool-reminder -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-sandbox-local -->
+<a id="berry-aiharness-sandbox-local"></a>
+
+## `@berry-ai/harness-sandbox-local`
+
+- `source`: [`packages/sandbox/sandbox-local/src/index.ts:45`](../packages/sandbox/sandbox-local/src/index.ts)
+
+```ts config-catalog
+/** Plugin config. All optional — `static Config` supplies the defaults. */
+export interface Config {
+  /**
+   * Override the runner argv; bwrap-compatible profile arguments are appended. A
+   * non-empty override asserts full enforcement and skips built-in selection and
+   * probing. A runner that starts but refuses its profile must be identifiable by
+   * {@link runnerFailureSignatures}. Consumers classify a spawn rejection only after
+   * confirming the workdir is usable. `ENOENT` or `EACCES` identifies the runner when
+   * `error.path` equals argv[0] and `error.syscall` is `spawn` or `spawn <runner>`, or
+   * when `error.path` is absent and `error.syscall` is exactly `spawn <runner>`.
+   */
+  runnerCommand?: string[]
+  /**
+   * Case-insensitive stderr substrings emitted when a configured
+   * {@link runnerCommand} refuses its profile before executing the wrapped
+   * command. Required and non-empty with `runnerCommand`; rejected without
+   * it. Each entry is a non-empty, single-line, case-insensitive substring
+   * covering the executable runner's own failure dialect.
+   */
+  runnerFailureSignatures?: string[]
+  /** Positive timeout for each functional probe; zero would mean unbounded to Node. */
+  probeTimeoutMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-sandbox-local -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-sandbox-policy -->
+<a id="berry-aiharness-sandbox-policy"></a>
+
+## `@berry-ai/harness-sandbox-policy`
+
+- `inject`: `sessionProjections`
+- `refs`: [`SandboxMode`](subsystems/sandbox.zh.md)
+- `source`: [`packages/sandbox/sandbox-policy/src/index.ts:71`](../packages/sandbox/sandbox-policy/src/index.ts)
+
+```ts config-catalog
+/**
+ * Plugin config: the deployment's sandbox default. All optional — `Config`
+ * supplies the defaults (`mode: 'read-only'` is the fail-safe default; a
+ * deployment that wants a workspace-writable agent opts in explicitly). The
+ * runner choice is NOT here (it is the `ctx.sandbox` provider's config), nor
+ * is any per-family knob: this is the one shared policy home.
+ */
+export interface Config {
+  /** File-sandbox mode a session starts from (default: `read-only`). */
+  mode?: SandboxMode
+  /**
+   * Absolute fallback root for agentless calls and sessions without a cwd (default:
+   * `process.cwd()`). Normal agent calls use their session cwd instead.
+   */
+  workspaceRoot?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-sandbox-policy -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-schedule -->
 <a id="berry-aiharness-schedule"></a>
 
@@ -1244,7 +1307,7 @@ export interface Config {
 /**
  * Plugin config: the local executor's knobs, verbatim. The sandbox policy —
  * the default mode and fallback `workspace-write` root — is NOT here: it lives
- * on `ctx.sandboxPolicy` (`@deepseek-ai/dsh-sandbox-policy`), which resolves
+ * on `ctx.sandboxPolicy` (`@berry-ai/harness-sandbox-policy`), which resolves
  * each calling session's mode and cwd for every enforcing capability. The runner
  * choice is likewise the `ctx.sandbox` provider's config, not this executor's.
  */
@@ -3008,7 +3071,7 @@ export interface Config {
 /**
  * Plugin config: the local executor's knobs, verbatim. The sandbox policy —
  * the default mode and fallback `workspace-write` root — is NOT here: it lives
- * on `ctx.sandboxPolicy` (`@deepseek-ai/dsh-sandbox-policy`), which resolves
+ * on `ctx.sandboxPolicy` (`@berry-ai/harness-sandbox-policy`), which resolves
  * each calling session's mode and cwd for every enforcing capability. The
  * runner choice is likewise the `ctx.sandbox` provider's config, not this
  * executor's.
@@ -3016,69 +3079,6 @@ export interface Config {
 export type Config = LocalConfig
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-pwsh-sandbox -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sandbox-local -->
-<a id="deepseek-aidsh-sandbox-local"></a>
-
-## `@deepseek-ai/dsh-sandbox-local`
-
-- `source`: [`packages/sandbox/sandbox-local/src/index.ts:45`](../packages/sandbox/sandbox-local/src/index.ts)
-
-```ts config-catalog
-/** Plugin config. All optional — `static Config` supplies the defaults. */
-export interface Config {
-  /**
-   * Override the runner argv; bwrap-compatible profile arguments are appended. A
-   * non-empty override asserts full enforcement and skips built-in selection and
-   * probing. A runner that starts but refuses its profile must be identifiable by
-   * {@link runnerFailureSignatures}. Consumers classify a spawn rejection only after
-   * confirming the workdir is usable. `ENOENT` or `EACCES` identifies the runner when
-   * `error.path` equals argv[0] and `error.syscall` is `spawn` or `spawn <runner>`, or
-   * when `error.path` is absent and `error.syscall` is exactly `spawn <runner>`.
-   */
-  runnerCommand?: string[]
-  /**
-   * Case-insensitive stderr substrings emitted when a configured
-   * {@link runnerCommand} refuses its profile before executing the wrapped
-   * command. Required and non-empty with `runnerCommand`; rejected without
-   * it. Each entry is a non-empty, single-line, case-insensitive substring
-   * covering the executable runner's own failure dialect.
-   */
-  runnerFailureSignatures?: string[]
-  /** Positive timeout for each functional probe; zero would mean unbounded to Node. */
-  probeTimeoutMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-sandbox-local -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sandbox-policy -->
-<a id="deepseek-aidsh-sandbox-policy"></a>
-
-## `@deepseek-ai/dsh-sandbox-policy`
-
-- `inject`: `sessionProjections`
-- `refs`: [`SandboxMode`](subsystems/sandbox.zh.md)
-- `source`: [`packages/sandbox/sandbox-policy/src/index.ts:71`](../packages/sandbox/sandbox-policy/src/index.ts)
-
-```ts config-catalog
-/**
- * Plugin config: the deployment's sandbox default. All optional — `Config`
- * supplies the defaults (`mode: 'read-only'` is the fail-safe default; a
- * deployment that wants a workspace-writable agent opts in explicitly). The
- * runner choice is NOT here (it is the `ctx.sandbox` provider's config), nor
- * is any per-family knob: this is the one shared policy home.
- */
-export interface Config {
-  /** File-sandbox mode a session starts from (default: `read-only`). */
-  mode?: SandboxMode
-  /**
-   * Absolute fallback root for agentless calls and sessions without a cwd (default:
-   * `process.cwd()`). Normal agent calls use their session cwd instead.
-   */
-  workspaceRoot?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-sandbox-policy -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sdk-app -->
 <a id="deepseek-aidsh-sdk-app"></a>
@@ -4613,6 +4613,7 @@ export interface Config {
 | `@berry-ai/harness-attachment` | `AttachmentStore` | — | [`packages/attachment/attachment/src/index.ts`](../packages/attachment/attachment/src/index.ts) |
 | `@berry-ai/harness-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
 | `@berry-ai/harness-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
+| `@berry-ai/harness-sandbox` | `SandboxProvider` | — | [`packages/sandbox/sandbox/src/index.ts`](../packages/sandbox/sandbox/src/index.ts) |
 | `@berry-ai/harness-spill` | `SpillStore` | — | [`packages/spill/spill/src/index.ts`](../packages/spill/spill/src/index.ts) |
 | `@berry-ai/harness-subprocess` | `SubprocessRuntime` | — | [`packages/subprocess/subprocess/src/index.ts`](../packages/subprocess/subprocess/src/index.ts) |
 | `@berry-ai/harness-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
@@ -4622,7 +4623,6 @@ export interface Config {
 | `@deepseek-ai/dsh-file-reference` | `FileReferenceService` | — | [`packages/context/file-reference/src/index.ts`](../packages/context/file-reference/src/index.ts) |
 | `@deepseek-ai/dsh-fs` | `FileSystem` | — | [`packages/fs/fs/src/index.ts`](../packages/fs/fs/src/index.ts) |
 | `@deepseek-ai/dsh-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
-| `@deepseek-ai/dsh-sandbox` | `SandboxProvider` | — | [`packages/sandbox/sandbox/src/index.ts`](../packages/sandbox/sandbox/src/index.ts) |
 | `@deepseek-ai/dsh-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |
 | `@deepseek-ai/dsh-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |
 | `@deepseek-ai/dsh-shell` | `ShellExecutor` | — | [`packages/shell/shell/src/index.ts`](../packages/shell/shell/src/index.ts) |
@@ -4649,6 +4649,7 @@ export interface Config {
 | `@berry-ai/harness-native-command` | — | [`packages/util/native-command/src/index.ts`](../packages/util/native-command/src/index.ts) |
 | `@berry-ai/harness-output-retention` | — | [`packages/util/output-retention/src/index.ts`](../packages/util/output-retention/src/index.ts) |
 | `@berry-ai/harness-package-manifest` | — | [`packages/util/package-manifest/src/index.ts`](../packages/util/package-manifest/src/index.ts) |
+| `@berry-ai/harness-sandbox-windows-acl` | — | [`packages/sandbox/sandbox-windows-acl/src/index.ts`](../packages/sandbox/sandbox-windows-acl/src/index.ts) |
 | `@berry-ai/harness-ssh-helper-runtime` | — | [`packages/ssh/ssh-helper-runtime/src/index.ts`](../packages/ssh/ssh-helper-runtime/src/index.ts) |
 | `@berry-ai/harness-timeout` | — | [`packages/util/timeout/src/index.ts`](../packages/util/timeout/src/index.ts) |
 | `@berry-ai/harness-util-code-language` | — | [`packages/util/code-language/src/index.ts`](../packages/util/code-language/src/index.ts) |
@@ -4682,7 +4683,6 @@ export interface Config {
 | `@deepseek-ai/dsh-llm-mock-server` | — | [`packages/test-support/llm-mock-server/src/index.ts`](../packages/test-support/llm-mock-server/src/index.ts) |
 | `@deepseek-ai/dsh-loader-smoke` | — | [`packages/test-support/loader-smoke/src/index.ts`](../packages/test-support/loader-smoke/src/index.ts) |
 | `@deepseek-ai/dsh-remote-mock` | — | [`packages/test-support/remote-mock/src/index.ts`](../packages/test-support/remote-mock/src/index.ts) |
-| `@deepseek-ai/dsh-sandbox-windows-acl` | — | [`packages/sandbox/sandbox-windows-acl/src/index.ts`](../packages/sandbox/sandbox-windows-acl/src/index.ts) |
 | `@deepseek-ai/dsh-scope` | — | [`packages/core/scope/src/index.ts`](../packages/core/scope/src/index.ts) |
 | `@deepseek-ai/dsh-sdk-client` | — | [`packages/sdk/client/src/index.ts`](../packages/sdk/client/src/index.ts) |
 | `@deepseek-ai/dsh-sdk-minimal` | — | [`packages/bundle/sdk-minimal/src/index.ts`](../packages/bundle/sdk-minimal/src/index.ts) |

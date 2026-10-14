@@ -104,8 +104,8 @@ teardown 独立报告顶层进程退出与存活进程清理。PTY 会话不会�
 
 ```yaml
 plugins:
-  '@deepseek-ai/dsh-sandbox-local':
-  '@deepseek-ai/dsh-sandbox-policy':
+  '@berry-ai/harness-sandbox-local':
+  '@berry-ai/harness-sandbox-policy':
     config:
       mode: workspace-write
       workspaceRoot: .

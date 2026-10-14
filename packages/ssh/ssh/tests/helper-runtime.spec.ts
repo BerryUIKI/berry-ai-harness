@@ -1,7 +1,7 @@
 /** Real helper dispatch over private in-memory transport, without changing the Harness process cwd. */
 import { symlink, writeFile } from 'node:fs/promises'
 import { describe, expect, it, vi } from 'vitest'
-import { LocalSandboxProvider } from '@deepseek-ai/dsh-sandbox-local'
+import { LocalSandboxProvider } from '@berry-ai/harness-sandbox-local'
 import { SubprocessExecutableNotFoundError } from '@berry-ai/harness-subprocess'
 import { LocalSubprocessRuntime } from '@berry-ai/harness-subprocess-local'
 import { z } from 'zod'

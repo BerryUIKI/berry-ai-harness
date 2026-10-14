@@ -6,7 +6,7 @@
  * @module @berry-ai/harness-ptc-runtime/src/types
  */
 
-import type { SandboxEnforcement, SandboxExecutionPolicy, SandboxMode } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxEnforcement, SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 
 /**
  * One host-side function exposed to the program as an async callable. The

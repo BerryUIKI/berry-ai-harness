@@ -3,7 +3,7 @@ description: "The process-sandbox service contract for users and maintainers com
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-sandbox
+# @berry-ai/harness-sandbox
 
 English | [中文](README.zh.md)
 
@@ -37,9 +37,9 @@ Mount the service with a backend and a confined executor; the [base bundle](../.
 
 ```yaml
 - id: sandbox
-  name: '@deepseek-ai/dsh-sandbox-local'     # the per-platform backend provider (ctx.sandbox)
+  name: '@berry-ai/harness-sandbox-local'     # the per-platform backend provider (ctx.sandbox)
 - id: sandbox-policy
-  name: '@deepseek-ai/dsh-sandbox-policy'    # the deployment default mode and workspace-write root
+  name: '@berry-ai/harness-sandbox-policy'    # the deployment default mode and workspace-write root
   config:
     mode: workspace-write                    # the deployment default every session starts from
     workspaceRoot: !!js process.cwd()        # the boundary workspace-write may write under

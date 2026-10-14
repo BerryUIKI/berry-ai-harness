@@ -5,7 +5,7 @@
   disabled: true
 
 - id: sandbox
-  name: '@deepseek-ai/dsh-sandbox-local'
+  name: '@berry-ai/harness-sandbox-local'
   disabled: true
 
 - id: agent-default-model

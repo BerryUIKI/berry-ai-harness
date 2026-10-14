@@ -6,7 +6,7 @@
       - id: deepseek-v4-pro
 
 - id: sandbox-policy
-  name: '@deepseek-ai/dsh-sandbox-policy'
+  name: '@berry-ai/harness-sandbox-policy'
   config:
     mode: danger-full-access
     workspaceRoot: !!js process.cwd()

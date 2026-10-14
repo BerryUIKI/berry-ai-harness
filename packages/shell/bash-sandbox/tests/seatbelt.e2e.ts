@@ -5,10 +5,10 @@ import { homedir } from 'node:os'
 import { join } from 'node:path'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { LocalSandboxProvider } from '@deepseek-ai/dsh-sandbox-local'
-import { SandboxPolicyService } from '@deepseek-ai/dsh-sandbox-policy'
+import { LocalSandboxProvider } from '@berry-ai/harness-sandbox-local'
+import { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import { seatbeltProfileArgs } from '@deepseek-ai/dsh-sandbox-local/src/profiles.ts'
+import { seatbeltProfileArgs } from '@berry-ai/harness-sandbox-local/src/profiles.ts'
 import { SandboxBashExecutor } from '@deepseek-ai/dsh-bash-sandbox'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import type { ShellExecSpec, ShellExecution, ShellRunResult } from '@deepseek-ai/dsh-shell'
@@ -28,7 +28,7 @@ function start(x: { execute(spec: ShellExecSpec): Promise<ShellExecution> }, spe
  * Keyless macOS integration of the real provider and executor through public run/start paths.
  * Linux rungs are forced off so Seatbelt is selected. The tests check world effects and stamped
  * facts, including EPERM classification through the wrap-carried dialect; backend-only
- * confinement is covered by `@deepseek-ai/dsh-sandbox-local`. Skips off macOS or when
+ * confinement is covered by `@berry-ai/harness-sandbox-local`. Skips off macOS or when
  * `sandbox-exec` rejects the profile.
  */
 

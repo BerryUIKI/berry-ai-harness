@@ -32,7 +32,7 @@ Mount this backend instead of `fs-local` when the model's file writes and edits 
 Load the shared policy service, then this backend, then the tools; the read-before-edit policy plugin stays optional.
 
 ```yaml
-- name: '@deepseek-ai/dsh-sandbox-policy'
+- name: '@berry-ai/harness-sandbox-policy'
 - name: '@deepseek-ai/dsh-fs-sandbox'
   config:
     cwd: /absolute/path/to/workspace

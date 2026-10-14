@@ -1,8 +1,8 @@
 /** One foreground deadline covers sandbox preparation and native execution. */
 import { Context } from '@deepseek-ai/cordis'
-import { SandboxProvider } from '@deepseek-ai/dsh-sandbox'
-import type { ConfinedArgv, SandboxPolicy } from '@deepseek-ai/dsh-sandbox'
-import { SandboxPolicyService } from '@deepseek-ai/dsh-sandbox-policy'
+import { SandboxProvider } from '@berry-ai/harness-sandbox'
+import type { ConfinedArgv, SandboxPolicy } from '@berry-ai/harness-sandbox'
+import { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'
 import { SessionProjectionRegistry } from '@deepseek-ai/dsh-session-projection'
 import { LocalSubprocessRuntime } from '@berry-ai/harness-subprocess-local'
 import type { SubprocessHandle, SubprocessOutcome, SubprocessSpawnSpec } from '@berry-ai/harness-subprocess'

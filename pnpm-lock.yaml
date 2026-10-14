@@ -491,6 +491,12 @@ importers:
       '@berry-ai/harness-attachment-local':
         specifier: workspace:*
         version: link:../../packages/attachment/attachment-local
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../packages/sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../packages/sandbox/sandbox-policy
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../packages/settings/settings
@@ -572,12 +578,6 @@ importers:
       '@deepseek-ai/dsh-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../packages/llm/plugin-package-inventory-deepseek
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../packages/sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../packages/sandbox/sandbox-policy
       '@deepseek-ai/dsh-sdk-client':
         specifier: workspace:*
         version: link:../../packages/sdk/client
@@ -1601,6 +1601,12 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
@@ -1628,12 +1634,6 @@ importers:
       '@deepseek-ai/dsh-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -1708,6 +1708,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
@@ -1732,9 +1735,6 @@ importers:
       '@deepseek-ai/dsh-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -1962,6 +1962,12 @@ importers:
       '@berry-ai/harness-package-manifest':
         specifier: workspace:*
         version: link:../../util/package-manifest
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
@@ -1980,12 +1986,6 @@ importers:
       '@deepseek-ai/dsh-host-plugin-inventory':
         specifier: workspace:*
         version: link:../../host/plugin-inventory
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -2080,6 +2080,12 @@ importers:
       '@berry-ai/harness-repeat-tool-reminder':
         specifier: workspace:*
         version: link:../../guard/repeat-tool-reminder
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../settings/settings
@@ -2203,12 +2209,6 @@ importers:
       '@deepseek-ai/dsh-pwsh-sandbox':
         specifier: workspace:*
         version: link:../../shell/pwsh-sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -2410,6 +2410,12 @@ importers:
       '@berry-ai/harness-mcp-resources':
         specifier: workspace:*
         version: link:../../mcp/mcp-resources
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -2446,12 +2452,6 @@ importers:
       '@deepseek-ai/dsh-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../llm/plugin-package-inventory-deepseek
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-sdk-app':
         specifier: workspace:*
         version: link:../sdk-app
@@ -2892,6 +2892,9 @@ importers:
       '@berry-ai/harness-otel':
         specifier: workspace:*
         version: link:../../telemetry/otel
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -2907,9 +2910,6 @@ importers:
       '@deepseek-ai/dsh-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -3726,6 +3726,9 @@ importers:
         specifier: workspace:*
         version: link:../../typert/protocol
     devDependencies:
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-tool-present':
         specifier: workspace:*
         version: link:../../deliverables/tool-present
@@ -3801,9 +3804,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -7128,6 +7128,12 @@ importers:
       '@berry-ai/harness-ptc-runtime':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7140,12 +7146,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../scope
@@ -7498,6 +7498,12 @@ importers:
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -7543,12 +7549,6 @@ importers:
       '@deepseek-ai/dsh-permission-presets':
         specifier: workspace:*
         version: link:../../interaction/permission-presets
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -8542,6 +8542,15 @@ importers:
       '@berry-ai/harness-ptc-runtime':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -8551,15 +8560,6 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -8961,6 +8961,12 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -8991,12 +8997,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -9019,6 +9019,15 @@ importers:
         specifier: workspace:*
         version: link:../worktree
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -9046,15 +9055,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -9301,6 +9301,12 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -9328,12 +9334,6 @@ importers:
       '@deepseek-ai/dsh-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -9368,6 +9368,15 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
@@ -9389,15 +9398,6 @@ importers:
       '@deepseek-ai/dsh-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -9644,15 +9644,15 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
 
   packages/fs/fs-local:
     dependencies:
@@ -9690,6 +9690,12 @@ importers:
 
   packages/fs/fs-sandbox:
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9699,12 +9705,6 @@ importers:
       '@deepseek-ai/dsh-fs-local':
         specifier: workspace:*
         version: link:../fs-local
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
@@ -9727,6 +9727,12 @@ importers:
       '@berry-ai/harness-ptc-runtime':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9757,12 +9763,6 @@ importers:
       '@deepseek-ai/dsh-llm-deepseek-api-key':
         specifier: workspace:*
         version: link:../../llm/llm-deepseek-api-key
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
@@ -9846,6 +9846,12 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9870,12 +9876,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -10360,6 +10360,12 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../settings/settings
@@ -10369,12 +10375,6 @@ importers:
       '@deepseek-ai/dsh-commands':
         specifier: workspace:*
         version: link:../commands
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -11249,6 +11249,12 @@ importers:
       '@berry-ai/harness-hmr':
         specifier: workspace:*
         version: link:../../boot/hmr
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../settings/settings
@@ -11273,12 +11279,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
@@ -11322,12 +11322,12 @@ importers:
 
   packages/ptc-runtime/ptc-runtime:
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
 
   packages/ptc-runtime/ptc-runtime-node:
     dependencies:
@@ -11341,6 +11341,15 @@ importers:
       '@berry-ai/harness-ptc-runtime':
         specifier: workspace:*
         version: link:../ptc-runtime
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
@@ -11359,15 +11368,6 @@ importers:
       '@deepseek-ai/dsh-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -11393,12 +11393,12 @@ importers:
 
   packages/sandbox/sandbox-local:
     dependencies:
+      '@berry-ai/harness-sandbox-windows-acl':
+        specifier: workspace:*
+        version: link:../sandbox-windows-acl
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
-      '@deepseek-ai/dsh-sandbox-windows-acl':
-        specifier: workspace:*
-        version: link:../sandbox-windows-acl
       '@deepseek-ai/node-addon-system':
         specifier: workspace:~
         version: link:../../../native/system/packages/entry
@@ -11406,15 +11406,15 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../sandbox
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../sandbox
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -11428,15 +11428,15 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../sandbox
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../sandbox
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -11462,6 +11462,9 @@ importers:
         specifier: ^2.4.2
         version: 2.9.0
     devDependencies:
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../sandbox-local
       '@berry-ai/harness-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
@@ -11480,9 +11483,6 @@ importers:
       '@deepseek-ai/dsh-pwsh-local':
         specifier: workspace:*
         version: link:../../shell/pwsh-local
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../sandbox-local
       '@deepseek-ai/dsh-skill':
         specifier: workspace:*
         version: link:../../skill/skill
@@ -12386,6 +12386,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12404,9 +12407,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -12493,6 +12493,15 @@ importers:
 
   packages/shell/bash-sandbox:
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -12502,15 +12511,6 @@ importers:
       '@deepseek-ai/dsh-bash-local':
         specifier: workspace:*
         version: link:../bash-local
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
@@ -12545,6 +12545,15 @@ importers:
 
   packages/shell/pwsh-sandbox:
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -12554,15 +12563,6 @@ importers:
       '@deepseek-ai/dsh-pwsh-local':
         specifier: workspace:*
         version: link:../pwsh-local
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
@@ -12572,15 +12572,15 @@ importers:
 
   packages/shell/shell:
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
       '@berry-ai/harness-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
 
   packages/shell/shell-env:
     dependencies:
@@ -12625,6 +12625,12 @@ importers:
       '@berry-ai/harness-ptc-runtime':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -12649,12 +12655,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -12692,6 +12692,12 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -12722,12 +12728,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -12759,6 +12759,12 @@ importers:
       '@berry-ai/harness-jobs-local':
         specifier: workspace:*
         version: link:../../jobs/jobs-local
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -12789,12 +12795,6 @@ importers:
       '@deepseek-ai/dsh-pwsh-local':
         specifier: workspace:*
         version: link:../pwsh-local
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
@@ -12826,6 +12826,12 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -12859,12 +12865,6 @@ importers:
       '@deepseek-ai/dsh-pwsh-local':
         specifier: workspace:*
         version: link:../pwsh-local
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -13082,6 +13082,12 @@ importers:
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-spill':
         specifier: workspace:*
         version: link:../spill
@@ -13112,12 +13118,6 @@ importers:
       '@deepseek-ai/dsh-llm-deepseek':
         specifier: workspace:*
         version: link:../../llm/llm-deepseek
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -13146,6 +13146,12 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-ssh':
         specifier: workspace:*
         version: link:../ssh
@@ -13155,12 +13161,6 @@ importers:
       '@deepseek-ai/dsh-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
 
   packages/ssh/sandbox-ssh:
     dependencies:
@@ -13171,15 +13171,15 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
       '@berry-ai/harness-ssh':
         specifier: workspace:*
         version: link:../ssh
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
 
   packages/ssh/ssh:
     dependencies:
@@ -13199,6 +13199,15 @@ importers:
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-sandbox-ssh':
         specifier: workspace:*
         version: link:../sandbox-ssh
@@ -13232,15 +13241,6 @@ importers:
       '@deepseek-ai/dsh-lsp-stdio':
         specifier: workspace:*
         version: link:../../lsp/lsp-stdio
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
@@ -13262,6 +13262,18 @@ importers:
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
+      '@berry-ai/harness-sandbox-windows-acl':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-windows-acl
       '@berry-ai/harness-ssh':
         specifier: workspace:*
         version: link:../ssh
@@ -13304,18 +13316,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
-      '@deepseek-ai/dsh-sandbox-windows-acl':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-windows-acl
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
@@ -13448,6 +13448,12 @@ importers:
       '@berry-ai/harness-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-util-time':
         specifier: workspace:*
         version: link:../../util/time
@@ -13481,12 +13487,6 @@ importers:
       '@deepseek-ai/dsh-permission-presets':
         specifier: workspace:*
         version: link:../../interaction/permission-presets
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
@@ -14111,6 +14111,12 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
     devDependencies:
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
@@ -14129,12 +14135,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -14398,6 +14398,12 @@ importers:
       '@berry-ai/harness-http-proxy':
         specifier: workspace:*
         version: link:../../util/http-proxy
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -14416,12 +14422,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -14920,6 +14920,15 @@ importers:
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../sandbox/sandbox-policy
       '@berry-ai/harness-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
@@ -14953,15 +14962,6 @@ importers:
       '@deepseek-ai/dsh-llm-deepseek-api-key':
         specifier: workspace:*
         version: link:../../llm/llm-deepseek-api-key
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../sandbox/sandbox-policy
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -15104,6 +15104,15 @@ importers:
       '@berry-ai/harness-repeat-tool-reminder':
         specifier: workspace:*
         version: link:../../packages/guard/repeat-tool-reminder
+      '@berry-ai/harness-sandbox':
+        specifier: workspace:*
+        version: link:../../packages/sandbox/sandbox
+      '@berry-ai/harness-sandbox-local':
+        specifier: workspace:*
+        version: link:../../packages/sandbox/sandbox-local
+      '@berry-ai/harness-sandbox-policy':
+        specifier: workspace:*
+        version: link:../../packages/sandbox/sandbox-policy
       '@berry-ai/harness-schedule':
         specifier: workspace:*
         version: link:../../packages/schedule/schedule
@@ -15308,15 +15317,6 @@ importers:
       '@deepseek-ai/dsh-pwsh-local':
         specifier: workspace:*
         version: link:../../packages/shell/pwsh-local
-      '@deepseek-ai/dsh-sandbox':
-        specifier: workspace:*
-        version: link:../../packages/sandbox/sandbox
-      '@deepseek-ai/dsh-sandbox-local':
-        specifier: workspace:*
-        version: link:../../packages/sandbox/sandbox-local
-      '@deepseek-ai/dsh-sandbox-policy':
-        specifier: workspace:*
-        version: link:../../packages/sandbox/sandbox-policy
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../packages/core/scope

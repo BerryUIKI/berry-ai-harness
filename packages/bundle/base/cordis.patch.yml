@@ -233,10 +233,10 @@
     # The environment remains an explicit deployment override; otherwise fresh
     # sessions pin workspace-write + ask through the permission service below.
     - id: sandbox
-      name: '@deepseek-ai/dsh-sandbox-local'
+      name: '@berry-ai/harness-sandbox-local'
 
     - id: sandbox-policy
-      name: '@deepseek-ai/dsh-sandbox-policy'
+      name: '@berry-ai/harness-sandbox-policy'
       config:
         mode: !!js process.env.DSH_PERMISSION_MODE ?? 'workspace-write'
         workspaceRoot: !!js process.cwd()

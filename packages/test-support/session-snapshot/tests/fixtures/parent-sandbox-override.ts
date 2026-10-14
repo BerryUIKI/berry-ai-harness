@@ -1,5 +1,5 @@
 import type { Context } from '@deepseek-ai/cordis'
-import { setSandboxMode } from '@deepseek-ai/dsh-sandbox-policy'
+import { setSandboxMode } from '@berry-ai/harness-sandbox-policy'
 import type {} from '@deepseek-ai/dsh-agent'
 
 export const name = 'parent-sandbox-override'

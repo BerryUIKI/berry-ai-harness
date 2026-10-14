@@ -9,7 +9,7 @@
 /* jscpd:ignore-start */
 import { accessSync, constants, statSync } from 'node:fs'
 import type { ShellRunResult } from '@deepseek-ai/dsh-shell'
-import type { RunnerFailureRule } from '@deepseek-ai/dsh-sandbox'
+import type { RunnerFailureRule } from '@berry-ai/harness-sandbox'
 
 /** Node-local spawn codes proven to identify executable resolution or permission failure. */
 const EXECUTABLE_SPAWN_CODES = new Set(['EACCES', 'ENOENT'])

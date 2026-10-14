@@ -1,7 +1,7 @@
 import { Context, Service } from '@deepseek-ai/cordis'
 import { fileURLToPath } from 'node:url'
 import { FsError, FsTargetKey, FsVersion, type FsTarget } from '@deepseek-ai/dsh-fs'
-import type { SandboxExecutionPolicy } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxExecutionPolicy } from '@berry-ai/harness-sandbox'
 import { RemoteOperationError } from '@berry-ai/harness-ssh/protocol'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { z } from 'zod'

@@ -5,7 +5,7 @@
  * PowerShell can execute them even when the package lives inside ASAR or SEA.
  * Disposing the registration removes both the provider and its resource copy.
  *
- * @module @deepseek-ai/dsh-sandbox-windows-acl
+ * @module @berry-ai/harness-sandbox-windows-acl
  */
 
 import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs'

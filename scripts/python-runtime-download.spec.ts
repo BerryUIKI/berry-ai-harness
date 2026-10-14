@@ -20,8 +20,8 @@ async function fixture() {
   await copyFile(new URL('../python/sdk-runtime/runtime-bootstrap.mjs', import.meta.url), bootstrap)
   await file(join(root, 'node/node_modules/@berry-ai/harness-http-proxy/package.json'), '{"type":"module","exports":"./index.mjs"}')
   await file(join(root, 'node/node_modules/@berry-ai/harness-http-proxy/index.mjs'), 'export async function installProxyFromEnvironment(env) { if (typeof env.get !== "function") throw new Error("missing environment lookup"); return async () => {} }')
-  await file(join(root, 'node/node_modules/@deepseek-ai/dsh-sandbox-windows-acl/package.json'), '{"type":"module","exports":{"./runner":"./runner.mjs"}}')
-  await file(join(root, 'node/node_modules/@deepseek-ai/dsh-sandbox-windows-acl/runner.mjs'), '')
+  await file(join(root, 'node/node_modules/@berry-ai/harness-sandbox-windows-acl/package.json'), '{"type":"module","exports":{"./runner":"./runner.mjs"}}')
+  await file(join(root, 'node/node_modules/@berry-ai/harness-sandbox-windows-acl/runner.mjs'), '')
   await file(join(root, 'node/node_modules/@deepseek-ai/dsh/package.json'), '{"type":"module"}')
   await file(join(root, 'node/node_modules/@deepseek-ai/dsh/lib/bin.js'), 'export async function runCli() { if (process.argv[2]) { console.log(JSON.stringify({ argv: process.argv.slice(2) })); return } console.log(JSON.stringify({ primary: process.env.DSH_BUNDLED_PRIMARY_RUNTIME, office: process.env.DSH_BUNDLED_OFFICE_CLI })) }')
   await file(join(root, 'node/primary-runtime.mjs'), `

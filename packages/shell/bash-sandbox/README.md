@@ -45,9 +45,9 @@ The executor takes no sandbox configuration of its own: the default mode and wor
 
 ```yaml
 - id: sandbox
-  name: '@deepseek-ai/dsh-sandbox-local'
+  name: '@berry-ai/harness-sandbox-local'
 - id: sandbox-policy
-  name: '@deepseek-ai/dsh-sandbox-policy'
+  name: '@berry-ai/harness-sandbox-policy'
   config:
     mode: read-only
     workspaceRoot: !!js process.cwd() # fallback for calls without a session cwd

@@ -73,8 +73,8 @@
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@berry-ai/harness-hmr": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-sandbox": "workspace:*",
     "@deepseek-ai/dsh-user-approval": "workspace:*"
   },
   "peerDependenciesMeta": {
@@ -98,11 +98,11 @@
     "@berry-ai/harness-hmr": "workspace:*",
     "@deepseek-ai/cordis-plugin-timer": "workspace:~",
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
+    "@berry-ai/harness-sandbox": "workspace:*",
     "@deepseek-ai/dsh-user-approval": "workspace:*"
   }
 }
