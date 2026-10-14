@@ -2,8 +2,8 @@
 
 import { SessionLogOffset } from '@deepseek-ai/dsh-session'
 import type { SessionEvent, SessionHeader, SessionId } from '@deepseek-ai/dsh-session'
-import SessionQueryEngine from '@deepseek-ai/dsh-session-query'
-import type { SessionObservation, SessionObservationOptions } from '@deepseek-ai/dsh-session-query'
+import SessionQueryEngine from '@berry-ai/harness-session-query'
+import type { SessionObservation, SessionObservationOptions } from '@berry-ai/harness-session-query'
 
 /** Undisposable immutable cut over one session's header and events. */
 function cut(

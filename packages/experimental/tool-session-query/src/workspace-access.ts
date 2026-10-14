@@ -15,7 +15,7 @@ import type { TurnBoundaryProjection } from '@deepseek-ai/dsh-agent'
 import type {
   SessionLineageNode,
   SessionRecord,
-} from '@deepseek-ai/dsh-session-query'
+} from '@berry-ai/harness-session-query'
 import type { ToolRunContext } from '@deepseek-ai/dsh-tools'
 import type {} from '@deepseek-ai/dsh-session-projection'
 import { serviceBoundary } from './service-boundary.ts'

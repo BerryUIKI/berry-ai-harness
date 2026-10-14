@@ -6,7 +6,7 @@
         sessionQuery: true
       config:
         - id: optional-session-query-sqlite
-          name: '@deepseek-ai/dsh-session-query-sqlite'
+          name: '@berry-ai/harness-session-query-sqlite'
           config:
             path: ':memory:'
             openAt: first-search

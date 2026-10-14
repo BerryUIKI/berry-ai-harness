@@ -9,7 +9,7 @@ import Include from '@deepseek-ai/cordis-plugin-include'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import CommandRuntime from '@berry-ai/harness-commands'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import * as SessionLogDownload from '@deepseek-ai/dsh-session-log-export'
+import * as SessionLogDownload from '@berry-ai/harness-session-log-export'
 
 let root: string | undefined
 let context: Context | undefined
@@ -28,7 +28,7 @@ describe('session-log-download real Loader composition', () => {
     await writeFile(configPath, [
       "- name: '@deepseek-ai/dsh-session'",
       "- name: '@berry-ai/harness-commands'",
-      "- name: '@deepseek-ai/dsh-session-log-export'",
+      "- name: '@berry-ai/harness-session-log-export'",
       '',
     ].join('\n'))
 
@@ -42,7 +42,7 @@ describe('session-log-download real Loader composition', () => {
     const modules = new Map<string, unknown>([
       ['@deepseek-ai/dsh-session', SessionStore],
       ['@berry-ai/harness-commands', CommandRuntime],
-      ['@deepseek-ai/dsh-session-log-export', SessionLogDownload],
+      ['@berry-ai/harness-session-log-export', SessionLogDownload],
     ])
     context.loader.internal = {
       version: 'v2',
@@ -61,7 +61,7 @@ describe('session-log-download real Loader composition', () => {
       .create(SessionId('loader-session-export'), { meta: { createdAt: 1 } })
     const agent = { session, status: 'idle', options: {} } as unknown as Agent
     expect(context.commands.list(agent)).toContainEqual({
-      definitionId: '@deepseek-ai/dsh-session-log-export',
+      definitionId: '@berry-ai/harness-session-log-export',
       name: 'export', description: 'Download this Session log as a ZIP archive',
     })
     const execution = await context.commands.execute(agent, '/export', [], new AbortController().signal)

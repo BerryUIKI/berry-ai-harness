@@ -3,7 +3,7 @@ description: "The SQLite FTS5 full-text search backend for session history, for 
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-query-sqlite
+# @berry-ai/harness-session-query-sqlite
 
 English | [中文](README.zh.md)
 
@@ -35,7 +35,7 @@ Choose it when you want full-text recall over prior sessions with ranking and pa
 
 ```yaml
 - name: '@deepseek-ai/dsh-session'
-- name: '@deepseek-ai/dsh-session-query-sqlite'
+- name: '@berry-ai/harness-session-query-sqlite'
   config:
     path: /absolute/path/to/session-search.db
 ```

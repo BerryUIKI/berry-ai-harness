@@ -15,7 +15,7 @@ import type { SessionId } from '@deepseek-ai/dsh-session'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import SessionProjectionCache, { checkpointRecord, projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
 import type { CheckpointRecord } from '@deepseek-ai/dsh-session-projection-cache'
-import SqliteSessionQueryEngine from '@deepseek-ai/dsh-session-query-sqlite'
+import SqliteSessionQueryEngine from '@berry-ai/harness-session-query-sqlite'
 import * as SessionStatsPlugin from '@deepseek-ai/dsh-session-stats'
 import SessionTitleService from '@deepseek-ai/dsh-session-title'
 import * as SessionTurnOutlinePlugin from '@deepseek-ai/dsh-session-turn-outline'
@@ -355,7 +355,7 @@ async function measureFork(root: string, ranks: readonly number[]): Promise<Fork
 assertBuiltBenchmarkRuntime(import.meta.url, Object.fromEntries([
   '@deepseek-ai/dsh-api-session-controller',
   '@deepseek-ai/dsh-session-persistence-jsonl',
-  '@deepseek-ai/dsh-session-query-sqlite',
+  '@berry-ai/harness-session-query-sqlite',
   '@deepseek-ai/dsh-session-projection-cache',
 ].map(name => [name, import.meta.resolve(name)])))
 

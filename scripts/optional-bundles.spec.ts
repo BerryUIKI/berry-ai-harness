@@ -176,7 +176,7 @@ describe('optional bundles', () => {
     const search = composed.find(row => row.id === 'optional-session-search')
     expect(search?.isolate).toEqual({ sessionQuery: true })
     expect(search?.config).toEqual([
-      { id: 'optional-session-query-sqlite', name: '@deepseek-ai/dsh-session-query-sqlite', config: { path: ':memory:', openAt: 'first-search' } },
+      { id: 'optional-session-query-sqlite', name: '@berry-ai/harness-session-query-sqlite', config: { path: ':memory:', openAt: 'first-search' } },
       { id: 'optional-tool-session-query', name: '@deepseek-ai/dsh-tool-session-query' },
     ])
     expect(composed.find(row => row.id === 'session-query-sqlite')?.config).toEqual({ path: ':memory:', openAt: 'never' })

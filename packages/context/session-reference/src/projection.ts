@@ -1,7 +1,7 @@
 /** Current-surface projection and byte-bounded rendering. */
 
 import { isCompactCheckpointSource } from '@berry-ai/harness-compaction'
-import type { SessionSurfaceSnapshot } from '@deepseek-ai/dsh-session-query'
+import type { SessionSurfaceSnapshot } from '@berry-ai/harness-session-query'
 import { TextRetainer } from '@berry-ai/harness-output-retention'
 import { assertNever } from '@berry-ai/harness-util-values'
 import { SessionSeq } from '@deepseek-ai/dsh-session'

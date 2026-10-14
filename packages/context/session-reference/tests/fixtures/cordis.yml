@@ -5,7 +5,7 @@
 - name: '@deepseek-ai/dsh-session-projection'
 - name: '@deepseek-ai/dsh-working-directory'
 - name: '@berry-ai/harness-tool-fs'
-- name: '@deepseek-ai/dsh-session-query-sqlite'
+- name: '@berry-ai/harness-session-query-sqlite'
   config:
     path: ':memory:'
     openAt: never

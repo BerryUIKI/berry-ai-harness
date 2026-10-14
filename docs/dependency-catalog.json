@@ -2749,11 +2749,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-log-export",
+      "name": "@berry-ai/harness-session-log-export",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-log-export",
+          "location": "node_modules/@berry-ai/harness-session-log-export",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2809,11 +2809,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-query",
+      "name": "@berry-ai/harness-session-query",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-query",
+          "location": "node_modules/@berry-ai/harness-session-query",
           "direct": false,
           "optional": false,
           "peer": true
@@ -2821,11 +2821,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-query-sqlite",
+      "name": "@berry-ai/harness-session-query-sqlite",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-query-sqlite",
+          "location": "node_modules/@berry-ai/harness-session-query-sqlite",
           "direct": false,
           "optional": false,
           "peer": false

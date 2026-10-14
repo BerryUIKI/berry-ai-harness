@@ -9,7 +9,7 @@ const BUILTINS = {
   feedback: '@berry-ai/harness-command-feedback',
   compact: '@berry-ai/harness-command-compact',
   permission: '@berry-ai/harness-permission-presets',
-  export: '@deepseek-ai/dsh-session-log-export',
+  export: '@berry-ai/harness-session-log-export',
 } as const
 
 /** Names whose first-party definitions have localized client presentation. */

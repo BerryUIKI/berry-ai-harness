@@ -140,7 +140,7 @@
     "@berry-ai/harness-plan-mode": "workspace:*",
     "@berry-ai/harness-plugin-manager": "workspace:*",
     "@berry-ai/harness-schedule": "workspace:*",
-    "@deepseek-ai/dsh-session-log-export": "workspace:*",
+    "@berry-ai/harness-session-log-export": "workspace:*",
     "@berry-ai/harness-session-reference": "workspace:*",
     "@deepseek-ai/dsh-session-stats": "workspace:*",
     "@deepseek-ai/dsh-session-turn-outline": "workspace:*",
