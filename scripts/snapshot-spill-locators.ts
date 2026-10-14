@@ -1,7 +1,7 @@
 /** Fixture-only logical locators for filesystem and subprocess reads of real spill files; preview budgets retain recorded path lengths. */
 import type { Context } from '@deepseek-ai/cordis'
 import { join, relative, resolve, sep } from 'node:path'
-import type { SpillLocator } from '@deepseek-ai/dsh-spill'
+import type { SpillLocator } from '@berry-ai/harness-spill'
 import type {} from '@deepseek-ai/dsh-fs'
 
 export const name = 'snapshot-spill-locators'

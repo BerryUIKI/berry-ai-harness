@@ -172,15 +172,15 @@
     # projection cache below; workspace in web layers)
     # routes through this stack, so it belongs to the shared base.
     - id: storage
-      name: '@deepseek-ai/dsh-storage'
+      name: '@berry-ai/harness-storage'
 
     - id: storage-json
-      name: '@deepseek-ai/dsh-storage-json'
+      name: '@berry-ai/harness-storage-json'
       config:
         root: !!js dshHomePath('storages')
 
     - id: storage-domain
-      name: '@deepseek-ai/dsh-storage-domain'
+      name: '@berry-ai/harness-storage-domain'
       config:
         backend: json
 
@@ -404,10 +404,10 @@
       name: '@berry-ai/harness-tool-call-timeout-policy'
 
     - id: spill-local
-      name: '@deepseek-ai/dsh-spill-local'
+      name: '@berry-ai/harness-spill-local'
 
     - id: spill-policy
-      name: '@deepseek-ai/dsh-spill-policy'
+      name: '@berry-ai/harness-spill-policy'
       config:
         maxInlineTokens: 12500
 

@@ -68,7 +68,7 @@
     globMaxResults: 4
 
 - id: spill-local
-  name: '@deepseek-ai/dsh-spill-local'
+  name: '@berry-ai/harness-spill-local'
   config:
     root: !!js process.env.DSH_SNAPSHOT_SPILL_ROOT ?? './.spill'
 

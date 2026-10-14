@@ -41,12 +41,12 @@
               - id: deepseek-v4-pro
 
 - id: spill-local
-  name: '@deepseek-ai/dsh-spill-local'
+  name: '@berry-ai/harness-spill-local'
   config:
     root: !!js process.env.DSH_SNAPSHOT_SPILL_ROOT ?? './.spill'
 
 - id: spill-policy
-  name: '@deepseek-ai/dsh-spill-policy'
+  name: '@berry-ai/harness-spill-policy'
   config:
     maxInlineTokens: 200
 

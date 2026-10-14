@@ -23,8 +23,8 @@ import { SubprocessRuntime } from '@deepseek-ai/dsh-subprocess'
 import type { SubprocessCollectedOutputs, SubprocessHandle, SubprocessOutcome, SubprocessOutputRead, SubprocessOutputReader, SubprocessSpawnSpec } from '@deepseek-ai/dsh-subprocess'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import { rgPath } from '@vscode/ripgrep'
-import { SpillLocator, SpillStore } from '@deepseek-ai/dsh-spill'
-import type { SaveTextSpill, SpillRef } from '@deepseek-ai/dsh-spill'
+import { SpillLocator, SpillStore } from '@berry-ai/harness-spill'
+import type { SaveTextSpill, SpillRef } from '@berry-ai/harness-spill'
 import * as ToolFsSearch from '@deepseek-ai/dsh-tool-fs-search'
 import {
   buildGlobCommand,

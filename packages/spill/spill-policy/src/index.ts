@@ -3,14 +3,14 @@
  * Post-execute policies settle before retention; canonical program values
  * remain intact. Missing recovery storage or image pricing keeps the original
  * content and reports the reason through the logger.
- * @module @deepseek-ai/dsh-spill-policy
+ * @module @berry-ai/harness-spill-policy
  */
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { createUserMessage, resolveImageAttachmentAccess } from '@deepseek-ai/dsh-llm'
 import type { ContentBlock, ImageBlock, LlmImageRequestPrice, ToolCallId } from '@deepseek-ai/dsh-llm'
 import { estimateContent } from '@deepseek-ai/dsh-token-meter/estimate'
-import type { SpillRef } from '@deepseek-ai/dsh-spill'
+import type { SpillRef } from '@berry-ai/harness-spill'
 import type { PostToolDecision, ToolExecution } from '@deepseek-ai/dsh-tools'
 import type {} from '@berry-ai/harness-attachment'
 import type {} from '@deepseek-ai/dsh-fs'

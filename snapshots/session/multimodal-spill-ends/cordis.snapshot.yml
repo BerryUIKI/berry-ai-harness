@@ -51,7 +51,7 @@
   name: '@berry-ai/harness-attachment-local'
 
 - id: spill-policy
-  name: '@deepseek-ai/dsh-spill-policy'
+  name: '@berry-ai/harness-spill-policy'
   config:
     maxInlineTokens: 1000
 
@@ -59,7 +59,7 @@
     - name: './fixture.mjs'
 
 - id: spill-local
-  name: '@deepseek-ai/dsh-spill-local'
+  name: '@berry-ai/harness-spill-local'
   config:
     root: !!js process.env.DSH_SNAPSHOT_SPILL_ROOT ?? './.spill'
 

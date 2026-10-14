@@ -1,9 +1,9 @@
 /**
  * Vocabulary for the spill storage Service Definition. Types only — the abstract service
  * lives in `./index.ts`, implementations in sibling packages
- * (`@deepseek-ai/dsh-spill-local` first).
+ * (`@berry-ai/harness-spill-local` first).
  *
- * @module @deepseek-ai/dsh-spill/types
+ * @module @berry-ai/harness-spill/types
  */
 
 import type { Branded } from '@berry-ai/harness-brand'

@@ -958,6 +958,15 @@ importers:
       '@berry-ai/harness-lazy-require':
         specifier: workspace:*
         version: link:../packages/util/lazy-require
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../packages/storage/storage
+      '@berry-ai/harness-storage-domain':
+        specifier: workspace:*
+        version: link:../packages/storage/storage-domain
+      '@berry-ai/harness-storage-json':
+        specifier: workspace:*
+        version: link:../packages/storage/storage-json
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../packages/terminal/terminal
@@ -1033,15 +1042,6 @@ importers:
       '@deepseek-ai/dsh-session-turn-outline':
         specifier: workspace:*
         version: link:../packages/session/session-turn-outline
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../packages/storage/storage
-      '@deepseek-ai/dsh-storage-domain':
-        specifier: workspace:*
-        version: link:../packages/storage/storage-domain
-      '@deepseek-ai/dsh-storage-json':
-        specifier: workspace:*
-        version: link:../packages/storage/storage-json
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../packages/subagent/subagent
@@ -1419,6 +1419,15 @@ importers:
       '@berry-ai/harness-native-command':
         specifier: workspace:*
         version: link:../../util/native-command
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../../storage/storage
+      '@berry-ai/harness-storage-domain':
+        specifier: workspace:*
+        version: link:../../storage/storage-domain
+      '@berry-ai/harness-storage-json':
+        specifier: workspace:*
+        version: link:../../storage/storage-json
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
@@ -1515,15 +1524,6 @@ importers:
       '@deepseek-ai/dsh-skill':
         specifier: workspace:*
         version: link:../../skill/skill
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../../storage/storage
-      '@deepseek-ai/dsh-storage-domain':
-        specifier: workspace:*
-        version: link:../../storage/storage-domain
-      '@deepseek-ai/dsh-storage-json':
-        specifier: workspace:*
-        version: link:../../storage/storage-json
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
@@ -1659,6 +1659,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-storage-domain':
+        specifier: workspace:*
+        version: link:../../storage/storage-domain
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1683,9 +1686,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-storage-domain':
-        specifier: workspace:*
-        version: link:../../storage/storage-domain
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
@@ -2068,6 +2068,21 @@ importers:
       '@berry-ai/harness-repeat-tool-reminder':
         specifier: workspace:*
         version: link:../../guard/repeat-tool-reminder
+      '@berry-ai/harness-spill-local':
+        specifier: workspace:*
+        version: link:../../spill/spill-local
+      '@berry-ai/harness-spill-policy':
+        specifier: workspace:*
+        version: link:../../spill/spill-policy
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../../storage/storage
+      '@berry-ai/harness-storage-domain':
+        specifier: workspace:*
+        version: link:../../storage/storage-domain
+      '@berry-ai/harness-storage-json':
+        specifier: workspace:*
+        version: link:../../storage/storage-json
       '@berry-ai/harness-tool-call-timeout-policy':
         specifier: workspace:*
         version: link:../../guard/timeout-policy
@@ -2218,21 +2233,6 @@ importers:
       '@deepseek-ai/dsh-skill-filesystem':
         specifier: workspace:*
         version: link:../../skill/skill-filesystem
-      '@deepseek-ai/dsh-spill-local':
-        specifier: workspace:*
-        version: link:../../spill/spill-local
-      '@deepseek-ai/dsh-spill-policy':
-        specifier: workspace:*
-        version: link:../../spill/spill-policy
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../../storage/storage
-      '@deepseek-ai/dsh-storage-domain':
-        specifier: workspace:*
-        version: link:../../storage/storage-domain
-      '@deepseek-ai/dsh-storage-json':
-        specifier: workspace:*
-        version: link:../../storage/storage-json
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
@@ -6034,6 +6034,12 @@ importers:
       '@berry-ai/harness-ptc-runtime':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime
+      '@berry-ai/harness-spill':
+        specifier: workspace:*
+        version: link:../../spill/spill
+      '@berry-ai/harness-spill-policy':
+        specifier: workspace:*
+        version: link:../../spill/spill-policy
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -6085,12 +6091,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-spill':
-        specifier: workspace:*
-        version: link:../../spill/spill
-      '@deepseek-ai/dsh-spill-policy':
-        specifier: workspace:*
-        version: link:../../spill/spill-policy
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -6775,6 +6775,12 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-spill':
+        specifier: workspace:*
+        version: link:../../spill/spill
+      '@berry-ai/harness-spill-local':
+        specifier: workspace:*
+        version: link:../../spill/spill-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6814,12 +6820,6 @@ importers:
       '@deepseek-ai/dsh-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
-      '@deepseek-ai/dsh-spill':
-        specifier: workspace:*
-        version: link:../../spill/spill
-      '@deepseek-ai/dsh-spill-local':
-        specifier: workspace:*
-        version: link:../../spill/spill-local
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
@@ -7846,6 +7846,15 @@ importers:
       '@berry-ai/harness-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../../storage/storage
+      '@berry-ai/harness-storage-domain':
+        specifier: workspace:*
+        version: link:../../storage/storage-domain
+      '@berry-ai/harness-storage-json':
+        specifier: workspace:*
+        version: link:../../storage/storage-json
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7888,15 +7897,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../../storage/storage
-      '@deepseek-ai/dsh-storage-domain':
-        specifier: workspace:*
-        version: link:../../storage/storage-domain
-      '@deepseek-ai/dsh-storage-json':
-        specifier: workspace:*
-        version: link:../../storage/storage-json
       '@deepseek-ai/dsh-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
@@ -9797,6 +9797,9 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-spill':
+        specifier: workspace:*
+        version: link:../../spill/spill
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -9818,9 +9821,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-spill':
-        specifier: workspace:*
-        version: link:../../spill/spill
       '@deepseek-ai/dsh-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
@@ -11502,6 +11502,15 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../../storage/storage
+      '@berry-ai/harness-storage-domain':
+        specifier: workspace:*
+        version: link:../../storage/storage-domain
+      '@berry-ai/harness-storage-json':
+        specifier: workspace:*
+        version: link:../../storage/storage-json
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11535,15 +11544,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../../storage/storage
-      '@deepseek-ai/dsh-storage-domain':
-        specifier: workspace:*
-        version: link:../../storage/storage-domain
-      '@deepseek-ai/dsh-storage-json':
-        specifier: workspace:*
-        version: link:../../storage/storage-json
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
@@ -12094,6 +12094,15 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../../storage/storage
+      '@berry-ai/harness-storage-domain':
+        specifier: workspace:*
+        version: link:../../storage/storage-domain
+      '@berry-ai/harness-storage-json':
+        specifier: workspace:*
+        version: link:../../storage/storage-json
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12103,15 +12112,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../session-projection
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../../storage/storage
-      '@deepseek-ai/dsh-storage-domain':
-        specifier: workspace:*
-        version: link:../../storage/storage-domain
-      '@deepseek-ai/dsh-storage-json':
-        specifier: workspace:*
-        version: link:../../storage/storage-json
 
   packages/session/session-stats:
     dependencies:
@@ -13039,6 +13039,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-spill':
+        specifier: workspace:*
+        version: link:../spill
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13054,9 +13057,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-spill':
-        specifier: workspace:*
-        version: link:../spill
 
   packages/spill/spill-policy:
     dependencies:
@@ -13082,6 +13082,12 @@ importers:
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-spill':
+        specifier: workspace:*
+        version: link:../spill
+      '@berry-ai/harness-spill-local':
+        specifier: workspace:*
+        version: link:../spill-local
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13115,12 +13121,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-spill':
-        specifier: workspace:*
-        version: link:../spill
-      '@deepseek-ai/dsh-spill-local':
-        specifier: workspace:*
-        version: link:../spill-local
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
@@ -13391,12 +13391,12 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../storage
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../storage
 
   packages/storage/storage-json:
     dependencies:
@@ -13404,12 +13404,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../storage
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../storage
 
   packages/storage/storage-sqlite:
     dependencies:
@@ -13417,12 +13417,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../storage
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../storage
 
   packages/subagent/subagent:
     dependencies:
@@ -14676,6 +14676,12 @@ importers:
         specifier: ^7.2.4
         version: 7.2.4
     devDependencies:
+      '@berry-ai/harness-spill-local':
+        specifier: workspace:*
+        version: link:../../spill/spill-local
+      '@berry-ai/harness-spill-policy':
+        specifier: workspace:*
+        version: link:../../spill/spill-policy
       '@berry-ai/harness-tool-call-timeout-policy':
         specifier: workspace:*
         version: link:../../guard/timeout-policy
@@ -14694,12 +14700,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-spill-local':
-        specifier: workspace:*
-        version: link:../../spill/spill-local
-      '@deepseek-ai/dsh-spill-policy':
-        specifier: workspace:*
-        version: link:../../spill/spill-policy
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
@@ -14996,6 +14996,12 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../../storage/storage
+      '@berry-ai/harness-storage-domain':
+        specifier: workspace:*
+        version: link:../../storage/storage-domain
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -15005,12 +15011,6 @@ importers:
       '@deepseek-ai/dsh-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../../storage/storage
-      '@deepseek-ai/dsh-storage-domain':
-        specifier: workspace:*
-        version: link:../../storage/storage-domain
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
@@ -15092,6 +15092,15 @@ importers:
       '@berry-ai/harness-schedule':
         specifier: workspace:*
         version: link:../../packages/schedule/schedule
+      '@berry-ai/harness-spill':
+        specifier: workspace:*
+        version: link:../../packages/spill/spill
+      '@berry-ai/harness-storage':
+        specifier: workspace:*
+        version: link:../../packages/storage/storage
+      '@berry-ai/harness-storage-domain':
+        specifier: workspace:*
+        version: link:../../packages/storage/storage-domain
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../packages/terminal/terminal
@@ -15344,15 +15353,6 @@ importers:
       '@deepseek-ai/dsh-skill-office':
         specifier: workspace:*
         version: link:../../packages/skill/skill-office
-      '@deepseek-ai/dsh-spill':
-        specifier: workspace:*
-        version: link:../../packages/spill/spill
-      '@deepseek-ai/dsh-storage':
-        specifier: workspace:*
-        version: link:../../packages/storage/storage
-      '@deepseek-ai/dsh-storage-domain':
-        specifier: workspace:*
-        version: link:../../packages/storage/storage-domain
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../packages/subagent/subagent

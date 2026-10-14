@@ -38,7 +38,7 @@ A subprocess backend, then the tools; the spill backend is optional and makes ca
 - name: '@deepseek-ai/dsh-tool-fs-search'
   config:
     sampleOverCapGlobResults: false
-- name: '@deepseek-ai/dsh-spill-local'
+- name: '@berry-ai/harness-spill-local'
 ```
 
 `sampleOverCapGlobResults` is required and has no fallback: deployments choose the over-cap ordering contract explicitly. When formatted spill succeeds, both modes preserve the complete sorted list in the spill artifact.

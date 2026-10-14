@@ -2,7 +2,7 @@
 import type { TerminalBlockLabels, TerminalBlockProps } from '@deepseek-ai/dsh-client-ui-primitives'
 import type { TranslateNS } from '@deepseek-ai/dsh-client-ui-slots'
 import { isAbsoluteWorkspacePath, resolveWorkspacePath } from '@berry-ai/harness-util-workspace-path'
-import { hasSpillNotice } from '@deepseek-ai/dsh-spill-policy/notice'
+import { hasSpillNotice } from '@berry-ai/harness-spill-policy/notice'
 import type { ToolCallBlock } from './tool-call-model.ts'
 import { parsedToolCall, singleResultText } from './raw-tool-call.ts'
 import { recordedAbsolutePath } from './recorded-path.ts'

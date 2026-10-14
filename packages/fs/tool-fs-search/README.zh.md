@@ -38,7 +38,7 @@ kind: "package-reference"
 - name: '@deepseek-ai/dsh-tool-fs-search'
   config:
     sampleOverCapGlobResults: false
-- name: '@deepseek-ai/dsh-spill-local'
+- name: '@berry-ai/harness-spill-local'
 ```
 
 `sampleOverCapGlobResults` 是必填项且没有回退值：部署必须显式选择超过上限时的排序约定。格式化 spill 成功时，两种模式都会在 spill 产物中保留完整排序列表。

@@ -91,7 +91,7 @@ Expanded status dots and labels use static semantic colors. Receipt and job-outp
 
 Terminal prompt labels use recorded result `cwd`. Older successful root shell calls fall back to their original workspace and authored workdir; running calls show a directory only when their workdir is absolute. Terminal sends do not infer a process directory from the Session.
 
-The terminal model uses `hasSpillNotice` from the browser-safe `@deepseek-ai/dsh-spill-policy/notice` entry, not an independent UI pattern. The [spill-policy README](../../spill/spill-policy/README.md#shared-notice-ownership) owns notice formatting and recognition. This check conservatively selects generic output; matching text cannot authenticate its source, and replay leaves recorded result bytes untouched.
+The terminal model uses `hasSpillNotice` from the browser-safe `@berry-ai/harness-spill-policy/notice` entry, not an independent UI pattern. The [spill-policy README](../../spill/spill-policy/README.md#shared-notice-ownership) owns notice formatting and recognition. This check conservatively selects generic output; matching text cannot authenticate its source, and replay leaves recorded result bytes untouched.
 
 ### Declared optional capabilities
 

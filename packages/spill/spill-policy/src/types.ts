@@ -7,7 +7,7 @@
  * Only the session HEADER id is read — the same identity every other subsystem
  * keys off (see `dsh-tool-bash`'s owner derivation).
  *
- * @module @deepseek-ai/dsh-spill-policy/types
+ * @module @berry-ai/harness-spill-policy/types
  */
 
 import type { SessionId } from '@deepseek-ai/dsh-session'

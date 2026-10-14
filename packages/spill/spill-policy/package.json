@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-spill-policy",
+  "name": "@berry-ai/harness-spill-policy",
   "description": "Token-budgeted tool-result retention with recoverable text and image paths",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -35,7 +35,7 @@
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@berry-ai/harness-output-retention": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-spill": "workspace:*",
+    "@berry-ai/harness-spill": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-attachment": "workspace:*",
@@ -51,7 +51,7 @@
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@berry-ai/harness-output-retention": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-spill": "workspace:*",
+    "@berry-ai/harness-spill": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-fs-local": "workspace:*",
@@ -63,7 +63,7 @@
     "@deepseek-ai/dsh-fs": "workspace:*",
     "@deepseek-ai/dsh-token-meter": "workspace:*",
     "@berry-ai/harness-mcp-client": "workspace:*",
-    "@deepseek-ai/dsh-spill-local": "workspace:*",
+    "@berry-ai/harness-spill-local": "workspace:*",
     "@deepseek-ai/dsh-llm-deepseek": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-attachment-local": "workspace:*",
