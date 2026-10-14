@@ -28,12 +28,12 @@
   "license": "MIT",
   "peerDependencies": {
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

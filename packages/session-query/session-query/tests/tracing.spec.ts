@@ -1,5 +1,5 @@
-import { createUserMessage, createMessage } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, createMessage } from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import SessionStore, { SessionLogOffset, SessionSeq, SESSION_FORMAT_VERSION, SessionId } from '@deepseek-ai/dsh-session'
@@ -19,7 +19,7 @@ import type {
 import { type SessionQueryErrorCode } from '@berry-ai/harness-session-query'
 import { TestSessionQueryEngine } from './test-service.ts'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'test': { kind: 'test' } & ContextFormed
   }

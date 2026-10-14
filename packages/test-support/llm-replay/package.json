@@ -29,20 +29,20 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-compaction": "workspace:*",
-    "@deepseek-ai/dsh-deepseek-llm-api-extensions": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-deepseek-llm-api-extensions": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-deepseek-llm-api-extensions": {
+    "@berry-ai/harness-deepseek-llm-api-extensions": {
       "optional": true
     }
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-compaction": "workspace:*",
-    "@deepseek-ai/dsh-deepseek-llm-api-extensions": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-deepseek-llm-api-extensions": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*"
   },
   "dependencies": {

@@ -4,7 +4,7 @@
  */
 
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
+import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { Branded } from '@berry-ai/harness-brand'
 import type {} from '@deepseek-ai/dsh-session/types'
 // Type-only: the Workspace registry's archive-admission family map this plugin merges `schedule` into.

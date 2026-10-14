@@ -10,8 +10,8 @@ import {
   createAssistantMessage,
   createUserMessage,
   expandAssistantStream,
-} from '@deepseek-ai/dsh-llm'
-import type { AssistantStreamRecord } from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
+import type { AssistantStreamRecord } from '@berry-ai/harness-llm'
 import { SessionSeq } from '@deepseek-ai/dsh-session/types'
 import type { SessionEvent, SessionEventMap } from '@deepseek-ai/dsh-session/types'
 import type {

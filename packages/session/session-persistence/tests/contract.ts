@@ -14,7 +14,7 @@
 import { describe, expect, it } from 'vitest'
 import { SessionSeq, SESSION_FORMAT_VERSION, SessionId } from '@deepseek-ai/dsh-session'
 import type { SessionEvent, SessionHeader } from '@deepseek-ai/dsh-session'
-import { MessageId, freezeMessage } from '@deepseek-ai/dsh-llm'
+import { MessageId, freezeMessage } from '@berry-ai/harness-llm'
 import {
   SessionAlreadyExistsError,
   SessionAlreadyOwnedError,

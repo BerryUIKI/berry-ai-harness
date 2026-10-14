@@ -1,7 +1,7 @@
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
 import { describe, expect, it, onTestFinished } from 'vitest'
 import { Context, symbols, type EffectMeta, type Fiber } from '@deepseek-ai/cordis'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
+import LlmRuntime from '@berry-ai/harness-llm'
 import SessionStore, { SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
@@ -11,7 +11,7 @@ import type { Agent } from '@deepseek-ai/dsh-agent'
 import { scopeOf } from '@deepseek-ai/dsh-scope'
 import AgentLoop from '@deepseek-ai/dsh-agent-loop'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import { MockAdapter, textResponse } from './mock-adapter.ts'
 
 async function harnessWithLoop(adapter: MockAdapter = new MockAdapter([textResponse('ok')])): Promise<{ ctx: Context; loopFiber: Fiber }> {

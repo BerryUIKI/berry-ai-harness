@@ -1,4 +1,4 @@
-import { BlockAssembler, expandAssistantStream } from '@deepseek-ai/dsh-llm'
+import { BlockAssembler, expandAssistantStream } from '@berry-ai/harness-llm'
 import { deepEqualJson } from '@berry-ai/harness-util-values'
 import {
   SessionFormatError,

@@ -1,6 +1,6 @@
 /** Browser-zone derivation and model-facing policy text for one open request turn. */
 
-import type { UserMessage } from '@deepseek-ai/dsh-llm'
+import type { UserMessage } from '@berry-ai/harness-llm'
 import { assertNever } from '@berry-ai/harness-util-values'
 
 const IANA_TIME_ZONE = /^[A-Za-z][A-Za-z0-9_+.-]*(?:\/[A-Za-z0-9_+.-]+)+$/

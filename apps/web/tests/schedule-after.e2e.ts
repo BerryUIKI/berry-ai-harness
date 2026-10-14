@@ -12,10 +12,10 @@ import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
 import type { Agent, AgentHandle } from '@deepseek-ai/dsh-agent'
 import { entryListSchema } from '@deepseek-ai/cordis-plugin-include'
 import { bundlePatchPaths, composeEntries, loadOverlayPatches } from '@berry-ai/harness-app-boot'
-import { MessageId, ToolCallId, createUserMessage, LlmAdapter } from '@deepseek-ai/dsh-llm'
+import { MessageId, ToolCallId, createUserMessage, LlmAdapter } from '@berry-ai/harness-llm'
 import { appendDelivery } from '../../../packages/schedule/schedule/src/delivery-history.ts'
 import type { ScheduleTask } from '@berry-ai/harness-schedule'
-import type { ContextFormed, GenerateOptions, StreamChunk } from '@deepseek-ai/dsh-llm'
+import type { ContextFormed, GenerateOptions, StreamChunk } from '@berry-ai/harness-llm'
 import { SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
 import {
   ScheduleId,
@@ -40,7 +40,7 @@ import {
   saveFailureShot,
 } from './support.ts'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'schedule-web-e2e': { kind: 'schedule-web-e2e' } & ContextFormed
   }

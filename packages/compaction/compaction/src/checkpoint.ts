@@ -12,7 +12,7 @@
  * @module @berry-ai/harness-compaction/checkpoint
  */
 
-import type { MessageSource } from '@deepseek-ai/dsh-llm/message'
+import type { MessageSource } from '@berry-ai/harness-llm/message'
 import type { CommandId } from '@berry-ai/harness-commands/brand'
 import type { CompactionId } from './brand.ts'
 

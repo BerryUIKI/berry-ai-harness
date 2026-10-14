@@ -5,11 +5,11 @@
 
 import { describe, expect, it, onTestFinished } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createUserMessage, ToolCallId, StreamChunk  } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, ToolCallId, StreamChunk  } from '@berry-ai/harness-llm'
 import SessionStore, { SessionEvent, SessionId, TOOL_NOT_STARTED, TOOL_OUTCOME_UNKNOWN } from '@deepseek-ai/dsh-session'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import LlmRuntime from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
 import ToolRuntime, { defineContentToolFixture, TOOL_ABORTED_BEFORE_DISPATCH, TOOL_RUNTIME_SCHEDULER, type PostToolDecision, type PreToolDecision } from '@deepseek-ai/dsh-tools'
 import AgentRegistry, { type Agent } from '@deepseek-ai/dsh-agent'
 import AgentLoop from '@deepseek-ai/dsh-agent-loop'
@@ -18,7 +18,7 @@ import { MockAdapter, textResponse } from './mock-adapter.ts'
 import { PtcRuntime } from '@berry-ai/harness-ptc-runtime'
 import type { PtcRunRequest, PtcRunResult } from '@berry-ai/harness-ptc-runtime'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'p': { kind: 'p' } & ContextFormed
   }

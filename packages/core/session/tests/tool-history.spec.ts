@@ -1,7 +1,7 @@
 /** Capability-independent tool history folded from committed headers and developer messages. */
 import { describe, expect, it } from 'vitest'
-import { createDeveloperMessage, projectToolUpdates } from '@deepseek-ai/dsh-llm'
-import type { ContentBlock, ToolSchema } from '@deepseek-ai/dsh-llm'
+import { createDeveloperMessage, projectToolUpdates } from '@berry-ai/harness-llm'
+import type { ContentBlock, ToolSchema } from '@berry-ai/harness-llm'
 import { Session, SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 import { ToolHistoryProjection } from '../src/tool-history.ts'

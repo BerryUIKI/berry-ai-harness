@@ -50,7 +50,7 @@
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*"
   }

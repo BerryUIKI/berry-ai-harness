@@ -4,8 +4,8 @@ import AgentRegistry from '@deepseek-ai/dsh-agent'
 import type { Agent, Inbox, ModelSelectionRef } from '@deepseek-ai/dsh-agent'
 import { AttachmentError, AttachmentId } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentRef } from '@berry-ai/harness-attachment'
-import { createAssistantMessage, createUserMessage, MessageId } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import { createAssistantMessage, createUserMessage, MessageId } from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
 import SessionStore, {
   SESSION_FORMAT_VERSION, Session, SessionId, SessionLogOffset, SessionSeq,
 } from '@deepseek-ai/dsh-session'
@@ -18,7 +18,7 @@ import { SessionCommandController } from '../src/commands.ts'
 import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { installSessionReadTestServices, testSessionPersistence } from './test-remote.ts'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'test': { kind: 'test' } & ContextFormed
   }

@@ -4,7 +4,7 @@
  * @module @berry-ai/harness-compaction-basic/types
  */
 
-import type { LlmCallConfig } from '@deepseek-ai/dsh-llm'
+import type { LlmCallConfig } from '@berry-ai/harness-llm'
 
 /** Policy fields shared by the default policy and exact model overrides. */
 export interface CompactionPolicyConfig {

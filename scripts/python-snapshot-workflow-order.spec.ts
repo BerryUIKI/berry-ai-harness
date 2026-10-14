@@ -1,7 +1,7 @@
 import { getEventListeners } from 'node:events'
 import { Context } from '@deepseek-ai/cordis'
 import { agentEvents, type Agent, type PreStepDecision } from '@deepseek-ai/dsh-agent'
-import { createToolResultMessage, createUserMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
+import { createToolResultMessage, createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import { WorkflowRunId } from '@berry-ai/harness-workflow'
 import AgentLoop from '@deepseek-ai/dsh-agent-loop'

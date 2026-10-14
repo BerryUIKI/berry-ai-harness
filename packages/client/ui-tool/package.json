@@ -47,7 +47,7 @@
   "devDependencies": {
     "@berry-ai/harness-spill-policy": "workspace:*",
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
@@ -76,7 +76,7 @@
     "@berry-ai/harness-attachment": "workspace:*",
     "clsx": "^2.0.0",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-token-meter": "workspace:*",
+    "@berry-ai/harness-token-meter": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*"
   },
   "files": [

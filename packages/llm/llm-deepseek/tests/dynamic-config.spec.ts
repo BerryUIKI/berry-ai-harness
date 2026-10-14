@@ -3,7 +3,7 @@ import { Context, Service } from '@deepseek-ai/cordis'
 import { access, mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import LlmRuntime, { createUserMessage, INVALID_CREDENTIAL_CODE } from '@deepseek-ai/dsh-llm'
+import LlmRuntime, { createUserMessage, INVALID_CREDENTIAL_CODE } from '@berry-ai/harness-llm'
 import AttachmentStore, { AttachmentId, ImageVariantId } from '@berry-ai/harness-attachment'
 import type {
   ImageAttachmentLimits,
@@ -16,12 +16,12 @@ import type {
 import { credentialRef } from '@berry-ai/harness-credentials'
 import { LocalCredentialProvider } from '@berry-ai/harness-credentials-local'
 import { liveConfig } from '../../../settings/settings/tests/live-config.ts'
-import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
+import type { ContextFormed } from '@berry-ai/harness-llm'
 import { assemble } from './assemble.ts'
 import { closeMockServers, mockServer, textEvents } from './mock-server.ts'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'test': { kind: 'test' } & ContextFormed
   }

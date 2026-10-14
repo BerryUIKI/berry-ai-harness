@@ -7,7 +7,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type { SubagentProvider } from '@deepseek-ai/dsh-subagent'
 import { defineTool } from '@deepseek-ai/dsh-tools'

@@ -12,7 +12,7 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { dirname, resolve } from 'node:path'
 import { brandString } from '@berry-ai/harness-brand'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 import {
   settleRunResult,

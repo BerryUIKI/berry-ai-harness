@@ -10,7 +10,7 @@
  * @module @deepseek-ai/dsh-subagent/assistant-output
  */
 
-import { joinAssistantStreamText, type ContentBlock } from '@deepseek-ai/dsh-llm'
+import { joinAssistantStreamText, type ContentBlock } from '@berry-ai/harness-llm'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 
 /**

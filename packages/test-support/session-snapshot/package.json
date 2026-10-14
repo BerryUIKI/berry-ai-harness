@@ -46,7 +46,7 @@
     "@deepseek-ai/dsh-agent-loop": "workspace:*",
     "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",

@@ -1,7 +1,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { appendFileSync } from 'node:fs'
-import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@deepseek-ai/dsh-llm'
-import { ToolCallId, LlmAdapter, ReasoningEffortId } from '@deepseek-ai/dsh-llm'
+import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-ai/harness-llm'
+import { ToolCallId, LlmAdapter, ReasoningEffortId } from '@berry-ai/harness-llm'
 
 /** Script one delegation, then acknowledge the receipt and the completion notice. */
 class MockDelegatingAdapter extends LlmAdapter {

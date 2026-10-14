@@ -11,7 +11,7 @@ import {
   createAssistantMessage,
   createUserMessage,
   LlmAdapter,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import type {
   ContentBlock,
   LlmResolvedModelInfo,
@@ -19,19 +19,19 @@ import type {
   RequestMessage,
   StreamChunk,
   TokenUsage,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import SessionStore, { buildForkSeed, Session, SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-import TokenMeter from '@deepseek-ai/dsh-token-meter'
+import LlmRuntime from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
+import TokenMeter from '@berry-ai/harness-token-meter'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import type {
   SummarizationInput,
   SummaryResult,
 } from '@berry-ai/harness-compaction-basic/src/summarizer.ts'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'listener': { kind: 'listener' } & ContextFormed
     'rival': { kind: 'rival' } & ContextFormed

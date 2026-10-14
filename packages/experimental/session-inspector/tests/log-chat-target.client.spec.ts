@@ -2,7 +2,7 @@
 
 import { expect, it } from 'vitest'
 import { SessionSeq, type SessionEvent } from '@deepseek-ai/dsh-session/types'
-import type { MessageId, ToolCallId } from '@deepseek-ai/dsh-llm'
+import type { MessageId, ToolCallId } from '@berry-ai/harness-llm'
 import { sessionLogChatTarget } from '../src/client/views/session-log/chat-target.ts'
 
 it('keeps a user message’s original sequence without inventing Turn or Step coordinates', () => {

@@ -13,8 +13,8 @@ import type { FileUploadReceiptId } from '@deepseek-ai/dsh-client-file-upload/ty
 import type {} from '@deepseek-ai/dsh-client-file-upload'
 import {
   ReasoningEffortId, assistantStreamChunks, createUserMessage, freezeMessage,
-} from '@deepseek-ai/dsh-llm'
-import type { MessageSource } from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
+import type { MessageSource } from '@berry-ai/harness-llm'
 import { buildForkSeed } from '@deepseek-ai/dsh-session/fork'
 import { SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
 import type { SessionEvent, SessionHeader, SessionId, UserMessage } from '@deepseek-ai/dsh-session'

@@ -3,7 +3,7 @@ description: "Replay-aware token and context-pressure measurement for users and 
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-token-meter
+# @berry-ai/harness-token-meter
 
 English | [中文](README.zh.md)
 
@@ -57,7 +57,7 @@ Image offload reprices existing node identities while preserving prior usage anc
 ### Composition
 
 ```yaml
-- name: '@deepseek-ai/dsh-token-meter'
+- name: '@berry-ai/harness-token-meter'
 - name: '@berry-ai/harness-compaction-basic'
 ```
 

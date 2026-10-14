@@ -8,7 +8,7 @@ import { CommandDefinitionId } from '@berry-ai/harness-commands/brand'
 import type { CommandInvocation, CommandResult } from '@berry-ai/harness-commands'
 import { GoalError } from '@berry-ai/harness-goal'
 import type { GoalPhase, GoalRef, GoalView } from '@berry-ai/harness-goal'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
 
 export const name = 'command-goal'
 export const inject = ['commands', 'goals']

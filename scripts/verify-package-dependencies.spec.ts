@@ -187,7 +187,7 @@ describe('package dependency scope', () => {
       '@deepseek-ai/dsh-api-workspace-controller',
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.hostPackages).toEqual([
-      '@deepseek-ai/dsh-llm',
+      '@berry-ai/harness-llm',
       '@deepseek-ai/dsh-session',
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.requiredServicePeers).toEqual({

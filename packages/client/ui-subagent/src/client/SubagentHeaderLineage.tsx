@@ -12,7 +12,7 @@ import {
 import type { PropsLocale, PropsRuntime, TranslateNS } from '@deepseek-ai/dsh-client-ui-slots'
 import { NS } from './locales.ts'
 import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-token-meter/client'
+import type {} from '@berry-ai/harness-token-meter/client'
 import css from './SubagentHeaderLineage.module.css'
 
 type SubagentCatalogSnapshot = Omit<SessionProjectionSnapshot, 'values' | 'state'> & {

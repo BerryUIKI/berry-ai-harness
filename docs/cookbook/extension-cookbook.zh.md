@@ -41,7 +41,7 @@ UI 插件把持久 `session/event` record（Assistant settlement、轮次/步骤
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
 import { brandString } from '@berry-ai/harness-brand'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 
 declare function render(text: string): void
@@ -71,7 +71,7 @@ export function apply(ctx: Context) {
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import { expandAssistantStream } from '@deepseek-ai/dsh-llm'
+import { expandAssistantStream } from '@berry-ai/harness-llm'
 
 export const name = 'my-protocol-bridge'
 export const inject = ['agents', 'sessions', 'sessionPersistence']

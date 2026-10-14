@@ -11,7 +11,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-compaction'
 import type { RequestErrorAction } from '@deepseek-ai/dsh-agent'
-import { IMAGE_OFFLOAD_REQUIRED_CODE, LlmError } from '@deepseek-ai/dsh-llm'
+import { IMAGE_OFFLOAD_REQUIRED_CODE, LlmError } from '@berry-ai/harness-llm'
 import { offloadOldestImages } from './image-offload.ts'
 import { imageOffloadProjection } from './projection.ts'
 

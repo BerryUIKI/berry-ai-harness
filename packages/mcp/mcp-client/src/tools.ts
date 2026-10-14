@@ -18,7 +18,7 @@ import { specTypeSchemas, type Client, type ImageContent } from '@modelcontextpr
 import type { Context } from '@deepseek-ai/cordis'
 import { isImageAdmissionError } from '@berry-ai/harness-attachment'
 import type { AttachmentStore, ImageAttachmentRef, ImageMediaType, SaveImageAttachment } from '@berry-ai/harness-attachment'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { ToolDefinition, ToolExecution, ToolExecutionResult } from '@deepseek-ai/dsh-tools'
 import { assertSupportedJsonSchema } from '@deepseek-ai/dsh-tools'
 import type { JsonSchemaNode } from '@deepseek-ai/dsh-tools'

@@ -24,7 +24,7 @@ The default policy provides bounded recovery from transient failures of the same
 
 ### Preserve failure facts without embedding policy
 
-`@deepseek-ai/dsh-llm` exports one JSON-serializable `LlmFailure` payload:
+`@berry-ai/harness-llm` exports one JSON-serializable `LlmFailure` payload:
 
 ```ts ignore-check
 type ProviderRequestId = Branded<'ProviderRequestId'>
@@ -50,7 +50,7 @@ The shared transient-code set is intentionally small: adapter mappings for `RATE
 
 ### Put retry policy on the existing failed-step extension point
 
-`@deepseek-ai/dsh-llm-retry` is a function plugin that listens to `agent/request-error`. It introduces no service or new loop branch; the agent-loop package changes only the data carried through its existing failed-step recovery control flow.
+`@berry-ai/harness-llm-retry` is a function plugin that listens to `agent/request-error`. It introduces no service or new loop branch; the agent-loop package changes only the data carried through its existing failed-step recovery control flow.
 
 The `agent/request-error` waterfall carries the current `LlmFailure`, an immutable list of prior failures that authorized retries in the consecutive recovery sequence, and the serving registration's immutable retry policy. The loop transports but does not interpret that policy, owns the consecutive failure history, and clears it after a successful model request. Normal `dsh-llm-retry` policy counts durable retry records scheduled by the same exact-provider policy, while `dsh-compaction-basic` keeps its own context-overflow budget. Alternating transient and context-overflow failures therefore consume their owning finite budgets independently; the maximum request count is one plus the sum of the loaded finite budgets.
 

@@ -11,7 +11,7 @@ import type { UseProjection } from '@deepseek-ai/dsh-api-session-controller/clie
 import type { InjectFace, SnapshotSelectorHook } from '@deepseek-ai/dsh-client-ui-slots'
 // Type-only: merges the sessionStats key into SessionProjectionMap for useProjection.
 import type {} from '@deepseek-ai/dsh-session-stats/client'
-import type { TokenUsageProjection } from '@deepseek-ai/dsh-token-meter/client'
+import type { TokenUsageProjection } from '@berry-ai/harness-token-meter/client'
 import type { ChatViewSlotProps, PerformanceUsageInjected } from '../contract/slots.ts'
 import type { ChatSnapshot } from '../contract/snapshot.ts'
 import { formatTokensPerSecond } from './message-chrome.ts'

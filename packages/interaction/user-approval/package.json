@@ -34,7 +34,7 @@
   "peerDependencies": {
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-scope": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
@@ -46,7 +46,7 @@
   "devDependencies": {
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-scope": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",

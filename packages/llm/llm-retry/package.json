@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-llm-retry",
+  "name": "@berry-ai/harness-llm-retry",
   "description": "Provider-routed LLM request retry policy for the DeepSeek Harness",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -33,7 +33,7 @@
   "peerDependencies": {
     "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
@@ -50,9 +50,9 @@
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-agent-loop": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek-api-key": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-llm-deepseek": "workspace:*",
+    "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
     "@deepseek-ai/dsh-llm-mock-server": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",

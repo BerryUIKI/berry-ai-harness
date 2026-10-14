@@ -2,7 +2,7 @@
 import { Context, Service } from '@deepseek-ai/cordis'
 import AgentRegistry, { type Agent } from '@deepseek-ai/dsh-agent'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
-import type { UserMessage } from '@deepseek-ai/dsh-llm'
+import type { UserMessage } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import type { CreateSessionOptions } from '@deepseek-ai/dsh-session'
 import Storage, { type KvUnit, type KvUnitDescriptor, type StorageBackend } from '@berry-ai/harness-storage'

@@ -1,5 +1,5 @@
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import {
@@ -14,7 +14,7 @@ import type { SessionSeq } from '@deepseek-ai/dsh-session'
 import type { CompactionAgentContext } from '@berry-ai/harness-compaction'
 import type { ManualCompactAgentContext } from '@berry-ai/harness-compaction'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'other': { kind: 'other' } & ContextFormed
   }

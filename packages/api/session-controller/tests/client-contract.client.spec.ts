@@ -5,7 +5,7 @@ import {
   MutableSessionEventSource, type SessionAssistantSettlementEntry,
   type SessionLiveEventEntry, type SessionTransientEventEntry,
 } from '../src/client/contract/events.ts'
-import { LlmAttemptId } from '@deepseek-ai/dsh-llm/brand'
+import { LlmAttemptId } from '@berry-ai/harness-llm/brand'
 import type { ISession } from '../src/client/contract/session.ts'
 import type { ProjectionsBaseline } from '../src/client/sessions/projection-store.ts'
 import { ProjectionValueStore } from '../src/client/sessions/projection-store.ts'

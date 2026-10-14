@@ -1,5 +1,5 @@
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it } from 'vitest'
 import SessionStore, { Session, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
@@ -12,7 +12,7 @@ import SessionTitleService, {
   truncateTitleUtf8,
 } from '@deepseek-ai/dsh-session-title'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'seed': { kind: 'seed' } & ContextFormed
   }

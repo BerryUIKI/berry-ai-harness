@@ -8,7 +8,7 @@
  * dispatch) stay on the class, invisible out here.
  */
 import type { AttachmentIdType, FileAttachmentRef, ImageAttachmentRef } from '@berry-ai/harness-attachment'
-import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
+import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { SessionId, SessionSeq } from '@deepseek-ai/dsh-session/types'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'

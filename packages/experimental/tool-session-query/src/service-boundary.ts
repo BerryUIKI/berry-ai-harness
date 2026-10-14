@@ -5,7 +5,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { HarnessError } from '@deepseek-ai/dsh-llm'
+import { HarnessError } from '@berry-ai/harness-llm'
 import {
   SessionQueryError,
   type SessionQueryErrorCode,

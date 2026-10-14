@@ -6,7 +6,7 @@ import { chromium, type Browser, type Page } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 import { SessionId } from '@deepseek-ai/dsh-session'
 import { createLaunchEnvironmentSnapshot } from '@berry-ai/harness-launch-environment'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
 import {
   captureStableAria, compareOrRefreshGolden, launchWebScaffold, readPersistedEvents,
   seedSession, watchConsole, webSnapshotMode, type WebScaffold,

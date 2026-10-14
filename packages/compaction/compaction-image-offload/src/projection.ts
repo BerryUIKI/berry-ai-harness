@@ -1,6 +1,6 @@
 /** Browser-safe durable image selection declaration and pure replay definition. */
 
-import type { Message } from '@deepseek-ai/dsh-llm'
+import type { Message } from '@berry-ai/harness-llm'
 import type { SessionSeq } from '@deepseek-ai/dsh-session/types'
 import type { SessionMessageProjection } from '@deepseek-ai/dsh-session/surface'
 import { offloadMessageImages } from './project-message.ts'

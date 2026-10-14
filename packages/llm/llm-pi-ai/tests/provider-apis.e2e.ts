@@ -10,9 +10,9 @@ import type {
   SaveImageAttachment,
   StoredImageAttachment,
 } from '@berry-ai/harness-attachment'
-import LlmRuntime, { createToolResultMessage, createUserMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
-import type { Message, ToolSchema } from '@deepseek-ai/dsh-llm'
-import * as LlmPiAi from '@deepseek-ai/dsh-llm-pi-ai'
+import LlmRuntime, { createToolResultMessage, createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
+import type { Message, ToolSchema } from '@berry-ai/harness-llm'
+import * as LlmPiAi from '@berry-ai/harness-llm-pi-ai'
 import type { PiAiReplayResponse } from '../src/replay.ts'
 import { assemble, type AssembledResult } from './assemble.ts'
 

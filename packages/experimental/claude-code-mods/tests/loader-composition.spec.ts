@@ -13,7 +13,7 @@ import AgentLoop from '@deepseek-ai/dsh-agent-loop'
 import CommandRuntime from '@berry-ai/harness-commands'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import WorkingDirectory from '@deepseek-ai/dsh-working-directory'
-import LlmRuntime, { createUserMessage } from '@deepseek-ai/dsh-llm'
+import LlmRuntime, { createUserMessage } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
@@ -37,7 +37,7 @@ it('loads from cordis.yml, counts the model\'s tool calls, and answers /tally th
   root = await mkdtemp(join(tmpdir(), 'dsh-cc-mods-composition-'))
   const configPath = join(root, 'cordis.yml')
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-llm', LlmRuntime],
+    ['@berry-ai/harness-llm', LlmRuntime],
     ['@deepseek-ai/dsh-session', SessionStore],
     ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
     ['@deepseek-ai/dsh-system-prompt', SystemPrompt],

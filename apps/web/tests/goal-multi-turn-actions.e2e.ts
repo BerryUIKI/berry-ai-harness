@@ -37,7 +37,7 @@ const PACKAGE_FILES: Readonly<Record<string, string>> = {
   'packages/context/session-reference/src/uri.ts': 'export {}\n',
   'packages/context/session-reference/tests/session-reference.spec.ts': 'export {}\n',
   'packages/llm/token-meter/README.md': '# Token meter\n',
-  'packages/llm/token-meter/package.json': '{"name":"@deepseek-ai/dsh-token-meter"}\n',
+  'packages/llm/token-meter/package.json': '{"name":"@berry-ai/harness-token-meter"}\n',
   'packages/llm/token-meter/src/index.ts': 'export {}\n',
   'packages/llm/token-meter/tests/token-meter.spec.ts': 'export {}\n',
   'packages/skill/skill-filesystem/README.md': '# Local skill provider\n',

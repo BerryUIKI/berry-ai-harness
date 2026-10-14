@@ -2,7 +2,7 @@
 import { existsSync, writeFileSync } from 'node:fs'
 import { setTimeout } from 'node:timers/promises'
 import type { Context } from '@deepseek-ai/cordis'
-import { LlmAdapter, ToolCallId, type GenerateOptions, type LlmResolvedModelInfo, type StreamChunk } from '@deepseek-ai/dsh-llm'
+import { LlmAdapter, ToolCallId, type GenerateOptions, type LlmResolvedModelInfo, type StreamChunk } from '@berry-ai/harness-llm'
 
 class NestedAdapter extends LlmAdapter {
   override resolveModel(provider: string, model: string): Promise<LlmResolvedModelInfo> {

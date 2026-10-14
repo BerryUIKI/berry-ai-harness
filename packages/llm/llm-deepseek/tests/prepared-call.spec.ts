@@ -2,8 +2,8 @@
 import { afterEach, expect, it } from 'vitest'
 import type { AnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import { DeepSeekAdapter } from '../src/index.ts'
-import { Config, plainOptions, resolveAdapterOptions } from '@deepseek-ai/dsh-llm-deepseek-api-key'
-import type { ResolvedDeepSeekOptions as DeepSeekConnectionOptions } from '@deepseek-ai/dsh-llm-deepseek-api-key'
+import { Config, plainOptions, resolveAdapterOptions } from '@berry-ai/harness-llm-deepseek-api-key'
+import type { ResolvedDeepSeekOptions as DeepSeekConnectionOptions } from '@berry-ai/harness-llm-deepseek-api-key'
 import { assemble, chunks, MODEL, options, server } from './helpers.ts'
 
 const close: (() => Promise<void>)[] = []

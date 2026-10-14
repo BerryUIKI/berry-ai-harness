@@ -3,7 +3,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import type { GoalView } from '@berry-ai/harness-goal'
-import { HarnessError } from '@deepseek-ai/dsh-llm'
+import { HarnessError } from '@berry-ai/harness-llm'
 import type { SessionEvent, SessionSeq } from '@deepseek-ai/dsh-session'
 import type { ToolRunContext } from '@deepseek-ai/dsh-tools'
 import type {} from '@deepseek-ai/dsh-session-projection'

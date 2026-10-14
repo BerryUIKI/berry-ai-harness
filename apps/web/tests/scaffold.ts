@@ -59,10 +59,10 @@ import {
 } from '@deepseek-ai/dsh-session-snapshot'
 import type { Profile, ProfileContext } from '@berry-ai/harness-app-boot'
 import { dshHomePath } from '@berry-ai/harness-home-paths'
-import { LlmAdapter } from '@deepseek-ai/dsh-llm'
+import { LlmAdapter } from '@berry-ai/harness-llm'
 import type {
   LlmModelInfo, LlmProviderInfo, LlmResolvedModelInfo, RetryPolicyConfig, StreamChunk,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import type { ReplayHandle, ReplayProviderConfig } from '@deepseek-ai/dsh-llm-replay'
 import {
   installLlmReplay,

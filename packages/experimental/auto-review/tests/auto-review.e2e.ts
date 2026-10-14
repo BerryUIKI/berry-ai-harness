@@ -13,8 +13,8 @@ import { SandboxedFileSystem } from '@berry-ai/harness-fs-sandbox'
 import {
   createUserMessage, isAgentLoopRequest, ToolCallId,
   type StreamChunk,
-} from '@deepseek-ai/dsh-llm'
-import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
+} from '@berry-ai/harness-llm'
+import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 import PermissionPresetService, { AUTO_PRESET } from '@berry-ai/harness-permission-presets'
 import SandboxProvider, { type ConfinedArgv, type SandboxPolicy } from '@berry-ai/harness-sandbox'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'

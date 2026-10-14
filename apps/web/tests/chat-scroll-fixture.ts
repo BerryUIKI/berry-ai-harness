@@ -8,7 +8,7 @@ import {
   createSystemMessage,
   createToolResultMessage,
   createUserMessage,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import {
   SESSION_FORMAT_VERSION,
   Session,

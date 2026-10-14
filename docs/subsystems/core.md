@@ -375,7 +375,7 @@ type ThingKind = keyof ThingMap          // 'a' | 'b'
 type Thing = ThingMap[keyof ThingMap]    // the discriminated union
 
 // A plugin extends it without touching the source package:
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface ThingMap {
     'c': { kind: 'c'; /* … */ }
   }

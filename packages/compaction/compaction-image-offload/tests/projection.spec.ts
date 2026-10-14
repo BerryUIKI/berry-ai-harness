@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { createAssistantMessage, createToolResultMessage, createUserMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
-import type { ContentBlock, ImageBlock } from '@deepseek-ai/dsh-llm'
+import { createAssistantMessage, createToolResultMessage, createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
+import type { ContentBlock, ImageBlock } from '@berry-ai/harness-llm'
 import { deriveEventMessage, foldSurface, Session, SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
 import type { SessionEvent, SessionEventMap } from '@deepseek-ai/dsh-session'
 import { imageOffloadProjection } from '../src/projection.ts'

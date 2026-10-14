@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@berry-ai/harness-fs": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

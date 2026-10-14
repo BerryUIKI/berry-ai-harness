@@ -8,7 +8,7 @@ import { Context, FiberState } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
-import DeepSeekLlmApiExtensionRegistry from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
+import DeepSeekLlmApiExtensionRegistry from '@berry-ai/harness-deepseek-llm-api-extensions'
 import * as PluginInventory from '../src/index.ts'
 
 let root: string | undefined

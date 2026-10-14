@@ -1,4 +1,4 @@
-import { freezeMessage, MessageId } from '@deepseek-ai/dsh-llm'
+import { freezeMessage, MessageId } from '@berry-ai/harness-llm'
 import { Context } from '@deepseek-ai/cordis'
 import { SESSION_FORMAT_VERSION, Session, SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'

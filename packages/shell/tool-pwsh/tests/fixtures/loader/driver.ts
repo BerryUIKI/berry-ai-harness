@@ -8,7 +8,7 @@
 
 import { writeFile } from 'node:fs/promises'
 import { boot, resolveConfigPath } from '@berry-ai/harness-app-boot'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
+import { ToolCallId } from '@berry-ai/harness-llm'
 
 const configPath = process.argv[2]
 if (configPath === undefined) throw new Error('tool-pwsh driver requires a config path')

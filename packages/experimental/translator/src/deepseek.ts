@@ -3,9 +3,9 @@ import { FiberState, type Context, type Fiber } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
 import { credentialRef } from '@berry-ai/harness-credentials'
 import { launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
-import { BlockAssembler, ReasoningEffortId, type LlmRuntime, type GenerateOptions, type RequestUserInput, type FinishReason, type TextBlock } from '@deepseek-ai/dsh-llm'
-import type { Config as SharedNativeConfig } from '@deepseek-ai/dsh-llm-deepseek'
-import type { Config as OfficialNativeConfig } from '@deepseek-ai/dsh-llm-deepseek-api-key'
+import { BlockAssembler, ReasoningEffortId, type LlmRuntime, type GenerateOptions, type RequestUserInput, type FinishReason, type TextBlock } from '@berry-ai/harness-llm'
+import type { Config as SharedNativeConfig } from '@berry-ai/harness-llm-deepseek'
+import type { Config as OfficialNativeConfig } from '@berry-ai/harness-llm-deepseek-api-key'
 import { deadline, timeoutOf } from '@berry-ai/harness-timeout'
 import { deepFreeze } from '@berry-ai/harness-util-values'
 import type { Config } from './index.ts'
@@ -14,8 +14,8 @@ import { TranslationError } from './error.ts'
 import type { TranslationLog } from './storage.ts'
 
 const MODEL = 'deepseek-flash'
-const OWNER_PACKAGES = { 'deepseek-account': '@deepseek-ai/dsh-llm-deepseek-account',
-  'deepseek-official': '@deepseek-ai/dsh-llm-deepseek-api-key' } as const
+const OWNER_PACKAGES = { 'deepseek-account': '@berry-ai/harness-llm-deepseek-account',
+  'deepseek-official': '@berry-ai/harness-llm-deepseek-api-key' } as const
 
 interface NativeOwnerFields { llm: LlmRuntime; fiber: Fiber }
 type NativeOwner = NativeOwnerFields & (

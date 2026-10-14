@@ -3,8 +3,8 @@ import type { Volatile } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { credentialRef, type CredentialRef } from '@berry-ai/harness-credentials'
 import type { LaunchEnvironmentSnapshot } from '@berry-ai/harness-launch-environment'
-import { deepSeekConfigFields, type Config as ProtocolConfig, plainOptions as protocolOptions, resolveAdapterOptions as resolveProtocolOptions } from '@deepseek-ai/dsh-llm-deepseek'
-import type { Options as ProtocolOptions, DeepSeekConnectionOptions } from '@deepseek-ai/dsh-llm-deepseek'
+import { deepSeekConfigFields, type Config as ProtocolConfig, plainOptions as protocolOptions, resolveAdapterOptions as resolveProtocolOptions } from '@berry-ai/harness-llm-deepseek'
+import type { Options as ProtocolOptions, DeepSeekConnectionOptions } from '@berry-ai/harness-llm-deepseek'
 
 /** Messages configuration with a per-request API-key reference. */
 export interface Config extends ProtocolConfig {

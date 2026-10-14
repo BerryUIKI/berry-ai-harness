@@ -3,7 +3,7 @@ description: "面向用户与维护者的具备回放感知的 token 与上下�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-token-meter
+# @berry-ai/harness-token-meter
 
 [English](README.md) | 中文
 
@@ -57,7 +57,7 @@ const price = ctx.tokenMeter.estimateMessage(message)
 ### 组合
 
 ```yaml
-- name: '@deepseek-ai/dsh-token-meter'
+- name: '@berry-ai/harness-token-meter'
 - name: '@berry-ai/harness-compaction-basic'
 ```
 

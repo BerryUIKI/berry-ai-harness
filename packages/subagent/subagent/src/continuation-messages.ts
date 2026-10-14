@@ -5,8 +5,8 @@
  */
 
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import { boundContextSummary, createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import { boundContextSummary, createUserMessage } from '@berry-ai/harness-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 import type { SubagentResult } from './types.ts'
 
@@ -36,7 +36,7 @@ export interface SubagentSettledMessageSource {
   readonly senderSessionId: SessionId
 }
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'agent-message': AgentMessageSource
     'subagent-settled': SubagentSettledMessageSource

@@ -1,7 +1,7 @@
 /** Deterministic projected source shared by reference snapshot and Loader tests. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { createMessage, createUserMessage } from '@deepseek-ai/dsh-llm'
+import { createMessage, createUserMessage } from '@berry-ai/harness-llm'
 import { Session, SessionId } from '@deepseek-ai/dsh-session'
 
 export const name = 'session-reference-source-fixture'

@@ -12,7 +12,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { brandString } from '@berry-ai/harness-brand'
 import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { ToolCallId } from '@deepseek-ai/dsh-llm'
+import type { ToolCallId } from '@berry-ai/harness-llm'
 
 export const name = 'greet-tool'
 export const inject = ['tools']

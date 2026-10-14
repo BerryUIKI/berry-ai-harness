@@ -24,7 +24,7 @@ Status: implemented
 
 ### 保留失败事实，不嵌入策略
 
-`@deepseek-ai/dsh-llm` 导出唯一的可 JSON 序列化 `LlmFailure` 载荷：
+`@berry-ai/harness-llm` 导出唯一的可 JSON 序列化 `LlmFailure` 载荷：
 
 ```ts ignore-check
 type ProviderRequestId = Branded<'ProviderRequestId'>
@@ -50,7 +50,7 @@ agent loop（智能体循环）会将终止 finish 的 `LlmFailure` 传给 `agen
 
 ### 将重试策略放在现有失败步骤扩展点上
 
-`@deepseek-ai/dsh-llm-retry` 是监听 `agent/request-error` 的函数插件。它不引入服务或新的循环分支；agent-loop 包仅会更改通过现有失败步骤恢复控制流携带的数据。
+`@berry-ai/harness-llm-retry` 是监听 `agent/request-error` 的函数插件。它不引入服务或新的循环分支；agent-loop 包仅会更改通过现有失败步骤恢复控制流携带的数据。
 
 `agent/request-error` waterfall 携带当前 `LlmFailure`、在连续恢复序列中授权重试的不可变先前失败列表，以及提供服务的注册项所携带的不可变重试策略。循环只传递而不解释该策略；它拥有连续失败历史，并在模型请求成功后清除。`dsh-llm-retry` 的 normal 策略统计由同一项确切提供方策略安排的持久重试记录，`dsh-compaction-basic` 则维护自己的上下文溢出预算。因此，暂时性失败与上下文溢出交替出现时，会各自独立消耗其有限预算；最大请求数等于 1 加上所有已加载有限预算之和。
 

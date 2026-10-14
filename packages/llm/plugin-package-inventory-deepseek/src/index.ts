@@ -2,7 +2,7 @@
  * Active Loader-backed plugin package inventory for official DeepSeek requests.
  * Host entries and the requesting agent's standing preset are resolved at request time;
  * installed dependencies and plugin fibers without Loader-backed package identity are excluded.
- * @module @deepseek-ai/dsh-plugin-package-inventory-deepseek
+ * @module @berry-ai/harness-plugin-package-inventory-deepseek
  */
 
 import { existsSync, readFileSync } from 'node:fs'
@@ -14,7 +14,7 @@ import z from '@deepseek-ai/schemastery'
 import { brandString } from '@berry-ai/harness-brand'
 import type { EntryTree } from '@deepseek-ai/cordis-plugin-loader'
 import type {} from '@deepseek-ai/dsh-agent'
-import type {} from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
+import type {} from '@berry-ai/harness-deepseek-llm-api-extensions'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 import type {} from '@berry-ai/harness-agent-preset-registry'
 import type {} from '@berry-ai/harness-app-boot'

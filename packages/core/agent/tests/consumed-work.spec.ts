@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
 import { Session, SessionId } from '@deepseek-ai/dsh-session'
 import type { TurnEndReason } from '@deepseek-ai/dsh-session'
 import { foldConsumedWork } from '@deepseek-ai/dsh-agent'

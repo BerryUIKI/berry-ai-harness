@@ -17,7 +17,7 @@ import { isAbsolute, resolve } from 'node:path'
 import { Readable, Writable } from 'node:stream'
 import Schema from '@deepseek-ai/schemastery'
 import { brandString } from '@berry-ai/harness-brand'
-import { errorChain } from '@deepseek-ai/dsh-llm'
+import { errorChain } from '@berry-ai/harness-llm'
 import {
   agent as createAcpAgentApp,
   methods,

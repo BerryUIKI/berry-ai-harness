@@ -2,7 +2,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
 import BrowserUseRegistry from '@berry-ai/harness-browser-use'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
+import { ToolCallId } from '@berry-ai/harness-llm'
 import { SessionId } from '@deepseek-ai/dsh-session'
 import * as Provider from '../../lib/index.js'
 

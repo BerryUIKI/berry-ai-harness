@@ -4,7 +4,7 @@
  * @module @deepseek-ai/dsh-agent-loop/inbox
  */
 
-import type { MessageId } from '@deepseek-ai/dsh-llm'
+import type { MessageId } from '@berry-ai/harness-llm'
 import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
 import type SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import type { Session, SessionEventMap, UserMessage } from '@deepseek-ai/dsh-session'

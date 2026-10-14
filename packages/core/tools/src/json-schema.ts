@@ -11,7 +11,7 @@
  * @module dsh-tools/json-schema
  */
 
-import { HarnessError } from '@deepseek-ai/dsh-llm'
+import { HarnessError } from '@berry-ai/harness-llm'
 import { assertNever, isJsonValue, type JsonValue } from '@berry-ai/harness-util-values'
 
 /** Scalar JSON values supported by `enum` and `const`. */

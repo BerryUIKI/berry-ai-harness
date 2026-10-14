@@ -19,8 +19,8 @@ import z from '@deepseek-ai/schemastery'
 import { credentialRef } from '@berry-ai/harness-credentials'
 import type { CredentialRef } from '@berry-ai/harness-credentials'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
-import { resolveRetryPolicy, RetryPolicySchema } from '@deepseek-ai/dsh-llm'
-import type { ResolvedRetryPolicy, RetryPolicyConfig } from '@deepseek-ai/dsh-llm'
+import { resolveRetryPolicy, RetryPolicySchema } from '@berry-ai/harness-llm'
+import type { ResolvedRetryPolicy, RetryPolicyConfig } from '@berry-ai/harness-llm'
 import { deepEqualJson } from '@berry-ai/harness-util-values'
 import {
   CACHE_CONTROL_FORMATS,

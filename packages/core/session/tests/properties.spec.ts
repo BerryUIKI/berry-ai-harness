@@ -9,7 +9,7 @@
 
 import { describe, expect, it } from 'vitest'
 import fc from 'fast-check'
-import { createUserMessage, ToolCallId , createMessage, createToolResultMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, ToolCallId , createMessage, createToolResultMessage } from '@berry-ai/harness-llm'
 import { Session, SessionId } from '@deepseek-ai/dsh-session'
 import type { SessionEventMap, SessionEventType, SurfaceIntent } from '@deepseek-ai/dsh-session'
 

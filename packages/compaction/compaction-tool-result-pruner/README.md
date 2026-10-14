@@ -32,7 +32,7 @@ Mount this package next to `dsh-compaction-basic` when tool output regularly dom
 Mount token measurement, this package, and the backend in this order:
 
 ```yaml
-- name: '@deepseek-ai/dsh-token-meter'
+- name: '@berry-ai/harness-token-meter'
 - name: '@berry-ai/harness-compaction-tool-result-pruner'
 - name: '@berry-ai/harness-compaction-basic'
 ```

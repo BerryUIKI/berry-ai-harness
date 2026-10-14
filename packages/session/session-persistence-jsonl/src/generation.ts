@@ -27,7 +27,7 @@ import { isDeepStrictEqual } from 'node:util'
 import { constants, createZstdCompress } from 'node:zlib'
 import { Session } from '@deepseek-ai/dsh-session'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import { BlockAssembler, expandAssistantStream } from '@deepseek-ai/dsh-llm'
+import { BlockAssembler, expandAssistantStream } from '@berry-ai/harness-llm'
 import { SessionFormatError } from '@deepseek-ai/dsh-session-format'
 import type {
   SessionFormatArtifact,

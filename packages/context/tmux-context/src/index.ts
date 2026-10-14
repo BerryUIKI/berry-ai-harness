@@ -24,9 +24,9 @@ import { z as zod } from 'zod'
 import type { PreStepDecision } from '@deepseek-ai/dsh-agent'
 import type {} from '@deepseek-ai/dsh-session-projection'
 import type { ShellExecutor, ShellRunResult } from '@berry-ai/harness-shell'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-declare module '@deepseek-ai/dsh-llm' {
+import { createUserMessage } from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     /** Location attribution; readers preserve the content without this producer.
      * Its projection uses the kind to avoid repeated injection.

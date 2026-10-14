@@ -32,9 +32,9 @@
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-compaction-tool-result-pruner": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-token-meter": "workspace:*"
+    "@berry-ai/harness-token-meter": "workspace:*"
   },
   "peerDependenciesMeta": {
     "@berry-ai/harness-compaction-tool-result-pruner": {
@@ -55,11 +55,11 @@
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-compaction-tool-result-pruner": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-llm-retry": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-llm-retry": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-token-meter": "workspace:*",
+    "@berry-ai/harness-token-meter": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@berry-ai/harness-compaction-image-offload": "workspace:*"
   }

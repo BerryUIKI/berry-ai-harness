@@ -16,7 +16,7 @@ import LlmRuntime, {
   type GenerateOptions,
   type StreamChunk,
   type ToolSchema,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import PermissionPresetService, {
   AUTO_PRESET,
   type Config as PermissionConfig,

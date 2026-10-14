@@ -23,7 +23,7 @@ import type { AskUserQuestionItem, PendingUserQuestion, UserQuestionProjectionVi
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
 import type {} from '@deepseek-ai/dsh-client-locale/client'
 import type { UserQuestionPanels, UserQuestionRecord } from '@deepseek-ai/dsh-client-ui-tool/client'
-import type { ToolCallId } from '@deepseek-ai/dsh-llm'
+import type { ToolCallId } from '@berry-ai/harness-llm'
 import { brandString } from '@berry-ai/harness-brand'
 import { createWaterfallRequest, PendingQuestion, type QuestionRpcChannel } from './contract/slots.ts'
 import { createQuestionDraftStore } from './draft-store.ts'

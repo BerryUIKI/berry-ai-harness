@@ -6,7 +6,7 @@
  */
 
 import type { Branded } from '@berry-ai/harness-brand'
-import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
+import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type { FeedbackCategory } from '@berry-ai/harness-command-feedback/types'
 

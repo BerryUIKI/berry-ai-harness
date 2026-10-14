@@ -5,13 +5,13 @@ import LlmRuntime, {
   ToolCallId,
   LlmAdapter,
   ReasoningEffortId,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import type {
   GenerateOptions,
   LlmModelInfo,
   LlmResolvedModelInfo,
   StreamChunk,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'

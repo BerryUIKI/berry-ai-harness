@@ -4,8 +4,8 @@
  * @module @deepseek-ai/dsh-tools/types
  */
 
-import type { ToolCallId } from '@deepseek-ai/dsh-llm/brand'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm/types'
+import type { ToolCallId } from '@berry-ai/harness-llm/brand'
+import type { ContentBlock } from '@berry-ai/harness-llm/types'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 
 /** Payload recorded when one nested PTC mode Tool dispatch starts. */

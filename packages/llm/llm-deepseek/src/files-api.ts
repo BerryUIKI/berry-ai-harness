@@ -1,6 +1,6 @@
 /** DeepSeek Files API transport. @module dsh-llm-deepseek/files-api */
 
-import { attributionHeaders, LlmError } from '@deepseek-ai/dsh-llm'
+import { attributionHeaders, LlmError } from '@berry-ai/harness-llm'
 import type { ImageMediaType } from '@berry-ai/harness-attachment'
 import { DeepSeekFileId } from './file-id.ts'
 import type { DeepSeekFileId as DeepSeekFileIdType } from './file-id.ts'

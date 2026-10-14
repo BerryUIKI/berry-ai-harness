@@ -1,7 +1,7 @@
 /** Map system snapshots, tool changes, and conversation turns to Messages using the configured route capability. */
 
-import { LlmError, requestImageHandleText } from '@deepseek-ai/dsh-llm'
-import type { ContentBlock, GenerateOptions, ImageAttachmentAccessResolver, Message, RequestMessage } from '@deepseek-ai/dsh-llm'
+import { LlmError, requestImageHandleText } from '@berry-ai/harness-llm'
+import type { ContentBlock, GenerateOptions, ImageAttachmentAccessResolver, Message, RequestMessage } from '@berry-ai/harness-llm'
 import type { ImageAttachmentRef, RequestImageAttachment } from '@berry-ai/harness-attachment'
 import type { DeepSeekConnectionOptions as Connection } from './types.ts'
 import type { DeepSeekFileId } from './file-id.ts'

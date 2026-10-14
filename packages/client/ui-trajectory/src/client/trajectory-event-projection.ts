@@ -1,6 +1,6 @@
 /** Trajectory-owned conversion from durable Session events to ledger view data. */
 
-import type { ContentBlock, StreamChunk } from '@deepseek-ai/dsh-llm/types'
+import type { ContentBlock, StreamChunk } from '@berry-ai/harness-llm/types'
 import type {
   AssistantBlock, ContextProducerView, KnownContextForm,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'

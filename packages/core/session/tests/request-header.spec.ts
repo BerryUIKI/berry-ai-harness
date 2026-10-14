@@ -3,8 +3,8 @@
 import { describe, expect, it } from 'vitest'
 import { Session, SessionId, SessionSeq, canonicalHeader, foldRequestHeader, headerEquals } from '@deepseek-ai/dsh-session'
 import type { EpochHeader, SessionEvent } from '@deepseek-ai/dsh-session'
-import { createUserMessage, ReasoningEffortId } from '@deepseek-ai/dsh-llm'
-import type { ToolSchema } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, ReasoningEffortId } from '@berry-ai/harness-llm'
+import type { ToolSchema } from '@berry-ai/harness-llm'
 
 const CONFIG = { provider: 'mock', model: 'm' }
 

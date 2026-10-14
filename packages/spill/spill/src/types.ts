@@ -7,7 +7,7 @@
  */
 
 import type { Branded } from '@berry-ai/harness-brand'
-import type { ToolCallId } from '@deepseek-ai/dsh-llm'
+import type { ToolCallId } from '@berry-ai/harness-llm'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 
 /**

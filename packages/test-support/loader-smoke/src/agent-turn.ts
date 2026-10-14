@@ -5,7 +5,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import { createUserMessage, expandAssistantStream, type TokenUsage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, expandAssistantStream, type TokenUsage } from '@berry-ai/harness-llm'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 
 /** Result envelope consumed only by snapshot and composition tests. */

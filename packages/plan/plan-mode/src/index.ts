@@ -26,8 +26,8 @@ import { brandString } from '@berry-ai/harness-brand'
 import { z as zod } from 'zod'
 import type { ZodType } from 'zod'
 import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
 import type { Session, UserMessage } from '@deepseek-ai/dsh-session'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import { UserQuestionError, type AskUserQuestionAnswer } from '@berry-ai/harness-user-questions'
@@ -35,7 +35,7 @@ import type { CommandDefinitionId, CommandId } from '@berry-ai/harness-commands'
 import type {} from '@deepseek-ai/dsh-session-projection'
 import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
 import type { PlanProjection, PlanUnitState } from './types.ts'
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'plan-mode': { kind: 'plan-mode' } & ContextFormed
   }

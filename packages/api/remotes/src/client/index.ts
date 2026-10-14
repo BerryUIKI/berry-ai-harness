@@ -11,7 +11,7 @@ import settingsControllerRemote from '@deepseek-ai/dsh-api-settings-controller/r
 import officeToPdfRemote from '@berry-ai/harness-office-to-pdf/remote'
 import goalsRemote from '@berry-ai/harness-goal/remote'
 import scheduleRemote from '@berry-ai/harness-schedule/remote'
-import llmRemote from '@deepseek-ai/dsh-llm/remote'
+import llmRemote from '@berry-ai/harness-llm/remote'
 import dynamicRemote from '@berry-ai/harness-cordis-host-runner/remote'
 import pluginManagerRemote from '@berry-ai/harness-plugin-manager/remote'
 import pluginRegistryProbeRemote from '@deepseek-ai/dsh-client-ui-plugin-manager/remote'
@@ -47,7 +47,7 @@ export type {} from '@deepseek-ai/dsh-api-account-controller/remote'
 export type {} from '@berry-ai/harness-goal/remote'
 export type {} from '@berry-ai/harness-schedule/remote'
 export type {} from '@berry-ai/harness-office-to-pdf/remote'
-export type {} from '@deepseek-ai/dsh-llm/remote'
+export type {} from '@berry-ai/harness-llm/remote'
 export type {} from '@deepseek-ai/dsh-host-plugin-inventory/remote'
 export type {} from '@berry-ai/harness-message-feedback/remote'
 export type {} from '@berry-ai/harness-permission-presets/remote'
@@ -75,7 +75,7 @@ export type { ApiRemoteForwardedEvent } from '../types.ts'
 export type {} from '@berry-ai/harness-commands/types'
 export type {} from '@berry-ai/harness-cordis-host-runner/types'
 export type {} from '@berry-ai/harness-credentials/types'
-export type {} from '@deepseek-ai/dsh-llm/types'
+export type {} from '@berry-ai/harness-llm/types'
 export type {} from '@berry-ai/harness-agent-preset-registry/types'
 export type {} from '@berry-ai/harness-permission-presets/types'
 export type {} from '@berry-ai/harness-settings/types'
@@ -145,7 +145,7 @@ export type {
 export type {
   LlmConfigurableProvider, LlmDiscoveredModel,
   LlmModelDiscoveryRequest, LlmProviderInfo,
-} from '@deepseek-ai/dsh-llm/types'
+} from '@berry-ai/harness-llm/types'
 // Reference-discovery result vocabulary for the fileReferences and
 // sessionReferenceResolver namespaces.
 export type { FileReferenceCandidate } from '@berry-ai/harness-file-reference/types'

@@ -10,7 +10,7 @@ import type { Volatile } from '@deepseek-ai/cordis'
 import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import type { ModelSelection } from '@deepseek-ai/dsh-agent'
-import { ReasoningEffortId } from '@deepseek-ai/dsh-llm'
+import { ReasoningEffortId } from '@berry-ai/harness-llm'
 import type {} from '@berry-ai/harness-config-editor'
 
 declare module '@deepseek-ai/cordis' {

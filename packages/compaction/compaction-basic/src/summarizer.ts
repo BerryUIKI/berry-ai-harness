@@ -5,11 +5,11 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { contentHasImage, BlockAssembler, LlmError } from '@deepseek-ai/dsh-llm'
+import { contentHasImage, BlockAssembler, LlmError } from '@berry-ai/harness-llm'
 import { deepFreeze } from '@berry-ai/harness-util-values'
 import type {
   ContentBlock, FinishReason, GenerateOptions, Message, RequestMessage, TokenUsage, ToolSchema,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 
 interface SummaryConfig {

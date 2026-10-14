@@ -5,7 +5,7 @@
  * @module @deepseek-ai/dsh-sdk-client/types
  */
 
-import type { ContentBlock, ReasoningEffortId } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock, ReasoningEffortId } from '@berry-ai/harness-llm'
 import type { SdkPromptContentBlock } from '@deepseek-ai/dsh-sdk-protocol'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 

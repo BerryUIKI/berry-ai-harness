@@ -11,7 +11,7 @@
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-llm'
+import type {} from '@berry-ai/harness-llm'
 import { assertNever } from '@berry-ai/harness-util-values'
 import { NamedEntries, ScopedLayers, scopeChainOf, scopeOf } from '@deepseek-ai/dsh-scope'
 import type { ScopeKey, ScopeLayer } from '@deepseek-ai/dsh-scope'
@@ -151,7 +151,7 @@ export interface SkillInvocationSource {
   readonly form: 'instructions'
 }
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     /** A user-explicit skill invocation injected by the host. */
     'skill-invocation': SkillInvocationSource

@@ -37,7 +37,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@deepseek-ai/dsh-session'
-- name: '@deepseek-ai/dsh-token-meter'
+- name: '@berry-ai/harness-token-meter'
 - name: '@berry-ai/harness-compaction-tool-result-pruner'
 - name: '@berry-ai/harness-compaction-basic'
 - name: '@berry-ai/harness-command-compact'

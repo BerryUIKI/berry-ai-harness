@@ -1,4 +1,4 @@
-/** Content-block structure helpers. @module @deepseek-ai/dsh-llm/content */
+/** Content-block structure helpers. @module @berry-ai/harness-llm/content */
 
 import type { ContentBlock, ImageBlock, LlmImageRequestBudget, ToolSchema, ToolUpdate, ToolHistory } from './types.ts'
 import type { RequestMessage } from './types.ts'

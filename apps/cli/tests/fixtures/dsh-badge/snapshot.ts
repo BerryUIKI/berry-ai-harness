@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url'
 import { agentEvents, type Agent } from '@deepseek-ai/dsh-agent'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
+import { ToolCallId } from '@berry-ai/harness-llm'
 import { boot, loadOverlayPatches } from '@berry-ai/harness-app-boot'
 import { SessionId } from '@deepseek-ai/dsh-session'
 import type {} from '@berry-ai/harness-skill'

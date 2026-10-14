@@ -52,7 +52,7 @@
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",

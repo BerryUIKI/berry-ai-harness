@@ -8,11 +8,11 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader, { type ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import LlmRuntime, { createMessage, createUserMessage, userAgent } from '@deepseek-ai/dsh-llm'
+import LlmRuntime, { createMessage, createUserMessage, userAgent } from '@berry-ai/harness-llm'
 import AuthorizationService from '@berry-ai/harness-authorization'
 import LocalCredentialProvider from '@berry-ai/harness-credentials-local'
 import { profileComposition } from '../../../settings/settings/tests/profile-composition.ts'
-import * as LlmPiAi from '@deepseek-ai/dsh-llm-pi-ai'
+import * as LlmPiAi from '@berry-ai/harness-llm-pi-ai'
 import { assemble } from './assemble.ts'
 import { closeMockServers, mockServer, textEvents } from './mock-server.ts'
 
@@ -54,7 +54,7 @@ async function loadComposition(): Promise<{ ctx: Context; settingsPath: string }
     '- id: authorization',
     "  name: '@berry-ai/harness-authorization'",
     '- id: llm-pi-ai',
-    "  name: '@deepseek-ai/dsh-llm-pi-ai'",
+    "  name: '@berry-ai/harness-llm-pi-ai'",
     '',
   ].join('\n'))
 
@@ -67,7 +67,7 @@ async function loadComposition(): Promise<{ ctx: Context; settingsPath: string }
     ['test-llm-service', LlmRuntime],
     ['@berry-ai/harness-credentials-local', LocalCredentialProvider],
     ['@berry-ai/harness-authorization', AuthorizationService],
-    ['@deepseek-ai/dsh-llm-pi-ai', LlmPiAi],
+    ['@berry-ai/harness-llm-pi-ai', LlmPiAi],
   ])
   const internal: ModuleLoaderV2 = {
     version: 'v2',

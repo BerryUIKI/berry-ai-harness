@@ -56,7 +56,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-api-gateway": "workspace:*",
     "@berry-ai/harness-compaction": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-host-product-telemetry-otel": "workspace:*",
     "@berry-ai/harness-deepseek-account": "workspace:*",

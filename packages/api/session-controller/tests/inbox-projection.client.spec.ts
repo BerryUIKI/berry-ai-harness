@@ -1,7 +1,7 @@
 /** Inbox projection delivery and queue-operation transport. */
 
 import { describe, expect, onTestFinished } from 'vitest'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
 import type { InboxState } from '@deepseek-ai/dsh-agent/types'
 import type { SessionControlFrame } from '@deepseek-ai/dsh-api-session-controller/types'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'

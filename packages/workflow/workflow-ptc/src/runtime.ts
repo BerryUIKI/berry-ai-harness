@@ -7,7 +7,7 @@
 
 import * as vm from 'node:vm'
 import { brandString } from '@berry-ai/harness-brand'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 import { assertObjectJsonSchema, JsonSchemaError } from '@deepseek-ai/dsh-tools'
 import type { ObjectJsonSchema } from '@deepseek-ai/dsh-tools'

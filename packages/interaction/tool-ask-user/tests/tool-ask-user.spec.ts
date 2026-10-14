@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createToolResultMessage, ToolCallId, type ToolSchema } from '@deepseek-ai/dsh-llm'
+import { createToolResultMessage, ToolCallId, type ToolSchema } from '@berry-ai/harness-llm'
 import AgentRegistry, { type Agent } from '@deepseek-ai/dsh-agent'
 import { Session, SessionId, SessionSeq, SESSION_FORMAT_VERSION, type SessionEvent } from '@deepseek-ai/dsh-session'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'

@@ -5,7 +5,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import { isImageAdmissionError } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentRef, ImageMediaType, SaveImageAttachment } from '@berry-ai/harness-attachment'
 import type { ModelSelection } from '@deepseek-ai/dsh-agent'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 
 /** Raster formats shared by ACP image blocks and the core attachment vocabulary. */
 const IMAGE_MEDIA_TYPES: readonly ImageMediaType[] = [

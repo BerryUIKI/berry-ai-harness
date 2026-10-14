@@ -4,7 +4,7 @@
  * @module @berry-ai/harness-workflow-ptc/types
  */
 
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { ObjectJsonSchema } from '@deepseek-ai/dsh-tools'
 import type { WorkflowMeta } from '@berry-ai/harness-workflow'
 

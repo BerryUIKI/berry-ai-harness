@@ -3,7 +3,7 @@
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { credentialRef } from '@berry-ai/harness-credentials'
 import type {} from '@berry-ai/harness-settings'
-import type { LlmModelInfo } from '@deepseek-ai/dsh-llm'
+import type { LlmModelInfo } from '@berry-ai/harness-llm'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ModelCatalog,

@@ -2,11 +2,11 @@
 import assert from 'node:assert/strict'
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/dsh-agent'
-import { createUserMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
 import { resolveAdapterOptions } from '../../src/config.ts'
 import { serialize } from '../../src/serialize.ts'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'plugin:messages-input-history-snapshot': { kind: 'plugin:messages-input-history-snapshot' }
   }

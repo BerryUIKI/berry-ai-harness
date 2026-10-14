@@ -9,7 +9,7 @@
 
 import { Context } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/dsh-agent'
-import { createUserMessage, HarnessError, type MessageId, type ToolCallId, type UserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, HarnessError, type MessageId, type ToolCallId, type UserMessage } from '@berry-ai/harness-llm'
 import type { Session } from '@deepseek-ai/dsh-session'
 import { scopeTarget } from '@deepseek-ai/dsh-scope'
 import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'

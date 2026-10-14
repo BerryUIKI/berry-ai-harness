@@ -6,7 +6,7 @@ import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-test
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import * as FsPolicy from '@berry-ai/harness-fs-observation-policy'
 import * as ToolFs from '@berry-ai/harness-tool-fs'
-import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
+import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 
 /**
  * Build the real fs-tool stack for with-key e2e tests. Agents have no session

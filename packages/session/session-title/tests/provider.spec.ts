@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import LlmRuntime, { createUserMessage, markAgentLoopRequest } from '@deepseek-ai/dsh-llm'
+import LlmRuntime, { createUserMessage, markAgentLoopRequest } from '@berry-ai/harness-llm'
 import { deepFreeze } from '@berry-ai/harness-util-values'
 import SessionStore, { SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'

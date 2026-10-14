@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { PROTOCOL_VERSION } from '@agentclientprotocol/sdk'
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { StreamChunk } from '@deepseek-ai/dsh-llm'
+import type { StreamChunk } from '@berry-ai/harness-llm'
 import { SessionId } from '@deepseek-ai/dsh-session'
 import { makeBridgeHarness, type BridgeHarness } from './harness.ts'
 

@@ -12,7 +12,7 @@ import type {
   WorkflowAgentEndInfo, WorkflowAgentInfo, WorkflowResult, WorkflowRun,
   WorkflowRunId as WorkflowRunIdType, WorkflowStartRequest,
 } from '@berry-ai/harness-workflow'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
+import { ToolCallId } from '@berry-ai/harness-llm'
 import type { JobId } from '@berry-ai/harness-jobs'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'

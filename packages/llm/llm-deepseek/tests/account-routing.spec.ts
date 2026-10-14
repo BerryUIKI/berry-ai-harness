@@ -2,15 +2,15 @@
 import { afterEach, expect, it, vi } from 'vitest'
 import { installAccountTaskCancellation, type DeepSeekAccount } from '@berry-ai/harness-deepseek-account'
 import { Context } from '@deepseek-ai/cordis'
-import LlmRuntime, { createUserMessage, LlmAdapter, type GenerateOptions, type StreamChunk, ToolCallId } from '@deepseek-ai/dsh-llm'
+import LlmRuntime, { createUserMessage, LlmAdapter, type GenerateOptions, type StreamChunk, ToolCallId } from '@berry-ai/harness-llm'
 import AgentRegistry, { type Agent } from '@deepseek-ai/dsh-agent'
 import AgentLoop from '@deepseek-ai/dsh-agent-loop'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
-import * as DeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
-import * as AccountProvider from '@deepseek-ai/dsh-llm-deepseek-account'
+import * as DeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
+import * as AccountProvider from '@berry-ai/harness-llm-deepseek-account'
 import { assemble } from './assemble.ts'
 
 const contexts: Context[] = []

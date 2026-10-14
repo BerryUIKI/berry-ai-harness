@@ -2,8 +2,8 @@ import { describe, expect, it, vi } from 'vitest'
 import type {
   SessionEventLike, SessionEventLikeEntry, SessionLiveEventEntry,
 } from '@deepseek-ai/dsh-api-session-controller/client'
-import { LlmAttemptId, ToolCallId } from '@deepseek-ai/dsh-llm/brand'
-import type { StreamChunk } from '@deepseek-ai/dsh-llm'
+import { LlmAttemptId, ToolCallId } from '@berry-ai/harness-llm/brand'
+import type { StreamChunk } from '@berry-ai/harness-llm'
 import { SessionSeq } from '@deepseek-ai/dsh-session/types'
 import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
 import {

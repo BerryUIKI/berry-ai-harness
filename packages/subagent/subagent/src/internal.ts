@@ -5,7 +5,7 @@
  */
 
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { ContentBlock, MessageId, MessageSource } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock, MessageId, MessageSource } from '@berry-ai/harness-llm'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 import type { ToolDefinition } from '@deepseek-ai/dsh-tools'
 import type SubagentRuntime from './index.ts'

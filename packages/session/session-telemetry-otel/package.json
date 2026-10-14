@@ -33,7 +33,7 @@
   "peerDependencies": {
     "@berry-ai/harness-command-feedback": "workspace:*",
     "@berry-ai/harness-message-feedback": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-telemetry": "workspace:*",
     "@berry-ai/harness-anonymous-user-id": "workspace:*",
@@ -47,7 +47,7 @@
     "@berry-ai/harness-bash-local": "workspace:*",
     "@berry-ai/harness-command-feedback": "workspace:*",
     "@berry-ai/harness-message-feedback": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-loader-smoke": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-checkpoint-policy": "workspace:*",

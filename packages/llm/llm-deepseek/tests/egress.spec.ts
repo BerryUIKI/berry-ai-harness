@@ -36,9 +36,9 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
-import DeepSeekLlmApiExtensionRegistry from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
-import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
+import LlmRuntime from '@berry-ai/harness-llm'
+import DeepSeekLlmApiExtensionRegistry from '@berry-ai/harness-deepseek-llm-api-extensions'
+import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 
 let home: string
 beforeAll(() => {

@@ -22,7 +22,7 @@ import {
   type SessionTelemetrySeverity,
   type SessionTelemetrySharingStatus,
 } from '@deepseek-ai/dsh-session-telemetry'
-import { APP_IDENTITY } from '@deepseek-ai/dsh-llm'
+import { APP_IDENTITY } from '@berry-ai/harness-llm'
 import { getOrCreateAnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import type { LogExporterOptions, SessionLogProcessorOptions, SessionLogReporter } from '@berry-ai/harness-otel'
 import { SeverityNumber } from '@opentelemetry/api-logs'

@@ -3,10 +3,10 @@
 // live readers rather than time-point views.
 
 import type { CommandId } from '@berry-ai/harness-commands/brand'
-import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm/types'
+import type { MessageId } from '@berry-ai/harness-llm/brand'
+import type { ContentBlock } from '@berry-ai/harness-llm/types'
 import type { ImageAttachmentRef } from '@berry-ai/harness-attachment'
-import type { LlmRetryEventData } from '@deepseek-ai/dsh-llm-retry/types'
+import type { LlmRetryEventData } from '@berry-ai/harness-llm-retry/types'
 import type { TodoItem } from '@berry-ai/harness-tool-todo/client'
 import type { ContextProducerView, KnownContextForm } from './context-producer.ts'
 import type { PartialArguments } from '@berry-ai/harness-util-values'

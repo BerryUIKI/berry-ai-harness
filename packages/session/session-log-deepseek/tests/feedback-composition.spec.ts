@@ -10,9 +10,9 @@ import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import MessageFeedback from '@berry-ai/harness-message-feedback'
 import { recordFeedback } from '@berry-ai/harness-command-feedback'
-import LlmRuntime, { createAssistantMessage, createUserMessage } from '@deepseek-ai/dsh-llm'
-import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
-import DeepSeekLlmApiExtensions from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
+import LlmRuntime, { createAssistantMessage, createUserMessage } from '@berry-ai/harness-llm'
+import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
+import DeepSeekLlmApiExtensions from '@berry-ai/harness-deepseek-llm-api-extensions'
 import { startMockLlmServer, type MockLlmServer, type MockLlmServerOptions } from '@deepseek-ai/dsh-llm-mock-server'
 import * as SessionLogDeepSeek from '../src/index.ts'
 import type { DeepSeekSessionLogExtension } from '../src/types.ts'
@@ -43,9 +43,9 @@ async function boot(
     ['@deepseek-ai/dsh-session', SessionStore],
     ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlSessionPersistence],
     ['@berry-ai/harness-message-feedback', MessageFeedback],
-    ['@deepseek-ai/dsh-llm', LlmRuntime],
-    ['@deepseek-ai/dsh-llm-deepseek-api-key', LlmDeepSeek],
-    ['@deepseek-ai/dsh-deepseek-llm-api-extensions', DeepSeekLlmApiExtensions],
+    ['@berry-ai/harness-llm', LlmRuntime],
+    ['@berry-ai/harness-llm-deepseek-api-key', LlmDeepSeek],
+    ['@berry-ai/harness-deepseek-llm-api-extensions', DeepSeekLlmApiExtensions],
     ['@deepseek-ai/dsh-session-log-deepseek', SessionLogDeepSeek],
   ])
   const config = join(root, 'cordis.yml')
@@ -55,7 +55,7 @@ async function boot(
       ? { config: { root: join(root!, 'sessions'), compression: 'none' } }
       : name === '@berry-ai/harness-message-feedback'
         ? { config: { maxNoteBytes: 1024 } }
-        : name === '@deepseek-ai/dsh-llm-deepseek-api-key'
+        : name === '@berry-ai/harness-llm-deepseek-api-key'
           ? { config: { baseURL: server!.baseURL } }
           : name === '@deepseek-ai/dsh-session-log-deepseek'
             ? { config: sessionLog }

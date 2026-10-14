@@ -1,7 +1,7 @@
 /** Paid selection, independent native requests, audit-before-I/O and cancellation. */
 import { Context, FiberState } from '@deepseek-ai/cordis'
-import { ReasoningEffortId, createUserMessage, createAssistantMessage, type PreparedLlmCall } from '@deepseek-ai/dsh-llm'
-import { Config as OfficialConfig } from '@deepseek-ai/dsh-llm-deepseek-api-key'
+import { ReasoningEffortId, createUserMessage, createAssistantMessage, type PreparedLlmCall } from '@berry-ai/harness-llm'
+import { Config as OfficialConfig } from '@berry-ai/harness-llm-deepseek-api-key'
 import { pluginRecordOf, SessionId } from '@deepseek-ai/dsh-session'
 import { TimeoutReason } from '@berry-ai/harness-timeout'
 import { afterEach, describe, expect, it, vi } from 'vitest'
@@ -114,7 +114,7 @@ describe('native Flash translation', () => {
   })
 
   it('excludes pi-ai ownership, non-native settings paths, unregistered routes and inactive native rows', async () => {
-    const b = await paidFixture(cleanups, { officialName: '@deepseek-ai/dsh-llm-pi-ai' })
+    const b = await paidFixture(cleanups, { officialName: '@berry-ai/harness-llm-pi-ai' })
     expect(await b.ctx.translator.availableProviders()).toEqual(['bing', 'google', 'deepseek-account'])
     await expect(b.translate('deepseek-official')).rejects.toMatchObject({ code: 'TRANSLATION_UNAVAILABLE' })
     expect(b.requests).toEqual([])

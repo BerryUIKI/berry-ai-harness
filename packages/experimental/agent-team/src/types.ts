@@ -1,8 +1,8 @@
 /** Public Agent Teams identities, durable records, and service request values. */
 
-import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
+import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { Branded } from '@berry-ai/harness-brand'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm/types'
+import type { ContentBlock } from '@berry-ai/harness-llm/types'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 
 /** Identifies the implicit team rooted at one top-level Session. */
@@ -143,7 +143,7 @@ export interface TeamMessageSource {
   readonly senderName: string
 }
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'team-message': TeamMessageSource
   }

@@ -12,10 +12,10 @@ import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
-import { createUserMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
-import { estimateContent } from '@deepseek-ai/dsh-token-meter/estimate'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
+import { estimateContent } from '@berry-ai/harness-token-meter/estimate'
+import type { ContentBlock } from '@berry-ai/harness-llm'
+import type { ContextFormed } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
@@ -31,7 +31,7 @@ import Sandbox from '@berry-ai/harness-sandbox-local'
 import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
 import SessionProjections from '@deepseek-ai/dsh-session-projection'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
     'test': { kind: 'test' } & ContextFormed
   }

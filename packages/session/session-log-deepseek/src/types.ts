@@ -69,7 +69,7 @@ export interface DeepSeekSessionLogExtension {
   readonly events: readonly DeepSeekSessionLogWireEvent[]
 }
 
-declare module '@deepseek-ai/dsh-deepseek-llm-api-extensions/types' {
+declare module '@berry-ai/harness-deepseek-llm-api-extensions/types' {
   interface DeepSeekLlmApiExtensionMap {
     dsh_session_log: DeepSeekSessionLogExtension
   }

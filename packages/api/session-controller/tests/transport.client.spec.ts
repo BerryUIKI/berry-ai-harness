@@ -6,7 +6,7 @@ import {
 } from '@deepseek-ai/dsh-api-gateway/client'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { streamHandle } from '@deepseek-ai/dsh-remote-mock'
-import { LlmAttemptId } from '@deepseek-ai/dsh-llm'
+import { LlmAttemptId } from '@berry-ai/harness-llm'
 import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session/types'
 import type { RemoteResult, RemoteStreamHandle } from '@berry-ai/harness-typert-protocol'
 import {

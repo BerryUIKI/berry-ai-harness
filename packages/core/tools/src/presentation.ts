@@ -5,7 +5,7 @@
  * @module @deepseek-ai/dsh-tools/src/presentation
  */
 
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 
 /**
  * Category of a tool call, used by a UI to pick an icon or treatment. The

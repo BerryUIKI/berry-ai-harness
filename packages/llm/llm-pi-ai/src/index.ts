@@ -11,7 +11,7 @@
  *
  * ```yaml
  * - id: llm
- *   name: '@deepseek-ai/dsh-llm-pi-ai'
+ *   name: '@berry-ai/harness-llm-pi-ai'
  *   config:
  *     providers:
  *       # Catalog route: everything but the credential comes from pi-ai.
@@ -52,7 +52,7 @@
  *               max: ultra
  * ```
  *
- * @module @deepseek-ai/dsh-llm-pi-ai
+ * @module @berry-ai/harness-llm-pi-ai
  */
 import type {} from '@berry-ai/harness-settings'
 
@@ -60,8 +60,8 @@ import type {} from '@deepseek-ai/cordis-plugin-loader'
 
 import type { Context } from '@deepseek-ai/cordis'
 import { launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
-import { assertUsableApiKey, LlmError, resolveImageAttachmentAccess } from '@deepseek-ai/dsh-llm'
-import type { AdapterRegistrationHandle, DirectoryRegistrationHandle, LlmConfigurableProvider } from '@deepseek-ai/dsh-llm'
+import { assertUsableApiKey, LlmError, resolveImageAttachmentAccess } from '@berry-ai/harness-llm'
+import type { AdapterRegistrationHandle, DirectoryRegistrationHandle, LlmConfigurableProvider } from '@berry-ai/harness-llm'
 import type {} from '@berry-ai/harness-fs'
 import { deepEqualJson } from '@berry-ai/harness-util-values'
 import { PiAiAdapter } from './adapter.ts'

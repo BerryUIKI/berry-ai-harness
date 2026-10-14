@@ -11,7 +11,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { delimiter as pathDelimiter } from 'node:path'
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-compaction'
-import type {} from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
+import type {} from '@berry-ai/harness-deepseek-llm-api-extensions'
 import { SESSION_FORMAT_VERSION, SessionLogOffset, type SessionEvent } from '@deepseek-ai/dsh-session'
 import type { SessionLogOffset as SessionLogOffsetType } from '@deepseek-ai/dsh-session'
 import {
@@ -33,8 +33,8 @@ import type {
   SystemPromptUpdate,
   TokenUsage,
   ToolUpdate,
-} from '@deepseek-ai/dsh-llm'
-import { LlmAdapter, LlmError, ReasoningEffortId, expandAssistantStream, offloadedImageText, requestImageHandleText, resolveRetryPolicy } from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
+import { LlmAdapter, LlmError, ReasoningEffortId, expandAssistantStream, offloadedImageText, requestImageHandleText, resolveRetryPolicy } from '@berry-ai/harness-llm'
 import { assertNever } from '@berry-ai/harness-util-values'
 
 const PACKED_CHUNK_ROW_TYPES = new Set(['text-chunks', 'reasoning-chunks', 'tool-call-chunks'])

@@ -3,7 +3,7 @@
 /* jscpd:ignore-start -- both shipped providers import the same shared packages. */
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { LlmResolvedModelInfo, ReasoningEffortId } from '@deepseek-ai/dsh-llm'
+import type { LlmResolvedModelInfo, ReasoningEffortId } from '@berry-ai/harness-llm'
 import { assertNever } from '@berry-ai/harness-util-values'
 import {
   normalizeSessionTitle,

@@ -1,14 +1,14 @@
 /**
  * Single replay-aware token-meter service for request and surface pressure.
  *
- * @module @deepseek-ai/dsh-token-meter
+ * @module @berry-ai/harness-token-meter
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-compaction-image-offload/projection'
 import z from '@deepseek-ai/schemastery'
-import { assembleAssistantStream } from '@deepseek-ai/dsh-llm'
-import type { LlmImageRequestPricing, LlmRuntime, Message, TokenUsage } from '@deepseek-ai/dsh-llm'
+import { assembleAssistantStream } from '@berry-ai/harness-llm'
+import type { LlmImageRequestPricing, LlmRuntime, Message, TokenUsage } from '@berry-ai/harness-llm'
 import { deepFreeze } from '@berry-ai/harness-util-values'
 import type {
   EpochHeader,

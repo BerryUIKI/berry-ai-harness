@@ -9,9 +9,9 @@ import type {
   SaveImageAttachment,
   StoredImageAttachment,
 } from '@berry-ai/harness-attachment'
-import LlmRuntime, { createToolResultMessage, createUserMessage, CONTEXT_WINDOW_EXCEEDED_CODE, LlmError, ReasoningEffortId, userAgent } from '@deepseek-ai/dsh-llm'
-import * as LlmPiAi from '@deepseek-ai/dsh-llm-pi-ai'
-import { PiAiAdapter } from '@deepseek-ai/dsh-llm-pi-ai'
+import LlmRuntime, { createToolResultMessage, createUserMessage, CONTEXT_WINDOW_EXCEEDED_CODE, LlmError, ReasoningEffortId, userAgent } from '@berry-ai/harness-llm'
+import * as LlmPiAi from '@berry-ai/harness-llm-pi-ai'
+import { PiAiAdapter } from '@berry-ai/harness-llm-pi-ai'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import { getBuiltinModels } from '@earendil-works/pi-ai/providers/all'
 import { DEFAULT_MAX_REQUEST_IMAGE_BYTES, resolveProfiles } from '../src/config.ts'

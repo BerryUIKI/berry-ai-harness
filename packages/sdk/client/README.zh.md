@@ -33,7 +33,7 @@ kind: "package-library"
 
 ```ts
 import { DeepSeekHarness } from '@deepseek-ai/dsh-sdk-client'
-import { ReasoningEffortId } from '@deepseek-ai/dsh-llm'
+import { ReasoningEffortId } from '@berry-ai/harness-llm'
 
 await using harness = new DeepSeekHarness({
   profile: 'sdk',

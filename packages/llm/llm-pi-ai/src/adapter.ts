@@ -43,7 +43,7 @@ import {
   LlmAdapter,
   LlmError,
   ReasoningEffortId,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import type {
   GenerateOptions,
   ImageAttachmentAccess,
@@ -55,7 +55,7 @@ import type {
   ResolvedRetryPolicy,
   StreamChunk,
   ToolSchema,
-} from '@deepseek-ai/dsh-llm'
+} from '@berry-ai/harness-llm'
 import type { AttachmentStore, ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import { idleWatchdog, timeoutOf } from '@berry-ai/harness-timeout'
 import type { ResolvedPiAiProviderProfile } from './config.ts'

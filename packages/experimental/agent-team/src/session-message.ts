@@ -1,6 +1,6 @@
 /** Durable Session-message acceptance checks for teammate provisioning. */
 
-import type { UserMessage } from '@deepseek-ai/dsh-llm'
+import type { UserMessage } from '@berry-ai/harness-llm'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 
 type InboxProjection = Record<'next-turn' | 'next-step', UserMessage[]>

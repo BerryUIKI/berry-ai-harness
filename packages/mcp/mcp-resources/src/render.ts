@@ -4,7 +4,7 @@
  * @module @berry-ai/harness-mcp-resources
  */
 
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
+import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 
 /**

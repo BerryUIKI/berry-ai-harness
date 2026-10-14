@@ -11,8 +11,8 @@ import ComputerUse from '@berry-ai/harness-computer-use'
 import { ComputerUseProviderName } from '@berry-ai/harness-computer-use/brand'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
-import LlmRuntime, { LlmAdapter, ToolCallId, createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@deepseek-ai/dsh-llm'
+import LlmRuntime, { LlmAdapter, ToolCallId, createUserMessage } from '@berry-ai/harness-llm'
+import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import AgentLoop from '@deepseek-ai/dsh-agent-loop'
@@ -63,7 +63,7 @@ async function load(mode?: string): Promise<{ ctx: Context; root: string; model:
     ['@berry-ai/harness-computer-use', ComputerUse],
     ['@deepseek-ai/dsh-system-prompt', SystemPrompt],
     ['@deepseek-ai/dsh-tools', ToolRuntime],
-    ['@deepseek-ai/dsh-llm', LlmRuntime],
+    ['@berry-ai/harness-llm', LlmRuntime],
     ['@deepseek-ai/dsh-session', SessionStore],
     ['@deepseek-ai/dsh-agent', AgentRegistry],
     ['@deepseek-ai/dsh-agent-loop', AgentLoop],

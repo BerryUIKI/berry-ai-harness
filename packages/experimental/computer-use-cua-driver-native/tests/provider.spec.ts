@@ -6,7 +6,7 @@ import ComputerUseRegistry from '@berry-ai/harness-computer-use'
 import { ComputerUseProviderName } from '@berry-ai/harness-computer-use/brand'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
+import { ToolCallId } from '@berry-ai/harness-llm'
 import * as NativeProvider from '../src/index.ts'
 import { catalog, fixture, resetFixture } from './fixtures/cua-driver.ts'
 

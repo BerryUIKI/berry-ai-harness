@@ -2,7 +2,7 @@
 # the explicit replay script. The SDK waits for each accepted title before sending
 # the next human message.
 - id: llm-deepseek
-  name: '@deepseek-ai/dsh-llm-deepseek-api-key'
+  name: '@berry-ai/harness-llm-deepseek-api-key'
   disabled: true
 
 - id: agent-default-model
