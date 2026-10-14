@@ -9,7 +9,7 @@ import { promisify } from 'node:util'
 import { Context } from '@deepseek-ai/cordis'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import { deadline } from '@berry-ai/harness-timeout'
-import { canonicalizeWorkspace, readHostSource } from '@deepseek-ai/dsh-lsp-stdio'
+import { canonicalizeWorkspace, readHostSource } from '@berry-ai/harness-lsp-stdio'
 
 const execFileAsync = promisify(execFile)
 

@@ -3,7 +3,7 @@ description: "The LSP capability seam (ctx.lsp): provider selection by file exte
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-lsp
+# @berry-ai/harness-lsp
 
 English | [中文](README.zh.md)
 
@@ -38,9 +38,9 @@ The seam needs a provider and a consumer to do anything. A minimal composition m
 ```yaml
 - name: '@berry-ai/harness-fs-local'
 - name: '@berry-ai/harness-subprocess-local'
-- name: '@deepseek-ai/dsh-lsp'
-- name: '@deepseek-ai/dsh-lsp-stdio'
-- name: '@deepseek-ai/dsh-tool-lsp'
+- name: '@berry-ai/harness-lsp'
+- name: '@berry-ai/harness-lsp-stdio'
+- name: '@berry-ai/harness-tool-lsp'
 ```
 
 Server commands, extension mappings, and the filesystem/subprocess pairing are configured in the provider and tool packages; see [dsh-lsp-stdio](../lsp-stdio/README.md) and [dsh-tool-lsp](../tool-lsp/README.md).

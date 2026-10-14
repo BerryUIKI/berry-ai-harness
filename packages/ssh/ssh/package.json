@@ -77,8 +77,8 @@
     "@berry-ai/harness-fs-ssh": "workspace:*",
     "@berry-ai/harness-subprocess-ssh": "workspace:*",
     "@berry-ai/harness-sandbox-ssh": "workspace:*",
-    "@deepseek-ai/dsh-lsp": "workspace:*",
-    "@deepseek-ai/dsh-lsp-stdio": "workspace:*",
+    "@berry-ai/harness-lsp": "workspace:*",
+    "@berry-ai/harness-lsp-stdio": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*"
   }

@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { fileURLToPath } from 'node:url'
-import { LspConnection } from '@deepseek-ai/dsh-lsp-stdio'
-import type { ConnectionWriter } from '@deepseek-ai/dsh-lsp-stdio/src/connection.ts'
+import { LspConnection } from '@berry-ai/harness-lsp-stdio'
+import type { ConnectionWriter } from '@berry-ai/harness-lsp-stdio/src/connection.ts'
 import { scrubbedParentEnv } from '@berry-ai/harness-subprocess'
 import { spawnSubprocess } from '@berry-ai/harness-subprocess-local/src/spawn.ts'
 

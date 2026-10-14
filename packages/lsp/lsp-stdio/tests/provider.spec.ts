@@ -5,9 +5,9 @@ import { delimiter, join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
-import Lsp, { type LspQueryRequest } from '@deepseek-ai/dsh-lsp'
-import * as LspLocal from '@deepseek-ai/dsh-lsp-stdio'
-import type { Config, LspLocalServerConfig } from '@deepseek-ai/dsh-lsp-stdio'
+import Lsp, { type LspQueryRequest } from '@berry-ai/harness-lsp'
+import * as LspLocal from '@berry-ai/harness-lsp-stdio'
+import type { Config, LspLocalServerConfig } from '@berry-ai/harness-lsp-stdio'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 
 let root: string

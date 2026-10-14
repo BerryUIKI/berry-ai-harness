@@ -7,15 +7,15 @@
  * imports no provider.
  *
  * Namespace plugin (named exports, no default export).
- * @module @deepseek-ai/dsh-tool-lsp
+ * @module @berry-ai/harness-tool-lsp
  */
 
 import type {} from '@deepseek-ai/dsh-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { defineTool } from '@deepseek-ai/dsh-tools'
-import { LspError } from '@deepseek-ai/dsh-lsp'
-import type {} from '@deepseek-ai/dsh-lsp'
+import { LspError } from '@berry-ai/harness-lsp'
+import type {} from '@berry-ai/harness-lsp'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import { assertNever } from '@berry-ai/harness-util-values'
 import {

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-lsp-stdio",
+  "name": "@berry-ai/harness-lsp-stdio",
   "description": "Generic stdio language-server provider for the DeepSeek Harness LSP capability seam (ctx.lsp) — spawns configured servers, translates JSON-RPC, and serves transient-open goToDefinition/findReferences/goToImplementation/hover queries in the host filesystem namespace",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -31,7 +31,7 @@
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-lsp": "workspace:*",
+    "@berry-ai/harness-lsp": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*"
   },
@@ -45,7 +45,7 @@
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-lsp": "workspace:*",
+    "@berry-ai/harness-lsp": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
