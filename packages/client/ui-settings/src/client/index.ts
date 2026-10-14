@@ -7,7 +7,7 @@ import type {} from '@deepseek-ai/dsh-api-remotes/client'
 // artifact into the Host graph (rationale beside the same pair in
 // config-form.ts).
 import type {} from '@deepseek-ai/dsh-api-remotes/types'
-import type {} from '@deepseek-ai/dsh-settings/types'
+import type {} from '@berry-ai/harness-settings/types'
 import { SettingsSchemaService } from './schema.ts'
 import { ConfigForms } from './config-form.ts'
 import { SettingsDescribeMirror } from './settings-mirror.ts'

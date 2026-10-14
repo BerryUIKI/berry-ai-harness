@@ -482,7 +482,7 @@ describe('SessionArchiveConfirmDialog', () => {
 
 // A provider outside this package may merge its own family into the kind map;
 // the dialog must describe it without knowing its copy.
-declare module '@deepseek-ai/dsh-workspace/types' {
+declare module '@berry-ai/harness-workspace/types' {
   interface SessionActivityKindMap {
     probe: true
   }

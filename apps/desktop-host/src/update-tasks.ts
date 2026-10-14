@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/dsh-agent'
-import type {} from '@deepseek-ai/dsh-jobs'
+import type {} from '@berry-ai/harness-jobs'
 import type {} from '@deepseek-ai/dsh-client-connection'
 
 /**

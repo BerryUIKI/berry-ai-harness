@@ -1393,7 +1393,7 @@ describe('first-use Workspace preparation', () => {
 })
 
 // The registry knows no family: the providers merge theirs, and this suite merges its own.
-declare module '@deepseek-ai/dsh-workspace/types' {
+declare module '@berry-ai/harness-workspace/types' {
   interface SessionActivityKindMap {
     probe: true
     'probe-items': true

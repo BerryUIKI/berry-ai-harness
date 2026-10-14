@@ -28,6 +28,6 @@
       Verify your work by running the code or tests. Keep answers brief and factual.
 
 - id: jobs
-  name: '@deepseek-ai/dsh-jobs-local'
+  name: '@berry-ai/harness-jobs-local'
   config:
     maxConcurrentJobsPerOwner: 1

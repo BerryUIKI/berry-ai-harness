@@ -89,7 +89,7 @@
       name: '@deepseek-ai/dsh-client-ui-open-in-app'
 
     - id: workspace
-      name: '@deepseek-ai/dsh-workspace'
+      name: '@berry-ai/harness-workspace'
 
     - id: session-reference
       name: '@deepseek-ai/dsh-session-reference'

@@ -5,7 +5,7 @@
  * collected to the owning agent: injected into a busy owner's next step, or
  * opening a turn on an idle one under the default `wakeup` delivery, unbounded
  * unless `maxConsecutiveWakes` caps it per owner.
- * @module @deepseek-ai/dsh-tool-jobs
+ * @module @berry-ai/harness-tool-jobs
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -15,8 +15,8 @@ import type { ContextFormed } from '@deepseek-ai/dsh-llm'
 import { TextRetainer } from '@berry-ai/harness-output-retention'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import type { GenericCallView, ToolDefinition, ToolExecution } from '@deepseek-ai/dsh-tools'
-import { JobId } from '@deepseek-ai/dsh-jobs'
-import type { JobView, JobRead } from '@deepseek-ai/dsh-jobs'
+import { JobId } from '@berry-ai/harness-jobs'
+import type { JobView, JobRead } from '@berry-ai/harness-jobs'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import type {} from '@deepseek-ai/dsh-agent'
 import { publicJob, renderModelDelta, statusLine } from './render.ts'

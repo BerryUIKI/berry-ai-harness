@@ -7,8 +7,8 @@ import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import Storage from '@berry-ai/harness-storage'
 import { DomainFacility } from '@berry-ai/harness-storage-domain'
 import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
-import WorkspaceRegistry from '@deepseek-ai/dsh-workspace'
-import type { WorkspaceId } from '@deepseek-ai/dsh-workspace/types'
+import WorkspaceRegistry from '@berry-ai/harness-workspace'
+import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import WorkspaceController from '../src/index.ts'
 import { DEFAULT_WORKSPACE_DIRECTORY } from '../src/default-workspace.ts'
 import { WorkspaceFeed } from '../src/feed.ts'
@@ -16,7 +16,7 @@ import type { WorkspaceFollowFrame } from '../src/types.ts'
 import { MemoryStorageBackend } from '../../../storage/storage-domain/tests/helpers/memory-backend.ts'
 
 // The controller relays whatever families the providers report; this suite merges its own.
-declare module '@deepseek-ai/dsh-workspace/types' {
+declare module '@berry-ai/harness-workspace/types' {
   interface SessionActivityKindMap {
     probe: true
     'probe-items': true

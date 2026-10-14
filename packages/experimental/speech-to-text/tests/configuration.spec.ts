@@ -5,7 +5,7 @@ import { join } from 'node:path'
 import { expect, it } from 'vitest'
 import { boot, initProfile, readProfilePatches, type ProfileContext } from '@berry-ai/harness-app-boot'
 import ConfigEditor from '@berry-ai/harness-config-editor'
-import Settings from '@deepseek-ai/dsh-settings'
+import Settings from '@berry-ai/harness-settings'
 import SpeechToText from '../src/index.ts'
 import type { SpeechProviderId } from '../src/types.ts'
 

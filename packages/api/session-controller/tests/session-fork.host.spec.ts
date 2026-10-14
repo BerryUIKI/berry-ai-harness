@@ -14,7 +14,7 @@ import type { Session, SessionEvent, SessionHeader, SessionId } from '@deepseek-
 import { SessionPersistenceRevision, type SessionPersistenceSnapshot } from '@deepseek-ai/dsh-session-persistence'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import TokenMeter from '@deepseek-ai/dsh-token-meter'
-import type { Workspace } from '@deepseek-ai/dsh-workspace'
+import type { Workspace } from '@berry-ai/harness-workspace'
 import {
   createSessionTestRemote, installSessionReadTestServices, testSessionPersistence,
 } from './test-remote.ts'

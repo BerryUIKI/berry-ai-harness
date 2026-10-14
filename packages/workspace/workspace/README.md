@@ -3,7 +3,7 @@ description: "Workspace entity registry (ctx.workspaceRegistry) for hosts choosi
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-workspace
+# @berry-ai/harness-workspace
 
 English | [中文](README.zh.md)
 
@@ -43,7 +43,7 @@ The package needs a session store, a session persistence backend, and the storag
 - name: '@berry-ai/harness-storage-domain'
   config:
     backend: json
-- name: '@deepseek-ai/dsh-workspace'
+- name: '@berry-ai/harness-workspace'
 ```
 
 With these rows mounted, creating a project shows up in the list immediately and survives a restart; the first start also groups existing sessions by the directory they ran in. If a required peer is missing, the workspace feature stays unavailable until it is mounted.

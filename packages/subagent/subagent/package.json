@@ -73,7 +73,7 @@
     "@deepseek-ai/dsh-user-approval": "workspace:*",
     "@berry-ai/harness-util-time": "workspace:*",
     "@deepseek-ai/dsh-permission-presets": "workspace:*",
-    "@deepseek-ai/dsh-workspace": "workspace:*",
+    "@berry-ai/harness-workspace": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
   },
   "peerDependenciesMeta": {
@@ -98,7 +98,7 @@
     "@deepseek-ai/dsh-session-query": {
       "optional": true
     },
-    "@deepseek-ai/dsh-workspace": {
+    "@berry-ai/harness-workspace": {
       "optional": true
     },
     "@deepseek-ai/dsh-user-approval": {
@@ -124,7 +124,7 @@
     "@deepseek-ai/dsh-user-approval": "workspace:*",
     "@berry-ai/harness-util-time": "workspace:*",
     "@deepseek-ai/dsh-permission-presets": "workspace:*",
-    "@deepseek-ai/dsh-workspace": "workspace:*",
+    "@berry-ai/harness-workspace": "workspace:*",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/dsh-agent-loop": "workspace:*",

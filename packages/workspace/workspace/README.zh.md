@@ -3,7 +3,7 @@ description: "面向选择、挂载或排查持久 workspace 记录与会话头�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-workspace
+# @berry-ai/harness-workspace
 
 [English](README.md) | 中文
 
@@ -43,7 +43,7 @@ kind: "package-reference"
 - name: '@berry-ai/harness-storage-domain'
   config:
     backend: json
-- name: '@deepseek-ai/dsh-workspace'
+- name: '@berry-ai/harness-workspace'
 ```
 
 挂载这些行之后，创建项目会立即出现在列表中并在重启后保留；首次启动还会按会话运行的目录对既有会话分组。如果缺少某个必需依赖，workspace 功能会一直不可用，直到它被挂载。

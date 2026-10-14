@@ -54,7 +54,7 @@
  *
  * @module @deepseek-ai/dsh-llm-pi-ai
  */
-import type {} from '@deepseek-ai/dsh-settings'
+import type {} from '@berry-ai/harness-settings'
 
 import type {} from '@deepseek-ai/cordis-plugin-loader'
 

@@ -38,7 +38,7 @@ A code has exactly one declaration site, and the site follows from both who prod
 
 - **Carrier codes**: `gateway/bad-request`, `gateway/cancelled`, and `gateway/internal` are declared by the protocol and reachable everywhere.
 - **Gateway assembly codes**: the 17 `gateway/*` codes are declared in `packages/api/gateway/src/remote-error-codes.ts` with the uniform `TypertGatewayFaultDetails { endpoint, field? }` details; that module is face-neutral and each face imports it, so both programs see the same entries.
-- **Produced by several packages**: when two or more packages throw the same code, the declaration lands in the lowest layer both already depend on. `session/not-found` lands in `@deepseek-ai/dsh-session` (session-controller and workspace-controller both depend on it), and `workspace/not-found` lands in `@deepseek-ai/dsh-workspace` (no dependency edge exists between the two API packages, so the capability package is their only shared layer).
+- **Produced by several packages**: when two or more packages throw the same code, the declaration lands in the lowest layer both already depend on. `session/not-found` lands in `@deepseek-ai/dsh-session` (session-controller and workspace-controller both depend on it), and `workspace/not-found` lands in `@berry-ai/harness-workspace` (no dependency edge exists between the two API packages, so the capability package is their only shared layer).
 - **Single producer**: a code only one package throws lands in that producer. `subagent/not-found` and `agent-preset/conflict` therefore live in session-controller — it is their only thrower in the repository, and neither the subagent nor the agent-presets table declares them.
 
 What two domains share is validation logic, not a code. `session/invalid-time-zone` and `subagent/invalid-time-zone` are two codes each declared and thrown by its own domain, and both endpoints canonicalize through `canonicalClientTimeZone()` from `@deepseek-ai/dsh-util-time`; no client branches on this code, so splitting it costs nothing while merging it would recreate the reachability problem.
@@ -77,7 +77,7 @@ The carrier keeps only the open wire shape. `ConnectionRpcFailure` and `Connecti
 
 ## Consequences
 
-Adding a domain code is one declaration merge plus one throw: no mapping function, error class, and carrier typed view to keep in step. The cost is that the home now requires a judgment — it must be reachable from every producer — and that judgment only surfaces once a second producer appears; `workspace/not-found` moved from workspace-controller to the capability package exactly that way, which also gave `@deepseek-ai/dsh-workspace` a type-only protocol dependency.
+Adding a domain code is one declaration merge plus one throw: no mapping function, error class, and carrier typed view to keep in step. The cost is that the home now requires a judgment — it must be reachable from every producer — and that judgment only surfaces once a second producer appears; `workspace/not-found` moved from workspace-controller to the capability package exactly that way, which also gave `@berry-ai/harness-workspace` a type-only protocol dependency.
 
 Prefixing the code strings changes the wire strings wholesale, so codes embedded in connection fixtures, assertions on both the Host and Client sides, and spec-local declarations all move in one pass. The pre-release stance accepts that single cut; the same rename after a release would need a compatibility window.
 

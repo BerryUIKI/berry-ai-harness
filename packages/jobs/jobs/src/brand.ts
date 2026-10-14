@@ -7,7 +7,7 @@
  * cannot resolve even as a type. A browser-safe consumer imports the id here;
  * `Branded<B>` itself comes from the zero-dependency `@berry-ai/harness-brand`.
  *
- * @module @deepseek-ai/dsh-jobs/brand
+ * @module @berry-ai/harness-jobs/brand
  */
 
 import type { Branded } from '@berry-ai/harness-brand'

@@ -66,7 +66,7 @@
     "@deepseek-ai/dsh-subprocess": "workspace:*",
     "@deepseek-ai/dsh-subprocess-local": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
-    "@deepseek-ai/dsh-tool-jobs": "workspace:*",
+    "@berry-ai/harness-tool-jobs": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*"
   },
   "icon": "./icon.svg"

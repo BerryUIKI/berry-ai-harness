@@ -5,11 +5,11 @@
  * @module @deepseek-ai/dsh-api-job-controller/types
  */
 
-import type { JobId } from '@deepseek-ai/dsh-jobs/brand'
-import type { JobChunk, JobView } from '@deepseek-ai/dsh-jobs/view'
+import type { JobId } from '@berry-ai/harness-jobs/brand'
+import type { JobChunk, JobView } from '@berry-ai/harness-jobs/view'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 
-export type { JobChunk, JobView } from '@deepseek-ai/dsh-jobs/view'
+export type { JobChunk, JobView } from '@berry-ai/harness-jobs/view'
 
 /** Target of one `job.list` stream: the session whose visible jobs the stream mirrors. */
 export interface JobListRequest {

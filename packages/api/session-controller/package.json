@@ -97,7 +97,7 @@
     "@deepseek-ai/dsh-session-projection-cache": "workspace:*",
     "@deepseek-ai/dsh-session-query": "workspace:*",
     "@deepseek-ai/dsh-session-title": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-skill": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
@@ -105,7 +105,7 @@
     "@berry-ai/harness-util-time": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
-    "@deepseek-ai/dsh-workspace": "workspace:*",
+    "@berry-ai/harness-workspace": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
   },
   "peerDependenciesMeta": {
@@ -115,7 +115,7 @@
     "@deepseek-ai/dsh-session-projection-cache": {
       "optional": true
     },
-    "@deepseek-ai/dsh-settings": {
+    "@berry-ai/harness-settings": {
       "optional": true
     }
   },
@@ -149,7 +149,7 @@
     "@deepseek-ai/dsh-session-projection-cache": "workspace:*",
     "@deepseek-ai/dsh-session-query": "workspace:*",
     "@deepseek-ai/dsh-session-title": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-skill": "workspace:*",
     "@berry-ai/harness-storage": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
@@ -161,7 +161,7 @@
     "@berry-ai/harness-util-time": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
-    "@deepseek-ai/dsh-workspace": "workspace:*",
+    "@berry-ai/harness-workspace": "workspace:*",
     "@types/mime-types": "^3.0.1",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
   }

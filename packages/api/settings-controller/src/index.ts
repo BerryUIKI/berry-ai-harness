@@ -11,10 +11,10 @@ import { Context } from '@deepseek-ai/cordis'
 import {
   openNativeTextFile,
 } from '@berry-ai/harness-native-command'
-import type { SettingsDescriptor, SettingsPathOp, SettingsForms } from '@deepseek-ai/dsh-settings'
+import type { SettingsDescriptor, SettingsPathOp, SettingsForms } from '@berry-ai/harness-settings'
 import type {
   SettingsDescribeValue, SettingsNamespaceView, SettingsPathOpView,
-} from '@deepseek-ai/dsh-settings/types'
+} from '@berry-ai/harness-settings/types'
 import { Remote, RemoteError, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import { z } from 'zod'
@@ -218,7 +218,7 @@ export class SettingsController extends TypertRemoteService {
     if (settings === undefined) {
       throw new RemoteError(
         'gateway/internal',
-        'settings service is absent: mount @deepseek-ai/dsh-settings with @berry-ai/harness-config-editor in the profile composition',
+        'settings service is absent: mount @berry-ai/harness-settings with @berry-ai/harness-config-editor in the profile composition',
         {},
       )
     }

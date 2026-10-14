@@ -13,10 +13,10 @@ import type {
   WorkflowRunId as WorkflowRunIdType, WorkflowStartRequest,
 } from '@deepseek-ai/dsh-workflow'
 import { ToolCallId } from '@deepseek-ai/dsh-llm'
-import type { JobId } from '@deepseek-ai/dsh-jobs'
+import type { JobId } from '@berry-ai/harness-jobs'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
-import LocalJobRegistry from '@deepseek-ai/dsh-jobs-local'
-import * as ToolTasks from '@deepseek-ai/dsh-tool-jobs'
+import LocalJobRegistry from '@berry-ai/harness-jobs-local'
+import * as ToolTasks from '@berry-ai/harness-tool-jobs'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'
 import PtcWorkflowEngine from '@deepseek-ai/dsh-workflow-ptc'
 import { mountWorkflowRuntime } from '../../workflow-ptc/tests/setup.ts'
@@ -594,7 +594,7 @@ describe('dsh-tool-workflow', () => {
       const result = await execute(ctx, { script: SCRIPT, meta: META, run_in_background: true }, { agent: parent })
       expect(result.isError).toBe(true)
       expect((result.content[0] as { text: string }).text)
-        .toContain('background jobs unavailable: load @deepseek-ai/dsh-jobs and @deepseek-ai/dsh-tool-jobs')
+        .toContain('background jobs unavailable: load @berry-ai/harness-jobs and @berry-ai/harness-tool-jobs')
     })
 
     it('a disabled composition hides the parameter and rejects the call', async () => {

@@ -1,5 +1,5 @@
 /** Host registration for the browser theme preference and pre-plugin palette. */
-import type {} from '@deepseek-ai/dsh-settings'
+import type {} from '@berry-ai/harness-settings'
 
 import type { Volatile } from '@deepseek-ai/cordis'
 import type { ThemePreference } from './theme-settings.ts'

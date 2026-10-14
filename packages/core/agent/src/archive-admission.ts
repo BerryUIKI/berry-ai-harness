@@ -9,7 +9,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { SessionId } from '@deepseek-ai/dsh-session'
-import type { SessionActivity } from '@deepseek-ai/dsh-workspace'
+import type { SessionActivity } from '@berry-ai/harness-workspace'
 import type { Agent } from './types.ts'
 
 /**

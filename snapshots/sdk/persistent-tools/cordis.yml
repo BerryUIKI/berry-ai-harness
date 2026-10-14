@@ -69,7 +69,7 @@
   disabled: true
 
 - id: tool-jobs
-  name: '@deepseek-ai/dsh-tool-jobs'
+  name: '@berry-ai/harness-tool-jobs'
   disabled: true
 
 - id: tool-fs

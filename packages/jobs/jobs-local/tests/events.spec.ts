@@ -5,8 +5,8 @@ import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import { ScopedLayers, bindScopeParent, createScope, scopeOf } from '@deepseek-ai/dsh-scope'
 import type { ScopeKey } from '@deepseek-ai/dsh-scope'
-import { JobId } from '@deepseek-ai/dsh-jobs'
-import type { JobEvent, JobView } from '@deepseek-ai/dsh-jobs'
+import { JobId } from '@berry-ai/harness-jobs'
+import type { JobEvent, JobView } from '@berry-ai/harness-jobs'
 import { JobEventHub, JobLayer } from '../src/events.ts'
 
 function agentIn(ctx: Context, rawId: string, presetScope?: ScopeKey): Agent {

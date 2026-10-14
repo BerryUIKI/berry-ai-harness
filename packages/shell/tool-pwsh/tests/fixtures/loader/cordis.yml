@@ -27,10 +27,10 @@
   name: '@deepseek-ai/dsh-shell-env'
 
 - id: tasks
-  name: '@deepseek-ai/dsh-jobs-local'
+  name: '@berry-ai/harness-jobs-local'
 
 - id: tool-jobs
-  name: '@deepseek-ai/dsh-tool-jobs'
+  name: '@berry-ai/harness-tool-jobs'
 
 - id: tool-pwsh
   name: '@deepseek-ai/dsh-tool-pwsh'

@@ -3,7 +3,7 @@
  *
  * @module @deepseek-ai/dsh-agent-default-model
  */
-import type {} from '@deepseek-ai/dsh-settings'
+import type {} from '@berry-ai/harness-settings'
 
 import type { Volatile } from '@deepseek-ai/cordis'
 

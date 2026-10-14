@@ -9,7 +9,7 @@
 import type { SandboxMode } from '@deepseek-ai/dsh-sandbox'
 import { escalationHintMarker, sandboxDenialMarker } from '@deepseek-ai/dsh-sandbox'
 import type { ShellProcess, ShellSandboxInfo } from '@deepseek-ai/dsh-shell'
-import type { JobChunk, JobHooks, JobOutcome, JobOutputSource } from '@deepseek-ai/dsh-jobs'
+import type { JobChunk, JobHooks, JobOutcome, JobOutputSource } from '@berry-ai/harness-jobs'
 
 /**
  * Sandbox facts worth the terminal detail: a runner that never ran the
