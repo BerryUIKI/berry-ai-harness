@@ -27,7 +27,7 @@ import { SessionQueryError } from '@deepseek-ai/dsh-session-query'
 // the cmdline Context merge for the appExit host value, and the sessionQuery
 // Context merge for exact Session adoption.
 import type {} from '@deepseek-ai/cordis-plugin-loader'
-import type {} from '@deepseek-ai/dsh-cmdline'
+import type {} from '@berry-ai/harness-cmdline'
 import type {} from '@deepseek-ai/dsh-session-query'
 import type {} from '@deepseek-ai/dsh-subagent'
 import { internals } from './runner-internals.ts'

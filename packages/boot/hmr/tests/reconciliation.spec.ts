@@ -17,7 +17,7 @@ import {
   loadOptionalPatches,
   PROFILE_PATCH_FILENAME,
   reconcileProfilePatches,
-} from '@deepseek-ai/dsh-app-boot'
+} from '@berry-ai/harness-app-boot'
 
 const NAME = 'dsh-test-bin'
 

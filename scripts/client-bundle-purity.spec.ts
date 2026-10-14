@@ -142,9 +142,9 @@ describe('client bundle purity gate', () => {
     expect(resolveId('@berry-ai/harness-native-command/types')).toBeNull()
     expect(() => resolveId('@berry-ai/harness-native-command')).toThrow('client bundle purity')
     expect(() => resolveId('@deepseek-ai/dsh-host-open-in-app')).toThrow(/purity/)
-    expect(resolveId('@deepseek-ai/dsh-plugin-manager/registry')).toBeNull()
-    expect(() => resolveId('@deepseek-ai/dsh-plugin-manager')).toThrow(/purity/)
-    expect(() => resolveId('@deepseek-ai/dsh-plugin-manager/registry/internal')).toThrow(/purity/)
+    expect(resolveId('@berry-ai/harness-plugin-manager/registry')).toBeNull()
+    expect(() => resolveId('@berry-ai/harness-plugin-manager')).toThrow(/purity/)
+    expect(() => resolveId('@berry-ai/harness-plugin-manager/registry/internal')).toThrow(/purity/)
   })
 
   it('admits only the pure spill notice entry, not its Host policy', () => {

@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { expect, it } from 'vitest'
-import { composeEntries, loadProfileDirectory } from '@deepseek-ai/dsh-app-boot'
+import { composeEntries, loadProfileDirectory } from '@berry-ai/harness-app-boot'
 import { createPluginProfile } from '../src/project-manager.ts'
 
 it('retains one shared resource consumer in the Desktop Web profile', () => {

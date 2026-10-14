@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { TimeoutReason } from '@berry-ai/harness-timeout'
-import { boot } from '@deepseek-ai/dsh-app-boot'
+import { boot } from '@berry-ai/harness-app-boot'
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http'
 import { once } from 'node:events'
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'

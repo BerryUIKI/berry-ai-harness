@@ -637,11 +637,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-app-boot",
+      "name": "@berry-ai/harness-app-boot",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-app-boot",
+          "location": "node_modules/@berry-ai/harness-app-boot",
           "direct": true,
           "optional": false,
           "peer": false
@@ -1321,11 +1321,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-cmdline",
+      "name": "@berry-ai/harness-cmdline",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-cmdline",
+          "location": "node_modules/@berry-ai/harness-cmdline",
           "direct": true,
           "optional": false,
           "peer": false

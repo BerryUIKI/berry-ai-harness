@@ -59,7 +59,7 @@
     }
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
+    "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-package-manifest": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-agent-preset-registry": "workspace:*",

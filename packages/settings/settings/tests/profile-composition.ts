@@ -6,9 +6,9 @@ import type { Context } from '@deepseek-ai/cordis'
 import { entryListSchema } from '@deepseek-ai/cordis-plugin-include'
 import type { EntryOptions } from '@deepseek-ai/cordis-plugin-loader'
 import Timer from '@deepseek-ai/cordis-plugin-timer'
-import { initProfile, mountRootInclude, readProfilePatches, type ProfileContext } from '@deepseek-ai/dsh-app-boot'
-import Hmr from '@deepseek-ai/dsh-hmr'
-import ConfigEditor from '@deepseek-ai/dsh-config-editor'
+import { initProfile, mountRootInclude, readProfilePatches, type ProfileContext } from '@berry-ai/harness-app-boot'
+import Hmr from '@berry-ai/harness-hmr'
+import ConfigEditor from '@berry-ai/harness-config-editor'
 import Settings from '../src/index.ts'
 
 /** Attach the profile runtime to an initialized Loader with a source-module importer. */

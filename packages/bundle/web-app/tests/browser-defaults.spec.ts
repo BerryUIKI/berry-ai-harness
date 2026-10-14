@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import { applyEntryPatches } from '@deepseek-ai/cordis-plugin-include'
-import { loadOverlayPatches } from '@deepseek-ai/dsh-app-boot'
+import { loadOverlayPatches } from '@berry-ai/harness-app-boot'
 import * as Browser from '@deepseek-ai/dsh-client-ui-sidebar-browser'
 import { expect, it, onTestFinished } from 'vitest'
 

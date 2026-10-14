@@ -1798,7 +1798,7 @@ describe('runtime resolution', { concurrent: false }, () => {
   it('publishes and restores the resolution inherited by owned Workers', async () => {
     const f = fixture()
     const resolution = await resolutionOf(f)
-    const key = '@deepseek-ai/dsh-app-boot/profile-resolution'
+    const key = '@berry-ai/harness-app-boot/profile-resolution'
     const previous = getEnvironmentData(key)
     const dispose = registerWorkerResolution(resolution)
     try {

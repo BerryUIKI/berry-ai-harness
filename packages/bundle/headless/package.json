@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-cmdline": "workspace:*",
+    "@berry-ai/harness-cmdline": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "commander": "^15.0.0"

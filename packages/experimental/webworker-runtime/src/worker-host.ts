@@ -22,7 +22,7 @@
  * @module @deepseek-ai/dsh-experimental-webworker-runtime/src/worker-host
  */
 import { setActiveModuleLoader, WorkerModuleLoader, type StaticModuleFactory } from './module-system/module-loader.ts'
-import type { ProfileContext } from '@deepseek-ai/dsh-app-boot'
+import type { ProfileContext } from '@berry-ai/harness-app-boot'
 import type { TypertGateway } from '@deepseek-ai/dsh-api-gateway'
 import type { HostConnectionHandle } from '@deepseek-ai/dsh-client-connection'
 import type { AlsCausality } from './polyfill/async-context/als-runtime.ts'
@@ -220,7 +220,7 @@ export function createWorkerHost(options: WorkerHostOptions): WorkerHost {
       modules = loader
 
       const require = loader.requireFrom(dirname(configPath))
-      const appBoot = require('@deepseek-ai/dsh-app-boot') as {
+      const appBoot = require('@berry-ai/harness-app-boot') as {
         boot(
           binName: string,
           configPath: string,
@@ -228,7 +228,7 @@ export function createWorkerHost(options: WorkerHostOptions): WorkerHost {
           prepare: (ctx: HostContext) => void,
         ): Promise<HostContext>
       }
-      const cmdline = require('@deepseek-ai/dsh-cmdline') as {
+      const cmdline = require('@berry-ai/harness-cmdline') as {
         provideCmdline(ctx: unknown, host: {
           args: readonly string[]
           exit: (code: number) => void
@@ -428,7 +428,7 @@ function bootPatches(
   if (!vfs.existsSync(profile.patchPath)) {
     vfs.seed(profile.patchPath, yaml.dump([{ insert: rows }], { schema: include.entryListSchema }))
   }
-  const appBoot = loader.load(loader.resolve('@deepseek-ai/dsh-app-boot', root)) as {
+  const appBoot = loader.load(loader.resolve('@berry-ai/harness-app-boot', root)) as {
     readProfilePatches(binName: string, profile: ProfileContext): unknown[]
   }
   return { patches: appBoot.readProfilePatches('dsh-webworker', profile), profile }

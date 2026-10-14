@@ -198,7 +198,7 @@ export function testProfileResolution(mode: ExampleMode): void {
           '  ctx.effect(() => ready.onReady(() => {',
           `    const cjs = require('${leafName}').leaf`,
           `    const externalCjs = require('${externalName}').external`,
-          "    const entries = getEnvironmentData('@deepseek-ai/dsh-app-boot/profile-resolution').resolution.entries",
+          "    const entries = getEnvironmentData('@berry-ai/harness-app-boot/profile-resolution').resolution.entries",
           '    const evidence = {',
           '      execArgv: process.execArgv, esm: leaf, cjs,',
           '      sameEsmLeaf: leaf === bridgeLeaf,',

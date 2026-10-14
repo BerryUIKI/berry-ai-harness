@@ -11,7 +11,7 @@ import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import type { ModelSelection } from '@deepseek-ai/dsh-agent'
 import { ReasoningEffortId } from '@deepseek-ai/dsh-llm'
-import type {} from '@deepseek-ai/dsh-config-editor'
+import type {} from '@berry-ai/harness-config-editor'
 
 declare module '@deepseek-ai/cordis' {
   interface Context {

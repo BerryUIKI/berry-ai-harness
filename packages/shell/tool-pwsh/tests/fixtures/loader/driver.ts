@@ -7,7 +7,7 @@
  */
 
 import { writeFile } from 'node:fs/promises'
-import { boot, resolveConfigPath } from '@deepseek-ai/dsh-app-boot'
+import { boot, resolveConfigPath } from '@berry-ai/harness-app-boot'
 import { ToolCallId } from '@deepseek-ai/dsh-llm'
 
 const configPath = process.argv[2]

@@ -34,9 +34,9 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-config-editor` | no | Persist plugin configuration through profile patches and Loader reconciliation |
-| `@deepseek-ai/dsh-hmr` | yes | Coordinated module and profile configuration hot reload |
-| `@deepseek-ai/dsh-plugin-manager` | yes | Current-profile plugin and bundle management shared by dsh CLI, Web and agent tools |
+| `@berry-ai/harness-config-editor` | no | Persist plugin configuration through profile patches and Loader reconciliation |
+| `@berry-ai/harness-hmr` | yes | Coordinated module and profile configuration hot reload |
+| `@berry-ai/harness-plugin-manager` | yes | Current-profile plugin and bundle management shared by dsh CLI, Web and agent tools |
 
 ## browser-use
 

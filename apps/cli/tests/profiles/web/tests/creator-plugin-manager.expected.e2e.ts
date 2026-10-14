@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { expect, it } from 'vitest'
-import { readProfileManifest } from '@deepseek-ai/dsh-app-boot'
+import { readProfileManifest } from '@berry-ai/harness-app-boot'
 import { startHttpMcpFixture } from '../../../../../../packages/mcp/mcp-client/tests/http-fixture.ts'
 
 interface Observation {

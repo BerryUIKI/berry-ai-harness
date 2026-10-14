@@ -43,14 +43,14 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "@deepseek-ai/cordis-plugin-timer": "workspace:~",
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-hmr": "workspace:*",
+    "@berry-ai/harness-app-boot": "workspace:*",
+    "@berry-ai/harness-hmr": "workspace:*",
     "@deepseek-ai/dsh-agent-default-model": "workspace:*",
     "yaml": "^2.8.1"
   },
   "dependencies": {
     "@berry-ai/harness-util-values": "workspace:*",
-    "@deepseek-ai/dsh-config-editor": "workspace:*",
+    "@berry-ai/harness-config-editor": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cosmokit": "workspace:~",
     "yaml": "^2.8.1"

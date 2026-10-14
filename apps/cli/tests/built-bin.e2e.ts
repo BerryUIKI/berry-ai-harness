@@ -119,7 +119,7 @@ function createProfileLifecycleFixture(): ProfileLifecycleFixture {
     '    - id: hmr-timer',
     "      name: '@deepseek-ai/cordis-plugin-timer'",
     '    - id: hmr',
-    "      name: '@deepseek-ai/dsh-hmr'",
+    "      name: '@berry-ai/harness-hmr'",
     '      config:',
     '        root: []',
     '    - id: profile-lifecycle-fixture',
@@ -235,7 +235,7 @@ interface StartupFixture {
  * A custom profile whose ordinary provider plugin injects `cmdlineArgs`, plus
  * a row that reads its app-owned service through a `!!js` config expression.
  * Both plugin modules resolve
- * `@deepseek-ai/dsh-cmdline` and `commander` through the profile module
+ * `@berry-ai/harness-cmdline` and `commander` through the profile module
  * fallback, exactly as an installed out-of-tree bundle does.
  */
 function createStartupFixture(): StartupFixture {
@@ -248,7 +248,7 @@ function createStartupFixture(): StartupFixture {
   mkdirSync(bundleDir, { recursive: true })
   writeFileSync(join(bundleDir, 'startup.mjs'), [
     "import { Command } from 'commander'",
-    "import { parseCmdline } from '@deepseek-ai/dsh-cmdline'",
+    "import { parseCmdline } from '@berry-ai/harness-cmdline'",
     "export const name = 'fixture-startup'",
     "export const inject = ['cmdlineArgs']",
     'export function apply(ctx) {',
@@ -289,7 +289,7 @@ function createStartupFixture(): StartupFixture {
     '    - id: hmr-timer',
     "      name: '@deepseek-ai/cordis-plugin-timer'",
     '    - id: hmr',
-    "      name: '@deepseek-ai/dsh-hmr'",
+    "      name: '@berry-ai/harness-hmr'",
     '      config:',
     '        root: []',
     '    - id: startup-fixture',

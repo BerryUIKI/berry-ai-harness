@@ -15,7 +15,7 @@ import type { DshEnvironment, DshEnvironmentKey } from '@deepseek-ai/dsh-shell'
 import { DSH_HOME_ENV, resolveDshHome } from '@berry-ai/harness-home-paths'
 import type { ToolExecution } from '@deepseek-ai/dsh-tools'
 // Declares `Context.profileContext`, the launcher-provided profile the built-ins read.
-import type {} from '@deepseek-ai/dsh-app-boot'
+import type {} from '@berry-ai/harness-app-boot'
 
 declare module '@deepseek-ai/cordis' {
   interface Context {

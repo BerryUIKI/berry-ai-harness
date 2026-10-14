@@ -46,7 +46,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
+    "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-util-crypto": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
@@ -79,7 +79,7 @@
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/dsh-host-webserver": "workspace:*",
-    "@deepseek-ai/dsh-cmdline": "workspace:*",
+    "@berry-ai/harness-cmdline": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@types/ws": "^8.18.1",
     "playwright": "^1.49.0",

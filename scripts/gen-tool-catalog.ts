@@ -68,8 +68,8 @@ import * as StagehandBrowserTools from '@deepseek-ai/dsh-experimental-browser-us
 import type TeamService from '@deepseek-ai/dsh-experimental-agent-team'
 import * as ToolTeam from '@deepseek-ai/dsh-experimental-tool-agent-team'
 import * as ToolTodo from '@deepseek-ai/dsh-tool-todo'
-import type PluginManager from '@deepseek-ai/dsh-plugin-manager'
-import * as PluginManagerTools from '@deepseek-ai/dsh-plugin-manager/tools'
+import type PluginManager from '@berry-ai/harness-plugin-manager'
+import * as PluginManagerTools from '@berry-ai/harness-plugin-manager/tools'
 import SandboxPolicy from '@deepseek-ai/dsh-sandbox-policy'
 import McpResources from '@deepseek-ai/dsh-mcp-resources'
 import * as ToolSubagent from '@deepseek-ai/dsh-tool-subagent'
@@ -188,7 +188,7 @@ export interface ToolPackage {
  */
 const TOOL_PACKAGES: ToolPackage[] = [
   {
-    pkg: '@deepseek-ai/dsh-plugin-manager',
+    pkg: '@berry-ai/harness-plugin-manager',
     dir: 'plugin-manager',
     source: 'packages/boot/plugin-manager/src/tools.ts',
     requires: ['ctx.tools', 'ctx.pluginManager', 'ctx.sandboxPolicy'],

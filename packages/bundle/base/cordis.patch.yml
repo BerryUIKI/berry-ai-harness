@@ -14,11 +14,11 @@
 
 - insert:
     - id: tool-plugin-manager
-      name: '@deepseek-ai/dsh-plugin-manager/tools'
+      name: '@berry-ai/harness-plugin-manager/tools'
       disabled: true
 
     - id: plugin-manager
-      name: '@deepseek-ai/dsh-plugin-manager'
+      name: '@berry-ai/harness-plugin-manager'
       disabled: !!js "!ctx.get('profileContext')"
 
     - id: timer
@@ -26,7 +26,7 @@
 
     # Profile configuration reloads by default; module roots are opt-in.
     - id: hmr
-      name: '@deepseek-ai/dsh-hmr'
+      name: '@berry-ai/harness-hmr'
       disabled: !!js "!ctx.get('profileContext')"
       config:
         root: []
@@ -98,7 +98,7 @@
 
     # Live configuration forms persist through the launcher's profile.
     - id: config-editor
-      name: '@deepseek-ai/dsh-config-editor'
+      name: '@berry-ai/harness-config-editor'
       disabled: !!js "!ctx.get('profileContext')"
 
     - id: settings
