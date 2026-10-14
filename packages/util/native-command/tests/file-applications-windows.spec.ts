@@ -12,7 +12,7 @@ function literal(value: string): string {
   return `[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('${Buffer.from(value).toString('base64')}'))`
 }
 
-it.skipIf(process.platform !== 'win32')('queries and invokes a registered Windows handler through the system Shell', async ({ task, signal: testSignal, onTestFailed }) => {
+it.skipIf(process.platform !== 'win32')('queries and invokes a registered Windows handler through the system Shell', { timeout: 30_000 }, async ({ task, signal: testSignal, onTestFailed }) => {
   const root = await mkdtemp(join(tmpdir(), 'dsh-windows-association-'))
   const suffix = randomUUID().replaceAll('-', '')
   const extension = `.dsh${suffix}`

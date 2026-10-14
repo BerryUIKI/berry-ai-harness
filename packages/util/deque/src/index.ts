@@ -1,6 +1,6 @@
 /**
  * Zero-dependency circular deque for queues that retain entries across asynchronous work.
- * @module @deepseek-ai/dsh-deque
+ * @module @berry-ai/harness-deque
  */
 
 const MIN_CAPACITY = 16

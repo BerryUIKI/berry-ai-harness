@@ -12,7 +12,7 @@ import {
   type ConnectionRpcAttachment,
   type ConnectionRpcHandler,
 } from '@deepseek-ai/dsh-client-connection'
-import { Deque } from '@deepseek-ai/dsh-deque'
+import { Deque } from '@berry-ai/harness-deque'
 import type { WebUpgradeRoute } from '@deepseek-ai/dsh-host-webserver'
 import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
 import type {} from '@deepseek-ai/dsh-cmdline'

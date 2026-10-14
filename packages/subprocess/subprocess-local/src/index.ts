@@ -16,7 +16,7 @@ import type { Duplex } from 'node:stream'
 import { Context } from '@deepseek-ai/cordis'
 import type * as NodePty from 'node-pty'
 import type { IPtyForkOptions, IWindowsPtyForkOptions } from 'node-pty'
-import { createLazyRequire } from '@deepseek-ai/dsh-lazy-require'
+import { createLazyRequire } from '@berry-ai/harness-lazy-require'
 import { SubprocessRuntime, SubprocessExecutableNotFoundError } from '@deepseek-ai/dsh-subprocess'
 import type {
   SubprocessHandle,

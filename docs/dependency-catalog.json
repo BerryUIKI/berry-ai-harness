@@ -745,11 +745,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-chunked-list",
+      "name": "@berry-ai/harness-chunked-list",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-chunked-list",
+          "location": "node_modules/@berry-ai/harness-chunked-list",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1501,11 +1501,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-deque",
+      "name": "@berry-ai/harness-deque",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-deque",
+          "location": "node_modules/@berry-ai/harness-deque",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1897,11 +1897,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-native-command",
+      "name": "@berry-ai/harness-native-command",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-native-command",
+          "location": "node_modules/@berry-ai/harness-native-command",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1921,11 +1921,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-package-manifest",
+      "name": "@berry-ai/harness-package-manifest",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-package-manifest",
+          "location": "node_modules/@berry-ai/harness-package-manifest",
           "direct": false,
           "optional": false,
           "peer": false
@@ -3049,11 +3049,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-util-time",
+      "name": "@berry-ai/harness-util-time",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-util-time",
+          "location": "node_modules/@berry-ai/harness-util-time",
           "direct": false,
           "optional": false,
           "peer": true

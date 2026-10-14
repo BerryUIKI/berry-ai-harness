@@ -87,7 +87,7 @@
   },
   "devDependencies": {
     "chokidar": "^4.0.3",
-    "@deepseek-ai/dsh-package-manifest": "workspace:*",
+    "@berry-ai/harness-package-manifest": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/dsh-host-plugin-inventory": "workspace:*",

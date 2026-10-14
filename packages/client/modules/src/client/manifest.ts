@@ -30,7 +30,7 @@
  */
 
 import type {} from '@deepseek-ai/cordis'
-import type { DshClientManifest } from '@deepseek-ai/dsh-package-manifest'
+import type { DshClientManifest } from '@berry-ai/harness-package-manifest'
 import type { ClientEntries } from './entries.ts'
 import type { ClientModuleSystem } from './system.ts'
 

@@ -10,7 +10,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import {
   openNativeTextFile,
-} from '@deepseek-ai/dsh-native-command'
+} from '@berry-ai/harness-native-command'
 import type { SettingsDescriptor, SettingsPathOp, SettingsForms } from '@deepseek-ai/dsh-settings'
 import type {
   SettingsDescribeValue, SettingsNamespaceView, SettingsPathOpView,

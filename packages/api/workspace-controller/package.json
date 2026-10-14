@@ -69,8 +69,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-deque": "workspace:*",
-    "@deepseek-ai/dsh-native-command": "workspace:*",
+    "@berry-ai/harness-deque": "workspace:*",
+    "@berry-ai/harness-native-command": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "^4.4.3"
   },

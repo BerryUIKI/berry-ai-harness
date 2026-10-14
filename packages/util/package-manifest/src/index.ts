@@ -1,6 +1,6 @@
 /**
  * Public package manifest, plugin display types, and compatibility reader.
- * @module @deepseek-ai/dsh-package-manifest
+ * @module @berry-ai/harness-package-manifest
  */
 
 import type { DshManifest, DshPackageManifest } from './types.ts'

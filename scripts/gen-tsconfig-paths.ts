@@ -27,8 +27,10 @@ const CONFIG = join(ROOT, 'tsconfig.base.json')
 const BEGIN = '      // BEGIN generated package aliases — pnpm run gen-tsconfig-paths'
 const END = '      // END generated package aliases'
 
-/** Package-name prefix the expanded aliases cover. */
+/** Package-name prefixes the expanded aliases cover. */
 const PREFIX = '@deepseek-ai/dsh-'
+const BERRY_PREFIX = '@berry-ai/harness-'
+const PREFIXES = [PREFIX, BERRY_PREFIX]
 
 /** One workspace package the generated region maps. */
 interface PackageAlias {
@@ -75,7 +77,7 @@ function workspacePackages(): WorkspacePackage[] {
     for (const directory of readdirSync(groupDir).sort()) {
       const packageDir = join(groupDir, directory)
       const name = packageName(join(packageDir, 'package.json'))
-      if (name === undefined || !name.startsWith(PREFIX)) continue
+      if (name === undefined || !PREFIXES.some(prefix => name.startsWith(prefix))) continue
       if (existsSync(join(packageDir, 'src'))) found.push({ group, directory, name })
     }
   }
@@ -87,7 +89,7 @@ function workspacePackages(): WorkspacePackage[] {
  *
  * A wildcard substituted the specifier's suffix into `packages/<group>/<suffix>/src`,
  * so it only ever resolved a package whose declared name is exactly
- * `@deepseek-ai/dsh-<directory>`. Packages named after something other than
+ * `@deepseek-ai/dsh-<directory>` or `@berry-ai/harness-<directory>`. Packages named after something other than
  * their directory already carry a hand-written alias and are skipped here.
  *
  * @returns Aliases sorted by specifier.
@@ -97,7 +99,7 @@ function workspacePackages(): WorkspacePackage[] {
 export function collectPackageAliases(): PackageAlias[] {
   const bySpecifier = new Map<string, PackageAlias & { directory: string }>()
   for (const { group, directory, name } of workspacePackages()) {
-    if (name !== `${PREFIX}${directory}`) continue
+    if (!PREFIXES.some(prefix => name === `${prefix}${directory}`)) continue
     const previous = bySpecifier.get(name)
     if (previous !== undefined) {
       throw new Error(
@@ -139,7 +141,7 @@ export function collectPackageNames(): string[] {
  */
 export function mappedSpecifiers(text: string): Set<string> {
   const keys = new Set<string>()
-  for (const match of text.matchAll(/^\s*"(@deepseek-ai\/dsh-[^"/]+)":/gm)) {
+  for (const match of text.matchAll(/^\s*"(@(?:deepseek-ai\/dsh|berry-ai\/harness)-[^"/]+)":/gm)) {
     const key = match[1]
     if (key !== undefined) keys.add(key)
   }
@@ -208,14 +210,14 @@ function handWrittenSpecifiers(text: string): Set<string> {
   const end = text.indexOf(END)
   const outside = begin < 0 || end < begin ? text : text.slice(0, begin) + text.slice(end)
   const keys = new Set<string>()
-  for (const match of outside.matchAll(/^\s*"(@deepseek-ai\/[^"]+)":/gm)) {
+  for (const match of outside.matchAll(/^\s*"(@(?:deepseek-ai|berry-ai)\/[^"]+)":/gm)) {
     const key = match[1]
     if (key !== undefined) keys.add(key)
   }
   return keys
 }
 
-if (process.argv[1] && import.meta.filename === resolve(process.argv[1])) {
+if (process.argv[1] && resolve(import.meta.filename).toLowerCase() === resolve(process.argv[1]).toLowerCase()) {
   const check = process.argv.includes('--check')
   const current = readFileSync(CONFIG, 'utf8')
   const next = writeRegion(current, renderAliases(collectPackageAliases(), handWrittenSpecifiers(current)))

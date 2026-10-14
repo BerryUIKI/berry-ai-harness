@@ -25,7 +25,7 @@ import {
   resolveAgentsHome,
   resolveBerryHome,
   resolveDshHome,
-} from '@deepseek-ai/dsh-home-paths'
+} from '@berry-ai/harness-home-paths'
 
 afterEach(() => {
   vi.unstubAllEnvs()

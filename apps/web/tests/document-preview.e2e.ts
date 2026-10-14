@@ -1,7 +1,7 @@
 /** Keyless document-preview smoke through a real Session, Files tab, shipped renderers, and the default-application controls. */
 import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
-import { nativeFileManager } from '@deepseek-ai/dsh-native-command'
+import { nativeFileManager } from '@berry-ai/harness-native-command'
 import { delimiter, join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { Browser, Locator, Page } from 'playwright'

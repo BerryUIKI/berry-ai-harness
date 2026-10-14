@@ -5,7 +5,7 @@
  * its own settings surface.
  */
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { LocalizedText } from '@deepseek-ai/dsh-package-manifest'
+import type { LocalizedText } from '@berry-ai/harness-package-manifest'
 import {
   type BoundActions, type LocaleDictOf, type LocaleNamespaceMap, type Translate, type TranslateNS,
 } from '@deepseek-ai/dsh-client-ui-slots'

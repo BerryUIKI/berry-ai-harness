@@ -24,7 +24,7 @@ function unmockWin32ForIsolatedRuntime(): void {
 }
 
 function mockNodePtyForIsolatedRuntime(spawn: unknown): void {
-  vi.doMock('@deepseek-ai/dsh-lazy-require', () => ({
+  vi.doMock('@berry-ai/harness-lazy-require', () => ({
     createLazyRequire: (specifier: string) => () => {
       if (specifier === 'node-pty') return { spawn }
       throw new Error(`unexpected lazy dependency ${specifier}`)
@@ -33,7 +33,7 @@ function mockNodePtyForIsolatedRuntime(spawn: unknown): void {
 }
 
 function unmockLazyRequireForIsolatedRuntime(): void {
-  vi.doUnmock('@deepseek-ai/dsh-lazy-require')
+  vi.doUnmock('@berry-ai/harness-lazy-require')
 }
 
 function spec(command: string, overrides: Partial<SubprocessSpawnSpec> = {}): SubprocessSpawnSpec {
