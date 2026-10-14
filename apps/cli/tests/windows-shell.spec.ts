@@ -106,7 +106,7 @@ describe('shipped agent presets gate both shell tools by platform', () => {
   const presetRows = composeEntries([bundlePatchPaths(webBundle, webManifest.dsh.bundle).flatMap(file =>
     yaml.load(readFileSync(file, 'utf8'), { schema: entryListSchema }) as import('@deepseek-ai/cordis-plugin-include').PatchOptions[])])
 
-  const definitions = presetRows.filter(row => row.name === '@deepseek-ai/dsh-agent-preset').map(row => row.config as import('@deepseek-ai/dsh-agent-preset-registry').PresetDefinition)
+  const definitions = presetRows.filter(row => row.name === '@berry-ai/harness-agent-preset').map(row => row.config as import('@berry-ai/harness-agent-preset-registry').PresetDefinition)
 
   it.each(['standard', 'ptc', 'cordis'])('preset %s gates its shell tool rows by platform', (preset) => {
     const entries: unknown = definitions.find(row => row.id === preset)!.plugins

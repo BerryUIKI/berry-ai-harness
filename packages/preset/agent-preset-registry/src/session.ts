@@ -11,7 +11,7 @@
  *
  * Reconstruction reads the `agentPreset` Session projection, never the header
  * alone.
- * @module @deepseek-ai/dsh-agent-preset-registry/session
+ * @module @berry-ai/harness-agent-preset-registry/session
  */
 
 import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'

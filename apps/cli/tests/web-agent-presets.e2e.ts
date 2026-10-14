@@ -613,9 +613,9 @@ describe('a user preset declared from the shipped cordis rows', () => {
     // `tool-cordis` row only registers the tools. Before that split the copy
     // failed to mount: its row re-registered provider "Service".
     const root = await mkdtemp(join(tmpdir(), 'dsh-copied-preset-'))
-    const cordis = composeEntries([webPatches('test')]).find(row => row.id === 'preset-cordis')!.config as import('@deepseek-ai/dsh-agent-preset-registry').PresetDefinition
+    const cordis = composeEntries([webPatches('test')]).find(row => row.id === 'preset-cordis')!.config as import('@berry-ai/harness-agent-preset-registry').PresetDefinition
     const copyCtx = await bootWeb(root, [{ insert: [{
-      id: 'preset-cordis-copy', name: '@deepseek-ai/dsh-agent-preset',
+      id: 'preset-cordis-copy', name: '@berry-ai/harness-agent-preset',
       config: { ...cordis, id: 'cordis-copy', name: 'Cordis copy' },
     }] }])
     try {

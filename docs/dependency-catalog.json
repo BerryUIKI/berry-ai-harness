@@ -529,11 +529,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-agent-preset-registry",
+      "name": "@berry-ai/harness-agent-preset-registry",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-agent-preset-registry",
+          "location": "node_modules/@berry-ai/harness-agent-preset-registry",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1945,11 +1945,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-persona",
+      "name": "@berry-ai/harness-persona",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-persona",
+          "location": "node_modules/@berry-ai/harness-persona",
           "direct": true,
           "optional": false,
           "peer": false

@@ -572,6 +572,6 @@
 # `package.json` `dsh.bundle.patch`.
 - insert:
     - id: agent-preset-registry
-      name: '@deepseek-ai/dsh-agent-preset-registry'
+      name: '@berry-ai/harness-agent-preset-registry'
       config:
         default: standard
