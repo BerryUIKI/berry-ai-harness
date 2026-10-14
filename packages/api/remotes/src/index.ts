@@ -20,7 +20,7 @@ import { API_REMOTE_FORWARDED_EVENTS } from './remote-events.ts'
 // event vocabulary.
 import type {} from '@berry-ai/harness-commands/types'
 import type {} from '@deepseek-ai/dsh-cordis-host-runner/types'
-import type {} from '@deepseek-ai/dsh-credentials/types'
+import type {} from '@berry-ai/harness-credentials/types'
 import type {} from '@berry-ai/harness-goal/types'
 import type {} from '@deepseek-ai/dsh-llm/types'
 import type {} from '@berry-ai/harness-agent-preset-registry/types'

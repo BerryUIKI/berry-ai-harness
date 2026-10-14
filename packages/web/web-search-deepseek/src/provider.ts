@@ -13,7 +13,7 @@ import type {
   WebSearchResult,
   WebSearchSource,
 } from '@deepseek-ai/dsh-web'
-import type { CredentialRef } from '@deepseek-ai/dsh-credentials'
+import type { CredentialRef } from '@berry-ai/harness-credentials'
 import type {} from '@deepseek-ai/dsh-session'
 import type {
   AnthropicError,

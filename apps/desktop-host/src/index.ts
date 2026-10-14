@@ -6,7 +6,7 @@ import { loadLayeredEnv, loadProfileDirectory, reportSkippedBundles } from '@ber
 import { runProfile } from '@deepseek-ai/dsh/profile-boot'
 import type {} from '@deepseek-ai/dsh-client-connection'
 import type {} from '@deepseek-ai/dsh-host-webserver'
-import type {} from '@deepseek-ai/dsh-deepseek-account'
+import type {} from '@berry-ai/harness-deepseek-account'
 import { resolveDshHome } from '@berry-ai/harness-home-paths'
 import * as desktopOffice from './office.ts'
 

@@ -50,7 +50,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
+    "@berry-ai/harness-credentials": "workspace:*",
     "@berry-ai/harness-native-command": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
@@ -59,7 +59,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
+    "@berry-ai/harness-credentials": "workspace:*",
     "@berry-ai/harness-native-command": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",

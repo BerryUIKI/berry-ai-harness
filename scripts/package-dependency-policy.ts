@@ -53,7 +53,7 @@ const DUPLICATE_SAFE_PACKAGES: readonly string[] = [
 const SAFE_HOST_DEPENDENCY_EXPORTS = {
   '@berry-ai/harness-deque': ['Deque'],
   '@berry-ai/harness-timeout': ['MAX_TIMER_DELAY_MS'],
-  '@deepseek-ai/dsh-credentials': ['credentialKey'],
+  '@berry-ai/harness-credentials': ['credentialKey'],
   '@deepseek-ai/dsh-llm': ['callConfigEquals'],
   '@deepseek-ai/dsh-session-format': ['sessionFormatLogFilename'],
   '@deepseek-ai/schemastery': ['default'],

@@ -397,6 +397,18 @@
       ]
     },
     {
+      "name": "@berry-ai/harness-authorization",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-authorization",
+          "direct": false,
+          "optional": false,
+          "peer": true
+        }
+      ]
+    },
+    {
       "name": "@berry-ai/harness-command-goal",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -414,6 +426,30 @@
       "installations": [
         {
           "location": "node_modules/@berry-ai/harness-commands",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-credentials",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-credentials",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-credentials-local",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-credentials-local",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1053,18 +1089,6 @@
           "direct": false,
           "optional": false,
           "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-authorization",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-authorization",
-          "direct": false,
-          "optional": false,
-          "peer": true
         }
       ]
     },
@@ -1806,30 +1830,6 @@
       "installations": [
         {
           "location": "node_modules/@deepseek-ai/dsh-cordis-host-runner",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-credentials",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-credentials",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-credentials-local",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-credentials-local",
           "direct": false,
           "optional": false,
           "peer": false

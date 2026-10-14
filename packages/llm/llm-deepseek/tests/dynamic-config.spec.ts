@@ -13,8 +13,8 @@ import type {
   SaveImageAttachment,
   StoredImageAttachment,
 } from '@berry-ai/harness-attachment'
-import { credentialRef } from '@deepseek-ai/dsh-credentials'
-import { LocalCredentialProvider } from '@deepseek-ai/dsh-credentials-local'
+import { credentialRef } from '@berry-ai/harness-credentials'
+import { LocalCredentialProvider } from '@berry-ai/harness-credentials-local'
 import { liveConfig } from '../../../settings/settings/tests/live-config.ts'
 import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
 import type { ContextFormed } from '@deepseek-ai/dsh-llm'

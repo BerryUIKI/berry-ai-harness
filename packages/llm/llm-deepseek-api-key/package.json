@@ -31,7 +31,7 @@
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-llm-deepseek": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
+    "@berry-ai/harness-credentials": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-llm-deepseek": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
+    "@berry-ai/harness-credentials": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~"
   },
   "peerDependenciesMeta": {
