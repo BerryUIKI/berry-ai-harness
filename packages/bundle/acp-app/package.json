@@ -34,7 +34,7 @@
     }
   },
   "dependencies": {
-    "@deepseek-ai/dsh-acp": "workspace:*",
+    "@berry-ai/harness-acp": "workspace:*",
     "@berry-ai/harness-cmdline": "workspace:*",
     "commander": "^15.0.0"
   },

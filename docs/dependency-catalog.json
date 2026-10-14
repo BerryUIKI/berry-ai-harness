@@ -1297,11 +1297,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-acp",
+      "name": "@berry-ai/harness-acp",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-acp",
+          "location": "node_modules/@berry-ai/harness-acp",
           "direct": false,
           "optional": false,
           "peer": false

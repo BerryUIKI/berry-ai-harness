@@ -115,7 +115,7 @@
     "@deepseek-ai/dsh-hooks-codex": "workspace:*",
     "@deepseek-ai/dsh-hooks-claude-code": "workspace:*",
     "@agentclientprotocol/sdk": "1.4.0",
-    "@deepseek-ai/dsh-acp": "workspace:*",
+    "@berry-ai/harness-acp": "workspace:*",
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-agent-loop": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",

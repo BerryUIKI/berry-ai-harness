@@ -3,7 +3,7 @@ description: "Automation-only ACP (Agent Client Protocol) server for programmati
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-acp
+# @berry-ai/harness-acp
 
 English | [中文](README.zh.md)
 
@@ -36,7 +36,7 @@ Choose it when automation should own the interaction: an out-of-process subagent
 Every session the server creates uses the provider and model configured here. Both fields are optional so another agent or request listener can supply them; the runnable demo composition sets both. Stdout carries only protocol traffic, so keep logging off it.
 
 ```yaml
-- name: '@deepseek-ai/dsh-acp'
+- name: '@berry-ai/harness-acp'
   config:
     provider: deepseek-official
     model: deepseek-v4-pro

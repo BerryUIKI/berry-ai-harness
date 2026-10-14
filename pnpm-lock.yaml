@@ -521,7 +521,7 @@ importers:
       '@berry-ai/harness-user-approval':
         specifier: workspace:*
         version: link:../../packages/interaction/user-approval
-      '@deepseek-ai/dsh-acp':
+      '@berry-ai/harness-acp':
         specifier: workspace:*
         version: link:../../packages/acp/acp
       '@deepseek-ai/dsh-agent':
@@ -2022,7 +2022,7 @@ importers:
       '@berry-ai/harness-cmdline':
         specifier: workspace:*
         version: link:../../boot/cmdline
-      '@deepseek-ai/dsh-acp':
+      '@berry-ai/harness-acp':
         specifier: workspace:*
         version: link:../../acp/acp
       commander:
@@ -15296,7 +15296,7 @@ importers:
       '@deepseek-ai/cosmokit':
         specifier: link:../../vendor/cosmokit
         version: link:../../vendor/cosmokit
-      '@deepseek-ai/dsh-acp':
+      '@berry-ai/harness-acp':
         specifier: workspace:*
         version: link:../../packages/acp/acp
       '@deepseek-ai/dsh-agent':

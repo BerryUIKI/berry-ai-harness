@@ -1974,10 +1974,10 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-workspace-changes -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-acp -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-acp -->
 <a id="deepseek-aidsh-acp"></a>
 
-## `@deepseek-ai/dsh-acp`
+## `@berry-ai/harness-acp`
 
 - `inject`: `agents` · `llm` · `sessionPersistence` · `sessions`
 - `refs`: `Stream` (`@agentclientprotocol/sdk`)
@@ -1996,7 +1996,7 @@ export interface AcpConfig {
   stream?: Stream
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-acp -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-acp -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-default-model -->
 <a id="deepseek-aidsh-agent-default-model"></a>
