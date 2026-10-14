@@ -18,4 +18,4 @@
         maxLocations: 1
 
 - id: timeout-policy
-  name: '@deepseek-ai/dsh-tool-call-timeout-policy'
+  name: '@berry-ai/harness-tool-call-timeout-policy'

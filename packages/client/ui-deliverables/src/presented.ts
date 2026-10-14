@@ -1,5 +1,5 @@
 /** Validate declared workspace paths and address their native-open actions. */
-import type { PresentedFile } from '@deepseek-ai/dsh-tool-present/types'
+import type { PresentedFile } from '@berry-ai/harness-tool-present/types'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type { ToolCallId } from '@deepseek-ai/dsh-llm/brand'
 

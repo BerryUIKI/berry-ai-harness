@@ -131,7 +131,7 @@
               fetch: true
               searchTimeoutMs: 60000
           - id: present
-            name: '@deepseek-ai/dsh-tool-present'
+            name: '@berry-ai/harness-tool-present'
           - id: tool-plugin-manager
             name: '@berry-ai/harness-plugin-manager/tools'
             disabled: true

@@ -3,7 +3,7 @@
  * with logged model context without vetoing or rewriting calls. Configuration
  * and chain semantics live in the package README; rationale lives in the
  * repeat-tool-reminder Agent Note.
- * @module @deepseek-ai/dsh-repeat-tool-reminder
+ * @module @berry-ai/harness-repeat-tool-reminder
  */
 
 import type { Context } from '@deepseek-ai/cordis'

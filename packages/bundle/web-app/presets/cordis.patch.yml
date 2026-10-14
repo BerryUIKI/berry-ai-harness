@@ -139,7 +139,7 @@
           - id: tool-skill
             name: '@deepseek-ai/dsh-tool-skill'
           - id: present
-            name: '@deepseek-ai/dsh-tool-present'
+            name: '@berry-ai/harness-tool-present'
           - id: tool-plugin-manager
             name: '@berry-ai/harness-plugin-manager/tools'
             disabled: !!js "!ctx.get('profileContext')"
