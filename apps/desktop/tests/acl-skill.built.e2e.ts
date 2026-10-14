@@ -44,7 +44,7 @@ registerHooks({ resolve(specifier, context, next) {
   return next(specifier, context);
 } });
 const { Context } = await import(pathToFileURL(require.resolve('@deepseek-ai/cordis')));
-const { default: SkillRegistry } = await import(pathToFileURL(require.resolve('@deepseek-ai/dsh-skill')));
+const { default: SkillRegistry } = await import(pathToFileURL(require.resolve('@berry-ai/harness-skill')));
 const { registerAclDiagnosisSkill, ACL_DIAGNOSIS_SKILL } = await import(pathToFileURL(join(archive, 'lib/index.js')));
 const ctx = new Context();
 try {

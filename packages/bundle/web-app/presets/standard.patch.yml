@@ -35,9 +35,9 @@
           - id: tool-schedule
             name: '@berry-ai/harness-tool-schedule'
           - id: skill-filesystem
-            name: '@deepseek-ai/dsh-skill-filesystem'
+            name: '@berry-ai/harness-skill-filesystem'
           - id: tool-skill
-            name: '@deepseek-ai/dsh-tool-skill'
+            name: '@berry-ai/harness-tool-skill'
           - id: command-goal
             name: '@berry-ai/harness-command-goal'
           - id: tool-goal

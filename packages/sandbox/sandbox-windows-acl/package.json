@@ -35,7 +35,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-skill": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*"
   },
   "dependencies": {
@@ -50,7 +50,7 @@
     "@berry-ai/harness-pwsh-local": "workspace:*",
     "@berry-ai/harness-sandbox-local": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-skill": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*"
   }

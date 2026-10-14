@@ -14,7 +14,7 @@
   disabled: true
 
 - id: skill-filesystem
-  name: '@deepseek-ai/dsh-skill-filesystem'
+  name: '@berry-ai/harness-skill-filesystem'
   config:
     includeDefaultRoots: false
 

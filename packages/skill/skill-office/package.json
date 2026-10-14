@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-skill-office",
+  "name": "@berry-ai/harness-skill-office",
   "description": "Bundled Word, PowerPoint, and Excel workflows and structural checks",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -27,11 +27,11 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-skill": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-skill": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~"

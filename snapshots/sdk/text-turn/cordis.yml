@@ -3,7 +3,7 @@
 # The fixture corpus must not depend on the developer's personal skill roots.
 # Ordinary product launches retain the sdk profile's default skill discovery.
 - id: skill-filesystem
-  name: '@deepseek-ai/dsh-skill-filesystem'
+  name: '@berry-ai/harness-skill-filesystem'
   config:
     includeDefaultRoots: false
 

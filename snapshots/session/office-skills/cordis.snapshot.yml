@@ -46,7 +46,7 @@
 
 - insert:
     - id: office-skills
-      name: '@deepseek-ai/dsh-skill-office'
+      name: '@berry-ai/harness-skill-office'
       config:
         assetRoot: !!js process.cwd() + '/office-skills'
         node: !!js process.cwd() + '/office-node'

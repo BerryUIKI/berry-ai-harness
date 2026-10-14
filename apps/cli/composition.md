@@ -112,11 +112,11 @@ flowchart LR
   cfg --> plugin_dsh_base_tool_fs_search
   plugin_dsh_base_agent_instructions["agent-instructions<br/>@berry-ai/harness-agent-instructions"]
   cfg --> plugin_dsh_base_agent_instructions
-  plugin_dsh_base_skill["skill<br/>@deepseek-ai/dsh-skill"]
+  plugin_dsh_base_skill["skill<br/>@berry-ai/harness-skill"]
   cfg --> plugin_dsh_base_skill
-  plugin_dsh_base_skill_filesystem["skill-filesystem<br/>@deepseek-ai/dsh-skill-filesystem"]
+  plugin_dsh_base_skill_filesystem["skill-filesystem<br/>@berry-ai/harness-skill-filesystem"]
   cfg --> plugin_dsh_base_skill_filesystem
-  plugin_dsh_base_tool_skill["tool-skill<br/>@deepseek-ai/dsh-tool-skill"]
+  plugin_dsh_base_tool_skill["tool-skill<br/>@berry-ai/harness-tool-skill"]
   cfg --> plugin_dsh_base_tool_skill
   plugin_dsh_base_commands["commands<br/>@berry-ai/harness-commands"]
   cfg --> plugin_dsh_base_commands
@@ -252,9 +252,9 @@ flowchart LR
 | `tool-fs` | `@berry-ai/harness-tool-fs` |
 | `tool-fs-search` | `@berry-ai/harness-tool-fs-search` |
 | `agent-instructions` | `@berry-ai/harness-agent-instructions` |
-| `skill` | `@deepseek-ai/dsh-skill` |
-| `skill-filesystem` | `@deepseek-ai/dsh-skill-filesystem` |
-| `tool-skill` | `@deepseek-ai/dsh-tool-skill` |
+| `skill` | `@berry-ai/harness-skill` |
+| `skill-filesystem` | `@berry-ai/harness-skill-filesystem` |
+| `tool-skill` | `@berry-ai/harness-tool-skill` |
 | `commands` | `@berry-ai/harness-commands` |
 | `command-feedback` | `@berry-ai/harness-command-feedback` |
 | `goal` | `@berry-ai/harness-goal` |

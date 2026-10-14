@@ -14,7 +14,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { Context } from '@deepseek-ai/cordis'
-import { BUNDLED_SKILL_RANK, type SkillCandidate, type SkillProvider } from '@deepseek-ai/dsh-skill'
+import { BUNDLED_SKILL_RANK, type SkillCandidate, type SkillProvider } from '@berry-ai/harness-skill'
 import { parse as parseYaml } from 'yaml'
 
 /** Bundled skill that diagnoses Windows sandbox ACL failures. */

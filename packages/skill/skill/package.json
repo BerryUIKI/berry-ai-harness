@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-skill",
+  "name": "@berry-ai/harness-skill",
   "description": "Agent skill provider registry for the DeepSeek Harness",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
