@@ -38,8 +38,8 @@ Choose the persistent tool when work depends on cross-call state: a one-shot `ds
 The default `shell` backend starts an interactive bash through `dsh-terminal-bash`; deployments may register another PTY backend and select it by name.
 
 ```yaml
-- name: '@deepseek-ai/dsh-terminal'
-- name: '@deepseek-ai/dsh-terminal-bash'
+- name: '@berry-ai/harness-terminal'
+- name: '@berry-ai/harness-terminal-bash'
 - name: '@deepseek-ai/dsh-tool-bash-persistent'
 ```
 

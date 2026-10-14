@@ -8,7 +8,7 @@ import type {
   SubprocessTerminalForeground,
   SubprocessTerminalHandle,
 } from '@deepseek-ai/dsh-subprocess'
-import { TerminalError } from '@deepseek-ai/dsh-terminal'
+import { TerminalError } from '@berry-ai/harness-terminal'
 import type {
   TerminalBackendSession,
   TerminalReadRequest,
@@ -21,7 +21,7 @@ import type {
   TerminalSignal,
   TerminalSignalResult,
   TerminalWaitReason,
-} from '@deepseek-ai/dsh-terminal'
+} from '@berry-ai/harness-terminal'
 import type { ResolvedConfig } from './config.ts'
 import { CONTROLLED_PROMPT, TerminalSanitizer } from './sanitize.ts'
 

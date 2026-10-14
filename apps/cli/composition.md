@@ -120,7 +120,7 @@ flowchart LR
   cfg --> plugin_dsh_base_tool_skill
   plugin_dsh_base_commands["commands<br/>@deepseek-ai/dsh-commands"]
   cfg --> plugin_dsh_base_commands
-  plugin_dsh_base_command_feedback["command-feedback<br/>@deepseek-ai/dsh-command-feedback"]
+  plugin_dsh_base_command_feedback["command-feedback<br/>@berry-ai/harness-command-feedback"]
   cfg --> plugin_dsh_base_command_feedback
   plugin_dsh_base_goal["goal<br/>@deepseek-ai/dsh-goal"]
   cfg --> plugin_dsh_base_goal
@@ -256,7 +256,7 @@ flowchart LR
 | `skill-filesystem` | `@deepseek-ai/dsh-skill-filesystem` |
 | `tool-skill` | `@deepseek-ai/dsh-tool-skill` |
 | `commands` | `@deepseek-ai/dsh-commands` |
-| `command-feedback` | `@deepseek-ai/dsh-command-feedback` |
+| `command-feedback` | `@berry-ai/harness-command-feedback` |
 | `goal` | `@deepseek-ai/dsh-goal` |
 | `goal-round-driver` | `@deepseek-ai/dsh-goal-round-driver` |
 | `command-goal` | `@deepseek-ai/dsh-command-goal` |

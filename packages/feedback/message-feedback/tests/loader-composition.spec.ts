@@ -29,7 +29,7 @@ async function loadComposition(configPath: string): Promise<Context> {
   const modules = new Map<string, unknown>([
     ['@deepseek-ai/dsh-session', SessionStore],
     ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlSessionPersistence],
-    ['@deepseek-ai/dsh-message-feedback', MessageFeedbackService],
+    ['@berry-ai/harness-message-feedback', MessageFeedbackService],
   ])
   ctx.loader.internal = {
     version: 'v2',
@@ -60,7 +60,7 @@ describe('message feedback through a real Loader composition', () => {
       '  config:',
       `    root: ${JSON.stringify(join(root, 'sessions'))}`,
       '    compression: none',
-      "- name: '@deepseek-ai/dsh-message-feedback'",
+      "- name: '@berry-ai/harness-message-feedback'",
       '  config:',
       '    maxNoteBytes: 32',
       '',

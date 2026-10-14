@@ -10,11 +10,11 @@
 import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
 import type { ClientRemote, MessageId } from '@deepseek-ai/dsh-api-remotes/client'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { FeedbackRecord } from '@deepseek-ai/dsh-command-feedback/types'
+import type { FeedbackRecord } from '@berry-ai/harness-command-feedback/types'
 import type {
   MessageFeedbackItem,
   MessageFeedbackRating,
-} from '@deepseek-ai/dsh-message-feedback/types'
+} from '@berry-ai/harness-message-feedback/types'
 
 /** Load state of the one list read that seeds every per-message control. */
 export type MessageFeedbackStatus = 'cold' | 'loading' | 'ready' | 'error'

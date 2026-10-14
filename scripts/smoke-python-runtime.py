@@ -1602,7 +1602,7 @@ def smoke_sdk_snapshot_mode(
                 "parentSessionId": SNAPSHOT_SESSION_ID, "prompt": SNAPSHOT_WORKFLOW_CHILD_PROMPT,
                 "direct": {"prompt": SNAPSHOT_DIRECT_CHILD_PROMPT, "callId": "advanced-direct-child"},
             }},
-            {"id": "snapshot-message-feedback", "name": "@deepseek-ai/dsh-message-feedback",
+            {"id": "snapshot-message-feedback", "name": "@berry-ai/harness-message-feedback",
              "config": {"maxNoteBytes": 1024}},
             {"id": "snapshot-feedback-producer", "name": (
                 Path(__file__).resolve().parent.parent / "snapshots/sdk/text-turn/feedback-producer.mjs"

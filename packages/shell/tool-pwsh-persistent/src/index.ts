@@ -11,7 +11,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import { truncateWithoutSplittingSurrogatePair } from '@berry-ai/harness-output-retention'
-import type { TerminalReadResult, TerminalSessionId } from '@deepseek-ai/dsh-terminal'
+import type { TerminalReadResult, TerminalSessionId } from '@berry-ai/harness-terminal'
 import { deadline, timeoutOf } from '@berry-ai/harness-timeout'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 

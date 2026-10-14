@@ -2,9 +2,9 @@
 # deployment already owns the shared sandbox provider and policy.
 - insert:
     - id: pty
-      name: '@deepseek-ai/dsh-terminal'
+      name: '@berry-ai/harness-terminal'
     - id: terminal-bash
-      name: '@deepseek-ai/dsh-terminal-bash'
+      name: '@berry-ai/harness-terminal-bash'
       config:
         pollIntervalMs: 10
         exactProbeAfterMs: 20

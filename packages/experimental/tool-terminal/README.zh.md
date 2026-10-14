@@ -43,8 +43,8 @@ kind: "package-reference"
 ### 组合方式
 
 ```yaml
-- name: '@deepseek-ai/dsh-terminal'
-- name: '@deepseek-ai/dsh-terminal-bash'
+- name: '@berry-ai/harness-terminal'
+- name: '@berry-ai/harness-terminal-bash'
 - name: '@deepseek-ai/dsh-tool-terminal'
 ```
 

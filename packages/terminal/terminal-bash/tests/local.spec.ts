@@ -8,15 +8,15 @@ import { Context } from '@deepseek-ai/cordis'
 import { Session, SessionId } from '@deepseek-ai/dsh-session'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import TerminalSessionService from '@deepseek-ai/dsh-terminal'
-import type { TerminalSendOperation } from '@deepseek-ai/dsh-terminal'
+import TerminalSessionService from '@berry-ai/harness-terminal'
+import type { TerminalSendOperation } from '@berry-ai/harness-terminal'
 import SandboxProvider from '@deepseek-ai/dsh-sandbox'
 import type { ConfinedArgv, SandboxPolicy } from '@deepseek-ai/dsh-sandbox'
 import SandboxPolicyService from '@deepseek-ai/dsh-sandbox-policy'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
 import { resolvePwshPath } from '@deepseek-ai/dsh-pwsh-local/src/resolve.ts'
-import * as ptyLocal from '@deepseek-ai/dsh-terminal-bash'
+import * as ptyLocal from '@berry-ai/harness-terminal-bash'
 
 const roots: string[] = []
 const contexts: Context[] = []

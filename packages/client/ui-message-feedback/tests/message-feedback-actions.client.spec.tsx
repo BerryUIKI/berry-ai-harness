@@ -14,7 +14,7 @@ import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts
 import type { MessageId } from '@deepseek-ai/dsh-api-remotes/client'
 import type {
   MessageFeedbackItem, MessageFeedbackRating, MessageFeedbackVersion,
-} from '@deepseek-ai/dsh-message-feedback/types'
+} from '@berry-ai/harness-message-feedback/types'
 import { MessageFeedbackActions } from '../src/client/MessageFeedbackActions.tsx'
 import type {
   MessageFeedbackActionResult, MessageFeedbackView,

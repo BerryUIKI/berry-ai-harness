@@ -1,6 +1,6 @@
 /**
  * Canonical Session-log feedback for finalized assistant messages.
- * @module @deepseek-ai/dsh-message-feedback
+ * @module @berry-ai/harness-message-feedback
  */
 
 import { Buffer } from 'node:buffer'
@@ -9,7 +9,7 @@ import { isDeepStrictEqual } from 'node:util'
 import { Context, Service } from '@deepseek-ai/cordis'
 import s from '@deepseek-ai/schemastery'
 import { z } from 'zod'
-import { FEEDBACK_CATEGORIES } from '@deepseek-ai/dsh-command-feedback'
+import { FEEDBACK_CATEGORIES } from '@berry-ai/harness-command-feedback'
 import { SessionSeq } from '@deepseek-ai/dsh-session/types'
 import { deriveEventMessage, isAppendSurfaceEvent } from '@deepseek-ai/dsh-session/surface'
 import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session/types'

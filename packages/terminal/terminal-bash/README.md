@@ -3,7 +3,7 @@ description: "The shipped shell backend for persistent terminal sessions: intera
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-terminal-bash
+# @berry-ai/harness-terminal-bash
 
 English | [中文](README.zh.md)
 
@@ -27,7 +27,7 @@ English | [中文](README.zh.md)
 
 A terminal without an explicit initial directory starts in the owner's current Session directory. Its sandbox permission root remains governed by Session policy.
 
-Mount this backend when a composition needs persistent shell sessions — state such as cwd, exported variables, functions, or running interactive children must survive across tool calls. It is the default `shell` type: a composition that mounts `@deepseek-ai/dsh-terminal` without it has no sessions to open.
+Mount this backend when a composition needs persistent shell sessions — state such as cwd, exported variables, functions, or running interactive children must survive across tool calls. It is the default `shell` type: a composition that mounts `@berry-ai/harness-terminal` without it has no sessions to open.
 
 ### When to choose it
 
@@ -38,11 +38,11 @@ Choose this backend when work needs an interactive shell or REPL whose state per
 Mount the terminal service, a subprocess provider, the sandbox and policy services, this backend, and a tool package:
 
 ```yaml
-- name: '@deepseek-ai/dsh-terminal'
+- name: '@berry-ai/harness-terminal'
 - name: '@deepseek-ai/dsh-subprocess-local'
 - name: '@deepseek-ai/dsh-sandbox-local'
 - name: '@deepseek-ai/dsh-sandbox-policy'
-- name: '@deepseek-ai/dsh-terminal-bash'
+- name: '@berry-ai/harness-terminal-bash'
 - name: '@deepseek-ai/dsh-tool-terminal'
 ```
 

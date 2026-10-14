@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { TerminalSessionId } from '@deepseek-ai/dsh-terminal'
+import { TerminalSessionId } from '@berry-ai/harness-terminal'
 import { boundTerminalText, renderList, renderRead, renderSend, renderSendRead, renderSpawn } from '@deepseek-ai/dsh-tool-terminal/src/render.ts'
 
 describe('tool-terminal rendering', () => {

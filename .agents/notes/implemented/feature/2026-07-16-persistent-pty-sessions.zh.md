@@ -109,9 +109,9 @@ plugins:
     config:
       mode: workspace-write
       workspaceRoot: .
-  '@deepseek-ai/dsh-terminal':
+  '@berry-ai/harness-terminal':
   '@deepseek-ai/dsh-subprocess-local':
-  '@deepseek-ai/dsh-terminal-bash':
+  '@berry-ai/harness-terminal-bash':
     config:
       scrollbackLines: 10000
       scrollbackMaxBytes: 4194304

@@ -3,7 +3,7 @@ description: "持久终端会话的随产品交付的 shell 后端：在共享�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-terminal-bash
+# @berry-ai/harness-terminal-bash
 
 [English](README.md) | 中文
 
@@ -27,7 +27,7 @@ kind: "package-reference"
 
 未显式指定初始目录的终端从所属 Session 的当前目录启动。沙箱权限根目录仍由 Session 策略控制。
 
-当组合需要持久 shell 会话时挂载此后端——cwd、导出的变量、函数或正在运行的交互式子进程等状态必须跨工具调用存活。它是默认的 `shell` 类型：组合只挂载 `@deepseek-ai/dsh-terminal` 而不挂载它时，将没有任何会话可打开。
+当组合需要持久 shell 会话时挂载此后端——cwd、导出的变量、函数或正在运行的交互式子进程等状态必须跨工具调用存活。它是默认的 `shell` 类型：组合只挂载 `@berry-ai/harness-terminal` 而不挂载它时，将没有任何会话可打开。
 
 ### 何时选择
 
@@ -38,11 +38,11 @@ kind: "package-reference"
 挂载终端服务、子进程提供方、沙箱与策略服务、此后端以及一个工具包：
 
 ```yaml
-- name: '@deepseek-ai/dsh-terminal'
+- name: '@berry-ai/harness-terminal'
 - name: '@deepseek-ai/dsh-subprocess-local'
 - name: '@deepseek-ai/dsh-sandbox-local'
 - name: '@deepseek-ai/dsh-sandbox-policy'
-- name: '@deepseek-ai/dsh-terminal-bash'
+- name: '@berry-ai/harness-terminal-bash'
 - name: '@deepseek-ai/dsh-tool-terminal'
 ```
 

@@ -15,7 +15,7 @@
 
 - insert:
     - id: terminal
-      name: '@deepseek-ai/dsh-terminal'
+      name: '@berry-ai/harness-terminal'
 
 - id: sandbox-policy
   name: '@deepseek-ai/dsh-sandbox-policy'
@@ -28,7 +28,7 @@
 
 - insert:
     - id: terminal-pwsh
-      name: '@deepseek-ai/dsh-terminal-bash'
+      name: '@berry-ai/harness-terminal-bash'
       config:
         shellDialect: pwsh
         timeoutMs: 30000

@@ -3,7 +3,7 @@ description: "面向部署方与消费方的持久终端会话说明，用于选
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-terminal
+# @berry-ai/harness-terminal
 
 [English](README.md) | 中文
 
@@ -25,7 +25,7 @@ kind: "package-reference"
 <a id="use-this-package"></a>
 ## 使用本包
 
-当组合需要状态跨工具调用存活的终端会话时，挂载 `@deepseek-ai/dsh-terminal`。单独的服务本身没有用处：请与 `@deepseek-ai/dsh-terminal-bash` 之类的后端、`@deepseek-ai/dsh-tool-terminal` 之类的工具包配对，并在同一个组合中一起加载。
+当组合需要状态跨工具调用存活的终端会话时，挂载 `@berry-ai/harness-terminal`。单独的服务本身没有用处：请与 `@berry-ai/harness-terminal-bash` 之类的后端、`@deepseek-ai/dsh-tool-terminal` 之类的工具包配对，并在同一个组合中一起加载。
 
 ### 何时选择
 
@@ -36,8 +36,8 @@ kind: "package-reference"
 将会话服务与后端、工具包一起加载：
 
 ```yaml
-- name: '@deepseek-ai/dsh-terminal'
-- name: '@deepseek-ai/dsh-terminal-bash'
+- name: '@berry-ai/harness-terminal'
+- name: '@berry-ai/harness-terminal-bash'
 - name: '@deepseek-ai/dsh-tool-terminal'
 ```
 
