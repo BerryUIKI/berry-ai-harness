@@ -50,11 +50,11 @@ flowchart LR
   cfg --> plugin_dsh_base_config_editor
   plugin_dsh_base_settings["settings<br/>@berry-ai/harness-settings"]
   cfg --> plugin_dsh_base_settings
-  plugin_dsh_base_authorization["authorization<br/>@deepseek-ai/dsh-authorization"]
+  plugin_dsh_base_authorization["authorization<br/>@berry-ai/harness-authorization"]
   cfg --> plugin_dsh_base_authorization
-  plugin_dsh_base_deepseek_account["deepseek-account<br/>@deepseek-ai/dsh-deepseek-account-platform"]
+  plugin_dsh_base_deepseek_account["deepseek-account<br/>@berry-ai/harness-deepseek-account-platform"]
   cfg --> plugin_dsh_base_deepseek_account
-  plugin_dsh_base_credentials["credentials<br/>@deepseek-ai/dsh-credentials-local"]
+  plugin_dsh_base_credentials["credentials<br/>@berry-ai/harness-credentials-local"]
   cfg --> plugin_dsh_base_credentials
   plugin_dsh_base_llm_pi_ai["llm-pi-ai<br/>@deepseek-ai/dsh-llm-pi-ai"]
   cfg --> plugin_dsh_base_llm_pi_ai
@@ -221,9 +221,9 @@ flowchart LR
 | `llm-retry` | `@deepseek-ai/dsh-llm-retry` |
 | `config-editor` | `@berry-ai/harness-config-editor` |
 | `settings` | `@berry-ai/harness-settings` |
-| `authorization` | `@deepseek-ai/dsh-authorization` |
-| `deepseek-account` | `@deepseek-ai/dsh-deepseek-account-platform` |
-| `credentials` | `@deepseek-ai/dsh-credentials-local` |
+| `authorization` | `@berry-ai/harness-authorization` |
+| `deepseek-account` | `@berry-ai/harness-deepseek-account-platform` |
+| `credentials` | `@berry-ai/harness-credentials-local` |
 | `llm-pi-ai` | `@deepseek-ai/dsh-llm-pi-ai` |
 | `session-persistence-jsonl` | `@deepseek-ai/dsh-session-persistence-jsonl` |
 | `attachment-local` | `@berry-ai/harness-attachment-local` |

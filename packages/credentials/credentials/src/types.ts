@@ -5,7 +5,7 @@
  * here reaches a Host-only symbol, so a Client compilation face reads exactly
  * the signature the Host emits.
  *
- * @module @deepseek-ai/dsh-credentials/types
+ * @module @berry-ai/harness-credentials/types
  */
 
 import type { Branded } from '@berry-ai/harness-brand'

@@ -20,7 +20,7 @@ import type {
   SaveImageAttachment,
   StoredImageAttachment,
 } from '@berry-ai/harness-attachment'
-import { LocalCredentialProvider } from '@deepseek-ai/dsh-credentials-local'
+import { LocalCredentialProvider } from '@berry-ai/harness-credentials-local'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import DeepSeekLlmApiExtensionRegistry from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
 import * as PluginPackageInventoryDeepSeek from '@deepseek-ai/dsh-plugin-package-inventory-deepseek'

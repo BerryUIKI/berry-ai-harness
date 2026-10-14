@@ -28,8 +28,8 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
-    "@deepseek-ai/dsh-deepseek-account": "workspace:*",
+    "@berry-ai/harness-credentials": "workspace:*",
+    "@berry-ai/harness-deepseek-account": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-web": "workspace:*",
@@ -40,9 +40,9 @@
   },
   "devDependencies": {
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
-    "@deepseek-ai/dsh-credentials-local": "workspace:*",
-    "@deepseek-ai/dsh-deepseek-account": "workspace:*",
+    "@berry-ai/harness-credentials": "workspace:*",
+    "@berry-ai/harness-credentials-local": "workspace:*",
+    "@berry-ai/harness-deepseek-account": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-web": "workspace:*",
@@ -50,7 +50,7 @@
     "@berry-ai/harness-http-proxy": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-deepseek-account": {
+    "@berry-ai/harness-deepseek-account": {
       "optional": true
     }
   }

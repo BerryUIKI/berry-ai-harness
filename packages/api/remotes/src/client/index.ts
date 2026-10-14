@@ -74,7 +74,7 @@ export type { ApiRemoteForwardedEvent } from '../types.ts'
 // declaration the Host emits rather than a flattened restatement of it.
 export type {} from '@berry-ai/harness-commands/types'
 export type {} from '@deepseek-ai/dsh-cordis-host-runner/types'
-export type {} from '@deepseek-ai/dsh-credentials/types'
+export type {} from '@berry-ai/harness-credentials/types'
 export type {} from '@deepseek-ai/dsh-llm/types'
 export type {} from '@berry-ai/harness-agent-preset-registry/types'
 export type {} from '@berry-ai/harness-permission-presets/types'
@@ -135,7 +135,7 @@ export type {
   RequestRunOutcome,
 } from '@deepseek-ai/dsh-cordis-host-runner/types'
 // Credential state vocabulary for the credentials namespace (values never ride it).
-export type { CredentialInfo } from '@deepseek-ai/dsh-credentials/types'
+export type { CredentialInfo } from '@berry-ai/harness-credentials/types'
 // Redacted namespace vocabulary for the settings namespace (secrets never ride
 // it). It travels with its seam, whose `./types` the Client face already reads.
 export type {

@@ -2,7 +2,7 @@
 import { Big } from 'big.js'
 import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import { Button, IconRightUpOutlineRegular } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { AccountDetails, AccountView, SignInAttemptId } from '@deepseek-ai/dsh-deepseek-account/types'
+import type { AccountDetails, AccountView, SignInAttemptId } from '@berry-ai/harness-deepseek-account/types'
 import type { PropsRuntime, PropsLocale, InjectFace, HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
 import type { ThemeSnapshot } from '@deepseek-ai/dsh-client-ui-theme/client'
 import type { PlatformPage, PlatformPages } from './platform-pages.ts'

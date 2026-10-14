@@ -4,7 +4,7 @@
  * the local UTC offset rather than any credential.
  * @module @deepseek-ai/dsh-client-ui-settings-account/src/client/client-metadata
  */
-import type { AccountClientMetadata } from '@deepseek-ai/dsh-deepseek-account/types'
+import type { AccountClientMetadata } from '@berry-ai/harness-deepseek-account/types'
 
 /**
  * Build the request identity for one account call.

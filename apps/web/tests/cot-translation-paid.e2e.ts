@@ -5,7 +5,7 @@ import { createServer, type IncomingMessage, type ServerResponse } from 'node:ht
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import type {} from '@deepseek-ai/dsh-deepseek-account'
+import type {} from '@berry-ai/harness-deepseek-account'
 import type {} from '@deepseek-ai/dsh-experimental-translator/types'
 import { pluginRecordOf } from '@deepseek-ai/dsh-session'
 import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session/types'

@@ -1,7 +1,7 @@
 /** Native-route admission and independent audited Flash translation without Agent history. */
 import { FiberState, type Context, type Fiber } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
-import { credentialRef } from '@deepseek-ai/dsh-credentials'
+import { credentialRef } from '@berry-ai/harness-credentials'
 import { launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
 import { BlockAssembler, ReasoningEffortId, type LlmRuntime, type GenerateOptions, type RequestUserInput, type FinishReason, type TextBlock } from '@deepseek-ai/dsh-llm'
 import type { Config as SharedNativeConfig } from '@deepseek-ai/dsh-llm-deepseek'

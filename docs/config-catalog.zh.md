@@ -83,6 +83,69 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-attachment-local -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-credentials-local -->
+<a id="berry-aiharness-credentials-local"></a>
+
+## `@berry-ai/harness-credentials-local`
+
+- `source`: [`packages/credentials/credentials-local/src/index.ts:64`](../packages/credentials/credentials-local/src/index.ts)
+
+```ts config-catalog
+/** Plugin config: file location and hot-reload behavior. */
+export interface Config {
+  /** Credentials document path; defaults to `.credentials.yaml` under the harness home. */
+  path?: string
+  /** Harness home used when `path` is omitted; defaults to `$DSH_HOME` or `~/.dsh`. */
+  dshHome?: string
+  /** Watch the document and hot-publish external edits; defaults to true. */
+  watch?: boolean
+  /** Watcher write-settle window in milliseconds; defaults to 100. */
+  debounceMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-credentials-local -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-deepseek-account-platform -->
+<a id="berry-aiharness-deepseek-account-platform"></a>
+
+## `@berry-ai/harness-deepseek-account-platform`
+
+- `inject`: `credentials` · `authorization`
+- `source`: [`packages/credentials/deepseek-account-platform/src/index.ts:23`](../packages/credentials/deepseek-account-platform/src/index.ts)
+
+```ts config-catalog
+/** Deployment-specific platform and request deadlines. */
+export interface Config {
+  /** Platform origin serving auth-api and browser pages. */
+  platformOrigin?: string
+  /** Native desktop identity for Host API and embedded Platform requests; null identifies the client as web. */
+  desktopPlatform?: 'darwin' | 'win32' | null
+  /** Optional frontend deployment selector for embedded Usage and Top-up pages. */
+  embeddedPageDist?: string
+  /** Exact HTTP(S) origin allowed to receive account tokens for inference and files. */
+  inferenceOrigin?: string
+  /** Allow HTTP only on loopback for the development Mock. */
+  allowLoopbackHttp?: boolean
+  /** Map authorization and completion pages to platformOrigin for private development proxies. */
+  rewriteBrowserOrigin?: boolean
+  /** Host-only headers sent exclusively to platformOrigin; account authorization cannot be overridden. */
+  requestHeaders?: Record<string, string>
+  /** Overrides for profile, balance and embedded Platform requests; Cookie pairs merge by name. Logout retains requestHeaders. */
+  accountRequestHeaders?: Record<string, string>
+  /** Deadline for each platform HTTP request. */
+  requestTimeoutMs?: number
+  /** Deadline for recharge-wallet queries; timeout returns a failed balance outcome. */
+  balanceTimeoutMs?: number
+  /** Additional logout attempts after the first request fails, at most five. */
+  logoutMaxRetries?: number
+  /** Delay before the first logout retry; each later delay doubles. */
+  logoutRetryDelayMs?: number
+  /** Upper bound for the entire local attempt, even if the server advertises a longer TTL. */
+  attemptTimeoutMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-deepseek-account-platform -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-goal -->
 <a id="berry-aiharness-goal"></a>
 
@@ -1745,69 +1808,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-cordis-host-runner -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-credentials-local -->
-<a id="deepseek-aidsh-credentials-local"></a>
-
-## `@deepseek-ai/dsh-credentials-local`
-
-- `source`: [`packages/credentials/credentials-local/src/index.ts:64`](../packages/credentials/credentials-local/src/index.ts)
-
-```ts config-catalog
-/** Plugin config: file location and hot-reload behavior. */
-export interface Config {
-  /** Credentials document path; defaults to `.credentials.yaml` under the harness home. */
-  path?: string
-  /** Harness home used when `path` is omitted; defaults to `$DSH_HOME` or `~/.dsh`. */
-  dshHome?: string
-  /** Watch the document and hot-publish external edits; defaults to true. */
-  watch?: boolean
-  /** Watcher write-settle window in milliseconds; defaults to 100. */
-  debounceMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-credentials-local -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-deepseek-account-platform -->
-<a id="deepseek-aidsh-deepseek-account-platform"></a>
-
-## `@deepseek-ai/dsh-deepseek-account-platform`
-
-- `inject`: `credentials` · `authorization`
-- `source`: [`packages/credentials/deepseek-account-platform/src/index.ts:23`](../packages/credentials/deepseek-account-platform/src/index.ts)
-
-```ts config-catalog
-/** Deployment-specific platform and request deadlines. */
-export interface Config {
-  /** Platform origin serving auth-api and browser pages. */
-  platformOrigin?: string
-  /** Native desktop identity for Host API and embedded Platform requests; null identifies the client as web. */
-  desktopPlatform?: 'darwin' | 'win32' | null
-  /** Optional frontend deployment selector for embedded Usage and Top-up pages. */
-  embeddedPageDist?: string
-  /** Exact HTTP(S) origin allowed to receive account tokens for inference and files. */
-  inferenceOrigin?: string
-  /** Allow HTTP only on loopback for the development Mock. */
-  allowLoopbackHttp?: boolean
-  /** Map authorization and completion pages to platformOrigin for private development proxies. */
-  rewriteBrowserOrigin?: boolean
-  /** Host-only headers sent exclusively to platformOrigin; account authorization cannot be overridden. */
-  requestHeaders?: Record<string, string>
-  /** Overrides for profile, balance and embedded Platform requests; Cookie pairs merge by name. Logout retains requestHeaders. */
-  accountRequestHeaders?: Record<string, string>
-  /** Deadline for each platform HTTP request. */
-  requestTimeoutMs?: number
-  /** Deadline for recharge-wallet queries; timeout returns a failed balance outcome. */
-  balanceTimeoutMs?: number
-  /** Additional logout attempts after the first request fails, at most five. */
-  logoutMaxRetries?: number
-  /** Delay before the first logout retry; each later delay doubles. */
-  logoutRetryDelayMs?: number
-  /** Upper bound for the entire local attempt, even if the server advertises a longer TTL. */
-  attemptTimeoutMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-deepseek-account-platform -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-agent-team -->
 <a id="deepseek-aidsh-experimental-agent-team"></a>
@@ -4499,6 +4499,7 @@ export interface Config {
 <!-- BEGIN GENERATED config-catalog:no-config -->
 | `package` | `inject` | `source` |
 | --- | --- | --- |
+| `@berry-ai/harness-authorization` | `credentials` | [`packages/credentials/authorization/src/index.ts`](../packages/credentials/authorization/src/index.ts) |
 | `@berry-ai/harness-browser-use` | — | [`packages/browser-use/browser-use/src/index.ts`](../packages/browser-use/browser-use/src/index.ts) |
 | `@berry-ai/harness-command-feedback` | `commands` | [`packages/feedback/command-feedback/src/index.ts`](../packages/feedback/command-feedback/src/index.ts) |
 | `@berry-ai/harness-command-goal` | `commands` · `goals` | [`packages/goal/command-goal/src/index.ts`](../packages/goal/command-goal/src/index.ts) |
@@ -4523,7 +4524,6 @@ export interface Config {
 | `@deepseek-ai/dsh-agent` | — | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
 | `@deepseek-ai/dsh-api-account-controller` | `deepseekAccount` · `agents` | [`packages/api/account-controller/src/index.ts`](../packages/api/account-controller/src/index.ts) |
 | `@deepseek-ai/dsh-api-remotes` | `typertGateway` | [`packages/api/remotes/src/index.ts`](../packages/api/remotes/src/index.ts) |
-| `@deepseek-ai/dsh-authorization` | `credentials` | [`packages/credentials/authorization/src/index.ts`](../packages/credentials/authorization/src/index.ts) |
 | `@deepseek-ai/dsh-client-file-upload` | `agents` · `attachments` · `commands` · `connection` | [`packages/client/file-upload/src/index.ts`](../packages/client/file-upload/src/index.ts) |
 | `@deepseek-ai/dsh-client-locale` | — | [`packages/client/locale/src/index.ts`](../packages/client/locale/src/index.ts) |
 | `@deepseek-ai/dsh-client-modules` | `loader` | [`packages/client/modules/src/index.ts`](../packages/client/modules/src/index.ts) |
@@ -4611,6 +4611,8 @@ export interface Config {
 | `package` | `class` | `inject` | `source` |
 | --- | --- | --- | --- |
 | `@berry-ai/harness-attachment` | `AttachmentStore` | — | [`packages/attachment/attachment/src/index.ts`](../packages/attachment/attachment/src/index.ts) |
+| `@berry-ai/harness-credentials` | `CredentialProvider` | — | [`packages/credentials/credentials/src/index.ts`](../packages/credentials/credentials/src/index.ts) |
+| `@berry-ai/harness-deepseek-account` | `DeepSeekAccount` | — | [`packages/credentials/deepseek-account/src/index.ts`](../packages/credentials/deepseek-account/src/index.ts) |
 | `@berry-ai/harness-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
 | `@berry-ai/harness-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
 | `@berry-ai/harness-sandbox` | `SandboxProvider` | — | [`packages/sandbox/sandbox/src/index.ts`](../packages/sandbox/sandbox/src/index.ts) |
@@ -4618,8 +4620,6 @@ export interface Config {
 | `@berry-ai/harness-subprocess` | `SubprocessRuntime` | — | [`packages/subprocess/subprocess/src/index.ts`](../packages/subprocess/subprocess/src/index.ts) |
 | `@berry-ai/harness-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
 | `@deepseek-ai/dsh-compaction` | `CompactionEngine` | — | [`packages/compaction/compaction/src/index.ts`](../packages/compaction/compaction/src/index.ts) |
-| `@deepseek-ai/dsh-credentials` | `CredentialProvider` | — | [`packages/credentials/credentials/src/index.ts`](../packages/credentials/credentials/src/index.ts) |
-| `@deepseek-ai/dsh-deepseek-account` | `DeepSeekAccount` | — | [`packages/credentials/deepseek-account/src/index.ts`](../packages/credentials/deepseek-account/src/index.ts) |
 | `@deepseek-ai/dsh-file-reference` | `FileReferenceService` | — | [`packages/context/file-reference/src/index.ts`](../packages/context/file-reference/src/index.ts) |
 | `@deepseek-ai/dsh-fs` | `FileSystem` | — | [`packages/fs/fs/src/index.ts`](../packages/fs/fs/src/index.ts) |
 | `@deepseek-ai/dsh-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |

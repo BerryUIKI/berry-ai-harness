@@ -7,7 +7,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { mkdtemp, readFile, rm, stat } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { credentialRef } from '@deepseek-ai/dsh-credentials'
+import { credentialRef } from '@berry-ai/harness-credentials'
 import { withFileLock, writeFileAtomic } from '@berry-ai/harness-atomic-write'
 import { LocalCredentialProvider, renderFlatLayoutMigration } from '../src/index.ts'
 

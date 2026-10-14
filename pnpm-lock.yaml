@@ -521,7 +521,7 @@ importers:
       '@deepseek-ai/dsh-bash-local':
         specifier: workspace:*
         version: link:../../packages/shell/bash-local
-      '@deepseek-ai/dsh-credentials-local':
+      '@berry-ai/harness-credentials-local':
         specifier: workspace:*
         version: link:../../packages/credentials/credentials-local
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
@@ -690,7 +690,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-theme':
         specifier: workspace:*
         version: link:../../packages/client/ui-theme
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../packages/credentials/deepseek-account
       '@deepseek-ai/node-addon-system':
@@ -789,7 +789,7 @@ importers:
       '@deepseek-ai/dsh-client-connection':
         specifier: workspace:*
         version: link:../../packages/client/connection
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../packages/credentials/deepseek-account
       '@deepseek-ai/dsh-host-webserver':
@@ -1175,7 +1175,7 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../credentials/deepseek-account
       '@deepseek-ai/dsh-typert-protocol':
@@ -1361,10 +1361,10 @@ importers:
       '@deepseek-ai/dsh-cordis-host-runner':
         specifier: workspace:*
         version: link:../../extensions/cordis-host-runner
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../credentials/deepseek-account
       '@deepseek-ai/dsh-file-reference':
@@ -1482,7 +1482,7 @@ importers:
       '@deepseek-ai/dsh-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
       '@deepseek-ai/dsh-file-reference':
@@ -1564,7 +1564,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
       '@deepseek-ai/dsh-session':
@@ -2158,7 +2158,7 @@ importers:
       '@deepseek-ai/dsh-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
-      '@deepseek-ai/dsh-authorization':
+      '@berry-ai/harness-authorization':
         specifier: workspace:*
         version: link:../../credentials/authorization
       '@deepseek-ai/dsh-bash-sandbox':
@@ -2176,10 +2176,10 @@ importers:
       '@deepseek-ai/dsh-compaction-tool-result-pruner':
         specifier: workspace:*
         version: link:../../compaction/compaction-tool-result-pruner
-      '@deepseek-ai/dsh-credentials-local':
+      '@berry-ai/harness-credentials-local':
         specifier: workspace:*
         version: link:../../credentials/credentials-local
-      '@deepseek-ai/dsh-deepseek-account-platform':
+      '@berry-ai/harness-deepseek-account-platform':
         specifier: workspace:*
         version: link:../../credentials/deepseek-account-platform
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
@@ -2931,7 +2931,7 @@ importers:
 
   packages/client/connection:
     dependencies:
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
       '@deepseek-ai/schemastery':
@@ -3116,7 +3116,7 @@ importers:
       '@deepseek-ai/dsh-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../credentials/deepseek-account
       '@deepseek-ai/dsh-host-product-telemetry-otel':
@@ -4905,7 +4905,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-theme':
         specifier: workspace:*
         version: link:../ui-theme
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../credentials/deepseek-account
       '@deepseek-ai/dsh-host-webserver':
@@ -7170,7 +7170,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../credentials
       '@deepseek-ai/dsh-llm':
@@ -7211,7 +7211,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../credentials
 
@@ -7242,13 +7242,13 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-authorization':
+      '@berry-ai/harness-authorization':
         specifier: workspace:*
         version: link:../authorization
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../credentials
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../deepseek-account
       '@deepseek-ai/dsh-host-webserver':
@@ -9095,10 +9095,10 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../credentials/deepseek-account
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
@@ -9221,7 +9221,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
       '@deepseek-ai/dsh-host-webserver':
@@ -10186,7 +10186,7 @@ importers:
       '@deepseek-ai/dsh-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-credentials-local':
+      '@berry-ai/harness-credentials-local':
         specifier: workspace:*
         version: link:../../credentials/credentials-local
       '@deepseek-ai/dsh-host-webserver':
@@ -10667,13 +10667,13 @@ importers:
       '@deepseek-ai/dsh-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
-      '@deepseek-ai/dsh-credentials-local':
+      '@berry-ai/harness-credentials-local':
         specifier: workspace:*
         version: link:../../credentials/credentials-local
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../credentials/deepseek-account
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
@@ -10721,7 +10721,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../credentials/deepseek-account
       '@deepseek-ai/dsh-llm':
@@ -10749,7 +10749,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
       '@deepseek-ai/dsh-llm':
@@ -10795,10 +10795,10 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-authorization':
+      '@berry-ai/harness-authorization':
         specifier: workspace:*
         version: link:../../credentials/authorization
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
       '@deepseek-ai/dsh-fs':
@@ -14778,13 +14778,13 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
-      '@deepseek-ai/dsh-credentials-local':
+      '@berry-ai/harness-credentials-local':
         specifier: workspace:*
         version: link:../../credentials/credentials-local
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../credentials/deepseek-account
       '@deepseek-ai/dsh-session':
@@ -15239,7 +15239,7 @@ importers:
       '@deepseek-ai/dsh-api-session-controller':
         specifier: workspace:*
         version: link:../../packages/api/session-controller
-      '@deepseek-ai/dsh-authorization':
+      '@berry-ai/harness-authorization':
         specifier: workspace:*
         version: link:../../packages/credentials/authorization
       '@deepseek-ai/dsh-base':
@@ -15272,10 +15272,10 @@ importers:
       '@deepseek-ai/dsh-cordis-host-runner':
         specifier: workspace:*
         version: link:../../packages/extensions/cordis-host-runner
-      '@deepseek-ai/dsh-credentials':
+      '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../packages/credentials/credentials
-      '@deepseek-ai/dsh-deepseek-account':
+      '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../packages/credentials/deepseek-account
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':

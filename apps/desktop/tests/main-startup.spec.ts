@@ -1,4 +1,4 @@
-import type { AccountView } from '@deepseek-ai/dsh-deepseek-account/types'
+import type { AccountView } from '@berry-ai/harness-deepseek-account/types'
 import { WINDOWS_TITLEBAR_HEIGHT } from '../src/windows-layout.ts'
 import { afterEach, beforeEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import type { IpcMainInvokeEvent } from 'electron'

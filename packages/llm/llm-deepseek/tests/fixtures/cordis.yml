@@ -7,7 +7,7 @@
 - name: '@deepseek-ai/dsh-agent-loop'
   config:
     agents: []
-- name: '@deepseek-ai/dsh-credentials-local'
+- name: '@berry-ai/harness-credentials-local'
   config:
     path: {{credentials}}
     watch: false

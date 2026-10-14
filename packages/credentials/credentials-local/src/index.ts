@@ -32,7 +32,7 @@
  * as the user's environment layer; a store that doubled as the environment
  * layer would shadow non-secret entries behind its precedence, making them
  * silently unreachable.
- * @module @deepseek-ai/dsh-credentials-local
+ * @module @berry-ai/harness-credentials-local
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
@@ -44,7 +44,7 @@ import { Document, isMap, isScalar, parseDocument, type YAMLError } from 'yaml'
 import { withFileLock, writeFileAtomic } from '@berry-ai/harness-atomic-write'
 import { canonicalizeWatchPath, resolveDshHome } from '@berry-ai/harness-home-paths'
 import { launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
-import { CredentialProvider, credentialRef, parseCredentialKey } from '@deepseek-ai/dsh-credentials'
+import { CredentialProvider, credentialRef, parseCredentialKey } from '@berry-ai/harness-credentials'
 import type {
   ApiKeyRecord,
   CredentialInfo,
@@ -54,7 +54,7 @@ import type {
   CredentialRecordInfo,
   CredentialRef,
   ResolvedCredential,
-} from '@deepseek-ai/dsh-credentials'
+} from '@berry-ai/harness-credentials'
 import type { LaunchEnvironmentEntry } from '@berry-ai/harness-launch-environment'
 
 /** Basename of the credentials document inside the harness home. */

@@ -6,9 +6,9 @@
  */
 
 import { Context } from '@deepseek-ai/cordis'
-import { credentialRef } from '@deepseek-ai/dsh-credentials'
-import type { CredentialProvider } from '@deepseek-ai/dsh-credentials'
-import type { CredentialInfo } from '@deepseek-ai/dsh-credentials/types'
+import { credentialRef } from '@berry-ai/harness-credentials'
+import type { CredentialProvider } from '@berry-ai/harness-credentials'
+import type { CredentialInfo } from '@berry-ai/harness-credentials/types'
 import { Remote, RemoteError, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
 import { z } from 'zod'
 
@@ -123,7 +123,7 @@ export class CredentialsController extends TypertRemoteService {
     if (credentials === undefined) {
       throw new RemoteError(
         'gateway/internal',
-        'credentials service is absent: this deployment does not mount a credential provider (e.g. @deepseek-ai/dsh-credentials-local) in its composition',
+        'credentials service is absent: this deployment does not mount a credential provider (e.g. @berry-ai/harness-credentials-local) in its composition',
         {},
       )
     }

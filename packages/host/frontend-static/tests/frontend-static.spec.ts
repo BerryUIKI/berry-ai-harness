@@ -15,7 +15,7 @@ import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import * as Connection from '@deepseek-ai/dsh-client-connection'
-import LocalCredentials from '@deepseek-ai/dsh-credentials-local'
+import LocalCredentials from '@berry-ai/harness-credentials-local'
 import HttpServer from '@deepseek-ai/dsh-host-webserver'
 import * as FrontendStatic from '../src/index.ts'
 
@@ -42,7 +42,7 @@ async function loadComposition(): Promise<Context> {
   await mkdir(join(dist, 'empty'))
   const configPath = join(root, 'cordis.yml')
   await writeFile(configPath, [
-    "- name: '@deepseek-ai/dsh-credentials-local'",
+    "- name: '@berry-ai/harness-credentials-local'",
     '  config:',
     `    path: '${join(root, '.credentials.yaml')}'`,
     '    watch: false',
@@ -63,7 +63,7 @@ async function loadComposition(): Promise<Context> {
   await context.plugin(Loader)
   context.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-credentials-local', LocalCredentials],
+    ['@berry-ai/harness-credentials-local', LocalCredentials],
     ['@deepseek-ai/dsh-host-webserver', HttpServer],
     ['@deepseek-ai/dsh-client-connection', Connection],
     ['@deepseek-ai/dsh-host-frontend-static', FrontendStatic],
