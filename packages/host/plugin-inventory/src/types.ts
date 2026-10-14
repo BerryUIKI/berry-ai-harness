@@ -1,4 +1,4 @@
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import type { PluginLocalizedMeta } from '@berry-ai/harness-package-manifest'
 
 /** Stable Loader-tree identity of one configured plugin entry. */

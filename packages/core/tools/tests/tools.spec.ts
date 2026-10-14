@@ -14,7 +14,7 @@ import ToolRuntime, {
   type InferArgs, type ParameterSchemaSpec, type PreToolDecision, type PostToolDecision,
   type JsonSchemaNode, type ToolDefinition, type ToolDispatchExecution, type ToolExecutionResult, type ToolExecutionToken,
 } from '@deepseek-ai/dsh-tools'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+import type { JsonValue } from '@berry-ai/harness-util-values'
 
 declare module '@deepseek-ai/dsh-llm' {
   interface MessageSourceMap {

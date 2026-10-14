@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it } from 'vitest'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+import type { JsonValue } from '@berry-ai/harness-util-values'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
 import { clientInspectProviders } from '../src/client/providers.ts'
 

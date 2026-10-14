@@ -5,7 +5,7 @@
  */
 
 import type { Context, Events } from '@deepseek-ai/cordis'
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import type { TypertOwnedValue } from './owned-value.ts'
 
 declare const LOOKUP_HOST: unique symbol

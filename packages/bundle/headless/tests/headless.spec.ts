@@ -3,7 +3,7 @@
 import { Readable } from 'node:stream'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { brandString } from '@deepseek-ai/dsh-brand'
+import { brandString } from '@berry-ai/harness-brand'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import type {
   Agent,

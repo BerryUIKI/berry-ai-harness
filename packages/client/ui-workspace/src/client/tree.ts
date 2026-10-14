@@ -11,7 +11,7 @@ import type {
   SessionStatusSnapshot,
 } from '@deepseek-ai/dsh-client-ui-session/client'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { assertNever } from '@berry-ai/harness-util-values'
 import { workspaceTitleOf } from '@berry-ai/harness-util-workspace-path'
 
 /** Group key for Sessions outside every Workspace. */

@@ -41,7 +41,7 @@ function compile(source: string, artifact?: string) {
     types: ['node'],
     paths: {
       '@deepseek-ai/cordis': [cordisEntry],
-      '@deepseek-ai/dsh-brand': [brandEntry],
+      '@berry-ai/harness-brand': [brandEntry],
       '@deepseek-ai/dsh-typert-protocol': [protocolEntry],
       '@deepseek-ai/fixture/remote': [artifactPath],
     },

@@ -42,7 +42,7 @@ import { zh as conversationZh } from '@deepseek-ai/dsh-client-ui-conversation/sr
 import * as localePlugin from '@deepseek-ai/dsh-client-locale/client'
 import { apply, inject } from '@deepseek-ai/dsh-client-ui-trajectory/client'
 import { apply as nodeApply } from '@deepseek-ai/dsh-client-ui-trajectory'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { PartialArguments } from '@berry-ai/harness-util-values'
 import type { TrajectoryTurnModel } from '../src/client/layout.ts'
 import { TrajectoryTimeline as LocalizedTrajectoryTimeline } from '../src/client/TrajectoryTimeline.tsx'
 import {

@@ -12,7 +12,7 @@ import type {
   LspRange,
 } from '@deepseek-ai/dsh-lsp'
 import { LspError } from '@deepseek-ai/dsh-lsp'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { assertNever } from '@berry-ai/harness-util-values'
 import type {
   WireHover,
   WireLocation,

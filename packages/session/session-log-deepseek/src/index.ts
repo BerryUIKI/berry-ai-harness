@@ -8,7 +8,7 @@
 import { Buffer } from 'node:buffer'
 import type { Context, Volatile } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { brandString } from '@deepseek-ai/dsh-brand'
+import { brandString } from '@berry-ai/harness-brand'
 import type {} from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
 import { KNOWN_SESSION_EVENT_TYPES, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
 import type {
@@ -20,7 +20,7 @@ import type {
   SessionSeqCursor,
   SurfaceOp,
 } from '@deepseek-ai/dsh-session'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+import type { JsonValue } from '@berry-ai/harness-util-values'
 import type {
   DeepSeekSessionLogExtension,
   DeepSeekSessionLogWireEvent,

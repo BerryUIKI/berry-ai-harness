@@ -1,6 +1,6 @@
 /** Wire messages for Gateway-owned Remote streams and event-result RPCs. */
 
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import { isRemoteJsonValue } from '@deepseek-ai/dsh-typert-protocol'
 
 /** Exact WebSocket route carrying every Typert Remote stream. */

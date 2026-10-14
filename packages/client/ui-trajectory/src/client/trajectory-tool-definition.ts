@@ -4,7 +4,7 @@ import type {
   ToolResultNode,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type {} from '@deepseek-ai/dsh-tools/types'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { PartialArguments } from '@berry-ai/harness-util-values'
 import { trajectoryNode } from './trajectory-definition-common.ts'
 
 /* jscpd:ignore-start -- Target-owned Definitions intentionally keep their event

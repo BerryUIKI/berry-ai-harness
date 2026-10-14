@@ -9,7 +9,7 @@
  * store's declared action set, shared with the root registration.
  */
 import type { BoundActions, HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import type { createLayoutStore } from './stores.ts'
 
 /** Identity shared by a sidebar panel entry and its main-slot occupant. */

@@ -54,7 +54,7 @@ export function apply(ctx: Context, config: Config) {
 `stream()` 必须按以下协议生成分片：
 
 ```ts
-import { brandString } from '@deepseek-ai/dsh-brand'
+import { brandString } from '@berry-ai/harness-brand'
 import type { StreamChunk, ToolCallId } from '@deepseek-ai/dsh-llm'
 
 async function* exampleChunks(): AsyncIterable<StreamChunk> {

@@ -1,7 +1,7 @@
 /** Public Agent Teams identities, durable records, and service request values. */
 
 import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import type { ContentBlock } from '@deepseek-ai/dsh-llm/types'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 

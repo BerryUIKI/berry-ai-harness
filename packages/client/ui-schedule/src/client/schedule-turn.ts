@@ -10,7 +10,7 @@
  * only the Turn-level card.
  */
 import { isAppendSurfaceEvent } from '@deepseek-ai/dsh-session/surface'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { PartialArguments } from '@berry-ai/harness-util-values'
 import type {
   ConversationMatch, ConversationNodeDefinition, ToolResultNode, TurnLocation,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'

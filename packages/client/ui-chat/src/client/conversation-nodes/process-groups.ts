@@ -1,5 +1,5 @@
 /** Chat-owned segmentation and incremental summaries over materialized Node inputs. */
-import { brandString } from '@deepseek-ai/dsh-brand'
+import { brandString } from '@berry-ai/harness-brand'
 import type {
   ConversationGroupDefinition, ConversationGroupInput, GroupKey, GroupSnapshot,
   GroupUpdate, NodeKey, NodeReference, RenderEntry,

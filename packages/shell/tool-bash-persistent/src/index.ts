@@ -10,7 +10,7 @@ import z from '@deepseek-ai/schemastery'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import { truncateWithoutSplittingSurrogatePair } from '@berry-ai/harness-output-retention'
 import type { TerminalReadResult, TerminalSessionId } from '@deepseek-ai/dsh-terminal'
-import { deadline, timeoutOf } from '@deepseek-ai/dsh-timeout'
+import { deadline, timeoutOf } from '@berry-ai/harness-timeout'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 
 // TODO: Replace the file-search advice; arbitrary command output need not come from a searchable file.

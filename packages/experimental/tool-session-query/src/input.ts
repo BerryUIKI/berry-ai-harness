@@ -8,7 +8,7 @@ import {
   type SessionEventType,
   type SessionId as SessionIdValue,
 } from '@deepseek-ai/dsh-session'
-import { brandString } from '@deepseek-ai/dsh-brand'
+import { brandString } from '@berry-ai/harness-brand'
 import {
   SessionQueryError,
   type SessionAvailability,

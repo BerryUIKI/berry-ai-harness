@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import type { DynamicCordisLivePackage } from '@deepseek-ai/dsh-cordis-client-runner/client'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { PartialArguments } from '@berry-ai/harness-util-values'
 import type {
   CordisDynamicPackageId, CordisDynamicPluginId, CordisDynamicPluginRunId,
   DynamicCordisInventoryRow,

@@ -5,7 +5,7 @@ import {
   sessionFormatCount,
   sessionFormatSafeInteger,
 } from '@deepseek-ai/dsh-session-format'
-import { isJsonValue } from '@deepseek-ai/dsh-util-values'
+import { isJsonValue } from '@berry-ai/harness-util-values'
 import type {
   SessionFormatArtifact,
   SessionFormatEvent,

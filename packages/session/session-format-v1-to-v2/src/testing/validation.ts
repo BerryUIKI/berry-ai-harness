@@ -1,5 +1,5 @@
 import { BlockAssembler, expandAssistantStream } from '@deepseek-ai/dsh-llm'
-import { deepEqualJson } from '@deepseek-ai/dsh-util-values'
+import { deepEqualJson } from '@berry-ai/harness-util-values'
 import {
   SessionFormatError,
   SessionFormatUnsupportedMigrationError,

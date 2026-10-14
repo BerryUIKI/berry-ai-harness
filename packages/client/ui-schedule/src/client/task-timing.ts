@@ -6,7 +6,7 @@ import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
 import type {
   ScheduleRecord, ScheduleUpdateRequest, ScheduleUpdateResult,
 } from '@deepseek-ai/dsh-schedule/client'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { assertNever } from '@berry-ai/harness-util-values'
 import type { TaskManagerKey } from './task-manager-locales.ts'
 
 /** Task mutation callback injected by the task catalog owner. */

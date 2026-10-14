@@ -11,7 +11,7 @@ import { TodoRow, todoToolview } from '../src/client/tool/toolviews/todo-row.tsx
 import { planSummary } from '../src/client/tool/toolviews/plan-summary.ts'
 import { CONVERSATION_NS as NS } from '../src/client/locale.ts'
 import { zh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { PartialArguments } from '@berry-ai/harness-util-values'
 
 type TodoRowProps = Parameters<typeof TodoRow>[0]
 

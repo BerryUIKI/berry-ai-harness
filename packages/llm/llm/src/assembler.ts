@@ -6,8 +6,8 @@
  * @module @deepseek-ai/dsh-llm/assembler
  */
 
-import { brandString } from '@deepseek-ai/dsh-brand'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { brandString } from '@berry-ai/harness-brand'
+import { assertNever } from '@berry-ai/harness-util-values'
 import type { ToolCallId } from './brand.ts'
 import { createAssistantMessage } from './message.ts'
 import type { AssistantMessage, ModelMessageSource } from './message.ts'

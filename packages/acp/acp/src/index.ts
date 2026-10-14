@@ -16,7 +16,7 @@ import { realpath } from 'node:fs/promises'
 import { isAbsolute, resolve } from 'node:path'
 import { Readable, Writable } from 'node:stream'
 import Schema from '@deepseek-ai/schemastery'
-import { brandString } from '@deepseek-ai/dsh-brand'
+import { brandString } from '@berry-ai/harness-brand'
 import { errorChain } from '@deepseek-ai/dsh-llm'
 import {
   agent as createAcpAgentApp,

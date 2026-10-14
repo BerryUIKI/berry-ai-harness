@@ -6,7 +6,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
+import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import { toolInput } from './input.ts'
 import { operations } from './operations.ts'

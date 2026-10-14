@@ -8,7 +8,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import type { GenericCallView, ToolResult, WebSearchResultView, WebSource } from '@deepseek-ai/dsh-tools'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+import type { JsonValue } from '@berry-ai/harness-util-values'
 import type { WebSearchResult, WebSearchSource } from '@deepseek-ai/dsh-web'
 import { EXTERNAL_WEB_CONTENT_NOTICE } from './trust.ts'
 

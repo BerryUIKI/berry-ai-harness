@@ -1,5 +1,5 @@
 /** Agent-facing current-profile management using the same service as Web controls. */
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { assertNever } from '@berry-ai/harness-util-values'
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from './index.ts'
 import type {} from '@deepseek-ai/dsh-sandbox-policy'

@@ -6,7 +6,7 @@ Status: implemented
 
 ## 问题
 
-[超时/截止时间 Agent Note](2026-07-06-timeout-deadline-library.zh.md) 将计时与分类原语提取到了 `@deepseek-ai/dsh-timeout`，但超时策略仍然附着在各个能力和面向模型的 schema 上。`bash` 暴露了 `timeoutMs`；`web_fetch` 暴露了 `timeout_ms`；`web_search` 没有面向模型的超时参数，尽管提供方已经遵循 `exec.signal`；未来的 grep/glob 工具要么直接导入超时库，要么自行发明超时策略。对于一个插件 SDK 来说，这是错误的编写范式：工具作者通常只需将 `exec.signal` 转发给其调用的实现，而部署策略来决定预算。
+[超时/截止时间 Agent Note](2026-07-06-timeout-deadline-library.zh.md) 将计时与分类原语提取到了 `@berry-ai/harness-timeout`，但超时策略仍然附着在各个能力和面向模型的 schema 上。`bash` 暴露了 `timeoutMs`；`web_fetch` 暴露了 `timeout_ms`；`web_search` 没有面向模型的超时参数，尽管提供方已经遵循 `exec.signal`；未来的 grep/glob 工具要么直接导入超时库，要么自行发明超时策略。对于一个插件 SDK 来说，这是错误的编写范式：工具作者通常只需将 `exec.signal` 转发给其调用的实现，而部署策略来决定预算。
 
 与此同时，仓库中并非所有超时都是面向模型的工具调用预算。钩子通过直接调用 `ctx.shell` 执行命令钩子，而非通过 `ctx.tools.execute()`；`bash` 模型工具通过同一个后端复用前台执行、后台启动、后台轮询和钩子复用。一步到位地将所有超时移入工具插件会混淆这些路径，并有破坏钩子超时语义的风险。
 
@@ -14,7 +14,7 @@ Status: implemented
 
 工具调用超时是仅适用于面向模型的工具执行的策略，由三部分组成：
 
-- `@deepseek-ai/dsh-timeout` 仍是拥有 `deadline()` 和 `timeoutOf()` 的共享库。
+- `@berry-ai/harness-timeout` 仍是拥有 `deadline()` 和 `timeoutOf()` 的共享库。
 - `@deepseek-ai/dsh-tools` 在 `tools/pre-execute` 和 `tools/post-execute` 之间有一个环绕分发的 waterfall（瀑布式事件）`tools/execute`。
 - [仓库命名约定](../../archived/architecture/2026-08-11-repository-naming-contract-and-rename-ledger.md)使用 `@deepseek-ai/dsh-tool-call-timeout-policy`，准确说明该策略所限制的操作。插件从 runtime 读取每个工具声明的 `timeoutMs`，并通过派生新的 `exec.signal` 来包装有此声明的调用。
 
@@ -77,15 +77,15 @@ function toolTimeoutResult(timeoutMs: number): ToolExecutionResult {
 
 ### 现有工具适配
 
-`web_fetch` 和 `web_search` 已迁移。`dsh-tool-web` 保留对其面向模型 schema 的所有权，这些 schema 不暴露超时旋钮：`web_fetch` 没有 `timeout_ms` 参数，`web_search` 接受必填的 `queries` 数组，但不接受超时参数。工具体不导入 `@deepseek-ai/dsh-timeout`；它们将 `exec.signal` 转发给 `ctx.web`。
+`web_fetch` 和 `web_search` 已迁移。`dsh-tool-web` 保留对其面向模型 schema 的所有权，这些 schema 不暴露超时旋钮：`web_fetch` 没有 `timeout_ms` 参数，`web_search` 接受必填的 `queries` 数组，但不接受超时参数。工具体不导入 `@berry-ai/harness-timeout`；它们将 `exec.signal` 转发给 `ctx.web`。
 
 `dsh-web-fetch-http` 保留一个在提供方层面配置的 `timeoutMs`，作为较大的资源兜底值，服务于直接调用 `ctx.web.fetch()` 的调用方和配置错误的部署；它不拥有面向模型的超时。当 `TOOL_TIMEOUT` 信号先到达 fetch 提供方时，提供方作用域的分类将其视为上游 `WEB_ABORTED`，而外层 `tools/execute` 包装器将最终工具结果替换为 `TOOL_TIMEOUT`。一个已发布的 web 工具部署将提供方兜底配置为高于 `timeout-policy` 预算，使工具调用策略在模型调用中通常胜出。
 
-`bash` 保持当前的后端超时路径。`dsh-tool-bash` 继续暴露 `timeoutMs` 和 `run_in_background`；`dsh-bash-local` 继续使用 `@deepseek-ai/dsh-timeout` 处理 `BASH_TIMEOUT`；钩子桥接继续调用 `runHook()` 并通过 `ctx.shell` 传递 `timeoutMs`。这保持了前台/后台/钩子行为的稳定。
+`bash` 保持当前的后端超时路径。`dsh-tool-bash` 继续暴露 `timeoutMs` 和 `run_in_background`；`dsh-bash-local` 继续使用 `@berry-ai/harness-timeout` 处理 `BASH_TIMEOUT`；钩子桥接继续调用 `runHook()` 并通过 `ctx.shell` 传递 `timeoutMs`。这保持了前台/后台/钩子行为的稳定。
 
 `read`、`write`、`edit`、`todo_write`、`job_list` 和 `job_kill` 不加入工具调用超时。`job_output` 自己拥有有界等待，因为等待超时是成功的实时状态结果，而非工具失败。
 
-未来面向模型的 grep/glob 工具可以基于 `ctx.shell` 实现而无需导入 `@deepseek-ai/dsh-timeout`：它将 `exec.signal` 转发给 `ctx.shell`，并声明自己的 `timeoutMs`（来自其插件配置）供执行器应用。如果 bash-local 的后端超时对这类工具造成问题，bash seam 可以后续添加调用方自有截止模式；那是一项独立的决策。
+未来面向模型的 grep/glob 工具可以基于 `ctx.shell` 实现而无需导入 `@berry-ai/harness-timeout`：它将 `exec.signal` 转发给 `ctx.shell`，并声明自己的 `timeoutMs`（来自其插件配置）供执行器应用。如果 bash-local 的后端超时对这类工具造成问题，bash seam 可以后续添加调用方自有截止模式；那是一项独立的决策。
 
 ## 曾考虑的替代方案
 

@@ -11,7 +11,7 @@ import type {
 } from '@deepseek-ai/dsh-api-gateway'
 import { Deque } from '@berry-ai/harness-deque'
 import { carrierKeyOf } from '@deepseek-ai/dsh-scope'
-import { isJsonValue, type JsonValue } from '@deepseek-ai/dsh-util-values'
+import { isJsonValue, type JsonValue } from '@berry-ai/harness-util-values'
 import { API_REMOTE_FORWARDED_EVENTS } from './remote-events.ts'
 
 // The owner packages' client-safe `./types` exports carry the cordis `Events`

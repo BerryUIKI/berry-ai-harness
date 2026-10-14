@@ -2,7 +2,7 @@
 import { dirname, isAbsolute, resolve } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import type { FileSystem } from '@deepseek-ai/dsh-fs'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { assertNever } from '@berry-ai/harness-util-values'
 
 /** Deployment-owned worker invocation in the subprocess execution world. */
 export type LaunchConfig = {

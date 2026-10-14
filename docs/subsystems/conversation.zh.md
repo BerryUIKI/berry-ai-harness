@@ -78,7 +78,7 @@ Group 存储在安装前校验完整提交结果：根 Group 引用与记录一�
 ```ts ignore-check
 import { createElement } from 'react'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import type {
   ConversationLocation, ConversationNodeContext,
   ConversationNodeDefinition,

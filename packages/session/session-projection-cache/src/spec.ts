@@ -11,8 +11,8 @@
  */
 
 import { z } from 'zod'
-import { isJsonValue } from '@deepseek-ai/dsh-util-values'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+import { isJsonValue } from '@berry-ai/harness-util-values'
+import type { JsonValue } from '@berry-ai/harness-util-values'
 import { SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
 import type { SessionId, SessionSeqCursor } from '@deepseek-ai/dsh-session'
 import { defineDomain, domainTable } from '@deepseek-ai/dsh-storage-domain'

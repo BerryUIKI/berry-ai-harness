@@ -13,7 +13,7 @@ import {
   validateSubprocessSpec,
 } from '../src/spawn.ts'
 import type { SubprocessHandle, SubprocessOutputReader } from '@deepseek-ai/dsh-subprocess'
-import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
+import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import { waitWithAbort } from '../src/managed-owner.ts'
 
 vi.mock('node:child_process', async (importOriginal) => {

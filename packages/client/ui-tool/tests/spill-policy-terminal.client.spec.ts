@@ -12,7 +12,7 @@ import * as SpillPolicy from '@deepseek-ai/dsh-spill-policy'
 import { formatSpillNotice } from '@deepseek-ai/dsh-spill-policy/notice'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { PartialArguments } from '@berry-ai/harness-util-values'
 import { describe, expect, it } from 'vitest'
 import { isSpilledShellCall, terminalCardModel } from '../src/client/tool/models/terminal-card-model.ts'
 

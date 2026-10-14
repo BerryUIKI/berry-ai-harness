@@ -3,7 +3,7 @@
  * @module @deepseek-ai/dsh-lsp-stdio/abort
  */
 
-import { timeoutOf } from '@deepseek-ai/dsh-timeout'
+import { timeoutOf } from '@berry-ai/harness-timeout'
 
 /**
  * Build an abort Error carrying the signal's reason and preserving timeout classification.

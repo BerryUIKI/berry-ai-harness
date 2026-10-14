@@ -31,10 +31,10 @@
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-title": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*"
+    "@berry-ai/harness-timeout": "workspace:*"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-util-values": "workspace:*",
+    "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "devDependencies": {
@@ -42,6 +42,6 @@
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-title": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*"
+    "@berry-ai/harness-timeout": "workspace:*"
   }
 }

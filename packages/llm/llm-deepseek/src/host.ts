@@ -5,7 +5,7 @@ import type {} from '@deepseek-ai/cordis-plugin-loader'
 import type {} from '@deepseek-ai/dsh-fs'
 import { resolveImageAttachmentAccess } from '@deepseek-ai/dsh-llm'
 import { getOrCreateAnonymousUserId, type AnonymousUserId } from '@deepseek-ai/dsh-anonymous-user-id'
-import { deepEqualJson } from '@deepseek-ai/dsh-util-values'
+import { deepEqualJson } from '@berry-ai/harness-util-values'
 import { DeepSeekAdapter } from './adapter.ts'
 import type { DeepSeekAdapterOptions, DeepSeekConnectionOptions } from './types.ts'
 

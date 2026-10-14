@@ -19,7 +19,7 @@
 import { randomUUID } from 'node:crypto'
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import { resolveDshHome } from '@berry-ai/harness-home-paths'
 
 /** A harness-home-scoped anonymous user id (random UUID v4). */

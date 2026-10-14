@@ -4,7 +4,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import { Webhooks } from '@octokit/webhooks'
 import type { CredentialRef } from '@deepseek-ai/dsh-credentials'
-import { snapshotJsonValue } from '@deepseek-ai/dsh-util-values'
+import { snapshotJsonValue } from '@berry-ai/harness-util-values'
 import {
   WebhookDeliveryId,
   WebhookSourceId,

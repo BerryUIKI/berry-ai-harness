@@ -48,9 +48,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-brand": "workspace:*",
+    "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-chunked-list": "workspace:*",
-    "@deepseek-ai/dsh-util-values": "workspace:*",
+    "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "^4.4.3"
   },

@@ -2,7 +2,7 @@
 
 import { Context, Service } from '@deepseek-ai/cordis'
 import { errorChain } from '@deepseek-ai/dsh-llm'
-import { deepFreeze, snapshotJsonValue } from '@deepseek-ai/dsh-util-values'
+import { deepFreeze, snapshotJsonValue } from '@berry-ai/harness-util-values'
 import type { WebhookRuleId } from './brand.ts'
 import { createWebhookSession } from './session.ts'
 import type { VerifiedWebhookDelivery, WebhookRule, WebhookSessionRequest } from './types.ts'

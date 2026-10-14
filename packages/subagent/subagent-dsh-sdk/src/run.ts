@@ -11,7 +11,7 @@
  */
 
 import { randomUUID } from 'node:crypto'
-import { brandString } from '@deepseek-ai/dsh-brand'
+import { brandString } from '@berry-ai/harness-brand'
 import {
   DeepSeekHarness,
   type DeepSeekHarnessOptions,

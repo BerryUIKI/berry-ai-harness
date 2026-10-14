@@ -21,7 +21,7 @@ import {
   type ToolCallId,
   type ToolSchema,
 } from '@deepseek-ai/dsh-llm'
-import { deepFreeze } from '@deepseek-ai/dsh-util-values'
+import { deepFreeze } from '@berry-ai/harness-util-values'
 import { AUTO_PRESET } from '@deepseek-ai/dsh-permission-presets'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 import type {} from '@deepseek-ai/dsh-subagent'

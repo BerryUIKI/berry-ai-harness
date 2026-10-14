@@ -29,7 +29,7 @@
   "peerDependencies": {
     "@deepseek-ai/dsh-shell": "workspace:*",
     "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
+    "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
@@ -39,7 +39,7 @@
     "@deepseek-ai/dsh-shell": "workspace:*",
     "@deepseek-ai/dsh-subprocess": "workspace:*",
     "@deepseek-ai/dsh-subprocess-local": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
+    "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

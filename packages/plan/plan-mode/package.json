@@ -52,7 +52,7 @@
     }
   },
   "dependencies": {
-    "@deepseek-ai/dsh-brand": "workspace:*",
+    "@berry-ai/harness-brand": "workspace:*",
     "zod": "^4.4.3"
   },
   "devDependencies": {

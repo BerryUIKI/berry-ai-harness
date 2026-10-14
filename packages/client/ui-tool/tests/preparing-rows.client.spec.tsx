@@ -6,7 +6,7 @@ import type { StartedToolCall, ToolResultNode } from '@deepseek-ai/dsh-client-ui
 import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
 import { en } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
 import { en as common } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { PartialArguments } from '@berry-ai/harness-util-values'
 import { GenericToolCard } from '../src/client/tool/toolviews/GenericToolCard.tsx'
 import { FileMutationRow } from '../src/client/tool/toolviews/file-mutation-row.tsx'
 import { ReadRow } from '../src/client/tool/toolviews/read-row.tsx'

@@ -13,7 +13,7 @@ import { GenericToolCard, type GenericToolCardProps } from '../src/client/tool/t
 import { ToolRow } from '../src/client/tool/components/ToolRow.tsx'
 import { BashRow } from '../src/client/tool/toolviews/bash-sample.tsx'
 import { zh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { PartialArguments } from '@berry-ai/harness-util-values'
 
 type BashRowProps = Parameters<typeof BashRow>[0]
 

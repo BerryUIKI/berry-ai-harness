@@ -206,12 +206,12 @@ describe('package dependency scope', () => {
       '@deepseek-ai/dsh-client-ui-tool': ['@deepseek-ai/dsh-api-remotes'],
     })
     expect(PACKAGE_DEPENDENCY_POLICY.duplicateSafePackages).toEqual([
+      '@berry-ai/harness-brand',
       '@berry-ai/harness-lazy-require',
       '@berry-ai/harness-util-code-language',
       '@berry-ai/harness-util-crypto',
-      '@deepseek-ai/dsh-brand',
+      '@berry-ai/harness-util-values',
       '@deepseek-ai/dsh-typert-protocol',
-      '@deepseek-ai/dsh-util-values',
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@berry-ai/harness-deque']).toEqual(['Deque'])
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@deepseek-ai/schemastery']).toEqual(['default'])

@@ -12,7 +12,7 @@ import { type ChildProcess, type SpawnOptions, spawn, spawnSync } from 'node:chi
 import type { Readable } from 'node:stream'
 import { setTimeout as sleepMs } from 'node:timers/promises'
 import { scrubbedParentEnv } from '@deepseek-ai/dsh-subprocess'
-import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
+import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import type {
   SubprocessCollect,
   SubprocessHandle,

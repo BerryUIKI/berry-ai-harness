@@ -28,7 +28,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
+    "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/dsh-web": "workspace:*",
     "@berry-ai/harness-http-proxy": "workspace:*"
   },
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
+    "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/dsh-web": "workspace:*",
     "@berry-ai/harness-http-proxy": "workspace:*"
   }

@@ -9,7 +9,7 @@ import type { ImageAttachmentRef } from '@deepseek-ai/dsh-attachment'
 import type { LlmRetryEventData } from '@deepseek-ai/dsh-llm-retry/types'
 import type { TodoItem } from '@deepseek-ai/dsh-tool-todo/client'
 import type { ContextProducerView, KnownContextForm } from './context-producer.ts'
-import type { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import type { PartialArguments } from '@berry-ai/harness-util-values'
 export type { TodoItem }
 
 /** Request configuration recorded for one provider call. */
