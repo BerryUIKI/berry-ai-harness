@@ -1,4 +1,4 @@
-/** Computer-use provider identities. @module @deepseek-ai/dsh-computer-use/brand */
+/** Computer-use provider identities. @module @berry-ai/harness-computer-use/brand */
 
 import type { Branded } from '@berry-ai/harness-brand'
 

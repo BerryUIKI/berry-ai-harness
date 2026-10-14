@@ -553,11 +553,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-anonymous-user-id",
+      "name": "@berry-ai/harness-anonymous-user-id",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-anonymous-user-id",
+          "location": "node_modules/@berry-ai/harness-anonymous-user-id",
           "direct": false,
           "optional": false,
           "peer": true
@@ -1957,11 +1957,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-plan-mode",
+      "name": "@berry-ai/harness-plan-mode",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-plan-mode",
+          "location": "node_modules/@berry-ai/harness-plan-mode",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2929,11 +2929,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-tool-todo",
+      "name": "@berry-ai/harness-tool-todo",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-tool-todo",
+          "location": "node_modules/@berry-ai/harness-tool-todo",
           "direct": true,
           "optional": false,
           "peer": false

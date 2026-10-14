@@ -135,9 +135,9 @@
     "@deepseek-ai/dsh-host-webserver": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
     "@deepseek-ai/dsh-message-feedback": "workspace:*",
-    "@deepseek-ai/dsh-office-to-pdf": "workspace:*",
+    "@berry-ai/harness-office-to-pdf": "workspace:*",
     "@berry-ai/harness-persona": "workspace:*",
-    "@deepseek-ai/dsh-plan-mode": "workspace:*",
+    "@berry-ai/harness-plan-mode": "workspace:*",
     "@berry-ai/harness-plugin-manager": "workspace:*",
     "@deepseek-ai/dsh-schedule": "workspace:*",
     "@deepseek-ai/dsh-session-log-export": "workspace:*",
@@ -164,7 +164,7 @@
     "@deepseek-ai/dsh-tool-skill": "workspace:*",
     "@deepseek-ai/dsh-tool-subagent": "workspace:*",
     "@deepseek-ai/dsh-tool-subagent-control": "workspace:*",
-    "@deepseek-ai/dsh-tool-todo": "workspace:*",
+    "@berry-ai/harness-tool-todo": "workspace:*",
     "@deepseek-ai/dsh-tool-web": "workspace:*",
     "@deepseek-ai/dsh-tool-workflow": "workspace:*",
     "@deepseek-ai/dsh-web-frontend": "workspace:*",
@@ -201,6 +201,6 @@
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-typert-registry": "workspace:*",
     "@deepseek-ai/libreoffice-kit": "^0.1.5",
-    "@deepseek-ai/dsh-otel": "workspace:*"
+    "@berry-ai/harness-otel": "workspace:*"
   }
 }

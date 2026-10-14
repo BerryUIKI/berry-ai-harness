@@ -30,7 +30,7 @@ Mount this provider in a profile that supplies Agents, Sessions, the tool regist
 ### Minimal configuration
 
 ```yaml
-- name: '@deepseek-ai/dsh-browser-use'
+- name: '@berry-ai/harness-browser-use'
 - name: '@deepseek-ai/dsh-experimental-browser-use-stagehand-native'
   config:
     mode: launch

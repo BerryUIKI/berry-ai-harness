@@ -5,7 +5,7 @@
  * host consumers and `./client` for client aggregates — with zero content
  * duplication.
  *
- * @module @deepseek-ai/dsh-plan-mode/types
+ * @module @berry-ai/harness-plan-mode/types
  */
 
 import type { CommandId } from '@deepseek-ai/dsh-commands/brand'

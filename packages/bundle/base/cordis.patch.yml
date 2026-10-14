@@ -195,7 +195,7 @@
         writeIntervalMs: 5000
 
     - id: otel
-      name: '@deepseek-ai/dsh-otel'
+      name: '@berry-ai/harness-otel'
 
     # OTel releases a Session-log prefix only after explicit user feedback,
     # regardless of model provider. Ordinary activity never triggers capture.
@@ -325,7 +325,7 @@
       name: '@deepseek-ai/dsh-command-goal'
 
     - id: plan-mode
-      name: '@deepseek-ai/dsh-plan-mode'
+      name: '@berry-ai/harness-plan-mode'
       config:
         section: |
               You are in plan mode. Stay in plan mode until the user approves your plan through exit_plan_mode or switches the session mode. Imperative language to implement changes means plan the implementation, not execute it. A user's conversational agreement — including an answer confirming something you asked — approves nothing and does not end plan mode; fold the confirmed decision into the plan and submit it through exit_plan_mode.
@@ -430,7 +430,7 @@
       name: '@deepseek-ai/dsh-compaction-image-offload'
 
     - id: tool-todo
-      name: '@deepseek-ai/dsh-tool-todo'
+      name: '@berry-ai/harness-tool-todo'
       config:
         allowParallelInProgress: true
 

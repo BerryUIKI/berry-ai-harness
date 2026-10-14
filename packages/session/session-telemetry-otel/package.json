@@ -36,9 +36,9 @@
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-telemetry": "workspace:*",
-    "@deepseek-ai/dsh-anonymous-user-id": "workspace:*",
+    "@berry-ai/harness-anonymous-user-id": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-otel": "workspace:*"
+    "@berry-ai/harness-otel": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis-plugin-logger-console": "workspace:~",
@@ -54,9 +54,9 @@
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
     "@deepseek-ai/dsh-session-telemetry": "workspace:*",
     "@deepseek-ai/dsh-subprocess-local": "workspace:*",
-    "@deepseek-ai/dsh-anonymous-user-id": "workspace:*",
+    "@berry-ai/harness-anonymous-user-id": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-http-proxy": "workspace:*",
-    "@deepseek-ai/dsh-otel": "workspace:*"
+    "@berry-ai/harness-otel": "workspace:*"
   }
 }

@@ -3,7 +3,7 @@ import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { validateHeaderValue } from 'node:http'
 import { CompressionAlgorithm } from '@opentelemetry/otlp-exporter-base'
-import type { EventLogReporter, OTelEventRecord, OTelEventScalar } from '@deepseek-ai/dsh-otel'
+import type { EventLogReporter, OTelEventRecord, OTelEventScalar } from '@berry-ai/harness-otel'
 
 declare module '@deepseek-ai/cordis' {
   interface Context { productTelemetry: ProductTelemetry }

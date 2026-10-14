@@ -7,7 +7,7 @@ import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
 import type { ContentBlock } from '@deepseek-ai/dsh-llm/types'
 import type { ImageAttachmentRef } from '@deepseek-ai/dsh-attachment'
 import type { LlmRetryEventData } from '@deepseek-ai/dsh-llm-retry/types'
-import type { TodoItem } from '@deepseek-ai/dsh-tool-todo/client'
+import type { TodoItem } from '@berry-ai/harness-tool-todo/client'
 import type { ContextProducerView, KnownContextForm } from './context-producer.ts'
 import type { PartialArguments } from '@berry-ai/harness-util-values'
 export type { TodoItem }

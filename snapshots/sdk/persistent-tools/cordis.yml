@@ -101,7 +101,7 @@
   disabled: true
 
 - id: tool-todo
-  name: '@deepseek-ai/dsh-tool-todo'
+  name: '@berry-ai/harness-tool-todo'
   disabled: true
 
 - id: tool-goal
@@ -113,7 +113,7 @@
   disabled: true
 
 - id: plan-mode
-  name: '@deepseek-ai/dsh-plan-mode'
+  name: '@berry-ai/harness-plan-mode'
   disabled: true
 
 - id: system-prompt

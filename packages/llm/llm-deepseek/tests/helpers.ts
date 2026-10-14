@@ -2,7 +2,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import AttachmentStore from '@deepseek-ai/dsh-attachment'
 import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
-import type { AnonymousUserId } from '@deepseek-ai/dsh-anonymous-user-id'
+import type { AnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import { createServer } from 'node:http'
 import type { IncomingHttpHeaders, ServerResponse } from 'node:http'
 import { once } from 'node:events'

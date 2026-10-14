@@ -30,7 +30,7 @@ Mount the provider in a composition that already supplies the tool registry and 
 ### Minimal configuration
 
 ```yaml
-- name: '@deepseek-ai/dsh-computer-use'
+- name: '@berry-ai/harness-computer-use'
 - name: '@deepseek-ai/dsh-experimental-computer-use-cua-driver-native'
 ```
 

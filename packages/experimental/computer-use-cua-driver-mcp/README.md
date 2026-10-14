@@ -32,7 +32,7 @@ Choose this provider when Cua Driver is already installed and configured on the 
 Add these rows to a composition that already provides tools and system-prompt services. Screenshots also require an attachment store and a model route declaring image input.
 
 ```yaml
-- name: '@deepseek-ai/dsh-computer-use'
+- name: '@berry-ai/harness-computer-use'
 - name: '@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp'
   config:
     command: cua-driver

@@ -28,7 +28,7 @@ Use Chrome DevTools MCP to inspect pages and operate Chromium through its upstre
 Mount both entries before creating or resuming a Session, in a profile composition that supplies Agents, tools, system prompts, and the working-directory service. Loading or reloading this provider does not adopt Sessions that are already active. Browser installation follows the upstream runtime; select an existing Chromium installation with `executablePath`.
 
 ```yaml
-- name: '@deepseek-ai/dsh-browser-use'
+- name: '@berry-ai/harness-browser-use'
 - name: '@deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp'
   config:
     mode: launch

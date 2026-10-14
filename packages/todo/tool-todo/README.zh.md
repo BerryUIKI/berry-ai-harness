@@ -3,7 +3,7 @@ description: "面向 DeepSeek Harness 会话日志的模型侧 todo_write 工具
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-todo
+# @berry-ai/harness-tool-todo
 
 [English](README.md) | 中文
 
@@ -36,7 +36,7 @@ kind: "package-reference"
 `allowParallelInProgress` 是必填项、没有默认值：省略它的组合会在加载时失败，非布尔值也会被拒绝。可能并发运行工作的 agent（subagent、后台命令、工作流扇出）设为 `true`，需要单活跃项纪律的设为 `false`。
 
 ```yaml
-- name: '@deepseek-ai/dsh-tool-todo'
+- name: '@berry-ai/harness-tool-todo'
   config:
     allowParallelInProgress: true
 ```

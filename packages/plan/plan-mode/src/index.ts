@@ -18,7 +18,7 @@
  *
  * See packages/plan/plan-mode/README.md.
  *
- * @module @deepseek-ai/dsh-plan-mode
+ * @module @berry-ai/harness-plan-mode
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
@@ -228,7 +228,7 @@ export class PlanModeController extends Service {
     // The command child activates only when a command registry is composed.
     ctx.inject(['commands'], (commandCtx) => {
       commandCtx.commands.register({
-        definitionId: brandString<CommandDefinitionId>('@deepseek-ai/dsh-plan-mode'),
+        definitionId: brandString<CommandDefinitionId>('@berry-ai/harness-plan-mode'),
         name: 'plan',
         description: 'Enter or leave plan mode',
         input: { hint: '[off|message]', attachments: true },
