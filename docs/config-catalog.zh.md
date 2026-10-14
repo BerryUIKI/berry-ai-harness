@@ -935,6 +935,82 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-shell-env -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-skill -->
+<a id="berry-aiharness-skill"></a>
+
+## `@berry-ai/harness-skill`
+
+- `source`: [`packages/skill/skill/src/index.ts:278`](../packages/skill/skill/src/index.ts)
+
+```ts config-catalog
+/** Skill registry configuration. */
+export interface Config {
+  /** Maximum number of completed cwd/provider catalogs kept in memory. */
+  readonly collectCacheMaxEntries?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-skill -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-skill-filesystem -->
+<a id="berry-aiharness-skill-filesystem"></a>
+
+## `@berry-ai/harness-skill-filesystem`
+
+- `inject`: `skills`
+- `source`: [`packages/skill/skill-filesystem/src/index.ts:48`](../packages/skill/skill-filesystem/src/index.ts)
+
+```ts config-catalog
+/** Local filesystem skill provider configuration. */
+export interface Config {
+  /** Unique provider name. Defaults to `filesystem`. */
+  providerName?: string
+  /** Whether project and user roots are included around custom roots. */
+  includeDefaultRoots?: boolean
+  /** DeepSeek Harness config root. Defaults to `$DSH_HOME` or `~/.dsh`. */
+  dshHome?: string
+  /** Shared agent config root. Defaults to `$DSH_AGENTS_HOME` or `~/.agents`. */
+  agentsHome?: string
+  /** Additional skill roots scanned after project roots and before user roots. */
+  customSkillDirs?: string[]
+  /** Whether host-local skill roots are watched for catalog changes. */
+  watch?: boolean
+  /** Whether Chokidar uses polling instead of native filesystem events. */
+  watchUsePolling?: boolean
+  /** Milliseconds a changed skill entry must remain stable before it is observed. */
+  watchStabilityThresholdMs?: number
+  /** Milliseconds between Chokidar stability or polling probes. */
+  watchPollIntervalMs?: number
+  /** Maximum distinct project roots whose skill directories remain watched. */
+  watchMaxProjects?: number
+  /** Whether watched symbolic links follow their target files. */
+  watchFollowSymlinks?: boolean
+  /** Bundled skill root; defaults to `$DSH_BUNDLED_SKILL_DIR` when default roots are included, otherwise mounts none. */
+  bundledSkillDir?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-skill-filesystem -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-skill-office -->
+<a id="berry-aiharness-skill-office"></a>
+
+## `@berry-ai/harness-skill-office`
+
+- `inject`: `skills`
+- `source`: [`packages/skill/skill-office/src/index.ts:16`](../packages/skill/skill-office/src/index.ts)
+
+```ts config-catalog
+/** Office skill resource location. */
+export interface Config {
+  /** Absolute assets directory containing the three skill folders and shared scripts; defaults to packaged assets. */
+  assetRoot?: string
+  /** Standalone Node executable; defaults to the current executable outside Electron and SEA. */
+  node?: string
+  /** Absolute LibreOffice Kit CLI entry; false explicitly disables CLI access. */
+  cli?: string | false
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-skill-office -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-spill-local -->
 <a id="berry-aiharness-spill-local"></a>
 
@@ -1489,6 +1565,23 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-tool-pwsh-persistent -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-skill -->
+<a id="berry-aiharness-tool-skill"></a>
+
+## `@berry-ai/harness-tool-skill`
+
+- `inject`: `agents` · `tools` · `skills` · `workingDirectory`
+- `source`: [`packages/skill/tool-skill/src/index.ts:62`](../packages/skill/tool-skill/src/index.ts)
+
+```ts config-catalog
+/** Model-facing skill catalog configuration. */
+export interface Config {
+  /** Maximum normalized description length rendered in the session catalog; minimum 3. */
+  catalogDescriptionMaxLength?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-skill -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-str-replace-editor -->
 <a id="berry-aiharness-tool-str-replace-editor"></a>
 
@@ -1557,6 +1650,29 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-tool-workflow -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-workspace-dependencies -->
+<a id="berry-aiharness-tool-workspace-dependencies"></a>
+
+## `@berry-ai/harness-tool-workspace-dependencies`
+
+- `inject`: `tools`
+- `source`: [`packages/skill/tool-workspace-dependencies/src/index.ts:15`](../packages/skill/tool-workspace-dependencies/src/index.ts)
+
+```ts config-catalog
+/** Payload location and optional installation directory. */
+export interface Config {
+  /** Payload directory carrying `runtime.json` and `dependencies/`. */
+  readonly source: string
+  /**
+   * Installation directory under the Harness home. When set, the payload is copied there on the
+   * first call (the Desktop behavior); when omitted, the payload is used in place without copying,
+   * which suits read-only carriers such as container image layers.
+   */
+  readonly root?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-workspace-dependencies -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-user-approval -->
 <a id="berry-aiharness-user-approval"></a>
@@ -3705,82 +3821,6 @@ export interface Config extends SessionTitleLlmConfig {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-title-first-prompt-llm -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-skill -->
-<a id="deepseek-aidsh-skill"></a>
-
-## `@deepseek-ai/dsh-skill`
-
-- `source`: [`packages/skill/skill/src/index.ts:278`](../packages/skill/skill/src/index.ts)
-
-```ts config-catalog
-/** Skill registry configuration. */
-export interface Config {
-  /** Maximum number of completed cwd/provider catalogs kept in memory. */
-  readonly collectCacheMaxEntries?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-skill -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-skill-filesystem -->
-<a id="deepseek-aidsh-skill-filesystem"></a>
-
-## `@deepseek-ai/dsh-skill-filesystem`
-
-- `inject`: `skills`
-- `source`: [`packages/skill/skill-filesystem/src/index.ts:48`](../packages/skill/skill-filesystem/src/index.ts)
-
-```ts config-catalog
-/** Local filesystem skill provider configuration. */
-export interface Config {
-  /** Unique provider name. Defaults to `filesystem`. */
-  providerName?: string
-  /** Whether project and user roots are included around custom roots. */
-  includeDefaultRoots?: boolean
-  /** DeepSeek Harness config root. Defaults to `$DSH_HOME` or `~/.dsh`. */
-  dshHome?: string
-  /** Shared agent config root. Defaults to `$DSH_AGENTS_HOME` or `~/.agents`. */
-  agentsHome?: string
-  /** Additional skill roots scanned after project roots and before user roots. */
-  customSkillDirs?: string[]
-  /** Whether host-local skill roots are watched for catalog changes. */
-  watch?: boolean
-  /** Whether Chokidar uses polling instead of native filesystem events. */
-  watchUsePolling?: boolean
-  /** Milliseconds a changed skill entry must remain stable before it is observed. */
-  watchStabilityThresholdMs?: number
-  /** Milliseconds between Chokidar stability or polling probes. */
-  watchPollIntervalMs?: number
-  /** Maximum distinct project roots whose skill directories remain watched. */
-  watchMaxProjects?: number
-  /** Whether watched symbolic links follow their target files. */
-  watchFollowSymlinks?: boolean
-  /** Bundled skill root; defaults to `$DSH_BUNDLED_SKILL_DIR` when default roots are included, otherwise mounts none. */
-  bundledSkillDir?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-skill-filesystem -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-skill-office -->
-<a id="deepseek-aidsh-skill-office"></a>
-
-## `@deepseek-ai/dsh-skill-office`
-
-- `inject`: `skills`
-- `source`: [`packages/skill/skill-office/src/index.ts:16`](../packages/skill/skill-office/src/index.ts)
-
-```ts config-catalog
-/** Office skill resource location. */
-export interface Config {
-  /** Absolute assets directory containing the three skill folders and shared scripts; defaults to packaged assets. */
-  assetRoot?: string
-  /** Standalone Node executable; defaults to the current executable outside Electron and SEA. */
-  node?: string
-  /** Absolute LibreOffice Kit CLI entry; false explicitly disables CLI access. */
-  cli?: string | false
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-skill-office -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent -->
 <a id="deepseek-aidsh-subagent"></a>
 
@@ -4089,23 +4129,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-session-query -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-skill -->
-<a id="deepseek-aidsh-tool-skill"></a>
-
-## `@deepseek-ai/dsh-tool-skill`
-
-- `inject`: `agents` · `tools` · `skills` · `workingDirectory`
-- `source`: [`packages/skill/tool-skill/src/index.ts:62`](../packages/skill/tool-skill/src/index.ts)
-
-```ts config-catalog
-/** Model-facing skill catalog configuration. */
-export interface Config {
-  /** Maximum normalized description length rendered in the session catalog; minimum 3. */
-  catalogDescriptionMaxLength?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-skill -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-subagent -->
 <a id="deepseek-aidsh-tool-subagent"></a>
 
@@ -4212,29 +4235,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-web -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-workspace-dependencies -->
-<a id="deepseek-aidsh-tool-workspace-dependencies"></a>
-
-## `@deepseek-ai/dsh-tool-workspace-dependencies`
-
-- `inject`: `tools`
-- `source`: [`packages/skill/tool-workspace-dependencies/src/index.ts:15`](../packages/skill/tool-workspace-dependencies/src/index.ts)
-
-```ts config-catalog
-/** Payload location and optional installation directory. */
-export interface Config {
-  /** Payload directory carrying `runtime.json` and `dependencies/`. */
-  readonly source: string
-  /**
-   * Installation directory under the Harness home. When set, the payload is copied there on the
-   * first call (the Desktop behavior); when omitted, the payload is used in place without copying,
-   * which suits read-only carriers such as container image layers.
-   */
-  readonly root?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-workspace-dependencies -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tools -->
 <a id="deepseek-aidsh-tools"></a>
@@ -4514,6 +4514,7 @@ export interface Config {
 | `@berry-ai/harness-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
 | `@berry-ai/harness-sandbox-ssh` | `ssh` | [`packages/ssh/sandbox-ssh/src/index.ts`](../packages/ssh/sandbox-ssh/src/index.ts) |
 | `@berry-ai/harness-settings` | `configEditor` · `profileContext` | [`packages/settings/settings/src/index.ts`](../packages/settings/settings/src/index.ts) |
+| `@deepseek-ai/dsh-skill-badge` | `skills` | [`packages/experimental/skill-badge/src/index.ts`](../packages/experimental/skill-badge/src/index.ts) |
 | `@berry-ai/harness-storage` | — | [`packages/storage/storage/src/index.ts`](../packages/storage/storage/src/index.ts) |
 | `@berry-ai/harness-subprocess-local` | — | [`packages/subprocess/subprocess-local/src/index.ts`](../packages/subprocess/subprocess-local/src/index.ts) |
 | `@berry-ai/harness-subprocess-ssh` | `ssh` | [`packages/ssh/subprocess-ssh/src/index.ts`](../packages/ssh/subprocess-ssh/src/index.ts) |
@@ -4596,7 +4597,6 @@ export interface Config {
 | `@deepseek-ai/dsh-session-projection` | — | [`packages/session/session-projection/src/index.ts`](../packages/session/session-projection/src/index.ts) |
 | `@deepseek-ai/dsh-session-stats` | `sessionProjections` | [`packages/session/session-stats/src/index.ts`](../packages/session/session-stats/src/index.ts) |
 | `@deepseek-ai/dsh-session-turn-outline` | `sessionProjections` | [`packages/session/session-turn-outline/src/index.ts`](../packages/session/session-turn-outline/src/index.ts) |
-| `@deepseek-ai/dsh-skill-badge` | `skills` | [`packages/experimental/skill-badge/src/index.ts`](../packages/experimental/skill-badge/src/index.ts) |
 | `@deepseek-ai/dsh-tool-cordis` | `tools` · `cordisInspect` | [`packages/extensions/tool-cordis/src/index.ts`](../packages/extensions/tool-cordis/src/index.ts) |
 | `@deepseek-ai/dsh-tool-subagent-control` | `tools` · `subagents` | [`packages/subagent/tool-subagent-control/src/index.ts`](../packages/subagent/tool-subagent-control/src/index.ts) |
 | `@deepseek-ai/dsh-tool-working-directory` | `tools` · `workingDirectory` | [`packages/session/tool-working-directory/src/index.ts`](../packages/session/tool-working-directory/src/index.ts) |

@@ -12,7 +12,7 @@ import {
   type SkillCandidate,
   type SkillDefinition,
   type SkillProvider,
-} from '@deepseek-ai/dsh-skill'
+} from '@berry-ai/harness-skill'
 
 const PROVIDER_NAME = 'dsh-badge'
 const SKILL_BODY_URL = new URL('../assets/dsh-badge.md', import.meta.url)

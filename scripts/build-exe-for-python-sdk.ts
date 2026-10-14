@@ -419,7 +419,7 @@ class SingleExeBuild {
       const inputs = { version, target: `${target.platform === 'macos' ? 'mac' : target.platform}-${target.arch}`, office, pnpm }
       const identity = createHash('sha256').update(JSON.stringify({ ...inputs, primaryLock })).digest('hex')
       await writeFile(join(resources, 'downloads.json'), JSON.stringify({ ...inputs, identity }, undefined, 2) + '\n')
-      await prepareOfficeSkillAssets(join(this.staging, 'node_modules/@deepseek-ai/dsh-skill-office/assets'), join(resources, 'office-skills'))
+      await prepareOfficeSkillAssets(join(this.staging, 'node_modules/@berry-ai/harness-skill-office/assets'), join(resources, 'office-skills'))
     }
     if (target.platform !== 'macos') return [product, ripgrep, resources]
     const spawnHelper = `${product}-spawn-helper`

@@ -55,7 +55,7 @@
     "@deepseek-ai/dsh-session-checkpoint-policy": "workspace:*",
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-skill-filesystem": "workspace:*",
+    "@berry-ai/harness-skill-filesystem": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",

@@ -38,8 +38,8 @@
     "@deepseek-ai/dsh-sdk-jsonrpc-server": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "commander": "^15.0.0",
-    "@deepseek-ai/dsh-skill-office": "workspace:*",
-    "@deepseek-ai/dsh-tool-workspace-dependencies": "workspace:*"
+    "@berry-ai/harness-skill-office": "workspace:*",
+    "@berry-ai/harness-tool-workspace-dependencies": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"

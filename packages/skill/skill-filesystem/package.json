@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-skill-filesystem",
+  "name": "@berry-ai/harness-skill-filesystem",
   "description": "Local filesystem skill provider for the DeepSeek Harness",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -29,7 +29,7 @@
   "peerDependencies": {
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
-    "@deepseek-ai/dsh-skill": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
-    "@deepseek-ai/dsh-skill": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tool-skill",
+  "name": "@berry-ai/harness-tool-skill",
   "description": "Model-facing skill loading tool for the DeepSeek Harness",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -29,7 +29,7 @@
   "peerDependencies": {
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-skill": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
@@ -43,8 +43,8 @@
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-scope": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-skill": "workspace:*",
-    "@deepseek-ai/dsh-skill-filesystem": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*",
+    "@berry-ai/harness-skill-filesystem": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-working-directory": "workspace:*"

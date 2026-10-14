@@ -1,7 +1,7 @@
 /**
  * Durable session skill catalog and model-facing `skill` loader tool.
  *
- * @module @deepseek-ai/dsh-tool-skill
+ * @module @berry-ai/harness-tool-skill
  */
 
 import type {} from '@deepseek-ai/dsh-working-directory'
@@ -20,7 +20,7 @@ import {
   renderSkillContent,
   type SkillInvocationSource,
   type SkillSummary,
-} from '@deepseek-ai/dsh-skill'
+} from '@berry-ai/harness-skill'
 
 export const name = 'tool-skill'
 export const inject = ['agents', 'tools', 'skills', 'workingDirectory']

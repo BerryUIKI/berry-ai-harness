@@ -41,8 +41,8 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@deepseek-ai/dsh-compaction-tool-result-pruner": "workspace:*",
-    "@deepseek-ai/dsh-skill": "workspace:*",
-    "@deepseek-ai/dsh-skill-filesystem": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*",
+    "@berry-ai/harness-skill-filesystem": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "@types/js-yaml": "^4.0.9",
     "js-yaml": "^4.3.2"

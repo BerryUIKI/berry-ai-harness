@@ -115,8 +115,8 @@ process.exitCode = result.status ?? 1;
         }
         await writeFile(join(cwd, 'office.patch.json'), JSON.stringify([
           { insert: [
-            { id: 'office-validation', name: '@deepseek-ai/dsh-skill-office', ...kind === 'blank' ? { config: { cli: fixtureCli } } : {} },
-            { id: 'office-dependencies', name: '@deepseek-ai/dsh-tool-workspace-dependencies', config: { source: runtime } },
+            { id: 'office-validation', name: '@berry-ai/harness-skill-office', ...kind === 'blank' ? { config: { cli: fixtureCli } } : {} },
+            { id: 'office-dependencies', name: '@berry-ai/harness-tool-workspace-dependencies', config: { source: runtime } },
           ] },
           ...completions ? [
             { id: 'llm-deepseek', disabled: true },

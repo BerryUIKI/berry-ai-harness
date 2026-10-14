@@ -757,6 +757,42 @@
       ]
     },
     {
+      "name": "@berry-ai/harness-skill",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-skill",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-skill-badge",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@deepseek-ai/dsh-skill-badge",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-skill-filesystem",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-skill-filesystem",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
       "name": "@berry-ai/harness-spill",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -978,6 +1014,18 @@
       "installations": [
         {
           "location": "node_modules/@berry-ai/harness-tool-pwsh-persistent",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-tool-skill",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-tool-skill",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2785,42 +2833,6 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-skill",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-skill",
-          "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-skill-badge",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-skill-badge",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-skill-filesystem",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-skill-filesystem",
-          "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
       "name": "@deepseek-ai/dsh-subagent",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -2970,18 +2982,6 @@
       "installations": [
         {
           "location": "node_modules/@deepseek-ai/dsh-tool-ralph",
-          "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-tool-skill",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-tool-skill",
           "direct": true,
           "optional": false,
           "peer": false
@@ -5201,7 +5201,7 @@
       "version": "5.0.0",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-skill-filesystem/node_modules/chokidar",
+          "location": "node_modules/@berry-ai/harness-skill-filesystem/node_modules/chokidar",
           "direct": false,
           "optional": false,
           "peer": false
@@ -6845,7 +6845,7 @@
       "version": "5.1.1",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-skill-filesystem/node_modules/readdirp",
+          "location": "node_modules/@berry-ai/harness-skill-filesystem/node_modules/readdirp",
           "direct": false,
           "optional": false,
           "peer": false

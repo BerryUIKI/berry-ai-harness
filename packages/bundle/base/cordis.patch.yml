@@ -301,13 +301,13 @@
         maxBytes: 65536
 
     - id: skill
-      name: '@deepseek-ai/dsh-skill'
+      name: '@berry-ai/harness-skill'
 
     - id: skill-filesystem
-      name: '@deepseek-ai/dsh-skill-filesystem'
+      name: '@berry-ai/harness-skill-filesystem'
 
     - id: tool-skill
-      name: '@deepseek-ai/dsh-tool-skill'
+      name: '@berry-ai/harness-tool-skill'
 
     - id: commands
       name: '@berry-ai/harness-commands'

@@ -132,12 +132,12 @@
           - id: tool-cordis
             name: '@deepseek-ai/dsh-tool-cordis'
           - id: skill-filesystem
-            name: '@deepseek-ai/dsh-skill-filesystem'
+            name: '@berry-ai/harness-skill-filesystem'
             config:
               customSkillDirs:
                 - !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@berry-ai/harness-agent-preset/package.json')), 'skills')
           - id: tool-skill
-            name: '@deepseek-ai/dsh-tool-skill'
+            name: '@berry-ai/harness-tool-skill'
           - id: present
             name: '@berry-ai/harness-tool-present'
           - id: tool-plugin-manager

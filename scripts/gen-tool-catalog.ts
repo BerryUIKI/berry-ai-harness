@@ -39,8 +39,8 @@ import SubagentRuntime from '@deepseek-ai/dsh-subagent'
 import type { SubagentProvider } from '@deepseek-ai/dsh-subagent'
 import * as ToolSubagentControl from '@deepseek-ai/dsh-tool-subagent-control'
 import * as ToolSubagentListAgents from '@deepseek-ai/dsh-tool-subagent-control/list-agents'
-import SkillRegistry from '@deepseek-ai/dsh-skill'
-import * as SkillFileSystem from '@deepseek-ai/dsh-skill-filesystem'
+import SkillRegistry from '@berry-ai/harness-skill'
+import * as SkillFileSystem from '@berry-ai/harness-skill-filesystem'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import * as ToolAskUser from '@berry-ai/harness-tool-ask-user'
 import * as ToolBash from '@berry-ai/harness-tool-bash'
@@ -60,7 +60,7 @@ import * as ToolSchedule from '@berry-ai/harness-tool-schedule'
 import type ScheduleService from '@berry-ai/harness-schedule'
 import Lsp from '@berry-ai/harness-lsp'
 import * as ToolLsp from '@berry-ai/harness-tool-lsp'
-import * as ToolSkill from '@deepseek-ai/dsh-tool-skill'
+import * as ToolSkill from '@berry-ai/harness-tool-skill'
 import * as ToolSessionQuery from '@deepseek-ai/dsh-tool-session-query'
 import * as ToolJobs from '@berry-ai/harness-tool-jobs'
 import BrowserUseRegistry from '@berry-ai/harness-browser-use'
@@ -79,7 +79,7 @@ import WorkflowEngine from '@berry-ai/harness-workflow'
 import type { WorkflowRun, WorkflowStartRequest } from '@berry-ai/harness-workflow'
 import * as ToolRalph from '@deepseek-ai/dsh-tool-ralph'
 import * as ToolWorkflow from '@berry-ai/harness-tool-workflow'
-import * as ToolWorkspaceDependencies from '@deepseek-ai/dsh-tool-workspace-dependencies'
+import * as ToolWorkspaceDependencies from '@berry-ai/harness-tool-workspace-dependencies'
 import { githubSlug } from './verify-md-links.ts'
 
 /** Attachment seam marker that makes the attachments-conditional `read_image` schema harvestable. */
@@ -475,7 +475,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'A fixed foreground workflow starts one fresh structured child per round; the model selects only the immutable objective and an optional round cap.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-skill',
+    pkg: '@berry-ai/harness-tool-skill',
     dir: 'tool-skill',
     source: 'packages/skill/tool-skill/src/index.ts',
     requires: ['ctx.workingDirectory', 'ctx.tools', 'ctx.agents', 'ctx.skills'],
@@ -647,7 +647,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
     },
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-workspace-dependencies',
+    pkg: '@berry-ai/harness-tool-workspace-dependencies',
     dir: 'tool-workspace-dependencies',
     source: 'packages/skill/tool-workspace-dependencies/src/index.ts',
     requires: ['ctx.tools'],

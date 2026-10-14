@@ -13,9 +13,9 @@ import {
 import SystemPrompt, { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
 import AgentRegistry, { agentEvents, type Agent, type PreStepDecision } from '@deepseek-ai/dsh-agent'
-import SkillRegistry from '@deepseek-ai/dsh-skill'
-import * as SkillFileSystem from '@deepseek-ai/dsh-skill-filesystem'
-import * as toolSkill from '@deepseek-ai/dsh-tool-skill'
+import SkillRegistry from '@berry-ai/harness-skill'
+import * as SkillFileSystem from '@berry-ai/harness-skill-filesystem'
+import * as toolSkill from '@berry-ai/harness-tool-skill'
 
 declare module '@deepseek-ai/dsh-llm' {
   interface MessageSourceMap {

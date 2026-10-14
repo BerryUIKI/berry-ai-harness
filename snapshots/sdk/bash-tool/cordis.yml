@@ -1,7 +1,7 @@
 # SDK snapshot-record composition without provider-specific upload metadata.
 
 - id: skill-filesystem
-  name: '@deepseek-ai/dsh-skill-filesystem'
+  name: '@berry-ai/harness-skill-filesystem'
   config:
     includeDefaultRoots: false
 

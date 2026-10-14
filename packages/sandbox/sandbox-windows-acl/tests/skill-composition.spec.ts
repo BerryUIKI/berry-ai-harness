@@ -7,7 +7,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import * as SkillRegistry from '@deepseek-ai/dsh-skill'
+import * as SkillRegistry from '@berry-ai/harness-skill'
 import * as SandboxLocal from '@berry-ai/harness-sandbox-local'
 import { expect, it } from 'vitest'
 import { ACL_DIAGNOSIS_SKILL } from '../src/acl-skill.ts'
@@ -31,7 +31,7 @@ it.skipIf(process.platform !== 'win32')('loads and unloads the ACL skill through
       resolveSync: unexpectedLoaderOperation,
       load: unexpectedLoaderOperation,
       async import(specifier: string) {
-        if (specifier === '@deepseek-ai/dsh-skill') return SkillRegistry
+        if (specifier === '@berry-ai/harness-skill') return SkillRegistry
         if (specifier === '@berry-ai/harness-sandbox-local') return SandboxLocal
         throw new Error(`Unexpected Loader import: ${specifier}`)
       },
