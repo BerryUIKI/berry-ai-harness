@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-ui-cordis",
+  "name": "@berry-ai/harness-client-ui-cordis",
   "description": "Cordis dynamic-plugin definition card: the keyed cordis_define tool row with its run/stop switch",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -29,7 +29,7 @@
     "client": {
       "inject": [
         "@deepseek-ai/dsh-client-connection",
-        "@deepseek-ai/dsh-cordis-client-runner",
+        "@berry-ai/harness-cordis-client-runner",
         "@deepseek-ai/dsh-api-remotes",
         "@deepseek-ai/dsh-client-locale",
         "@deepseek-ai/dsh-client-ui-renderer",
@@ -51,7 +51,7 @@
   "devDependencies": {
     "@deepseek-ai/dsh-api-remotes": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-cordis-client-runner": "workspace:*",
+    "@berry-ai/harness-cordis-client-runner": "workspace:*",
     "@deepseek-ai/dsh-client-locale": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",

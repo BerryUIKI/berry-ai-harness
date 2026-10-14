@@ -1,6 +1,6 @@
 /**
  * Process-local dynamic Plugin registry and its opaque identity mints.
- * @module @deepseek-ai/dsh-cordis-host-runner/registry
+ * @module @berry-ai/harness-cordis-host-runner/registry
  */
 
 import type { Fiber } from '@deepseek-ai/cordis'

@@ -3,7 +3,7 @@ description: "Host half of dynamic Cordis packages for agents and maintainers ch
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-cordis-host-runner
+# @berry-ai/harness-cordis-host-runner
 
 English | [中文](README.zh.md)
 
@@ -30,7 +30,7 @@ Mount this plugin for the inspection registry or programmatic dynamic-package li
 ### Minimal configuration
 
 ```yaml
-- name: '@deepseek-ai/dsh-cordis-host-runner'
+- name: '@berry-ai/harness-cordis-host-runner'
   config:
     vmTimeoutMs: 5000
 ```

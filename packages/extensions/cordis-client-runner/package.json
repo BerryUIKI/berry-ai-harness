@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-cordis-client-runner",
+  "name": "@berry-ai/harness-cordis-client-runner",
   "description": "Browser half of dynamic dual-half plugin packages: event subscription, closure evaluation, guard facade, and loader entries",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

@@ -265,8 +265,8 @@ def write_advanced_profile_patch(
         },
         {"insert": [
             {"id": "ptc-runtime", "name": "@berry-ai/harness-ptc-runtime-node"},
-            {"id": "cordis-host-runner", "name": "@deepseek-ai/dsh-cordis-host-runner"},
-            {"id": "cordis-tool", "name": "@deepseek-ai/dsh-tool-cordis"},
+            {"id": "cordis-host-runner", "name": "@berry-ai/harness-cordis-host-runner"},
+            {"id": "cordis-tool", "name": "@berry-ai/harness-tool-cordis"},
         ]},
     ])
 

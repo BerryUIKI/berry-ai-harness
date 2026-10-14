@@ -15,7 +15,7 @@ function requireAgent(exec: ToolExecution): Agent {
 }
 
 /** Register read-only runtime inspection tools over the Host providers that
- * `@deepseek-ai/dsh-tool-cordis/host` registers once per process.
+ * `@berry-ai/harness-tool-cordis/host` registers once per process.
  * @param ctx Agent-scoped registration context.
  */
 export function apply(ctx: Context): void {

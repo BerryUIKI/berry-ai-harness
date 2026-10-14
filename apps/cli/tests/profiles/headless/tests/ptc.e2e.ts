@@ -26,9 +26,9 @@ import * as ToolFs from '@berry-ai/harness-tool-fs'
 import * as AgentInstructions from '@berry-ai/harness-agent-instructions'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import * as ToolJobs from '@berry-ai/harness-tool-jobs'
-import CordisHostRunner from '@deepseek-ai/dsh-cordis-host-runner'
-import * as ToolCordis from '@deepseek-ai/dsh-tool-cordis'
-import * as CordisInspectProviders from '@deepseek-ai/dsh-tool-cordis/host'
+import CordisHostRunner from '@berry-ai/harness-cordis-host-runner'
+import * as ToolCordis from '@berry-ai/harness-tool-cordis'
+import * as CordisInspectProviders from '@berry-ai/harness-tool-cordis/host'
 
 /**
  * With-key PTC mode proof: a real model receives only `run_code`, composes two

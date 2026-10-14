@@ -155,13 +155,13 @@
       name: '@deepseek-ai/dsh-api-workspace-controller'
 
     - id: cordis-host-runner
-      name: '@deepseek-ai/dsh-cordis-host-runner'
+      name: '@berry-ai/harness-cordis-host-runner'
 
     # The Host inspect providers are process-global: the registry rejects a
     # duplicate id, so they register here once and every preset's `tool-cordis`
     # row reads them.
     - id: cordis-inspect-providers
-      name: '@deepseek-ai/dsh-tool-cordis/host'
+      name: '@berry-ai/harness-tool-cordis/host'
 
     # Ordinary provider for the parsed Web flags. Its plugin-level injection
     # waits for cmdlineArgs; no launcher metadata or special row kind is needed.
@@ -244,7 +244,7 @@
       name: '@deepseek-ai/dsh-api-remotes'
 
     - id: cordis-client-runner
-      name: '@deepseek-ai/dsh-cordis-client-runner'
+      name: '@berry-ai/harness-cordis-client-runner'
 
     - id: ui-theme
       name: '@deepseek-ai/dsh-client-ui-theme'
@@ -339,7 +339,7 @@
       name: '@deepseek-ai/dsh-client-ui-tool'
 
     - id: ui-cordis
-      name: '@deepseek-ai/dsh-client-ui-cordis'
+      name: '@berry-ai/harness-client-ui-cordis'
 
     # Turn tail: the changed-files card and delivery cards under each closing
     # assistant message. Remove this entry to turn the surface off; the tail

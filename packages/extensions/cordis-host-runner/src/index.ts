@@ -1,7 +1,7 @@
 /**
  * Dynamic Cordis Plugin service: immutable package definitions, one active run
  * per Plugin, human-approved Client activation, and Host/Client invocation.
- * @module @deepseek-ai/dsh-cordis-host-runner
+ * @module @berry-ai/harness-cordis-host-runner
  */
 
 import { Context } from '@deepseek-ai/cordis'

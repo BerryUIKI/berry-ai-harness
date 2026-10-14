@@ -47,8 +47,8 @@ import * as ToolBash from '@berry-ai/harness-tool-bash'
 import * as ToolPwsh from '@berry-ai/harness-tool-pwsh'
 import * as ToolBashPersistent from '@berry-ai/harness-tool-bash-persistent'
 import * as ToolPwshPersistent from '@berry-ai/harness-tool-pwsh-persistent'
-import CordisHostRunner from '@deepseek-ai/dsh-cordis-host-runner'
-import * as ToolCordis from '@deepseek-ai/dsh-tool-cordis'
+import CordisHostRunner from '@berry-ai/harness-cordis-host-runner'
+import * as ToolCordis from '@berry-ai/harness-tool-cordis'
 import * as ToolPresent from '@berry-ai/harness-tool-present'
 import * as ToolFs from '@berry-ai/harness-tool-fs'
 import * as ToolFsSearch from '@berry-ai/harness-tool-fs-search'
@@ -316,7 +316,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'The pwsh tool is the PowerShell-dialect consumer of the bash executor seam for Windows compositions (a PowerShell executor such as `@berry-ai/harness-pwsh-local` backs `ctx.shell`); it mirrors the bash tool call-for-call minus sandbox controls — `run_in_background` runs register with the generic `ctx.jobs` runtime and are collected/stopped through the `job_*` tools, and the managed `DSH_*` environment comes from `@berry-ai/harness-shell-env`. Each call runs in a fresh process (no persistent PTY session), with native `C:\\...` paths and `$env:NAME` variables.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-cordis',
+    pkg: '@berry-ai/harness-tool-cordis',
     dir: 'tool-cordis',
     source: 'packages/extensions/tool-cordis/src/index.ts',
     requires: ['ctx.tools', 'ctx.cordisInspect'],

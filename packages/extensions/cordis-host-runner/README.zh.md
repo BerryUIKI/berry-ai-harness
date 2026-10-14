@@ -3,7 +3,7 @@ description: "动态 Cordis 包的 host 半说明，供选择、组合或排查�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-cordis-host-runner
+# @berry-ai/harness-cordis-host-runner
 
 [English](README.md) | 中文
 
@@ -30,7 +30,7 @@ kind: "package-reference"
 ### 最小配置
 
 ```yaml
-- name: '@deepseek-ai/dsh-cordis-host-runner'
+- name: '@berry-ai/harness-cordis-host-runner'
   config:
     vmTimeoutMs: 5000
 ```
