@@ -10,7 +10,7 @@
  * VM-realm schemas and canonical values are rebuilt as host objects, while rendered content and
  * presentation metadata are shape-checked before entering the registry. Common JSON-Schema spellings are normalized when they
  * have one meaning; invalid vocabulary fails during registration with a teaching error.
- * @module @deepseek-ai/dsh-cordis-host-runner/guard
+ * @module @berry-ai/harness-cordis-host-runner/guard
  */
 
 import { Context } from '@deepseek-ai/cordis'
@@ -744,7 +744,7 @@ function sandboxContext(ctx: Context, reportFailure: (error: Error) => void): Co
   }
   const get = (name: string): unknown => readService(name, false)
   // The browser half builds the same façade over its own Context
-  // (`@deepseek-ai/dsh-cordis-client-runner`, whose CTX_VERBS names this one its
+  // (`@berry-ai/harness-cordis-client-runner`, whose CTX_VERBS names this one its
   // twin), and the sameness is the point: a package author meets ONE contract on
   // both halves. Folding them together is not available — the two halves compile
   // in separate programs where `Context` merges different service keys — so the

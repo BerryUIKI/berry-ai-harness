@@ -394,7 +394,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-agent-preset':
         specifier: workspace:*
         version: link:../../packages/client/ui-agent-preset
-      '@deepseek-ai/dsh-client-ui-cordis':
+      '@berry-ai/harness-client-ui-cordis':
         specifier: workspace:*
         version: link:../../packages/extensions/ui-cordis
       '@berry-ai/harness-command-compact':
@@ -406,7 +406,7 @@ importers:
       '@berry-ai/harness-compaction-tool-result-pruner':
         specifier: workspace:*
         version: link:../../packages/compaction/compaction-tool-result-pruner
-      '@deepseek-ai/dsh-cordis-client-runner':
+      '@berry-ai/harness-cordis-client-runner':
         specifier: workspace:*
         version: link:../../packages/extensions/cordis-client-runner
       '@deepseek-ai/dsh-experimental-agent-team-profile':
@@ -457,7 +457,7 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../packages/llm/token-meter
-      '@deepseek-ai/dsh-tool-cordis':
+      '@berry-ai/harness-tool-cordis':
         specifier: workspace:*
         version: link:../../packages/extensions/tool-cordis
       '@deepseek-ai/dsh-tool-subagent':
@@ -1370,7 +1370,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../../client/ui-plugin-manager
-      '@deepseek-ai/dsh-cordis-host-runner':
+      '@berry-ai/harness-cordis-host-runner':
         specifier: workspace:*
         version: link:../../extensions/cordis-host-runner
       '@deepseek-ai/dsh-host-plugin-inventory':
@@ -2684,7 +2684,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-conversation':
         specifier: workspace:*
         version: link:../../client/ui-conversation
-      '@deepseek-ai/dsh-client-ui-cordis':
+      '@berry-ai/harness-client-ui-cordis':
         specifier: workspace:*
         version: link:../../extensions/ui-cordis
       '@deepseek-ai/dsh-client-ui-deliverables':
@@ -2825,10 +2825,10 @@ importers:
       '@berry-ai/harness-compaction-tool-result-pruner':
         specifier: workspace:*
         version: link:../../compaction/compaction-tool-result-pruner
-      '@deepseek-ai/dsh-cordis-client-runner':
+      '@berry-ai/harness-cordis-client-runner':
         specifier: workspace:*
         version: link:../../extensions/cordis-client-runner
-      '@deepseek-ai/dsh-cordis-host-runner':
+      '@berry-ai/harness-cordis-host-runner':
         specifier: workspace:*
         version: link:../../extensions/cordis-host-runner
       '@deepseek-ai/dsh-host-directory-picker-auto':
@@ -2864,7 +2864,7 @@ importers:
       '@deepseek-ai/dsh-session-turn-outline':
         specifier: workspace:*
         version: link:../../session/session-turn-outline
-      '@deepseek-ai/dsh-tool-cordis':
+      '@berry-ai/harness-tool-cordis':
         specifier: workspace:*
         version: link:../../extensions/tool-cordis
       '@deepseek-ai/dsh-tool-subagent':
@@ -9501,7 +9501,7 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-cordis-host-runner':
+      '@berry-ai/harness-cordis-host-runner':
         specifier: workspace:*
         version: link:../cordis-host-runner
       '@deepseek-ai/dsh-system-prompt':
@@ -9549,7 +9549,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-tool':
         specifier: workspace:*
         version: link:../../client/ui-tool
-      '@deepseek-ai/dsh-cordis-client-runner':
+      '@berry-ai/harness-cordis-client-runner':
         specifier: workspace:*
         version: link:../cordis-client-runner
       '@deepseek-ai/dsh-session':
@@ -14496,7 +14496,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-tool-cordis':
+      '@berry-ai/harness-tool-cordis':
         specifier: workspace:*
         version: link:../../extensions/tool-cordis
       '@berry-ai/harness-typert-registry':
@@ -15341,7 +15341,7 @@ importers:
       '@berry-ai/harness-compaction-tool-result-pruner':
         specifier: workspace:*
         version: link:../../packages/compaction/compaction-tool-result-pruner
-      '@deepseek-ai/dsh-cordis-host-runner':
+      '@berry-ai/harness-cordis-host-runner':
         specifier: workspace:*
         version: link:../../packages/extensions/cordis-host-runner
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
@@ -15434,7 +15434,7 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../packages/llm/token-meter
-      '@deepseek-ai/dsh-tool-cordis':
+      '@berry-ai/harness-tool-cordis':
         specifier: workspace:*
         version: link:../../packages/extensions/tool-cordis
       '@deepseek-ai/dsh-tool-subagent':

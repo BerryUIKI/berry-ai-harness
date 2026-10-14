@@ -5,7 +5,7 @@ import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
 import type {
   CordisRunActivity, CordisRunFailure, CordisUserRunRequest, DynamicCordisLivePackage,
   DynamicCordisRenderFailure,
-} from '@deepseek-ai/dsh-cordis-client-runner/client'
+} from '@berry-ai/harness-cordis-client-runner/client'
 import type { CordisActionResult } from './dynamic-port.ts'
 import type { CordisInventory } from './inventory.ts'
 import type { CordisRunCardPointer, CordisRunCardStore } from './run-card-index.ts'

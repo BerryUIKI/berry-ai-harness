@@ -19,7 +19,7 @@ import { API_REMOTE_FORWARDED_EVENTS } from './remote-events.ts'
 // makes the shape assertion below judge real signatures rather than an empty
 // event vocabulary.
 import type {} from '@berry-ai/harness-commands/types'
-import type {} from '@deepseek-ai/dsh-cordis-host-runner/types'
+import type {} from '@berry-ai/harness-cordis-host-runner/types'
 import type {} from '@berry-ai/harness-credentials/types'
 import type {} from '@berry-ai/harness-goal/types'
 import type {} from '@deepseek-ai/dsh-llm/types'

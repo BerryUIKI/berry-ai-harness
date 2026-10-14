@@ -12,7 +12,7 @@ import officeToPdfRemote from '@berry-ai/harness-office-to-pdf/remote'
 import goalsRemote from '@berry-ai/harness-goal/remote'
 import scheduleRemote from '@berry-ai/harness-schedule/remote'
 import llmRemote from '@deepseek-ai/dsh-llm/remote'
-import dynamicRemote from '@deepseek-ai/dsh-cordis-host-runner/remote'
+import dynamicRemote from '@berry-ai/harness-cordis-host-runner/remote'
 import pluginManagerRemote from '@berry-ai/harness-plugin-manager/remote'
 import pluginRegistryProbeRemote from '@deepseek-ai/dsh-client-ui-plugin-manager/remote'
 import pluginInventoryRemote from '@deepseek-ai/dsh-host-plugin-inventory/remote'
@@ -73,7 +73,7 @@ export type { ApiRemoteForwardedEvent } from '../types.ts'
 // signatures `$on` hands to a listener, so a consumer reads the very
 // declaration the Host emits rather than a flattened restatement of it.
 export type {} from '@berry-ai/harness-commands/types'
-export type {} from '@deepseek-ai/dsh-cordis-host-runner/types'
+export type {} from '@berry-ai/harness-cordis-host-runner/types'
 export type {} from '@berry-ai/harness-credentials/types'
 export type {} from '@deepseek-ai/dsh-llm/types'
 export type {} from '@berry-ai/harness-agent-preset-registry/types'
@@ -95,7 +95,7 @@ export type {
   StreamChunk,
 } from '@deepseek-ai/dsh-client-connection/client'
 export type {} from '@deepseek-ai/dsh-api-gateway/client'
-export type {} from '@deepseek-ai/dsh-cordis-host-runner/remote'
+export type {} from '@berry-ai/harness-cordis-host-runner/remote'
 
 // The payload vocabulary of the selected namespaces, re-exported so a Client
 // contribution can name what it sends and receives without importing a Host
@@ -133,7 +133,7 @@ export type {
   DynamicCordisStopResponse,
   DynamicCordisUndefineReceipt,
   RequestRunOutcome,
-} from '@deepseek-ai/dsh-cordis-host-runner/types'
+} from '@berry-ai/harness-cordis-host-runner/types'
 // Credential state vocabulary for the credentials namespace (values never ride it).
 export type { CredentialInfo } from '@berry-ai/harness-credentials/types'
 // Redacted namespace vocabulary for the settings namespace (secrets never ride
