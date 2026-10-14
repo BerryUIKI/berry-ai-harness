@@ -3,13 +3,13 @@ import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { expect, it, onTestFinished, vi } from 'vitest'
-import { getDshRuntimeVersion, initProfile, PROFILE_TEMPLATES, readProfileVersionExemptions } from '@deepseek-ai/dsh-app-boot'
-import { runPluginCommand, runProfilePnpm } from '@deepseek-ai/dsh-plugin-manager/operations'
+import { getDshRuntimeVersion, initProfile, PROFILE_TEMPLATES, readProfileVersionExemptions } from '@berry-ai/harness-app-boot'
+import { runPluginCommand, runProfilePnpm } from '@berry-ai/harness-plugin-manager/operations'
 import { runPlugin } from '../src/plugin.ts'
 
 vi.mock('../src/profile-boot.ts', () => ({ INSTALL_ANCHOR: '/installation/package.json' }))
-vi.mock('@deepseek-ai/dsh-plugin-manager/operations', async importOriginal => ({
-  ...await importOriginal<typeof import('@deepseek-ai/dsh-plugin-manager/operations')>(),
+vi.mock('@berry-ai/harness-plugin-manager/operations', async importOriginal => ({
+  ...await importOriginal<typeof import('@berry-ai/harness-plugin-manager/operations')>(),
   runPluginCommand: vi.fn(),
   runProfilePnpm: vi.fn(),
 }))

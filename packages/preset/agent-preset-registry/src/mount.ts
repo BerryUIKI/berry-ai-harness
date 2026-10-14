@@ -1,7 +1,7 @@
 /** Runtime plugin trees shared by Agents selecting one preset revision. */
 import { Context, type Fiber } from '@deepseek-ai/cordis'
 import { EntryTree, type EntryOptions } from '@deepseek-ai/cordis-plugin-loader'
-import { prepareProfileEntries } from '@deepseek-ai/dsh-app-boot'
+import { prepareProfileEntries } from '@berry-ai/harness-app-boot'
 import type { PresetDefinition } from './definition.ts'
 import { scopeOf, type ScopeKey } from '@deepseek-ai/dsh-scope'
 

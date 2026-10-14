@@ -6,7 +6,7 @@
 
 /* v8 ignore file -- built-bin acceptance exercises this self-executing dispatch. */
 
-import { getDshRuntimeVersion, loadLayeredEnv, StartupError } from '@deepseek-ai/dsh-app-boot'
+import { getDshRuntimeVersion, loadLayeredEnv, StartupError } from '@berry-ai/harness-app-boot'
 import { resolveDshHome } from '@berry-ai/harness-home-paths'
 import { parseDshArgs } from './args.ts'
 import { reportStartupFailure } from './startup-diagnostics.ts'

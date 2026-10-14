@@ -11,7 +11,7 @@ import { SessionId } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { createScope } from '@deepseek-ai/dsh-scope'
 import AgentPresets from '@berry-ai/harness-agent-preset-registry'
-import { PluginPackages } from '@deepseek-ai/dsh-app-boot'
+import { PluginPackages } from '@berry-ai/harness-app-boot'
 import DeepSeekLlmApiExtensionRegistry from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
 import * as PluginInventory from '../src/index.ts'
 

@@ -1,6 +1,6 @@
 /** Explicitly enabled billed Flash smoke through the actual native official provider. */
 import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
-import { boot } from '@deepseek-ai/dsh-app-boot'
+import { boot } from '@berry-ai/harness-app-boot'
 import LlmRuntime from '@deepseek-ai/dsh-llm'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'

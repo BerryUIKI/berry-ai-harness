@@ -218,7 +218,7 @@ export class SettingsController extends TypertRemoteService {
     if (settings === undefined) {
       throw new RemoteError(
         'gateway/internal',
-        'settings service is absent: mount @deepseek-ai/dsh-settings with @deepseek-ai/dsh-config-editor in the profile composition',
+        'settings service is absent: mount @deepseek-ai/dsh-settings with @berry-ai/harness-config-editor in the profile composition',
         {},
       )
     }

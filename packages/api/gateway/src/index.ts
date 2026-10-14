@@ -15,7 +15,7 @@ import {
 import { Deque } from '@berry-ai/harness-deque'
 import type { WebUpgradeRoute } from '@deepseek-ai/dsh-host-webserver'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
-import type {} from '@deepseek-ai/dsh-cmdline'
+import type {} from '@berry-ai/harness-cmdline'
 import z from '@deepseek-ai/schemastery'
 export type { TypertGatewayFaultDetails } from './remote-error-codes.ts'
 import {

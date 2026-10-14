@@ -9,7 +9,7 @@
 
 import { Command } from 'commander'
 import type { Context } from '@deepseek-ai/cordis'
-import { parseCmdline } from '@deepseek-ai/dsh-cmdline'
+import { parseCmdline } from '@berry-ai/harness-cmdline'
 import { isWildcardHost, type TlsConfig } from '@deepseek-ai/dsh-host-webserver'
 import { parsePublicUrl } from './public-url.ts'
 

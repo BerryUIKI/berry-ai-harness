@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url'
 import yaml from 'js-yaml'
 import { entryListSchema } from '@deepseek-ai/cordis-plugin-include'
 import { evaluate } from '@deepseek-ai/cordis-plugin-loader'
-import { bundlePatchPaths, composeEntries, initProfile, loadProfile, PROFILES_DIR } from '@deepseek-ai/dsh-app-boot'
+import { bundlePatchPaths, composeEntries, initProfile, loadProfile, PROFILES_DIR } from '@berry-ai/harness-app-boot'
 
 /**
  * The effective disabled state of one row on one platform: a `!!js` expression

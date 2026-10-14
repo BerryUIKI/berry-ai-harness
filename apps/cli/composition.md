@@ -8,13 +8,13 @@ The dsh-base bundle patch shared by the web, headless, sdk, and acp profiles; th
 ```mermaid
 flowchart LR
   cfg["packages/bundle/base/cordis.patch.yml<br/>cordis.yml"]
-  plugin_dsh_base_tool_plugin_manager["tool-plugin-manager<br/>@deepseek-ai/dsh-plugin-manager/tools"]
+  plugin_dsh_base_tool_plugin_manager["tool-plugin-manager<br/>@berry-ai/harness-plugin-manager/tools"]
   cfg --> plugin_dsh_base_tool_plugin_manager
-  plugin_dsh_base_plugin_manager["plugin-manager<br/>@deepseek-ai/dsh-plugin-manager"]
+  plugin_dsh_base_plugin_manager["plugin-manager<br/>@berry-ai/harness-plugin-manager"]
   cfg --> plugin_dsh_base_plugin_manager
   plugin_dsh_base_timer["timer<br/>@deepseek-ai/cordis-plugin-timer"]
   cfg --> plugin_dsh_base_timer
-  plugin_dsh_base_hmr["hmr<br/>@deepseek-ai/dsh-hmr"]
+  plugin_dsh_base_hmr["hmr<br/>@berry-ai/harness-hmr"]
   cfg --> plugin_dsh_base_hmr
   plugin_dsh_base_llm["llm<br/>@deepseek-ai/dsh-llm"]
   cfg --> plugin_dsh_base_llm
@@ -46,7 +46,7 @@ flowchart LR
   cfg --> plugin_dsh_base_jobs
   plugin_dsh_base_llm_retry["llm-retry<br/>@deepseek-ai/dsh-llm-retry"]
   cfg --> plugin_dsh_base_llm_retry
-  plugin_dsh_base_config_editor["config-editor<br/>@deepseek-ai/dsh-config-editor"]
+  plugin_dsh_base_config_editor["config-editor<br/>@berry-ai/harness-config-editor"]
   cfg --> plugin_dsh_base_config_editor
   plugin_dsh_base_settings["settings<br/>@deepseek-ai/dsh-settings"]
   cfg --> plugin_dsh_base_settings
@@ -200,10 +200,10 @@ flowchart LR
 
 | Plugin id | Package / module |
 | --- | --- |
-| `tool-plugin-manager` | `@deepseek-ai/dsh-plugin-manager/tools` |
-| `plugin-manager` | `@deepseek-ai/dsh-plugin-manager` |
+| `tool-plugin-manager` | `@berry-ai/harness-plugin-manager/tools` |
+| `plugin-manager` | `@berry-ai/harness-plugin-manager` |
 | `timer` | `@deepseek-ai/cordis-plugin-timer` |
-| `hmr` | `@deepseek-ai/dsh-hmr` |
+| `hmr` | `@berry-ai/harness-hmr` |
 | `llm` | `@deepseek-ai/dsh-llm` |
 | `deepseek-llm-api-extensions` | `@deepseek-ai/dsh-deepseek-llm-api-extensions` |
 | `session` | `@deepseek-ai/dsh-session` |
@@ -219,7 +219,7 @@ flowchart LR
 | `agent-default-model` | `@deepseek-ai/dsh-agent-default-model` |
 | `jobs` | `@deepseek-ai/dsh-jobs-local` |
 | `llm-retry` | `@deepseek-ai/dsh-llm-retry` |
-| `config-editor` | `@deepseek-ai/dsh-config-editor` |
+| `config-editor` | `@berry-ai/harness-config-editor` |
 | `settings` | `@deepseek-ai/dsh-settings` |
 | `authorization` | `@deepseek-ai/dsh-authorization` |
 | `deepseek-account` | `@deepseek-ai/dsh-deepseek-account-platform` |

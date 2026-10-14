@@ -57,7 +57,7 @@ import {
   writesCurrentSessionFixtures,
   type NormalizeContext,
 } from '@deepseek-ai/dsh-session-snapshot'
-import type { Profile, ProfileContext } from '@deepseek-ai/dsh-app-boot'
+import type { Profile, ProfileContext } from '@berry-ai/harness-app-boot'
 import { dshHomePath } from '@berry-ai/harness-home-paths'
 import { LlmAdapter } from '@deepseek-ai/dsh-llm'
 import type {
@@ -82,11 +82,11 @@ import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 // Empty type imports carry the webServer/agents/sessionPersistence Context merges.
 import type {} from '@deepseek-ai/dsh-host-webserver'
 import type {} from '@deepseek-ai/dsh-agent'
-import { provideCmdline } from '@deepseek-ai/dsh-cmdline'
+import { provideCmdline } from '@berry-ai/harness-cmdline'
 import { startPrefixProxy, type PrefixProxy } from './prefix-proxy.ts'
 import { REPO_ROOT, requireBuilt, requireDist } from './support.ts'
 
-type AppBoot = typeof import('@deepseek-ai/dsh-app-boot')
+type AppBoot = typeof import('@berry-ai/harness-app-boot')
 let builtAppBoot: AppBoot | undefined
 
 /**
@@ -97,7 +97,7 @@ let builtAppBoot: AppBoot | undefined
  * helpers this module also exports load without one.
  */
 function appBoot(): AppBoot {
-  builtAppBoot ??= requireBuilt('@deepseek-ai/dsh-app-boot') as AppBoot
+  builtAppBoot ??= requireBuilt('@berry-ai/harness-app-boot') as AppBoot
   return builtAppBoot
 }
 

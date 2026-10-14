@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url'
 import { execa } from 'execa'
 import yaml from 'js-yaml'
 import { expect, it, onTestFinished } from 'vitest'
-import type { BundleInfo, ChangeResult } from '@deepseek-ai/dsh-plugin-manager'
+import type { BundleInfo, ChangeResult } from '@berry-ai/harness-plugin-manager'
 import { getDshRuntimeVersion } from '../../../../packages/boot/app-boot/src/plugin-compatibility.ts'
 import { generateOfficialBundleCatalog } from '../../../../scripts/gen-official-bundle-catalog.ts'
 import {

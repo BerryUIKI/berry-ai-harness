@@ -1,7 +1,7 @@
 /** Loader-owned anonymous provider, live Sessions, and restartable real JSONL storage. */
 import type { Context, Fiber } from '@deepseek-ai/cordis'
 import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
-import { boot } from '@deepseek-ai/dsh-app-boot'
+import { boot } from '@berry-ai/harness-app-boot'
 import { createAssistantMessage, createUserMessage } from '@deepseek-ai/dsh-llm'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionSeq, type Session, type SessionEvent, type SessionHeader } from '@deepseek-ai/dsh-session'
 import type { SessionHandle } from '@deepseek-ai/dsh-session-persistence'

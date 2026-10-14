@@ -3,7 +3,7 @@ description: "App-owned command lines for dsh app bins: your app parses its own 
 kind: "package-library"
 ---
 
-# @deepseek-ai/dsh-cmdline
+# @berry-ai/harness-cmdline
 
 English | [中文](README.zh.md)
 

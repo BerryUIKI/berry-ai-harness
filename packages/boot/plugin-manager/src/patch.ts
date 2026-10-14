@@ -1,7 +1,7 @@
 /** Comment-preserving profile plugin enablement edits. */
 import { readFile } from 'node:fs/promises'
 import { isMap, isSeq, parseDocument } from 'yaml'
-import { loadOptionalPatches } from '@deepseek-ai/dsh-app-boot'
+import { loadOptionalPatches } from '@berry-ai/harness-app-boot'
 import { writeFileAtomic } from '@berry-ai/harness-atomic-write'
 
 /** Replace the last matching override or append one after existing insertions.

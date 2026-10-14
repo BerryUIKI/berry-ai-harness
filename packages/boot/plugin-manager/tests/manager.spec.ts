@@ -14,9 +14,9 @@ import {
   boot, composeEntries, initProfile, loadProfileDirectory, readProfilePatches, readProfileManifest,
   reconcileProfilePatches, OPTIONAL_BUNDLES, OFFICIAL_ON_DEMAND_CATALOG, PluginPackages, readPluginMeta, getDshRuntimeVersion,
   type ProfileContext, type RuntimeResolution,
-} from '@deepseek-ai/dsh-app-boot'
+} from '@berry-ai/harness-app-boot'
 import PluginManager, { type Config, type PluginChange, type PluginInstallLogChunk, type PluginInstallProgress, type PluginInstallRequestId } from '../src/index.ts'
-import Hmr from '@deepseek-ai/dsh-hmr'
+import Hmr from '@berry-ai/harness-hmr'
 import Timer from '@deepseek-ai/cordis-plugin-timer'
 import type { PatchOptions } from '@deepseek-ai/cordis-plugin-include'
 import { Group } from '@deepseek-ai/cordis-plugin-loader'
@@ -43,7 +43,7 @@ async function fixture(reload: 'live' | 'startup' = 'live', overlay = false, pre
     writeFileSync(join(home, 'package.json'), '{"name":"@deepseek-ai/dsh-root"}')
   }
   writeFileSync(anchor, JSON.stringify(sourceInstallation
-    ? { name: '@deepseek-ai/dsh', dependencies: { '@deepseek-ai/dsh-app-boot': 'workspace:*' } }
+    ? { name: '@deepseek-ai/dsh', dependencies: { '@berry-ai/harness-app-boot': 'workspace:*' } }
     : { name: 'installation', dependencies: {} }))
   initProfile(dir, ['core', 'extra'])
   const bundle = (name: string, rows: unknown[], packageRoot = dir) => {

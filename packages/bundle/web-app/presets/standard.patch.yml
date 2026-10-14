@@ -133,5 +133,5 @@
           - id: present
             name: '@deepseek-ai/dsh-tool-present'
           - id: tool-plugin-manager
-            name: '@deepseek-ai/dsh-plugin-manager/tools'
+            name: '@berry-ai/harness-plugin-manager/tools'
             disabled: true

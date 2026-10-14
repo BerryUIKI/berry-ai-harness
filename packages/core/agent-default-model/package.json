@@ -28,7 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
-    "@deepseek-ai/dsh-config-editor": "workspace:*"
+    "@berry-ai/harness-config-editor": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/dsh-agent": "workspace:*",

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-config-editor",
+  "name": "@berry-ai/harness-config-editor",
   "description": "Persist plugin configuration through profile patches and Loader reconciliation",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "url": "git+https://github.com/BerryUIKI/berry-ai-harness.git",
     "directory": "packages/boot/config-editor"
   },
   "type": "module",
@@ -29,9 +29,9 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-hmr": "workspace:*",
+    "@berry-ai/harness-hmr": "workspace:*",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
-    "@deepseek-ai/dsh-app-boot": "workspace:*"
+    "@berry-ai/harness-app-boot": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-atomic-write": "workspace:*",
@@ -41,13 +41,13 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-hmr": "workspace:*",
+    "@berry-ai/harness-hmr": "workspace:*",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@types/js-yaml": "^4.0.9",
-    "@deepseek-ai/dsh-app-boot": "workspace:*"
+    "@berry-ai/harness-app-boot": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-hmr": {
+    "@berry-ai/harness-hmr": {
       "optional": true
     }
   }

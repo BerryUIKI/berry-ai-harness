@@ -5,7 +5,7 @@ import { join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
 import { PassThrough } from 'node:stream'
 import { expect, it, onTestFinished, vi } from 'vitest'
-import { getDshRuntimeVersion, initProfile, readProfileManifest } from '@deepseek-ai/dsh-app-boot'
+import { getDshRuntimeVersion, initProfile, readProfileManifest } from '@berry-ai/harness-app-boot'
 import { anchorPathSpec, readProfileRegistry, runPluginCommand, runProfilePnpm, viewProfilePackage } from '../src/operations.ts'
 
 /** What execa resolves for a run that settled, including the buffered output the pre-install lookup is read for. */
@@ -172,7 +172,7 @@ function install(dir: string, name: string) {
 function installGuarded(dir: string, dependency: string, name = dependency, version = '1.0.0', peer = '>=999.0.0') {
   install(dir, dependency)
   writeFileSync(join(dir, 'node_modules', dependency, 'package.json'), JSON.stringify({
-    name, version, peerDependencies: { '@deepseek-ai/dsh-app-boot': peer }, dsh: { bundle: { patch: './cordis.patch.yml' } },
+    name, version, peerDependencies: { '@berry-ai/harness-app-boot': peer }, dsh: { bundle: { patch: './cordis.patch.yml' } },
   }))
 }
 
@@ -350,7 +350,7 @@ it.each([true, false])('rejects incompatible installed manifests before activati
     execution: 'service', outputBytes: 8192, activateNewBundles, onOutput: (text) => { messages.push(text) },
   })
   expect(outcome.exitCode).toBe(1)
-  expect(outcome.incompatible).toMatchObject([{ name: 'incompatible', version: '1.0.0', peers: { '@deepseek-ai/dsh-app-boot': '>=999.0.0' } }])
+  expect(outcome.incompatible).toMatchObject([{ name: 'incompatible', version: '1.0.0', peers: { '@berry-ai/harness-app-boot': '>=999.0.0' } }])
   expect(outcome.output).toContain('incompatible@1.0.0')
   expect(outcome.output).toContain('installation rejected')
   expect(readFileSync(outcome.logPath, 'utf8')).toContain('incompatible@1.0.0')
@@ -395,7 +395,7 @@ it('detects a version update that keeps the dependency spec and removes a lockfi
   // `pnpm update` keeps the manifest spec and replaces only the installed contents.
   pnpm.mutate = (target) => {
     writeFileSync(join(target, 'node_modules', 'updated', 'package.json'), JSON.stringify({
-      name: 'updated', version: '2.0.0', peerDependencies: { '@deepseek-ai/dsh-app-boot': '>=999.0.0' },
+      name: 'updated', version: '2.0.0', peerDependencies: { '@berry-ai/harness-app-boot': '>=999.0.0' },
       dsh: { bundle: { patch: './cordis.patch.yml' } },
     }))
     writeFileSync(join(target, 'pnpm-lock.yaml'), 'changed-lock\n')

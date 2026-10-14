@@ -7,7 +7,7 @@ import { Context, symbols } from '@deepseek-ai/cordis'
 import { apply as applyConnection, inject as connectionInject } from '@deepseek-ai/dsh-client-connection'
 import WebServer from '@deepseek-ai/dsh-host-webserver'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
-import type { AppReady } from '@deepseek-ai/dsh-cmdline'
+import type { AppReady } from '@berry-ai/harness-cmdline'
 import {
   Remote,
   remoteErrorOf,

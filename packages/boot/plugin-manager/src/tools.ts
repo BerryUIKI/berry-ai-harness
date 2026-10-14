@@ -7,7 +7,7 @@ import type {} from '@deepseek-ai/dsh-user-approval'
 import { approveEscalation } from '@deepseek-ai/dsh-sandbox'
 import type { PluginEntryId } from './types.ts'
 import { defineTool } from '@deepseek-ai/dsh-tools'
-import { getDshRuntimeVersion } from '@deepseek-ai/dsh-app-boot'
+import { getDshRuntimeVersion } from '@berry-ai/harness-app-boot'
 
 /** Required services for the management tool. */
 export const inject = ['tools', 'pluginManager', 'sandboxPolicy']

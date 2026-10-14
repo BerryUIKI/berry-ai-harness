@@ -3,7 +3,7 @@ description: "dsh app bin 的应用自有命令行：应用从启动器剩余参
 kind: "package-library"
 ---
 
-# @deepseek-ai/dsh-cmdline
+# @berry-ai/harness-cmdline
 
 [English](README.md) | 中文
 

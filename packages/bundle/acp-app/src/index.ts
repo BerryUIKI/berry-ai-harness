@@ -7,7 +7,7 @@
 
 import { Command } from 'commander'
 import type { Context } from '@deepseek-ai/cordis'
-import { exitOnStdinEnd, parseCmdline } from '@deepseek-ai/dsh-cmdline'
+import { exitOnStdinEnd, parseCmdline } from '@berry-ai/harness-cmdline'
 
 /** Stable Cordis plugin name. */
 export const name = 'acp-app-startup'

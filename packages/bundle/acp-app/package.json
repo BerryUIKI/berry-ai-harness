@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@deepseek-ai/dsh-acp": "workspace:*",
-    "@deepseek-ai/dsh-cmdline": "workspace:*",
+    "@berry-ai/harness-cmdline": "workspace:*",
     "commander": "^15.0.0"
   },
   "peerDependencies": {

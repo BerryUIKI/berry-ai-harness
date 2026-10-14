@@ -18,7 +18,7 @@
  * profile directory. Pnpm-managed entries in the profile's `node_modules`
  * resolve first. The runtime resolution supplies packages carried by the
  * installation and selected bundles to Node's ESM and CommonJS resolvers.
- * @module @deepseek-ai/dsh-app-boot/profile
+ * @module @berry-ai/harness-app-boot/profile
  */
 
 import { createRequire } from 'node:module'

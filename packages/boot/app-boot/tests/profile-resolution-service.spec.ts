@@ -253,7 +253,7 @@ describe('profile package metadata service', () => {
     }
     const removed: RuntimeResolution = { ...initial, linkedRoots: [] }
     const relinked: RuntimeResolution = { ...initial, linkedRoots: [{ ...linked, realPath: linkedB }] }
-    const key = '@deepseek-ai/dsh-app-boot/profile-resolution'
+    const key = '@berry-ai/harness-app-boot/profile-resolution'
     const previous = getEnvironmentData(key)
     const ctx = new Context()
     contexts.push(ctx)
@@ -299,7 +299,7 @@ describe('profile package metadata service', () => {
     const first = join(root, 'first')
     const firstAnchor = pkg(first, '1.0.0')
     const initial = resolution(profilesDir, profileDir, first, firstAnchor, '1.0.0')
-    const key = '@deepseek-ai/dsh-app-boot/profile-resolution'
+    const key = '@berry-ai/harness-app-boot/profile-resolution'
     const previous = getEnvironmentData(key)
     const ctx = new Context()
     contexts.push(ctx)

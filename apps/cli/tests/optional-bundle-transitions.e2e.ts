@@ -8,13 +8,13 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent, AgentHandle } from '@deepseek-ai/dsh-agent'
-import type { ProfileContext } from '@deepseek-ai/dsh-app-boot'
+import type { ProfileContext } from '@berry-ai/harness-app-boot'
 import { LlmAdapter, ToolCallId, createUserMessage } from '@deepseek-ai/dsh-llm'
 import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@deepseek-ai/dsh-llm'
 import { SessionId } from '@deepseek-ai/dsh-session'
 import type {} from '@berry-ai/harness-agent-preset-registry'
-import type {} from '@deepseek-ai/dsh-hmr'
-import type {} from '@deepseek-ai/dsh-plugin-manager'
+import type {} from '@berry-ai/harness-hmr'
+import type {} from '@berry-ai/harness-plugin-manager'
 import type {} from '@deepseek-ai/dsh-permission-presets'
 import type {} from '@deepseek-ai/dsh-session-title-llm'
 import type {} from '@deepseek-ai/dsh-skill'
@@ -82,8 +82,8 @@ describe.skipIf(!existsSync(join(root, 'apps/cli/lib/bin.js')))('Official option
     originalEnvironment = Object.fromEntries(Object.keys(values).map(key => [key, process.env[key]]))
     Object.assign(process.env, values)
     const require = createRequire(import.meta.url)
-    const app = require(join(root, 'packages/boot/app-boot/lib/index.js')) as typeof import('@deepseek-ai/dsh-app-boot')
-    const cmdline = require(join(root, 'packages/boot/cmdline/lib/index.js')) as typeof import('@deepseek-ai/dsh-cmdline')
+    const app = require(join(root, 'packages/boot/app-boot/lib/index.js')) as typeof import('@berry-ai/harness-app-boot')
+    const cmdline = require(join(root, 'packages/boot/cmdline/lib/index.js')) as typeof import('@berry-ai/harness-cmdline')
     const directory = join(home, 'profiles', 'web')
     app.initProfile(directory, ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app'])
     await writeFile(join(directory, 'cordis.yml'), '[]\n')

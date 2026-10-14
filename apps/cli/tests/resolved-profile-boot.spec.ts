@@ -8,13 +8,13 @@ import { createLaunchEnvironmentSnapshot } from '@berry-ai/harness-launch-enviro
 import {
   boot, composeEntries, createRuntimeResolution,
   PluginPackages, type Profile,
-} from '@deepseek-ai/dsh-app-boot'
+} from '@berry-ai/harness-app-boot'
 import { installProxyFromEnvironment } from '@berry-ai/harness-http-proxy'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { runProfile } from '../src/profile-boot.ts'
 
-vi.mock('@deepseek-ai/dsh-app-boot', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@deepseek-ai/dsh-app-boot')>()
+vi.mock('@berry-ai/harness-app-boot', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@berry-ai/harness-app-boot')>()
   return {
     ...actual,
     boot: vi.fn(),

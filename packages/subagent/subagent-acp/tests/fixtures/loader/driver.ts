@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /** Test driver: one delegation turn through a headless Loader composition. */
 
-import { resolveConfigPath } from '@deepseek-ai/dsh-app-boot'
+import { resolveConfigPath } from '@berry-ai/harness-app-boot'
 import { runFixtureTurn } from '@deepseek-ai/dsh-loader-smoke'
 import { bootProductionProfile } from '../../../../../test-support/loader-smoke/tests/fixtures/production-profile.ts'
 

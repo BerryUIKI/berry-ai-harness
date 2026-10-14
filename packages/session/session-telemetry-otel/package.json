@@ -43,7 +43,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis-plugin-logger-console": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
+    "@berry-ai/harness-app-boot": "workspace:*",
     "@deepseek-ai/dsh-bash-local": "workspace:*",
     "@deepseek-ai/dsh-command-feedback": "workspace:*",
     "@deepseek-ai/dsh-message-feedback": "workspace:*",
