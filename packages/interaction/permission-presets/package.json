@@ -54,7 +54,7 @@
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
@@ -69,7 +69,7 @@
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-settings": "workspace:*"

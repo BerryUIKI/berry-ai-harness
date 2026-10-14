@@ -25,7 +25,7 @@ The owner of a protocol declares its value type on `ResourceProtocolMap` and reg
 
 ```ts ignore-check
 import type { Context } from '@deepseek-ai/cordis'
-import type { RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type {} from '@deepseek-ai/dsh-client-resources/client'
 
 interface NoteView { readonly title: string; readonly updatedAt: string }

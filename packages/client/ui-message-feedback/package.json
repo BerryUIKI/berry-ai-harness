@@ -57,7 +57,7 @@
     "@berry-ai/harness-message-feedback": "workspace:*",
     "@deepseek-ai/dsh-remote-mock": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@testing-library/react": "^16.3.3",
     "@types/react": "~18.3.1",

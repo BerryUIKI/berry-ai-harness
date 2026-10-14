@@ -16,7 +16,7 @@ import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import { FsError } from '@berry-ai/harness-fs'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
+import TypertRegistry from '@berry-ai/harness-typert-registry'
 import type { Converter, ConverterOptions } from '@deepseek-ai/libreoffice-kit'
 import { expect, it, onTestFinished, vi } from 'vitest'
 
@@ -50,7 +50,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
     { name: '@deepseek-ai/dsh-session-projection' },
     { name: '@berry-ai/harness-sandbox-policy', config: { workspaceRoot: directory } },
     { name: '@berry-ai/harness-fs-local', config: { cwd: directory } },
-    { name: '@deepseek-ai/dsh-typert-registry' },
+    { name: '@berry-ai/harness-typert-registry' },
     { name: '@deepseek-ai/dsh-api-workspace-files', config: { maxFileBytes: 1 } },
     ...configured,
   ]))
@@ -75,7 +75,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
     ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
     ['@berry-ai/harness-fs-local', LocalFileSystem],
-    ['@deepseek-ai/dsh-typert-registry', TypertRegistry],
+    ['@berry-ai/harness-typert-registry', TypertRegistry],
     ['@deepseek-ai/dsh-api-workspace-files', WorkspaceFiles],
     ['@berry-ai/harness-office-to-pdf', OfficeToPdf],
     ['@deepseek-ai/dsh-client-ui-sidebar-documentpreview', DocumentPreview],

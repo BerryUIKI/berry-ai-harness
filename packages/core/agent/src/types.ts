@@ -8,7 +8,7 @@ import type { UserMessage } from '@deepseek-ai/dsh-llm/types'
 // Type-only: the Workspace registry's archive-admission family map this registry merges `turn` into.
 import type {} from '@berry-ai/harness-workspace/types'
 import type { OptionalSessionSeq, SessionId, SessionSeq } from '@deepseek-ai/dsh-session/types'
-import type { TypertContext, TypertLookup } from '@deepseek-ai/dsh-typert-protocol'
+import type { TypertContext, TypertLookup } from '@berry-ai/harness-typert-protocol'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 
 /** Public live-agent handle; the runtime face augments its live capabilities. */
@@ -24,7 +24,7 @@ declare module '@berry-ai/harness-workspace/types' {
   }
 }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface TypertLookupMap {
     agent: TypertLookup<Agent, SessionId>
   }

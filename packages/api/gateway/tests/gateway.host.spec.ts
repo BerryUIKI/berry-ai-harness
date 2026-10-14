@@ -20,8 +20,8 @@ import {
   type TypertContext,
   type TypertLookup,
   type TypertLookupProvider,
-} from '@deepseek-ai/dsh-typert-protocol'
-import TypertRegistry, { type TypertContribution } from '@deepseek-ai/dsh-typert-registry'
+} from '@berry-ai/harness-typert-protocol'
+import TypertRegistry, { type TypertContribution } from '@berry-ai/harness-typert-registry'
 import TypertGatewayService, { TypertGatewayError } from '@deepseek-ai/dsh-api-gateway'
 import { provideBrowserCredentials } from './browser-credentials.ts'
 
@@ -33,7 +33,7 @@ interface MarkedContext extends Context {
   readonly fixtureScope?: string
 }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface TypertLookupMap {
     gatewayFixture: TypertLookup<FixtureAgent, string>
     gatewayFixtureAlias: TypertLookup<FixtureAgent, string>

@@ -36,7 +36,7 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-typert-registry",
+        "@berry-ai/harness-typert-registry",
         "@deepseek-ai/dsh-client-connection"
       ],
       "platform": "web",
@@ -59,7 +59,7 @@
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "ws": "^8.21.3",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@berry-ai/harness-typert-protocol": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -71,7 +71,7 @@
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@deepseek-ai/dsh-host-webserver": "workspace:*",
     "@deepseek-ai/dsh-remote-mock": "workspace:*",
-    "@deepseek-ai/dsh-typert-registry": "workspace:*",
+    "@berry-ai/harness-typert-registry": "workspace:*",
     "@berry-ai/harness-util-crypto": "workspace:*",
     "@types/ws": "^8.18.1",
     "@deepseek-ai/cordis": "workspace:~",

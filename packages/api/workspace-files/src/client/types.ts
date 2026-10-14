@@ -23,7 +23,7 @@ export interface WorkspaceFileParams {
   readonly line?: number
 }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /**
      * The address is not a `dsh-resource://file/` address in a scope the

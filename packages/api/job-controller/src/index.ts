@@ -11,7 +11,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import type {} from '@berry-ai/harness-jobs'
-import { Remote, RemoteError, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, RemoteError, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import { observeJobOutput } from './observe.ts'
 import { streamJobRows } from './rows.ts'
 import type { JobKillRequest, JobKillValue, JobFollowFrame, JobFollowRequest, JobListFrame, JobListRequest } from './types.ts'

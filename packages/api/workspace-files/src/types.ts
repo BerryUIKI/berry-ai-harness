@@ -16,7 +16,7 @@
 
 // Import the protocol module so the declaration at the end of this file
 // augments its error map rather than defining an unrelated ambient module.
-import type {} from '@deepseek-ai/dsh-typert-protocol'
+import type {} from '@berry-ai/harness-typert-protocol'
 
 /** Identity and freshness of one workspace file, without its content. */
 export interface WorkspaceFileStat {
@@ -150,7 +150,7 @@ export type WorkspaceFileWatchFrame =
   | { readonly kind: 'ready' }
   | { readonly kind: 'change'; readonly change: WorkspaceFileChange }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** The filesystem provider cannot initialize a watch for this target. */
     'workspace-file/watch-unsupported': { readonly path: string }

@@ -1054,7 +1054,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../packages/core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../packages/typert/protocol
       '@xterm/headless':
@@ -1178,7 +1178,7 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -1190,7 +1190,7 @@ importers:
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/schemastery':
@@ -1221,7 +1221,7 @@ importers:
       '@deepseek-ai/dsh-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
       '@types/ws':
@@ -1233,7 +1233,7 @@ importers:
 
   packages/api/job-controller:
     dependencies:
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/schemastery':
@@ -1267,7 +1267,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
 
@@ -1385,7 +1385,7 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       zod:
@@ -1530,10 +1530,10 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
       '@deepseek-ai/dsh-working-directory':
@@ -1570,7 +1570,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -1582,7 +1582,7 @@ importers:
       '@berry-ai/harness-lazy-require':
         specifier: workspace:*
         version: link:../../util/lazy-require
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/schemastery':
@@ -1689,7 +1689,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -1698,7 +1698,7 @@ importers:
       '@berry-ai/harness-deque':
         specifier: workspace:*
         version: link:../../util/deque
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/schemastery':
@@ -2001,7 +2001,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       chokidar:
@@ -2299,10 +2299,10 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-loader':
+      '@berry-ai/harness-typert-loader':
         specifier: workspace:*
         version: link:../../typert/loader
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
       '@berry-ai/harness-web':
@@ -2922,7 +2922,7 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
       '@deepseek-ai/libreoffice-kit':
@@ -2962,7 +2962,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -2971,7 +2971,7 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       zod:
@@ -3088,7 +3088,7 @@ importers:
 
   packages/client/product-analytics:
     dependencies:
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/schemastery':
@@ -3149,7 +3149,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -3300,7 +3300,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@types/react':
@@ -3722,7 +3722,7 @@ importers:
 
   packages/client/ui-deliverables:
     dependencies:
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
     devDependencies:
@@ -3963,7 +3963,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@testing-library/react':
@@ -4167,7 +4167,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@testing-library/react':
@@ -4236,7 +4236,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@types/react':
@@ -4449,7 +4449,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@types/react':
@@ -4464,7 +4464,7 @@ importers:
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/schemastery':
@@ -4666,7 +4666,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -5652,7 +5652,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@testing-library/react':
@@ -6265,7 +6265,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@types/react':
@@ -6406,7 +6406,7 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@types/react':
@@ -6832,7 +6832,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/dsh-working-directory':
@@ -6957,10 +6957,10 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../system-prompt
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
 
@@ -7090,10 +7090,10 @@ importers:
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../scope
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
 
@@ -7364,7 +7364,7 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/libreoffice-kit':
@@ -7485,7 +7485,7 @@ importers:
       '@deepseek-ai/dsh-experimental-speech-to-text':
         specifier: workspace:*
         version: link:../speech-to-text
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -7915,7 +7915,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/dsh-working-directory':
@@ -8017,7 +8017,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@testing-library/react':
@@ -8096,10 +8096,10 @@ importers:
       '@berry-ai/harness-session-query':
         specifier: workspace:*
         version: link:../../session-query/session-query
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
       '@testing-library/react':
@@ -8165,7 +8165,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@testing-library/react':
@@ -9480,7 +9480,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -9595,7 +9595,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -9635,7 +9635,7 @@ importers:
       '@deepseek-ai/dsh-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -9973,7 +9973,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -10242,7 +10242,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -10347,7 +10347,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -10387,7 +10387,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -10477,7 +10477,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -10590,7 +10590,7 @@ importers:
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/schemastery':
@@ -11297,7 +11297,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@types/js-yaml':
@@ -11556,7 +11556,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -13331,7 +13331,7 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/node-addon-system':
@@ -13517,7 +13517,7 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@deepseek-ai/dsh-working-directory':
@@ -14268,7 +14268,7 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       '@berry-ai/harness-web-app':
@@ -14364,7 +14364,7 @@ importers:
       '@deepseek-ai/dsh-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
       typescript:
@@ -14499,7 +14499,7 @@ importers:
       '@deepseek-ai/dsh-tool-cordis':
         specifier: workspace:*
         version: link:../../extensions/tool-cordis
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../registry
       zod:
@@ -14521,7 +14521,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../registry
       zod:
@@ -14547,7 +14547,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../protocol
 
@@ -15011,7 +15011,7 @@ importers:
       '@deepseek-ai/dsh-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
 
@@ -15452,10 +15452,10 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../packages/core/tools
-      '@deepseek-ai/dsh-typert-protocol':
+      '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../packages/typert/protocol
-      '@deepseek-ai/dsh-typert-registry':
+      '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../packages/typert/registry
       '@berry-ai/harness-web':

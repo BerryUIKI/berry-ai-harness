@@ -25,7 +25,7 @@ describe('generated tsconfig package aliases', () => {
     expect([...aliases].sort((a, b) => a.specifier.localeCompare(b.specifier))).toEqual(aliases)
     // Only packages named after their directory: the rest carry hand-written
     // aliases, because the removed wildcards could never have resolved them.
-    expect(aliases.some(alias => alias.specifier === '@deepseek-ai/dsh-typert-protocol')).toBe(false)
+    expect(aliases.some(alias => alias.specifier === '@berry-ai/harness-typert-protocol')).toBe(false)
   })
 
   it('yields to a hand-written alias and closes without a trailing comma', () => {
@@ -82,7 +82,7 @@ describe('generated tsconfig package aliases', () => {
     // Includes the packages the generator skips because their name does not
     // match their directory: those carry hand-written aliases.
     const names = collectPackageNames()
-    expect(names).toContain('@deepseek-ai/dsh-typert-protocol')
+    expect(names).toContain('@berry-ai/harness-typert-protocol')
     expect(uncoveredPackages(names, mappedSpecifiers(config))).toEqual([])
   })
 

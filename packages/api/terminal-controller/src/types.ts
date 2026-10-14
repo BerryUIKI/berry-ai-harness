@@ -1,8 +1,8 @@
 /** Browser terminal identities, metadata and screen-stream frames. */
 import type { Branded } from '@berry-ai/harness-brand'
-import type {} from '@deepseek-ai/dsh-typert-protocol'
+import type {} from '@berry-ai/harness-typert-protocol'
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** The terminal identity is missing or has begun process cleanup. */
     'terminal/unavailable': Record<string, never>

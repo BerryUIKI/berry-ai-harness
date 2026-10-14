@@ -12,8 +12,8 @@ import type {
 // The seam owns the listing declaration; the generator requires the reference
 // site to name that package rather than this package's re-export of it.
 import type { DirectoryListing } from '@deepseek-ai/dsh-host-directory-picker/types'
-import { Remote, RemoteError, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
-import type { RemoteErrorCode } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, RemoteError, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
+import type { RemoteErrorCode } from '@berry-ai/harness-typert-protocol'
 
 const createDirectoryRequestSchema = z.object({
   path: z.string(),

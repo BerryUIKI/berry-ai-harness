@@ -63,7 +63,7 @@
     "@berry-ai/harness-spill": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@berry-ai/harness-typert-protocol": "workspace:*"
   },
   "peerDependenciesMeta": {
     "@berry-ai/harness-spill": {
@@ -94,7 +94,7 @@
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-tool-fs": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
   }
 }

@@ -63,7 +63,7 @@
   ],
   "dependencies": {
     "zod": "^4.4.3",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*"
   },
   "peerDependencies": {

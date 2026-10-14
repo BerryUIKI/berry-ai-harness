@@ -2,8 +2,8 @@
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
-import { projectCordisCatalog } from '@deepseek-ai/dsh-typert-generator'
-import type { CordisCatalogModel, ServiceMethodEntry } from '@deepseek-ai/dsh-typert-generator'
+import { projectCordisCatalog } from '@berry-ai/harness-typert-generator'
+import type { CordisCatalogModel, ServiceMethodEntry } from '@berry-ai/harness-typert-generator'
 import { CORDIS_CATALOG_POLICY } from './gen-cordis-catalog.ts'
 
 const root = resolve(import.meta.dirname, '..')

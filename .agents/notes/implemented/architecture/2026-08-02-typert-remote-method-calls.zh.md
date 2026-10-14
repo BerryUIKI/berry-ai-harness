@@ -28,7 +28,7 @@ Remote 消费端投影同时包含 `.d.ts`、`.d.ts.map` 和 `.js`。`.d.ts` 只
 
 | 组件 | Cordis 服务 | 职责 |
 |---|---|---|
-| `@deepseek-ai/dsh-typert-protocol` | 只声明 `ctx.typert` 的最小协议 | `TypertRemoteService`、decorator、binding 回退、descriptor、lookup/Context 和 Remote map；不依赖 compiler、Zod、Connection 或 Browser |
+| `@berry-ai/harness-typert-protocol` | 只声明 `ctx.typert` 的最小协议 | `TypertRemoteService`、decorator、binding 回退、descriptor、lookup/Context 和 Remote map；不依赖 compiler、Zod、Connection 或 Browser |
 | Typert registry | `ctx.typert` | 分开保存当前环境 reflection、导入的 Remote contribution、lookup provider 和 Context provider |
 | Typert generator/loader | 无新增业务服务 | 从 Host/Client Program 生成三类 `lib` 产物，并把当前环境产物注册到 `ctx.typert` |
 | API Gateway 的 Host face | `ctx.typertGateway` | 关联 Host definition 与活 Service，解码参数、解析 receiver、调用方法，并将一元结果投影为载体无关的字段与附件 |
@@ -81,7 +81,7 @@ export class ScopedGoalService extends TypertRemoteService {
 
 同一个 endpoint 只能选择一种调用模式。需要显式 `Agent` 参数的流程使用 `@Remote`；需要切换到 Agent Context 再解析 scoped receiver 的流程使用 `@RemoteScope('agent')`，两者不会由 Typert 根据方法体或参数缺失自动猜测。
 
-业务包只依赖轻量的 `@deepseek-ai/dsh-typert-protocol`。它提供 `TypertRemoteService`，以及 decorator、binding 回退、lookup、Remote Scope 和 descriptor 的声明协议，不依赖 TypeScript compiler、Zod、HTTP 或 Client runtime。
+业务包只依赖轻量的 `@berry-ai/harness-typert-protocol`。它提供 `TypertRemoteService`，以及 decorator、binding 回退、lookup、Remote Scope 和 descriptor 的声明协议，不依赖 TypeScript compiler、Zod、HTTP 或 Client runtime。
 
 支持协作式取消的方法会把 `signal: AbortSignal` 声明为最后一个 Host 参数。这个保留参数不是业务值、lookup 或 JSON 字段。生成的消费方方法将其暴露为最后一个可选参数，因此普通调用保持不变，而拥有取消控制权的调用方可以传入 signal。
 
@@ -98,7 +98,7 @@ LIB 的严格方法发现、类型解析和 descriptor 生成由 Typert compiler
 Gateway 不内置 Agent、Session 或其他业务对象分支。对象所属包同时提供静态声明和运行时 provider：
 
 ```text
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface TypertLookupMap {
     agent: TypertLookup<Agent, SessionId>
   }
@@ -450,7 +450,7 @@ Gateway 只向 Connection 注册 ownership matcher 和 RPC handler，不注册 H
 
 ## 包边界
 
-- `@deepseek-ai/dsh-typert-protocol`：轻量 decorator、binding、lookup、Remote Scope 和 descriptor 协议。
+- `@berry-ai/harness-typert-protocol`：轻量 decorator、binding、lookup、Remote Scope 和 descriptor 协议。
 - Typert generator：分析 Host/Client Program，生成本地 face 和 Remote 消费端投影，并生成规范 symbol/Zod 信息。
 - Typert runtime：分别保存当前环境的 local reflection 与导入的 Remote contribution。
 - `@deepseek-ai/dsh-api-gateway`：默认入口关联 Host definition 与 Service，认领 Remote endpoint，校验输入，执行 lookup、解析 Context receiver、调用方法，并向 Connection 注册 `/api` interceptor；`/client` 入口挂载 Remote contribution，创建严格 Remote namespace Service 和方法，并把调用交给 `ctx.connection.rpc`。两个入口共享 Remote 协议，但不互相导入各自的 Cordis interface merge。

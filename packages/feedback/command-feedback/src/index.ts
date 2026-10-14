@@ -13,7 +13,7 @@ import { CommandDefinitionId } from '@berry-ai/harness-commands/brand'
 import type { CommandInvocation, CommandResult } from '@berry-ai/harness-commands'
 import type { Session } from '@deepseek-ai/dsh-session'
 import { getOrCreateAnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
-import { TypertRemoteService, Remote } from '@deepseek-ai/dsh-typert-protocol'
+import { TypertRemoteService, Remote } from '@berry-ai/harness-typert-protocol'
 import type {
   FeedbackCategory,
   FeedbackRecord,

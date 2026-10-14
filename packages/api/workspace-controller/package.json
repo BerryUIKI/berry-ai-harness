@@ -81,7 +81,7 @@
     "@deepseek-ai/dsh-host-directory-picker": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*"
   },
   "devDependencies": {
@@ -94,7 +94,7 @@
     "@deepseek-ai/dsh-remote-mock": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*"
   }
 }

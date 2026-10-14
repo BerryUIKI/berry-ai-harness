@@ -16,7 +16,7 @@
 
 ```ts
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import { TypertRemoteService, Remote, RemoteScope } from '@deepseek-ai/dsh-typert-protocol'
+import { TypertRemoteService, Remote, RemoteScope } from '@berry-ai/harness-typert-protocol'
 import type { Context } from '@deepseek-ai/cordis'
 
 export interface CreateGoalRequest {
@@ -83,9 +83,9 @@ Client 应用只装配 `@deepseek-ai/dsh-api-remotes`。该包以运行时值导
 
 | 位置 | 包或入口 | 职责 |
 |---|---|---|
-| 共享 | `@deepseek-ai/dsh-typert-protocol` | 声明 decorator、Gateway binding、可合并协议映射、调用描述符及提供方类型；不启动 TypeScript 分析，也不注册 Cordis 服务 |
-| 构建 | `@deepseek-ai/dsh-typert-generator` | 从 Host `ts.Program` 严格分析 Remote 签名、类型图、lookup、Context 与源码位置，并生成 Host 和 Host-for-Client 产物 |
-| Host | `@deepseek-ai/dsh-typert-registry` 与 Loader | 把生成的 Host 描述符、schema 及业务包注册项放入 `ctx.typert`，并持有 lookup 与 Context 提供方 |
+| 共享 | `@berry-ai/harness-typert-protocol` | 声明 decorator、Gateway binding、可合并协议映射、调用描述符及提供方类型；不启动 TypeScript 分析，也不注册 Cordis 服务 |
+| 构建 | `@berry-ai/harness-typert-generator` | 从 Host `ts.Program` 严格分析 Remote 签名、类型图、lookup、Context 与源码位置，并生成 Host 和 Host-for-Client 产物 |
+| Host | `@berry-ai/harness-typert-registry` 与 Loader | 把生成的 Host 描述符、schema 及业务包注册项放入 `ctx.typert`，并持有 lookup 与 Context 提供方 |
 | Host | `@deepseek-ai/dsh-api-session-controller` | 负责应用的 Agent/Session 身份策略，并配置对应的 Typert lookup |
 | Host | `@deepseek-ai/dsh-api-gateway` | 提供 `ctx.typertGateway`，认领 Remote endpoint，校验请求值，解析对象或 Context，并调用实时 Cordis 服务 |
 | Client | `@deepseek-ai/dsh-api-gateway/client` | 提供 `ctx.remote` 与 `remote.<namespace>` 子服务，把生成的描述符挂成具体方法，并通过 Connection 发起和取消调用 |

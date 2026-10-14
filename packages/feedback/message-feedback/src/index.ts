@@ -15,7 +15,7 @@ import { deriveEventMessage, isAppendSurfaceEvent } from '@deepseek-ai/dsh-sessi
 import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session/types'
 import type {} from '@deepseek-ai/dsh-session'
 import type { SessionInspection } from '@deepseek-ai/dsh-session-persistence'
-import { TypertRemoteService, Remote } from '@deepseek-ai/dsh-typert-protocol'
+import { TypertRemoteService, Remote } from '@berry-ai/harness-typert-protocol'
 import type {
   MessageFeedbackDeleteRequest,
   MessageFeedbackDeleteResult,

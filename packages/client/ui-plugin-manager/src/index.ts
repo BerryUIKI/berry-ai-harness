@@ -3,7 +3,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
-import { Remote, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 
 declare module '@deepseek-ai/cordis' {
   interface Context {

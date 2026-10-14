@@ -1,5 +1,5 @@
 import { queryObjects } from 'node:v8'
-import { RemoteError, typertOwnedValue } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError, typertOwnedValue } from '@berry-ai/harness-typert-protocol'
 import { Context, Service } from '@deepseek-ai/cordis'
 import type { Fiber } from '@deepseek-ai/cordis'
 import { describe, expect, expectTypeOf, it, vi } from 'vitest'
@@ -22,8 +22,8 @@ import type {
   TypertLookup,
   TypertRemoteScopeApi,
   TypertRemoteNamespace,
-} from '@deepseek-ai/dsh-typert-protocol'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
+} from '@berry-ai/harness-typert-protocol'
+import TypertRegistry from '@berry-ai/harness-typert-registry'
 import type { ClientRemote } from '../src/client/index.ts'
 import { apply, inject, isRemoteFailure, RemoteStream } from '../src/client/index.ts'
 import {
@@ -77,7 +77,7 @@ declare module '@deepseek-ai/cordis' {
   }
 }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface TypertRemoteEventSelection extends
     Record<'fixture/changed' | 'fixture/idle' | 'fixture/approval', true> {}
 

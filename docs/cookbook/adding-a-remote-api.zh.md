@@ -11,7 +11,7 @@ owner 是一个 Host 侧 Cordis 服务：继承 `TypertRemoteService` 把 servic
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import { Remote, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 
 /** One stored note as a Client reads it. */
 export interface NoteRow {
@@ -60,9 +60,9 @@ Remote 失败只有一个类 `RemoteError`：域码经 declaration merging 进 `
 - 不上 wire 的本地失败不进码表，用调用方自己的类型表达。
 
 ```ts
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** No stored note carries that id. */
     'note/not-found': { readonly noteId: string }
@@ -97,8 +97,8 @@ export async function rename(noteId: string, title: string): Promise<void> {
     "./typert": { "types": "./lib/typert.host.d.ts", "default": "./lib/typert.host.js" },
     "./remote": { "types": "./lib/typert.remote-client.d.ts", "default": "./lib/typert.remote-client.js" }
   },
-  "peerDependencies": { "@deepseek-ai/dsh-typert-protocol": "workspace:*" },
-  "devDependencies": { "@deepseek-ai/dsh-typert-protocol": "workspace:*" }
+  "peerDependencies": { "@berry-ai/harness-typert-protocol": "workspace:*" },
+  "devDependencies": { "@berry-ai/harness-typert-protocol": "workspace:*" }
 }
 ```
 
@@ -151,7 +151,7 @@ export function hostLabel(): string {
 owner 侧断言抛出的码：捕获后用 `remoteErrorOf` 取出失败，再用 `toMatchObject` 比对 `code` 与需要的 `details` 字段——不要用 `toEqual` 深比对错误对象，也不要断言 `instanceof`。
 
 ```ts
-import { remoteErrorOf } from '@deepseek-ai/dsh-typert-protocol'
+import { remoteErrorOf } from '@berry-ai/harness-typert-protocol'
 import { expect, it } from 'vitest'
 
 declare function rename(noteId: string, title: string): Promise<void>

@@ -22,7 +22,7 @@ import type { SessionPromptRequest, SessionRequestId } from '../src/types.ts'
 import { ApiSessionAgentController } from '../src/agent.ts'
 import { buildModelCatalog, hasProviderApiKey } from '../src/catalog.ts'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { createSessionTestController, createSessionTestRemote } from './test-remote.ts'
 
 function request<P>(payload: P): P {

@@ -52,11 +52,11 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-experimental-speech-to-text": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@berry-ai/harness-typert-protocol": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-experimental-speech-to-text": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@berry-ai/harness-typert-protocol": "workspace:*"
   }
 }

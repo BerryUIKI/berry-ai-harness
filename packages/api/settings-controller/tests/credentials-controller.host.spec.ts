@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import type { CredentialInfo } from '@berry-ai/harness-credentials/types'
-import { remoteErrorOf, remoteMethods } from '@deepseek-ai/dsh-typert-protocol'
+import { remoteErrorOf, remoteMethods } from '@berry-ai/harness-typert-protocol'
 import CredentialsController from '../src/credentials.ts'
 import { MemoryCredentials } from '../../../credentials/credentials/tests/memory.ts'
 

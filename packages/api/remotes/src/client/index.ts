@@ -157,7 +157,7 @@ export type { SessionReferenceMentionCandidate } from '@berry-ai/harness-session
 // dsh-client-test-runtime instead.
 export type {
   RemoteErrorCode, RemoteErrorDetailsMap, RemoteFailure, RemoteResult,
-} from '@deepseek-ai/dsh-typert-protocol'
+} from '@berry-ai/harness-typert-protocol'
 export type { RemoteHostFacts } from '@deepseek-ai/dsh-api-gateway/client'
 
 declare module '@deepseek-ai/cordis' {

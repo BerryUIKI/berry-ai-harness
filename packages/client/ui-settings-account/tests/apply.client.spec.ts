@@ -2,7 +2,7 @@
 /** Desktop account operations and ordinary-browser isolation in the shipped client composition. */
 import { afterEach, beforeEach, expect, vi } from 'vitest'
 import { ok } from '@deepseek-ai/dsh-remote-mock'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { createClientTest, type TestClient, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
 import type {
   AccountBonusBatch, AccountBonusOrderId, AccountDetails, AccountUserId, AccountView, SignInAttemptId,

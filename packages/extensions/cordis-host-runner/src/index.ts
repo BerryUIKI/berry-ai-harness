@@ -15,7 +15,7 @@ declare module '@deepseek-ai/dsh-llm' {
   }
 }
 
-import { TypertRemoteService, Remote } from '@deepseek-ai/dsh-typert-protocol'
+import { TypertRemoteService, Remote } from '@berry-ai/harness-typert-protocol'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import { isPlugin, normalizeHandler } from './guard.ts'
 import { CordisInspectRegistryService } from './inspect-registry.ts'

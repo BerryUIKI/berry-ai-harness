@@ -1,5 +1,5 @@
 /** Window holds and conservative idle reclamation for one terminal owner. */
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import type { SubprocessTerminalActivity } from '@berry-ai/harness-subprocess'
 import type { TerminalRetentionFrame } from './types.ts'
 

@@ -57,7 +57,7 @@
     "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
@@ -80,7 +80,7 @@
     "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-hmr": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",

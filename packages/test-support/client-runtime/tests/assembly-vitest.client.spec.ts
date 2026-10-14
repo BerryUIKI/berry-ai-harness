@@ -56,7 +56,7 @@ describe('createClientTest', () => {
   })
 })
 
-const missingConnection = createClientTest({ roster: webApp.pick(['@deepseek-ai/dsh-typert-registry']) })
+const missingConnection = createClientTest({ roster: webApp.pick(['@berry-ai/harness-typert-registry']) })
 missingConnection('keeps a rejected startup with its caller and releases its globals', async ({ start }) => {
   expired.push(start)
   await expect(start()).rejects.toThrow('provides no `connection` service')

@@ -6,7 +6,7 @@
  * boot-time opening baseline lives in `remoteDefaultResponses`.
  */
 import { ok, type RemoteTable, type StreamScript } from '@deepseek-ai/dsh-remote-mock'
-import type { RemoteFailure, RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+import type { RemoteFailure, RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type {
   WorkspaceArchiveSessionRequest,
   WorkspaceArchiveValue,

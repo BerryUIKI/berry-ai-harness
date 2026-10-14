@@ -7,7 +7,7 @@
  */
 
 import { Context } from '@deepseek-ai/cordis'
-import { Remote, RemoteError, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, RemoteError, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import { deepFreeze } from '@berry-ai/harness-util-values'
 import type {
   GenerateOptions,

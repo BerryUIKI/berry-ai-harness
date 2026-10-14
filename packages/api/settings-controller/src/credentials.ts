@@ -9,7 +9,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { credentialRef } from '@berry-ai/harness-credentials'
 import type { CredentialProvider } from '@berry-ai/harness-credentials'
 import type { CredentialInfo } from '@berry-ai/harness-credentials/types'
-import { Remote, RemoteError, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, RemoteError, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import { z } from 'zod'
 
 /**

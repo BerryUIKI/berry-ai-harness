@@ -1,6 +1,6 @@
 /** Client terminal model service; views are keyed independently from Host terminal identities. */
 import { Service, type Context } from '@deepseek-ai/cordis'
-import { remoteErrorOf } from '@deepseek-ai/dsh-typert-protocol'
+import { remoteErrorOf } from '@berry-ai/harness-typert-protocol'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type {} from '@deepseek-ai/dsh-api-gateway/client'
 import { TerminalView, type TerminalRemote } from './model.ts'

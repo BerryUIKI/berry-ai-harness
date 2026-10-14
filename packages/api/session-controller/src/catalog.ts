@@ -1,6 +1,6 @@
 /** Shared projection of the live LLM registry into the browser model catalog. */
 
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { credentialRef } from '@berry-ai/harness-credentials'
 import type {} from '@berry-ai/harness-settings'
 import type { LlmModelInfo } from '@deepseek-ai/dsh-llm'

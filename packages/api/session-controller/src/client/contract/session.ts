@@ -10,7 +10,7 @@
 import type { AttachmentIdType, FileAttachmentRef, ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
 import type { SessionId, SessionSeq } from '@deepseek-ai/dsh-session/types'
-import type { RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
 import type { PromptContentPart, QueueAction, SessionRequestId } from '../../types.ts'
 import type { PendingSubmissionAttachment, SessionSnapshot } from './snapshot.ts'

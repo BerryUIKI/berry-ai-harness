@@ -6,7 +6,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import { Deque } from '@berry-ai/harness-deque'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import type { FsObservation, FsTarget } from '@berry-ai/harness-fs'
 import type { WorkspaceFileWatchFrame } from './types.ts'
 

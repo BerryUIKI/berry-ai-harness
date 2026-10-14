@@ -19,10 +19,10 @@ import {
   type TypertContextMap,
   type TypertContextWire,
   RemoteError,
-} from '@deepseek-ai/dsh-typert-protocol'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
+} from '@berry-ai/harness-typert-protocol'
+import TypertRegistry from '@berry-ai/harness-typert-registry'
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     'fixture/rejected': { readonly retryable: boolean }
     'fixture/broken': { readonly count: bigint }

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-typert-loader",
+  "name": "@berry-ai/harness-typert-loader",
   "description": "Loader integration for generated Typert package contributions",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -28,7 +28,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-typert-registry": "workspace:*",
+    "@berry-ai/harness-typert-registry": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@berry-ai/harness-app-boot": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-typert-registry": "workspace:*",
+    "@berry-ai/harness-typert-registry": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "zod": "^4.4.3"
   }

@@ -94,7 +94,7 @@ Every Remote stream accepts a Client uplink. The method's return type `RemoteStr
 ### Type signatures
 
 ```text
-// @deepseek-ai/dsh-typert-protocol
+// @berry-ai/harness-typert-protocol
 /**
  * One Remote stream. Host face: the method returns it, and at runtime it is AsyncIterable<Out>.
  * On the Client face the generated method returns RemoteStreamHandle<Out, In>; each name has exactly one meaning.
@@ -344,13 +344,13 @@ The `Remote` decorator, `RemoteMethodOptions`, and `RemoteMethodMarker` recogniz
 ### typert generator (`packages/typert/generator/src`)
 
 - `model.ts`: `InvocationModel.uplink?: { boundary: RemoteBoundaryModel }`.
-- `analyzer.ts` `remoteResultType`: for `mode: 'stream'`, the accepted return-type wrappers are `Iterable<Out>`, `AsyncIterable<Out>`, and `RemoteStream<Out, In?>`. `RemoteStream` is recognized the same way as the standard library's `AsyncIterable`: by symbol name plus declaring file (`types.ts` of `@deepseek-ai/dsh-typert-protocol`). The first type argument is the downlink item; when the second is present and is not `never`, an `uplink` boundary is generated under the key `${endpoint}:uplink`.
+- `analyzer.ts` `remoteResultType`: for `mode: 'stream'`, the accepted return-type wrappers are `Iterable<Out>`, `AsyncIterable<Out>`, and `RemoteStream<Out, In?>`. `RemoteStream` is recognized the same way as the standard library's `AsyncIterable`: by symbol name plus declaring file (`types.ts` of `@berry-ai/harness-typert-protocol`). The first type argument is the downlink item; when the second is present and is not `never`, an `uplink` boundary is generated under the key `${endpoint}:uplink`.
 - `emitter.ts`: the descriptor literal emits `uplink: { codec }`; the generated Client signature returns `RemoteStreamHandle<Out, In>`.
 - The parameter loop recognizes no parameter named `uplink`.
 
 ### Two names, one entry point
 
-A Host method declares a stream with `RemoteStream<Out, In>`; the Client holds a `RemoteStreamHandle<Out, In>`. Both are exported from the main entry point of `@deepseek-ai/dsh-typert-protocol`, and the handle interface has no Host dependency. The generated Client contract writes the return type as `RemoteStreamHandle<Out, In>`. One name has one meaning: the `RemoteStream` that Client code obtains from the main entry point is always the declaration type and is never confused with the handle.
+A Host method declares a stream with `RemoteStream<Out, In>`; the Client holds a `RemoteStreamHandle<Out, In>`. Both are exported from the main entry point of `@berry-ai/harness-typert-protocol`, and the handle interface has no Host dependency. The generated Client contract writes the return type as `RemoteStreamHandle<Out, In>`. One name has one meaning: the `RemoteStream` that Client code obtains from the main entry point is always the declaration type and is never confused with the handle.
 
 ### Gateway Host (`packages/api/gateway/src`)
 

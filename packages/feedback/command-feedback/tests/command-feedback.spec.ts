@@ -7,7 +7,7 @@ import CommandRuntime from '@berry-ai/harness-commands'
 import SessionStore, { foldSurface, Session, SessionId } from '@deepseek-ai/dsh-session'
 import * as commandFeedback from '@berry-ai/harness-command-feedback'
 import type { FeedbackRecord } from '@berry-ai/harness-command-feedback/types'
-import { remoteMethods } from '@deepseek-ai/dsh-typert-protocol'
+import { remoteMethods } from '@berry-ai/harness-typert-protocol'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 
 const { USER_ID, getOrCreateAnonymousUserId } = vi.hoisted(() => {

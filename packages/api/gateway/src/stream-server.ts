@@ -3,7 +3,7 @@
 import type { IncomingMessage } from 'node:http'
 import type { Duplex } from 'node:stream'
 import { Deque } from '@berry-ai/harness-deque'
-import { RemoteError, remoteErrorOf, type PeerScope } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError, remoteErrorOf, type PeerScope } from '@berry-ai/harness-typert-protocol'
 import WebSocket, { WebSocketServer, type RawData } from 'ws'
 import {
   parseRemoteStreamClientMessage,

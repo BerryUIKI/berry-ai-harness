@@ -28,7 +28,7 @@ The Remote consumer projection contains `.d.ts`, `.d.ts.map`, and `.js` files. T
 
 | Component | Cordis service | Responsibility |
 |---|---|---|
-| `@deepseek-ai/dsh-typert-protocol` | Declares only the minimal `ctx.typert` protocol | `TypertRemoteService`, decorators, binding fallback, descriptors, lookup/Context, and the Remote map; no dependency on the compiler, Zod, Connection, or Browser |
+| `@berry-ai/harness-typert-protocol` | Declares only the minimal `ctx.typert` protocol | `TypertRemoteService`, decorators, binding fallback, descriptors, lookup/Context, and the Remote map; no dependency on the compiler, Zod, Connection, or Browser |
 | Typert registry | `ctx.typert` | Separately stores reflection for the current environment, imported Remote contributions, lookup providers, and Context providers |
 | Typert generator/loader | No new business service | Generates three kinds of `lib` artifacts from the Host/Client Programs and registers the current environment's artifacts with `ctx.typert` |
 | API Gateway's Host face | `ctx.typertGateway` | Associates Host definitions with live Services, decodes parameters, resolves receivers, invokes methods, and projects unary results into carrier-neutral fields and attachments |
@@ -81,7 +81,7 @@ export class ScopedGoalService extends TypertRemoteService {
 
 An endpoint selects exactly one invocation mode. A flow that needs an explicit `Agent` parameter uses `@Remote`. A flow that first switches to an Agent Context and then resolves a scoped receiver uses `@RemoteScope('agent')`. Typert does not infer either mode from the method body or from a missing parameter.
 
-Business packages depend only on the lightweight `@deepseek-ai/dsh-typert-protocol`. It provides `TypertRemoteService` and declaration protocols for decorators, the binding fallback, lookup, Remote Scope, and descriptors, without depending on the TypeScript compiler, Zod, HTTP, or the Client runtime.
+Business packages depend only on the lightweight `@berry-ai/harness-typert-protocol`. It provides `TypertRemoteService` and declaration protocols for decorators, the binding fallback, lookup, Remote Scope, and descriptors, without depending on the TypeScript compiler, Zod, HTTP, or the Client runtime.
 
 A method that cooperatively supports cancellation declares `signal: AbortSignal` as its final Host parameter. This reserved parameter is not a business value, lookup, or JSON field. The generated consumer method exposes it as a final optional parameter so ordinary calls remain unchanged while callers that own cancellation can pass a signal.
 
@@ -98,7 +98,7 @@ In LIB mode, the Typert compiler performs strict method discovery, type resoluti
 The Gateway has no built-in branches for Agent, Session, or other business objects. Each object-owning package provides both a static declaration and a runtime provider:
 
 ```text
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface TypertLookupMap {
     agent: TypertLookup<Agent, SessionId>
   }
@@ -450,7 +450,7 @@ The Gateway registers only its ownership matcher and RPC handler with Connection
 
 ## Package boundaries
 
-- `@deepseek-ai/dsh-typert-protocol`: lightweight protocols for decorators, bindings, lookup, Remote Scope, and descriptors.
+- `@berry-ai/harness-typert-protocol`: lightweight protocols for decorators, bindings, lookup, Remote Scope, and descriptors.
 - Typert generator: analyzes Host/Client Programs, generates local faces and Remote consumer projections, and emits canonical symbol/Zod information.
 - Typert runtime: separately stores the current environment's local reflection and imported Remote contributions.
 - `@deepseek-ai/dsh-api-gateway`: its default entry associates Host definitions with Services, claims Remote endpoints, validates input, performs lookup, resolves Context receivers, invokes methods, and registers an `/api` interceptor with Connection; its `/client` entry mounts Remote contributions, creates strict Remote namespace Services and methods, and delegates calls to `ctx.connection.rpc`. The entries share the Remote protocol but do not import each other's Cordis interface merges.
