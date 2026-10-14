@@ -29,7 +29,7 @@ describe.skipIf(!built)('built workflow PTC runtime', () => {
       const driver = join(driverRoot, 'driver.mjs')
       await writeFile(driver, `
 import { Context } from '@deepseek-ai/cordis'
-import PtcWorkflowEngine from '@deepseek-ai/dsh-workflow-ptc'
+import PtcWorkflowEngine from '@berry-ai/harness-workflow-ptc'
 const ctx = new Context()
 try {
   for (const name of ['session', 'session-projection', 'agent', 'system-prompt', 'fs-local', 'working-directory', 'subprocess-local', 'sandbox-local']) {

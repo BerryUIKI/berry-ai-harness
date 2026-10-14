@@ -122,11 +122,11 @@ flowchart LR
   cfg --> plugin_dsh_base_commands
   plugin_dsh_base_command_feedback["command-feedback<br/>@berry-ai/harness-command-feedback"]
   cfg --> plugin_dsh_base_command_feedback
-  plugin_dsh_base_goal["goal<br/>@deepseek-ai/dsh-goal"]
+  plugin_dsh_base_goal["goal<br/>@berry-ai/harness-goal"]
   cfg --> plugin_dsh_base_goal
-  plugin_dsh_base_goal_round_driver["goal-round-driver<br/>@deepseek-ai/dsh-goal-round-driver"]
+  plugin_dsh_base_goal_round_driver["goal-round-driver<br/>@berry-ai/harness-goal-round-driver"]
   cfg --> plugin_dsh_base_goal_round_driver
-  plugin_dsh_base_command_goal["command-goal<br/>@deepseek-ai/dsh-command-goal"]
+  plugin_dsh_base_command_goal["command-goal<br/>@berry-ai/harness-command-goal"]
   cfg --> plugin_dsh_base_command_goal
   plugin_dsh_base_plan_mode["plan-mode<br/>@berry-ai/harness-plan-mode"]
   cfg --> plugin_dsh_base_plan_mode
@@ -152,9 +152,9 @@ flowchart LR
   cfg --> plugin_dsh_base_tool_subagent_fork
   plugin_dsh_base_ptc_runtime["ptc-runtime<br/>@berry-ai/harness-ptc-runtime-node"]
   cfg --> plugin_dsh_base_ptc_runtime
-  plugin_dsh_base_workflow_ptc["workflow-ptc<br/>@deepseek-ai/dsh-workflow-ptc"]
+  plugin_dsh_base_workflow_ptc["workflow-ptc<br/>@berry-ai/harness-workflow-ptc"]
   cfg --> plugin_dsh_base_workflow_ptc
-  plugin_dsh_base_tool_workflow["tool-workflow<br/>@deepseek-ai/dsh-tool-workflow"]
+  plugin_dsh_base_tool_workflow["tool-workflow<br/>@berry-ai/harness-tool-workflow"]
   cfg --> plugin_dsh_base_tool_workflow
   plugin_dsh_base_timeout_policy["timeout-policy<br/>@berry-ai/harness-tool-call-timeout-policy"]
   cfg --> plugin_dsh_base_timeout_policy
@@ -170,7 +170,7 @@ flowchart LR
   cfg --> plugin_dsh_base_image_offload
   plugin_dsh_base_tool_todo["tool-todo<br/>@berry-ai/harness-tool-todo"]
   cfg --> plugin_dsh_base_tool_todo
-  plugin_dsh_base_tool_goal["tool-goal<br/>@deepseek-ai/dsh-tool-goal"]
+  plugin_dsh_base_tool_goal["tool-goal<br/>@berry-ai/harness-tool-goal"]
   cfg --> plugin_dsh_base_tool_goal
   plugin_dsh_base_repeat_tool_reminder["repeat-tool-reminder<br/>@berry-ai/harness-repeat-tool-reminder"]
   cfg --> plugin_dsh_base_repeat_tool_reminder
@@ -257,9 +257,9 @@ flowchart LR
 | `tool-skill` | `@deepseek-ai/dsh-tool-skill` |
 | `commands` | `@deepseek-ai/dsh-commands` |
 | `command-feedback` | `@berry-ai/harness-command-feedback` |
-| `goal` | `@deepseek-ai/dsh-goal` |
-| `goal-round-driver` | `@deepseek-ai/dsh-goal-round-driver` |
-| `command-goal` | `@deepseek-ai/dsh-command-goal` |
+| `goal` | `@berry-ai/harness-goal` |
+| `goal-round-driver` | `@berry-ai/harness-goal-round-driver` |
+| `command-goal` | `@berry-ai/harness-command-goal` |
 | `plan-mode` | `@berry-ai/harness-plan-mode` |
 | `token-meter` | `@deepseek-ai/dsh-token-meter` |
 | `compaction-basic` | `@deepseek-ai/dsh-compaction-basic` |
@@ -272,8 +272,8 @@ flowchart LR
 | `tool-subagent` | `@deepseek-ai/dsh-tool-subagent` |
 | `tool-subagent-fork` | `@deepseek-ai/dsh-tool-subagent` |
 | `ptc-runtime` | `@berry-ai/harness-ptc-runtime-node` |
-| `workflow-ptc` | `@deepseek-ai/dsh-workflow-ptc` |
-| `tool-workflow` | `@deepseek-ai/dsh-tool-workflow` |
+| `workflow-ptc` | `@berry-ai/harness-workflow-ptc` |
+| `tool-workflow` | `@berry-ai/harness-tool-workflow` |
 | `timeout-policy` | `@berry-ai/harness-tool-call-timeout-policy` |
 | `spill-local` | `@berry-ai/harness-spill-local` |
 | `spill-policy` | `@berry-ai/harness-spill-policy` |
@@ -281,7 +281,7 @@ flowchart LR
 | `tool-result-pruner` | `@deepseek-ai/dsh-compaction-tool-result-pruner` |
 | `image-offload` | `@deepseek-ai/dsh-compaction-image-offload` |
 | `tool-todo` | `@berry-ai/harness-tool-todo` |
-| `tool-goal` | `@deepseek-ai/dsh-tool-goal` |
+| `tool-goal` | `@berry-ai/harness-tool-goal` |
 | `repeat-tool-reminder` | `@berry-ai/harness-repeat-tool-reminder` |
 | `web` | `@deepseek-ai/dsh-web` |
 | `web-search-deepseek` | `@deepseek-ai/dsh-web-search-deepseek` |

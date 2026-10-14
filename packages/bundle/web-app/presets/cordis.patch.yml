@@ -38,9 +38,9 @@
           - id: tool-schedule
             name: '@berry-ai/harness-tool-schedule'
           - id: command-goal
-            name: '@deepseek-ai/dsh-command-goal'
+            name: '@berry-ai/harness-command-goal'
           - id: tool-goal
-            name: '@deepseek-ai/dsh-tool-goal'
+            name: '@berry-ai/harness-tool-goal'
           - id: planning
             name: cordis:group
             group: true
@@ -113,11 +113,11 @@
                       - schedule_list
                       - schedule_update
               - id: workflow-ptc
-                name: '@deepseek-ai/dsh-workflow-ptc'
+                name: '@berry-ai/harness-workflow-ptc'
                 config:
                   provider: spawn
               - id: tool-workflow
-                name: '@deepseek-ai/dsh-tool-workflow'
+                name: '@berry-ai/harness-tool-workflow'
           - id: tool-ask-user
             name: '@deepseek-ai/dsh-tool-ask-user'
           - id: tool-todo

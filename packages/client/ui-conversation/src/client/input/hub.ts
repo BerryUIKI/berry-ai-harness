@@ -7,7 +7,7 @@
 import type {} from '@deepseek-ai/dsh-client-product-analytics/client'
 import type { ModelSelectionProjection } from '@deepseek-ai/dsh-api-session-controller/types'
 import type { PlanProjection } from '@berry-ai/harness-plan-mode/types'
-import type { GoalProjection } from '@deepseek-ai/dsh-goal/types'
+import type { GoalProjection } from '@berry-ai/harness-goal/types'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ISessions, SessionBinding, SessionFace,

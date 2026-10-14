@@ -11,7 +11,7 @@ import {
   type InputScript,
   type NormalizeContext,
 } from '@deepseek-ai/dsh-session-snapshot'
-import { foldGoal } from '@deepseek-ai/dsh-goal'
+import { foldGoal } from '@berry-ai/harness-goal'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 import { describe, expect, it } from 'vitest'
 

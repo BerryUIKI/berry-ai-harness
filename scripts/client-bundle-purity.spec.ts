@@ -155,10 +155,10 @@ describe('client bundle purity gate', () => {
   })
 
   it('lets exact generated Remote contributions inline without admitting their package implementation', () => {
-    expect(resolveId('@deepseek-ai/dsh-goal/remote')).toBeNull()
-    expect(() => resolveId('@deepseek-ai/dsh-goal')).toThrow(/purity/)
-    expect(() => resolveId('@deepseek-ai/dsh-goal/client')).toThrow(/purity/)
-    expect(() => resolveId('@deepseek-ai/dsh-goal/remote/nested')).toThrow(/purity/)
+    expect(resolveId('@berry-ai/harness-goal/remote')).toBeNull()
+    expect(() => resolveId('@berry-ai/harness-goal')).toThrow(/purity/)
+    expect(() => resolveId('@berry-ai/harness-goal/client')).toThrow(/purity/)
+    expect(() => resolveId('@berry-ai/harness-goal/remote/nested')).toThrow(/purity/)
   })
 
   it('throws on any other @deepseek-ai leak', () => {

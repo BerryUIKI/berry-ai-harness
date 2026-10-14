@@ -3,7 +3,7 @@ description: "The persisted same-session goal service for users and maintainers 
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-goal
+# @berry-ai/harness-goal
 
 English | [中文](README.zh.md)
 
@@ -36,7 +36,7 @@ A goal suits one long-running completion objective that should continue across a
 Load the package with a composition entry; the only deployment choice is the default round cap applied to creates that do not name their own.
 
 ```yaml
-- name: '@deepseek-ai/dsh-goal'
+- name: '@berry-ai/harness-goal'
   config:
     defaultMaxGoalRounds: 256
 ```

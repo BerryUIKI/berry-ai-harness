@@ -97,7 +97,7 @@
   disabled: true
 
 - id: tool-workflow
-  name: '@deepseek-ai/dsh-tool-workflow'
+  name: '@berry-ai/harness-tool-workflow'
   disabled: true
 
 - id: tool-todo
@@ -105,7 +105,7 @@
   disabled: true
 
 - id: tool-goal
-  name: '@deepseek-ai/dsh-tool-goal'
+  name: '@berry-ai/harness-tool-goal'
   disabled: true
 
 - id: tool-web

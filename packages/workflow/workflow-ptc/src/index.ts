@@ -1,7 +1,7 @@
 /**
  * Workflow orchestration through the shared sandboxed Node PTC executor.
  * The VM supplies script helpers; the process applies the calling Session's file policy.
- * @module @deepseek-ai/dsh-workflow-ptc
+ * @module @berry-ai/harness-workflow-ptc
  */
 
 import { randomUUID } from 'node:crypto'
@@ -12,8 +12,8 @@ import type {} from '@berry-ai/harness-ptc-runtime'
 import type {} from '@deepseek-ai/dsh-sandbox-policy'
 import type {} from '@deepseek-ai/dsh-working-directory'
 import z from '@deepseek-ai/schemastery'
-import WorkflowEngine, { WorkflowError, WorkflowRunId } from '@deepseek-ai/dsh-workflow'
-import type { WorkflowRun, WorkflowRunInfo, WorkflowStartRequest } from '@deepseek-ai/dsh-workflow'
+import WorkflowEngine, { WorkflowError, WorkflowRunId } from '@berry-ai/harness-workflow'
+import type { WorkflowRun, WorkflowRunInfo, WorkflowStartRequest } from '@berry-ai/harness-workflow'
 import { PtcWorkflowRun } from './host.ts'
 import { validateMeta } from './meta.ts'
 import type { WorkerInit, WorkerLimits } from './types.ts'

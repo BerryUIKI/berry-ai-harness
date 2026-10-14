@@ -199,7 +199,7 @@
         }
       },
       {
-        "definitionId": "@deepseek-ai/dsh-command-goal",
+        "definitionId": "@berry-ai/harness-command-goal",
         "name": "goal",
         "description": "Set or view the goal for a long-running task",
         "input": {
