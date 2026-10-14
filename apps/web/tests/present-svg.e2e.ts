@@ -5,7 +5,7 @@ import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { chromium, type Browser, type Page } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
-import type {} from '@deepseek-ai/dsh-tool-present/types'
+import type {} from '@berry-ai/harness-tool-present/types'
 import { deriveReplayScript, parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
 import {
   assertFinalWorkspaceSnapshot, captureExpandedTurnProcessAria, compareOrRefreshGolden,

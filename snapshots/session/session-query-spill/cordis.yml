@@ -19,7 +19,7 @@
       name: '@deepseek-ai/dsh-tool-session-query'
 
 - id: timeout-policy
-  name: '@deepseek-ai/dsh-tool-call-timeout-policy'
+  name: '@berry-ai/harness-tool-call-timeout-policy'
 
 - insert:
     - id: snapshot-spill-locators

@@ -14,7 +14,7 @@ import Include from '@deepseek-ai/cordis-plugin-include'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
 import LocalFileSystem from '@deepseek-ai/dsh-fs-local'
-import * as WorkspaceChangesPlugin from '@deepseek-ai/dsh-workspace-changes'
+import * as WorkspaceChangesPlugin from '@berry-ai/harness-workspace-changes'
 import { changes, endTurn, git, startTurn, toolCall } from './support.ts'
 
 let root: string | undefined
@@ -35,7 +35,7 @@ describe('real Loader composition', () => {
       "- name: '@deepseek-ai/dsh-session'",
       "- name: '@deepseek-ai/dsh-subprocess-local'",
       "- name: '@deepseek-ai/dsh-fs-local'",
-      "- name: '@deepseek-ai/dsh-workspace-changes'",
+      "- name: '@berry-ai/harness-workspace-changes'",
       '',
     ].join('\n'))
     context = new Context()
@@ -46,7 +46,7 @@ describe('real Loader composition', () => {
       ['@deepseek-ai/dsh-session', SessionStore],
       ['@deepseek-ai/dsh-subprocess-local', LocalSubprocessRuntime],
       ['@deepseek-ai/dsh-fs-local', LocalFileSystem],
-      ['@deepseek-ai/dsh-workspace-changes', WorkspaceChangesPlugin],
+      ['@berry-ai/harness-workspace-changes', WorkspaceChangesPlugin],
     ])
     context.loader.internal = {
       version: 'v2',

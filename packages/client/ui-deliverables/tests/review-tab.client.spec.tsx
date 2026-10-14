@@ -10,7 +10,7 @@ import type { SidebarRightTabActions } from '@deepseek-ai/dsh-client-ui-sidebar-
 import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
 import { SessionId } from '@deepseek-ai/dsh-session/types'
 import { fileAddressFor } from '@berry-ai/harness-util-workspace-path'
-import type { WorkspaceDiffHunk } from '@deepseek-ai/dsh-workspace-changes/types'
+import type { WorkspaceDiffHunk } from '@berry-ai/harness-workspace-changes/types'
 import {
   changesDiffUrl, changesReviewAddress, changesSummaryUrl, parseChangesReviewAddress, type ChangesDiff, type ChangesSummary,
 } from '../src/changes.ts'

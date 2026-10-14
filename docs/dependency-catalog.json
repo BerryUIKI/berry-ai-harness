@@ -2005,11 +2005,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-repeat-tool-reminder",
+      "name": "@berry-ai/harness-repeat-tool-reminder",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-repeat-tool-reminder",
+          "location": "node_modules/@berry-ai/harness-repeat-tool-reminder",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2761,11 +2761,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-tool-call-timeout-policy",
+      "name": "@berry-ai/harness-tool-call-timeout-policy",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-tool-call-timeout-policy",
+          "location": "node_modules/@berry-ai/harness-tool-call-timeout-policy",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2833,11 +2833,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-tool-present",
+      "name": "@berry-ai/harness-tool-present",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-tool-present",
+          "location": "node_modules/@berry-ai/harness-tool-present",
           "direct": true,
           "optional": false,
           "peer": false

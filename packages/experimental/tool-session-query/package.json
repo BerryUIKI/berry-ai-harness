@@ -55,7 +55,7 @@
     "@deepseek-ai/dsh-session-title": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
-    "@deepseek-ai/dsh-tool-call-timeout-policy": "workspace:*",
+    "@berry-ai/harness-tool-call-timeout-policy": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*"
   }
 }

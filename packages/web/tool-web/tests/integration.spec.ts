@@ -18,7 +18,7 @@ import WebRuntime from '@deepseek-ai/dsh-web'
 import * as WebFetchLocal from '@deepseek-ai/dsh-web-fetch-http'
 import * as WebSearchExa from '@deepseek-ai/dsh-web-search-exa'
 import * as ToolWeb from '@deepseek-ai/dsh-tool-web'
-import * as TimeoutPolicy from '@deepseek-ai/dsh-tool-call-timeout-policy'
+import * as TimeoutPolicy from '@berry-ai/harness-tool-call-timeout-policy'
 import { publicHttpNetwork } from '../../web-fetch-http/src/network.ts'
 
 const testToolSignal = new AbortController().signal

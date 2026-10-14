@@ -11,7 +11,7 @@ import LocalFileSystem from '@deepseek-ai/dsh-fs-local'
 import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
 import Lsp from '@deepseek-ai/dsh-lsp'
 import * as LspLocal from '@deepseek-ai/dsh-lsp-stdio'
-import * as TimeoutPolicy from '@deepseek-ai/dsh-tool-call-timeout-policy'
+import * as TimeoutPolicy from '@berry-ai/harness-tool-call-timeout-policy'
 import * as ToolLsp from '@deepseek-ai/dsh-tool-lsp'
 
 /**

@@ -401,7 +401,7 @@
       name: '@deepseek-ai/dsh-tool-workflow'
 
     - id: timeout-policy
-      name: '@deepseek-ai/dsh-tool-call-timeout-policy'
+      name: '@berry-ai/harness-tool-call-timeout-policy'
 
     - id: spill-local
       name: '@deepseek-ai/dsh-spill-local'
@@ -441,7 +441,7 @@
 
     # Consecutive-repeat reminders on the tool chain.
     - id: repeat-tool-reminder
-      name: '@deepseek-ai/dsh-repeat-tool-reminder'
+      name: '@berry-ai/harness-repeat-tool-reminder'
       config:
         thresholds: [3, 5, 8]
         argumentsPreviewChars: 500

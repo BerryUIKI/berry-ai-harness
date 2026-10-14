@@ -10,7 +10,7 @@ import type { BrowserAuth } from '@deepseek-ai/dsh-client-connection/src/browser
 import { SessionId } from '@deepseek-ai/dsh-session'
 import { SessionQueryError } from '@deepseek-ai/dsh-session-query'
 import type { SessionEventReadRequest } from '@deepseek-ai/dsh-session-query'
-import type { WorkspaceChangedFile, WorkspaceChangesSummary, WorkspaceFileDiff } from '@deepseek-ai/dsh-workspace-changes/types'
+import type { WorkspaceChangedFile, WorkspaceChangesSummary, WorkspaceFileDiff } from '@berry-ai/harness-workspace-changes/types'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { registerPresentOpen } from '../src/present-open.ts'
 import {

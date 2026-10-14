@@ -262,6 +262,9 @@ importers:
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../packages/boot/plugin-manager
+      '@berry-ai/harness-tool-present':
+        specifier: workspace:*
+        version: link:../../packages/deliverables/tool-present
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../packages/todo/tool-todo
@@ -433,9 +436,6 @@ importers:
       '@deepseek-ai/dsh-tool-jobs':
         specifier: workspace:*
         version: link:../../packages/jobs/tool-jobs
-      '@deepseek-ai/dsh-tool-present':
-        specifier: workspace:*
-        version: link:../../packages/deliverables/tool-present
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh
@@ -829,6 +829,9 @@ importers:
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../packages/util/values
+      '@berry-ai/harness-workspace-changes':
+        specifier: workspace:*
+        version: link:../../packages/deliverables/workspace-changes
       '@deepseek-ai/cordis-plugin-group':
         specifier: workspace:~
         version: link:../../vendor/group
@@ -898,9 +901,6 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../packages/subprocess/subprocess-local
-      '@deepseek-ai/dsh-workspace-changes':
-        specifier: workspace:*
-        version: link:../../packages/deliverables/workspace-changes
       '@types/node':
         specifier: ^22.20.1
         version: 22.20.1
@@ -2053,6 +2053,15 @@ importers:
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../boot/plugin-manager
+      '@berry-ai/harness-repeat-tool-reminder':
+        specifier: workspace:*
+        version: link:../../guard/repeat-tool-reminder
+      '@berry-ai/harness-tool-call-timeout-policy':
+        specifier: workspace:*
+        version: link:../../guard/timeout-policy
+      '@berry-ai/harness-tool-present':
+        specifier: workspace:*
+        version: link:../../deliverables/tool-present
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../todo/tool-todo
@@ -2161,9 +2170,6 @@ importers:
       '@deepseek-ai/dsh-pwsh-sandbox':
         specifier: workspace:*
         version: link:../../shell/pwsh-sandbox
-      '@deepseek-ai/dsh-repeat-tool-reminder':
-        specifier: workspace:*
-        version: link:../../guard/repeat-tool-reminder
       '@deepseek-ai/dsh-sandbox-local':
         specifier: workspace:*
         version: link:../../sandbox/sandbox-local
@@ -2248,9 +2254,6 @@ importers:
       '@deepseek-ai/dsh-tool-bash':
         specifier: workspace:*
         version: link:../../shell/tool-bash
-      '@deepseek-ai/dsh-tool-call-timeout-policy':
-        specifier: workspace:*
-        version: link:../../guard/timeout-policy
       '@deepseek-ai/dsh-tool-fs':
         specifier: workspace:*
         version: link:../../fs/tool-fs
@@ -2263,9 +2266,6 @@ importers:
       '@deepseek-ai/dsh-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
-      '@deepseek-ai/dsh-tool-present':
-        specifier: workspace:*
-        version: link:../../deliverables/tool-present
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh
@@ -2525,9 +2525,15 @@ importers:
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../boot/plugin-manager
+      '@berry-ai/harness-tool-present':
+        specifier: workspace:*
+        version: link:../../deliverables/tool-present
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../todo/tool-todo
+      '@berry-ai/harness-workspace-changes':
+        specifier: workspace:*
+        version: link:../../deliverables/workspace-changes
       '@deepseek-ai/dsh-agent-instructions':
         specifier: workspace:*
         version: link:../../context/agent-instructions
@@ -2840,9 +2846,6 @@ importers:
       '@deepseek-ai/dsh-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
-      '@deepseek-ai/dsh-tool-present':
-        specifier: workspace:*
-        version: link:../../deliverables/tool-present
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh
@@ -2876,9 +2879,6 @@ importers:
       '@deepseek-ai/dsh-workspace':
         specifier: workspace:*
         version: link:../../workspace/workspace
-      '@deepseek-ai/dsh-workspace-changes':
-        specifier: workspace:*
-        version: link:../../deliverables/workspace-changes
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -3726,12 +3726,18 @@ importers:
         specifier: workspace:*
         version: link:../../typert/protocol
     devDependencies:
+      '@berry-ai/harness-tool-present':
+        specifier: workspace:*
+        version: link:../../deliverables/tool-present
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
+      '@berry-ai/harness-workspace-changes':
+        specifier: workspace:*
+        version: link:../../deliverables/workspace-changes
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -3807,12 +3813,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-present':
-        specifier: workspace:*
-        version: link:../../deliverables/tool-present
-      '@deepseek-ai/dsh-workspace-changes':
-        specifier: workspace:*
-        version: link:../../deliverables/workspace-changes
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -8903,6 +8903,9 @@ importers:
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
+      '@berry-ai/harness-tool-call-timeout-policy':
+        specifier: workspace:*
+        version: link:../../guard/timeout-policy
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -8939,9 +8942,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-call-timeout-policy':
-        specifier: workspace:*
-        version: link:../../guard/timeout-policy
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -11016,6 +11016,9 @@ importers:
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
+      '@berry-ai/harness-tool-call-timeout-policy':
+        specifier: workspace:*
+        version: link:../../guard/timeout-policy
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11046,9 +11049,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-call-timeout-policy':
-        specifier: workspace:*
-        version: link:../../guard/timeout-policy
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -14676,6 +14676,9 @@ importers:
         specifier: ^7.2.4
         version: 7.2.4
     devDependencies:
+      '@berry-ai/harness-tool-call-timeout-policy':
+        specifier: workspace:*
+        version: link:../../guard/timeout-policy
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -14703,9 +14706,6 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../llm/token-meter
-      '@deepseek-ai/dsh-tool-call-timeout-policy':
-        specifier: workspace:*
-        version: link:../../guard/timeout-policy
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -15068,9 +15068,18 @@ importers:
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../packages/boot/plugin-manager
+      '@berry-ai/harness-repeat-tool-reminder':
+        specifier: workspace:*
+        version: link:../../packages/guard/repeat-tool-reminder
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../packages/util/timeout
+      '@berry-ai/harness-tool-call-timeout-policy':
+        specifier: workspace:*
+        version: link:../../packages/guard/timeout-policy
+      '@berry-ai/harness-tool-present':
+        specifier: workspace:*
+        version: link:../../packages/deliverables/tool-present
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../packages/todo/tool-todo
@@ -15251,9 +15260,6 @@ importers:
       '@deepseek-ai/dsh-pwsh-local':
         specifier: workspace:*
         version: link:../../packages/shell/pwsh-local
-      '@deepseek-ai/dsh-repeat-tool-reminder':
-        specifier: workspace:*
-        version: link:../../packages/guard/repeat-tool-reminder
       '@deepseek-ai/dsh-sandbox':
         specifier: workspace:*
         version: link:../../packages/sandbox/sandbox
@@ -15380,9 +15386,6 @@ importers:
       '@deepseek-ai/dsh-tool-bash-persistent':
         specifier: workspace:*
         version: link:../../packages/shell/tool-bash-persistent
-      '@deepseek-ai/dsh-tool-call-timeout-policy':
-        specifier: workspace:*
-        version: link:../../packages/guard/timeout-policy
       '@deepseek-ai/dsh-tool-cordis':
         specifier: workspace:*
         version: link:../../packages/extensions/tool-cordis
@@ -15398,9 +15401,6 @@ importers:
       '@deepseek-ai/dsh-tool-jobs':
         specifier: workspace:*
         version: link:../../packages/jobs/tool-jobs
-      '@deepseek-ai/dsh-tool-present':
-        specifier: workspace:*
-        version: link:../../packages/deliverables/tool-present
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh

@@ -102,6 +102,7 @@
       "@deepseek-ai/cordis-plugin-logger-console": ["./vendor/logger-console/src"],
       "@deepseek-ai/node-addon-system/landlock-run": ["./native/system/packages/entry/src/index.ts"],
       "@deepseek-ai/node-addon-system/flock": ["./native/system/packages/entry/src/flock.ts"],
+      "@berry-ai/harness-tool-call-timeout-policy": ["./packages/guard/timeout-policy/src"],
       "@deepseek-ai/dsh-tool-call-timeout-policy": ["./packages/guard/timeout-policy/src"],
       "@deepseek-ai/dsh-spill-policy/notice": ["./packages/spill/spill-policy/src/notice.ts"],
       "@deepseek-ai/dsh-subprocess/control": ["./packages/subprocess/subprocess/src/control.ts"],
@@ -267,8 +268,8 @@
       "@deepseek-ai/dsh-client-ui-conversation": ["./packages/client/ui-conversation/src"],
       "@deepseek-ai/dsh-client-ui-conversation/client": ["./packages/client/ui-conversation/src/client/index.ts"],
       "@deepseek-ai/dsh-client-ui-tool": ["./packages/client/ui-tool/src"],
-      "@deepseek-ai/dsh-tool-present/types": ["./packages/deliverables/tool-present/src/types.ts"],
-      "@deepseek-ai/dsh-workspace-changes/types": ["./packages/deliverables/workspace-changes/src/types.ts"],
+      "@berry-ai/harness-tool-present/types": ["./packages/deliverables/tool-present/src/types.ts"],
+      "@berry-ai/harness-workspace-changes/types": ["./packages/deliverables/workspace-changes/src/types.ts"],
       "@deepseek-ai/dsh-client-ui-deliverables": ["./packages/client/ui-deliverables/src"],
       "@deepseek-ai/dsh-client-ui-workflow-run": ["./packages/client/ui-workflow-run/src"],
       "@deepseek-ai/dsh-client-ui-input-trigger": ["./packages/client/ui-input-trigger/src"],
@@ -379,6 +380,9 @@
       "@deepseek-ai/dsh-computer-use": ["./packages/computer-use/computer-use/src"],
       "@deepseek-ai/dsh-office-to-pdf": ["./packages/document/office-to-pdf/src"],
       "@deepseek-ai/dsh-otel": ["./packages/telemetry/otel/src"],
+      "@deepseek-ai/dsh-repeat-tool-reminder": ["./packages/guard/repeat-tool-reminder/src"],
+      "@deepseek-ai/dsh-tool-present": ["./packages/deliverables/tool-present/src"],
+      "@deepseek-ai/dsh-workspace-changes": ["./packages/deliverables/workspace-changes/src"],
       // BEGIN generated package aliases — pnpm run gen-tsconfig-paths
       "@berry-ai/harness-agent-preset": ["./packages/preset/agent-preset/src"],
       "@berry-ai/harness-agent-preset-registry": ["./packages/preset/agent-preset-registry/src"],
@@ -400,8 +404,11 @@
       "@berry-ai/harness-package-manifest": ["./packages/util/package-manifest/src"],
       "@berry-ai/harness-persona": ["./packages/preset/persona/src"],
       "@berry-ai/harness-plan-mode": ["./packages/plan/plan-mode/src"],
+      "@berry-ai/harness-repeat-tool-reminder": ["./packages/guard/repeat-tool-reminder/src"],
       "@berry-ai/harness-timeout": ["./packages/util/timeout/src"],
+      "@berry-ai/harness-tool-present": ["./packages/deliverables/tool-present/src"],
       "@berry-ai/harness-tool-todo": ["./packages/todo/tool-todo/src"],
+      "@berry-ai/harness-workspace-changes": ["./packages/deliverables/workspace-changes/src"],
       "@deepseek-ai/dsh-acp": ["./packages/acp/acp/src"],
       "@deepseek-ai/dsh-acp-app": ["./packages/bundle/acp-app/src"],
       "@deepseek-ai/dsh-agent": ["./packages/core/agent/src"],
@@ -462,7 +469,6 @@
       "@deepseek-ai/dsh-ptc-runtime-node": ["./packages/ptc-runtime/ptc-runtime-node/src"],
       "@deepseek-ai/dsh-pwsh-sandbox": ["./packages/shell/pwsh-sandbox/src"],
       "@deepseek-ai/dsh-remote-mock": ["./packages/test-support/remote-mock/src"],
-      "@deepseek-ai/dsh-repeat-tool-reminder": ["./packages/guard/repeat-tool-reminder/src"],
       "@deepseek-ai/dsh-sandbox": ["./packages/sandbox/sandbox/src"],
       "@deepseek-ai/dsh-sandbox-local": ["./packages/sandbox/sandbox-local/src"],
       "@deepseek-ai/dsh-sandbox-policy": ["./packages/sandbox/sandbox-policy/src"],
@@ -538,7 +544,6 @@
       "@deepseek-ai/dsh-tool-goal": ["./packages/goal/tool-goal/src"],
       "@deepseek-ai/dsh-tool-jobs": ["./packages/jobs/tool-jobs/src"],
       "@deepseek-ai/dsh-tool-lsp": ["./packages/lsp/tool-lsp/src"],
-      "@deepseek-ai/dsh-tool-present": ["./packages/deliverables/tool-present/src"],
       "@deepseek-ai/dsh-tool-pwsh-persistent": ["./packages/shell/tool-pwsh-persistent/src"],
       "@deepseek-ai/dsh-tool-ralph": ["./packages/experimental/tool-ralph/src"],
       "@deepseek-ai/dsh-tool-schedule": ["./packages/schedule/tool-schedule/src"],
@@ -567,8 +572,7 @@
       "@deepseek-ai/dsh-workflow": ["./packages/workflow/workflow/src"],
       "@deepseek-ai/dsh-workflow-ptc": ["./packages/workflow/workflow-ptc/src"],
       "@deepseek-ai/dsh-working-directory": ["./packages/session/working-directory/src"],
-      "@deepseek-ai/dsh-workspace": ["./packages/workspace/workspace/src"],
-      "@deepseek-ai/dsh-workspace-changes": ["./packages/deliverables/workspace-changes/src"]
+      "@deepseek-ai/dsh-workspace": ["./packages/workspace/workspace/src"]
       // END generated package aliases
     }
   }
