@@ -3,12 +3,12 @@
  * of `dsh-tool-bash`'s background adaptation: the terminal
  * outcome the registry records and the pull sources it pumps.
  *
- * @module @deepseek-ai/dsh-tool-pwsh/background
+ * @module @berry-ai/harness-tool-pwsh/background
  */
 
 import type { SandboxMode } from '@berry-ai/harness-sandbox'
 import { escalationHintMarker, sandboxDenialMarker } from '@berry-ai/harness-sandbox'
-import type { ShellProcess, ShellSandboxInfo } from '@deepseek-ai/dsh-shell'
+import type { ShellProcess, ShellSandboxInfo } from '@berry-ai/harness-shell'
 import type { JobChunk, JobHooks, JobOutcome, JobOutputSource } from '@berry-ai/harness-jobs'
 
 /* jscpd:ignore-start -- deliberate twin of dsh-tool-bash/background.ts (Agent Note). */

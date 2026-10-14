@@ -2,7 +2,7 @@
  * Service Definition for the `ctx.shell` capability seam, covering foreground commands and background process
  * handles. Job ids, ownership, polling, and notices belong to
  * `@berry-ai/harness-jobs`, keeping executors independent of sessions.
- * @module @deepseek-ai/dsh-shell
+ * @module @berry-ai/harness-shell
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'

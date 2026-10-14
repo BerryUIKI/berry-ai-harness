@@ -1268,8 +1268,8 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
         ['llm-retry', '@deepseek-ai/dsh-llm-retry'],
         ['jobs', '@berry-ai/harness-jobs-local'],
         ['agent-loop', '@deepseek-ai/dsh-agent-loop'],
-        ['persistent-bash', '@deepseek-ai/dsh-tool-bash-persistent'],
-        ['persistent-pwsh', '@deepseek-ai/dsh-tool-pwsh-persistent'],
+        ['persistent-bash', '@berry-ai/harness-tool-bash-persistent'],
+        ['persistent-pwsh', '@berry-ai/harness-tool-pwsh-persistent'],
         ['sessions', '@deepseek-ai/dsh-session-persistence-jsonl'],
       ])
       expect(stdout).toContain('# == @deepseek-ai/dsh-sdk-minimal')

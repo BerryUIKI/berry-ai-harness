@@ -79,9 +79,9 @@
   disabled: true
 
 - id: tool-bash
-  name: '@deepseek-ai/dsh-tool-bash'
+  name: '@berry-ai/harness-tool-bash'
   disabled: true
 
 - insert:
     - id: tool-pwsh-persistent
-      name: '@deepseek-ai/dsh-tool-pwsh-persistent'
+      name: '@berry-ai/harness-tool-pwsh-persistent'

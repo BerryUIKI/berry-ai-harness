@@ -8,7 +8,7 @@
  *
  * TODO(permissions): deployment policy belongs in `tools/pre-execute` and
  * sandboxing executors; see docs/architecture.md § Where new behavior goes.
- * @module @deepseek-ai/dsh-tool-bash
+ * @module @berry-ai/harness-tool-bash
  */
 
 import type {} from '@deepseek-ai/dsh-working-directory'
@@ -21,12 +21,12 @@ import type { GenericCallView, TerminalCallView, ToolDefinition, ToolExecution, 
 import { HarnessError } from '@deepseek-ai/dsh-llm'
 import type { JobId, JobRegistry, JobView } from '@berry-ai/harness-jobs'
 import type {} from '@berry-ai/harness-user-approval'
-import type {} from '@deepseek-ai/dsh-shell-env'
+import type {} from '@berry-ai/harness-shell-env'
 import type { SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import { ESCALATION_TARGETS, approveEscalation, sandboxPermissionsDescription, validateEscalationArgs } from '@berry-ai/harness-sandbox'
 import type { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'
-import { DSH_ENV_PREFIX } from '@deepseek-ai/dsh-shell'
-import type { ShellExecRequest, ShellExecSpec, ShellExecution, ShellRunResult } from '@deepseek-ai/dsh-shell'
+import { DSH_ENV_PREFIX } from '@berry-ai/harness-shell'
+import type { ShellExecRequest, ShellExecSpec, ShellExecution, ShellRunResult } from '@berry-ai/harness-shell'
 import { processJob, processOutcome, processSources, ringDelta } from './background.ts'
 import { parseExitStatus, renderJobRead, renderPromoted, renderResult } from './render.ts'
 

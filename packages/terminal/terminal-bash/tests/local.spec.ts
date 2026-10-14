@@ -15,7 +15,7 @@ import type { ConfinedArgv, SandboxPolicy } from '@berry-ai/harness-sandbox'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import { resolvePwshPath } from '@deepseek-ai/dsh-pwsh-local/src/resolve.ts'
+import { resolvePwshPath } from '@berry-ai/harness-pwsh-local/src/resolve.ts'
 import * as ptyLocal from '@berry-ai/harness-terminal-bash'
 
 const roots: string[] = []

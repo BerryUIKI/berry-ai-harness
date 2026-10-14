@@ -33,7 +33,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-subprocess-local'
-- name: '@deepseek-ai/dsh-bash-local'
+- name: '@berry-ai/harness-bash-local'
 ```
 
 ### 启动受管进程

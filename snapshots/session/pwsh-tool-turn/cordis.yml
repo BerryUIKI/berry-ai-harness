@@ -9,15 +9,15 @@
   name: '@berry-ai/harness-subprocess-local'
 
 - id: bash-sandbox
-  name: '@deepseek-ai/dsh-bash-sandbox'
+  name: '@berry-ai/harness-bash-sandbox'
   disabled: true
 
 - id: pwsh-sandbox
-  name: '@deepseek-ai/dsh-pwsh-sandbox'
+  name: '@berry-ai/harness-pwsh-sandbox'
   disabled: false
 
 - id: shell-env
-  name: '@deepseek-ai/dsh-shell-env'
+  name: '@berry-ai/harness-shell-env'
 
 - id: agent-default-model
   name: '@deepseek-ai/dsh-agent-default-model'
@@ -69,9 +69,9 @@
   disabled: true
 
 - id: tool-bash
-  name: '@deepseek-ai/dsh-tool-bash'
+  name: '@berry-ai/harness-tool-bash'
   disabled: true
 
 - id: tool-pwsh
-  name: '@deepseek-ai/dsh-tool-pwsh'
+  name: '@berry-ai/harness-tool-pwsh'
   disabled: false

@@ -1,10 +1,10 @@
 /**
  * Model-facing result rendering for the bash tool.
  *
- * @module @deepseek-ai/dsh-tool-bash/render
+ * @module @berry-ai/harness-tool-bash/render
  */
 
-import type { ShellRunResult, ShellSandboxInfo, CollectedOutput } from '@deepseek-ai/dsh-shell'
+import type { ShellRunResult, ShellSandboxInfo, CollectedOutput } from '@berry-ai/harness-shell'
 import type { SandboxMode } from '@berry-ai/harness-sandbox'
 import { escalationHintMarker, sandboxDenialMarker } from '@berry-ai/harness-sandbox'
 
@@ -121,8 +121,8 @@ export function renderJobRead(
 
 /**
  * The exit-status parse is the shared marker-contract half of the shell-tool
- * rendering story, owned by `@deepseek-ai/dsh-shell` so `dsh-tool-pwsh` reuses
+ * rendering story, owned by `@berry-ai/harness-shell` so `dsh-tool-pwsh` reuses
  * it (its renderer emits the same markers). Re-exported here to keep
  * `../src/render.ts` a single import root for bash-tool consumers.
  */
-export { parseExitStatus, type ParsedExitStatus } from '@deepseek-ai/dsh-shell'
+export { parseExitStatus, type ParsedExitStatus } from '@berry-ai/harness-shell'

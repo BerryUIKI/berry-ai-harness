@@ -3,7 +3,7 @@ description: "The model-facing persistent pwsh tool for users and maintainers ch
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-pwsh-persistent
+# @berry-ai/harness-tool-pwsh-persistent
 
 English | [中文](README.zh.md)
 
@@ -42,7 +42,7 @@ The default `shell` backend starts a PowerShell shell through a `dsh-terminal-ba
 - name: '@berry-ai/harness-terminal-bash'
   config:
     shellDialect: pwsh
-- name: '@deepseek-ai/dsh-tool-pwsh-persistent'
+- name: '@berry-ai/harness-tool-pwsh-persistent'
 ```
 
 | Field | Default | Meaning |

@@ -20,7 +20,7 @@ import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
-import * as ToolBashPersistent from '@deepseek-ai/dsh-tool-bash-persistent'
+import * as ToolBashPersistent from '@berry-ai/harness-tool-bash-persistent'
 
 let root: string | undefined
 let context: Context | undefined
@@ -97,7 +97,7 @@ suite('persistent Bash through a real cordis.yml Loader composition', () => {
       '    scrollbackLines: 20000',
       '    timeoutMs: 2000',
       '    disposeGraceMs: 500',
-      "- name: '@deepseek-ai/dsh-tool-bash-persistent'",
+      "- name: '@berry-ai/harness-tool-bash-persistent'",
       '  config:',
       '    timeoutMs: 5000',
       '',
@@ -119,7 +119,7 @@ suite('persistent Bash through a real cordis.yml Loader composition', () => {
       ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
       ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],
       ['@berry-ai/harness-terminal-bash', TerminalLocal],
-      ['@deepseek-ai/dsh-tool-bash-persistent', ToolBashPersistent],
+      ['@berry-ai/harness-tool-bash-persistent', ToolBashPersistent],
     ])
     context.loader.internal = {
       version: 'v2',

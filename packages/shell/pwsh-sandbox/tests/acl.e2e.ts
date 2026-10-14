@@ -14,12 +14,12 @@ import { join } from 'node:path'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import type { SandboxExecutionPolicy } from '@berry-ai/harness-sandbox'
-import { resolvePwshPath } from '@deepseek-ai/dsh-pwsh-local'
+import { resolvePwshPath } from '@berry-ai/harness-pwsh-local'
 import { LocalSandboxProvider } from '@berry-ai/harness-sandbox-local'
 import { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import { SandboxPwshExecutor } from '../src/index.ts'
-import type { ShellExecSpec, ShellExecution, ShellRunResult } from '@deepseek-ai/dsh-shell'
+import type { ShellExecSpec, ShellExecution, ShellRunResult } from '@berry-ai/harness-shell'
 
 /** Historical foreground shorthand over the unified execute() seam. */
 async function run(x: { execute(spec: ShellExecSpec): Promise<ShellExecution> }, spec: ShellExecSpec): Promise<ShellRunResult> {

@@ -7,10 +7,10 @@
  * infrastructure failures (spawn errors, aborts) surface as isError
  * results.
  *
- * @module @deepseek-ai/dsh-tool-pwsh/render
+ * @module @berry-ai/harness-tool-pwsh/render
  */
 
-import type { ShellSandboxInfo, CollectedOutput } from '@deepseek-ai/dsh-shell'
+import type { ShellSandboxInfo, CollectedOutput } from '@berry-ai/harness-shell'
 import type { SandboxMode } from '@berry-ai/harness-sandbox'
 import { escalationHintMarker, sandboxDenialMarker } from '@berry-ai/harness-sandbox'
 

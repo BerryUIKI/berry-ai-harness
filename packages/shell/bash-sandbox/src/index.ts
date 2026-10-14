@@ -6,11 +6,11 @@
  * `SANDBOX_UNAVAILABLE`, while background processes carry `runnerFailed`;
  * other provider rejections retain stage-neutral local-executor semantics. The
  * tool owns approval and passes a complete per-call policy.
- * @module @deepseek-ai/dsh-bash-sandbox
+ * @module @berry-ai/harness-bash-sandbox
  */
 
 import { Context } from '@deepseek-ai/cordis'
-import type { ShellExecRequest, ShellExecSpec, ShellExecution, ShellProcess, ShellRunResult } from '@deepseek-ai/dsh-shell'
+import type { ShellExecRequest, ShellExecSpec, ShellExecution, ShellProcess, ShellRunResult } from '@berry-ai/harness-shell'
 import { SandboxUnavailableError } from '@berry-ai/harness-sandbox'
 import type {
   ConfinedArgv,
@@ -22,8 +22,8 @@ import type {
   SandboxPolicy,
 } from '@berry-ai/harness-sandbox'
 import type {} from '@berry-ai/harness-sandbox-policy'
-import { LocalBashExecutor } from '@deepseek-ai/dsh-bash-local'
-import type { Config as LocalConfig } from '@deepseek-ai/dsh-bash-local'
+import { LocalBashExecutor } from '@berry-ai/harness-bash-local'
+import type { Config as LocalConfig } from '@berry-ai/harness-bash-local'
 import { classifyDenial, classifyRunnerFailure, isRunnerSpawnFailure, matchesSignature } from './helpers.ts'
 
 /**

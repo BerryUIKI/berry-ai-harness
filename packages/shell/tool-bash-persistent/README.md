@@ -3,7 +3,7 @@ description: "The model-facing persistent bash tool for users and maintainers ch
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-bash-persistent
+# @berry-ai/harness-tool-bash-persistent
 
 English | [中文](README.zh.md)
 
@@ -40,7 +40,7 @@ The default `shell` backend starts an interactive bash through `dsh-terminal-bas
 ```yaml
 - name: '@berry-ai/harness-terminal'
 - name: '@berry-ai/harness-terminal-bash'
-- name: '@deepseek-ai/dsh-tool-bash-persistent'
+- name: '@berry-ai/harness-tool-bash-persistent'
 ```
 
 | Field | Default | Meaning |

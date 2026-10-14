@@ -3,7 +3,7 @@ description: "面向模型的持久 bash 工具，供选择、配置或排查跨
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-bash-persistent
+# @berry-ai/harness-tool-bash-persistent
 
 [English](README.md) | 中文
 
@@ -40,7 +40,7 @@ kind: "package-reference"
 ```yaml
 - name: '@berry-ai/harness-terminal'
 - name: '@berry-ai/harness-terminal-bash'
-- name: '@deepseek-ai/dsh-tool-bash-persistent'
+- name: '@berry-ai/harness-tool-bash-persistent'
 ```
 
 | 字段 | 默认值 | 含义 |

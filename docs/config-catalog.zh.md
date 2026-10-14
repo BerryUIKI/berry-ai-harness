@@ -83,6 +83,55 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-attachment-local -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-bash-local -->
+<a id="berry-aiharness-bash-local"></a>
+
+## `@berry-ai/harness-bash-local`
+
+- `inject`: `subprocess`
+- `refs`: `Volatile` (`@deepseek-ai/cordis`)
+- `source`: [`packages/shell/bash-local/src/index.ts:41`](../packages/shell/bash-local/src/index.ts)
+
+```ts config-catalog
+/** Validated plugin configuration with live command budgets. */
+export interface Config {
+  /** Default working directory for commands (default: process.cwd()). */
+  cwd: Volatile<string | undefined>
+  /** Default foreground timeout in milliseconds. */
+  timeoutMs: Volatile<number>
+  /** Upper bound for per-call timeout overrides. */
+  maxTimeoutMs: Volatile<number>
+  /** Per-stream in-memory output cap; overflow spills to a temp file. */
+  maxOutputBytes: Volatile<number>
+  /** Per-stream spill-file cap; larger streams retain only their in-memory tail. */
+  maxSpillBytes: Volatile<number>
+  /** Grace period for kill escalation and inherited pipes; at most `MAX_TIMER_DELAY_MS`. */
+  graceMs: Volatile<number>
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-bash-local -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-bash-sandbox -->
+<a id="berry-aiharness-bash-sandbox"></a>
+
+## `@berry-ai/harness-bash-sandbox`
+
+- `inject`: `subprocess` · `sandbox` · `sandboxPolicy`
+- `refs`: [`LocalConfig`](#berry-aiharness-bash-local)
+- `source`: [`packages/shell/bash-sandbox/src/index.ts:36`](../packages/shell/bash-sandbox/src/index.ts)
+
+```ts config-catalog
+/**
+ * Plugin config: the local executor's knobs, verbatim. The sandbox policy —
+ * the default mode and fallback `workspace-write` root — is NOT here: it lives
+ * on `ctx.sandboxPolicy` (`@berry-ai/harness-sandbox-policy`), which resolves
+ * each calling session's mode and cwd for every enforcing capability. The runner
+ * choice is likewise the `ctx.sandbox` provider's config, not this executor's.
+ */
+export type Config = LocalConfig
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-bash-sandbox -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-credentials-local -->
 <a id="berry-aiharness-credentials-local"></a>
 
@@ -571,6 +620,63 @@ export type LaunchConfig = {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-ptc-runtime-node -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-pwsh-local -->
+<a id="berry-aiharness-pwsh-local"></a>
+
+## `@berry-ai/harness-pwsh-local`
+
+- `inject`: `subprocess`
+- `refs`: `Volatile` (`@deepseek-ai/cordis`)
+- `source`: [`packages/shell/pwsh-local/src/index.ts:58`](../packages/shell/pwsh-local/src/index.ts)
+
+```ts config-catalog
+/** Validated plugin configuration with live command budgets. */
+export interface Config {
+  /** Default working directory for commands (default: process.cwd()). */
+  cwd: Volatile<string | undefined>
+  /** Default foreground timeout in milliseconds. */
+  timeoutMs: Volatile<number>
+  /** Upper bound for per-call timeout overrides. */
+  maxTimeoutMs: Volatile<number>
+  /** Per-stream in-memory output cap; overflow spills to a temp file. */
+  maxOutputBytes: Volatile<number>
+  /** Per-stream spill-file cap; larger streams retain only their in-memory tail. */
+  maxSpillBytes: Volatile<number>
+  /** Grace period for kill escalation and inherited pipes; at most `MAX_TIMER_DELAY_MS`. */
+  graceMs: Volatile<number>
+  /**
+   * Explicit pwsh executable. When omitted, well-known Windows install
+   * locations and PATH entries are probed in order (PowerShell 7 install,
+   * PATH entries such as the Microsoft Store install, then Windows
+   * PowerShell 5.1), falling back to a bare `pwsh` resolved through PATH.
+   */
+  pwshPath: Volatile<string | undefined>
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-pwsh-local -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-pwsh-sandbox -->
+<a id="berry-aiharness-pwsh-sandbox"></a>
+
+## `@berry-ai/harness-pwsh-sandbox`
+
+- `inject`: `subprocess` · `sandbox` · `sandboxPolicy`
+- `refs`: [`LocalConfig`](#berry-aiharness-pwsh-local)
+- `source`: [`packages/shell/pwsh-sandbox/src/index.ts:40`](../packages/shell/pwsh-sandbox/src/index.ts)
+
+```ts config-catalog
+/**
+ * Plugin config: the local executor's knobs, verbatim. The sandbox policy —
+ * the default mode and fallback `workspace-write` root — is NOT here: it lives
+ * on `ctx.sandboxPolicy` (`@berry-ai/harness-sandbox-policy`), which resolves
+ * each calling session's mode and cwd for every enforcing capability. The
+ * runner choice is likewise the `ctx.sandbox` provider's config, not this
+ * executor's.
+ */
+export type Config = LocalConfig
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-pwsh-sandbox -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-repeat-tool-reminder -->
 <a id="berry-aiharness-repeat-tool-reminder"></a>
 
@@ -694,6 +800,22 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-schedule -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-shell-env -->
+<a id="berry-aiharness-shell-env"></a>
+
+## `@berry-ai/harness-shell-env`
+
+- `source`: [`packages/shell/shell-env/src/index.ts:30`](../packages/shell/shell-env/src/index.ts)
+
+```ts config-catalog
+/** Plugin config (all optional — the built-in facts resolve without defaults). */
+export interface Config {
+  /** DeepSeek Harness home directory exposed as `DSH_HOME`; defaults to `$DSH_HOME` or `~/.dsh`. */
+  dshHome?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-shell-env -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-spill-local -->
 <a id="berry-aiharness-spill-local"></a>
@@ -956,6 +1078,59 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-tool-ask-user -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-bash -->
+<a id="berry-aiharness-tool-bash"></a>
+
+## `@berry-ai/harness-tool-bash`
+
+- `inject`: `tools` · `shell` · `systemPrompt` · `shellEnv` · `workingDirectory`
+- `source`: [`packages/shell/tool-bash/src/index.ts:37`](../packages/shell/tool-bash/src/index.ts)
+
+```ts config-catalog
+/** Configuration for the bash tool. */
+export interface Config {
+  /**
+   * Expose `run_in_background` while a job registry is composed (default
+   * true); disabled calls are also rejected. Without a registry the tool is
+   * foreground-only regardless.
+   */
+  enableRunInBackground?: boolean
+  /**
+   * Keep a foreground command that reaches its timeout running as a
+   * background job instead of killing it (default true). Applies only while
+   * background execution is available: with `enableRunInBackground` false or
+   * no job registry, the executor's deadline kills the command. A foreground
+   * command the registry refuses at its start (admission or a missing
+   * controller) also runs under the deadline kill.
+   */
+  promoteOnTimeout?: boolean
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-bash -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-bash-persistent -->
+<a id="berry-aiharness-tool-bash-persistent"></a>
+
+## `@berry-ai/harness-tool-bash-persistent`
+
+- `inject`: `tools` · `terminals` · `workingDirectory`
+- `source`: [`packages/shell/tool-bash-persistent/src/index.ts:445`](../packages/shell/tool-bash-persistent/src/index.ts)
+
+```ts config-catalog
+/** Configuration for the persistent Bash tool. */
+export interface Config {
+  /** PTY backend used for each owner-isolated persistent shell (default `shell`). */
+  backendType?: string
+  /** Wall-clock limit for one command (default 300000). */
+  timeoutMs?: number
+  /** Maximum returned command-output characters before clipping (default 16000). */
+  maxOutputChars?: number
+  /** Model-facing tool description; deployments may describe their environment. */
+  description?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-bash-persistent -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-fs -->
 <a id="berry-aiharness-tool-fs"></a>
 
@@ -1085,6 +1260,59 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-tool-present -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-pwsh -->
+<a id="berry-aiharness-tool-pwsh"></a>
+
+## `@berry-ai/harness-tool-pwsh`
+
+- `inject`: `tools` · `shell` · `systemPrompt` · `shellEnv` · `workingDirectory`
+- `source`: [`packages/shell/tool-pwsh/src/index.ts:54`](../packages/shell/tool-pwsh/src/index.ts)
+
+```ts config-catalog
+/** Configuration for the pwsh tool. */
+export interface Config {
+  /**
+   * Expose `run_in_background` while a job registry is composed (default
+   * true); disabled calls are also rejected. Without a registry the tool is
+   * foreground-only regardless.
+   */
+  enableRunInBackground?: boolean
+  /**
+   * Keep a foreground command that reaches its timeout running as a
+   * background job instead of killing it (default true). Applies only while
+   * background execution is available: with `enableRunInBackground` false or
+   * no job registry, the executor's deadline kills the command. A foreground
+   * command the registry refuses at its start (admission or a missing
+   * controller) also runs under the deadline kill.
+   */
+  promoteOnTimeout?: boolean
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-pwsh -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-pwsh-persistent -->
+<a id="berry-aiharness-tool-pwsh-persistent"></a>
+
+## `@berry-ai/harness-tool-pwsh-persistent`
+
+- `inject`: `tools` · `terminals` · `workingDirectory`
+- `source`: [`packages/shell/tool-pwsh-persistent/src/index.ts:458`](../packages/shell/tool-pwsh-persistent/src/index.ts)
+
+```ts config-catalog
+/** Configuration for the persistent pwsh tool. */
+export interface Config {
+  /** PTY backend used for each owner-isolated persistent shell (default `shell`). */
+  backendType?: string
+  /** Wall-clock limit for one command (default 300000). */
+  timeoutMs?: number
+  /** Maximum returned command-output characters before clipping (default 16000). */
+  maxOutputChars?: number
+  /** Model-facing tool description; deployments may describe their environment. */
+  description?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-pwsh-persistent -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-str-replace-editor -->
 <a id="berry-aiharness-tool-str-replace-editor"></a>
@@ -1539,55 +1767,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-api-workspace-files -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-bash-local -->
-<a id="deepseek-aidsh-bash-local"></a>
-
-## `@deepseek-ai/dsh-bash-local`
-
-- `inject`: `subprocess`
-- `refs`: `Volatile` (`@deepseek-ai/cordis`)
-- `source`: [`packages/shell/bash-local/src/index.ts:41`](../packages/shell/bash-local/src/index.ts)
-
-```ts config-catalog
-/** Validated plugin configuration with live command budgets. */
-export interface Config {
-  /** Default working directory for commands (default: process.cwd()). */
-  cwd: Volatile<string | undefined>
-  /** Default foreground timeout in milliseconds. */
-  timeoutMs: Volatile<number>
-  /** Upper bound for per-call timeout overrides. */
-  maxTimeoutMs: Volatile<number>
-  /** Per-stream in-memory output cap; overflow spills to a temp file. */
-  maxOutputBytes: Volatile<number>
-  /** Per-stream spill-file cap; larger streams retain only their in-memory tail. */
-  maxSpillBytes: Volatile<number>
-  /** Grace period for kill escalation and inherited pipes; at most `MAX_TIMER_DELAY_MS`. */
-  graceMs: Volatile<number>
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-bash-local -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-bash-sandbox -->
-<a id="deepseek-aidsh-bash-sandbox"></a>
-
-## `@deepseek-ai/dsh-bash-sandbox`
-
-- `inject`: `subprocess` · `sandbox` · `sandboxPolicy`
-- `refs`: [`LocalConfig`](#deepseek-aidsh-bash-local)
-- `source`: [`packages/shell/bash-sandbox/src/index.ts:36`](../packages/shell/bash-sandbox/src/index.ts)
-
-```ts config-catalog
-/**
- * Plugin config: the local executor's knobs, verbatim. The sandbox policy —
- * the default mode and fallback `workspace-write` root — is NOT here: it lives
- * on `ctx.sandboxPolicy` (`@berry-ai/harness-sandbox-policy`), which resolves
- * each calling session's mode and cwd for every enforcing capability. The runner
- * choice is likewise the `ctx.sandbox` provider's config, not this executor's.
- */
-export type Config = LocalConfig
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-bash-sandbox -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-connection -->
 <a id="deepseek-aidsh-client-connection"></a>
@@ -3153,63 +3332,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-plugin-package-inventory-deepseek -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-pwsh-local -->
-<a id="deepseek-aidsh-pwsh-local"></a>
-
-## `@deepseek-ai/dsh-pwsh-local`
-
-- `inject`: `subprocess`
-- `refs`: `Volatile` (`@deepseek-ai/cordis`)
-- `source`: [`packages/shell/pwsh-local/src/index.ts:58`](../packages/shell/pwsh-local/src/index.ts)
-
-```ts config-catalog
-/** Validated plugin configuration with live command budgets. */
-export interface Config {
-  /** Default working directory for commands (default: process.cwd()). */
-  cwd: Volatile<string | undefined>
-  /** Default foreground timeout in milliseconds. */
-  timeoutMs: Volatile<number>
-  /** Upper bound for per-call timeout overrides. */
-  maxTimeoutMs: Volatile<number>
-  /** Per-stream in-memory output cap; overflow spills to a temp file. */
-  maxOutputBytes: Volatile<number>
-  /** Per-stream spill-file cap; larger streams retain only their in-memory tail. */
-  maxSpillBytes: Volatile<number>
-  /** Grace period for kill escalation and inherited pipes; at most `MAX_TIMER_DELAY_MS`. */
-  graceMs: Volatile<number>
-  /**
-   * Explicit pwsh executable. When omitted, well-known Windows install
-   * locations and PATH entries are probed in order (PowerShell 7 install,
-   * PATH entries such as the Microsoft Store install, then Windows
-   * PowerShell 5.1), falling back to a bare `pwsh` resolved through PATH.
-   */
-  pwshPath: Volatile<string | undefined>
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-pwsh-local -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-pwsh-sandbox -->
-<a id="deepseek-aidsh-pwsh-sandbox"></a>
-
-## `@deepseek-ai/dsh-pwsh-sandbox`
-
-- `inject`: `subprocess` · `sandbox` · `sandboxPolicy`
-- `refs`: [`LocalConfig`](#deepseek-aidsh-pwsh-local)
-- `source`: [`packages/shell/pwsh-sandbox/src/index.ts:40`](../packages/shell/pwsh-sandbox/src/index.ts)
-
-```ts config-catalog
-/**
- * Plugin config: the local executor's knobs, verbatim. The sandbox policy —
- * the default mode and fallback `workspace-write` root — is NOT here: it lives
- * on `ctx.sandboxPolicy` (`@berry-ai/harness-sandbox-policy`), which resolves
- * each calling session's mode and cwd for every enforcing capability. The
- * runner choice is likewise the `ctx.sandbox` provider's config, not this
- * executor's.
- */
-export type Config = LocalConfig
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-pwsh-sandbox -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sdk-app -->
 <a id="deepseek-aidsh-sdk-app"></a>
 
@@ -3525,22 +3647,6 @@ export interface Config extends SessionTitleLlmConfig {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-title-first-prompt-llm -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-shell-env -->
-<a id="deepseek-aidsh-shell-env"></a>
-
-## `@deepseek-ai/dsh-shell-env`
-
-- `source`: [`packages/shell/shell-env/src/index.ts:30`](../packages/shell/shell-env/src/index.ts)
-
-```ts config-catalog
-/** Plugin config (all optional — the built-in facts resolve without defaults). */
-export interface Config {
-  /** DeepSeek Harness home directory exposed as `DSH_HOME`; defaults to `$DSH_HOME` or `~/.dsh`. */
-  dshHome?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-shell-env -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-skill -->
 <a id="deepseek-aidsh-skill"></a>
@@ -3920,59 +4026,6 @@ export type TokenMeterConfig = Record<string, never>
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-token-meter -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-bash -->
-<a id="deepseek-aidsh-tool-bash"></a>
-
-## `@deepseek-ai/dsh-tool-bash`
-
-- `inject`: `tools` · `shell` · `systemPrompt` · `shellEnv` · `workingDirectory`
-- `source`: [`packages/shell/tool-bash/src/index.ts:37`](../packages/shell/tool-bash/src/index.ts)
-
-```ts config-catalog
-/** Configuration for the bash tool. */
-export interface Config {
-  /**
-   * Expose `run_in_background` while a job registry is composed (default
-   * true); disabled calls are also rejected. Without a registry the tool is
-   * foreground-only regardless.
-   */
-  enableRunInBackground?: boolean
-  /**
-   * Keep a foreground command that reaches its timeout running as a
-   * background job instead of killing it (default true). Applies only while
-   * background execution is available: with `enableRunInBackground` false or
-   * no job registry, the executor's deadline kills the command. A foreground
-   * command the registry refuses at its start (admission or a missing
-   * controller) also runs under the deadline kill.
-   */
-  promoteOnTimeout?: boolean
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-bash -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-bash-persistent -->
-<a id="deepseek-aidsh-tool-bash-persistent"></a>
-
-## `@deepseek-ai/dsh-tool-bash-persistent`
-
-- `inject`: `tools` · `terminals` · `workingDirectory`
-- `source`: [`packages/shell/tool-bash-persistent/src/index.ts:445`](../packages/shell/tool-bash-persistent/src/index.ts)
-
-```ts config-catalog
-/** Configuration for the persistent Bash tool. */
-export interface Config {
-  /** PTY backend used for each owner-isolated persistent shell (default `shell`). */
-  backendType?: string
-  /** Wall-clock limit for one command (default 300000). */
-  timeoutMs?: number
-  /** Maximum returned command-output characters before clipping (default 16000). */
-  maxOutputChars?: number
-  /** Model-facing tool description; deployments may describe their environment. */
-  description?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-bash-persistent -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-lsp -->
 <a id="deepseek-aidsh-tool-lsp"></a>
 
@@ -3993,59 +4046,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-lsp -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-pwsh -->
-<a id="deepseek-aidsh-tool-pwsh"></a>
-
-## `@deepseek-ai/dsh-tool-pwsh`
-
-- `inject`: `tools` · `shell` · `systemPrompt` · `shellEnv` · `workingDirectory`
-- `source`: [`packages/shell/tool-pwsh/src/index.ts:54`](../packages/shell/tool-pwsh/src/index.ts)
-
-```ts config-catalog
-/** Configuration for the pwsh tool. */
-export interface Config {
-  /**
-   * Expose `run_in_background` while a job registry is composed (default
-   * true); disabled calls are also rejected. Without a registry the tool is
-   * foreground-only regardless.
-   */
-  enableRunInBackground?: boolean
-  /**
-   * Keep a foreground command that reaches its timeout running as a
-   * background job instead of killing it (default true). Applies only while
-   * background execution is available: with `enableRunInBackground` false or
-   * no job registry, the executor's deadline kills the command. A foreground
-   * command the registry refuses at its start (admission or a missing
-   * controller) also runs under the deadline kill.
-   */
-  promoteOnTimeout?: boolean
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-pwsh -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-pwsh-persistent -->
-<a id="deepseek-aidsh-tool-pwsh-persistent"></a>
-
-## `@deepseek-ai/dsh-tool-pwsh-persistent`
-
-- `inject`: `tools` · `terminals` · `workingDirectory`
-- `source`: [`packages/shell/tool-pwsh-persistent/src/index.ts:458`](../packages/shell/tool-pwsh-persistent/src/index.ts)
-
-```ts config-catalog
-/** Configuration for the persistent pwsh tool. */
-export interface Config {
-  /** PTY backend used for each owner-isolated persistent shell (default `shell`). */
-  backendType?: string
-  /** Wall-clock limit for one command (default 300000). */
-  timeoutMs?: number
-  /** Maximum returned command-output characters before clipping (default 16000). */
-  maxOutputChars?: number
-  /** Model-facing tool description; deployments may describe their environment. */
-  description?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-pwsh-persistent -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-ralph -->
 <a id="deepseek-aidsh-tool-ralph"></a>
@@ -4617,6 +4617,7 @@ export interface Config {
 | `@berry-ai/harness-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
 | `@berry-ai/harness-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
 | `@berry-ai/harness-sandbox` | `SandboxProvider` | — | [`packages/sandbox/sandbox/src/index.ts`](../packages/sandbox/sandbox/src/index.ts) |
+| `@berry-ai/harness-shell` | `ShellExecutor` | — | [`packages/shell/shell/src/index.ts`](../packages/shell/shell/src/index.ts) |
 | `@berry-ai/harness-spill` | `SpillStore` | — | [`packages/spill/spill/src/index.ts`](../packages/spill/spill/src/index.ts) |
 | `@berry-ai/harness-subprocess` | `SubprocessRuntime` | — | [`packages/subprocess/subprocess/src/index.ts`](../packages/subprocess/subprocess/src/index.ts) |
 | `@berry-ai/harness-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
@@ -4625,7 +4626,6 @@ export interface Config {
 | `@deepseek-ai/dsh-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
 | `@deepseek-ai/dsh-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |
 | `@deepseek-ai/dsh-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |
-| `@deepseek-ai/dsh-shell` | `ShellExecutor` | — | [`packages/shell/shell/src/index.ts`](../packages/shell/shell/src/index.ts) |
 <!-- END GENERATED config-catalog:seam -->
 
 ## 库包（无插件入口）

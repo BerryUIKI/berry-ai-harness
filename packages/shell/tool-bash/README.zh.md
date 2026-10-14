@@ -3,7 +3,7 @@ description: "面向模型的 bash 工具，供选择、配置或排查一次性
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-bash
+# @berry-ai/harness-tool-bash
 
 [English](README.md) | 中文
 
@@ -34,9 +34,9 @@ kind: "package-reference"
 常用路径是执行器提供方、环境注册表与本工具；当 agent 需要后台运行命令时，再添加任务运行时。
 
 ```yaml
-- name: '@deepseek-ai/dsh-bash-local'
-- name: '@deepseek-ai/dsh-shell-env'
-- name: '@deepseek-ai/dsh-tool-bash'
+- name: '@berry-ai/harness-bash-local'
+- name: '@berry-ai/harness-shell-env'
+- name: '@berry-ai/harness-tool-bash'
 
 # Optional: background jobs
 - name: '@berry-ai/harness-jobs-local'

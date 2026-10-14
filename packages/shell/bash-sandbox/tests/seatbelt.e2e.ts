@@ -9,9 +9,9 @@ import { LocalSandboxProvider } from '@berry-ai/harness-sandbox-local'
 import { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { seatbeltProfileArgs } from '@berry-ai/harness-sandbox-local/src/profiles.ts'
-import { SandboxBashExecutor } from '@deepseek-ai/dsh-bash-sandbox'
+import { SandboxBashExecutor } from '@berry-ai/harness-bash-sandbox'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import type { ShellExecSpec, ShellExecution, ShellRunResult } from '@deepseek-ai/dsh-shell'
+import type { ShellExecSpec, ShellExecution, ShellRunResult } from '@berry-ai/harness-shell'
 
 /** Historical foreground shorthand over the unified execute() seam. */
 async function run(x: { execute(spec: ShellExecSpec): Promise<ShellExecution> }, spec: ShellExecSpec): Promise<ShellRunResult> {

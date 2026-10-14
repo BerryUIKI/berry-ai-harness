@@ -1,6 +1,6 @@
 /**
  * Model-facing persistent `bash` tool over the owner-scoped PTY seam.
- * @module @deepseek-ai/dsh-tool-bash-persistent
+ * @module @berry-ai/harness-tool-bash-persistent
  */
 
 import type {} from '@deepseek-ai/dsh-working-directory'

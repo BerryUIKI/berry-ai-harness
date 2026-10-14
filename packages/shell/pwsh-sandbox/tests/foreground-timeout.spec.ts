@@ -6,7 +6,7 @@ import { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'
 import { SessionProjectionRegistry } from '@deepseek-ai/dsh-session-projection'
 import { LocalSubprocessRuntime } from '@berry-ai/harness-subprocess-local'
 import type { SubprocessHandle, SubprocessOutcome, SubprocessSpawnSpec } from '@berry-ai/harness-subprocess'
-import type { ShellRunResult } from '@deepseek-ai/dsh-shell'
+import type { ShellRunResult } from '@berry-ai/harness-shell'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { SandboxPwshExecutor } from '../src/index.ts'
 

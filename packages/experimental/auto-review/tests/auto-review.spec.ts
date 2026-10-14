@@ -32,7 +32,7 @@ import SubagentRuntime, {
   SUBAGENT_DESCRIPTOR_VERSION,
   type SubagentStartRequest,
 } from '@deepseek-ai/dsh-subagent'
-import type {} from '@deepseek-ai/dsh-shell'
+import type {} from '@berry-ai/harness-shell'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import * as ToolSubagent from '@deepseek-ai/dsh-tool-subagent'
 import ToolRuntime, {

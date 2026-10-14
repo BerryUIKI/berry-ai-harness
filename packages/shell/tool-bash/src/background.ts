@@ -3,12 +3,12 @@
  * registry records, the pull sources it pumps, and the ring read a foreground
  * call renders when it stops waiting.
  *
- * @module @deepseek-ai/dsh-tool-bash/background
+ * @module @berry-ai/harness-tool-bash/background
  */
 
 import type { SandboxMode } from '@berry-ai/harness-sandbox'
 import { escalationHintMarker, sandboxDenialMarker } from '@berry-ai/harness-sandbox'
-import type { ShellProcess, ShellSandboxInfo } from '@deepseek-ai/dsh-shell'
+import type { ShellProcess, ShellSandboxInfo } from '@berry-ai/harness-shell'
 import type { JobChunk, JobHooks, JobOutcome, JobOutputSource } from '@berry-ai/harness-jobs'
 
 /**

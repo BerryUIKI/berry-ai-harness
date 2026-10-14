@@ -14,13 +14,13 @@ import { provideWorkingDirectoryFixture, unsupportedInbox } from '@deepseek-ai/d
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import type { JobId } from '@berry-ai/harness-jobs'
 import * as ToolTasks from '@berry-ai/harness-tool-jobs'
-import type { ShellExecution, ShellProcess } from '@deepseek-ai/dsh-shell'
-import { LocalBashExecutor } from '@deepseek-ai/dsh-bash-local'
+import type { ShellExecution, ShellProcess } from '@berry-ai/harness-shell'
+import { LocalBashExecutor } from '@berry-ai/harness-bash-local'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import * as ToolBash from '@deepseek-ai/dsh-tool-bash'
+import * as ToolBash from '@berry-ai/harness-tool-bash'
 import { processSources, ringDelta } from '../src/background.ts'
 import { renderPromoted } from '../src/render.ts'
-import * as BashEnvPlugin from '@deepseek-ai/dsh-shell-env'
+import * as BashEnvPlugin from '@berry-ai/harness-shell-env'
 
 // Readiness polling stays on wall time while a test controls the execution deadline.
 const pollingTimeout = setTimeout

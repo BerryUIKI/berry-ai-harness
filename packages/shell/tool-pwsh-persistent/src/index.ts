@@ -2,7 +2,7 @@
    the PowerShell counterpart shares the session registry, polling loop, and reset contract by design. */
 /**
  * Model-facing persistent `pwsh` tool over the owner-scoped PTY seam.
- * @module @deepseek-ai/dsh-tool-pwsh-persistent
+ * @module @berry-ai/harness-tool-pwsh-persistent
  */
 
 import type {} from '@deepseek-ai/dsh-working-directory'

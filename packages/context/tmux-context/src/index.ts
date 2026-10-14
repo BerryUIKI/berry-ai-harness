@@ -23,7 +23,7 @@ import z from '@deepseek-ai/schemastery'
 import { z as zod } from 'zod'
 import type { PreStepDecision } from '@deepseek-ai/dsh-agent'
 import type {} from '@deepseek-ai/dsh-session-projection'
-import type { ShellExecutor, ShellRunResult } from '@deepseek-ai/dsh-shell'
+import type { ShellExecutor, ShellRunResult } from '@berry-ai/harness-shell'
 import { createUserMessage } from '@deepseek-ai/dsh-llm'
 import type { ContextFormed } from '@deepseek-ai/dsh-llm'
 declare module '@deepseek-ai/dsh-llm' {

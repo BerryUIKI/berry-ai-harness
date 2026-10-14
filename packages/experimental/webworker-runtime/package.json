@@ -49,7 +49,7 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/dsh-api-gateway": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-bash-sandbox": "workspace:*",
+    "@berry-ai/harness-bash-sandbox": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@deepseek-ai/dsh-client-file-upload": "workspace:*",
     "@deepseek-ai/dsh-client-modules": "workspace:*",

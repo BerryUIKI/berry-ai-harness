@@ -46,7 +46,7 @@ Write a bundle directory in the workspace with exactly two files, then install i
             config:
               prefix: You review software changes.
           - id: tool-bash
-            name: '@deepseek-ai/dsh-tool-bash'
+            name: '@berry-ai/harness-tool-bash'
 ```
 
 Install with `plugin_manager`, `action: install_bundle`, `target` set to the absolute bundle directory. It runs package installation and bundle selection itself; do not reproduce those steps with shell commands.

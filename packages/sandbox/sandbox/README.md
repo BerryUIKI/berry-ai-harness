@@ -44,7 +44,7 @@ Mount the service with a backend and a confined executor; the [base bundle](../.
     mode: workspace-write                    # the deployment default every session starts from
     workspaceRoot: !!js process.cwd()        # the boundary workspace-write may write under
 - id: bash
-  name: '@deepseek-ai/dsh-bash-sandbox'      # the confined executor behind ctx.shell
+  name: '@berry-ai/harness-bash-sandbox'      # the confined executor behind ctx.shell
 ```
 
 With this composition, a bash call runs confined under `workspace-write`: writes inside the workspace succeed, writes outside it are denied, and the model can recover through the escalation flow below.

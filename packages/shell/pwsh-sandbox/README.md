@@ -3,7 +3,7 @@ description: "The sandbox-consuming PowerShell executor for deployments and main
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-pwsh-sandbox
+# @berry-ai/harness-pwsh-sandbox
 
 English | [中文](README.zh.md)
 
@@ -52,7 +52,7 @@ On Windows, mount the ACL restricted-token provider; on Linux and macOS, mount t
     mode: read-only
     workspaceRoot: !!js process.cwd() # fallback for calls without a session cwd
 - id: bash
-  name: '@deepseek-ai/dsh-pwsh-sandbox'
+  name: '@berry-ai/harness-pwsh-sandbox'
 ```
 
 ### Denials and escalation

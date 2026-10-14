@@ -59,7 +59,7 @@ const SNAPSHOT = {
     { entryId: 'timer', moduleName: 'cordis:timer', enabled: true, fiberPhase: 'active' },
     { entryId: '8a1b2c3d', moduleName: '@deepseek-ai/cordis-plugin-hmr', enabled: true, fiberPhase: 'active' },
     { entryId: 'unobserved', moduleName: '@fixture/unobserved-name', enabled: true, fiberPhase: null },
-    { entryId: 'bash-host', moduleName: '@deepseek-ai/dsh-tool-bash', enabled: false, fiberPhase: null },
+    { entryId: 'bash-host', moduleName: '@berry-ai/harness-tool-bash', enabled: false, fiberPhase: null },
     { entryId: 'fs-host', moduleName: '@berry-ai/harness-tool-fs', enabled: false, fiberPhase: null },
     { entryId: 'dormant', moduleName: '@fixture/dormant', enabled: false, fiberPhase: null },
   ],
@@ -69,7 +69,7 @@ const SNAPSHOT = {
       name: '标准模式',
       isDefault: true,
       rows: [
-        { entryId: 'bash', moduleName: '@deepseek-ai/dsh-tool-bash', enabled: true, fiberPhase: 'active' },
+        { entryId: 'bash', moduleName: '@berry-ai/harness-tool-bash', enabled: true, fiberPhase: 'active' },
         { entryId: 'fs', moduleName: '@berry-ai/harness-tool-fs', enabled: true, fiberPhase: null },
         {
           entryId: 'pwsh',
@@ -87,8 +87,8 @@ const SNAPSHOT = {
       id: 'ptc',
       isDefault: false,
       rows: [
-        { entryId: 'bash', moduleName: '@deepseek-ai/dsh-tool-bash', enabled: true, fiberPhase: null },
-        { entryId: 'bash-fork', moduleName: '@deepseek-ai/dsh-tool-bash', enabled: true, fiberPhase: null },
+        { entryId: 'bash', moduleName: '@berry-ai/harness-tool-bash', enabled: true, fiberPhase: null },
+        { entryId: 'bash-fork', moduleName: '@berry-ai/harness-tool-bash', enabled: true, fiberPhase: null },
         { entryId: 'fs', moduleName: '@berry-ai/harness-tool-fs', enabled: 'conditional', fiberPhase: null },
       ],
     },

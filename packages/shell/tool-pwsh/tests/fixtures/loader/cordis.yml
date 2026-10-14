@@ -19,12 +19,12 @@
   name: '@berry-ai/harness-subprocess-local'
 
 - id: bash
-  name: '@deepseek-ai/dsh-pwsh-local'
+  name: '@berry-ai/harness-pwsh-local'
   config:
     graceMs: 200
 
 - id: shell-env
-  name: '@deepseek-ai/dsh-shell-env'
+  name: '@berry-ai/harness-shell-env'
 
 - id: tasks
   name: '@berry-ai/harness-jobs-local'
@@ -33,4 +33,4 @@
   name: '@berry-ai/harness-tool-jobs'
 
 - id: tool-pwsh
-  name: '@deepseek-ai/dsh-tool-pwsh'
+  name: '@berry-ai/harness-tool-pwsh'

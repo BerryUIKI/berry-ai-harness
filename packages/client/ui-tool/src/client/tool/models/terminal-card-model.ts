@@ -272,7 +272,7 @@ function terminalSendCall(name: string, args: Record<string, unknown>): Terminal
 }
 
 /**
- * Parse the marker literals owned by `@deepseek-ai/dsh-shell/render` without
+ * Parse the marker literals owned by `@berry-ai/harness-shell/render` without
  * importing that Host-only package into the Client dependency graph.
  * @param text - rendered shell result text.
  * @returns output with a trailing exit-code or signal marker extracted.
