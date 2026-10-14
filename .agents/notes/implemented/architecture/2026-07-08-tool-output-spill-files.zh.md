@@ -90,7 +90,7 @@ ctx.tools.register(defineTool({
 
 ```yaml
 - id: web-fetch-http
-  name: '@deepseek-ai/dsh-web-fetch-http'
+  name: '@berry-ai/harness-web-fetch-http'
   config:
     maxBodyChars: 500000
 

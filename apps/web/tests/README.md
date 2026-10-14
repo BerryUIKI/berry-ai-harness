@@ -7,7 +7,7 @@ These tests boot the real web composition in-process and drive it with real brow
 After installing workspace dependencies, install the browsers and their system dependencies from the repository root:
 
 ```sh
-pnpm --filter @deepseek-ai/dsh-web-frontend exec playwright install --with-deps chromium webkit
+pnpm --filter @berry-ai/harness-web-frontend exec playwright install --with-deps chromium webkit
 ```
 
 On Linux, `--with-deps` installs dependencies through the system package manager. The persistent CI VM must provide these dependencies through image maintenance; CI installs only the browser binaries, as required by the [failover runbook](../../../.agents/notes/implemented/process/2026-07-26-ci-failover-runbook.md).

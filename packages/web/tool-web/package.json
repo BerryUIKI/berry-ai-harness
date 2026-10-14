@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tool-web",
+  "name": "@berry-ai/harness-tool-web",
   "description": "Model-facing web tools (web_search, web_fetch) over the DeepSeek Harness web capability seam (ctx.web)",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -31,7 +31,7 @@
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-web": "workspace:*"
+    "@berry-ai/harness-web": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-util-values": "workspace:*",
@@ -49,9 +49,9 @@
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-tool-call-timeout-policy": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-web": "workspace:*",
-    "@deepseek-ai/dsh-web-fetch-http": "workspace:*",
-    "@deepseek-ai/dsh-web-search-exa": "workspace:*",
+    "@berry-ai/harness-web": "workspace:*",
+    "@berry-ai/harness-web-fetch-http": "workspace:*",
+    "@berry-ai/harness-web-search-exa": "workspace:*",
     "@types/turndown": "^5.0.6",
     "@deepseek-ai/dsh-scope": "workspace:*",
     "@deepseek-ai/dsh-token-meter": "workspace:*"

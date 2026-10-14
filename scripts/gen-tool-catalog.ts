@@ -32,9 +32,9 @@ import { AttachmentStore } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentLimits, ImageAttachmentRef, SaveImageAttachment, StoredImageAttachment } from '@berry-ai/harness-attachment'
 import UserQuestionService from '@berry-ai/harness-user-questions'
 import PlanModeController from '@berry-ai/harness-plan-mode'
-import WebRuntime from '@deepseek-ai/dsh-web'
-import * as WebSearchExa from '@deepseek-ai/dsh-web-search-exa'
-import * as WebFetchLocal from '@deepseek-ai/dsh-web-fetch-http'
+import WebRuntime from '@berry-ai/harness-web'
+import * as WebSearchExa from '@berry-ai/harness-web-search-exa'
+import * as WebFetchLocal from '@berry-ai/harness-web-fetch-http'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'
 import type { SubagentProvider } from '@deepseek-ai/dsh-subagent'
 import * as ToolSubagentControl from '@deepseek-ai/dsh-tool-subagent-control'
@@ -74,7 +74,7 @@ import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
 import McpResources from '@berry-ai/harness-mcp-resources'
 import * as ToolSubagent from '@deepseek-ai/dsh-tool-subagent'
 import { registerListSubagentModels } from '../packages/subagent/tool-subagent/src/list-models.ts'
-import * as ToolWeb from '@deepseek-ai/dsh-tool-web'
+import * as ToolWeb from '@berry-ai/harness-tool-web'
 import WorkflowEngine from '@berry-ai/harness-workflow'
 import type { WorkflowRun, WorkflowStartRequest } from '@berry-ai/harness-workflow'
 import * as ToolRalph from '@deepseek-ai/dsh-tool-ralph'
@@ -658,7 +658,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
     },
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-web',
+    pkg: '@berry-ai/harness-tool-web',
     dir: 'tool-web',
     source: 'packages/web/tool-web/src/index.ts',
     requires: ['ctx.tools', 'ctx.web', 'ctx.systemPrompt'],

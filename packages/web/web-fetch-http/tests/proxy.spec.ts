@@ -2,8 +2,8 @@ import { createServer, type IncomingMessage, type Server, type ServerResponse } 
 import type { AddressInfo } from 'node:net'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { installProxyFromEnvironment } from '@berry-ai/harness-http-proxy'
-import { HttpFetchProvider } from '@deepseek-ai/dsh-web-fetch-http'
-import type { HttpFetchLimits } from '@deepseek-ai/dsh-web-fetch-http'
+import { HttpFetchProvider } from '@berry-ai/harness-web-fetch-http'
+import type { HttpFetchLimits } from '@berry-ai/harness-web-fetch-http'
 import { isNonPublicIpLiteral, publicHttpNetwork } from '../src/network.ts'
 
 const limits: HttpFetchLimits = {

@@ -166,7 +166,7 @@
     # Ordinary provider for the parsed Web flags. Its plugin-level injection
     # waits for cmdlineArgs; no launcher metadata or special row kind is needed.
     - id: web-startup
-      name: '@deepseek-ai/dsh-web-app/startup'
+      name: '@berry-ai/harness-web-app/startup'
 
     # ── layer 2: transport/service ──────────────────────────────────────────────
 
@@ -198,7 +198,7 @@
     # suppresses the prompt section for that agent while retaining the
     # host-owned shell variable.
     - id: web-runtime
-      name: '@deepseek-ai/dsh-web-app'
+      name: '@berry-ai/harness-web-app'
       inject: [webStartup]
       config:
         openBrowser: !!js ctx.webStartup.openBrowser

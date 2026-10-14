@@ -46,7 +46,7 @@ The plugin is `@berry-ai/harness-tool-call-timeout-policy`, a zero-config functi
 - id: timeout-policy
   name: '@berry-ai/harness-tool-call-timeout-policy'
 - id: tool-web
-  name: '@deepseek-ai/dsh-tool-web'
+  name: '@berry-ai/harness-tool-web'
   config:
     fetchTimeoutMs: 30000
     searchTimeoutMs: 30000

@@ -4,7 +4,7 @@
  * authenticates with the account token when the account service allows the search endpoint;
  * every other search reuses `DEEPSEEK_API_KEY`. The provider does not reuse `DEEPSEEK_BASE_URL`;
  * auxiliary search has its own endpoint configuration.
- * @module @deepseek-ai/dsh-web-search-deepseek
+ * @module @berry-ai/harness-web-search-deepseek
  */
 import type { Volatile } from '@deepseek-ai/cordis'
 
@@ -15,7 +15,7 @@ import { credentialRef } from '@berry-ai/harness-credentials'
 import type {} from '@berry-ai/harness-deepseek-account'
 import { launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
 import type {} from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-web'
+import type {} from '@berry-ai/harness-web'
 import {
   DeepSeekSearchProvider,
   DEEPSEEK_DEFAULT_API_VERSION,

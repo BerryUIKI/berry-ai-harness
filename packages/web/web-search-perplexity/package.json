@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-web-search-perplexity",
+  "name": "@berry-ai/harness-web-search-perplexity",
   "description": "Perplexity-backed search provider for the DeepSeek Harness web capability seam (ctx.web)",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -28,7 +28,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@berry-ai/harness-launch-environment": "workspace:*",
-    "@deepseek-ai/dsh-web": "workspace:*",
+    "@berry-ai/harness-web": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@berry-ai/harness-launch-environment": "workspace:*",
-    "@deepseek-ai/dsh-web": "workspace:*",
+    "@berry-ai/harness-web": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-http-proxy": "workspace:*"
   }

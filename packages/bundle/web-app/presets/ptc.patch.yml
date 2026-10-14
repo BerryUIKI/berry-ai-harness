@@ -128,7 +128,7 @@
             config:
               allowParallelInProgress: true
           - id: tool-web
-            name: '@deepseek-ai/dsh-tool-web'
+            name: '@berry-ai/harness-tool-web'
             config:
               fetch: true
               searchTimeoutMs: 60000

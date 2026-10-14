@@ -3,7 +3,7 @@ description: "The model-facing web tools (web_search, web_fetch) over ctx.web: h
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-web
+# @berry-ai/harness-tool-web
 
 English | [中文](README.zh.md)
 
@@ -36,9 +36,9 @@ Choose this package when the model should discover current information or read a
 Load the web service, at least one backend, and this package; both tools register by default.
 
 ```yaml
-- name: '@deepseek-ai/dsh-web'
-- name: '@deepseek-ai/dsh-web-search-exa'
-- name: '@deepseek-ai/dsh-tool-web'
+- name: '@berry-ai/harness-web'
+- name: '@berry-ai/harness-web-search-exa'
+- name: '@berry-ai/harness-tool-web'
 ```
 
 | Field | Default | Meaning |

@@ -7,7 +7,7 @@ import WebRuntime, {
   type WebSearchProvider,
   type WebSearchRequest,
   type WebSearchResult,
-} from '@deepseek-ai/dsh-web'
+} from '@berry-ai/harness-web'
 
 /** A scripted search provider for contract tests. */
 function makeSearchProvider(

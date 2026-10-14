@@ -45,7 +45,7 @@ You bring your own commander program: declare your flags and your actions, and t
 
 ```yaml
 - id: web-startup
-  name: '@deepseek-ai/dsh-web-app/startup'
+  name: '@berry-ai/harness-web-app/startup'
 ```
 
 Rows configured from the parsed values inject the published service and read it directly in their config:

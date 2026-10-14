@@ -458,21 +458,21 @@
     # shipped DeepSeek route gets 60s while the provider-neutral tool default
     # remains 30s.
     - id: web
-      name: '@deepseek-ai/dsh-web'
+      name: '@berry-ai/harness-web'
       config:
         searchProvider: deepseek-official
         fetchProvider: http
 
     - id: web-search-deepseek
-      name: '@deepseek-ai/dsh-web-search-deepseek'
+      name: '@berry-ai/harness-web-search-deepseek'
       config:
         apiKeyEnv: DEEPSEEK_API_KEY
 
     - id: web-fetch-http
-      name: '@deepseek-ai/dsh-web-fetch-http'
+      name: '@berry-ai/harness-web-fetch-http'
 
     - id: tool-web
-      name: '@deepseek-ai/dsh-tool-web'
+      name: '@berry-ai/harness-tool-web'
       config:
         fetch: true
         searchTimeoutMs: 60000

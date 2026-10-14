@@ -45,7 +45,7 @@ kind: "package-library"
 
 ```yaml
 - id: web-startup
-  name: '@deepseek-ai/dsh-web-app/startup'
+  name: '@berry-ai/harness-web-app/startup'
 ```
 
 由解析值配置的行注入发布的服务，并在其配置中直接读取它：

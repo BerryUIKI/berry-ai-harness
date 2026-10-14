@@ -46,7 +46,7 @@ catch 是基础 `next`（而非 waterfall 之外的东西）这一点至关重�
 - id: timeout-policy
   name: '@berry-ai/harness-tool-call-timeout-policy'
 - id: tool-web
-  name: '@deepseek-ai/dsh-tool-web'
+  name: '@berry-ai/harness-tool-web'
   config:
     fetchTimeoutMs: 30000
     searchTimeoutMs: 30000
