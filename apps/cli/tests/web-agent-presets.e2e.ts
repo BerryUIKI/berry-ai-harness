@@ -26,7 +26,7 @@ const SETTINGS_NAMESPACE = 'agent-preset-registry'
 const SUBAGENT_MODEL_SELECTION_SETTINGS_NAMESPACE = 'subagent-model-selection-settings'
 import { applyChildComposition, childSessionMeta } from '@deepseek-ai/dsh-subagent'
 import { ToolCallId } from '@deepseek-ai/dsh-llm'
-import type {} from '@deepseek-ai/dsh-compaction-basic'
+import type {} from '@berry-ai/harness-compaction-basic'
 import type {} from '@berry-ai/harness-skill'
 import type {} from '@deepseek-ai/dsh-tools'
 // Type-only: resolves `ctx.get('sessionProjections')` and `ctx.get('tokenMeter')`.

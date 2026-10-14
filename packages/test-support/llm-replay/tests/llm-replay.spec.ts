@@ -5,7 +5,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { SESSION_FORMAT_VERSION, SessionSeq } from '@deepseek-ai/dsh-session'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import { CompactionId } from '@deepseek-ai/dsh-compaction'
+import { CompactionId } from '@berry-ai/harness-compaction'
 import DeepSeekLlmApiExtensionRegistry from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
 import LlmRuntime, {
   AssistantStreamAccumulator,

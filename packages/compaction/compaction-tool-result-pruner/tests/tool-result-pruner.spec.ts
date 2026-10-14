@@ -1,4 +1,4 @@
-import { imageOffloadProjection } from '@deepseek-ai/dsh-compaction-image-offload/projection'
+import { imageOffloadProjection } from '@berry-ai/harness-compaction-image-offload/projection'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { ToolCallId , createMessage, createToolResultMessage } from '@deepseek-ai/dsh-llm'
@@ -16,8 +16,8 @@ import ToolResultPruner, {
   DEFAULTS,
   PRUNE_MARKER,
   resolveConfig,
-} from '@deepseek-ai/dsh-compaction-tool-result-pruner'
-import type { ToolResultPruneConfig } from '@deepseek-ai/dsh-compaction-tool-result-pruner'
+} from '@berry-ai/harness-compaction-tool-result-pruner'
+import type { ToolResultPruneConfig } from '@berry-ai/harness-compaction-tool-result-pruner'
 
 const MODEL = 'test-model'
 const SMALL: ToolResultPruneConfig = {

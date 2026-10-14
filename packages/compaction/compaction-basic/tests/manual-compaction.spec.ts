@@ -1,12 +1,12 @@
-import { imageOffloadProjection } from '@deepseek-ai/dsh-compaction-image-offload/projection'
+import { imageOffloadProjection } from '@berry-ai/harness-compaction-image-offload/projection'
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import AgentLoop from '@deepseek-ai/dsh-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { CommandId } from '@berry-ai/harness-commands/brand'
-import { BasicCompactionEngine } from '@deepseek-ai/dsh-compaction-basic'
-import { CompactionId, isCompactCheckpointSource, ManualCompactionError } from '@deepseek-ai/dsh-compaction'
-import type { CompactionResult } from '@deepseek-ai/dsh-compaction'
+import { BasicCompactionEngine } from '@berry-ai/harness-compaction-basic'
+import { CompactionId, isCompactCheckpointSource, ManualCompactionError } from '@berry-ai/harness-compaction'
+import type { CompactionResult } from '@berry-ai/harness-compaction'
 import {
   createAssistantMessage,
   createUserMessage,
@@ -29,7 +29,7 @@ import type { Agent } from '@deepseek-ai/dsh-agent'
 import type {
   SummarizationInput,
   SummaryResult,
-} from '@deepseek-ai/dsh-compaction-basic/src/summarizer.ts'
+} from '@berry-ai/harness-compaction-basic/src/summarizer.ts'
 
 declare module '@deepseek-ai/dsh-llm' {
   interface MessageSourceMap {

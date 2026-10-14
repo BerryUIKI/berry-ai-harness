@@ -2125,11 +2125,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-command-compact",
+      "name": "@berry-ai/harness-command-compact",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-command-compact",
+          "location": "node_modules/@berry-ai/harness-command-compact",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2149,11 +2149,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-compaction",
+      "name": "@berry-ai/harness-compaction",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-compaction",
+          "location": "node_modules/@berry-ai/harness-compaction",
           "direct": false,
           "optional": false,
           "peer": true
@@ -2161,11 +2161,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-compaction-basic",
+      "name": "@berry-ai/harness-compaction-basic",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-compaction-basic",
+          "location": "node_modules/@berry-ai/harness-compaction-basic",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2173,11 +2173,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-compaction-tool-result-pruner",
+      "name": "@berry-ai/harness-compaction-tool-result-pruner",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-compaction-tool-result-pruner",
+          "location": "node_modules/@berry-ai/harness-compaction-tool-result-pruner",
           "direct": true,
           "optional": false,
           "peer": false

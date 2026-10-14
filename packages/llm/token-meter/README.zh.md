@@ -58,7 +58,7 @@ const price = ctx.tokenMeter.estimateMessage(message)
 
 ```yaml
 - name: '@deepseek-ai/dsh-token-meter'
-- name: '@deepseek-ai/dsh-compaction-basic'
+- name: '@berry-ai/harness-compaction-basic'
 ```
 
 两个插件都有可用默认值。meter 只消费可选的 `llm` 服务，且仅用于解析路由声明的请求图片定价；压缩保持可选。部署会在 LLM（大语言模型）适配器上配置容量与图片定价，并在 `dsh-compaction-basic` 上配置压缩策略。

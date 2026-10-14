@@ -48,7 +48,7 @@
     "@deepseek-ai/dsh-agent-loop": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-bash-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-compaction": "workspace:*",
+    "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
     "@berry-ai/harness-fs-observation-policy": "workspace:*",
     "@berry-ai/harness-fs-sandbox": "workspace:*",

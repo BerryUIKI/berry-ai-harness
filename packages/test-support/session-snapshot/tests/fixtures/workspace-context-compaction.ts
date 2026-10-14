@@ -1,6 +1,6 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/dsh-agent'
-import { CompactionId, compactCheckpointSource } from '@deepseek-ai/dsh-compaction'
+import { CompactionId, compactCheckpointSource } from '@berry-ai/harness-compaction'
 import { createUserMessage } from '@deepseek-ai/dsh-llm'
 import type {} from '@deepseek-ai/dsh-tools'
 

@@ -15,7 +15,7 @@
     compression: none
 
 - id: compaction-basic
-  name: '@deepseek-ai/dsh-compaction-basic'
+  name: '@berry-ai/harness-compaction-basic'
   config:
     thresholdRatio: 0.8
     headroomTokens: 1800

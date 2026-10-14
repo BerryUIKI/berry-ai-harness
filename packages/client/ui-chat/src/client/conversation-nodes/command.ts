@@ -2,8 +2,8 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {
   CommandNode, CompactionSummaryNode, ConversationMatch, ConversationNodeContext, ConversationNodeDefinition,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { CompactionCheckpointSource } from '@deepseek-ai/dsh-compaction/checkpoint'
-import type {} from '@deepseek-ai/dsh-compaction/types'
+import type { CompactionCheckpointSource } from '@berry-ai/harness-compaction/checkpoint'
+import type {} from '@berry-ai/harness-compaction/types'
 import type {} from '@berry-ai/harness-commands/types'
 import { isReplacementSurfaceEvent } from '@deepseek-ai/dsh-session/surface'
 import type { ManualCompactionChatData } from '../contract/chat-nodes.ts'

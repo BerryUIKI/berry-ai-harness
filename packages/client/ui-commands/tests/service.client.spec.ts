@@ -322,7 +322,7 @@ describe('candidates', () => {
   it('localizes canonical built-in and contribution descriptions on every candidate request', async () => {
     let locale = 'zh'
     const commands: CommandDescriptor[] = [
-      { definitionId: CommandDefinitionId('@deepseek-ai/dsh-command-compact'), name: 'compact', description: 'Compact older conversation history' },
+      { definitionId: CommandDefinitionId('@berry-ai/harness-command-compact'), name: 'compact', description: 'Compact older conversation history' },
       { name: 'goal', description: 'scoped goal override' },
       { name: 'custom', description: 'plugin-authored copy' },
     ]
@@ -359,7 +359,7 @@ describe('candidates', () => {
   describe('menu presentation (design doc for #3567)', () => {
     /** First-party definitions plus an unrelated command, in Host registration order. */
     const SHIPPED: CommandDescriptor[] = [
-      { definitionId: CommandDefinitionId('@deepseek-ai/dsh-command-compact'), name: 'compact', description: 'Compact older conversation history' },
+      { definitionId: CommandDefinitionId('@berry-ai/harness-command-compact'), name: 'compact', description: 'Compact older conversation history' },
       { definitionId: CommandDefinitionId('@deepseek-ai/dsh-session-log-export'), name: 'export', description: 'Download this Session log as a ZIP archive' },
       { definitionId: CommandDefinitionId('@berry-ai/harness-command-feedback'), name: 'feedback', description: 'Record feedback about this session', input: { hint: '<text>' } },
       { definitionId: CommandDefinitionId('@berry-ai/harness-command-goal'), name: 'goal', description: 'Set or view the goal for a long-running task', input: { hint: '<objective>', attachments: true } },

@@ -44,7 +44,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-agent-loop": "workspace:*",
-    "@deepseek-ai/dsh-compaction": "workspace:*",
+    "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",

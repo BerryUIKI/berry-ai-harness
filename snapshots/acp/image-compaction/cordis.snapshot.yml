@@ -59,7 +59,7 @@
 # threshold, so a triggered compaction proves the routed model's image pricing
 # drove the pressure decision.
 - id: compaction-basic
-  name: '@deepseek-ai/dsh-compaction-basic'
+  name: '@berry-ai/harness-compaction-basic'
   config:
     headroomTokens: 0
     maxTokens: 8192

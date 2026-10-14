@@ -10,8 +10,8 @@ import LlmRuntime from '@deepseek-ai/dsh-llm'
 import SessionStore from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import TokenMeter from '@deepseek-ai/dsh-token-meter'
-import BasicCompactionEngine from '@deepseek-ai/dsh-compaction-basic'
-import ToolResultPruner from '@deepseek-ai/dsh-compaction-tool-result-pruner'
+import BasicCompactionEngine from '@berry-ai/harness-compaction-basic'
+import ToolResultPruner from '@berry-ai/harness-compaction-tool-result-pruner'
 
 let root: string | undefined
 let context: Context | undefined
@@ -37,8 +37,8 @@ async function loadYaml(lines: readonly string[]): Promise<Context> {
     ['@deepseek-ai/dsh-session', SessionStore],
     ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
     ['@deepseek-ai/dsh-token-meter', TokenMeter],
-    ['@deepseek-ai/dsh-compaction-tool-result-pruner', ToolResultPruner],
-    ['@deepseek-ai/dsh-compaction-basic', BasicCompactionEngine],
+    ['@berry-ai/harness-compaction-tool-result-pruner', ToolResultPruner],
+    ['@berry-ai/harness-compaction-basic', BasicCompactionEngine],
   ])
   context.loader.internal = {
     version: 'v2',
@@ -62,12 +62,12 @@ describe('real Loader composition', () => {
       "- name: '@deepseek-ai/dsh-session'",
       "- name: '@deepseek-ai/dsh-session-projection'",
       "- name: '@deepseek-ai/dsh-token-meter'",
-      "- name: '@deepseek-ai/dsh-compaction-tool-result-pruner'",
+      "- name: '@berry-ai/harness-compaction-tool-result-pruner'",
       '  config:',
       '    thresholdChars: 100',
       '    headChars: 20',
       '    tailChars: 10',
-      "- name: '@deepseek-ai/dsh-compaction-basic'",
+      "- name: '@berry-ai/harness-compaction-basic'",
       '  config:',
       '    thresholdRatio: 0.5',
       '    headroomTokens: 4000',

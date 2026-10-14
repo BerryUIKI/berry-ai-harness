@@ -1,13 +1,13 @@
 /**
  * Basic replay-aware compaction backend.
  *
- * @module @deepseek-ai/dsh-compaction-basic
+ * @module @berry-ai/harness-compaction-basic
  */
 
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { CompactionEngine, ManualCompactionError } from '@deepseek-ai/dsh-compaction'
-import type { CompactionResult, CompactionTrigger } from '@deepseek-ai/dsh-compaction'
+import { CompactionEngine, ManualCompactionError } from '@berry-ai/harness-compaction'
+import type { CompactionResult, CompactionTrigger } from '@berry-ai/harness-compaction'
 import type { Session, SessionSeq } from '@deepseek-ai/dsh-session'
 import { CONTEXT_WINDOW_EXCEEDED_CODE } from '@deepseek-ai/dsh-llm'
 import type { LlmCallConfig } from '@deepseek-ai/dsh-llm'
@@ -15,7 +15,7 @@ import { assertNever } from '@berry-ai/harness-util-values'
 import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
 import type { CommandId } from '@berry-ai/harness-commands/brand'
 // Type-only: makes the optional sibling service available to `ctx.get()`.
-import type {} from '@deepseek-ai/dsh-compaction-tool-result-pruner'
+import type {} from '@berry-ai/harness-compaction-tool-result-pruner'
 import {
   resolveCompactSpec,
   resolveConfig,
