@@ -82,7 +82,7 @@ describe('gen-tool-catalog collectToolCatalog', () => {
     try {
       process.env.PATH = ''
       const catalog = await collectToolCatalog()
-      const search = catalog.find(entry => entry.pkg === '@deepseek-ai/dsh-tool-fs-search')
+      const search = catalog.find(entry => entry.pkg === '@berry-ai/harness-tool-fs-search')
       expect(search?.schemas.map(s => s.name).sort()).toEqual(['glob', 'grep'])
     } finally {
       if (oldPath === undefined) delete process.env.PATH

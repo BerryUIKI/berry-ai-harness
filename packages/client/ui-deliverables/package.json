@@ -76,8 +76,8 @@
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
     "@deepseek-ai/dsh-api-workspace-files": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-fs-local": "workspace:*",
+    "@berry-ai/harness-fs": "workspace:*",
+    "@berry-ai/harness-fs-local": "workspace:*",
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-client-ui-settings": "workspace:*"

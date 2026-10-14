@@ -1,7 +1,7 @@
 /**
  * Resolution options for filesystem calls in the Session's current directory.
  * Non-agent calls leave directory defaults to the filesystem provider.
- * @module @deepseek-ai/dsh-tool-fs/session-cwd
+ * @module @berry-ai/harness-tool-fs/session-cwd
  */
 
 import type { Context } from '@deepseek-ai/cordis'

@@ -16,7 +16,7 @@
  * artifact is the formatted result saved through `ctx.spillStore.saveText()`
  * ({@link trySaveFormattedResult}).
  *
- * @module @deepseek-ai/dsh-tool-fs-search/search-core
+ * @module @berry-ai/harness-tool-fs-search/search-core
  */
 
 import { existsSync } from 'node:fs'
@@ -332,9 +332,9 @@ export function previewLine(line: string, maxBytes: number): string {
 /**
  * Apply the shared inline cap to a canonical `grep` match list: preview each
  * retained line to `maxLineBytes` and keep the first `maxMatches`. The single
- * retention pass both the model-facing render ({@link module:@deepseek-ai/dsh-tool-fs-search/grep}
+ * retention pass both the model-facing render ({@link module:@berry-ai/harness-tool-fs-search/grep}
  * `formatGrepOutput`) and the search-card projection
- * ({@link module:@deepseek-ai/dsh-tool-fs-search/presentation} `grepSearchMeta`)
+ * ({@link module:@berry-ai/harness-tool-fs-search/presentation} `grepSearchMeta`)
  * consume, so text and card never disagree about which matches survived.
  *
  * @param matches - every match the search parsed (the canonical value's matches).

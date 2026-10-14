@@ -65,7 +65,7 @@
     maxDepth: 1
 
 - id: fs-sandbox
-  name: '@deepseek-ai/dsh-fs-sandbox'
+  name: '@berry-ai/harness-fs-sandbox'
   config:
     cwd: !!js process.cwd()
 

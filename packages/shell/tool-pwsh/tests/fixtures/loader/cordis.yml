@@ -4,7 +4,7 @@
   name: '@deepseek-ai/dsh-system-prompt'
 
 - id: fs
-  name: '@deepseek-ai/dsh-fs-local'
+  name: '@berry-ai/harness-fs-local'
 
 - id: session-projections
   name: '@deepseek-ai/dsh-session-projection'

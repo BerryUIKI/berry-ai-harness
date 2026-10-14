@@ -7,7 +7,7 @@ import { execFile } from 'node:child_process'
 import { pathToFileURL } from 'node:url'
 import { promisify } from 'node:util'
 import { Context } from '@deepseek-ai/cordis'
-import LocalFileSystem from '@deepseek-ai/dsh-fs-local'
+import LocalFileSystem from '@berry-ai/harness-fs-local'
 import { deadline } from '@berry-ai/harness-timeout'
 import { canonicalizeWorkspace, readHostSource } from '@deepseek-ai/dsh-lsp-stdio'
 

@@ -29,7 +29,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-ssh": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
+    "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*"
   },
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-ssh": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
+    "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*"
   }

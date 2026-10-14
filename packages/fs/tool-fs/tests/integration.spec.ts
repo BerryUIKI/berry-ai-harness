@@ -16,12 +16,12 @@ import AgentLoop from '@deepseek-ai/dsh-agent-loop'
 import { PtcRuntime, type PtcRunRequest, type PtcRunResult, type PtcRunSpec } from '@berry-ai/harness-ptc-runtime'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import { ToolCallId } from '@deepseek-ai/dsh-llm'
-import type { FsVersion } from '@deepseek-ai/dsh-fs'
+import type { FsVersion } from '@berry-ai/harness-fs'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime, { TOOL_ABORTED_BEFORE_DISPATCH } from '@deepseek-ai/dsh-tools'
-import { LocalFileSystem } from '@deepseek-ai/dsh-fs-local'
-import * as FsPolicy from '@deepseek-ai/dsh-fs-observation-policy'
-import * as ToolFs from '@deepseek-ai/dsh-tool-fs'
+import { LocalFileSystem } from '@berry-ai/harness-fs-local'
+import * as FsPolicy from '@berry-ai/harness-fs-observation-policy'
+import * as ToolFs from '@berry-ai/harness-tool-fs'
 
 const testToolSignal = new AbortController().signal
 

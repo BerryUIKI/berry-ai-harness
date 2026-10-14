@@ -7,7 +7,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import { ToolCallId, createAssistantMessage, createToolResultMessage } from '@deepseek-ai/dsh-llm'
 import type { Session } from '@deepseek-ai/dsh-session'
 import type {} from '@deepseek-ai/dsh-tools'
-import type {} from '@deepseek-ai/dsh-fs'
+import type {} from '@berry-ai/harness-fs'
 import type { WorkspaceChangesSummary } from '../src/types.ts'
 
 let callNumber = 0

@@ -157,11 +157,11 @@ The bundled runtime includes `str_replace_editor`, but `sdk-minimal` omits it fr
 ```yaml
 - insert:
     - id: fs-local
-      name: '@deepseek-ai/dsh-fs-local'
+      name: '@berry-ai/harness-fs-local'
       config:
         cwd: !!js process.cwd()
     - id: tool-str-replace-editor
-      name: '@deepseek-ai/dsh-tool-str-replace-editor'
+      name: '@berry-ai/harness-tool-str-replace-editor'
 ```
 
 Pass `patches=("/absolute/path/to/editor.patch.yml",)` when constructing `DeepSeekHarness(profile="sdk-minimal", ...)`, or put the patch in `$DSH_HOME/profiles/sdk-minimal/cordis.patch.yml` for persistent configuration. On the next runtime launch, model requests include `str_replace_editor` beside the persistent shell. The local filesystem provider uses the runtime working directory for relative paths; like the minimal shell, it does not confine access to that directory. For the standard `sdk` profile, insert only the editor row so it uses the existing filesystem provider and policies.

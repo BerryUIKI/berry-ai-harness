@@ -388,7 +388,7 @@ importers:
       '@deepseek-ai/dsh-experimental-voice-input-bundle':
         specifier: workspace:*
         version: link:../../packages/experimental/voice-input-bundle
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../packages/fs/fs-local
       '@deepseek-ai/dsh-headless':
@@ -439,10 +439,10 @@ importers:
       '@deepseek-ai/dsh-tool-cordis':
         specifier: workspace:*
         version: link:../../packages/extensions/tool-cordis
-      '@deepseek-ai/dsh-tool-fs':
+      '@berry-ai/harness-tool-fs':
         specifier: workspace:*
         version: link:../../packages/fs/tool-fs
-      '@deepseek-ai/dsh-tool-fs-search':
+      '@berry-ai/harness-tool-fs-search':
         specifier: workspace:*
         version: link:../../packages/fs/tool-fs-search
       '@deepseek-ai/dsh-tool-pwsh':
@@ -454,7 +454,7 @@ importers:
       '@deepseek-ai/dsh-tool-skill':
         specifier: workspace:*
         version: link:../../packages/skill/tool-skill
-      '@deepseek-ai/dsh-tool-str-replace-editor':
+      '@berry-ai/harness-tool-str-replace-editor':
         specifier: workspace:*
         version: link:../../packages/fs/tool-str-replace-editor
       '@deepseek-ai/dsh-tool-subagent':
@@ -536,10 +536,10 @@ importers:
       '@deepseek-ai/dsh-experimental-tool-agent-team':
         specifier: workspace:*
         version: link:../../packages/experimental/tool-agent-team
-      '@deepseek-ai/dsh-fs-observation-policy':
+      '@berry-ai/harness-fs-observation-policy':
         specifier: workspace:*
         version: link:../../packages/fs/fs-observation-policy
-      '@deepseek-ai/dsh-fs-sandbox':
+      '@berry-ai/harness-fs-sandbox':
         specifier: workspace:*
         version: link:../../packages/fs/fs-sandbox
       '@deepseek-ai/dsh-hooks-claude-code':
@@ -1488,10 +1488,10 @@ importers:
       '@deepseek-ai/dsh-file-reference':
         specifier: workspace:*
         version: link:../../context/file-reference
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -1628,7 +1628,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
       '@deepseek-ai/dsh-remote-mock':
@@ -1729,7 +1729,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
       '@deepseek-ai/dsh-remote-mock':
@@ -2185,13 +2185,13 @@ importers:
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
         specifier: workspace:*
         version: link:../../llm/deepseek-llm-api-extensions
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-fs-observation-policy':
+      '@berry-ai/harness-fs-observation-policy':
         specifier: workspace:*
         version: link:../../fs/fs-observation-policy
-      '@deepseek-ai/dsh-fs-sandbox':
+      '@berry-ai/harness-fs-sandbox':
         specifier: workspace:*
         version: link:../../fs/fs-sandbox
       '@deepseek-ai/dsh-llm':
@@ -2272,10 +2272,10 @@ importers:
       '@deepseek-ai/dsh-tool-bash':
         specifier: workspace:*
         version: link:../../shell/tool-bash
-      '@deepseek-ai/dsh-tool-fs':
+      '@berry-ai/harness-tool-fs':
         specifier: workspace:*
         version: link:../../fs/tool-fs
-      '@deepseek-ai/dsh-tool-fs-search':
+      '@berry-ai/harness-tool-fs-search':
         specifier: workspace:*
         version: link:../../fs/tool-fs-search
       '@deepseek-ai/dsh-tool-pwsh':
@@ -2358,7 +2358,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
       '@deepseek-ai/dsh-llm':
@@ -2437,7 +2437,7 @@ importers:
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
         specifier: workspace:*
         version: link:../../llm/deepseek-llm-api-extensions
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -2852,10 +2852,10 @@ importers:
       '@deepseek-ai/dsh-tool-cordis':
         specifier: workspace:*
         version: link:../../extensions/tool-cordis
-      '@deepseek-ai/dsh-tool-fs':
+      '@berry-ai/harness-tool-fs':
         specifier: workspace:*
         version: link:../../fs/tool-fs
-      '@deepseek-ai/dsh-tool-fs-search':
+      '@berry-ai/harness-tool-fs-search':
         specifier: workspace:*
         version: link:../../fs/tool-fs-search
       '@deepseek-ai/dsh-tool-pwsh':
@@ -2904,10 +2904,10 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-session':
@@ -3795,10 +3795,10 @@ importers:
       '@deepseek-ai/dsh-client-ui-tool':
         specifier: workspace:*
         version: link:../ui-tool
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -6683,10 +6683,10 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -6707,7 +6707,7 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-fs':
+      '@berry-ai/harness-tool-fs':
         specifier: workspace:*
         version: link:../../fs/tool-fs
       '@deepseek-ai/dsh-tools':
@@ -6741,7 +6741,7 @@ importers:
       '@deepseek-ai/dsh-file-reference':
         specifier: workspace:*
         version: link:../file-reference
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-session-projection':
@@ -6796,7 +6796,7 @@ importers:
       '@deepseek-ai/dsh-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -6826,7 +6826,7 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-fs':
+      '@berry-ai/harness-tool-fs':
         specifier: workspace:*
         version: link:../../fs/tool-fs
       '@deepseek-ai/dsh-tools':
@@ -7273,10 +7273,10 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -7334,10 +7334,10 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -7346,10 +7346,10 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-tool-fs':
+      '@berry-ai/harness-tool-fs':
         specifier: workspace:*
         version: link:../../fs/tool-fs
-      '@deepseek-ai/dsh-tool-str-replace-editor':
+      '@berry-ai/harness-tool-str-replace-editor':
         specifier: workspace:*
         version: link:../../fs/tool-str-replace-editor
       '@deepseek-ai/dsh-tools':
@@ -7389,7 +7389,7 @@ importers:
       '@deepseek-ai/dsh-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
       '@deepseek-ai/dsh-session':
@@ -7534,13 +7534,13 @@ importers:
       '@deepseek-ai/dsh-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-fs-observation-policy':
+      '@berry-ai/harness-fs-observation-policy':
         specifier: workspace:*
         version: link:../../fs/fs-observation-policy
-      '@deepseek-ai/dsh-fs-sandbox':
+      '@berry-ai/harness-fs-sandbox':
         specifier: workspace:*
         version: link:../../fs/fs-sandbox
       '@deepseek-ai/dsh-llm':
@@ -7573,7 +7573,7 @@ importers:
       '@deepseek-ai/dsh-tool-bash':
         specifier: workspace:*
         version: link:../../shell/tool-bash
-      '@deepseek-ai/dsh-tool-fs':
+      '@berry-ai/harness-tool-fs':
         specifier: workspace:*
         version: link:../../fs/tool-fs
       '@deepseek-ai/dsh-tool-subagent':
@@ -7727,7 +7727,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -7885,10 +7885,10 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -8340,7 +8340,7 @@ importers:
       '@deepseek-ai/dsh-bash-local':
         specifier: workspace:*
         version: link:../../shell/bash-local
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-hook-protocol':
@@ -9049,7 +9049,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -9392,10 +9392,10 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-session':
@@ -9669,7 +9669,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../fs
       '@deepseek-ai/dsh-llm':
@@ -9681,7 +9681,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../fs
       '@deepseek-ai/dsh-llm':
@@ -9699,10 +9699,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../fs-local
       '@deepseek-ai/dsh-session-projection':
@@ -9748,13 +9748,13 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../fs-local
-      '@deepseek-ai/dsh-fs-observation-policy':
+      '@berry-ai/harness-fs-observation-policy':
         specifier: workspace:*
         version: link:../fs-observation-policy
       '@deepseek-ai/dsh-llm':
@@ -9861,16 +9861,16 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../fs-local
-      '@deepseek-ai/dsh-fs-observation-policy':
+      '@berry-ai/harness-fs-observation-policy':
         specifier: workspace:*
         version: link:../fs-observation-policy
-      '@deepseek-ai/dsh-fs-sandbox':
+      '@berry-ai/harness-fs-sandbox':
         specifier: workspace:*
         version: link:../fs-sandbox
       '@deepseek-ai/dsh-llm':
@@ -10679,7 +10679,7 @@ importers:
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
         specifier: workspace:*
         version: link:../deepseek-llm-api-extensions
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
       '@deepseek-ai/dsh-llm':
@@ -10801,7 +10801,7 @@ importers:
       '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
       '@deepseek-ai/dsh-llm':
@@ -10985,10 +10985,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -11031,7 +11031,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -11362,10 +11362,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-session':
@@ -12355,7 +12355,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -12401,10 +12401,10 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -12786,7 +12786,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -12918,7 +12918,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
       '@deepseek-ai/dsh-skill':
@@ -13106,10 +13106,10 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -13127,7 +13127,7 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../llm/token-meter
-      '@deepseek-ai/dsh-tool-fs':
+      '@berry-ai/harness-tool-fs':
         specifier: workspace:*
         version: link:../../fs/tool-fs
       '@deepseek-ai/dsh-tools':
@@ -13158,7 +13158,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
 
@@ -13226,13 +13226,13 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-fs-sandbox':
+      '@berry-ai/harness-fs-sandbox':
         specifier: workspace:*
         version: link:../../fs/fs-sandbox
       '@deepseek-ai/dsh-lsp':
@@ -13304,13 +13304,13 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-fs-sandbox':
+      '@berry-ai/harness-fs-sandbox':
         specifier: workspace:*
         version: link:../../fs/fs-sandbox
       '@deepseek-ai/dsh-llm':
@@ -13484,7 +13484,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs-sandbox':
+      '@berry-ai/harness-fs-sandbox':
         specifier: workspace:*
         version: link:../../fs/fs-sandbox
       '@deepseek-ai/dsh-llm':
@@ -13511,7 +13511,7 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-fs':
+      '@berry-ai/harness-tool-fs':
         specifier: workspace:*
         version: link:../../fs/tool-fs
       '@deepseek-ai/dsh-tools':
@@ -14153,7 +14153,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -14419,7 +14419,7 @@ importers:
       '@deepseek-ai/dsh-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
       '@deepseek-ai/dsh-llm':
@@ -14950,10 +14950,10 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
       '@deepseek-ai/dsh-llm':
@@ -15284,16 +15284,16 @@ importers:
       '@deepseek-ai/dsh-file-reference':
         specifier: workspace:*
         version: link:../../packages/context/file-reference
-      '@deepseek-ai/dsh-fs':
+      '@berry-ai/harness-fs':
         specifier: workspace:*
         version: link:../../packages/fs/fs
-      '@deepseek-ai/dsh-fs-local':
+      '@berry-ai/harness-fs-local':
         specifier: workspace:*
         version: link:../../packages/fs/fs-local
-      '@deepseek-ai/dsh-fs-observation-policy':
+      '@berry-ai/harness-fs-observation-policy':
         specifier: workspace:*
         version: link:../../packages/fs/fs-observation-policy
-      '@deepseek-ai/dsh-fs-sandbox':
+      '@berry-ai/harness-fs-sandbox':
         specifier: workspace:*
         version: link:../../packages/fs/fs-sandbox
       '@deepseek-ai/dsh-host-plugin-inventory':
@@ -15416,10 +15416,10 @@ importers:
       '@deepseek-ai/dsh-tool-cordis':
         specifier: workspace:*
         version: link:../../packages/extensions/tool-cordis
-      '@deepseek-ai/dsh-tool-fs':
+      '@berry-ai/harness-tool-fs':
         specifier: workspace:*
         version: link:../../packages/fs/tool-fs
-      '@deepseek-ai/dsh-tool-fs-search':
+      '@berry-ai/harness-tool-fs-search':
         specifier: workspace:*
         version: link:../../packages/fs/tool-fs-search
       '@deepseek-ai/dsh-tool-pwsh':
@@ -15431,7 +15431,7 @@ importers:
       '@deepseek-ai/dsh-tool-skill':
         specifier: workspace:*
         version: link:../../packages/skill/tool-skill
-      '@deepseek-ai/dsh-tool-str-replace-editor':
+      '@berry-ai/harness-tool-str-replace-editor':
         specifier: workspace:*
         version: link:../../packages/fs/tool-str-replace-editor
       '@deepseek-ai/dsh-tool-subagent':

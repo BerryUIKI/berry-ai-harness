@@ -39,7 +39,7 @@
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-attachment": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
+    "@berry-ai/harness-fs": "workspace:*",
     "@deepseek-ai/dsh-token-meter": "workspace:*"
   },
   "dependencies": {
@@ -54,20 +54,20 @@
     "@berry-ai/harness-spill": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-fs-local": "workspace:*",
+    "@berry-ai/harness-fs-local": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-sandbox-local": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
+    "@berry-ai/harness-fs": "workspace:*",
     "@deepseek-ai/dsh-token-meter": "workspace:*",
     "@berry-ai/harness-mcp-client": "workspace:*",
     "@berry-ai/harness-spill-local": "workspace:*",
     "@deepseek-ai/dsh-llm-deepseek": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-attachment-local": "workspace:*",
-    "@deepseek-ai/dsh-tool-fs": "workspace:*",
+    "@berry-ai/harness-tool-fs": "workspace:*",
     "sharp": "^0.35.5",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*"
   }

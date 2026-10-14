@@ -19,12 +19,12 @@ import type { GenerateOptions, LlmModelInfo, LlmResolvedModelInfo, Message, Stre
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime, { RUN_CODE_NAME } from '@deepseek-ai/dsh-tools'
 import type { Config as ToolConfig } from '@deepseek-ai/dsh-tools'
-import LocalFileSystem from '@deepseek-ai/dsh-fs-local'
-import * as FsPolicy from '@deepseek-ai/dsh-fs-observation-policy'
+import LocalFileSystem from '@berry-ai/harness-fs-local'
+import * as FsPolicy from '@berry-ai/harness-fs-observation-policy'
 import LocalAttachmentStore from '@berry-ai/harness-attachment-local'
 import { AttachmentError, AttachmentId, AttachmentStore } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentLimits, ImageAttachmentRef, SaveImageAttachment, StoredImageAttachment } from '@berry-ai/harness-attachment'
-import * as ToolFs from '@deepseek-ai/dsh-tool-fs'
+import * as ToolFs from '@berry-ai/harness-tool-fs'
 import {
   applyReadImageTool,
   formatImageReadOutput,

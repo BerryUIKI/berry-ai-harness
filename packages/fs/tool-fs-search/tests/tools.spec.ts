@@ -25,7 +25,7 @@ import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import { rgPath } from '@vscode/ripgrep'
 import { SpillLocator, SpillStore } from '@berry-ai/harness-spill'
 import type { SaveTextSpill, SpillRef } from '@berry-ai/harness-spill'
-import * as ToolFsSearch from '@deepseek-ai/dsh-tool-fs-search'
+import * as ToolFsSearch from '@berry-ai/harness-tool-fs-search'
 import {
   buildGlobCommand,
   buildGrepCommand,
@@ -40,7 +40,7 @@ import {
   runRipgrep,
   sampleAcrossTopLevel,
   toWorkdirRelative,
-} from '@deepseek-ai/dsh-tool-fs-search'
+} from '@berry-ai/harness-tool-fs-search'
 
 declare module '@deepseek-ai/dsh-llm' {
   interface MessageSourceMap {

@@ -17,7 +17,7 @@ import chokidar from 'chokidar'
 import z from '@deepseek-ai/schemastery'
 import type Schema from '@deepseek-ai/schemastery'
 import { parse as parseYaml } from 'yaml'
-import type { FileSystem, FsDirEntry, FsTarget } from '@deepseek-ai/dsh-fs'
+import type { FileSystem, FsDirEntry, FsTarget } from '@berry-ai/harness-fs'
 import { canonicalizeWatchPath, resolveAgentsHome, resolveDshHome } from '@berry-ai/harness-home-paths'
 import {
   BUNDLED_SKILL_RANK,

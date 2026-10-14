@@ -8,8 +8,8 @@ import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deep
 import { createUserMessage } from '@deepseek-ai/dsh-llm'
 import { SessionId } from '@deepseek-ai/dsh-session'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import * as ToolFs from '@deepseek-ai/dsh-tool-fs'
-import * as StrReplaceEditor from '@deepseek-ai/dsh-tool-str-replace-editor'
+import * as ToolFs from '@berry-ai/harness-tool-fs'
+import * as StrReplaceEditor from '@berry-ai/harness-tool-str-replace-editor'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 import * as WorkspaceChanges from '../src/index.ts'
 

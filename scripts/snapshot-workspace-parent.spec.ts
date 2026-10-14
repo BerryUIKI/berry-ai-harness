@@ -3,7 +3,7 @@ import { chmod, mkdir, mkdtemp, readFile, rm, stat, symlink } from 'node:fs/prom
 import { homedir, tmpdir } from 'node:os'
 import { dirname, join, parse } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import { SandboxedFileSystem } from '@deepseek-ai/dsh-fs-sandbox'
+import { SandboxedFileSystem } from '@berry-ai/harness-fs-sandbox'
 import { canonicalPath } from '@berry-ai/harness-sandbox'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'

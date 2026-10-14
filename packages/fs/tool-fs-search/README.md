@@ -3,7 +3,7 @@ description: "The model-facing glob and grep discovery tools for users and maint
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-fs-search
+# @berry-ai/harness-tool-fs-search
 
 English | [中文](README.zh.md)
 
@@ -35,7 +35,7 @@ A subprocess backend, then the tools; the spill backend is optional and makes ca
 
 ```yaml
 - name: '@berry-ai/harness-subprocess-local'
-- name: '@deepseek-ai/dsh-tool-fs-search'
+- name: '@berry-ai/harness-tool-fs-search'
   config:
     sampleOverCapGlobResults: false
 - name: '@berry-ai/harness-spill-local'

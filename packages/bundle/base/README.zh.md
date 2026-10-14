@@ -56,7 +56,7 @@ kind: "package-bundle"
 ```yaml
 - insert:
     - id: tool-str-replace-editor
-      name: '@deepseek-ai/dsh-tool-str-replace-editor'
+      name: '@berry-ai/harness-tool-str-replace-editor'
       config:
         maxOutputChars: 16000
 ```

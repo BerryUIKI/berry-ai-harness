@@ -7,7 +7,7 @@
  * `ctx.fs.sandboxMode` (the capability fact — is a confining backend mounted?)
  * and shared by both mutating tools.
  *
- * @module @deepseek-ai/dsh-tool-fs/sandbox
+ * @module @berry-ai/harness-tool-fs/sandbox
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -15,7 +15,7 @@ import type { ToolExecution } from '@deepseek-ai/dsh-tools'
 import type { SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import { ESCALATION_TARGETS, approveEscalation, escalationHintMarker, sandboxDenialMarker, sandboxPermissionsDescription, validateEscalationArgs } from '@berry-ai/harness-sandbox'
 import type { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'
-import { FsError } from '@deepseek-ai/dsh-fs'
+import { FsError } from '@berry-ai/harness-fs'
 
 /** The two escalation arguments a mutating tool may carry (advertised only under a confining backend). */
 export interface FsEscalationArgs {
