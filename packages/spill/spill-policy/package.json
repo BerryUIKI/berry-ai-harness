@@ -33,7 +33,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-output-retention": "workspace:*",
+    "@berry-ai/harness-output-retention": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-spill": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
@@ -49,7 +49,7 @@
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-ptc-runtime-node": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-output-retention": "workspace:*",
+    "@berry-ai/harness-output-retention": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-spill": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",

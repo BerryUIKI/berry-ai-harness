@@ -8,7 +8,7 @@
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import { sessionFileAddress } from '@deepseek-ai/dsh-util-workspace-path'
+import { sessionFileAddress } from '@berry-ai/harness-util-workspace-path'
 import type { WorkspaceFileText } from '@deepseek-ai/dsh-api-workspace-files/types'
 import { textFace } from '../src/client/face.ts'
 import type { DocumentFileBytes, ReadDocumentBytes, ReadWorkspaceFilePage } from '../src/client/rpc.ts'

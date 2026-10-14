@@ -9,7 +9,7 @@ import type { Browser, Locator, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
 import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import { abbreviateHomePath } from '@deepseek-ai/dsh-util-workspace-path'
+import { abbreviateHomePath } from '@berry-ai/harness-util-workspace-path'
 import {
   SESSION_FORMAT_VERSION,
   Session,

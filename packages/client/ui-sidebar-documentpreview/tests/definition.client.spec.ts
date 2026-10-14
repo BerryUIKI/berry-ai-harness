@@ -9,7 +9,7 @@
  */
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { sessionFileAddress } from '@deepseek-ai/dsh-util-workspace-path'
+import { sessionFileAddress } from '@berry-ai/harness-util-workspace-path'
 import { SidebarRightTabRegistry } from '@deepseek-ai/dsh-client-ui-sidebar-right/src/client/tab-registry.ts'
 import { TEXTPREVIEW_ID, TEXTPREVIEW_KIND, basenameOf, textDefinition } from '../src/client/definition.ts'
 

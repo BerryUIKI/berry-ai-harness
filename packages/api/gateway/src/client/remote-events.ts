@@ -12,7 +12,7 @@ import type {
   TypertRemoteEvent,
 } from '@deepseek-ai/dsh-typert-protocol'
 import { isRemoteJsonValue, isTypertOwnedValue } from '@deepseek-ai/dsh-typert-protocol'
-import { randomUUID } from '@deepseek-ai/dsh-util-crypto'
+import { randomUUID } from '@berry-ai/harness-util-crypto'
 import {
   REMOTE_EVENT_RESULT_ENDPOINT,
   REMOTE_EVENT_STREAM_ENDPOINT,

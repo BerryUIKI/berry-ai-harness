@@ -49,6 +49,6 @@
     "@deepseek-ai/dsh-host-webserver": "workspace:*"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-launch-environment": "workspace:*"
+    "@berry-ai/harness-launch-environment": "workspace:*"
   }
 }

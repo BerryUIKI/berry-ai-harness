@@ -18,7 +18,7 @@ import {
   FileTypeIcon, IconNowrapFillRegular, IconPauseOutlineRegular, IconPlayOutlineRegular,
   IconRefreshOutlineRegular, IconWrapFillRegular, Menu, PathLabel, Tooltip, classifyFileType,
 } from '@deepseek-ai/dsh-client-ui-primitives'
-import { pathPartsOf } from '@deepseek-ai/dsh-util-workspace-path'
+import { pathPartsOf } from '@berry-ai/harness-util-workspace-path'
 import type { TextInjected } from './face.ts'
 import { emptyFailureRecourse, failureLine } from './failure-line.ts'
 import { LoadingIndicator } from './LoadingIndicator.tsx'

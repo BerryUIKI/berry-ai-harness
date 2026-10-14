@@ -23,7 +23,7 @@ import { addHarnessSourceSection, auditStartupEntries } from '@deepseek-ai/dsh-a
 import type {} from '@deepseek-ai/dsh-client-connection'
 import * as FrontendStatic from '@deepseek-ai/dsh-host-frontend-static'
 import { isLoopbackHost, normalizeBindAddress } from '@deepseek-ai/dsh-host-webserver'
-import { launchedThroughSsh, launchEnvironmentOf } from '@deepseek-ai/dsh-launch-environment'
+import { launchedThroughSsh, launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
 import { scrubbedParentEnv } from '@deepseek-ai/dsh-subprocess'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
 import type {} from '@deepseek-ai/dsh-shell-env'

@@ -27,7 +27,7 @@ import type {
 import { formatFileMention } from '@deepseek-ai/dsh-file-reference/grammar'
 import type { FileReferenceCandidate } from '@deepseek-ai/dsh-file-reference/types'
 import type { SessionReferenceMentionCandidate } from '@deepseek-ai/dsh-session-reference/types'
-import { abbreviateHomePath, fileAddressFor } from '@deepseek-ai/dsh-util-workspace-path'
+import { abbreviateHomePath, fileAddressFor } from '@berry-ai/harness-util-workspace-path'
 import { en, NS, zh, type ReferenceKey } from './locales.ts'
 
 declare module '@deepseek-ai/dsh-api-session-controller/client' {

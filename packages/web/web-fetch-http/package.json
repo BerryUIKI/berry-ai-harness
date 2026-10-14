@@ -30,7 +30,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-timeout": "workspace:*",
     "@deepseek-ai/dsh-web": "workspace:*",
-    "@deepseek-ai/dsh-http-proxy": "workspace:*"
+    "@berry-ai/harness-http-proxy": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
@@ -41,6 +41,6 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-timeout": "workspace:*",
     "@deepseek-ai/dsh-web": "workspace:*",
-    "@deepseek-ai/dsh-http-proxy": "workspace:*"
+    "@berry-ai/harness-http-proxy": "workspace:*"
   }
 }

@@ -8,7 +8,7 @@ import yaml from 'js-yaml'
 import type { Entry, EntryOptions } from '@deepseek-ai/cordis-plugin-loader'
 import type {} from '@deepseek-ai/dsh-hmr'
 import { composeEntries, loadProfileDirectory, readProfilePatches, reconcileProfilePatches } from '@deepseek-ai/dsh-app-boot'
-import { withFileLock, writeFileAtomic } from '@deepseek-ai/dsh-atomic-write'
+import { withFileLock, writeFileAtomic } from '@berry-ai/harness-atomic-write'
 import { isMap, isSeq, parseDocument, Scalar, visit } from 'yaml'
 
 declare module '@deepseek-ai/cordis' {

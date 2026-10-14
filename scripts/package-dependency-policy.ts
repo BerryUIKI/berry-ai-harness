@@ -38,9 +38,9 @@ const CONFIGURATION_ONLY_DEV_DEPENDENCIES = {
 const DUPLICATE_SAFE_PACKAGES: readonly string[] = [
   '@berry-ai/harness-lazy-require',
   '@berry-ai/harness-util-code-language',
+  '@berry-ai/harness-util-crypto',
   '@deepseek-ai/dsh-brand',
   '@deepseek-ai/dsh-typert-protocol',
-  '@deepseek-ai/dsh-util-crypto',
   '@deepseek-ai/dsh-util-values',
 ]
 

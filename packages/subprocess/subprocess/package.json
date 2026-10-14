@@ -33,11 +33,11 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-http-proxy": "workspace:*"
+    "@berry-ai/harness-http-proxy": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-http-proxy": "workspace:*",
-    "@deepseek-ai/dsh-launch-environment": "workspace:*"
+    "@berry-ai/harness-http-proxy": "workspace:*",
+    "@berry-ai/harness-launch-environment": "workspace:*"
   }
 }

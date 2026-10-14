@@ -2,7 +2,7 @@
 import { readFile } from 'node:fs/promises'
 import { isMap, isSeq, parseDocument } from 'yaml'
 import { loadOptionalPatches } from '@deepseek-ai/dsh-app-boot'
-import { writeFileAtomic } from '@deepseek-ai/dsh-atomic-write'
+import { writeFileAtomic } from '@berry-ai/harness-atomic-write'
 
 /** Replace the last matching override or append one after existing insertions.
  * @param filename Current profile patch file.

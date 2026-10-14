@@ -11,7 +11,7 @@
  * @module @deepseek-ai/dsh-loader-smoke
  */
 
-import { clearedProxyEnv } from '@deepseek-ai/dsh-http-proxy'
+import { clearedProxyEnv } from '@berry-ai/harness-http-proxy'
 import { mkdtemp, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'

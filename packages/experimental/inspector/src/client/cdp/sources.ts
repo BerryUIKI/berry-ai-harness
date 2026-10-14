@@ -1,6 +1,6 @@
 /** Browser-side catalog for the Inspector Client bundle and its source map. */
 
-import { bytesToBase64 } from '@deepseek-ai/dsh-util-crypto'
+import { bytesToBase64 } from '@berry-ai/harness-util-crypto'
 import type {
   ClientScriptDescriptor,
   ClientSourceCommand,

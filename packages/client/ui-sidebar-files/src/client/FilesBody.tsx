@@ -19,7 +19,7 @@ import {
   FileTypeIcon, IconFolderCloseRegular, IconFolderOpenRegular, IconRefreshOutlineRegular, Tooltip, classifyFileType,
   IconPauseOutlineRegular, IconPlayOutlineRegular, PathLabel,
 } from '@deepseek-ai/dsh-client-ui-primitives'
-import { fileAddressFor } from '@deepseek-ai/dsh-util-workspace-path'
+import { fileAddressFor } from '@berry-ai/harness-util-workspace-path'
 import type { WorkspaceDirectoryEntry } from '@deepseek-ai/dsh-api-workspace-files/types'
 import { childPath } from './face.ts'
 import type { FilesInjected } from './face.ts'

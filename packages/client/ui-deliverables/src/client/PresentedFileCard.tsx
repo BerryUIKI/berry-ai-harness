@@ -1,6 +1,6 @@
 /** File identity, Sidebar preview, and contributed native actions for one delivery. */
 import type { ReactNode } from 'react'
-import { resolveWorkspacePath } from '@deepseek-ai/dsh-util-workspace-path'
+import { resolveWorkspacePath } from '@berry-ai/harness-util-workspace-path'
 import { FileTypeIcon, fileExtension } from '@deepseek-ai/dsh-client-ui-primitives'
 import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
 import type { PresentedHost } from '../presented.ts'

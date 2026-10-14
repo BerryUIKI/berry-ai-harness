@@ -109,7 +109,7 @@ ctx.tools.register(defineTool({
 
 保留与 spill 存储相互独立：
 
-- `@deepseek-ai/dsh-output-retention` 负责预览机制（`TextRetainer`、`ItemRetainer` 和省略元数据）。
+- `@berry-ai/harness-output-retention` 负责预览机制（`TextRetainer`、`ItemRetainer` 和省略元数据）。
 - `@deepseek-ai/dsh-spill` 负责保存最终文本，并返回定位符与检索提示。
 - `@deepseek-ai/dsh-spill-policy` 在工具流水线中应用默认的最终结果策略，将前两者组合起来。
 

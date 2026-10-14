@@ -7,7 +7,7 @@ import { sanitizeInstallInput } from './sanitize-install-input.ts'
  * change made on another surface shows here without a manual refresh.
  */
 import type {} from '@deepseek-ai/dsh-client-product-analytics/client'
-import { randomUUID } from '@deepseek-ai/dsh-util-crypto'
+import { randomUUID } from '@berry-ai/harness-util-crypto'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type {
   BundleInfo,

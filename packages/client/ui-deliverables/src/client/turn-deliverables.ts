@@ -5,7 +5,7 @@
  * summary, and deliveries from `present`; never from presentation data or
  * the closing prose.
  */
-import { isAbsoluteWorkspacePath } from '@deepseek-ai/dsh-util-workspace-path'
+import { isAbsoluteWorkspacePath } from '@berry-ai/harness-util-workspace-path'
 import { isAppendSurfaceEvent } from '@deepseek-ai/dsh-session/surface'
 import type { TurnTailOwnerProps } from '@deepseek-ai/dsh-client-ui-chat/client'
 import type { ConversationNodeDefinition } from '@deepseek-ai/dsh-client-ui-conversation/client'

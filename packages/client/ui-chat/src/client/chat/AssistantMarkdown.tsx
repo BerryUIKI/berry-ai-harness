@@ -1,5 +1,5 @@
 import { Fragment, memo, useMemo } from 'react'
-import { fileMediaUrl } from '@deepseek-ai/dsh-util-workspace-path'
+import { fileMediaUrl } from '@berry-ai/harness-util-workspace-path'
 import type { PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
 import type { ReactNode } from 'react'
 import { JsonBlock, MarkdownText } from '@deepseek-ai/dsh-client-ui-primitives'

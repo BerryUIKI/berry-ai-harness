@@ -9,7 +9,7 @@
  * unclaimed address is the documented wiring error.
  */
 import type { SidebarRightTabDefinition } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
-import { parseFileAddress } from '@deepseek-ai/dsh-util-workspace-path'
+import { parseFileAddress } from '@berry-ai/harness-util-workspace-path'
 
 /** The tab kind this package owns. */
 export const TEXTPREVIEW_KIND = 'text'

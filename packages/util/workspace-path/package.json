@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-util-workspace-path",
+  "name": "@berry-ai/harness-util-workspace-path",
   "description": "Browser-safe Workspace path and display helpers",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "url": "git+https://github.com/BerryUIKI/berry-ai-harness.git",
     "directory": "packages/util/workspace-path"
   },
   "type": "module",
