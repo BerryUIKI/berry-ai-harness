@@ -53,7 +53,7 @@
     "@deepseek-ai/dsh-agent-default-model": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-query": "workspace:*",
+    "@berry-ai/harness-session-query": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*"
   },
@@ -66,7 +66,7 @@
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-query": "workspace:*",
+    "@berry-ai/harness-session-query": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*"
   },

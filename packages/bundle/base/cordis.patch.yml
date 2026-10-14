@@ -150,7 +150,7 @@
     # `first-search` or `startup` in a later patch layer (profile
     # cordis.patch.yml or a --patch overlay), typically with a durable `path`.
     - id: session-query-sqlite
-      name: '@deepseek-ai/dsh-session-query-sqlite'
+      name: '@berry-ai/harness-session-query-sqlite'
       config:
         path: ':memory:'
         openAt: never

@@ -1,6 +1,6 @@
 /** Minimal concrete Session query for continuation and catalog integration tests. */
 
-import SessionQueryEngine from '@deepseek-ai/dsh-session-query'
+import SessionQueryEngine from '@berry-ai/harness-session-query'
 
 /** Session query implementation whose search faces are outside these tests. */
 export class TestSessionQuery extends SessionQueryEngine {

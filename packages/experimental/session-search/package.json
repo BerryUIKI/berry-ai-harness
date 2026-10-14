@@ -38,7 +38,7 @@
     }
   },
   "dependencies": {
-    "@deepseek-ai/dsh-session-query-sqlite": "workspace:*",
+    "@berry-ai/harness-session-query-sqlite": "workspace:*",
     "@deepseek-ai/dsh-tool-session-query": "workspace:*"
   },
   "peerDependencies": {

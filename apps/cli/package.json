@@ -146,7 +146,7 @@
     "@deepseek-ai/dsh-session-checkpoint-policy": "workspace:*",
     "@deepseek-ai/dsh-session-log-deepseek": "workspace:*",
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
-    "@deepseek-ai/dsh-session-query": "workspace:*",
+    "@berry-ai/harness-session-query": "workspace:*",
     "@berry-ai/harness-shell-env": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",

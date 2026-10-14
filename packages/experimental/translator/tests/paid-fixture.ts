@@ -4,7 +4,7 @@ import { boot } from '@berry-ai/harness-app-boot'
 import LlmRuntime from '@deepseek-ai/dsh-llm'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionSeq, type Session, type SessionEvent, type SessionHeader } from '@deepseek-ai/dsh-session'
 import JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import SqliteSessionQuery from '@deepseek-ai/dsh-session-query-sqlite'
+import SqliteSessionQuery from '@berry-ai/harness-session-query-sqlite'
 import * as Official from '@deepseek-ai/dsh-llm-deepseek-api-key'
 import * as Account from '@deepseek-ai/dsh-llm-deepseek-account'
 import type { DeepSeekAccount } from '@berry-ai/harness-deepseek-account'
@@ -130,7 +130,7 @@ export async function paidFixture(cleanups: Array<() => Promise<void>>, options:
     } },
     { id: 'translator', name: '@deepseek-ai/dsh-experimental-translator', config: translator },
     ...options.withSessionQuery === true ? [
-      { id: 'query', name: '@deepseek-ai/dsh-session-query-sqlite', config: { path: join(root, 'query.sqlite'), openAt: 'never' } },
+      { id: 'query', name: '@berry-ai/harness-session-query-sqlite', config: { path: join(root, 'query.sqlite'), openAt: 'never' } },
     ] : [],
     ...options.withSessionLog === true ? [
       { id: 'deepseek-llm-api-extensions', name: '@deepseek-ai/dsh-deepseek-llm-api-extensions' },
@@ -140,7 +140,7 @@ export async function paidFixture(cleanups: Array<() => Promise<void>>, options:
   await writeFile(configPath, JSON.stringify(rows()))
   const modules = new Map<string, unknown>([
     ['@deepseek-ai/dsh-llm', LlmRuntime], ['@deepseek-ai/dsh-session', SessionStore],
-    ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlPersistence], ['@deepseek-ai/dsh-session-query-sqlite', SqliteSessionQuery],
+    ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlPersistence], ['@berry-ai/harness-session-query-sqlite', SqliteSessionQuery],
     [options.officialName ?? '@deepseek-ai/dsh-llm-deepseek-api-key', Official],
     ['@deepseek-ai/dsh-llm-deepseek-account', Account], ['@deepseek-ai/dsh-experimental-translator', Translator],
     ['@deepseek-ai/dsh-deepseek-llm-api-extensions', DeepSeekLlmApiExtensionRegistry],

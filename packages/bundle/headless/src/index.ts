@@ -22,13 +22,13 @@ import { createUserMessage } from '@deepseek-ai/dsh-llm'
 import { assertNever } from '@berry-ai/harness-util-values'
 import { SessionSeq } from '@deepseek-ai/dsh-session'
 import type { Session, SessionEvent, SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
-import { SessionQueryError } from '@deepseek-ai/dsh-session-query'
+import { SessionQueryError } from '@berry-ai/harness-session-query'
 // Empty type imports carry the loader Context merge for the settlement await,
 // the cmdline Context merge for the appExit host value, and the sessionQuery
 // Context merge for exact Session adoption.
 import type {} from '@deepseek-ai/cordis-plugin-loader'
 import type {} from '@berry-ai/harness-cmdline'
-import type {} from '@deepseek-ai/dsh-session-query'
+import type {} from '@berry-ai/harness-session-query'
 import type {} from '@deepseek-ai/dsh-subagent'
 import { internals } from './runner-internals.ts'
 import { projectJsonRun, boundJsonLine } from './json-stream.ts'

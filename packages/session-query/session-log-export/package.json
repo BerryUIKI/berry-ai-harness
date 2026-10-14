@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-session-log-export",
+  "name": "@berry-ai/harness-session-log-export",
   "description": "Web Session-log export command and shared download dialog",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -64,7 +64,7 @@
     "@berry-ai/harness-commands": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-persistence": "workspace:*",
-    "@deepseek-ai/dsh-session-query": "workspace:*",
+    "@berry-ai/harness-session-query": "workspace:*",
     "@types/react": "~18.3.1",
     "react": "^18.2.0"
   },

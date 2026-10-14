@@ -360,7 +360,7 @@ describe('candidates', () => {
     /** First-party definitions plus an unrelated command, in Host registration order. */
     const SHIPPED: CommandDescriptor[] = [
       { definitionId: CommandDefinitionId('@berry-ai/harness-command-compact'), name: 'compact', description: 'Compact older conversation history' },
-      { definitionId: CommandDefinitionId('@deepseek-ai/dsh-session-log-export'), name: 'export', description: 'Download this Session log as a ZIP archive' },
+      { definitionId: CommandDefinitionId('@berry-ai/harness-session-log-export'), name: 'export', description: 'Download this Session log as a ZIP archive' },
       { definitionId: CommandDefinitionId('@berry-ai/harness-command-feedback'), name: 'feedback', description: 'Record feedback about this session', input: { hint: '<text>' } },
       { definitionId: CommandDefinitionId('@berry-ai/harness-command-goal'), name: 'goal', description: 'Set or view the goal for a long-running task', input: { hint: '<objective>', attachments: true } },
       { definitionId: CommandDefinitionId('@berry-ai/harness-permission-presets'), name: 'permission', description: 'Switch the permission preset (sandbox mode + approval policy)', input: { hint: '<preset>' } },

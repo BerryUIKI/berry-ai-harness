@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-agent-preset-registry/types'
-import { SessionQueryError } from '@deepseek-ai/dsh-session-query'
+import { SessionQueryError } from '@berry-ai/harness-session-query'
 import { isUserInvocable } from '@berry-ai/harness-skill'
 import type {} from '@deepseek-ai/dsh-working-directory'
 import type { ScopeKey } from '@deepseek-ai/dsh-scope'

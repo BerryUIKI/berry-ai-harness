@@ -26,7 +26,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {
   AttachmentStore, FileAttachmentRef, ImageAttachmentRef,
 } from '@berry-ai/harness-attachment'
-import type { SessionLineageNode, SessionQueryEngine } from '@deepseek-ai/dsh-session-query'
+import type { SessionLineageNode, SessionQueryEngine } from '@berry-ai/harness-session-query'
 import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
 import { sessionFormatLogFilename } from '@deepseek-ai/dsh-session-format'
 import type { SessionEvent, SessionHeader, SessionId, SessionStore } from '@deepseek-ai/dsh-session'

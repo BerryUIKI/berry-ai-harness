@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-session-query",
+  "name": "@berry-ai/harness-session-query",
   "description": "Combined session query service contract with concrete reads, traces, and filters",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

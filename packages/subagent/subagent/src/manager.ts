@@ -17,7 +17,7 @@ import type { ContentBlock, MessageId, MessageSource } from '@deepseek-ai/dsh-ll
 import { SessionLogOffset } from '@deepseek-ai/dsh-session'
 import type { SessionId, SessionEvent, UserMessage } from '@deepseek-ai/dsh-session'
 import type { SessionPersistence } from '@deepseek-ai/dsh-session-persistence'
-import type { SessionObservation, SessionQueryEngine } from '@deepseek-ai/dsh-session-query'
+import type { SessionObservation, SessionQueryEngine } from '@berry-ai/harness-session-query'
 import type { ToolRestriction, ObjectJsonSchema } from '@deepseek-ai/dsh-tools'
 import {
   appendDelegatedPolicyOverrides, applyChildComposition, captureDelegatedPolicyOverrides,
@@ -1464,7 +1464,7 @@ export class SubagentManager {
     const query = this.ctx.get('sessionQuery')
     if (query === undefined) {
       throw new SubagentError(
-        'continuable subagents require session query (load @deepseek-ai/dsh-session-query)',
+        'continuable subagents require session query (load @berry-ai/harness-session-query)',
         'CONTINUATION_UNAVAILABLE',
       )
     }

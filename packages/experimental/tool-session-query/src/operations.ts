@@ -14,7 +14,7 @@ import {
   type SessionEventSurface,
   type SessionRecord,
   type SessionSearchCursor,
-} from '@deepseek-ai/dsh-session-query'
+} from '@berry-ai/harness-session-query'
 import type { ToolRunContext } from '@deepseek-ai/dsh-tools'
 import { toolInput } from './input.ts'
 import { presentation } from './presentation.ts'

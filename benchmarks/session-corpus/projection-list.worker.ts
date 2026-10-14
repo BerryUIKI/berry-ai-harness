@@ -12,7 +12,7 @@ import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, type
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import SessionProjectionCache, { projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
-import SqliteSessionQueryEngine from '@deepseek-ai/dsh-session-query-sqlite'
+import SqliteSessionQueryEngine from '@berry-ai/harness-session-query-sqlite'
 import Storage from '@berry-ai/harness-storage'
 import * as StorageDomain from '@berry-ai/harness-storage-domain'
 import * as StorageJson from '@berry-ai/harness-storage-json'

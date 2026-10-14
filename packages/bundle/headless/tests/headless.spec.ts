@@ -17,7 +17,7 @@ import { LlmAttemptId, ToolCallId, createAssistantMessage, createToolResultMessa
 import SessionStore from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import type { Session, SessionId, UserMessage } from '@deepseek-ai/dsh-session'
-import { SessionQueryError } from '@deepseek-ai/dsh-session-query'
+import { SessionQueryError } from '@berry-ai/harness-session-query'
 import { createInboxStub, provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { apply, Config } from '../src/index.ts'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'

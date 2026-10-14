@@ -9,7 +9,7 @@ import { HarnessError } from '@deepseek-ai/dsh-llm'
 import {
   SessionQueryError,
   type SessionQueryErrorCode,
-} from '@deepseek-ai/dsh-session-query'
+} from '@berry-ai/harness-session-query'
 
 interface ModelSafeServiceFailure {
   readonly code: SessionQueryErrorCode | 'SESSION_QUERY_TOOL_FAILED'

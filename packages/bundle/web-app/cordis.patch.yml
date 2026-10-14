@@ -73,7 +73,7 @@
 
     # Browser Session export: `/export` command plus the shared download dialog.
     - id: session-log-download
-      name: '@deepseek-ai/dsh-session-log-export'
+      name: '@berry-ai/harness-session-log-export'
 
     # Session-header "Open In..." split button over the host application
     # resolution (macOS/Windows/Linux; a host with no resolved application

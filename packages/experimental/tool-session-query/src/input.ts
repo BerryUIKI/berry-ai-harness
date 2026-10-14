@@ -15,7 +15,7 @@ import {
   type SessionEventMetadataFilter,
   type SessionEventSurface,
   type SessionResultFilter,
-} from '@deepseek-ai/dsh-session-query'
+} from '@berry-ai/harness-session-query'
 
 interface SessionSearchArgs {
   query: string

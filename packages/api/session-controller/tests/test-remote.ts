@@ -24,7 +24,7 @@ import {
   type SessionPersistenceStatOptions,
 } from '@deepseek-ai/dsh-session-persistence'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SessionQueryEngine from '@deepseek-ai/dsh-session-query'
+import SessionQueryEngine from '@berry-ai/harness-session-query'
 import { vi } from 'vitest'
 import {
   RemoteError,

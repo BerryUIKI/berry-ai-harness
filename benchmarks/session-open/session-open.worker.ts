@@ -15,7 +15,7 @@ import SessionStore, {
 import type { AgentHandle } from '@deepseek-ai/dsh-agent'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SessionQueryEngine from '@deepseek-ai/dsh-session-query'
+import SessionQueryEngine from '@berry-ai/harness-session-query'
 import type {
   SessionEventSearchPage,
   SessionEventSearchRequest,
@@ -23,7 +23,7 @@ import type {
   SessionSearchHit,
   SessionSearchPage,
   SessionSearchRequest,
-} from '@deepseek-ai/dsh-session-query'
+} from '@berry-ai/harness-session-query'
 import * as SessionStatsPlugin from '@deepseek-ai/dsh-session-stats'
 import SessionTitleService from '@deepseek-ai/dsh-session-title'
 import * as SessionTurnOutlinePlugin from '@deepseek-ai/dsh-session-turn-outline'

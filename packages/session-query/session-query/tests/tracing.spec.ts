@@ -16,7 +16,7 @@ import type {
   SessionHandleReadResult,
   SessionPersistenceSnapshot,
 } from '@deepseek-ai/dsh-session-persistence'
-import { type SessionQueryErrorCode } from '@deepseek-ai/dsh-session-query'
+import { type SessionQueryErrorCode } from '@berry-ai/harness-session-query'
 import { TestSessionQueryEngine } from './test-service.ts'
 
 declare module '@deepseek-ai/dsh-llm' {
