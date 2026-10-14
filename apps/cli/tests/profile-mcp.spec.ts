@@ -8,7 +8,7 @@ import { describe, expect, it } from 'vitest'
 import { composeEntries, loadProfile, PROFILE_TEMPLATES } from '@berry-ai/harness-app-boot'
 
 const installAnchor = fileURLToPath(new URL('../package.json', import.meta.url))
-const resourcePackage = '@deepseek-ai/dsh-mcp-resources'
+const resourcePackage = '@berry-ai/harness-mcp-resources'
 
 describe('shipped MCP resource composition', () => {
   it.each(Object.keys(PROFILE_TEMPLATES))('%s carries one shared resource consumer without a server', (name) => {
@@ -24,7 +24,7 @@ describe('shipped MCP resource composition', () => {
       expect(rows.filter(row => row.name === resourcePackage)).toEqual([
         { id: 'mcp-resources', name: resourcePackage },
       ])
-      expect(rows.filter(row => row.name === '@deepseek-ai/dsh-mcp-client')).toEqual([])
+      expect(rows.filter(row => row.name === '@berry-ai/harness-mcp-client')).toEqual([])
       expect(warnings).toEqual([])
 
       const owners = profile.layers.filter((layer) => {

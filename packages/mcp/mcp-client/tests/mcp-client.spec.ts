@@ -10,9 +10,9 @@ import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type { PostToolDecision } from '@deepseek-ai/dsh-tools'
-import { publicToolName, syncTools, type ToolBridgeOptions } from '@deepseek-ai/dsh-mcp-client/src/tools.ts'
-import { createTransport } from '@deepseek-ai/dsh-mcp-client/src/transport.ts'
-import type { Config } from '@deepseek-ai/dsh-mcp-client'
+import { publicToolName, syncTools, type ToolBridgeOptions } from '@berry-ai/harness-mcp-client/src/tools.ts'
+import { createTransport } from '@berry-ai/harness-mcp-client/src/transport.ts'
+import type { Config } from '@berry-ai/harness-mcp-client'
 
 const testToolSignal = new AbortController().signal
 

@@ -17,7 +17,7 @@ import type { ContentBlock, GenerateOptions, ImageBlock, StreamChunk, UserMessag
 import { deepSeekImageRequestPricing, resolveAdapterOptions } from '@deepseek-ai/dsh-llm-deepseek'
 import { prepareImages } from '@deepseek-ai/dsh-llm-deepseek/src/images.ts'
 import { serialize } from '@deepseek-ai/dsh-llm-deepseek/src/serialize.ts'
-import { createMcpToolDefinition } from '@deepseek-ai/dsh-mcp-client'
+import { createMcpToolDefinition } from '@berry-ai/harness-mcp-client'
 import NodeRuntime from '@deepseek-ai/dsh-ptc-runtime-node'
 import Sandbox from '@deepseek-ai/dsh-sandbox-local'
 import SandboxPolicy from '@deepseek-ai/dsh-sandbox-policy'

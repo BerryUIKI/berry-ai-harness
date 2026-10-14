@@ -48,7 +48,7 @@ describe('dsh-sdk-minimal bundle', () => {
       ['session-title', '@deepseek-ai/dsh-session-title'],
       ['system-prompt', '@deepseek-ai/dsh-system-prompt'],
       ['tools', '@deepseek-ai/dsh-tools'],
-      ['mcp-resources', '@deepseek-ai/dsh-mcp-resources'],
+      ['mcp-resources', '@berry-ai/harness-mcp-resources'],
       ['agent', '@deepseek-ai/dsh-agent'],
       ['llm-retry', '@deepseek-ai/dsh-llm-retry'],
       ['jobs', '@deepseek-ai/dsh-jobs-local'],

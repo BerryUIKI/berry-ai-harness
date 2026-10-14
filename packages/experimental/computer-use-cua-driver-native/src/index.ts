@@ -6,7 +6,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import Schema from '@deepseek-ai/schemastery'
 import { ComputerUseProviderName } from '@berry-ai/harness-computer-use/brand'
-import { createMcpToolDefinition } from '@deepseek-ai/dsh-mcp-client'
+import { createMcpToolDefinition } from '@berry-ai/harness-mcp-client'
 import { z } from 'zod'
 import type { CuaDriver as NativeDriver } from '@trycua/cua-driver'
 import type {} from '@berry-ai/harness-computer-use'

@@ -13,7 +13,7 @@ import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
 import type {
   ScheduleCatalogEntry, ScheduleId, ScheduleRecord, ScheduleTimingChange, ScheduleUpdateContent,
   ScheduleUpdateRequest, ScheduleUpdateResult,
-} from '@deepseek-ai/dsh-schedule/client'
+} from '@berry-ai/harness-schedule/client'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import { CatalogFeedback } from './CatalogFeedback.tsx'
 import { IconCalendarOutlineRegular } from './CalendarIcon.tsx'

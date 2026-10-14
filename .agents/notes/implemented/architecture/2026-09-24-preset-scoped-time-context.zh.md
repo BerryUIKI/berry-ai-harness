@@ -34,4 +34,4 @@ Status: implemented
 
 ## Testing
 
-`apps/web/tests/schedule-after.e2e.ts` 固化随发行版交付的组合：`schedule` 与 `ui-schedule` 两行，`time-context`（`@deepseek-ai/dsh-time-context`）与 `tool-schedule`（`@deepseek-ai/dsh-tool-schedule`）在 `standard`、`ptc` 与 `cordis` preset 中各声明一次且未禁用，也不在 `minimal` 中，且不含 `time-context` 行。其每步读数 overlay 通过重述 `preset-standard` 声明的插件实现，而不是按 id patch 该行。`apps/cli/tests/profiles/web/tests/web-default-isolation.expected.e2e.ts` 断言随发行版交付的组合含 `schedule` 与 `ui-schedule` 条目，且不含 `time-context` 条目。
+`apps/web/tests/schedule-after.e2e.ts` 固化随发行版交付的组合：`schedule` 与 `ui-schedule` 两行，`time-context`（`@deepseek-ai/dsh-time-context`）与 `tool-schedule`（`@berry-ai/harness-tool-schedule`）在 `standard`、`ptc` 与 `cordis` preset 中各声明一次且未禁用，也不在 `minimal` 中，且不含 `time-context` 行。其每步读数 overlay 通过重述 `preset-standard` 声明的插件实现，而不是按 id patch 该行。`apps/cli/tests/profiles/web/tests/web-default-isolation.expected.e2e.ts` 断言随发行版交付的组合含 `schedule` 与 `ui-schedule` 条目，且不含 `time-context` 条目。

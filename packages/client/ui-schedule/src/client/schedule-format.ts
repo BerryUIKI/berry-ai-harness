@@ -1,6 +1,6 @@
 /** Browser-safe formatting shared by Session and Host reminder catalogs. */
 import type { Translate } from '@deepseek-ai/dsh-client-ui-slots'
-import type { ScheduleRecord } from '@deepseek-ai/dsh-schedule/client'
+import type { ScheduleRecord } from '@berry-ai/harness-schedule/client'
 import { assertNever } from '@berry-ai/harness-util-values'
 import type { CronDescriptionKey } from './task-cron.ts'
 import { cronPreview, parseCronExpression } from './task-cron.ts'

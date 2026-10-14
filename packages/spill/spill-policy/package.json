@@ -62,7 +62,7 @@
     "@deepseek-ai/dsh-attachment": "workspace:*",
     "@deepseek-ai/dsh-fs": "workspace:*",
     "@deepseek-ai/dsh-token-meter": "workspace:*",
-    "@deepseek-ai/dsh-mcp-client": "workspace:*",
+    "@berry-ai/harness-mcp-client": "workspace:*",
     "@deepseek-ai/dsh-spill-local": "workspace:*",
     "@deepseek-ai/dsh-llm-deepseek": "workspace:*",
     "@deepseek-ai/dsh-ptc-runtime": "workspace:*",

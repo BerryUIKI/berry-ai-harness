@@ -1,6 +1,6 @@
 /**
  * Strict Schedule decoding, replay, time validation, and framing.
- * @module @deepseek-ai/dsh-schedule
+ * @module @berry-ai/harness-schedule
  */
 
 import { Temporal } from '@js-temporal/polyfill'

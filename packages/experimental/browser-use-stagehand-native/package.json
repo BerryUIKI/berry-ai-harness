@@ -41,7 +41,7 @@
   "dependencies": {
     "@browserbasehq/stagehand": "4.1.0",
     "@deepseek-ai/dsh-experimental-browser-use-runtime": "workspace:*",
-    "@deepseek-ai/dsh-mcp-client": "workspace:*",
+    "@berry-ai/harness-mcp-client": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "^4.4.3",

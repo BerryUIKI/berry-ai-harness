@@ -21,10 +21,10 @@ it('retains one shared resource consumer in the Desktop Web profile', () => {
       profile.patches,
     ], message => warnings.push(message))
 
-    expect(rows.filter(row => row.name === '@deepseek-ai/dsh-mcp-resources')).toEqual([
-      { id: 'mcp-resources', name: '@deepseek-ai/dsh-mcp-resources' },
+    expect(rows.filter(row => row.name === '@berry-ai/harness-mcp-resources')).toEqual([
+      { id: 'mcp-resources', name: '@berry-ai/harness-mcp-resources' },
     ])
-    expect(rows.filter(row => row.name === '@deepseek-ai/dsh-mcp-client')).toEqual([])
+    expect(rows.filter(row => row.name === '@berry-ai/harness-mcp-client')).toEqual([])
     expect(rows.find(row => row.id === 'webserver')).toMatchObject({ name: '@deepseek-ai/dsh-host-webserver' })
     expect(rows.find(row => row.id === 'webserver')?.disabled).not.toBe(true)
     expect(warnings).toEqual([])

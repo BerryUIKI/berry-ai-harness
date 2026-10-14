@@ -1,6 +1,6 @@
 /**
  * Durable and model-facing Schedule value types.
- * @module @deepseek-ai/dsh-schedule
+ * @module @berry-ai/harness-schedule
  */
 
 import type { SessionId } from '@deepseek-ai/dsh-session/types'

@@ -2,7 +2,7 @@
 
 import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
 import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
-import type { ScheduleDeleteResult, ScheduleId, ScheduleRecord } from '@deepseek-ai/dsh-schedule/client'
+import type { ScheduleDeleteResult, ScheduleId, ScheduleRecord } from '@berry-ai/harness-schedule/client'
 
 /** How one deletion settled; the wiring reports it as a transient notice. */
 export type CatalogDeleteOutcome = 'deleted' | 'failed' | 'pending'

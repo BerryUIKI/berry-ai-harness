@@ -190,7 +190,7 @@ describe('optional bundles', () => {
     // The delivered composition carries the Host Schedule service and its task
     // page enabled; the clock stays preset-level, so no Host row declares it.
     for (const row of [
-      { id: 'schedule', name: '@deepseek-ai/dsh-schedule' },
+      { id: 'schedule', name: '@berry-ai/harness-schedule' },
       { id: 'ui-schedule', name: '@deepseek-ai/dsh-client-ui-schedule' },
     ]) {
       expect(composed.filter(entry => entry.id === row.id && entry.name === row.name && entry.disabled !== true))
@@ -220,7 +220,7 @@ describe('optional bundles', () => {
       const plugins = presetPlugins(id)
       for (const plugin of [
         { id: 'time-context', name: '@deepseek-ai/dsh-time-context' },
-        { id: 'tool-schedule', name: '@deepseek-ai/dsh-tool-schedule' },
+        { id: 'tool-schedule', name: '@berry-ai/harness-tool-schedule' },
       ]) {
         const matches = plugins.filter(row => row.id === plugin.id && row.name === plugin.name)
         expect(matches).toHaveLength(1)
@@ -238,7 +238,7 @@ describe('optional bundles', () => {
     }
     // `minimal` declares neither, so it composes no clock reading and no reminder tool.
     expect(presetPlugins('preset-minimal').some(row => row.name === '@deepseek-ai/dsh-time-context'
-      || row.name === '@deepseek-ai/dsh-tool-schedule')).toBe(false)
+      || row.name === '@berry-ai/harness-tool-schedule')).toBe(false)
   })
 
   it.each(OPTIONAL_BUNDLES)('%s resolves a title, description, and icon in both shipped languages', (name) => {

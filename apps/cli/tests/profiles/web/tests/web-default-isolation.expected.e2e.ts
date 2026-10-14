@@ -37,7 +37,7 @@ it('boots default Web with the shipped Schedule rows, without experimental modul
     // The shipped composition mounts the Host Schedule service and its task
     // page; the clock stays preset-level, so neither plane carries a row for it.
     expect(roster.entries).toEqual(expect.arrayContaining([
-      expect.objectContaining({ name: '@deepseek-ai/dsh-schedule', state: FiberState.ACTIVE }),
+      expect.objectContaining({ name: '@berry-ai/harness-schedule', state: FiberState.ACTIVE }),
       expect.objectContaining({ name: '@deepseek-ai/dsh-client-ui-schedule', state: FiberState.ACTIVE }),
     ]))
     expect(delivered.entries.some(entry => entry.id === '@deepseek-ai/dsh-client-ui-schedule')).toBe(true)

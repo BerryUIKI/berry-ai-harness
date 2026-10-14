@@ -6,7 +6,7 @@ import {
   Button, IconChevronDownOutlineRegular, IconChevronUpOutlineRegular, IconClockOutlineRegular, IconInfoOutlineRegular,
   IconWarningOutlineRegular, StateDot, Tooltip,
 } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { ScheduleDeliveryHistoryRequest, ScheduleDeliveryHistoryResult } from '@deepseek-ai/dsh-schedule/client'
+import type { ScheduleDeliveryHistoryRequest, ScheduleDeliveryHistoryResult } from '@berry-ai/harness-schedule/client'
 import { formatScheduleNextRun } from './schedule-format.ts'
 import css from './TaskManagerPage.module.css'
 

@@ -10,7 +10,7 @@ import type {} from '@deepseek-ai/dsh-api-session-controller/remote-events'
 import type {} from '@deepseek-ai/dsh-deepseek-account/types'
 import type {} from '@deepseek-ai/dsh-permission-presets/types'
 import type {} from '@berry-ai/harness-plugin-manager/types'
-import type {} from '@deepseek-ai/dsh-schedule/client'
+import type {} from '@berry-ai/harness-schedule/client'
 import type { TypertForwardableEventEntry } from '@deepseek-ai/dsh-typert-protocol'
 
 /**

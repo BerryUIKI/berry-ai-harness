@@ -308,8 +308,8 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-mcp-client` | yes | MCP client bridge: connects to MCP servers and registers their tools on ctx.tools |
-| `@deepseek-ai/dsh-mcp-resources` | no | Scoped MCP resource discovery and reading through shared model tools |
+| `@berry-ai/harness-mcp-client` | yes | MCP client bridge: connects to MCP servers and registers their tools on ctx.tools |
+| `@berry-ai/harness-mcp-resources` | no | Scoped MCP resource discovery and reading through shared model tools |
 
 ## plan
 
@@ -342,8 +342,8 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-schedule` | yes | Host-wide durable reminders with shared management and original-Session delivery |
-| `@deepseek-ai/dsh-tool-schedule` | no | Model-facing reminder management tools (schedule_create, schedule_list, schedule_update, schedule_delete) over the Host ctx.schedule service |
+| `@berry-ai/harness-schedule` | yes | Host-wide durable reminders with shared management and original-Session delivery |
+| `@berry-ai/harness-tool-schedule` | no | Model-facing reminder management tools (schedule_create, schedule_list, schedule_update, schedule_delete) over the Host ctx.schedule service |
 
 ## sdk
 

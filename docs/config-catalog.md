@@ -2149,10 +2149,10 @@ export interface LspLocalServerConfig {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-lsp-stdio -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-mcp-client -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-mcp-client -->
 <a id="deepseek-aidsh-mcp-client"></a>
 
-## `@deepseek-ai/dsh-mcp-client`
+## `@berry-ai/harness-mcp-client`
 
 - `inject`: `tools`
 - `source`: [`packages/mcp/mcp-client/src/index.ts:104`](../packages/mcp/mcp-client/src/index.ts)
@@ -2225,7 +2225,7 @@ export interface ReconnectConfig {
   maxAttempts?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-mcp-client -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-mcp-client -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-message-feedback -->
 <a id="deepseek-aidsh-message-feedback"></a>
@@ -2637,10 +2637,10 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-sandbox-policy -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-schedule -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-schedule -->
 <a id="deepseek-aidsh-schedule"></a>
 
-## `@deepseek-ai/dsh-schedule`
+## `@berry-ai/harness-schedule`
 
 - `inject`: `agents` · `sessions` · `storageDomain` · `sessionController` · `sessionPersistence`
 - `source`: [`packages/schedule/schedule/src/index.ts:72`](../packages/schedule/schedule/src/index.ts)
@@ -2660,7 +2660,7 @@ export interface Config {
   deliveryHistoryRecords?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-schedule -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-schedule -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sdk-app -->
 <a id="deepseek-aidsh-sdk-app"></a>
@@ -4577,7 +4577,7 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@deepseek-ai/dsh-host-plugin-inventory` | `loader` | [`packages/host/plugin-inventory/src/index.ts`](../packages/host/plugin-inventory/src/index.ts) |
 | `@deepseek-ai/dsh-llm` | — | [`packages/llm/llm/src/index.ts`](../packages/llm/llm/src/index.ts) |
 | `@deepseek-ai/dsh-lsp` | — | [`packages/lsp/lsp/src/index.ts`](../packages/lsp/lsp/src/index.ts) |
-| `@deepseek-ai/dsh-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
+| `@berry-ai/harness-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
 | `@berry-ai/harness-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
 | `@deepseek-ai/dsh-sandbox-ssh` | `ssh` | [`packages/ssh/sandbox-ssh/src/index.ts`](../packages/ssh/sandbox-ssh/src/index.ts) |
 | `@deepseek-ai/dsh-session` | — | [`packages/core/session/src/index.ts`](../packages/core/session/src/index.ts) |
@@ -4593,7 +4593,7 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@berry-ai/harness-terminal` | — | [`packages/terminal/terminal/src/index.ts`](../packages/terminal/terminal/src/index.ts) |
 | `@berry-ai/harness-tool-call-timeout-policy` | `tools` | [`packages/guard/timeout-policy/src/index.ts`](../packages/guard/timeout-policy/src/index.ts) |
 | `@deepseek-ai/dsh-tool-cordis` | `tools` · `cordisInspect` | [`packages/extensions/tool-cordis/src/index.ts`](../packages/extensions/tool-cordis/src/index.ts) |
-| `@deepseek-ai/dsh-tool-schedule` | `tools` | [`packages/schedule/tool-schedule/src/index.ts`](../packages/schedule/tool-schedule/src/index.ts) |
+| `@berry-ai/harness-tool-schedule` | `tools` | [`packages/schedule/tool-schedule/src/index.ts`](../packages/schedule/tool-schedule/src/index.ts) |
 | `@deepseek-ai/dsh-tool-subagent-control` | `tools` · `subagents` | [`packages/subagent/tool-subagent-control/src/index.ts`](../packages/subagent/tool-subagent-control/src/index.ts) |
 | `@deepseek-ai/dsh-tool-working-directory` | `tools` · `workingDirectory` | [`packages/session/tool-working-directory/src/index.ts`](../packages/session/tool-working-directory/src/index.ts) |
 | `@deepseek-ai/dsh-user-questions` | — | [`packages/interaction/user-questions/src/index.ts`](../packages/interaction/user-questions/src/index.ts) |

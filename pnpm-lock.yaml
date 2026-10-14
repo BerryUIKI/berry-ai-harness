@@ -28,6 +28,9 @@ importers:
       '@berry-ai/harness-computer-use':
         specifier: workspace:*
         version: link:packages/computer-use/computer-use
+      '@berry-ai/harness-mcp-client':
+        specifier: workspace:*
+        version: link:packages/mcp/mcp-client
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:packages/core/agent
@@ -67,9 +70,6 @@ importers:
       '@deepseek-ai/dsh-llm-replay':
         specifier: workspace:*
         version: link:packages/test-support/llm-replay
-      '@deepseek-ai/dsh-mcp-client':
-        specifier: workspace:*
-        version: link:packages/mcp/mcp-client
       '@deepseek-ai/dsh-skill-office':
         specifier: workspace:*
         version: link:packages/skill/skill-office
@@ -253,6 +253,12 @@ importers:
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../packages/util/launch-environment
+      '@berry-ai/harness-mcp-client':
+        specifier: workspace:*
+        version: link:../../packages/mcp/mcp-client
+      '@berry-ai/harness-mcp-resources':
+        specifier: workspace:*
+        version: link:../../packages/mcp/mcp-resources
       '@berry-ai/harness-persona':
         specifier: workspace:*
         version: link:../../packages/preset/persona
@@ -262,6 +268,9 @@ importers:
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../packages/boot/plugin-manager
+      '@berry-ai/harness-schedule':
+        specifier: workspace:*
+        version: link:../../packages/schedule/schedule
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../packages/terminal/terminal
@@ -271,6 +280,9 @@ importers:
       '@berry-ai/harness-tool-present':
         specifier: workspace:*
         version: link:../../packages/deliverables/tool-present
+      '@berry-ai/harness-tool-schedule':
+        specifier: workspace:*
+        version: link:../../packages/schedule/tool-schedule
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../packages/todo/tool-todo
@@ -367,21 +379,12 @@ importers:
       '@deepseek-ai/dsh-jobs-local':
         specifier: workspace:*
         version: link:../../packages/jobs/jobs-local
-      '@deepseek-ai/dsh-mcp-client':
-        specifier: workspace:*
-        version: link:../../packages/mcp/mcp-client
-      '@deepseek-ai/dsh-mcp-resources':
-        specifier: workspace:*
-        version: link:../../packages/mcp/mcp-resources
       '@deepseek-ai/dsh-pwsh-local':
         specifier: workspace:*
         version: link:../../packages/shell/pwsh-local
       '@deepseek-ai/dsh-pwsh-sandbox':
         specifier: workspace:*
         version: link:../../packages/shell/pwsh-sandbox
-      '@deepseek-ai/dsh-schedule':
-        specifier: workspace:*
-        version: link:../../packages/schedule/schedule
       '@deepseek-ai/dsh-sdk-app':
         specifier: workspace:*
         version: link:../../packages/bundle/sdk-app
@@ -442,9 +445,6 @@ importers:
       '@deepseek-ai/dsh-tool-pwsh-persistent':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh-persistent
-      '@deepseek-ai/dsh-tool-schedule':
-        specifier: workspace:*
-        version: link:../../packages/schedule/tool-schedule
       '@deepseek-ai/dsh-tool-skill':
         specifier: workspace:*
         version: link:../../packages/skill/tool-skill
@@ -771,6 +771,9 @@ importers:
       '@berry-ai/harness-home-paths':
         specifier: workspace:*
         version: link:../../packages/util/home-paths
+      '@berry-ai/harness-schedule':
+        specifier: workspace:*
+        version: link:../../packages/schedule/schedule
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../vendor/cordis
@@ -789,9 +792,6 @@ importers:
       '@deepseek-ai/dsh-jobs':
         specifier: workspace:*
         version: link:../../packages/jobs/jobs
-      '@deepseek-ai/dsh-schedule':
-        specifier: workspace:*
-        version: link:../../packages/schedule/schedule
       '@deepseek-ai/dsh-skill-office':
         specifier: workspace:*
         version: link:../../packages/skill/skill-office
@@ -1117,6 +1117,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-mcp-client':
+        specifier: workspace:*
+        version: link:../../mcp/mcp-client
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1135,9 +1138,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-mcp-client':
-        specifier: workspace:*
-        version: link:../../mcp/mcp-client
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -1295,6 +1295,9 @@ importers:
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../boot/plugin-manager
+      '@berry-ai/harness-schedule':
+        specifier: workspace:*
+        version: link:../../schedule/schedule
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1364,9 +1367,6 @@ importers:
       '@deepseek-ai/dsh-permission-presets':
         specifier: workspace:*
         version: link:../../interaction/permission-presets
-      '@deepseek-ai/dsh-schedule':
-        specifier: workspace:*
-        version: link:../../schedule/schedule
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
@@ -2047,6 +2047,9 @@ importers:
       '@berry-ai/harness-hmr':
         specifier: workspace:*
         version: link:../../boot/hmr
+      '@berry-ai/harness-mcp-resources':
+        specifier: workspace:*
+        version: link:../../mcp/mcp-resources
       '@berry-ai/harness-otel':
         specifier: workspace:*
         version: link:../../telemetry/otel
@@ -2155,9 +2158,6 @@ importers:
       '@deepseek-ai/dsh-llm-retry':
         specifier: workspace:*
         version: link:../../llm/llm-retry
-      '@deepseek-ai/dsh-mcp-resources':
-        specifier: workspace:*
-        version: link:../../mcp/mcp-resources
       '@deepseek-ai/dsh-permission-presets':
         specifier: workspace:*
         version: link:../../interaction/permission-presets
@@ -2404,6 +2404,9 @@ importers:
 
   packages/bundle/sdk-minimal:
     dependencies:
+      '@berry-ai/harness-mcp-resources':
+        specifier: workspace:*
+        version: link:../../mcp/mcp-resources
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../terminal/terminal
@@ -2437,9 +2440,6 @@ importers:
       '@deepseek-ai/dsh-llm-retry':
         specifier: workspace:*
         version: link:../../llm/llm-retry
-      '@deepseek-ai/dsh-mcp-resources':
-        specifier: workspace:*
-        version: link:../../mcp/mcp-resources
       '@deepseek-ai/dsh-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../llm/plugin-package-inventory-deepseek
@@ -2528,6 +2528,9 @@ importers:
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../boot/plugin-manager
+      '@berry-ai/harness-schedule':
+        specifier: workspace:*
+        version: link:../../schedule/schedule
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../terminal/terminal
@@ -2537,6 +2540,9 @@ importers:
       '@berry-ai/harness-tool-present':
         specifier: workspace:*
         version: link:../../deliverables/tool-present
+      '@berry-ai/harness-tool-schedule':
+        specifier: workspace:*
+        version: link:../../schedule/tool-schedule
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../todo/tool-todo
@@ -2798,9 +2804,6 @@ importers:
       '@deepseek-ai/dsh-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
-      '@deepseek-ai/dsh-schedule':
-        specifier: workspace:*
-        version: link:../../schedule/schedule
       '@deepseek-ai/dsh-session-log-export':
         specifier: workspace:*
         version: link:../../session-query/session-log-export
@@ -2852,9 +2855,6 @@ importers:
       '@deepseek-ai/dsh-tool-pwsh-persistent':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh-persistent
-      '@deepseek-ai/dsh-tool-schedule':
-        specifier: workspace:*
-        version: link:../../schedule/tool-schedule
       '@deepseek-ai/dsh-tool-skill':
         specifier: workspace:*
         version: link:../../skill/tool-skill
@@ -4702,6 +4702,9 @@ importers:
 
   packages/client/ui-schedule:
     devDependencies:
+      '@berry-ai/harness-schedule':
+        specifier: workspace:*
+        version: link:../../schedule/schedule
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -4756,9 +4759,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
-      '@deepseek-ai/dsh-schedule':
-        specifier: workspace:*
-        version: link:../../schedule/schedule
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -6334,6 +6334,9 @@ importers:
 
   packages/client/ui-workspace:
     devDependencies:
+      '@berry-ai/harness-schedule':
+        specifier: workspace:*
+        version: link:../../schedule/schedule
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -6397,9 +6400,6 @@ importers:
       '@deepseek-ai/dsh-jobs':
         specifier: workspace:*
         version: link:../../jobs/jobs
-      '@deepseek-ai/dsh-schedule':
-        specifier: workspace:*
-        version: link:../../schedule/schedule
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -7697,6 +7697,12 @@ importers:
       '@berry-ai/harness-browser-use':
         specifier: workspace:*
         version: link:../../browser-use/browser-use
+      '@berry-ai/harness-mcp-client':
+        specifier: workspace:*
+        version: link:../../mcp/mcp-client
+      '@berry-ai/harness-mcp-resources':
+        specifier: workspace:*
+        version: link:../../mcp/mcp-resources
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7724,12 +7730,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-mcp-client':
-        specifier: workspace:*
-        version: link:../../mcp/mcp-client
-      '@deepseek-ai/dsh-mcp-resources':
-        specifier: workspace:*
-        version: link:../../mcp/mcp-resources
       '@deepseek-ai/dsh-ptc-runtime':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime
@@ -7757,6 +7757,9 @@ importers:
 
   packages/experimental/browser-use-stagehand-native:
     dependencies:
+      '@berry-ai/harness-mcp-client':
+        specifier: workspace:*
+        version: link:../../mcp/mcp-client
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -7766,9 +7769,6 @@ importers:
       '@deepseek-ai/dsh-experimental-browser-use-runtime':
         specifier: workspace:*
         version: link:../browser-use-runtime
-      '@deepseek-ai/dsh-mcp-client':
-        specifier: workspace:*
-        version: link:../../mcp/mcp-client
       '@deepseek-ai/dsh-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
@@ -8183,7 +8183,7 @@ importers:
 
   packages/experimental/computer-use-cua-driver-mcp:
     dependencies:
-      '@deepseek-ai/dsh-mcp-client':
+      '@berry-ai/harness-mcp-client':
         specifier: workspace:*
         version: link:../../mcp/mcp-client
       '@deepseek-ai/schemastery':
@@ -8229,7 +8229,7 @@ importers:
 
   packages/experimental/computer-use-cua-driver-native:
     dependencies:
-      '@deepseek-ai/dsh-mcp-client':
+      '@berry-ai/harness-mcp-client':
         specifier: workspace:*
         version: link:../../mcp/mcp-client
       '@deepseek-ai/schemastery':
@@ -11071,6 +11071,9 @@ importers:
       '@berry-ai/harness-http-proxy':
         specifier: workspace:*
         version: link:../../util/http-proxy
+      '@berry-ai/harness-mcp-resources':
+        specifier: workspace:*
+        version: link:../mcp-resources
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
@@ -11086,9 +11089,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-mcp-resources':
-        specifier: workspace:*
-        version: link:../mcp-resources
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
@@ -11562,6 +11562,9 @@ importers:
 
   packages/schedule/tool-schedule:
     devDependencies:
+      '@berry-ai/harness-schedule':
+        specifier: workspace:*
+        version: link:../schedule
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11571,9 +11574,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-schedule':
-        specifier: workspace:*
-        version: link:../schedule
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
@@ -13064,6 +13064,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-mcp-client':
+        specifier: workspace:*
+        version: link:../../mcp/mcp-client
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
@@ -13094,9 +13097,6 @@ importers:
       '@deepseek-ai/dsh-llm-deepseek':
         specifier: workspace:*
         version: link:../../llm/llm-deepseek
-      '@deepseek-ai/dsh-mcp-client':
-        specifier: workspace:*
-        version: link:../../mcp/mcp-client
       '@deepseek-ai/dsh-ptc-runtime':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime
@@ -15053,6 +15053,9 @@ importers:
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../packages/util/launch-environment
+      '@berry-ai/harness-mcp-client':
+        specifier: workspace:*
+        version: link:../../packages/mcp/mcp-client
       '@berry-ai/harness-message-feedback':
         specifier: workspace:*
         version: link:../../packages/feedback/message-feedback
@@ -15077,6 +15080,9 @@ importers:
       '@berry-ai/harness-repeat-tool-reminder':
         specifier: workspace:*
         version: link:../../packages/guard/repeat-tool-reminder
+      '@berry-ai/harness-schedule':
+        specifier: workspace:*
+        version: link:../../packages/schedule/schedule
       '@berry-ai/harness-terminal':
         specifier: workspace:*
         version: link:../../packages/terminal/terminal
@@ -15092,6 +15098,9 @@ importers:
       '@berry-ai/harness-tool-present':
         specifier: workspace:*
         version: link:../../packages/deliverables/tool-present
+      '@berry-ai/harness-tool-schedule':
+        specifier: workspace:*
+        version: link:../../packages/schedule/tool-schedule
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../packages/todo/tool-todo
@@ -15248,9 +15257,6 @@ importers:
       '@deepseek-ai/dsh-llm-retry':
         specifier: workspace:*
         version: link:../../packages/llm/llm-retry
-      '@deepseek-ai/dsh-mcp-client':
-        specifier: workspace:*
-        version: link:../../packages/mcp/mcp-client
       '@deepseek-ai/dsh-permission-presets':
         specifier: workspace:*
         version: link:../../packages/interaction/permission-presets
@@ -15275,9 +15281,6 @@ importers:
       '@deepseek-ai/dsh-sandbox-policy':
         specifier: workspace:*
         version: link:../../packages/sandbox/sandbox-policy
-      '@deepseek-ai/dsh-schedule':
-        specifier: workspace:*
-        version: link:../../packages/schedule/schedule
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../packages/core/scope
@@ -15407,9 +15410,6 @@ importers:
       '@deepseek-ai/dsh-tool-pwsh-persistent':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh-persistent
-      '@deepseek-ai/dsh-tool-schedule':
-        specifier: workspace:*
-        version: link:../../packages/schedule/tool-schedule
       '@deepseek-ai/dsh-tool-skill':
         specifier: workspace:*
         version: link:../../packages/skill/tool-skill

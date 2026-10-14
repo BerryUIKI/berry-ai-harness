@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/dsh-workspace'
-import type {} from '@deepseek-ai/dsh-schedule'
+import type {} from '@berry-ai/harness-schedule'
 import { hasDesktopActiveTasks } from './update-tasks.ts'
 
 /** What quitting the Host now would affect. */

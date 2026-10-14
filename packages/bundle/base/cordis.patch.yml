@@ -478,7 +478,7 @@
         searchTimeoutMs: 60000
 
     - id: mcp-resources
-      name: '@deepseek-ai/dsh-mcp-resources'
+      name: '@berry-ai/harness-mcp-resources'
 
     # ── rows every mode mounts, whose values each overlay may state ──────────────
 

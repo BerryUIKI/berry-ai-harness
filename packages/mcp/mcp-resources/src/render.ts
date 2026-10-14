@@ -1,7 +1,7 @@
 /**
  * Resource-result projection keeps binary payloads out of model history.
  *
- * @module @deepseek-ai/dsh-mcp-resources
+ * @module @berry-ai/harness-mcp-resources
  */
 
 import type { ContentBlock } from '@deepseek-ai/dsh-llm'

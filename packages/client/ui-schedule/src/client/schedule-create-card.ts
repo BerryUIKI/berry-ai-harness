@@ -7,7 +7,7 @@
  * replay of arbitrary logged arguments, so every step narrows wire JSON and
  * returns empty rather than throwing.
  */
-import type { ScheduleId, ScheduleRecord } from '@deepseek-ai/dsh-schedule/client'
+import type { ScheduleId, ScheduleRecord } from '@berry-ai/harness-schedule/client'
 import type { ToolCallViewProps } from '@deepseek-ai/dsh-client-ui-tool/client'
 import { taskName } from './schedule-format.ts'
 

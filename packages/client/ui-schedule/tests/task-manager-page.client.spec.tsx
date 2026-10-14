@@ -7,7 +7,7 @@ import { bindSnapshotSelector, makeTranslate, RemoteError } from '@deepseek-ai/d
 import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
 import type { SessionListState } from '@deepseek-ai/dsh-api-session-controller/client'
 import type { WorkspaceSnapshot } from '@deepseek-ai/dsh-api-workspace-controller/client'
-import type { ScheduleCatalogEntry, ScheduleDeleteResult, ScheduleId, ScheduleUpdateResult } from '@deepseek-ai/dsh-schedule/client'
+import type { ScheduleCatalogEntry, ScheduleDeleteResult, ScheduleId, ScheduleUpdateResult } from '@berry-ai/harness-schedule/client'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import { TaskManagerPage, type TaskManagerPageProps } from '../src/client/TaskManagerPage.tsx'
 import { TaskManagerIcon } from '../src/client/TaskManagerIcon.tsx'
