@@ -123,7 +123,7 @@ it.skipIf(!built)('installs the exported registry\'s local closure and switches 
       registry: registry.url,
       profile,
       packages,
-      localDependency: '@deepseek-ai/dsh-brand',
+      localDependency: '@berry-ai/harness-brand',
       nativePackages: {
         // The Agent SDK publishes a musl variant of its Linux artifact, which is what pnpm installs there.
         '@deepseek-ai/dsh-subagent-claude-code': `@anthropic-ai/claude-agent-sdk-${process.platform}-${process.arch}${hostPlatform().libc?.[0] === 'musl' ? '-musl' : ''}`,

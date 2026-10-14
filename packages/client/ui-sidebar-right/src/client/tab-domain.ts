@@ -16,7 +16,7 @@
  * aborted on that commit. The slot framework binds the navigation sources for
  * each record's `useTabInfo` reader.
  */
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import { randomUUID } from '@berry-ai/harness-util-crypto'
 import type { LayoutState, PaneId, TabId, TabRecord } from '@deepseek-ai/dsh-client-ui-dockkit'
 import { findTabPane } from '@deepseek-ai/dsh-client-ui-dockkit'

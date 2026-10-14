@@ -36,12 +36,12 @@ const CONFIGURATION_ONLY_DEV_DEPENDENCIES = {
 
 /** Workspace packages whose complete runtime surface is safe across duplicate installations. */
 const DUPLICATE_SAFE_PACKAGES: readonly string[] = [
+  '@berry-ai/harness-brand',
   '@berry-ai/harness-lazy-require',
   '@berry-ai/harness-util-code-language',
   '@berry-ai/harness-util-crypto',
-  '@deepseek-ai/dsh-brand',
+  '@berry-ai/harness-util-values',
   '@deepseek-ai/dsh-typert-protocol',
-  '@deepseek-ai/dsh-util-values',
 ]
 
 /**
@@ -52,10 +52,10 @@ const DUPLICATE_SAFE_PACKAGES: readonly string[] = [
  */
 const SAFE_HOST_DEPENDENCY_EXPORTS = {
   '@berry-ai/harness-deque': ['Deque'],
+  '@berry-ai/harness-timeout': ['MAX_TIMER_DELAY_MS'],
   '@deepseek-ai/dsh-credentials': ['credentialKey'],
   '@deepseek-ai/dsh-llm': ['callConfigEquals'],
   '@deepseek-ai/dsh-session-format': ['sessionFormatLogFilename'],
-  '@deepseek-ai/dsh-timeout': ['MAX_TIMER_DELAY_MS'],
   '@deepseek-ai/schemastery': ['default'],
 } as const satisfies HostDependencyExports
 

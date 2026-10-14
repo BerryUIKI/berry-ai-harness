@@ -6,7 +6,7 @@
  * @module @deepseek-ai/dsh-workflow/types
  */
 
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 
 /** Identifies one workflow run. */

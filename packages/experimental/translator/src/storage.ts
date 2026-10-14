@@ -2,7 +2,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { appendPluginRecord, pluginRecordOf, SessionSeq, type SessionId } from '@deepseek-ai/dsh-session'
 import { SessionPersistenceNotFoundError, type SessionPersistence } from '@deepseek-ai/dsh-session-persistence'
-import { deepEqualJson, deepFreeze } from '@deepseek-ai/dsh-util-values'
+import { deepEqualJson, deepFreeze } from '@berry-ai/harness-util-values'
 import type { TranslationIdentity, TranslationRequestRecord } from './types.ts'
 import { TranslationError } from './error.ts'
 

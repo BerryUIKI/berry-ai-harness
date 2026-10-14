@@ -1,8 +1,8 @@
 /** Message value types, identity, and immutable construction helpers. */
 
 import { randomUUID } from '@berry-ai/harness-util-crypto'
-import { brandString } from '@deepseek-ai/dsh-brand'
-import { deepFreeze } from '@deepseek-ai/dsh-util-values'
+import { brandString } from '@berry-ai/harness-brand'
+import { deepFreeze } from '@berry-ai/harness-util-values'
 import type { MessageId, ToolCallId } from './brand.ts'
 import type { ContentBlock } from './types.ts'
 

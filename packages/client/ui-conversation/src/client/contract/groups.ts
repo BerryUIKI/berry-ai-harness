@@ -1,5 +1,5 @@
 /** Definition-owned grouping over a target's already materialized Nodes. */
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
 import type { ConversationTimelineSnapshot, ConversationViewNode } from './conversation.ts'
 

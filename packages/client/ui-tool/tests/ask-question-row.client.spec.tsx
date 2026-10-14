@@ -19,7 +19,7 @@ import { AskQuestionRow, askQuestionToolview } from '../src/client/tool/toolview
 import type { UserQuestionPanels } from '../src/client/contract/slots.ts'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import { zh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { PartialArguments } from '@berry-ai/harness-util-values'
 
 afterEach(cleanup)
 

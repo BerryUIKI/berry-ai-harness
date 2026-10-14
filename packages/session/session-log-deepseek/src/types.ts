@@ -1,7 +1,7 @@
 /** Wire types for lossless incremental DeepSeek session-log upload. */
 
 import type { SessionEvent, SurfaceEventType } from '@deepseek-ai/dsh-session'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+import type { JsonValue } from '@berry-ai/harness-util-values'
 
 /** Session header fields serialized as raw JSON primitives on the external request wire. */
 export interface DeepSeekSessionLogWireHeader {

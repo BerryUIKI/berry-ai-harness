@@ -1,5 +1,5 @@
 import { Context } from '@deepseek-ai/cordis'
-import { brandString } from '@deepseek-ai/dsh-brand'
+import { brandString } from '@berry-ai/harness-brand'
 import { SessionSeq, type SessionEvent } from '@deepseek-ai/dsh-session/types'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import type {

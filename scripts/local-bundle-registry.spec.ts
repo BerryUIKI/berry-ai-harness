@@ -132,7 +132,7 @@ describe('catalog and local closure', () => {
     expect(selection.workspaceNames).toEqual(expect.arrayContaining(selection.members.map(member => member.name)))
     // A vendor package keeps its own version line, so a run must not assume one shared version.
     expect(packages.get('@deepseek-ai/cordis')?.manifest.version)
-      .not.toBe(packages.get('@deepseek-ai/dsh-brand')?.manifest.version)
+      .not.toBe(packages.get('@berry-ai/harness-brand')?.manifest.version)
     // Nothing in this closure is built for another platform, on any host.
     expect(selection.foreignTargets).toEqual([])
   })

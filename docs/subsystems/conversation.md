@@ -78,7 +78,7 @@ The example keeps the producer declarations and client contribution in one block
 ```ts ignore-check
 import { createElement } from 'react'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import type {
   ConversationLocation, ConversationNodeContext,
   ConversationNodeDefinition,

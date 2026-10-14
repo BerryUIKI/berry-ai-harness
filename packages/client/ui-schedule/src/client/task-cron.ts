@@ -7,7 +7,7 @@
  * locally, describe a valid one without a Host round trip, and recognize the
  * common shapes the card's cron builder edits as structured rows.
  */
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { assertNever } from '@berry-ai/harness-util-values'
 import type { Translate } from '@deepseek-ai/dsh-client-ui-slots'
 
 /** ISO weekday dictionary key naming one cron day-of-week value. */

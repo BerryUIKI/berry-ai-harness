@@ -56,7 +56,7 @@
   "license": "MIT",
   "dependencies": {
     "@berry-ai/harness-deque": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
+    "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "ws": "^8.21.3",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*"
@@ -66,7 +66,7 @@
     "@deepseek-ai/dsh-client-connection": "workspace:*"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-brand": "workspace:*",
+    "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-cmdline": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@deepseek-ai/dsh-host-webserver": "workspace:*",

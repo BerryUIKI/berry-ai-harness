@@ -4,7 +4,7 @@
  * @module @deepseek-ai/dsh-terminal/types
  */
 
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 
 /** Internal exported basis for the public `TerminalSessionId` type/value pair. */

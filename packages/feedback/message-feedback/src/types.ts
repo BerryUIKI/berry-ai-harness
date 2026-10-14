@@ -5,7 +5,7 @@
  * @module @deepseek-ai/dsh-message-feedback/types
  */
 
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type { FeedbackCategory } from '@deepseek-ai/dsh-command-feedback/types'

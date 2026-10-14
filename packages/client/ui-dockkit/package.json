@@ -24,7 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-brand": "workspace:*",
+    "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
     "@testing-library/react": "^16.3.3",
     "@types/react": "~18.3.1",

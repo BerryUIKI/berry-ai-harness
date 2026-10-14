@@ -823,6 +823,9 @@ importers:
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../packages/util/launch-environment
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../packages/util/values
       '@deepseek-ai/cordis-plugin-group':
         specifier: workspace:~
         version: link:../../vendor/group
@@ -895,9 +898,6 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../packages/subprocess/subprocess-local
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../packages/util/values
       '@deepseek-ai/dsh-workspace-changes':
         specifier: workspace:*
         version: link:../../packages/deliverables/workspace-changes
@@ -946,12 +946,18 @@ importers:
 
   benchmarks:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../packages/util/brand
       '@berry-ai/harness-deque':
         specifier: workspace:*
         version: link:../packages/util/deque
       '@berry-ai/harness-lazy-require':
         specifier: workspace:*
         version: link:../packages/util/lazy-require
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../packages/util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../vendor/cordis
@@ -970,9 +976,6 @@ importers:
       '@deepseek-ai/dsh-api-session-controller':
         specifier: workspace:*
         version: link:../packages/api/session-controller
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../packages/util/brand
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../packages/client/store
@@ -1054,9 +1057,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../packages/typert/protocol
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../packages/util/values
       '@xterm/headless':
         specifier: ^6.0.0
         version: 6.0.0
@@ -1110,7 +1110,7 @@ importers:
       '@agentclientprotocol/sdk':
         specifier: 1.4.0
         version: 1.4.0(zod@4.4.3)
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/schemastery':
@@ -1187,7 +1187,7 @@ importers:
       '@berry-ai/harness-deque':
         specifier: workspace:*
         version: link:../../util/deque
-      '@deepseek-ai/dsh-timeout':
+      '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
       '@deepseek-ai/dsh-typert-protocol':
@@ -1200,15 +1200,15 @@ importers:
         specifier: ^8.21.3
         version: 8.21.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
@@ -1276,7 +1276,7 @@ importers:
       '@berry-ai/harness-deque':
         specifier: workspace:*
         version: link:../../util/deque
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
     devDependencies:
@@ -1394,12 +1394,12 @@ importers:
 
   packages/api/session-controller:
     dependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-deque':
         specifier: workspace:*
         version: link:../../util/deque
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -1419,6 +1419,9 @@ importers:
       '@berry-ai/harness-util-time':
         specifier: workspace:*
         version: link:../../util/time
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
@@ -1530,9 +1533,6 @@ importers:
       '@deepseek-ai/dsh-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -1598,6 +1598,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
@@ -1610,9 +1613,6 @@ importers:
       '@deepseek-ai/dsh-api-gateway':
         specifier: workspace:*
         version: link:../gateway
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
@@ -1744,12 +1744,12 @@ importers:
 
   packages/attachment/attachment:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
 
   packages/attachment/attachment-local:
     dependencies:
@@ -1934,12 +1934,12 @@ importers:
       '@berry-ai/harness-atomic-write':
         specifier: workspace:*
         version: link:../../util/atomic-write
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/dsh-app-boot':
         specifier: workspace:*
         version: link:../app-boot
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -1953,6 +1953,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-package-manifest':
         specifier: workspace:*
         version: link:../../util/package-manifest
@@ -1968,9 +1971,6 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-hmr':
         specifier: workspace:*
         version: link:../hmr
@@ -2010,12 +2010,12 @@ importers:
 
   packages/browser-use/browser-use:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
 
   packages/bundle/acp-app:
     dependencies:
@@ -2324,15 +2324,15 @@ importers:
 
   packages/bundle/headless:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/dsh-cmdline':
         specifier: workspace:*
         version: link:../../boot/cmdline
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -2941,15 +2941,15 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
@@ -2968,7 +2968,7 @@ importers:
 
   packages/client/file-upload:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/dsh-typert-protocol':
@@ -3158,19 +3158,19 @@ importers:
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
@@ -3201,6 +3201,9 @@ importers:
 
   packages/client/ui-agent-preset:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -3252,9 +3255,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -3388,6 +3388,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
@@ -3412,9 +3418,6 @@ importers:
       '@deepseek-ai/dsh-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
@@ -3496,9 +3499,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@tanstack/react-virtual':
         specifier: ^3.14.10
         version: 3.14.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3517,6 +3517,9 @@ importers:
 
   packages/client/ui-commands:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -3562,9 +3565,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -3581,9 +3581,15 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
@@ -3605,9 +3611,6 @@ importers:
       '@deepseek-ai/dsh-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-file-upload':
         specifier: workspace:*
         version: link:../file-upload
@@ -3677,9 +3680,6 @@ importers:
       '@deepseek-ai/dsh-tool-todo':
         specifier: workspace:*
         version: link:../../todo/tool-todo
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/dsh-workspace':
         specifier: workspace:*
         version: link:../../workspace/workspace
@@ -3726,6 +3726,9 @@ importers:
         specifier: workspace:*
         version: link:../../typert/protocol
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
@@ -3807,9 +3810,6 @@ importers:
       '@deepseek-ai/dsh-tool-present':
         specifier: workspace:*
         version: link:../../deliverables/tool-present
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/dsh-workspace-changes':
         specifier: workspace:*
         version: link:../../deliverables/workspace-changes
@@ -3891,12 +3891,12 @@ importers:
 
   packages/client/ui-dockkit:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
@@ -3981,6 +3981,9 @@ importers:
 
   packages/client/ui-input-trigger:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -4017,9 +4020,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -4080,12 +4080,12 @@ importers:
 
   packages/client/ui-layout:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
@@ -4188,6 +4188,9 @@ importers:
 
   packages/client/ui-model-selection:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -4236,9 +4239,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -4461,7 +4461,7 @@ importers:
 
   packages/client/ui-plugin-manager:
     dependencies:
-      '@deepseek-ai/dsh-timeout':
+      '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
       '@deepseek-ai/dsh-typert-protocol':
@@ -4702,6 +4702,9 @@ importers:
 
   packages/client/ui-schedule:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -4759,9 +4762,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@testing-library/react':
         specifier: ^16.3.3
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4783,6 +4783,9 @@ importers:
 
   packages/client/ui-session:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -4810,9 +4813,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -4826,6 +4826,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -4844,9 +4847,6 @@ importers:
       '@deepseek-ai/dsh-settings':
         specifier: workspace:*
         version: link:../../settings/settings
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -5045,6 +5045,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -5081,9 +5084,6 @@ importers:
       '@deepseek-ai/dsh-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -5147,6 +5147,9 @@ importers:
 
   packages/client/ui-settings-plugins:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -5165,9 +5168,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -5339,12 +5339,12 @@ importers:
 
   packages/client/ui-shortcuts:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
@@ -5435,15 +5435,15 @@ importers:
 
   packages/client/ui-sidebar-browser:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
@@ -5676,6 +5676,9 @@ importers:
 
   packages/client/ui-sidebar-right:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
@@ -5685,9 +5688,6 @@ importers:
       '@deepseek-ai/dsh-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
@@ -5835,6 +5835,9 @@ importers:
 
   packages/client/ui-skill:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
@@ -5877,9 +5880,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@testing-library/react':
         specifier: ^16.3.3
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6028,6 +6028,9 @@ importers:
 
   packages/client/ui-tool:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
@@ -6109,9 +6112,6 @@ importers:
       '@deepseek-ai/dsh-user-questions':
         specifier: workspace:*
         version: link:../../interaction/user-questions
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@testing-library/react':
         specifier: ^16.3.3
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6130,6 +6130,9 @@ importers:
 
   packages/client/ui-trajectory:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6181,9 +6184,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@tanstack/react-virtual':
         specifier: ^3.14.10
         version: 3.14.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6205,6 +6205,9 @@ importers:
 
   packages/client/ui-user-questions:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6217,9 +6220,6 @@ importers:
       '@deepseek-ai/dsh-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-connection':
         specifier: workspace:*
         version: link:../connection
@@ -6334,6 +6334,9 @@ importers:
 
   packages/client/ui-workspace:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
@@ -6406,9 +6409,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -6493,12 +6493,12 @@ importers:
 
   packages/compaction/compaction:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-commands':
         specifier: workspace:*
         version: link:../../interaction/commands
@@ -6511,7 +6511,7 @@ importers:
 
   packages/compaction/compaction-basic:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -6569,7 +6569,7 @@ importers:
 
   packages/compaction/compaction-image-offload:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
     devDependencies:
@@ -6612,7 +6612,7 @@ importers:
 
   packages/compaction/compaction-tool-result-pruner:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -6649,16 +6649,16 @@ importers:
 
   packages/computer-use/computer-use:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
 
   packages/context/agent-instructions:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -6759,10 +6759,10 @@ importers:
 
   packages/context/session-reference:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -6841,7 +6841,7 @@ importers:
 
   packages/context/time-context:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -6933,6 +6933,9 @@ importers:
 
   packages/core/agent:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6957,9 +6960,6 @@ importers:
       '@deepseek-ai/dsh-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/dsh-workspace':
         specifier: workspace:*
         version: link:../../workspace/workspace
@@ -6988,10 +6988,10 @@ importers:
 
   packages/core/agent-loop:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -7074,15 +7074,15 @@ importers:
 
   packages/core/session:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
     devDependencies:
       '@deepseek-ai/cordis':
         specifier: workspace:~
@@ -7115,10 +7115,10 @@ importers:
 
   packages/core/tools:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -7179,7 +7179,7 @@ importers:
 
   packages/credentials/credentials:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
     devDependencies:
@@ -7217,15 +7217,15 @@ importers:
 
   packages/credentials/deepseek-account:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -7361,7 +7361,7 @@ importers:
 
   packages/document/office-to-pdf:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/dsh-typert-protocol':
@@ -7398,7 +7398,7 @@ importers:
 
   packages/experimental/agent-team:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/schemastery':
@@ -7491,7 +7491,7 @@ importers:
 
   packages/experimental/auto-review:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
     devDependencies:
@@ -7757,6 +7757,9 @@ importers:
 
   packages/experimental/browser-use-stagehand-native:
     dependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@browserbasehq/stagehand':
         specifier: 4.1.0
         version: 4.1.0
@@ -7769,9 +7772,6 @@ importers:
       '@deepseek-ai/dsh-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -7833,7 +7833,7 @@ importers:
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -8422,15 +8422,15 @@ importers:
 
   packages/experimental/inspector:
     dependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
       '@deepseek-ai/dsh-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-client-modules':
         specifier: workspace:*
         version: link:../../client/modules
@@ -8539,6 +8539,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -8560,12 +8566,6 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
 
   packages/experimental/ralph-bundle:
     dependencies:
@@ -8658,7 +8658,7 @@ importers:
 
   packages/experimental/session-title-all-prompts-llm:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -8708,7 +8708,7 @@ importers:
 
   packages/experimental/speech-to-text:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/schemastery':
@@ -8733,7 +8733,7 @@ importers:
 
   packages/experimental/speech-to-text-sensevoice:
     dependencies:
-      '@deepseek-ai/dsh-timeout':
+      '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
       '@deepseek-ai/schemastery':
@@ -8893,13 +8893,16 @@ importers:
 
   packages/experimental/tool-session-query:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -8936,9 +8939,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tool-call-timeout-policy':
         specifier: workspace:*
         version: link:../../guard/timeout-policy
@@ -9080,6 +9080,12 @@ importers:
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9125,12 +9131,6 @@ importers:
       '@deepseek-ai/dsh-session-query-sqlite':
         specifier: workspace:*
         version: link:../../session-query/session-query-sqlite
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
 
   packages/experimental/voice-input-bundle:
     dependencies:
@@ -9159,10 +9159,10 @@ importers:
 
   packages/experimental/webhook:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
     devDependencies:
@@ -9202,7 +9202,7 @@ importers:
 
   packages/experimental/webhook-github:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -9361,7 +9361,7 @@ importers:
 
   packages/experimental/worktree:
     dependencies:
-      '@deepseek-ai/dsh-timeout':
+      '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../util/timeout
       '@deepseek-ai/schemastery':
@@ -9413,6 +9413,9 @@ importers:
 
   packages/extensions/cordis-client-runner:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9431,9 +9434,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-theme':
         specifier: workspace:*
         version: link:../../client/ui-theme
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -9443,7 +9443,7 @@ importers:
 
   packages/extensions/cordis-host-runner:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -9453,6 +9453,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9465,9 +9468,6 @@ importers:
       '@deepseek-ai/dsh-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -9516,6 +9516,9 @@ importers:
 
   packages/extensions/ui-cordis:
     devDependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9552,9 +9555,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -9608,6 +9608,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9617,9 +9620,6 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-command-feedback':
         specifier: workspace:*
         version: link:../command-feedback
@@ -9641,12 +9641,12 @@ importers:
 
   packages/fs/fs:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -9797,6 +9797,9 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9827,9 +9830,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -9931,6 +9931,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9946,9 +9949,6 @@ importers:
       '@deepseek-ai/dsh-bash-local':
         specifier: workspace:*
         version: link:../../shell/bash-local
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -10083,15 +10083,15 @@ importers:
 
   packages/guard/timeout-policy:
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -10224,6 +10224,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-package-manifest':
         specifier: workspace:*
         version: link:../../util/package-manifest
@@ -10239,9 +10242,6 @@ importers:
       '@deepseek-ai/dsh-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
@@ -10307,15 +10307,15 @@ importers:
 
   packages/identity/anonymous-user-id:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-home-paths':
         specifier: workspace:*
         version: link:../../util/home-paths
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
 
   packages/interaction/commands:
     dependencies:
@@ -10326,6 +10326,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10335,9 +10338,6 @@ importers:
       '@deepseek-ai/dsh-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -10422,15 +10422,15 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -10483,15 +10483,15 @@ importers:
 
   packages/jobs/jobs:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -10505,6 +10505,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10520,9 +10526,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-jobs':
         specifier: workspace:*
         version: link:../jobs
@@ -10532,9 +10535,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
 
   packages/jobs/tool-jobs:
     dependencies:
@@ -10578,21 +10578,21 @@ importers:
 
   packages/llm/llm:
     dependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
-        version: link:../../util/brand
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
+        version: link:../../util/values
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -10609,15 +10609,15 @@ importers:
 
   packages/llm/llm-deepseek:
     dependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cosmokit':
         specifier: link:../../../vendor/cosmokit
         version: link:../../../vendor/cosmokit
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -10637,6 +10637,9 @@ importers:
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10703,9 +10706,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -10761,10 +10761,10 @@ importers:
 
   packages/llm/llm-pi-ai:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -10780,6 +10780,9 @@ importers:
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10810,9 +10813,6 @@ importers:
       '@deepseek-ai/dsh-settings':
         specifier: workspace:*
         version: link:../../settings/settings
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
 
   packages/llm/llm-retry:
     dependencies:
@@ -10823,6 +10823,12 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10841,9 +10847,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../llm
@@ -10868,16 +10871,13 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
 
   packages/llm/plugin-package-inventory-deepseek:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/schemastery':
@@ -10917,7 +10917,7 @@ importers:
 
   packages/llm/token-meter:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -10951,31 +10951,34 @@ importers:
 
   packages/lsp/lsp:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
 
   packages/lsp/lsp-stdio:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-fs':
         specifier: workspace:*
         version: link:../../fs/fs
@@ -10994,9 +10997,6 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -11006,13 +11006,16 @@ importers:
 
   packages/lsp/tool-lsp:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11043,9 +11046,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tool-call-timeout-policy':
         specifier: workspace:*
         version: link:../../guard/timeout-policy
@@ -11058,7 +11058,7 @@ importers:
 
   packages/mcp/mcp-client:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -11071,6 +11071,9 @@ importers:
       '@berry-ai/harness-http-proxy':
         specifier: workspace:*
         version: link:../../util/http-proxy
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11095,9 +11098,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -11119,7 +11119,7 @@ importers:
 
   packages/mcp/mcp-resources:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
     devDependencies:
@@ -11147,7 +11147,7 @@ importers:
 
   packages/plan/plan-mode:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       zod:
@@ -11331,13 +11331,16 @@ importers:
 
   packages/ptc-runtime/ptc-runtime-node:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11371,13 +11374,10 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
 
   packages/sandbox/sandbox:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
     devDependencies:
@@ -11393,12 +11393,12 @@ importers:
 
   packages/sandbox/sandbox-local:
     dependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/dsh-sandbox-windows-acl':
         specifier: workspace:*
         version: link:../sandbox-windows-acl
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/node-addon-system':
         specifier: workspace:~
         version: link:../../../native/system/packages/entry
@@ -11499,6 +11499,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11517,9 +11520,6 @@ importers:
       '@deepseek-ai/dsh-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -11626,7 +11626,7 @@ importers:
 
   packages/sdk/server:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/schemastery':
@@ -11681,7 +11681,7 @@ importers:
 
   packages/session-query/session-log-export:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/dsh-session-format':
@@ -11761,12 +11761,12 @@ importers:
         specifier: workspace:*
         version: link:../../session/session-format-catalog
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -11858,7 +11858,7 @@ importers:
 
   packages/session/session-format:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
     devDependencies:
@@ -11896,12 +11896,12 @@ importers:
 
   packages/session/session-format-v0-to-v1:
     dependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/dsh-session-format':
         specifier: workspace:*
         version: link:../session-format
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
     devDependencies:
       '@deepseek-ai/cordis':
         specifier: workspace:~
@@ -11912,6 +11912,9 @@ importers:
 
   packages/session/session-format-v1-to-v2:
     dependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -11921,9 +11924,6 @@ importers:
       '@deepseek-ai/dsh-session-format-v0-to-v1':
         specifier: workspace:*
         version: link:../session-format-v0-to-v1
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
     devDependencies:
       '@deepseek-ai/cordis':
         specifier: workspace:~
@@ -11963,10 +11963,10 @@ importers:
 
   packages/session/session-log-deepseek:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -12012,25 +12012,25 @@ importers:
 
   packages/session/session-persistence:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
 
   packages/session/session-persistence-jsonl:
     dependencies:
@@ -12084,7 +12084,7 @@ importers:
 
   packages/session/session-projection-cache:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -12213,7 +12213,7 @@ importers:
 
   packages/session/session-title:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -12223,6 +12223,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12232,9 +12235,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -12250,7 +12250,7 @@ importers:
 
   packages/session/session-title-first-prompt-llm:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -12296,13 +12296,16 @@ importers:
 
   packages/session/session-title-llm:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12315,9 +12318,6 @@ importers:
       '@deepseek-ai/dsh-session-title':
         specifier: workspace:*
         version: link:../session-title
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
 
   packages/session/session-turn-outline:
     dependencies:
@@ -12428,6 +12428,9 @@ importers:
 
   packages/settings/settings:
     dependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
@@ -12437,9 +12440,6 @@ importers:
       '@deepseek-ai/dsh-config-editor':
         specifier: workspace:*
         version: link:../../boot/config-editor
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -12447,6 +12447,9 @@ importers:
         specifier: ^2.8.1
         version: 2.9.0
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12459,9 +12462,6 @@ importers:
       '@deepseek-ai/dsh-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-hmr':
         specifier: workspace:*
         version: link:../../boot/hmr
@@ -12475,6 +12475,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12487,9 +12490,6 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
 
   packages/shell/bash-sandbox:
     devDependencies:
@@ -12527,6 +12527,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12539,9 +12542,6 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
 
   packages/shell/pwsh-sandbox:
     devDependencies:
@@ -12692,6 +12692,9 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12734,9 +12737,6 @@ importers:
       '@deepseek-ai/dsh-terminal-bash':
         specifier: workspace:*
         version: link:../../terminal/terminal-bash
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -12826,6 +12826,9 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../util/output-retention
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12871,9 +12874,6 @@ importers:
       '@deepseek-ai/dsh-terminal-bash':
         specifier: workspace:*
         version: link:../../terminal/terminal-bash
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
@@ -12883,7 +12883,7 @@ importers:
 
   packages/skill/skill:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -13017,12 +13017,12 @@ importers:
 
   packages/spill/spill:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -13036,6 +13036,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13045,9 +13048,6 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -13190,12 +13190,15 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-fs':
         specifier: workspace:*
         version: link:../../fs/fs
@@ -13241,21 +13244,27 @@ importers:
       '@deepseek-ai/dsh-subprocess-ssh':
         specifier: workspace:*
         version: link:../subprocess-ssh
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
 
   packages/ssh/ssh-helper-runtime:
     dependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-http-proxy':
         specifier: workspace:*
         version: link:../../util/http-proxy
       '@berry-ai/harness-lazy-require':
         specifier: workspace:*
         version: link:../../util/lazy-require
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13265,9 +13274,6 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-fs':
         specifier: workspace:*
         version: link:../../fs/fs
@@ -13322,15 +13328,9 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/dsh-win32-process':
         specifier: workspace:*
         version: link:../../subprocess/win32-process
@@ -13426,13 +13426,13 @@ importers:
 
   packages/subagent/subagent:
     dependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-chunked-list':
         specifier: workspace:*
         version: link:../../util/chunked-list
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -13529,13 +13529,16 @@ importers:
       '@agentclientprotocol/sdk':
         specifier: 1.4.0
         version: 1.4.0(zod@4.4.3)
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13575,9 +13578,6 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tool-subagent':
         specifier: workspace:*
         version: link:../tool-subagent
@@ -13590,7 +13590,7 @@ importers:
       '@anthropic-ai/sdk':
         specifier: 0.93.0
         version: 0.93.0(zod@4.4.3)
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/dsh-tool-subagent':
@@ -13606,6 +13606,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13648,9 +13651,6 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
@@ -13660,7 +13660,7 @@ importers:
 
   packages/subagent/subagent-codex:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/dsh-sdk-protocol':
@@ -13676,6 +13676,9 @@ importers:
         specifier: 0.153.4
         version: 0.153.4
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -13715,9 +13718,6 @@ importers:
       '@deepseek-ai/dsh-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
@@ -13727,7 +13727,7 @@ importers:
 
   packages/subagent/subagent-dsh-sdk:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       '@deepseek-ai/schemastery':
@@ -13938,10 +13938,10 @@ importers:
 
   packages/subagent/tool-subagent-control:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
     devDependencies:
@@ -14015,6 +14015,9 @@ importers:
         specifier: 1.2.0-beta.15
         version: 1.2.0-beta.15(patch_hash=9d30053266d0f39d3debe894c675867f6782da6bcadbc94a693b3cfb9eff8ed0)
     devDependencies:
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -14024,9 +14027,6 @@ importers:
       '@deepseek-ai/dsh-subprocess':
         specifier: workspace:*
         version: link:../subprocess
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
 
   packages/subprocess/win32-process:
     dependencies:
@@ -14077,6 +14077,9 @@ importers:
 
   packages/terminal/terminal:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -14086,9 +14089,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -14298,12 +14298,12 @@ importers:
 
   packages/test-support/llm-replay:
     dependencies:
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/dsh-session-format-catalog':
         specifier: workspace:*
         version: link:../../session/session-format-catalog
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
     devDependencies:
       '@deepseek-ai/cordis':
         specifier: workspace:~
@@ -14530,7 +14530,7 @@ importers:
 
   packages/typert/protocol:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
     devDependencies:
@@ -14663,7 +14663,7 @@ importers:
 
   packages/web/tool-web:
     dependencies:
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -14750,12 +14750,12 @@ importers:
       '@berry-ai/harness-http-proxy':
         specifier: workspace:*
         version: link:../../util/http-proxy
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../util/timeout
       '@deepseek-ai/dsh-web':
         specifier: workspace:*
         version: link:../web
@@ -14883,15 +14883,15 @@ importers:
 
   packages/workflow/workflow:
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -14901,10 +14901,10 @@ importers:
 
   packages/workflow/workflow-ptc:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-util-values':
+      '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
       '@deepseek-ai/schemastery':
@@ -14989,7 +14989,7 @@ importers:
 
   packages/workspace/workspace:
     dependencies:
-      '@deepseek-ai/dsh-brand':
+      '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
       zod:
@@ -15023,6 +15023,9 @@ importers:
       '@berry-ai/harness-atomic-write':
         specifier: workspace:*
         version: link:../../packages/util/atomic-write
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../packages/util/brand
       '@berry-ai/harness-home-paths':
         specifier: workspace:*
         version: link:../../packages/util/home-paths
@@ -15038,9 +15041,15 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../packages/util/output-retention
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../packages/util/timeout
       '@berry-ai/harness-util-time':
         specifier: workspace:*
         version: link:../../packages/util/time
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../packages/util/values
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../packages/util/workspace-path
@@ -15107,9 +15116,6 @@ importers:
       '@deepseek-ai/dsh-bash-local':
         specifier: workspace:*
         version: link:../../packages/shell/bash-local
-      '@deepseek-ai/dsh-brand':
-        specifier: workspace:*
-        version: link:../../packages/util/brand
       '@deepseek-ai/dsh-client-connection':
         specifier: workspace:*
         version: link:../../packages/client/connection
@@ -15359,9 +15365,6 @@ importers:
       '@deepseek-ai/dsh-time-context':
         specifier: workspace:*
         version: link:../../packages/context/time-context
-      '@deepseek-ai/dsh-timeout':
-        specifier: workspace:*
-        version: link:../../packages/util/timeout
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../packages/llm/token-meter
@@ -15446,9 +15449,6 @@ importers:
       '@deepseek-ai/dsh-user-questions':
         specifier: workspace:*
         version: link:../../packages/interaction/user-questions
-      '@deepseek-ai/dsh-util-values':
-        specifier: workspace:*
-        version: link:../../packages/util/values
       '@deepseek-ai/dsh-web':
         specifier: workspace:*
         version: link:../../packages/web/web

@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { TimeoutReason } from '@deepseek-ai/dsh-timeout'
+import { TimeoutReason } from '@berry-ai/harness-timeout'
 import { boot } from '@deepseek-ai/dsh-app-boot'
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http'
 import { once } from 'node:events'

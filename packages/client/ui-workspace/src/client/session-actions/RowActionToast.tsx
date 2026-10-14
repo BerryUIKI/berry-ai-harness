@@ -3,7 +3,7 @@
  * One notice is visible at a time; a parent rerender does not extend its hold.
  */
 import { IconWarningOutlineRegular, Toast } from '@deepseek-ai/dsh-client-ui-primitives'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { assertNever } from '@berry-ai/harness-util-values'
 import type { RowToastProps, RowToastState } from '../contract/slots.ts'
 
 /**

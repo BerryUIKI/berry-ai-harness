@@ -36,7 +36,7 @@ import { PAGE_ASSETS } from '../src/rules.ts'
 const repoRoot = fileURLToPath(new URL('../../../../', import.meta.url))
 
 /** A leaf workspace package: real build output, no dependencies to drag in. */
-const SUBJECT = '@deepseek-ai/dsh-timeout'
+const SUBJECT = '@berry-ai/harness-timeout'
 const LANDLOCK = '@deepseek-ai/node-addon-system'
 const LANDLOCK_ENTRY = `${LANDLOCK}/landlock-run`
 const PLUGIN_INVENTORY = '@deepseek-ai/dsh-plugin-package-inventory-deepseek'

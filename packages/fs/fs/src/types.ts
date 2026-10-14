@@ -6,7 +6,7 @@
  */
 
 import { HarnessError } from '@deepseek-ai/dsh-llm'
-import type { Branded } from '@deepseek-ai/dsh-brand'
+import type { Branded } from '@berry-ai/harness-brand'
 
 /**
  * Opaque key for stale guards and target lookup. The local backend uses a

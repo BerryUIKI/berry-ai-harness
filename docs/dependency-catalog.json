@@ -733,11 +733,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-brand",
+      "name": "@berry-ai/harness-brand",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-brand",
+          "location": "node_modules/@berry-ai/harness-brand",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2689,11 +2689,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-timeout",
+      "name": "@berry-ai/harness-timeout",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-timeout",
+          "location": "node_modules/@berry-ai/harness-timeout",
           "direct": false,
           "optional": false,
           "peer": false
@@ -3061,11 +3061,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-util-values",
+      "name": "@berry-ai/harness-util-values",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-util-values",
+          "location": "node_modules/@berry-ai/harness-util-values",
           "direct": false,
           "optional": false,
           "peer": false

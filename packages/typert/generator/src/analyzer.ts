@@ -48,7 +48,7 @@ type WithoutId<T> = T extends { readonly id: TypeNodeId } ? Omit<T, 'id'> : neve
 type TypeNodeInput = WithoutId<TypeNodeModel>
 
 const PUBLIC_REMOTE_TYPE_ROOTS = new Set([
-  '@deepseek-ai/dsh-util-values',
+  '@berry-ai/harness-util-values',
 ])
 
 /** Analysis failure with a source-oriented diagnostic. */

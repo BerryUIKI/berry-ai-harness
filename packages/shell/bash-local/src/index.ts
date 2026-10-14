@@ -15,7 +15,7 @@ import z from '@deepseek-ai/schemastery'
 import { ShellExecutor } from '@deepseek-ai/dsh-shell'
 import type { ShellExecRequest, ShellExecSpec, ShellExecution, ShellProcess, ShellProcessRead, ShellRunResult, CollectedOutput } from '@deepseek-ai/dsh-shell'
 import type { SubprocessCollect, SubprocessHandle, SubprocessOutputReader, SubprocessSpawnSpec } from '@deepseek-ai/dsh-subprocess'
-import { clampTimeout, deadline, MAX_TIMER_DELAY_MS, timeoutOf } from '@deepseek-ai/dsh-timeout'
+import { clampTimeout, deadline, MAX_TIMER_DELAY_MS, timeoutOf } from '@berry-ai/harness-timeout'
 
 /**
  * Model-friendly environment overrides: disable colors, pagers, and

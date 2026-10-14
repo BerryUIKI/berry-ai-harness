@@ -24,8 +24,8 @@ import type {
   Message,
   ReasoningEffortId,
 } from '@deepseek-ai/dsh-llm'
-import { deadline, MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
-import { assertNever, deepFreeze } from '@deepseek-ai/dsh-util-values'
+import { deadline, MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
+import { assertNever, deepFreeze } from '@berry-ai/harness-util-values'
 import type { SessionSeq } from '@deepseek-ai/dsh-session'
 import { SessionTitleProviderId } from '@deepseek-ai/dsh-session-title'
 import type {

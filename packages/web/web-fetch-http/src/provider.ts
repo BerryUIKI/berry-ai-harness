@@ -8,7 +8,7 @@
 
 import { WebError } from '@deepseek-ai/dsh-web'
 import type { WebFetchBody, WebFetchProvider, WebFetchRequest, WebFetchResult } from '@deepseek-ai/dsh-web'
-import { deadline, timeoutOf } from '@deepseek-ai/dsh-timeout'
+import { deadline, timeoutOf } from '@berry-ai/harness-timeout'
 import type { Response } from 'undici'
 import { proxyRouteFor } from '@berry-ai/harness-http-proxy'
 import { isNonPublicIpLiteral, publicHttpNetwork } from './network.ts'

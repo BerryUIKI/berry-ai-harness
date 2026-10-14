@@ -11,7 +11,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/dsh-subprocess'
 import type { Config } from './config.ts'
 import type { SpeechPreparationState } from '@deepseek-ai/dsh-experimental-speech-to-text/types'
-import { timeoutOf } from '@deepseek-ai/dsh-timeout'
+import { timeoutOf } from '@berry-ai/harness-timeout'
 import { classifyDownloadFailure, SpeechDownloadError } from './download-error.ts'
 import { orderModelSources } from './model-sources.ts'
 
