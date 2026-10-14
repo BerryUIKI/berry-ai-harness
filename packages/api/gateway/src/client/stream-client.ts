@@ -7,7 +7,7 @@ import {
   type RemoteStreamClientMessage,
   type RemoteStreamServerMessage,
 } from '../stream-protocol.ts'
-import { Deque } from '@deepseek-ai/dsh-deque'
+import { Deque } from '@berry-ai/harness-deque'
 import { randomUUID } from '@deepseek-ai/dsh-util-crypto'
 
 /** Physical Remote stream socket failure that may be retried by a domain transport. */

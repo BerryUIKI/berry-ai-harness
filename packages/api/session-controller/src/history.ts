@@ -1,7 +1,7 @@
 /** Cold Session history pagination and live-event source. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { Deque } from '@deepseek-ai/dsh-deque'
+import { Deque } from '@berry-ai/harness-deque'
 import type { AssistantStreamFrame } from '@deepseek-ai/dsh-agent'
 import {
   isAppendSurfaceEvent,

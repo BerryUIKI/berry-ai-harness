@@ -37,7 +37,7 @@
     "@deepseek-ai/dsh-fs-local": "workspace:*",
     "@deepseek-ai/dsh-fs-sandbox": "workspace:*",
     "@deepseek-ai/dsh-http-proxy": "workspace:*",
-    "@deepseek-ai/dsh-lazy-require": "workspace:*",
+    "@berry-ai/harness-lazy-require": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-ptc-runtime": "workspace:*",
     "@deepseek-ai/dsh-ptc-runtime-node": "workspace:*",

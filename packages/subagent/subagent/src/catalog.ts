@@ -5,8 +5,8 @@
  */
 
 import { z } from 'zod'
-import { appendChunkedList, chunkedListSchema, iterateChunkedList } from '@deepseek-ai/dsh-chunked-list'
-import type { ChunkedList } from '@deepseek-ai/dsh-chunked-list'
+import { appendChunkedList, chunkedListSchema, iterateChunkedList } from '@berry-ai/harness-chunked-list'
+import type { ChunkedList } from '@berry-ai/harness-chunked-list'
 import type {
   Session,
   SessionEvent,

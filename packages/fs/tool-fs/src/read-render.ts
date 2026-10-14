@@ -171,7 +171,7 @@ ${body}
 
 /**
  * Derive the persisted `lang` hint from a read path's file extension. The shared
- * table in `@deepseek-ai/dsh-util-code-language` owns the recognized suffixes and
+ * table in `@berry-ai/harness-util-code-language` owns the recognized suffixes and
  * the path rules (both separators, a leading dot as the extension separator, and
  * prototype-key safety); `readLangHintForPath` projects the read card's short ids
  * over it, so a suffix whose value a recorded session already holds keeps it
@@ -179,7 +179,7 @@ ${body}
  * @param path - the model-facing path the read reported.
  * @returns the persisted language hint, or `undefined` when the extension maps to none.
  */
-export { readLangHintForPath as langFromPath } from '@deepseek-ai/dsh-util-code-language'
+export { readLangHintForPath as langFromPath } from '@berry-ai/harness-util-code-language'
 
 /**
  * The `read` tool's private `tool/result` `meta` payload: the structured

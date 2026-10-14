@@ -19,7 +19,7 @@ import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import WebServer from '@deepseek-ai/dsh-host-webserver'
-import type { NativeCommandRunner } from '@deepseek-ai/dsh-native-command'
+import type { NativeCommandRunner } from '@berry-ai/harness-native-command'
 import {
   createLaunchEnvironmentSnapshot, DSH_LAUNCH_ENVIRONMENT_KEY, type LaunchEnvironmentLayerInput,
 } from '@deepseek-ai/dsh-launch-environment'

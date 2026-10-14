@@ -1,5 +1,5 @@
 /** Browser-safe request, result, and lifecycle vocabulary for the Session Remote service. */
-import type { NativeFileApplication } from '@deepseek-ai/dsh-native-command/types'
+import type { NativeFileApplication } from '@berry-ai/harness-native-command/types'
 
 import type {
   AttachmentIdType, ImageAttachmentLimits, ImageAttachmentRef, ImageMediaType,

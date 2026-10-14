@@ -206,14 +206,14 @@ describe('package dependency scope', () => {
       '@deepseek-ai/dsh-client-ui-tool': ['@deepseek-ai/dsh-api-remotes'],
     })
     expect(PACKAGE_DEPENDENCY_POLICY.duplicateSafePackages).toEqual([
+      '@berry-ai/harness-lazy-require',
+      '@berry-ai/harness-util-code-language',
       '@deepseek-ai/dsh-brand',
-      '@deepseek-ai/dsh-lazy-require',
       '@deepseek-ai/dsh-typert-protocol',
-      '@deepseek-ai/dsh-util-code-language',
       '@deepseek-ai/dsh-util-crypto',
       '@deepseek-ai/dsh-util-values',
     ])
-    expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@deepseek-ai/dsh-deque']).toEqual(['Deque'])
+    expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@berry-ai/harness-deque']).toEqual(['Deque'])
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@deepseek-ai/schemastery']).toEqual(['default'])
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@deepseek-ai/dsh-session/types']).toBeUndefined()
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@deepseek-ai/dsh-typert-protocol']).toBeUndefined()
@@ -629,16 +629,16 @@ describe('face-aware source classification', () => {
       "export * from '@f/star'",
       "void import('@f/dynamic')",
       "void require('@f/required')",
-      "import { createLazyRequire as lazy } from '@deepseek-ai/dsh-lazy-require'",
-      "import * as lazyModule from '@deepseek-ai/dsh-lazy-require'",
+      "import { createLazyRequire as lazy } from '@berry-ai/harness-lazy-require'",
+      "import * as lazyModule from '@berry-ai/harness-lazy-require'",
       "void lazy('@f/lazy', import.meta.url)",
       "void lazyModule.createLazyRequire('@f/lazy-namespace', import.meta.url)",
       'void defaultValue; void local; void namespace',
     ].join('\n')
     const uses = collectRuntimeSourceExportUses('probe.ts', source)
     expect(uses.map(({ specifier, exportName }) => ({ specifier, exportName }))).toEqual([
-      { specifier: '@deepseek-ai/dsh-lazy-require', exportName: '*' },
-      { specifier: '@deepseek-ai/dsh-lazy-require', exportName: 'createLazyRequire' },
+      { specifier: '@berry-ai/harness-lazy-require', exportName: '*' },
+      { specifier: '@berry-ai/harness-lazy-require', exportName: 'createLazyRequire' },
       { specifier: '@f/dynamic', exportName: '*' },
       { specifier: '@f/effect', exportName: '(side effect)' },
       { specifier: '@f/lazy', exportName: '*' },

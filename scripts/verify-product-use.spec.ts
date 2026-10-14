@@ -274,8 +274,8 @@ describe('product package use', () => {
   it('accepts declaration-only infrastructure and rejects missing or miscategorized policy entries', () => {
     const root = fixture()
     const directory = 'packages/util/package-manifest'
-    pkg(root, directory, '@deepseek-ai/dsh-package-manifest')
-    expect(failures(root)).toContain(`${directory} (@deepseek-ai/dsh-package-manifest): no product runtime use`)
+    pkg(root, directory, '@berry-ai/harness-package-manifest')
+    expect(failures(root)).toContain(`${directory} (@berry-ai/harness-package-manifest): no product runtime use`)
     expect(failures(root, { [directory]: { category: 'declarations', reason: 'Shared public metadata types.' } })).toBe('')
     pkg(root, candidateDir, candidate)
     expect(failures(root, declarations('declarations'))).toContain('invalid policy category declarations')
