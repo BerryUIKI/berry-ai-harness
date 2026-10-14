@@ -6,7 +6,7 @@ import { chromium, type Page } from 'playwright'
 import { expect, it, onTestFinished } from 'vitest'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 import type { ClientModuleLoaderTarget } from '@deepseek-ai/dsh-client-modules/client'
-import { formatSessionReferenceMention } from '@deepseek-ai/dsh-session-reference'
+import { formatSessionReferenceMention } from '@berry-ai/harness-session-reference'
 import { launchWebScaffold, watchConsole, type WebScaffold } from './scaffold.ts'
 import { newEnglishPage } from './support.ts'
 

@@ -16,7 +16,7 @@ import {
   SessionId,
   SessionSeq,
 } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-session-reference/types'
+import type {} from '@berry-ai/harness-session-reference/types'
 import type {} from '@deepseek-ai/dsh-session-title'
 import {
   assertFixtureInventory,

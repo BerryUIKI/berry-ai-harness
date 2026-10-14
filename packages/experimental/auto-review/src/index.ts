@@ -11,7 +11,7 @@
 import type {} from '@deepseek-ai/dsh-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import type {} from '@deepseek-ai/dsh-agent-instructions'
+import type {} from '@berry-ai/harness-agent-instructions'
 import {
   BlockAssembler,
   type ContentBlock,

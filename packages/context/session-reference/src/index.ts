@@ -2,7 +2,7 @@
  * Cross-session snapshot preparation. Hosts adapt mentions into structured
  * references; this service owns exact reads, projection, budgets, and durable context.
  *
- * @module @deepseek-ai/dsh-session-reference
+ * @module @berry-ai/harness-session-reference
  */
 
 import { Context } from '@deepseek-ai/cordis'

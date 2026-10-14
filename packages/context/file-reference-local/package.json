@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-file-reference-local",
+  "name": "@berry-ai/harness-file-reference-local",
   "description": "Local-filesystem ctx.fileReferences provider with bounded fuzzy indexes",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -36,7 +36,7 @@
   },
   "peerDependencies": {
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-file-reference": "workspace:*",
+    "@berry-ai/harness-file-reference": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-file-reference": "workspace:*",
+    "@berry-ai/harness-file-reference": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",

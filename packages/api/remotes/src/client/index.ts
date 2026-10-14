@@ -20,7 +20,7 @@ import messageFeedbackRemote from '@berry-ai/harness-message-feedback/remote'
 import permissionPresetsRemote from '@berry-ai/harness-permission-presets/remote'
 import sessionFeedbackRemote from '@berry-ai/harness-command-feedback/remote'
 import fileUploadsRemote from '@deepseek-ai/dsh-client-file-upload/remote'
-import sessionReferencesRemote from '@deepseek-ai/dsh-session-reference/remote'
+import sessionReferencesRemote from '@berry-ai/harness-session-reference/remote'
 import subagentsRemote from '@deepseek-ai/dsh-subagent/remote'
 import sessionRemote from '@deepseek-ai/dsh-api-session-controller/remote'
 import jobRemote from '@deepseek-ai/dsh-api-job-controller/remote'
@@ -53,7 +53,7 @@ export type {} from '@berry-ai/harness-message-feedback/remote'
 export type {} from '@berry-ai/harness-permission-presets/remote'
 export type {} from '@berry-ai/harness-command-feedback/remote'
 export type {} from '@deepseek-ai/dsh-client-file-upload/remote'
-export type {} from '@deepseek-ai/dsh-session-reference/remote'
+export type {} from '@berry-ai/harness-session-reference/remote'
 export type {} from '@deepseek-ai/dsh-subagent/remote'
 export type * from '@deepseek-ai/dsh-subagent/client'
 export type {} from '@deepseek-ai/dsh-api-session-controller/remote'
@@ -148,8 +148,8 @@ export type {
 } from '@deepseek-ai/dsh-llm/types'
 // Reference-discovery result vocabulary for the fileReferences and
 // sessionReferenceResolver namespaces.
-export type { FileReferenceCandidate } from '@deepseek-ai/dsh-file-reference/types'
-export type { SessionReferenceMentionCandidate } from '@deepseek-ai/dsh-session-reference/types'
+export type { FileReferenceCandidate } from '@berry-ai/harness-file-reference/types'
+export type { SessionReferenceMentionCandidate } from '@berry-ai/harness-session-reference/types'
 
 // The Remote failure vocabulary, re-exported so business packages keep naming
 // this assembly alone. Types only: a value export would make spec imports load

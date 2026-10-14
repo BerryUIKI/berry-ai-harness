@@ -2,7 +2,7 @@
  * Public session-reference request, candidate, and preparation records.
  * Imports stay on type-only subpaths so generated Remote clients can consume
  * this module without Host runtime code.
- * @module @deepseek-ai/dsh-session-reference/types
+ * @module @berry-ai/harness-session-reference/types
  */
 
 import type { UserMessage } from '@deepseek-ai/dsh-llm/message'

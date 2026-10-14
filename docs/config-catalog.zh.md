@@ -11,6 +11,37 @@
 
 每个包的条目用三个标识符标注：`inject` 列出插件注入的服务键，其 `cordis.yml` 树还必须加载这些服务的提供者；`refs` 列出声明引用、但未粘贴在此处的类型；`source` 链接到声明配置的源文件。范围限定为 harness 层级（`packages/`）；配置树还可能加载的 vendored cordis 插件（控制台日志记录器等）固定为上游源代码（参见 [vendoring policy](../vendor/README.md)），未收录于此目录。
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-agent-instructions -->
+<a id="berry-aiharness-agent-instructions"></a>
+
+## `@berry-ai/harness-agent-instructions`
+
+- `inject`: `sessionProjections` · `workingDirectory`
+- `source`: [`packages/context/agent-instructions/src/config.ts:18`](../packages/context/agent-instructions/src/config.ts)
+
+```ts config-catalog
+/** User-facing workspace instruction loader configuration. */
+export interface Config {
+  /** Directory entries that identify the project root while walking upward from the current working directory. */
+  projectRootMarkers?: string[]
+  /** UTF-8 byte cap for one rendered baseline or dynamic batch; non-positive or non-finite disables loading. */
+  maxBytes: number
+  /** Maximum UTF-8 bytes read from one instruction file; larger files are ignored. */
+  maxSourceBytes?: number
+  /**
+   * Ordered same-directory project candidates; every existing file loads, with
+   * per-directory trimmed-content duplicates collapsed to the earliest candidate.
+   */
+  instructionFileCandidates?: string[]
+  /**
+   * Ordered same-directory local-overlay candidates loaded after the base files
+   * under the same per-directory trimmed-content dedup; empty disables the overlay.
+   */
+  localInstructionFileCandidates?: string[]
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-agent-instructions -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-agent-preset -->
 <a id="berry-aiharness-agent-preset"></a>
 
@@ -194,6 +225,27 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-deepseek-account-platform -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-file-reference-local -->
+<a id="berry-aiharness-file-reference-local"></a>
+
+## `@berry-ai/harness-file-reference-local`
+
+- `inject`: `agents` · `workingDirectory`
+- `source`: [`packages/context/file-reference-local/src/index.ts:35`](../packages/context/file-reference-local/src/index.ts)
+
+```ts config-catalog
+/** Local file-reference discovery configuration. */
+export interface Config {
+  /** Maximum ranked candidates returned for one query. */
+  maxResults?: number
+  /** Maximum indexed files and directories per agent workspace. */
+  maxEntries?: number
+  /** Directory basenames never traversed or offered. */
+  excludedDirectories?: string[]
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-file-reference-local -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-fs-local -->
 <a id="berry-aiharness-fs-local"></a>
@@ -801,6 +853,29 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-schedule -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-session-reference -->
+<a id="berry-aiharness-session-reference"></a>
+
+## `@berry-ai/harness-session-reference`
+
+- `inject`: `sessionQuery`
+- `source`: [`packages/context/session-reference/src/config.ts:11`](../packages/context/session-reference/src/config.ts)
+
+```ts config-catalog
+/** Session-reference service configuration. */
+export interface Config {
+  /** Maximum distinct source sessions referenced by one message, from one to three. */
+  maxReferences?: number
+  /** Default host candidate-list limit. */
+  candidateLimit?: number
+  /** Explicit maximum rendered UTF-8 bytes per source; absent uses the model-relative budget with a 64 KiB floor. */
+  maxReferenceBytes?: number
+  /** Fraction of the model context window per source, estimated at four bytes per token; between zero and one. */
+  referenceContextFraction?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-session-reference -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-shell-env -->
 <a id="berry-aiharness-shell-env"></a>
 
@@ -1058,6 +1133,42 @@ export interface Config {
 export type ShellDialect = 'bash' | 'pwsh'
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-terminal-bash -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-time-context -->
+<a id="berry-aiharness-time-context"></a>
+
+## `@berry-ai/harness-time-context`
+
+- `inject`: `agents` · `sessionProjections`
+- `source`: [`packages/context/time-context/src/index.ts:56`](../packages/context/time-context/src/index.ts)
+
+```ts config-catalog
+/** Request-preparation clock formatting and append scheduling. Invalid values fail plugin load. */
+export interface Config {
+  /** Fallback display zone when the open turn has no unique browser zone. Omit to use the process zone. */
+  timeZone?: string
+  /** Minimum milliseconds between durable injections in one session. Defaults to 600000 (10 minutes); 0 injects at every eligible step. */
+  refreshIntervalMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-time-context -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tmux-context -->
+<a id="berry-aiharness-tmux-context"></a>
+
+## `@berry-ai/harness-tmux-context`
+
+- `inject`: `agents` · `sessionProjections`
+- `source`: [`packages/context/tmux-context/src/index.ts:47`](../packages/context/tmux-context/src/index.ts)
+
+```ts config-catalog
+/** Per-turn tmux-location scheduling. Invalid values fail plugin load. */
+export interface Config {
+  /** Minimum milliseconds between durable injections in one session. Omit or set to 0 to inject on every eligible change. */
+  refreshIntervalMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tmux-context -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-ask-user -->
 <a id="berry-aiharness-tool-ask-user"></a>
@@ -1513,37 +1624,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-default-model -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-instructions -->
-<a id="deepseek-aidsh-agent-instructions"></a>
-
-## `@deepseek-ai/dsh-agent-instructions`
-
-- `inject`: `sessionProjections` · `workingDirectory`
-- `source`: [`packages/context/agent-instructions/src/config.ts:18`](../packages/context/agent-instructions/src/config.ts)
-
-```ts config-catalog
-/** User-facing workspace instruction loader configuration. */
-export interface Config {
-  /** Directory entries that identify the project root while walking upward from the current working directory. */
-  projectRootMarkers?: string[]
-  /** UTF-8 byte cap for one rendered baseline or dynamic batch; non-positive or non-finite disables loading. */
-  maxBytes: number
-  /** Maximum UTF-8 bytes read from one instruction file; larger files are ignored. */
-  maxSourceBytes?: number
-  /**
-   * Ordered same-directory project candidates; every existing file loads, with
-   * per-directory trimmed-content duplicates collapsed to the earliest candidate.
-   */
-  instructionFileCandidates?: string[]
-  /**
-   * Ordered same-directory local-overlay candidates loaded after the base files
-   * under the same per-directory trimmed-content dedup; empty disables the overlay.
-   */
-  localInstructionFileCandidates?: string[]
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-instructions -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-loop -->
 <a id="deepseek-aidsh-agent-loop"></a>
@@ -2605,27 +2685,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-worktree -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-file-reference-local -->
-<a id="deepseek-aidsh-file-reference-local"></a>
-
-## `@deepseek-ai/dsh-file-reference-local`
-
-- `inject`: `agents` · `workingDirectory`
-- `source`: [`packages/context/file-reference-local/src/index.ts:35`](../packages/context/file-reference-local/src/index.ts)
-
-```ts config-catalog
-/** Local file-reference discovery configuration. */
-export interface Config {
-  /** Maximum ranked candidates returned for one query. */
-  maxResults?: number
-  /** Maximum indexed files and directories per agent workspace. */
-  maxEntries?: number
-  /** Directory basenames never traversed or offered. */
-  excludedDirectories?: string[]
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-file-reference-local -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-headless -->
 <a id="deepseek-aidsh-headless"></a>
 
@@ -3517,29 +3576,6 @@ export type JournalMode = 'wal' | 'delete' | 'truncate' | 'persist'
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-query-sqlite -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-reference -->
-<a id="deepseek-aidsh-session-reference"></a>
-
-## `@deepseek-ai/dsh-session-reference`
-
-- `inject`: `sessionQuery`
-- `source`: [`packages/context/session-reference/src/config.ts:11`](../packages/context/session-reference/src/config.ts)
-
-```ts config-catalog
-/** Session-reference service configuration. */
-export interface Config {
-  /** Maximum distinct source sessions referenced by one message, from one to three. */
-  maxReferences?: number
-  /** Default host candidate-list limit. */
-  candidateLimit?: number
-  /** Explicit maximum rendered UTF-8 bytes per source; absent uses the model-relative budget with a 64 KiB floor. */
-  maxReferenceBytes?: number
-  /** Fraction of the model context window per source, estimated at four bytes per token; between zero and one. */
-  referenceContextFraction?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-reference -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-telemetry-otel -->
 <a id="deepseek-aidsh-session-telemetry-otel"></a>
 
@@ -3975,42 +4011,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-system-prompt -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-time-context -->
-<a id="deepseek-aidsh-time-context"></a>
-
-## `@deepseek-ai/dsh-time-context`
-
-- `inject`: `agents` · `sessionProjections`
-- `source`: [`packages/context/time-context/src/index.ts:56`](../packages/context/time-context/src/index.ts)
-
-```ts config-catalog
-/** Request-preparation clock formatting and append scheduling. Invalid values fail plugin load. */
-export interface Config {
-  /** Fallback display zone when the open turn has no unique browser zone. Omit to use the process zone. */
-  timeZone?: string
-  /** Minimum milliseconds between durable injections in one session. Defaults to 600000 (10 minutes); 0 injects at every eligible step. */
-  refreshIntervalMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-time-context -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tmux-context -->
-<a id="deepseek-aidsh-tmux-context"></a>
-
-## `@deepseek-ai/dsh-tmux-context`
-
-- `inject`: `agents` · `sessionProjections`
-- `source`: [`packages/context/tmux-context/src/index.ts:47`](../packages/context/tmux-context/src/index.ts)
-
-```ts config-catalog
-/** Per-turn tmux-location scheduling. Invalid values fail plugin load. */
-export interface Config {
-  /** Minimum milliseconds between durable injections in one session. Omit or set to 0 to inject on every eligible change. */
-  refreshIntervalMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tmux-context -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-token-meter -->
 <a id="deepseek-aidsh-token-meter"></a>
@@ -4613,6 +4613,7 @@ export interface Config {
 | `@berry-ai/harness-attachment` | `AttachmentStore` | — | [`packages/attachment/attachment/src/index.ts`](../packages/attachment/attachment/src/index.ts) |
 | `@berry-ai/harness-credentials` | `CredentialProvider` | — | [`packages/credentials/credentials/src/index.ts`](../packages/credentials/credentials/src/index.ts) |
 | `@berry-ai/harness-deepseek-account` | `DeepSeekAccount` | — | [`packages/credentials/deepseek-account/src/index.ts`](../packages/credentials/deepseek-account/src/index.ts) |
+| `@berry-ai/harness-file-reference` | `FileReferenceService` | — | [`packages/context/file-reference/src/index.ts`](../packages/context/file-reference/src/index.ts) |
 | `@berry-ai/harness-fs` | `FileSystem` | — | [`packages/fs/fs/src/index.ts`](../packages/fs/fs/src/index.ts) |
 | `@berry-ai/harness-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
 | `@berry-ai/harness-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
@@ -4622,7 +4623,6 @@ export interface Config {
 | `@berry-ai/harness-subprocess` | `SubprocessRuntime` | — | [`packages/subprocess/subprocess/src/index.ts`](../packages/subprocess/subprocess/src/index.ts) |
 | `@berry-ai/harness-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
 | `@deepseek-ai/dsh-compaction` | `CompactionEngine` | — | [`packages/compaction/compaction/src/index.ts`](../packages/compaction/compaction/src/index.ts) |
-| `@deepseek-ai/dsh-file-reference` | `FileReferenceService` | — | [`packages/context/file-reference/src/index.ts`](../packages/context/file-reference/src/index.ts) |
 | `@deepseek-ai/dsh-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
 | `@deepseek-ai/dsh-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |
 | `@deepseek-ai/dsh-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |

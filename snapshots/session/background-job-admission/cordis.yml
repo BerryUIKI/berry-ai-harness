@@ -15,7 +15,7 @@
     compression: !!js 'process.env.DSH_SNAPSHOT === undefined ? ''zstd'' : ''none'''
 
 - id: agent-instructions
-  name: '@deepseek-ai/dsh-agent-instructions'
+  name: '@berry-ai/harness-agent-instructions'
   config:
     maxBytes: 65536
 

@@ -1,7 +1,7 @@
 /**
  * Instruction-file discovery and bounded, abort-aware provider reads.
  *
- * @module @deepseek-ai/dsh-agent-instructions/files
+ * @module @berry-ai/harness-agent-instructions/files
  */
 
 import { createReadStream } from 'node:fs'

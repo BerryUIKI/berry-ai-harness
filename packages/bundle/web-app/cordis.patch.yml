@@ -92,10 +92,10 @@
       name: '@berry-ai/harness-workspace'
 
     - id: session-reference
-      name: '@deepseek-ai/dsh-session-reference'
+      name: '@berry-ai/harness-session-reference'
 
     - id: file-reference-local
-      name: '@deepseek-ai/dsh-file-reference-local'
+      name: '@berry-ai/harness-file-reference-local'
 
     # Whole-log turn/step counts for the chat stats strip (the sessionStats
     # projection key); the projection registry itself is a base-layer row.

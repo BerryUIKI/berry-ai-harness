@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-time-context",
+  "name": "@berry-ai/harness-time-context",
   "description": "Durable per-step context with the current time and elapsed time",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

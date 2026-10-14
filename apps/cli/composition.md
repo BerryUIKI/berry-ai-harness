@@ -110,7 +110,7 @@ flowchart LR
   cfg --> plugin_dsh_base_tool_fs
   plugin_dsh_base_tool_fs_search["tool-fs-search<br/>@berry-ai/harness-tool-fs-search"]
   cfg --> plugin_dsh_base_tool_fs_search
-  plugin_dsh_base_agent_instructions["agent-instructions<br/>@deepseek-ai/dsh-agent-instructions"]
+  plugin_dsh_base_agent_instructions["agent-instructions<br/>@berry-ai/harness-agent-instructions"]
   cfg --> plugin_dsh_base_agent_instructions
   plugin_dsh_base_skill["skill<br/>@deepseek-ai/dsh-skill"]
   cfg --> plugin_dsh_base_skill
@@ -251,7 +251,7 @@ flowchart LR
 | `fs-observation-policy` | `@berry-ai/harness-fs-observation-policy` |
 | `tool-fs` | `@berry-ai/harness-tool-fs` |
 | `tool-fs-search` | `@berry-ai/harness-tool-fs-search` |
-| `agent-instructions` | `@deepseek-ai/dsh-agent-instructions` |
+| `agent-instructions` | `@berry-ai/harness-agent-instructions` |
 | `skill` | `@deepseek-ai/dsh-skill` |
 | `skill-filesystem` | `@deepseek-ai/dsh-skill-filesystem` |
 | `tool-skill` | `@deepseek-ai/dsh-tool-skill` |

@@ -10,8 +10,8 @@ import { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
 import AgentLoop from '@deepseek-ai/dsh-agent-loop'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { unsupportedInbox, mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
-import * as timeContext from '@deepseek-ai/dsh-time-context'
-import type { Config } from '@deepseek-ai/dsh-time-context'
+import * as timeContext from '@berry-ai/harness-time-context'
+import type { Config } from '@berry-ai/harness-time-context'
 
 declare module '@deepseek-ai/dsh-llm' {
   interface MessageSourceMap {

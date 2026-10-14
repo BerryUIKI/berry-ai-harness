@@ -3,7 +3,7 @@ description: "Workspace-instruction context for users and maintainers enabling, 
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-agent-instructions
+# @berry-ai/harness-agent-instructions
 
 English | [中文](README.zh.md)
 
@@ -42,7 +42,7 @@ The harness home holding the user-global `AGENTS.md` is process policy rather th
 Root discovery climbs only when a marker probe confirms that the marker is absent. A permission or I/O failure stops discovery and surfaces the host or filesystem-provider error instead of selecting an ancestor project. The [historical root-marker metadata decision](../../../.agents/notes/archived/bug-fix/2026-09-03-root-marker-metadata-failures.md) records why discovery fails instead of substituting another root.
 
 ```yaml
-- name: '@deepseek-ai/dsh-agent-instructions'
+- name: '@berry-ai/harness-agent-instructions'
   config:
     maxBytes: 65536
 ```

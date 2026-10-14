@@ -12,8 +12,8 @@ import type { SessionFixture } from '@deepseek-ai/dsh-client-test-runtime'
 import type {
   CandidateRequest, ClientSessionContext, InputTriggerCandidate, InputTriggerSource,
 } from '@deepseek-ai/dsh-client-ui-input-trigger/client'
-import type { FileReferenceCandidate } from '@deepseek-ai/dsh-file-reference/types'
-import type { SessionReferenceMentionCandidate } from '@deepseek-ai/dsh-session-reference/types'
+import type { FileReferenceCandidate } from '@berry-ai/harness-file-reference/types'
+import type { SessionReferenceMentionCandidate } from '@berry-ai/harness-session-reference/types'
 import { apply, inject } from '../src/client/index.ts'
 import { apply as nodeApply } from '../src/index.ts'
 

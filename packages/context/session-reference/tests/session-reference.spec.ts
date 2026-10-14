@@ -16,7 +16,7 @@ import SessionReferenceResolver, {
   parseSessionReferenceText,
   type Config,
   type SessionReferenceErrorCode,
-} from '@deepseek-ai/dsh-session-reference'
+} from '@berry-ai/harness-session-reference'
 import { stringifyTagSafeJson } from '../src/serialization.ts'
 import { SpillLocator, SpillStore, type SaveTextSpill, type SpillRef } from '@berry-ai/harness-spill'
 

@@ -10,7 +10,7 @@ import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-test
 import { SessionId } from '@deepseek-ai/dsh-session'
 import { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
 import { bindScopeParent, createScope, scopeOf } from '@deepseek-ai/dsh-scope'
-import LocalFileReference from '@deepseek-ai/dsh-file-reference-local'
+import LocalFileReference from '@berry-ai/harness-file-reference-local'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'
 import * as SubagentSpawn from '@deepseek-ai/dsh-subagent-spawn-in-process'
 import * as SubagentTool from '@deepseek-ai/dsh-tool-subagent'
