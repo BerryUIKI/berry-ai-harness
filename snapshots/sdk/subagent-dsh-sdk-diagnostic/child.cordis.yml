@@ -5,7 +5,7 @@
   disabled: true
 
 - id: agent-instructions
-  name: '@deepseek-ai/dsh-agent-instructions'
+  name: '@berry-ai/harness-agent-instructions'
   disabled: true
 
 - id: system-prompt

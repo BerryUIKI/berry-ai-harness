@@ -9,7 +9,7 @@
   config:
     path: ':memory:'
     openAt: never
-- name: '@deepseek-ai/dsh-session-reference'
+- name: '@berry-ai/harness-session-reference'
   config:
     maxReferenceBytes: 360
 - name: './source-session.ts'

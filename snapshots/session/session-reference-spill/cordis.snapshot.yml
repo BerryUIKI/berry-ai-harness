@@ -47,7 +47,7 @@
 
 - insert:
     - id: session-reference
-      name: '@deepseek-ai/dsh-session-reference'
+      name: '@berry-ai/harness-session-reference'
       config:
         maxReferenceBytes: 360
     - id: reference-source-fixture

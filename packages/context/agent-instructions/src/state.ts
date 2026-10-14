@@ -1,7 +1,7 @@
 /**
  * Session-visible workspace instruction state and dynamic reconciliation.
  *
- * @module @deepseek-ai/dsh-agent-instructions/state
+ * @module @berry-ai/harness-agent-instructions/state
  */
 
 import type { Agent } from '@deepseek-ai/dsh-agent'

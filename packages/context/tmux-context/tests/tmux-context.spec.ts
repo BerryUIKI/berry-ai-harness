@@ -6,8 +6,8 @@ import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { createUserMessage } from '@deepseek-ai/dsh-llm'
 import { ShellExecutor } from '@berry-ai/harness-shell'
 import type { ShellExecRequest, ShellExecSpec, ShellExecution, ShellRunResult } from '@berry-ai/harness-shell'
-import * as tmuxContext from '@deepseek-ai/dsh-tmux-context'
-import type { Config } from '@deepseek-ai/dsh-tmux-context'
+import * as tmuxContext from '@berry-ai/harness-tmux-context'
+import type { Config } from '@berry-ai/harness-tmux-context'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 
 /** Empty offset readers for fakes that never produce output. */

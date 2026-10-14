@@ -1,7 +1,7 @@
 /**
  * Local-filesystem implementation of `ctx.fileReferences`.
  *
- * @module @deepseek-ai/dsh-file-reference-local
+ * @module @berry-ai/harness-file-reference-local
  */
 
 import type {} from '@deepseek-ai/dsh-working-directory'
@@ -11,7 +11,7 @@ import type { Agent } from '@deepseek-ai/dsh-agent'
 import FileReferenceService, {
   FILE_REFERENCE_PROMPT,
   type FileReferenceCandidate,
-} from '@deepseek-ai/dsh-file-reference'
+} from '@berry-ai/harness-file-reference'
 import type {} from '@deepseek-ai/dsh-tools'
 import {
   DEFAULT_FILE_SEARCH_EXCLUDED_DIRECTORIES,
@@ -28,8 +28,8 @@ export {
   WorkspaceFileSearch,
 } from './search.ts'
 export type { FileSearchConfig } from './search.ts'
-export { FILE_REFERENCE_PROMPT } from '@deepseek-ai/dsh-file-reference'
-export { activeAtToken, formatFileMention } from '@deepseek-ai/dsh-file-reference/grammar'
+export { FILE_REFERENCE_PROMPT } from '@berry-ai/harness-file-reference'
+export { activeAtToken, formatFileMention } from '@berry-ai/harness-file-reference/grammar'
 
 /** Local file-reference discovery configuration. */
 export interface Config {

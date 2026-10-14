@@ -41,8 +41,8 @@ it('boots default Web with the shipped Schedule rows, without experimental modul
       expect.objectContaining({ name: '@deepseek-ai/dsh-client-ui-schedule', state: FiberState.ACTIVE }),
     ]))
     expect(delivered.entries.some(entry => entry.id === '@deepseek-ai/dsh-client-ui-schedule')).toBe(true)
-    expect(roster.entries.some(entry => entry.name === '@deepseek-ai/dsh-time-context')).toBe(false)
-    expect(delivered.entries.some(entry => entry.id === '@deepseek-ai/dsh-time-context')).toBe(false)
+    expect(roster.entries.some(entry => entry.name === '@berry-ai/harness-time-context')).toBe(false)
+    expect(delivered.entries.some(entry => entry.id === '@berry-ai/harness-time-context')).toBe(false)
     expect(experimentalRuntimeReferences(roster)).toEqual([])
 
     const contaminated = await request('mount-experimental')

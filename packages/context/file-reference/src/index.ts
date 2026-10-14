@@ -1,7 +1,7 @@
 /**
  * File-reference discovery seam shared by host-backed user interfaces.
  *
- * @module @deepseek-ai/dsh-file-reference
+ * @module @berry-ai/harness-file-reference
  */
 
 import { Service, type Context } from '@deepseek-ai/cordis'

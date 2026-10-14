@@ -6,7 +6,7 @@
  * Plugin lifecycle reads use the optional `ctx.fs` provider, so providerless products
  * mount it as a no-op.
  *
- * @module @deepseek-ai/dsh-agent-instructions
+ * @module @berry-ai/harness-agent-instructions
  */
 
 import type {} from '@deepseek-ai/dsh-working-directory'

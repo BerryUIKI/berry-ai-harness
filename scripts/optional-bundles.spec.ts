@@ -219,7 +219,7 @@ describe('optional bundles', () => {
     for (const id of ['preset-standard', 'preset-cordis', 'preset-ptc']) {
       const plugins = presetPlugins(id)
       for (const plugin of [
-        { id: 'time-context', name: '@deepseek-ai/dsh-time-context' },
+        { id: 'time-context', name: '@berry-ai/harness-time-context' },
         { id: 'tool-schedule', name: '@berry-ai/harness-tool-schedule' },
       ]) {
         const matches = plugins.filter(row => row.id === plugin.id && row.name === plugin.name)
@@ -237,7 +237,7 @@ describe('optional bundles', () => {
       }
     }
     // `minimal` declares neither, so it composes no clock reading and no reminder tool.
-    expect(presetPlugins('preset-minimal').some(row => row.name === '@deepseek-ai/dsh-time-context'
+    expect(presetPlugins('preset-minimal').some(row => row.name === '@berry-ai/harness-time-context'
       || row.name === '@berry-ai/harness-tool-schedule')).toBe(false)
   })
 

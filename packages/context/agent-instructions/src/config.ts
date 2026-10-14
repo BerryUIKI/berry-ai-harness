@@ -1,7 +1,7 @@
 /**
  * Configuration normalization for workspace instruction discovery and rendering.
  *
- * @module @deepseek-ai/dsh-agent-instructions/config
+ * @module @berry-ai/harness-agent-instructions/config
  */
 
 import { relative } from 'node:path'

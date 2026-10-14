@@ -15,7 +15,7 @@
  * absent `ctx.shell`, or a failed query is a no-op, never an error: an executor
  * rejection is contained and logged as a warning so the turn continues.
  *
- * @module @deepseek-ai/dsh-tmux-context
+ * @module @berry-ai/harness-tmux-context
  */
 
 import type { Context, LoggerService } from '@deepseek-ai/cordis'

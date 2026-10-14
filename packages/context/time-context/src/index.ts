@@ -2,7 +2,7 @@
  * Opt-in request clock context. Eligible steps add durable,
  * source-attributed time readings to the request history.
  *
- * @module @deepseek-ai/dsh-time-context
+ * @module @berry-ai/harness-time-context
  */
 
 import type { Context } from '@deepseek-ai/cordis'

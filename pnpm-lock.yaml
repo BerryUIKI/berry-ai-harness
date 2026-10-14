@@ -328,7 +328,7 @@ importers:
       '@deepseek-ai/dsh-acp-app':
         specifier: workspace:*
         version: link:../../packages/bundle/acp-app
-      '@deepseek-ai/dsh-agent-instructions':
+      '@berry-ai/harness-agent-instructions':
         specifier: workspace:*
         version: link:../../packages/context/agent-instructions
       '@deepseek-ai/dsh-agent-tool-presentation':
@@ -409,7 +409,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../packages/session/session-projection
-      '@deepseek-ai/dsh-session-reference':
+      '@berry-ai/harness-session-reference':
         specifier: workspace:*
         version: link:../../packages/context/session-reference
       '@deepseek-ai/dsh-skill':
@@ -421,10 +421,10 @@ importers:
       '@deepseek-ai/dsh-skill-office':
         specifier: workspace:*
         version: link:../../packages/skill/skill-office
-      '@deepseek-ai/dsh-time-context':
+      '@berry-ai/harness-time-context':
         specifier: workspace:*
         version: link:../../packages/context/time-context
-      '@deepseek-ai/dsh-tmux-context':
+      '@berry-ai/harness-tmux-context':
         specifier: workspace:*
         version: link:../../packages/context/tmux-context
       '@deepseek-ai/dsh-token-meter':
@@ -1367,7 +1367,7 @@ importers:
       '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
         version: link:../../credentials/deepseek-account
-      '@deepseek-ai/dsh-file-reference':
+      '@berry-ai/harness-file-reference':
         specifier: workspace:*
         version: link:../../context/file-reference
       '@deepseek-ai/dsh-host-plugin-inventory':
@@ -1379,7 +1379,7 @@ importers:
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
-      '@deepseek-ai/dsh-session-reference':
+      '@berry-ai/harness-session-reference':
         specifier: workspace:*
         version: link:../../context/session-reference
       '@deepseek-ai/dsh-subagent':
@@ -1485,7 +1485,7 @@ importers:
       '@berry-ai/harness-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
-      '@deepseek-ai/dsh-file-reference':
+      '@berry-ai/harness-file-reference':
         specifier: workspace:*
         version: link:../../context/file-reference
       '@berry-ai/harness-fs':
@@ -2149,7 +2149,7 @@ importers:
       '@deepseek-ai/dsh-agent-default-model':
         specifier: workspace:*
         version: link:../../core/agent-default-model
-      '@deepseek-ai/dsh-agent-instructions':
+      '@berry-ai/harness-agent-instructions':
         specifier: workspace:*
         version: link:../../context/agent-instructions
       '@deepseek-ai/dsh-agent-loop':
@@ -2573,7 +2573,7 @@ importers:
       '@berry-ai/harness-workspace-changes':
         specifier: workspace:*
         version: link:../../deliverables/workspace-changes
-      '@deepseek-ai/dsh-agent-instructions':
+      '@berry-ai/harness-agent-instructions':
         specifier: workspace:*
         version: link:../../context/agent-instructions
       '@deepseek-ai/dsh-agent-tool-presentation':
@@ -2795,10 +2795,10 @@ importers:
       '@deepseek-ai/dsh-cordis-host-runner':
         specifier: workspace:*
         version: link:../../extensions/cordis-host-runner
-      '@deepseek-ai/dsh-file-reference':
+      '@berry-ai/harness-file-reference':
         specifier: workspace:*
         version: link:../../context/file-reference
-      '@deepseek-ai/dsh-file-reference-local':
+      '@berry-ai/harness-file-reference-local':
         specifier: workspace:*
         version: link:../../context/file-reference-local
       '@deepseek-ai/dsh-host-directory-picker-auto':
@@ -2828,7 +2828,7 @@ importers:
       '@deepseek-ai/dsh-session-log-export':
         specifier: workspace:*
         version: link:../../session-query/session-log-export
-      '@deepseek-ai/dsh-session-reference':
+      '@berry-ai/harness-session-reference':
         specifier: workspace:*
         version: link:../../context/session-reference
       '@deepseek-ai/dsh-session-stats':
@@ -2840,7 +2840,7 @@ importers:
       '@deepseek-ai/dsh-skill-filesystem':
         specifier: workspace:*
         version: link:../../skill/skill-filesystem
-      '@deepseek-ai/dsh-time-context':
+      '@berry-ai/harness-time-context':
         specifier: workspace:*
         version: link:../../context/time-context
       '@berry-ai/harness-tool-bash':
@@ -3668,7 +3668,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
-      '@deepseek-ai/dsh-file-reference':
+      '@berry-ai/harness-file-reference':
         specifier: workspace:*
         version: link:../../context/file-reference
       '@deepseek-ai/dsh-llm':
@@ -4014,7 +4014,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-file-reference':
+      '@berry-ai/harness-file-reference':
         specifier: workspace:*
         version: link:../../context/file-reference
       '@deepseek-ai/dsh-session':
@@ -4660,10 +4660,10 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-file-reference':
+      '@berry-ai/harness-file-reference':
         specifier: workspace:*
         version: link:../../context/file-reference
-      '@deepseek-ai/dsh-session-reference':
+      '@berry-ai/harness-session-reference':
         specifier: workspace:*
         version: link:../../context/session-reference
       '@deepseek-ai/dsh-typert-protocol':
@@ -6738,7 +6738,7 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-file-reference':
+      '@berry-ai/harness-file-reference':
         specifier: workspace:*
         version: link:../file-reference
       '@berry-ai/harness-fs-local':
@@ -7519,7 +7519,7 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-instructions':
+      '@berry-ai/harness-agent-instructions':
         specifier: workspace:*
         version: link:../../context/agent-instructions
       '@deepseek-ai/dsh-agent-loop':
@@ -13749,7 +13749,7 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-instructions':
+      '@berry-ai/harness-agent-instructions':
         specifier: workspace:*
         version: link:../../context/agent-instructions
       '@deepseek-ai/dsh-llm':
@@ -15224,7 +15224,7 @@ importers:
       '@deepseek-ai/dsh-agent-default-model':
         specifier: workspace:*
         version: link:../../packages/core/agent-default-model
-      '@deepseek-ai/dsh-agent-instructions':
+      '@berry-ai/harness-agent-instructions':
         specifier: workspace:*
         version: link:../../packages/context/agent-instructions
       '@deepseek-ai/dsh-agent-loop':
@@ -15281,7 +15281,7 @@ importers:
       '@deepseek-ai/dsh-deepseek-llm-api-extensions':
         specifier: workspace:*
         version: link:../../packages/llm/deepseek-llm-api-extensions
-      '@deepseek-ai/dsh-file-reference':
+      '@berry-ai/harness-file-reference':
         specifier: workspace:*
         version: link:../../packages/context/file-reference
       '@berry-ai/harness-fs':
@@ -15359,7 +15359,7 @@ importers:
       '@deepseek-ai/dsh-session-query-sqlite':
         specifier: workspace:*
         version: link:../../packages/session-query/session-query-sqlite
-      '@deepseek-ai/dsh-session-reference':
+      '@berry-ai/harness-session-reference':
         specifier: workspace:*
         version: link:../../packages/context/session-reference
       '@deepseek-ai/dsh-session-telemetry':
@@ -15401,7 +15401,7 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../packages/core/system-prompt
-      '@deepseek-ai/dsh-time-context':
+      '@berry-ai/harness-time-context':
         specifier: workspace:*
         version: link:../../packages/context/time-context
       '@deepseek-ai/dsh-token-meter':

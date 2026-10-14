@@ -373,6 +373,18 @@
       ]
     },
     {
+      "name": "@berry-ai/harness-agent-instructions",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-agent-instructions",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
       "name": "@berry-ai/harness-attachment",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -474,6 +486,30 @@
       "installations": [
         {
           "location": "node_modules/@berry-ai/harness-credentials-local",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-file-reference",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-file-reference",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-file-reference-local",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-file-reference-local",
           "direct": false,
           "optional": false,
           "peer": false
@@ -661,6 +697,18 @@
       ]
     },
     {
+      "name": "@berry-ai/harness-session-reference",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-session-reference",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
       "name": "@berry-ai/harness-settings",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -799,6 +847,30 @@
         {
           "location": "node_modules/@berry-ai/harness-subprocess-local",
           "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-time-context",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-time-context",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-tmux-context",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-tmux-context",
+          "direct": true,
           "optional": false,
           "peer": false
         }
@@ -1135,18 +1207,6 @@
         {
           "location": "node_modules/@deepseek-ai/dsh-agent-default-model",
           "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-agent-instructions",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-agent-instructions",
-          "direct": true,
           "optional": false,
           "peer": false
         }
@@ -2041,30 +2101,6 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-file-reference",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-file-reference",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-file-reference-local",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-file-reference-local",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
       "name": "@deepseek-ai/dsh-headless",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -2665,18 +2701,6 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-reference",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-session-reference",
-          "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
       "name": "@deepseek-ai/dsh-session-stats",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -2881,36 +2905,12 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-time-context",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-time-context",
-          "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
       "name": "@deepseek-ai/dsh-timeout",
       "version": "0.1.5-rc.2",
       "installations": [
         {
           "location": "node_modules/@deepseek-ai/dsh-timeout",
           "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-tmux-context",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-tmux-context",
-          "direct": true,
           "optional": false,
           "peer": false
         }

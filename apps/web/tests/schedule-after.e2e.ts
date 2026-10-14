@@ -917,16 +917,16 @@ describe.skipIf(MODE === 'record')('web e2e: active Schedule catalog', () => {
     for (const id of ['preset-standard', 'preset-ptc', 'preset-cordis']) {
       const plugins = presetPlugins(id)
       expect(plugins.filter(row => row.id === 'time-context'
-        && row.name === '@deepseek-ai/dsh-time-context')).toHaveLength(1)
+        && row.name === '@berry-ai/harness-time-context')).toHaveLength(1)
       expect(plugins.filter(row => row.id === 'tool-schedule'
         && row.name === '@berry-ai/harness-tool-schedule')).toHaveLength(1)
-      for (const name of ['@deepseek-ai/dsh-time-context', '@berry-ai/harness-tool-schedule']) {
+      for (const name of ['@berry-ai/harness-time-context', '@berry-ai/harness-tool-schedule']) {
         const matches = plugins.filter(row => row.name === name)
         expect(matches).toHaveLength(1)
         expect(matches[0]?.disabled).not.toBe(true)
       }
     }
-    expect(presetPlugins('preset-minimal').some(row => row.name === '@deepseek-ai/dsh-time-context'
+    expect(presetPlugins('preset-minimal').some(row => row.name === '@berry-ai/harness-time-context'
       || row.name === '@berry-ai/harness-tool-schedule')).toBe(false)
 
     await page.getByRole('button', { name: 'Automation tasks', exact: true }).click()

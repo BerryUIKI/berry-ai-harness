@@ -19,7 +19,7 @@ import * as sessionProjectionPlugin from '@deepseek-ai/dsh-session-projection'
 import * as workingDirectoryPlugin from '@deepseek-ai/dsh-working-directory'
 import { Session, SessionId } from '@deepseek-ai/dsh-session'
 import * as queryPlugin from '@deepseek-ai/dsh-session-query-sqlite'
-import * as referencePlugin from '@deepseek-ai/dsh-session-reference'
+import * as referencePlugin from '@berry-ai/harness-session-reference'
 import * as spillPlugin from '@berry-ai/harness-spill-local'
 import { sessionDir } from '@berry-ai/harness-spill-local'
 import * as sourcePlugin from './fixtures/source-session.ts'
@@ -54,7 +54,7 @@ describe('session-reference real Loader composition', () => {
       ['@berry-ai/harness-fs-local', fsPlugin],
       ['@berry-ai/harness-tool-fs', toolFsPlugin],
       ['@deepseek-ai/dsh-session-query-sqlite', queryPlugin],
-      ['@deepseek-ai/dsh-session-reference', referencePlugin],
+      ['@berry-ai/harness-session-reference', referencePlugin],
       ['@berry-ai/harness-spill-local', spillPlugin],
       ['./source-session.ts', sourcePlugin],
     ])
