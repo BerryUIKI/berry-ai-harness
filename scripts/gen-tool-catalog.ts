@@ -31,7 +31,7 @@ import * as ToolWorktree from '@deepseek-ai/dsh-experimental-tool-worktree'
 import { AttachmentStore } from '@deepseek-ai/dsh-attachment'
 import type { ImageAttachmentLimits, ImageAttachmentRef, SaveImageAttachment, StoredImageAttachment } from '@deepseek-ai/dsh-attachment'
 import UserQuestionService from '@deepseek-ai/dsh-user-questions'
-import PlanModeController from '@deepseek-ai/dsh-plan-mode'
+import PlanModeController from '@berry-ai/harness-plan-mode'
 import WebRuntime from '@deepseek-ai/dsh-web'
 import * as WebSearchExa from '@deepseek-ai/dsh-web-search-exa'
 import * as WebFetchLocal from '@deepseek-ai/dsh-web-fetch-http'
@@ -63,11 +63,11 @@ import * as ToolLsp from '@deepseek-ai/dsh-tool-lsp'
 import * as ToolSkill from '@deepseek-ai/dsh-tool-skill'
 import * as ToolSessionQuery from '@deepseek-ai/dsh-tool-session-query'
 import * as ToolJobs from '@deepseek-ai/dsh-tool-jobs'
-import BrowserUseRegistry from '@deepseek-ai/dsh-browser-use'
+import BrowserUseRegistry from '@berry-ai/harness-browser-use'
 import * as StagehandBrowserTools from '@deepseek-ai/dsh-experimental-browser-use-stagehand-native'
 import type TeamService from '@deepseek-ai/dsh-experimental-agent-team'
 import * as ToolTeam from '@deepseek-ai/dsh-experimental-tool-agent-team'
-import * as ToolTodo from '@deepseek-ai/dsh-tool-todo'
+import * as ToolTodo from '@berry-ai/harness-tool-todo'
 import type PluginManager from '@berry-ai/harness-plugin-manager'
 import * as PluginManagerTools from '@berry-ai/harness-plugin-manager/tools'
 import SandboxPolicy from '@deepseek-ai/dsh-sandbox-policy'
@@ -255,7 +255,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'Owned by the tool registry as a reserved transport outside filterable capability layers under `mode: ptc` (see the PTC mode Agent Note). Under `ptc` it is the registry\'s only wire contribution; the other visible capabilities are declared in a generated SDK section in the loaded runtime\'s language, and a program calls them through bindings scheduled under the native concurrency contract (submission-ordered starts and policy; concurrency-safe bodies overlap up to `maxParallelSubCalls`) that re-enter the complete guarded tool pipeline and link each nested execution to this outer result.',
   },
   {
-    pkg: '@deepseek-ai/dsh-plan-mode',
+    pkg: '@berry-ai/harness-plan-mode',
     dir: 'plan-mode',
     source: 'packages/plan/plan-mode/src/index.ts',
     requires: ['ctx.tools', 'ctx.systemPrompt', 'ctx.userQuestions (execution time, opportunistic)'],
@@ -597,7 +597,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'All nine tools are scoped to implicit Team Leads and durable teammates. The shipped dsh-base bundle keeps the package disabled; the documented Agent Teams profile patch enables it while disabling the legacy continuable-child control names.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-todo',
+    pkg: '@berry-ai/harness-tool-todo',
     dir: 'tool-todo',
     source: 'packages/todo/tool-todo/src/index.ts',
     requires: ['ctx.tools', 'owning Agent session'],

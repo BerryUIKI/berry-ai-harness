@@ -7,8 +7,8 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context, FiberState } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import ComputerUse from '@deepseek-ai/dsh-computer-use'
-import { ComputerUseProviderName } from '@deepseek-ai/dsh-computer-use/brand'
+import ComputerUse from '@berry-ai/harness-computer-use'
+import { ComputerUseProviderName } from '@berry-ai/harness-computer-use/brand'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
 import LlmRuntime, { LlmAdapter, ToolCallId, createUserMessage } from '@deepseek-ai/dsh-llm'
@@ -60,7 +60,7 @@ async function load(mode?: string): Promise<{ ctx: Context; root: string; model:
   roots.push(root)
   const model = new ScreenshotModel()
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-computer-use', ComputerUse],
+    ['@berry-ai/harness-computer-use', ComputerUse],
     ['@deepseek-ai/dsh-system-prompt', SystemPrompt],
     ['@deepseek-ai/dsh-tools', ToolRuntime],
     ['@deepseek-ai/dsh-llm', LlmRuntime],

@@ -6,7 +6,7 @@ import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { Session, SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
-import type { TodoItem } from '@deepseek-ai/dsh-tool-todo'
+import type { TodoItem } from '@berry-ai/harness-tool-todo'
 import { type Agent } from '@deepseek-ai/dsh-agent'
 
 import * as tool from '../src/index.ts'

@@ -1,7 +1,7 @@
 /** Explicit opt-in compatibility check against an installed Cua Driver executable. */
 import { isAbsolute } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import ComputerUse from '@deepseek-ai/dsh-computer-use'
+import ComputerUse from '@berry-ai/harness-computer-use'
 import { ToolCallId } from '@deepseek-ai/dsh-llm'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'

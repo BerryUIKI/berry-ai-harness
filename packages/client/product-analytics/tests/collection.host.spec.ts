@@ -1,4 +1,4 @@
-import OTel from '@deepseek-ai/dsh-otel'
+import OTel from '@berry-ai/harness-otel'
 import { Context } from '@deepseek-ai/cordis'
 import { createServer } from 'node:http'
 import { once } from 'node:events'

@@ -1,5 +1,5 @@
 /** Controlled conversion completions pin shared cancellation, freshness, and bounded binary reuse. */
-import type { OfficeToPdfGeneration } from '@deepseek-ai/dsh-office-to-pdf/types'
+import type { OfficeToPdfGeneration } from '@berry-ai/harness-office-to-pdf/types'
 import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
 import { expect, it, vi } from 'vitest'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'

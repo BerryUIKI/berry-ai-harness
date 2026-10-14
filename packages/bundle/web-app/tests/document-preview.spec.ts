@@ -8,7 +8,7 @@ import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include, { applyEntryPatches } from '@deepseek-ai/cordis-plugin-include'
 import { loadOverlayPatches } from '@berry-ai/harness-app-boot'
 import WorkspaceFiles, { type WorkspaceFileScope } from '@deepseek-ai/dsh-api-workspace-files'
-import OfficeToPdf from '@deepseek-ai/dsh-office-to-pdf'
+import OfficeToPdf from '@berry-ai/harness-office-to-pdf'
 import * as DocumentPreview from '@deepseek-ai/dsh-client-ui-sidebar-documentpreview'
 import type { IndexInjection } from '@deepseek-ai/dsh-host-webserver'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
@@ -32,7 +32,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
   })
   const configPath = join(directory, 'cordis.yml')
   const expectedRows = {
-    'office-to-pdf': '@deepseek-ai/dsh-office-to-pdf',
+    'office-to-pdf': '@berry-ai/harness-office-to-pdf',
     'ui-sidebar-documentpreview': '@deepseek-ai/dsh-client-ui-sidebar-documentpreview',
   }
   const rows = loadOverlayPatches('web-office-test', fileURLToPath(new URL('../cordis.patch.yml', import.meta.url)))
@@ -77,7 +77,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
     ['@deepseek-ai/dsh-fs-local', LocalFileSystem],
     ['@deepseek-ai/dsh-typert-registry', TypertRegistry],
     ['@deepseek-ai/dsh-api-workspace-files', WorkspaceFiles],
-    ['@deepseek-ai/dsh-office-to-pdf', OfficeToPdf],
+    ['@berry-ai/harness-office-to-pdf', OfficeToPdf],
     ['@deepseek-ai/dsh-client-ui-sidebar-documentpreview', DocumentPreview],
   ])
   ctx.loader.internal = {

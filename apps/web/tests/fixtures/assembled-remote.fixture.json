@@ -216,7 +216,7 @@
         }
       },
       {
-        "definitionId": "@deepseek-ai/dsh-plan-mode",
+        "definitionId": "@berry-ai/harness-plan-mode",
         "name": "plan",
         "description": "Enter or leave plan mode",
         "input": {

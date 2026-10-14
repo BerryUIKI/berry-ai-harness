@@ -15,7 +15,7 @@ const { USER_ID, getOrCreateAnonymousUserId } = vi.hoisted(() => {
   return { USER_ID, getOrCreateAnonymousUserId: vi.fn(() => USER_ID) }
 })
 
-vi.mock('@deepseek-ai/dsh-anonymous-user-id', () => ({
+vi.mock('@berry-ai/harness-anonymous-user-id', () => ({
   getOrCreateAnonymousUserId,
 }))
 

@@ -1,10 +1,10 @@
 /** Authorized Host PDFs remain binary through Client reuse and disposal. */
-import type { OfficeToPdfGeneration } from '@deepseek-ai/dsh-office-to-pdf/types'
+import type { OfficeToPdfGeneration } from '@berry-ai/harness-office-to-pdf/types'
 import { Context } from '@deepseek-ai/cordis'
 import { expect, it, vi } from 'vitest'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type { ClientRemote } from '@deepseek-ai/dsh-api-remotes/client'
-import type {} from '@deepseek-ai/dsh-office-to-pdf/remote'
+import type {} from '@berry-ai/harness-office-to-pdf/remote'
 import { makeTranslate, RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
 import { DocumentPreviewRegistry } from '../src/client/document/registry.ts'
 import { apply } from '../src/client/office/index.ts'

@@ -2,7 +2,7 @@
 
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 // Type-only: includes the first-party todo event consumed below.
-import type {} from '@deepseek-ai/dsh-tool-todo'
+import type {} from '@berry-ai/harness-tool-todo'
 
 /**
  * Extract searchable semantic text from one first-party session event.

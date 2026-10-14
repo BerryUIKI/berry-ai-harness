@@ -13,7 +13,7 @@
  * touches the disk once, and a file deleted mid-run keeps the process's id
  * until the next launch.
  *
- * @module @deepseek-ai/dsh-anonymous-user-id
+ * @module @berry-ai/harness-anonymous-user-id
  */
 
 import { randomUUID } from 'node:crypto'

@@ -5,7 +5,7 @@
  * for host consumers, `./client/types` (the browser half-entry's re-export)
  * for client aggregates — with zero content duplication.
  *
- * @module @deepseek-ai/dsh-tool-todo/types
+ * @module @berry-ai/harness-tool-todo/types
  */
 
 /**

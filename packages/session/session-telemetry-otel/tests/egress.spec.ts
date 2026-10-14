@@ -1,4 +1,4 @@
-import OTel from '@deepseek-ai/dsh-otel'
+import OTel from '@berry-ai/harness-otel'
 import { createServer, type Server } from 'node:http'
 import { once } from 'node:events'
 import { mkdtempSync, rmSync } from 'node:fs'

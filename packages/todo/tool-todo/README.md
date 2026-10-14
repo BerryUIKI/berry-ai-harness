@@ -3,7 +3,7 @@ description: "The model-facing todo_write tool over the DeepSeek Harness session
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-todo
+# @berry-ai/harness-tool-todo
 
 English | [中文](README.zh.md)
 
@@ -36,7 +36,7 @@ Choose it when one agent session should own the task list and whole-list updates
 `allowParallelInProgress` is required with no default: a composition that omits it fails at load, and a non-boolean value is rejected. Set `true` for agents that may run work concurrently (subagents, background commands, workflow fan-out) and `false` for the single-active discipline.
 
 ```yaml
-- name: '@deepseek-ai/dsh-tool-todo'
+- name: '@berry-ai/harness-tool-todo'
   config:
     allowParallelInProgress: true
 ```

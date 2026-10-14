@@ -42,7 +42,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-browser-use` | no | Exclusive named browser-use provider registration |
+| `@berry-ai/harness-browser-use` | no | Exclusive named browser-use provider registration |
 
 ## bundle
 
@@ -129,7 +129,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-computer-use` | no | Exclusive named computer-use provider registration |
+| `@berry-ai/harness-computer-use` | no | Exclusive named computer-use provider registration |
 
 ## context
 
@@ -172,7 +172,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-office-to-pdf` | yes | Shared Office-to-PDF conversion with bounded queues and caching |
+| `@berry-ai/harness-office-to-pdf` | yes | Shared Office-to-PDF conversion with bounded queues and caching |
 
 ## experimental
 
@@ -315,7 +315,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-plan-mode` | yes | Logged per-agent plan mode with deployment guidance, a direct slash command, and a user-reviewed exit |
+| `@berry-ai/harness-plan-mode` | yes | Logged per-agent plan mode with deployment guidance, a direct slash command, and a user-reviewed exit |
 
 ## preset
 
@@ -454,7 +454,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-otel` | no | Cordis service for independent ordinary-event and byte-bounded Session-log OTLP channels |
+| `@berry-ai/harness-otel` | no | Cordis service for independent ordinary-event and byte-bounded Session-log OTLP channels |
 
 ## terminal
 
@@ -473,7 +473,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-tool-todo` | yes | Model-facing todo_write tool over the DeepSeek Harness event-sourced session log |
+| `@berry-ai/harness-tool-todo` | yes | Model-facing todo_write tool over the DeepSeek Harness event-sourced session log |
 
 ## typert
 

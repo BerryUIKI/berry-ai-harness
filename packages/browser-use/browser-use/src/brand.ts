@@ -1,4 +1,4 @@
-/** Browser-use provider identities. @module @deepseek-ai/dsh-browser-use/brand */
+/** Browser-use provider identities. @module @berry-ai/harness-browser-use/brand */
 
 import type { Branded } from '@berry-ai/harness-brand'
 

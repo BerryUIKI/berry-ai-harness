@@ -30,7 +30,7 @@ kind: "package-reference"
 ### 最小配置
 
 ```yaml
-- name: '@deepseek-ai/dsh-computer-use'
+- name: '@berry-ai/harness-computer-use'
 - name: '@deepseek-ai/dsh-experimental-computer-use-cua-driver-native'
 ```
 

@@ -30,7 +30,7 @@ kind: "package-reference"
 ### 最小配置
 
 ```yaml
-- name: '@deepseek-ai/dsh-browser-use'
+- name: '@berry-ai/harness-browser-use'
 - name: '@deepseek-ai/dsh-experimental-browser-use-stagehand-native'
   config:
     mode: launch

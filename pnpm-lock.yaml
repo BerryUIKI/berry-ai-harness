@@ -22,15 +22,15 @@ importers:
 
   .:
     devDependencies:
+      '@berry-ai/harness-browser-use':
+        specifier: workspace:*
+        version: link:packages/browser-use/browser-use
+      '@berry-ai/harness-computer-use':
+        specifier: workspace:*
+        version: link:packages/computer-use/computer-use
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:packages/core/agent
-      '@deepseek-ai/dsh-browser-use':
-        specifier: workspace:*
-        version: link:packages/browser-use/browser-use
-      '@deepseek-ai/dsh-computer-use':
-        specifier: workspace:*
-        version: link:packages/computer-use/computer-use
       '@deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp':
         specifier: workspace:*
         version: link:packages/experimental/browser-use-chrome-devtools-mcp
@@ -256,9 +256,15 @@ importers:
       '@berry-ai/harness-persona':
         specifier: workspace:*
         version: link:../../packages/preset/persona
+      '@berry-ai/harness-plan-mode':
+        specifier: workspace:*
+        version: link:../../packages/plan/plan-mode
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../packages/boot/plugin-manager
+      '@berry-ai/harness-tool-todo':
+        specifier: workspace:*
+        version: link:../../packages/todo/tool-todo
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../vendor/cordis
@@ -358,9 +364,6 @@ importers:
       '@deepseek-ai/dsh-mcp-resources':
         specifier: workspace:*
         version: link:../../packages/mcp/mcp-resources
-      '@deepseek-ai/dsh-plan-mode':
-        specifier: workspace:*
-        version: link:../../packages/plan/plan-mode
       '@deepseek-ai/dsh-pwsh-local':
         specifier: workspace:*
         version: link:../../packages/shell/pwsh-local
@@ -454,9 +457,6 @@ importers:
       '@deepseek-ai/dsh-tool-subagent-control':
         specifier: workspace:*
         version: link:../../packages/subagent/tool-subagent-control
-      '@deepseek-ai/dsh-tool-todo':
-        specifier: workspace:*
-        version: link:../../packages/todo/tool-todo
       '@deepseek-ai/dsh-tool-web':
         specifier: workspace:*
         version: link:../../packages/web/tool-web
@@ -1283,6 +1283,9 @@ importers:
       '@berry-ai/harness-agent-preset-registry':
         specifier: workspace:*
         version: link:../../preset/agent-preset-registry
+      '@berry-ai/harness-office-to-pdf':
+        specifier: workspace:*
+        version: link:../../document/office-to-pdf
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../boot/plugin-manager
@@ -1358,9 +1361,6 @@ importers:
       '@deepseek-ai/dsh-message-feedback':
         specifier: workspace:*
         version: link:../../feedback/message-feedback
-      '@deepseek-ai/dsh-office-to-pdf':
-        specifier: workspace:*
-        version: link:../../document/office-to-pdf
       '@deepseek-ai/dsh-permission-presets':
         specifier: workspace:*
         version: link:../../interaction/permission-presets
@@ -2044,9 +2044,18 @@ importers:
       '@berry-ai/harness-hmr':
         specifier: workspace:*
         version: link:../../boot/hmr
+      '@berry-ai/harness-otel':
+        specifier: workspace:*
+        version: link:../../telemetry/otel
+      '@berry-ai/harness-plan-mode':
+        specifier: workspace:*
+        version: link:../../plan/plan-mode
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../boot/plugin-manager
+      '@berry-ai/harness-tool-todo':
+        specifier: workspace:*
+        version: link:../../todo/tool-todo
       '@deepseek-ai/cordis-plugin-timer':
         specifier: workspace:~
         version: link:../../../vendor/timer
@@ -2140,15 +2149,9 @@ importers:
       '@deepseek-ai/dsh-mcp-resources':
         specifier: workspace:*
         version: link:../../mcp/mcp-resources
-      '@deepseek-ai/dsh-otel':
-        specifier: workspace:*
-        version: link:../../telemetry/otel
       '@deepseek-ai/dsh-permission-presets':
         specifier: workspace:*
         version: link:../../interaction/permission-presets
-      '@deepseek-ai/dsh-plan-mode':
-        specifier: workspace:*
-        version: link:../../plan/plan-mode
       '@deepseek-ai/dsh-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../llm/plugin-package-inventory-deepseek
@@ -2275,9 +2278,6 @@ importers:
       '@deepseek-ai/dsh-tool-subagent-control':
         specifier: workspace:*
         version: link:../../subagent/tool-subagent-control
-      '@deepseek-ai/dsh-tool-todo':
-        specifier: workspace:*
-        version: link:../../todo/tool-todo
       '@deepseek-ai/dsh-tool-web':
         specifier: workspace:*
         version: link:../../web/tool-web
@@ -2513,12 +2513,21 @@ importers:
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
+      '@berry-ai/harness-office-to-pdf':
+        specifier: workspace:*
+        version: link:../../document/office-to-pdf
       '@berry-ai/harness-persona':
         specifier: workspace:*
         version: link:../../preset/persona
+      '@berry-ai/harness-plan-mode':
+        specifier: workspace:*
+        version: link:../../plan/plan-mode
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../boot/plugin-manager
+      '@berry-ai/harness-tool-todo':
+        specifier: workspace:*
+        version: link:../../todo/tool-todo
       '@deepseek-ai/dsh-agent-instructions':
         specifier: workspace:*
         version: link:../../context/agent-instructions
@@ -2777,12 +2786,6 @@ importers:
       '@deepseek-ai/dsh-message-feedback':
         specifier: workspace:*
         version: link:../../feedback/message-feedback
-      '@deepseek-ai/dsh-office-to-pdf':
-        specifier: workspace:*
-        version: link:../../document/office-to-pdf
-      '@deepseek-ai/dsh-plan-mode':
-        specifier: workspace:*
-        version: link:../../plan/plan-mode
       '@deepseek-ai/dsh-schedule':
         specifier: workspace:*
         version: link:../../schedule/schedule
@@ -2858,9 +2861,6 @@ importers:
       '@deepseek-ai/dsh-tool-subagent-control':
         specifier: workspace:*
         version: link:../../subagent/tool-subagent-control
-      '@deepseek-ai/dsh-tool-todo':
-        specifier: workspace:*
-        version: link:../../todo/tool-todo
       '@deepseek-ai/dsh-tool-web':
         specifier: workspace:*
         version: link:../../web/tool-web
@@ -2889,6 +2889,9 @@ importers:
         specifier: ^11.0.2
         version: 11.0.4
     devDependencies:
+      '@berry-ai/harness-otel':
+        specifier: workspace:*
+        version: link:../../telemetry/otel
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -2904,9 +2907,6 @@ importers:
       '@deepseek-ai/dsh-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
-      '@deepseek-ai/dsh-otel':
-        specifier: workspace:*
-        version: link:../../telemetry/otel
       '@deepseek-ai/dsh-sandbox-policy':
         specifier: workspace:*
         version: link:../../sandbox/sandbox-policy
@@ -3098,6 +3098,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-otel':
+        specifier: workspace:*
+        version: link:../../telemetry/otel
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -3122,9 +3125,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-otel':
-        specifier: workspace:*
-        version: link:../../telemetry/otel
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -3584,6 +3584,12 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-plan-mode':
+        specifier: workspace:*
+        version: link:../../plan/plan-mode
+      '@berry-ai/harness-tool-todo':
+        specifier: workspace:*
+        version: link:../../todo/tool-todo
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
@@ -3665,9 +3671,6 @@ importers:
       '@deepseek-ai/dsh-llm-retry':
         specifier: workspace:*
         version: link:../../llm/llm-retry
-      '@deepseek-ai/dsh-plan-mode':
-        specifier: workspace:*
-        version: link:../../plan/plan-mode
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -3677,9 +3680,6 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../llm/token-meter
-      '@deepseek-ai/dsh-tool-todo':
-        specifier: workspace:*
-        version: link:../../todo/tool-todo
       '@deepseek-ai/dsh-workspace':
         specifier: workspace:*
         version: link:../../workspace/workspace
@@ -4389,6 +4389,9 @@ importers:
 
   packages/client/ui-plan:
     devDependencies:
+      '@berry-ai/harness-plan-mode':
+        specifier: workspace:*
+        version: link:../../plan/plan-mode
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
@@ -4440,9 +4443,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-plan-mode':
-        specifier: workspace:*
-        version: link:../../plan/plan-mode
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -5493,6 +5493,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-office-to-pdf':
+        specifier: workspace:*
+        version: link:../../document/office-to-pdf
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../util/workspace-path
@@ -5547,9 +5550,6 @@ importers:
       '@deepseek-ai/dsh-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
-      '@deepseek-ai/dsh-office-to-pdf':
-        specifier: workspace:*
-        version: link:../../document/office-to-pdf
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -7605,6 +7605,9 @@ importers:
         specifier: 1.9.0
         version: 1.9.0
     devDependencies:
+      '@berry-ai/harness-browser-use':
+        specifier: workspace:*
+        version: link:../../browser-use/browser-use
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7620,9 +7623,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-browser-use':
-        specifier: workspace:*
-        version: link:../../browser-use/browser-use
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -7651,6 +7651,9 @@ importers:
         specifier: 0.0.80
         version: 0.0.80
     devDependencies:
+      '@berry-ai/harness-browser-use':
+        specifier: workspace:*
+        version: link:../../browser-use/browser-use
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7666,9 +7669,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-browser-use':
-        specifier: workspace:*
-        version: link:../../browser-use/browser-use
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -7694,6 +7694,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-browser-use':
+        specifier: workspace:*
+        version: link:../../browser-use/browser-use
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7715,9 +7718,6 @@ importers:
       '@deepseek-ai/dsh-attachment-local':
         specifier: workspace:*
         version: link:../../attachment/attachment-local
-      '@deepseek-ai/dsh-browser-use':
-        specifier: workspace:*
-        version: link:../../browser-use/browser-use
       '@deepseek-ai/dsh-fs-local':
         specifier: workspace:*
         version: link:../../fs/fs-local
@@ -7782,6 +7782,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-browser-use':
+        specifier: workspace:*
+        version: link:../../browser-use/browser-use
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7806,9 +7809,6 @@ importers:
       '@deepseek-ai/dsh-attachment-local':
         specifier: workspace:*
         version: link:../../attachment/attachment-local
-      '@deepseek-ai/dsh-browser-use':
-        specifier: workspace:*
-        version: link:../../browser-use/browser-use
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -8190,6 +8190,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-computer-use':
+        specifier: workspace:*
+        version: link:../../computer-use/computer-use
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -8208,9 +8211,6 @@ importers:
       '@deepseek-ai/dsh-attachment-local':
         specifier: workspace:*
         version: link:../../attachment/attachment-local
-      '@deepseek-ai/dsh-computer-use':
-        specifier: workspace:*
-        version: link:../../computer-use/computer-use
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -8242,6 +8242,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-computer-use':
+        specifier: workspace:*
+        version: link:../../computer-use/computer-use
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -8266,9 +8269,6 @@ importers:
       '@deepseek-ai/dsh-attachment-local':
         specifier: workspace:*
         version: link:../../attachment/attachment-local
-      '@deepseek-ai/dsh-computer-use':
-        specifier: workspace:*
-        version: link:../../computer-use/computer-use
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -9568,6 +9568,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-anonymous-user-id':
+        specifier: workspace:*
+        version: link:../../identity/anonymous-user-id
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9583,9 +9586,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-anonymous-user-id':
-        specifier: workspace:*
-        version: link:../../identity/anonymous-user-id
       '@deepseek-ai/dsh-commands':
         specifier: workspace:*
         version: link:../../interaction/commands
@@ -10264,6 +10264,9 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
+      '@berry-ai/harness-otel':
+        specifier: workspace:*
+        version: link:../../telemetry/otel
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10273,9 +10276,6 @@ importers:
       '@deepseek-ai/dsh-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
-      '@deepseek-ai/dsh-otel':
-        specifier: workspace:*
-        version: link:../../telemetry/otel
 
   packages/host/webserver:
     dependencies:
@@ -10625,6 +10625,9 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0
     devDependencies:
+      '@berry-ai/harness-anonymous-user-id':
+        specifier: workspace:*
+        version: link:../../identity/anonymous-user-id
       '@berry-ai/harness-atomic-write':
         specifier: workspace:*
         version: link:../../util/atomic-write
@@ -10655,9 +10658,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-anonymous-user-id':
-        specifier: workspace:*
-        version: link:../../identity/anonymous-user-id
       '@deepseek-ai/dsh-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
@@ -11764,6 +11764,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-tool-todo':
+        specifier: workspace:*
+        version: link:../../todo/tool-todo
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11785,9 +11788,6 @@ importers:
       '@deepseek-ai/dsh-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
-      '@deepseek-ai/dsh-tool-todo':
-        specifier: workspace:*
-        version: link:../../todo/tool-todo
 
   packages/session-query/session-query-sqlite:
     dependencies:
@@ -12159,12 +12159,18 @@ importers:
         specifier: ^0.222.0
         version: 0.222.0
     devDependencies:
+      '@berry-ai/harness-anonymous-user-id':
+        specifier: workspace:*
+        version: link:../../identity/anonymous-user-id
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
       '@berry-ai/harness-http-proxy':
         specifier: workspace:*
         version: link:../../util/http-proxy
+      '@berry-ai/harness-otel':
+        specifier: workspace:*
+        version: link:../../telemetry/otel
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12174,9 +12180,6 @@ importers:
       '@deepseek-ai/cordis-plugin-logger-console':
         specifier: workspace:~
         version: link:../../../vendor/logger-console
-      '@deepseek-ai/dsh-anonymous-user-id':
-        specifier: workspace:*
-        version: link:../../identity/anonymous-user-id
       '@deepseek-ai/dsh-bash-local':
         specifier: workspace:*
         version: link:../../shell/bash-local
@@ -12192,9 +12195,6 @@ importers:
       '@deepseek-ai/dsh-message-feedback':
         specifier: workspace:*
         version: link:../../feedback/message-feedback
-      '@deepseek-ai/dsh-otel':
-        specifier: workspace:*
-        version: link:../../telemetry/otel
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -15023,6 +15023,9 @@ importers:
       '@berry-ai/harness-agent-preset-registry':
         specifier: workspace:*
         version: link:../../packages/preset/agent-preset-registry
+      '@berry-ai/harness-anonymous-user-id':
+        specifier: workspace:*
+        version: link:../../packages/identity/anonymous-user-id
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../packages/boot/app-boot
@@ -15050,18 +15053,27 @@ importers:
       '@berry-ai/harness-native-command':
         specifier: workspace:*
         version: link:../../packages/util/native-command
+      '@berry-ai/harness-otel':
+        specifier: workspace:*
+        version: link:../../packages/telemetry/otel
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../packages/util/output-retention
       '@berry-ai/harness-persona':
         specifier: workspace:*
         version: link:../../packages/preset/persona
+      '@berry-ai/harness-plan-mode':
+        specifier: workspace:*
+        version: link:../../packages/plan/plan-mode
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../packages/boot/plugin-manager
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../packages/util/timeout
+      '@berry-ai/harness-tool-todo':
+        specifier: workspace:*
+        version: link:../../packages/todo/tool-todo
       '@berry-ai/harness-util-time':
         specifier: workspace:*
         version: link:../../packages/util/time
@@ -15107,9 +15119,6 @@ importers:
       '@deepseek-ai/dsh-agent-tool-presentation':
         specifier: workspace:*
         version: link:../../packages/core/agent-tool-presentation
-      '@deepseek-ai/dsh-anonymous-user-id':
-        specifier: workspace:*
-        version: link:../../packages/identity/anonymous-user-id
       '@deepseek-ai/dsh-api-gateway':
         specifier: workspace:*
         version: link:../../packages/api/gateway
@@ -15227,15 +15236,9 @@ importers:
       '@deepseek-ai/dsh-message-feedback':
         specifier: workspace:*
         version: link:../../packages/feedback/message-feedback
-      '@deepseek-ai/dsh-otel':
-        specifier: workspace:*
-        version: link:../../packages/telemetry/otel
       '@deepseek-ai/dsh-permission-presets':
         specifier: workspace:*
         version: link:../../packages/interaction/permission-presets
-      '@deepseek-ai/dsh-plan-mode':
-        specifier: workspace:*
-        version: link:../../packages/plan/plan-mode
       '@deepseek-ai/dsh-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../packages/llm/plugin-package-inventory-deepseek
@@ -15419,9 +15422,6 @@ importers:
       '@deepseek-ai/dsh-tool-subagent-control':
         specifier: workspace:*
         version: link:../../packages/subagent/tool-subagent-control
-      '@deepseek-ai/dsh-tool-todo':
-        specifier: workspace:*
-        version: link:../../packages/todo/tool-todo
       '@deepseek-ai/dsh-tool-web':
         specifier: workspace:*
         version: link:../../packages/web/tool-web

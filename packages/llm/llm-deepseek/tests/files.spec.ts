@@ -1,5 +1,5 @@
 /** Messages file-reference admission, bounded recovery and request-wide inline fallback. */
-import type { AnonymousUserId } from '@deepseek-ai/dsh-anonymous-user-id'
+import type { AnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { AttachmentId, ImageVariantId } from '@deepseek-ai/dsh-attachment'
 import type { ImageAttachmentRef, RequestImageAttachment } from '@deepseek-ai/dsh-attachment'
