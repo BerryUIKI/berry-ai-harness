@@ -12,7 +12,7 @@
     "@deepseek-ai/cordis-plugin-timer": "workspace:~",
     "@deepseek-ai/cosmokit": "workspace:~",
     "@berry-ai/harness": "workspace:*",
-    "@deepseek-ai/dsh-acp": "workspace:*",
+    "@berry-ai/harness-acp": "workspace:*",
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-agent-default-model": "workspace:*",
     "@berry-ai/harness-agent-instructions": "workspace:*",

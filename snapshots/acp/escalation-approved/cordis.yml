@@ -31,7 +31,7 @@
     compression: !!js "process.env.DSH_SNAPSHOT === undefined ? 'zstd' : 'none'"
 
 - id: acp
-  name: '@deepseek-ai/dsh-acp'
+  name: '@berry-ai/harness-acp'
   config:
     provider: deepseek-official
     model: deepseek-v4-flash

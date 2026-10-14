@@ -6,7 +6,7 @@
  * committed semantic updates, cancellation, and one-shot permission decisions;
  * presentation and human-interaction features stay with the harness's UI modules.
  *
- * @module @deepseek-ai/dsh-acp
+ * @module @berry-ai/harness-acp
  */
 
 import type { Context } from '@deepseek-ai/cordis'

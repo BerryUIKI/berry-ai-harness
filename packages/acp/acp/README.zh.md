@@ -3,7 +3,7 @@ description: "面向程序化客户端与维护者的仅自动化 ACP（Agent Cl
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-acp
+# @berry-ai/harness-acp
 
 [English](README.md) | 中文
 
@@ -36,7 +36,7 @@ kind: "package-reference"
 服务器创建的每个会话都使用此处配置的提供方与模型。两个字段都是可选的，以便由另一个 agent/request 监听器提供；可运行的演示组合会同时设置两者。Stdout 只承载协议流量，因此请让日志远离它。
 
 ```yaml
-- name: '@deepseek-ai/dsh-acp'
+- name: '@berry-ai/harness-acp'
   config:
     provider: deepseek-official
     model: deepseek-v4-pro

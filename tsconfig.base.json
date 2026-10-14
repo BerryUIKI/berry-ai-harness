@@ -520,6 +520,7 @@
       "@deepseek-ai/dsh-web-search-exa": ["./packages/web/web-search-exa/src"],
       "@deepseek-ai/dsh-web-search-perplexity": ["./packages/web/web-search-perplexity/src"],
       // BEGIN generated package aliases — pnpm run gen-tsconfig-paths
+      "@berry-ai/harness-acp": ["./packages/acp/acp/src"],
       "@berry-ai/harness-agent-instructions": ["./packages/context/agent-instructions/src"],
       "@berry-ai/harness-agent-preset": ["./packages/preset/agent-preset/src"],
       "@berry-ai/harness-agent-preset-registry": ["./packages/preset/agent-preset-registry/src"],
@@ -641,7 +642,6 @@
       "@berry-ai/harness-workflow": ["./packages/workflow/workflow/src"],
       "@berry-ai/harness-workflow-ptc": ["./packages/workflow/workflow-ptc/src"],
       "@berry-ai/harness-workspace": ["./packages/workspace/workspace/src"],
-      "@deepseek-ai/dsh-acp": ["./packages/acp/acp/src"],
       "@deepseek-ai/dsh-acp-app": ["./packages/bundle/acp-app/src"],
       "@deepseek-ai/dsh-agent": ["./packages/core/agent/src"],
       "@deepseek-ai/dsh-agent-default-model": ["./packages/core/agent-default-model/src"],
