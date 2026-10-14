@@ -1,7 +1,7 @@
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import LocalFileSystem from '@deepseek-ai/dsh-fs-local'
+import LocalFileSystem from '@berry-ai/harness-fs-local'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import WorkingDirectory from '@deepseek-ai/dsh-working-directory'
 import { Context } from '@deepseek-ai/cordis'

@@ -3,7 +3,7 @@ description: "The sandbox-enforcing ctx.fs backend for deployments and maintaine
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-fs-sandbox
+# @berry-ai/harness-fs-sandbox
 
 English | [中文](README.zh.md)
 
@@ -33,10 +33,10 @@ Load the shared policy service, then this backend, then the tools; the read-befo
 
 ```yaml
 - name: '@berry-ai/harness-sandbox-policy'
-- name: '@deepseek-ai/dsh-fs-sandbox'
+- name: '@berry-ai/harness-fs-sandbox'
   config:
     cwd: /absolute/path/to/workspace
-- name: '@deepseek-ai/dsh-tool-fs'
+- name: '@berry-ai/harness-tool-fs'
 ```
 
 The backend's config is unchanged from the local backend's (`cwd` resolution default and `diffBasisMaxBytes` overwrite bound); the [configuration catalog](../../../docs/config-catalog.md#deepseek-aidsh-fs-sandbox) is the exhaustive source.

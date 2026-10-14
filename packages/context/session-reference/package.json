@@ -79,7 +79,7 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-compaction": "workspace:*",
-    "@deepseek-ai/dsh-fs-local": "workspace:*",
+    "@berry-ai/harness-fs-local": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@berry-ai/harness-output-retention": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
@@ -92,7 +92,7 @@
     "@deepseek-ai/dsh-subagent": "workspace:*",
     "@berry-ai/harness-spill-local": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-tool-fs": "workspace:*",
+    "@berry-ai/harness-tool-fs": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"

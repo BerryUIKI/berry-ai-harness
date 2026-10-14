@@ -157,11 +157,11 @@ dsh plugin --profile sdk-minimal add file:C:/work/my-plugin-bundle
 ```yaml
 - insert:
     - id: fs-local
-      name: '@deepseek-ai/dsh-fs-local'
+      name: '@berry-ai/harness-fs-local'
       config:
         cwd: !!js process.cwd()
     - id: tool-str-replace-editor
-      name: '@deepseek-ai/dsh-tool-str-replace-editor'
+      name: '@berry-ai/harness-tool-str-replace-editor'
 ```
 
 构造 `DeepSeekHarness(profile="sdk-minimal", ...)` 时传入 `patches=("/absolute/path/to/editor.patch.yml",)`，或将 patch 写入 `$DSH_HOME/profiles/sdk-minimal/cordis.patch.yml` 以持久保存配置。下次运行时启动后，模型请求会在持久 shell 之外包含 `str_replace_editor`。本地文件系统后端以运行时工作目录解析相对路径；与极简 shell 一样，它不会将访问限制在该目录内。对于标准 `sdk` profile，只插入 editor 配置项，让它使用已有的文件系统后端与策略。

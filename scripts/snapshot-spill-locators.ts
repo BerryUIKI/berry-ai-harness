@@ -2,7 +2,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { join, relative, resolve, sep } from 'node:path'
 import type { SpillLocator } from '@berry-ai/harness-spill'
-import type {} from '@deepseek-ai/dsh-fs'
+import type {} from '@berry-ai/harness-fs'
 
 export const name = 'snapshot-spill-locators'
 export const inject = ['spillStore', 'fs']

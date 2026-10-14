@@ -17,7 +17,7 @@ import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import type { Config as SystemPromptConfig } from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
 import type { Config as ToolRuntimeConfig } from '@deepseek-ai/dsh-tools'
-import FsLocal from '@deepseek-ai/dsh-fs-local'
+import FsLocal from '@berry-ai/harness-fs-local'
 import WorkingDirectory from '@deepseek-ai/dsh-working-directory'
 
 export { createInboxStub, unsupportedInbox } from './inbox.ts'

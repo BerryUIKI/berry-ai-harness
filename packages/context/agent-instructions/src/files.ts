@@ -7,7 +7,7 @@
 import { createReadStream } from 'node:fs'
 import { stat } from 'node:fs/promises'
 import { dirname, isAbsolute, join, relative, resolve } from 'node:path'
-import type { FileSystem, FsInfo, FsTarget, FsVersion } from '@deepseek-ai/dsh-fs'
+import type { FileSystem, FsInfo, FsTarget, FsVersion } from '@berry-ai/harness-fs'
 import { agentsHomeDisplay, dshHomeDisplay } from '@berry-ai/harness-home-paths'
 import { assertNever } from '@berry-ai/harness-util-values'
 import { resolveConfig, resolveDiscoveryConfig, type ResolvedConfig, type ResolvedDiscoveryConfig } from './config.ts'

@@ -56,7 +56,7 @@ The built-in `working_directory` tool changes the directory for subsequent opera
 ```yaml
 - insert:
     - id: tool-str-replace-editor
-      name: '@deepseek-ai/dsh-tool-str-replace-editor'
+      name: '@berry-ai/harness-tool-str-replace-editor'
       config:
         maxOutputChars: 16000
 ```

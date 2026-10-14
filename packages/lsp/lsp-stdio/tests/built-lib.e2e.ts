@@ -43,7 +43,7 @@ describe.skipIf(!built)('built lib real load path (plain node)', () => {
       const { Context } = await import('@deepseek-ai/cordis')
       const { default: Lsp } = await import('@deepseek-ai/dsh-lsp')
       const LspLocal = await import('@deepseek-ai/dsh-lsp-stdio')
-      const { default: LocalFileSystem } = await import('@deepseek-ai/dsh-fs-local')
+      const { default: LocalFileSystem } = await import('@berry-ai/harness-fs-local')
       const { default: LocalSubprocessRuntime } = await import('@berry-ai/harness-subprocess-local')
       const ctx = new Context()
       await ctx.plugin(Lsp)

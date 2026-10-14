@@ -4,7 +4,7 @@
  * workspace root plus the platform temp areas", and this module is that
  * meaning's one home. The Seatbelt profile
  * (`@berry-ai/harness-sandbox-local`) and the in-process filesystem fence
- * (`@deepseek-ai/dsh-fs-sandbox`) both derive their allow-list here, so "the
+ * (`@berry-ai/harness-fs-sandbox`) both derive their allow-list here, so "the
  * write tool cannot write /tmp but bash can" asymmetries cannot arise between
  * them. The bwrap and Landlock dialects keep their own grant spellings (an
  * ephemeral `/tmp` mount, launcher-owned flags) — the honest per-runner

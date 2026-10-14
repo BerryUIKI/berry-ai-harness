@@ -33,7 +33,7 @@ describe('dsh-sdk-minimal bundle', () => {
       ['plugin-package-inventory-deepseek', '@deepseek-ai/dsh-plugin-package-inventory-deepseek'],
       ['llm-deepseek', '@deepseek-ai/dsh-llm-deepseek-api-key'],
       ['sandbox', '@berry-ai/harness-sandbox-local'],
-      ['filesystem', '@deepseek-ai/dsh-fs-local'],
+      ['filesystem', '@berry-ai/harness-fs-local'],
       ['working-directory', '@deepseek-ai/dsh-working-directory'],
       ['tool-working-directory', '@deepseek-ai/dsh-tool-working-directory'],
       ['session-projection', '@deepseek-ai/dsh-session-projection'],

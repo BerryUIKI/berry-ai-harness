@@ -3,7 +3,7 @@ description: "面向模型的 glob 与 grep 发现工具：供组合或排查 ag
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-fs-search
+# @berry-ai/harness-tool-fs-search
 
 [English](README.md) | 中文
 
@@ -35,7 +35,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-subprocess-local'
-- name: '@deepseek-ai/dsh-tool-fs-search'
+- name: '@berry-ai/harness-tool-fs-search'
   config:
     sampleOverCapGlobResults: false
 - name: '@berry-ai/harness-spill-local'

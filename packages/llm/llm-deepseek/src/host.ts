@@ -2,7 +2,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-settings'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
-import type {} from '@deepseek-ai/dsh-fs'
+import type {} from '@berry-ai/harness-fs'
 import { resolveImageAttachmentAccess } from '@deepseek-ai/dsh-llm'
 import { getOrCreateAnonymousUserId, type AnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import { deepEqualJson } from '@berry-ai/harness-util-values'

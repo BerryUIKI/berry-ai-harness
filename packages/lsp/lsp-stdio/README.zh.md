@@ -32,7 +32,7 @@ kind: "package-reference"
 `servers` 记录把每个稳定的提供方 id 映射到一条服务器命令。提供方会在清理 credential 后于加载时解析每个可执行文件，因此一个坏配置项会阻止所有提供方注册；进程在第一次匹配查询时惰性启动。
 
 ```yaml
-- name: '@deepseek-ai/dsh-fs-local'
+- name: '@berry-ai/harness-fs-local'
 - name: '@berry-ai/harness-subprocess-local'
 - name: '@deepseek-ai/dsh-lsp'
 - name: '@deepseek-ai/dsh-lsp-stdio'

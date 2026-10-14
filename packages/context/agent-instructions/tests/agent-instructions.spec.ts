@@ -12,7 +12,7 @@ import SessionStore, { SessionId, SessionSeq, type SessionEvent, type SurfaceInt
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import AgentRegistry, { agentEvents, type Agent } from '@deepseek-ai/dsh-agent'
 import AgentLoop, { turnBoundaryProjectionDefinition } from '@deepseek-ai/dsh-agent-loop'
-import { FileSystem, FsTargetKey, FsVersion } from '@deepseek-ai/dsh-fs'
+import { FileSystem, FsTargetKey, FsVersion } from '@berry-ai/harness-fs'
 import type {
   FsDirEntry,
   FsEditOutcome,
@@ -22,15 +22,15 @@ import type {
   FsTarget,
   FsWriteIntent,
   FsWriteOutcome,
-} from '@deepseek-ai/dsh-fs'
-import LocalFileSystem from '@deepseek-ai/dsh-fs-local'
+} from '@berry-ai/harness-fs'
+import LocalFileSystem from '@berry-ai/harness-fs-local'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
 import type {
   ToolExecution,
   ToolExecutionToken,
 } from '@deepseek-ai/dsh-tools'
-import * as ToolFs from '@deepseek-ai/dsh-tool-fs'
+import * as ToolFs from '@berry-ai/harness-tool-fs'
 import {
   discoverBaselineInstructionFiles,
   loadBaselineInstructions,

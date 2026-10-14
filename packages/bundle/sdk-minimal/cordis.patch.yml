@@ -36,7 +36,7 @@
     # Shared projection registry: sandbox-policy and terminal-bash fold
     # sandbox-mode state through its units and require it as a hard injection.
     - id: filesystem
-      name: '@deepseek-ai/dsh-fs-local'
+      name: '@berry-ai/harness-fs-local'
 
     - id: working-directory
       name: '@deepseek-ai/dsh-working-directory'

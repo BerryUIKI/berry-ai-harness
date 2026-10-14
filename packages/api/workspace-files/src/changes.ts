@@ -7,7 +7,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { Deque } from '@berry-ai/harness-deque'
 import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
-import type { FsObservation, FsTarget } from '@deepseek-ai/dsh-fs'
+import type { FsObservation, FsTarget } from '@berry-ai/harness-fs'
 import type { WorkspaceFileWatchFrame } from './types.ts'
 
 /** One target invalidation, optionally carrying its instrumented observation. */

@@ -28,8 +28,8 @@ async function run(root: string): Promise<ProfileReport> {
     '- id: llm-deepseek', '  disabled: true',
     '- id: sessions', '  config:', '    root: ' + JSON.stringify(join(root, 'profile-sessions')), '    compression: zstd',
     '- insert:',
-    '    - id: fs-local', "      name: '@deepseek-ai/dsh-fs-local'",
-    '    - id: str-replace-editor', "      name: '@deepseek-ai/dsh-tool-str-replace-editor'",
+    '    - id: fs-local', "      name: '@berry-ai/harness-fs-local'",
+    '    - id: str-replace-editor', "      name: '@berry-ai/harness-tool-str-replace-editor'",
     '    - id: benchmark-model', '      name: ' + JSON.stringify(join(import.meta.dirname, 'profile-adapter.js')),
     '',
   ].join('\n'))

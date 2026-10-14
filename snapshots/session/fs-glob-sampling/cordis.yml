@@ -62,7 +62,7 @@
   disabled: true
 
 - id: tool-fs-search
-  name: '@deepseek-ai/dsh-tool-fs-search'
+  name: '@berry-ai/harness-tool-fs-search'
   config:
     sampleOverCapGlobResults: true
     globMaxResults: 4

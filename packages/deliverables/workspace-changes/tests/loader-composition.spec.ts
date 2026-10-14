@@ -13,7 +13,7 @@ import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import LocalFileSystem from '@deepseek-ai/dsh-fs-local'
+import LocalFileSystem from '@berry-ai/harness-fs-local'
 import * as WorkspaceChangesPlugin from '@berry-ai/harness-workspace-changes'
 import { changes, endTurn, git, startTurn, toolCall } from './support.ts'
 
@@ -34,7 +34,7 @@ describe('real Loader composition', () => {
     await writeFile(join(root, 'cordis.yml'), [
       "- name: '@deepseek-ai/dsh-session'",
       "- name: '@berry-ai/harness-subprocess-local'",
-      "- name: '@deepseek-ai/dsh-fs-local'",
+      "- name: '@berry-ai/harness-fs-local'",
       "- name: '@berry-ai/harness-workspace-changes'",
       '',
     ].join('\n'))
@@ -45,7 +45,7 @@ describe('real Loader composition', () => {
     const modules = new Map<string, unknown>([
       ['@deepseek-ai/dsh-session', SessionStore],
       ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],
-      ['@deepseek-ai/dsh-fs-local', LocalFileSystem],
+      ['@berry-ai/harness-fs-local', LocalFileSystem],
       ['@berry-ai/harness-workspace-changes', WorkspaceChangesPlugin],
     ])
     context.loader.internal = {

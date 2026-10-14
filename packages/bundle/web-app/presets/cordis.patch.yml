@@ -28,9 +28,9 @@
             name: '@deepseek-ai/dsh-tool-pwsh'
             disabled: !!js process.platform !== 'win32'
           - id: tool-fs
-            name: '@deepseek-ai/dsh-tool-fs'
+            name: '@berry-ai/harness-tool-fs'
           - id: tool-fs-search
-            name: '@deepseek-ai/dsh-tool-fs-search'
+            name: '@berry-ai/harness-tool-fs-search'
             config:
               sampleOverCapGlobResults: false
           - id: tool-jobs

@@ -10,7 +10,7 @@ import { SandboxUnavailableError, classifyRunnerFailure, isRunnerSpawnFailure } 
 import type { ConfinedArgv, SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import type { SubprocessHandle, SubprocessOutcome } from '@berry-ai/harness-subprocess'
 import type {} from '@berry-ai/harness-sandbox-policy'
-import type {} from '@deepseek-ai/dsh-fs'
+import type {} from '@berry-ai/harness-fs'
 import { snapshotJsonValue } from '@berry-ai/harness-util-values'
 import { validateBindings } from './bindings.ts'
 import { JsonChannel } from './channel.ts'

@@ -36,7 +36,7 @@ Choose this service when a deployment wants model-visible code navigation backed
 The seam needs a provider and a consumer to do anything. A minimal composition mounts the service, a stdio provider, and the tool:
 
 ```yaml
-- name: '@deepseek-ai/dsh-fs-local'
+- name: '@berry-ai/harness-fs-local'
 - name: '@berry-ai/harness-subprocess-local'
 - name: '@deepseek-ai/dsh-lsp'
 - name: '@deepseek-ai/dsh-lsp-stdio'

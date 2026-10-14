@@ -32,7 +32,7 @@ Mount this provider when a deployment has local language servers — for example
 The `servers` record maps each stable provider id to one server command. The provider resolves every executable at load after credential scrubbing, so a bad entry prevents every provider from registering; processes launch lazily on the first matching query.
 
 ```yaml
-- name: '@deepseek-ai/dsh-fs-local'
+- name: '@berry-ai/harness-fs-local'
 - name: '@berry-ai/harness-subprocess-local'
 - name: '@deepseek-ai/dsh-lsp'
 - name: '@deepseek-ai/dsh-lsp-stdio'

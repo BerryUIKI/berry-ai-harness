@@ -1,13 +1,13 @@
 /**
  * Model-facing `str_replace_editor` over the Harness filesystem seam.
- * @module @deepseek-ai/dsh-tool-str-replace-editor
+ * @module @berry-ai/harness-tool-str-replace-editor
  */
 
 import { isAbsolute } from 'node:path'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { FsError } from '@deepseek-ai/dsh-fs'
-import type { FsInfo, FsTarget, FsWriteIntent } from '@deepseek-ai/dsh-fs'
+import { FsError } from '@berry-ai/harness-fs'
+import type { FsInfo, FsTarget, FsWriteIntent } from '@berry-ai/harness-fs'
 import { truncateWithoutSplittingSurrogatePair } from '@berry-ai/harness-output-retention'
 import { sandboxDenialMarker } from '@berry-ai/harness-sandbox'
 import type { SandboxExecutionPolicy } from '@berry-ai/harness-sandbox'

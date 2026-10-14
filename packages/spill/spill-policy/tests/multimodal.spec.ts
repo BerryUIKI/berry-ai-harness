@@ -8,7 +8,7 @@ import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-test
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import AttachmentStore, { AttachmentId } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentRef, SaveImageAttachment, StoredImageAttachment } from '@berry-ai/harness-attachment'
-import FileSystem from '@deepseek-ai/dsh-fs-local'
+import FileSystem from '@berry-ai/harness-fs-local'
 import { LlmAdapter, LlmRuntime, ToolCallId } from '@deepseek-ai/dsh-llm'
 import type { GenerateOptions, StreamChunk, ImageBlock, LlmImageRequestPricing, LlmResolvedModelInfo } from '@deepseek-ai/dsh-llm'
 import { deepSeekImageTokens } from '@deepseek-ai/dsh-llm-deepseek'

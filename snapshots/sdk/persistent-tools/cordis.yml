@@ -4,7 +4,7 @@
 
 - insert:
     - id: tool-str-replace-editor
-      name: '@deepseek-ai/dsh-tool-str-replace-editor'
+      name: '@berry-ai/harness-tool-str-replace-editor'
       config:
         maxOutputChars: 16000
 
@@ -41,7 +41,7 @@
   disabled: true
 
 - id: fs-sandbox
-  name: '@deepseek-ai/dsh-fs-sandbox'
+  name: '@berry-ai/harness-fs-sandbox'
   disabled: true
 
 - id: tool-bash
@@ -73,11 +73,11 @@
   disabled: true
 
 - id: tool-fs
-  name: '@deepseek-ai/dsh-tool-fs'
+  name: '@berry-ai/harness-tool-fs'
   disabled: true
 
 - id: tool-fs-search
-  name: '@deepseek-ai/dsh-tool-fs-search'
+  name: '@berry-ai/harness-tool-fs-search'
   disabled: true
 
 - id: tool-subagent-control
@@ -133,7 +133,7 @@
       name: '@deepseek-ai/dsh-bash-local'
 
     - id: fs-local
-      name: '@deepseek-ai/dsh-fs-local'
+      name: '@berry-ai/harness-fs-local'
       config:
         cwd: !!js process.cwd()
 

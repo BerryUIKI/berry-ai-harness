@@ -3,7 +3,7 @@ import * as nativeCommand from '@berry-ai/harness-native-command'
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import SessionStore from '@deepseek-ai/dsh-session'
-import FsLocal from '@deepseek-ai/dsh-fs-local'
+import FsLocal from '@berry-ai/harness-fs-local'
 import { onTestFinished } from 'vitest'
 import { describe, expect, it, vi } from 'vitest'
 import {

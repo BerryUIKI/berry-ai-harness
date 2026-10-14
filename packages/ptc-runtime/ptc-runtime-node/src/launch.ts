@@ -1,7 +1,7 @@
 /** Select source or built bootstrap assets in the mounted execution world. */
 import { dirname, isAbsolute, resolve } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
-import type { FileSystem } from '@deepseek-ai/dsh-fs'
+import type { FileSystem } from '@berry-ai/harness-fs'
 import { assertNever } from '@berry-ai/harness-util-values'
 
 /** Deployment-owned worker invocation in the subprocess execution world. */

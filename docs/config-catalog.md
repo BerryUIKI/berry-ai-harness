@@ -144,6 +144,47 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-deepseek-account-platform -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-fs-local -->
+<a id="berry-aiharness-fs-local"></a>
+
+## `@berry-ai/harness-fs-local`
+
+- `source`: [`packages/fs/fs-local/src/index.ts:45`](../packages/fs/fs-local/src/index.ts)
+
+```ts config-catalog
+/** Configuration for the local filesystem backend. */
+export interface Config {
+  /** Base directory for relative paths. Defaults to `process.cwd()`. */
+  cwd?: string
+  /**
+   * Exclusive UTF-8 byte limit on each overwrite-diff side, capped by the
+   * runtime's safe allocation/decode maximum. Defaults to 10 MiB.
+   */
+  diffBasisMaxBytes?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-fs-local -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-fs-sandbox -->
+<a id="berry-aiharness-fs-sandbox"></a>
+
+## `@berry-ai/harness-fs-sandbox`
+
+- `inject`: `sandboxPolicy`
+- `refs`: [`LocalConfig`](#berry-aiharness-fs-local)
+- `source`: [`packages/fs/fs-sandbox/src/index.ts:45`](../packages/fs/fs-sandbox/src/index.ts)
+
+```ts config-catalog
+/**
+ * Plugin config: the local backend's knobs verbatim (`cwd` resolution default
+ * and `diffBasisMaxBytes` overwrite-presentation bound). The sandbox default
+ * (mode + `workspace-write` fallback root) is NOT here — `ctx.sandboxPolicy`
+ * resolves each calling session for every enforcing capability.
+ */
+export type Config = LocalConfig
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-fs-sandbox -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-goal -->
 <a id="berry-aiharness-goal"></a>
 
@@ -913,6 +954,65 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-tool-ask-user -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-fs -->
+<a id="berry-aiharness-tool-fs"></a>
+
+## `@berry-ai/harness-tool-fs`
+
+- `inject`: `tools` · `fs` · `systemPrompt` · `workingDirectory`
+- `source`: [`packages/fs/tool-fs/src/index.ts:26`](../packages/fs/tool-fs/src/index.ts)
+
+```ts config-catalog
+/** Plugin config (all optional — `Config` supplies the defaults). */
+export interface Config {
+  /** Default and maximum number of lines returned by one `read` call. */
+  readLimit?: number
+  /** Maximum characters returned for a single line before truncation. */
+  readMaxLineLength?: number
+  /** Maximum bytes returned for the selected lines of one `read` call. */
+  readMaxBytes?: number
+  /** Files at or above this size stream instead of loading whole into memory. */
+  readStreamMinSize?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-fs -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-fs-search -->
+<a id="berry-aiharness-tool-fs-search"></a>
+
+## `@berry-ai/harness-tool-fs-search`
+
+- `inject`: `tools` · `systemPrompt` · `subprocess` · `workingDirectory`
+- `source`: [`packages/fs/tool-fs-search/src/index.ts:74`](../packages/fs/tool-fs-search/src/index.ts)
+
+```ts config-catalog
+/** Plugin config; over-cap glob sampling is an explicit deployment choice and the remaining fields have defaults. */
+export interface Config {
+  /** Whether an over-cap `glob` page is sampled across top-level entries instead of taking the modification-time head. */
+  sampleOverCapGlobResults: boolean
+  /** Max paths one `glob` call retains inline; later paths go to the formatted spill file. */
+  globMaxResults?: number
+  /** Max flat matches one `grep` call retains inline; later matches go to the formatted spill file. */
+  grepMaxMatches?: number
+  /** Max bytes retained for one matched-line preview (the cut preserves UTF-8 boundaries). */
+  grepMaxLineBytes?: number
+  /** Max bytes of one search's serialized `presentationMeta`; trailing groups/paths drop past it so the persisted card stays bounded. */
+  searchMetaMaxBytes?: number
+  /** Max complete raw `rg` stdout bytes a search will parse; larger raw output fails with `SEARCH_RAW_OUTPUT_OVERFLOW`. */
+  rawOutputMaxBytes?: number
+  /** Terminate-escalation grace (ms), handed to the subprocess seam and bounded by `MAX_TIMER_DELAY_MS`. */
+  graceMs?: number
+  /** Max bytes retained for one search's stderr tail; the excerpt is embedded in `SEARCH_*` error messages, never shown on success. */
+  stderrMaxBytes?: number
+  /**
+   * Cooperative tool-call timeout budget (ms) on both tools, enforced by
+   * `@berry-ai/harness-tool-call-timeout-policy` through `exec.signal`.
+   */
+  timeoutMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-fs-search -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-goal -->
 <a id="berry-aiharness-tool-goal"></a>
 
@@ -983,6 +1083,25 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-tool-present -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-str-replace-editor -->
+<a id="berry-aiharness-tool-str-replace-editor"></a>
+
+## `@berry-ai/harness-tool-str-replace-editor`
+
+- `inject`: `tools` · `fs`
+- `source`: [`packages/fs/tool-str-replace-editor/src/index.ts:506`](../packages/fs/tool-str-replace-editor/src/index.ts)
+
+```ts config-catalog
+/** Configuration for the string-replacement editor tool. */
+export interface Config {
+  /** Maximum returned view characters before clipping (default 16000). */
+  maxOutputChars?: number
+  /** Model-facing tool description. */
+  description?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-str-replace-editor -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-todo -->
 <a id="berry-aiharness-tool-todo"></a>
@@ -2325,47 +2444,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-file-reference-local -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-fs-local -->
-<a id="deepseek-aidsh-fs-local"></a>
-
-## `@deepseek-ai/dsh-fs-local`
-
-- `source`: [`packages/fs/fs-local/src/index.ts:45`](../packages/fs/fs-local/src/index.ts)
-
-```ts config-catalog
-/** Configuration for the local filesystem backend. */
-export interface Config {
-  /** Base directory for relative paths. Defaults to `process.cwd()`. */
-  cwd?: string
-  /**
-   * Exclusive UTF-8 byte limit on each overwrite-diff side, capped by the
-   * runtime's safe allocation/decode maximum. Defaults to 10 MiB.
-   */
-  diffBasisMaxBytes?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-fs-local -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-fs-sandbox -->
-<a id="deepseek-aidsh-fs-sandbox"></a>
-
-## `@deepseek-ai/dsh-fs-sandbox`
-
-- `inject`: `sandboxPolicy`
-- `refs`: [`LocalConfig`](#deepseek-aidsh-fs-local)
-- `source`: [`packages/fs/fs-sandbox/src/index.ts:45`](../packages/fs/fs-sandbox/src/index.ts)
-
-```ts config-catalog
-/**
- * Plugin config: the local backend's knobs verbatim (`cwd` resolution default
- * and `diffBasisMaxBytes` overwrite-presentation bound). The sandbox default
- * (mode + `workspace-write` fallback root) is NOT here — `ctx.sandboxPolicy`
- * resolves each calling session for every enforcing capability.
- */
-export type Config = LocalConfig
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-fs-sandbox -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-headless -->
 <a id="deepseek-aidsh-headless"></a>
@@ -3893,65 +3971,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-bash-persistent -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-fs -->
-<a id="deepseek-aidsh-tool-fs"></a>
-
-## `@deepseek-ai/dsh-tool-fs`
-
-- `inject`: `tools` · `fs` · `systemPrompt` · `workingDirectory`
-- `source`: [`packages/fs/tool-fs/src/index.ts:26`](../packages/fs/tool-fs/src/index.ts)
-
-```ts config-catalog
-/** Plugin config (all optional — `Config` supplies the defaults). */
-export interface Config {
-  /** Default and maximum number of lines returned by one `read` call. */
-  readLimit?: number
-  /** Maximum characters returned for a single line before truncation. */
-  readMaxLineLength?: number
-  /** Maximum bytes returned for the selected lines of one `read` call. */
-  readMaxBytes?: number
-  /** Files at or above this size stream instead of loading whole into memory. */
-  readStreamMinSize?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-fs -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-fs-search -->
-<a id="deepseek-aidsh-tool-fs-search"></a>
-
-## `@deepseek-ai/dsh-tool-fs-search`
-
-- `inject`: `tools` · `systemPrompt` · `subprocess` · `workingDirectory`
-- `source`: [`packages/fs/tool-fs-search/src/index.ts:74`](../packages/fs/tool-fs-search/src/index.ts)
-
-```ts config-catalog
-/** Plugin config; over-cap glob sampling is an explicit deployment choice and the remaining fields have defaults. */
-export interface Config {
-  /** Whether an over-cap `glob` page is sampled across top-level entries instead of taking the modification-time head. */
-  sampleOverCapGlobResults: boolean
-  /** Max paths one `glob` call retains inline; later paths go to the formatted spill file. */
-  globMaxResults?: number
-  /** Max flat matches one `grep` call retains inline; later matches go to the formatted spill file. */
-  grepMaxMatches?: number
-  /** Max bytes retained for one matched-line preview (the cut preserves UTF-8 boundaries). */
-  grepMaxLineBytes?: number
-  /** Max bytes of one search's serialized `presentationMeta`; trailing groups/paths drop past it so the persisted card stays bounded. */
-  searchMetaMaxBytes?: number
-  /** Max complete raw `rg` stdout bytes a search will parse; larger raw output fails with `SEARCH_RAW_OUTPUT_OVERFLOW`. */
-  rawOutputMaxBytes?: number
-  /** Terminate-escalation grace (ms), handed to the subprocess seam and bounded by `MAX_TIMER_DELAY_MS`. */
-  graceMs?: number
-  /** Max bytes retained for one search's stderr tail; the excerpt is embedded in `SEARCH_*` error messages, never shown on success. */
-  stderrMaxBytes?: number
-  /**
-   * Cooperative tool-call timeout budget (ms) on both tools, enforced by
-   * `@berry-ai/harness-tool-call-timeout-policy` through `exec.signal`.
-   */
-  timeoutMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-fs-search -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-lsp -->
 <a id="deepseek-aidsh-tool-lsp"></a>
 
@@ -4084,25 +4103,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-skill -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-str-replace-editor -->
-<a id="deepseek-aidsh-tool-str-replace-editor"></a>
-
-## `@deepseek-ai/dsh-tool-str-replace-editor`
-
-- `inject`: `tools` · `fs`
-- `source`: [`packages/fs/tool-str-replace-editor/src/index.ts:506`](../packages/fs/tool-str-replace-editor/src/index.ts)
-
-```ts config-catalog
-/** Configuration for the string-replacement editor tool. */
-export interface Config {
-  /** Maximum returned view characters before clipping (default 16000). */
-  maxOutputChars?: number
-  /** Model-facing tool description. */
-  description?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-str-replace-editor -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-subagent -->
 <a id="deepseek-aidsh-tool-subagent"></a>
@@ -4504,6 +4504,7 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@berry-ai/harness-commands` | — | [`packages/interaction/commands/src/index.ts`](../packages/interaction/commands/src/index.ts) |
 | `@berry-ai/harness-computer-use` | — | [`packages/computer-use/computer-use/src/index.ts`](../packages/computer-use/computer-use/src/index.ts) |
 | `@berry-ai/harness-config-editor` | `loader` · `profileContext` | [`packages/boot/config-editor/src/index.ts`](../packages/boot/config-editor/src/index.ts) |
+| `@berry-ai/harness-fs-observation-policy` | — | [`packages/fs/fs-observation-policy/src/index.ts`](../packages/fs/fs-observation-policy/src/index.ts) |
 | `@berry-ai/harness-fs-ssh` | `ssh` · `sandboxPolicy` | [`packages/ssh/fs-ssh/src/index.ts`](../packages/ssh/fs-ssh/src/index.ts) |
 | `@berry-ai/harness-goal-round-driver` | `agents` · `goals` · `sessions` | [`packages/goal/goal-round-driver/src/index.ts`](../packages/goal/goal-round-driver/src/index.ts) |
 | `@berry-ai/harness-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
@@ -4583,7 +4584,6 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@deepseek-ai/dsh-experimental-computer-use-cua-driver-native` | `computerUse` · `tools` · `systemPrompt` | [`packages/experimental/computer-use-cua-driver-native/src/index.ts`](../packages/experimental/computer-use-cua-driver-native/src/index.ts) |
 | `@deepseek-ai/dsh-experimental-session-inspector` | — | [`packages/experimental/session-inspector/src/index.ts`](../packages/experimental/session-inspector/src/index.ts) |
 | `@deepseek-ai/dsh-experimental-tool-worktree` | `tools` · `worktrees` | [`packages/experimental/tool-worktree/src/index.ts`](../packages/experimental/tool-worktree/src/index.ts) |
-| `@deepseek-ai/dsh-fs-observation-policy` | — | [`packages/fs/fs-observation-policy/src/index.ts`](../packages/fs/fs-observation-policy/src/index.ts) |
 | `@deepseek-ai/dsh-host-directory-picker-auto` | `webServer` · `connection` · `loader` | [`packages/host/directory-picker-auto/src/index.ts`](../packages/host/directory-picker-auto/src/index.ts) |
 | `@deepseek-ai/dsh-host-directory-picker-native` | — | [`packages/host/directory-picker-native/src/index.ts`](../packages/host/directory-picker-native/src/index.ts) |
 | `@deepseek-ai/dsh-host-plugin-inventory` | `loader` | [`packages/host/plugin-inventory/src/index.ts`](../packages/host/plugin-inventory/src/index.ts) |
@@ -4611,6 +4611,7 @@ Abstract service classes — a deployment loads a concrete implementation packag
 | `@berry-ai/harness-attachment` | `AttachmentStore` | — | [`packages/attachment/attachment/src/index.ts`](../packages/attachment/attachment/src/index.ts) |
 | `@berry-ai/harness-credentials` | `CredentialProvider` | — | [`packages/credentials/credentials/src/index.ts`](../packages/credentials/credentials/src/index.ts) |
 | `@berry-ai/harness-deepseek-account` | `DeepSeekAccount` | — | [`packages/credentials/deepseek-account/src/index.ts`](../packages/credentials/deepseek-account/src/index.ts) |
+| `@berry-ai/harness-fs` | `FileSystem` | — | [`packages/fs/fs/src/index.ts`](../packages/fs/fs/src/index.ts) |
 | `@berry-ai/harness-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
 | `@berry-ai/harness-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
 | `@berry-ai/harness-sandbox` | `SandboxProvider` | — | [`packages/sandbox/sandbox/src/index.ts`](../packages/sandbox/sandbox/src/index.ts) |
@@ -4619,7 +4620,6 @@ Abstract service classes — a deployment loads a concrete implementation packag
 | `@berry-ai/harness-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
 | `@deepseek-ai/dsh-compaction` | `CompactionEngine` | — | [`packages/compaction/compaction/src/index.ts`](../packages/compaction/compaction/src/index.ts) |
 | `@deepseek-ai/dsh-file-reference` | `FileReferenceService` | — | [`packages/context/file-reference/src/index.ts`](../packages/context/file-reference/src/index.ts) |
-| `@deepseek-ai/dsh-fs` | `FileSystem` | — | [`packages/fs/fs/src/index.ts`](../packages/fs/fs/src/index.ts) |
 | `@deepseek-ai/dsh-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
 | `@deepseek-ai/dsh-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |
 | `@deepseek-ai/dsh-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |

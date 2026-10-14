@@ -1,7 +1,7 @@
 /** Shared observation and result fields for successful file mutations. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { FsTarget, FsVersion } from '@deepseek-ai/dsh-fs'
+import type { FsTarget, FsVersion } from '@berry-ai/harness-fs'
 import type { ToolExecution } from '@deepseek-ai/dsh-tools'
 
 /**

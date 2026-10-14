@@ -12,8 +12,8 @@ import { agentEvents, type Agent } from '@deepseek-ai/dsh-agent'
 import { createUserMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
 import * as systemPromptPlugin from '@deepseek-ai/dsh-system-prompt'
 import * as toolsPlugin from '@deepseek-ai/dsh-tools'
-import * as fsPlugin from '@deepseek-ai/dsh-fs-local'
-import * as toolFsPlugin from '@deepseek-ai/dsh-tool-fs'
+import * as fsPlugin from '@berry-ai/harness-fs-local'
+import * as toolFsPlugin from '@berry-ai/harness-tool-fs'
 import * as sessionPlugin from '@deepseek-ai/dsh-session'
 import * as sessionProjectionPlugin from '@deepseek-ai/dsh-session-projection'
 import * as workingDirectoryPlugin from '@deepseek-ai/dsh-working-directory'
@@ -51,8 +51,8 @@ describe('session-reference real Loader composition', () => {
       ['@deepseek-ai/dsh-working-directory', workingDirectoryPlugin],
       ['@deepseek-ai/dsh-system-prompt', systemPromptPlugin],
       ['@deepseek-ai/dsh-tools', toolsPlugin],
-      ['@deepseek-ai/dsh-fs-local', fsPlugin],
-      ['@deepseek-ai/dsh-tool-fs', toolFsPlugin],
+      ['@berry-ai/harness-fs-local', fsPlugin],
+      ['@berry-ai/harness-tool-fs', toolFsPlugin],
       ['@deepseek-ai/dsh-session-query-sqlite', queryPlugin],
       ['@deepseek-ai/dsh-session-reference', referencePlugin],
       ['@berry-ai/harness-spill-local', spillPlugin],

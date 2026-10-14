@@ -1,6 +1,6 @@
 /**
  * `SandboxedFileSystem`: the sandbox-enforcing implementation of the
- * `@deepseek-ai/dsh-fs` Service Definition. It extends `LocalFileSystem` so all
+ * `@berry-ai/harness-fs` Service Definition. It extends `LocalFileSystem` so all
  * text-storage mechanics — resolve, stat, read/stream, list, the atomic
  * write and the read-match-write edit critical section — are the local
  * implementation's, verbatim; this package adds only the per-call POLICY fence
@@ -23,14 +23,14 @@
  * `danger-full-access` delegates unfenced. A denial throws the structured
  * `FS_SANDBOX_DENIED`.
  *
- * @module @deepseek-ai/dsh-fs-sandbox
+ * @module @berry-ai/harness-fs-sandbox
  */
 
 import { Context } from '@deepseek-ai/cordis'
-import { LocalFileSystem } from '@deepseek-ai/dsh-fs-local'
-import type { Config as LocalConfig } from '@deepseek-ai/dsh-fs-local'
-import { FsError } from '@deepseek-ai/dsh-fs'
-import type { FsEditOutcome, FsEditRequest, FsTarget, FsVersion, FsWriteIntent, FsWriteOutcome } from '@deepseek-ai/dsh-fs'
+import { LocalFileSystem } from '@berry-ai/harness-fs-local'
+import type { Config as LocalConfig } from '@berry-ai/harness-fs-local'
+import { FsError } from '@berry-ai/harness-fs'
+import type { FsEditOutcome, FsEditRequest, FsTarget, FsVersion, FsWriteIntent, FsWriteOutcome } from '@berry-ai/harness-fs'
 import { writableRoots } from '@berry-ai/harness-sandbox'
 import type { SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import type {} from '@berry-ai/harness-sandbox-policy'
