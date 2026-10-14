@@ -7,9 +7,9 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import { PluginPackages } from '@berry-ai/harness-app-boot'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
-import * as typertLoader from '@deepseek-ai/dsh-typert-loader'
-import { validateTypertManifest } from '@deepseek-ai/dsh-typert-loader'
+import TypertRegistry from '@berry-ai/harness-typert-registry'
+import * as typertLoader from '@berry-ai/harness-typert-loader'
+import { validateTypertManifest } from '@berry-ai/harness-typert-loader'
 import { z } from 'zod'
 
 let root: string | undefined

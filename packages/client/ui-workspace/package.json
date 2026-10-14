@@ -72,7 +72,7 @@
     "@berry-ai/harness-schedule": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
     "@types/react": "~18.3.1",

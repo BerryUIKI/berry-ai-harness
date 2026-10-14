@@ -9,7 +9,7 @@ import type { Session, SessionEvent, SessionHeader, SessionId } from '@deepseek-
 import type { ProjectionSnapshot } from '@deepseek-ai/dsh-session-projection'
 import type {} from '@deepseek-ai/dsh-session-projection-cache'
 import { SessionQueryError, type SessionRecord, type SessionSearchCursor } from '@berry-ai/harness-session-query'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { z } from 'zod'
 import {
   SESSION_SEARCH_RESULT_LIMIT,

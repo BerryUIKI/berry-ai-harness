@@ -22,7 +22,7 @@ import type {
   WorkspaceId,
   WorkspaceView,
 } from '../src/types.ts'
-import { RemoteError, type RemoteFailure, type RemoteResult, type RemoteStreamHandle } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError, type RemoteFailure, type RemoteResult, type RemoteStreamHandle } from '@berry-ai/harness-typert-protocol'
 import { streamHandle } from '@deepseek-ai/dsh-remote-mock'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 

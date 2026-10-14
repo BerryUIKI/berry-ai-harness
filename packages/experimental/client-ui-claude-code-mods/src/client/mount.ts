@@ -9,7 +9,7 @@ import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type {} from '@deepseek-ai/dsh-experimental-claude-code-mods/remote'
 import type { SurfaceSnapshot } from '@deepseek-ai/dsh-experimental-claude-code-mods/types'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { TypertRemoteContribution } from '@deepseek-ai/dsh-typert-protocol'
+import type { TypertRemoteContribution } from '@berry-ai/harness-typert-protocol'
 import { Band, type BandInjected } from './Band.tsx'
 import { en, NS, zh, type ModsBandKey } from './locales.ts'
 

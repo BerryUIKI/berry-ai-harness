@@ -58,7 +58,7 @@
     "@deepseek-ai/libreoffice-kit": "^0.1.5",
     "@deepseek-ai/schemastery": "workspace:~",
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "zod": "^4.4.3"
   }
 }

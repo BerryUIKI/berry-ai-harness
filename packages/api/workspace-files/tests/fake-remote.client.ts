@@ -3,8 +3,8 @@
  * opened `changes` generation, and a supervisor that runs one generation and
  * classifies its end the way the real one does.
  */
-import type { RemoteResult, RemoteStreamHandle } from '@deepseek-ai/dsh-typert-protocol'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import type { RemoteResult, RemoteStreamHandle } from '@berry-ai/harness-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { streamHandle } from '@deepseek-ai/dsh-remote-mock'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type { WorkspaceFileWatchFrame, WorkspaceFileStat } from '../src/types.ts'

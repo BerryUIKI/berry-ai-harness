@@ -3133,11 +3133,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-typert-loader",
+      "name": "@berry-ai/harness-typert-loader",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-typert-loader",
+          "location": "node_modules/@berry-ai/harness-typert-loader",
           "direct": false,
           "optional": false,
           "peer": false
@@ -3145,11 +3145,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-typert-protocol",
+      "name": "@berry-ai/harness-typert-protocol",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-typert-protocol",
+          "location": "node_modules/@berry-ai/harness-typert-protocol",
           "direct": false,
           "optional": false,
           "peer": false
@@ -3157,11 +3157,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-typert-registry",
+      "name": "@berry-ai/harness-typert-registry",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-typert-registry",
+          "location": "node_modules/@berry-ai/harness-typert-registry",
           "direct": false,
           "optional": false,
           "peer": false

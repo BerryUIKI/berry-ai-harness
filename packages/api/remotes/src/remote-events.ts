@@ -11,7 +11,7 @@ import type {} from '@berry-ai/harness-deepseek-account/types'
 import type {} from '@berry-ai/harness-permission-presets/types'
 import type {} from '@berry-ai/harness-plugin-manager/types'
 import type {} from '@berry-ai/harness-schedule/client'
-import type { TypertForwardableEventEntry } from '@deepseek-ai/dsh-typert-protocol'
+import type { TypertForwardableEventEntry } from '@berry-ai/harness-typert-protocol'
 
 /**
  * Host events this application forwards without renaming. The explicit mode is

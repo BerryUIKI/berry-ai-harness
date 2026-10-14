@@ -30,7 +30,7 @@ import {
   RemoteError,
   remoteErrorOf,
   type RemoteResult,
-} from '@deepseek-ai/dsh-typert-protocol'
+} from '@berry-ai/harness-typert-protocol'
 import SessionController from '../src/index.ts'
 import type {
   ModelCatalog,

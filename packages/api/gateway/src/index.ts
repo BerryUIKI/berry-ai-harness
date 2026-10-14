@@ -29,7 +29,7 @@ import {
   type RemoteInvocation,
   type TypertCodec,
   type TypertGatewayBinding,
-} from '@deepseek-ai/dsh-typert-protocol'
+} from '@berry-ai/harness-typert-protocol'
 import type {
   InvokeRemoteRequest,
   TypertGateway,

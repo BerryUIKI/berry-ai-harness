@@ -37,7 +37,7 @@
     "@deepseek-ai/dsh-session-persistence": "workspace:*",
     "@berry-ai/harness-storage": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@berry-ai/harness-typert-protocol": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-brand": "workspace:*",
@@ -49,6 +49,6 @@
     "@deepseek-ai/dsh-session-persistence": "workspace:*",
     "@berry-ai/harness-storage": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@berry-ai/harness-typert-protocol": "workspace:*"
   }
 }

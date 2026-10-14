@@ -44,10 +44,10 @@
       name: '@deepseek-ai/dsh-session-log-deepseek'
 
     - id: typert
-      name: '@deepseek-ai/dsh-typert-registry'
+      name: '@berry-ai/harness-typert-registry'
 
     - id: typert-loader
-      name: '@deepseek-ai/dsh-typert-loader'
+      name: '@berry-ai/harness-typert-loader'
 
     - id: typert-gateway
       name: '@deepseek-ai/dsh-api-gateway'

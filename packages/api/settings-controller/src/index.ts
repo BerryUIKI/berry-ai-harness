@@ -15,7 +15,7 @@ import type { SettingsDescriptor, SettingsPathOp, SettingsForms } from '@berry-a
 import type {
   SettingsDescribeValue, SettingsNamespaceView, SettingsPathOpView,
 } from '@berry-ai/harness-settings/types'
-import { Remote, RemoteError, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, RemoteError, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import { z } from 'zod'
 import { CredentialsController } from './credentials.ts'

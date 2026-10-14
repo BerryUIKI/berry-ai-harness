@@ -48,7 +48,7 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-anonymous-user-id": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@berry-ai/harness-typert-protocol": "workspace:*"
   },
   "dependencies": {
     "zod": "^4.4.3"
@@ -63,6 +63,6 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-anonymous-user-id": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@berry-ai/harness-typert-protocol": "workspace:*"
   }
 }

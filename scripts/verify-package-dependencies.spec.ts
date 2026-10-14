@@ -211,16 +211,16 @@ describe('package dependency scope', () => {
       '@berry-ai/harness-util-code-language',
       '@berry-ai/harness-util-crypto',
       '@berry-ai/harness-util-values',
-      '@deepseek-ai/dsh-typert-protocol',
+      '@berry-ai/harness-typert-protocol',
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@berry-ai/harness-deque']).toEqual(['Deque'])
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@deepseek-ai/schemastery']).toEqual(['default'])
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@deepseek-ai/dsh-session/types']).toBeUndefined()
-    expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@deepseek-ai/dsh-typert-protocol']).toBeUndefined()
+    expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@berry-ai/harness-typert-protocol']).toBeUndefined()
     expect(PACKAGE_DEPENDENCY_POLICY.peerRequiredHostExports['@deepseek-ai/dsh-scope']).toEqual([
       'carrierKeyOf', 'createScope', 'scopeOf', 'scopeTarget',
     ])
-    expect(PACKAGE_DEPENDENCY_POLICY.peerRequiredHostExports['@deepseek-ai/dsh-typert-protocol']).toBeUndefined()
+    expect(PACKAGE_DEPENDENCY_POLICY.peerRequiredHostExports['@berry-ai/harness-typert-protocol']).toBeUndefined()
   })
 
   it('discovers the Client directory, dsh.client declarations, and configured Host packages', () => {

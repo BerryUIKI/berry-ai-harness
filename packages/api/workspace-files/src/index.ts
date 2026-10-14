@@ -28,7 +28,7 @@ import type {} from '@berry-ai/harness-sandbox-policy'
 import type {} from '@deepseek-ai/dsh-session'
 import type {} from '@deepseek-ai/dsh-session-persistence'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import { Remote, RemoteError, TypertRemoteService, type TypertLookup } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, RemoteError, TypertRemoteService, type TypertLookup } from '@berry-ai/harness-typert-protocol'
 import { WorkspaceChangeFeed } from './changes.ts'
 import type {
   WorkspaceByteRange,
@@ -59,7 +59,7 @@ export interface WorkspaceFileScope {
   readonly workspaceRoot: string
 }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface TypertLookupMap {
     /** Resolve a Session id to its workspace root without loading its event body or activating an Agent. */
     workspaceFileScope: TypertLookup<WorkspaceFileScope, SessionId>

@@ -174,7 +174,7 @@ describe('typertPlugin', () => {
 
   it('emits every explicit workspace contributor once from a host-only prepass', async () => {
     const root = await workspace()
-    const trigger = await packageOutput(root, 'generator', { name: '@deepseek-ai/dsh-typert-generator' })
+    const trigger = await packageOutput(root, 'generator', { name: '@berry-ai/harness-typert-generator' })
     await packageOutput(root, 'core/tools', {
       name: '@deepseek-ai/dsh-tools',
       exports: { './typert': './lib/typert.host.js' },

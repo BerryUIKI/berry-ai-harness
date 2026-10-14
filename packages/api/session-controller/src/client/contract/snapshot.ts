@@ -2,7 +2,7 @@
 import type { FileAttachmentRef } from '@berry-ai/harness-attachment'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
-import type { RemoteFailure } from '@deepseek-ai/dsh-typert-protocol'
+import type { RemoteFailure } from '@berry-ai/harness-typert-protocol'
 import type { SessionRequestId } from '../../types.ts'
 
 /** One image displayed by a local submission echo before durable admission. */

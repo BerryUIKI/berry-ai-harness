@@ -9,7 +9,7 @@
 
 import { Service, type Context } from '@deepseek-ai/cordis'
 import { RemoteStreamCarrierError, type ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
-import type { RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { JobId } from '@berry-ai/harness-jobs/brand'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type { JobKillRequest, JobKillValue, JobFollowFrame, JobFollowRequest, JobListFrame, JobListRequest } from '../types.ts'

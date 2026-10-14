@@ -65,7 +65,7 @@
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@berry-ai/harness-typert-protocol": "workspace:*"
   },
   "devDependencies": {
     "@berry-ai/harness-attachment": "workspace:*",

@@ -16,7 +16,7 @@ Services normally extend `TypertRemoteService` so the constructor explicitly bin
 
 ```ts
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import { TypertRemoteService, Remote, RemoteScope } from '@deepseek-ai/dsh-typert-protocol'
+import { TypertRemoteService, Remote, RemoteScope } from '@berry-ai/harness-typert-protocol'
 import type { Context } from '@deepseek-ai/cordis'
 
 export interface CreateGoalRequest {
@@ -83,9 +83,9 @@ The `api-remotes` assembly and the `ctx.remote` contract are React-independent; 
 
 | Location | Package or entry | Responsibility |
 |---|---|---|
-| Shared | `@deepseek-ai/dsh-typert-protocol` | Declares decorators, Gateway bindings, merge-extensible protocol maps, invocation descriptors, and provider types; starts no TypeScript analysis and registers no Cordis services |
-| Build | `@deepseek-ai/dsh-typert-generator` | Strictly analyzes Remote signatures, the type graph, lookups, Contexts, and source locations from the Host `ts.Program`, then generates Host and Host-for-Client artifacts |
-| Host | `@deepseek-ai/dsh-typert-registry` and Loader | Places generated Host descriptors, schemas, and business-package registrations in `ctx.typert`, and holds lookup and Context providers |
+| Shared | `@berry-ai/harness-typert-protocol` | Declares decorators, Gateway bindings, merge-extensible protocol maps, invocation descriptors, and provider types; starts no TypeScript analysis and registers no Cordis services |
+| Build | `@berry-ai/harness-typert-generator` | Strictly analyzes Remote signatures, the type graph, lookups, Contexts, and source locations from the Host `ts.Program`, then generates Host and Host-for-Client artifacts |
+| Host | `@berry-ai/harness-typert-registry` and Loader | Places generated Host descriptors, schemas, and business-package registrations in `ctx.typert`, and holds lookup and Context providers |
 | Host | `@deepseek-ai/dsh-api-session-controller` | Owns the application Agent/Session identity policy and configures the corresponding Typert lookups |
 | Host | `@deepseek-ai/dsh-api-gateway` | Provides `ctx.typertGateway`, claims Remote endpoints, validates request values, resolves objects or Contexts, and invokes live Cordis services |
 | Client | `@deepseek-ai/dsh-api-gateway/client` | Provides `ctx.remote` and `remote.<namespace>` child Services, mounts generated descriptors as concrete methods, and initiates and cancels calls through the Connection |

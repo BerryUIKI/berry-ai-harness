@@ -41,7 +41,7 @@ const DUPLICATE_SAFE_PACKAGES: readonly string[] = [
   '@berry-ai/harness-util-code-language',
   '@berry-ai/harness-util-crypto',
   '@berry-ai/harness-util-values',
-  '@deepseek-ai/dsh-typert-protocol',
+  '@berry-ai/harness-typert-protocol',
 ]
 
 /**

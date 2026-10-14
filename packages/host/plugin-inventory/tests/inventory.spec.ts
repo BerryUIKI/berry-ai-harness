@@ -6,7 +6,7 @@ import { pathToFileURL } from 'node:url'
 import { Context, FiberState, type Plugin } from '@deepseek-ai/cordis'
 import { PluginPackages, readPluginMeta, type RuntimeResolution } from '@berry-ai/harness-app-boot'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import { remoteMethods } from '@deepseek-ai/dsh-typert-protocol'
+import { remoteMethods } from '@berry-ai/harness-typert-protocol'
 import type { AgentPresetRegistry } from '@berry-ai/harness-agent-preset-registry'
 import PluginInventoryGateway from '../src/index.ts'
 

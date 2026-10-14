@@ -65,7 +65,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "^4.4.3"
   },
@@ -81,6 +81,6 @@
     "@berry-ai/harness-jobs": "workspace:*",
     "@berry-ai/harness-jobs-local": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-typert-registry": "workspace:*"
+    "@berry-ai/harness-typert-registry": "workspace:*"
   }
 }

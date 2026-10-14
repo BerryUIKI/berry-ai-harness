@@ -36,7 +36,7 @@ export interface AgentPresetDocument {
   readonly description?: string
 }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** No declaration supplies the requested identity. */
     'agent-preset/not-found': { readonly agentPreset: string; readonly available: readonly string[] }

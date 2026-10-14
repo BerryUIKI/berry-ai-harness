@@ -6,7 +6,7 @@ import { TestClient, remoteDefaultResponses, webApp } from '../src/assembly/inde
 
 /** The Gateway client and what it injects: the Typert registry and the Connection. */
 const API_ROSTER = webApp.closure(['@deepseek-ai/dsh-api-gateway'])
-const TYPERT_ONLY = webApp.pick(['@deepseek-ai/dsh-typert-registry'])
+const TYPERT_ONLY = webApp.pick(['@berry-ai/harness-typert-registry'])
 const globals = globalThis as { __DSH_TRANSPORT__?: ClientTransportHooks }
 
 describe('TestClient (node environment)', () => {
@@ -40,7 +40,7 @@ describe('TestClient (node environment)', () => {
 
   it('rethrows a row that fails to apply and lets the next client boot', async () => {
     const failing = { apply(): void { throw new Error('apply boom') } }
-    await expect(TestClient.start({ roster: TYPERT_ONLY, provide: { '@deepseek-ai/dsh-typert-registry': failing } }, RemoteMock.create()))
+    await expect(TestClient.start({ roster: TYPERT_ONLY, provide: { '@berry-ai/harness-typert-registry': failing } }, RemoteMock.create()))
       .rejects.toThrow(/apply boom|typert-registry/)
     const mock = RemoteMock.create().load(remoteDefaultResponses)
     const client = await TestClient.start({ roster: API_ROSTER }, mock)

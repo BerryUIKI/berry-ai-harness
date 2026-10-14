@@ -6,7 +6,7 @@ Status: implemented
 
 ## Problem
 
-每个 Remote owner 包各自维护一套失败面：一个 `XxxErrorDetailsMap` 接口、由它派生的 `XxxError` union，以及一个出口映射函数，把域内错误类（`UnknownPresetError`、`PresetMountError`、`SessionTitleInvalidError` 等）翻译成 wire 失败值。`@deepseek-ai/dsh-typert-protocol` 同时携带两个失败类——owner 主动上报用 `TypertRemoteFailure`，lookup resolver 产生的用 `TypertLookupFailure`——而 `@deepseek-ai/dsh-client-connection` 又保留了第二份 typed 视图 `RpcErrorDetailsMap`，把 `agent-preset-not-found`、`session-not-found` 这类域码硬编码进载体层。
+每个 Remote owner 包各自维护一套失败面：一个 `XxxErrorDetailsMap` 接口、由它派生的 `XxxError` union，以及一个出口映射函数，把域内错误类（`UnknownPresetError`、`PresetMountError`、`SessionTitleInvalidError` 等）翻译成 wire 失败值。`@berry-ai/harness-typert-protocol` 同时携带两个失败类——owner 主动上报用 `TypertRemoteFailure`，lookup resolver 产生的用 `TypertLookupFailure`——而 `@deepseek-ai/dsh-client-connection` 又保留了第二份 typed 视图 `RpcErrorDetailsMap`，把 `agent-preset-not-found`、`session-not-found` 这类域码硬编码进载体层。
 
 于是一个码同时存在三处：owner 的表、载体的 typed 视图、以及消费方为窄化而写的 union 或 cast（`result.error as SessionError`）。新增一个域码要改三处，跨域转述一个别人的码则要把对方的码复制进自己的表——`SessionErrorDetailsMap` 就收编了 `agent-preset-*`、`subagent-*`、`workspace-not-found` 五个他域码。
 
@@ -16,7 +16,7 @@ Host 固定事实同样绕过了 `ctx.remote`：Host home 取自 `(ctx.get('conn
 
 ## Decision
 
-`@deepseek-ai/dsh-typert-protocol` 导出唯一的失败类 `RemoteError<Code>`：一个真 `Error`，带只读 `code` 与 `details`、结构标记 `isDSHRemoteError`，以及标准 `ErrorOptions`（`cause` 只在进程内有效）。码与 details 的对应关系收进一张 merge-extensible 的 `RemoteErrorDetailsMap`；`RemoteFailure` 是按码分布的实例 union，`RemoteResult<T>` 形状不变。
+`@berry-ai/harness-typert-protocol` 导出唯一的失败类 `RemoteError<Code>`：一个真 `Error`，带只读 `code` 与 `details`、结构标记 `isDSHRemoteError`，以及标准 `ErrorOptions`（`cause` 只在进程内有效）。码与 details 的对应关系收进一张 merge-extensible 的 `RemoteErrorDetailsMap`；`RemoteFailure` 是按码分布的实例 union，`RemoteResult<T>` 形状不变。
 
 ```text
 export class RemoteError<Code extends RemoteErrorCode = RemoteErrorCode> extends Error {

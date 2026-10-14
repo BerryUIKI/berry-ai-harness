@@ -6,7 +6,7 @@ import { Context } from '@deepseek-ai/cordis'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import Storage from '@berry-ai/harness-storage'
 import { DomainFacility } from '@berry-ai/harness-storage-domain'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import WorkspaceRegistry from '@berry-ai/harness-workspace'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import WorkspaceController from '../src/index.ts'
@@ -23,7 +23,7 @@ declare module '@berry-ai/harness-workspace/types' {
   }
 }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     'fixture/failure': {}
   }

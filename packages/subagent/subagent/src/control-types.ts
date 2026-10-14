@@ -131,7 +131,7 @@ declare module '@berry-ai/harness-workspace/types' {
   }
 }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** A browser-supplied zone is neither UTC nor a canonical IANA name. */
     'subagent/invalid-time-zone': { readonly value: string }

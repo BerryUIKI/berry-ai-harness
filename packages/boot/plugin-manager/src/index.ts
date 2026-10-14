@@ -9,7 +9,7 @@ import { Context } from '@deepseek-ai/cordis'
 import type { EntryOptions } from '@deepseek-ai/cordis-plugin-loader'
 import type { PatchOptions } from '@deepseek-ai/cordis-plugin-include'
 import z from '@deepseek-ai/schemastery'
-import { TypertRemoteService, Remote } from '@deepseek-ai/dsh-typert-protocol'
+import { TypertRemoteService, Remote } from '@berry-ai/harness-typert-protocol'
 import { pluginEntryId, readPluginInventory } from '@deepseek-ai/dsh-host-plugin-inventory'
 import {
   readPluginMeta, readProfileManifest, resolveBundleDir, loadOverlayPatches, composeEntries,
@@ -70,7 +70,7 @@ const protectedModules = new Set([
   '@deepseek-ai/cordis-plugin-include', '@deepseek-ai/dsh-api-gateway',
   '@deepseek-ai/dsh-host-webserver', '@deepseek-ai/dsh-client-modules',
   '@deepseek-ai/dsh-client-ui-settings-plugin-inventory', '@deepseek-ai/dsh-client-ui-plugin-manager',
-  '@deepseek-ai/dsh-host-plugin-inventory', '@deepseek-ai/dsh-typert-registry',
+  '@deepseek-ai/dsh-host-plugin-inventory', '@berry-ai/harness-typert-registry',
   '@deepseek-ai/dsh-api-remotes',
   '@deepseek-ai/cordis-plugin-timer', '@deepseek-ai/dsh-client-connection',
   '@deepseek-ai/dsh-host-frontend-static', '@deepseek-ai/dsh-tools',

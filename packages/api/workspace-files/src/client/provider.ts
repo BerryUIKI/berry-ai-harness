@@ -23,8 +23,8 @@
  */
 import type { ResourceProvider } from '@deepseek-ai/dsh-client-resources/client'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
-import type { RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
+import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import { parseFileAddress } from '@berry-ai/harness-util-workspace-path'
 import type { WorkspaceFileStat } from '../types.ts'
 import type { ChangeFeed } from './change-feed.ts'

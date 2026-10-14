@@ -3,7 +3,7 @@ import { preferredShell, rememberShell } from './shell-preference.ts'
 import { randomUUID } from '@berry-ai/harness-util-crypto'
 import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { RemoteStreamCarrierError, type ClientRemote, type RemoteStream } from '@deepseek-ai/dsh-api-gateway/client'
-import { RemoteError, remoteErrorOf, type RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError, remoteErrorOf, type RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type {} from '@deepseek-ai/dsh-api-terminal-controller/remote'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type {
@@ -17,7 +17,7 @@ export type TerminalRemote = ClientRemote['terminal']
 /** Product error identifiers translated by the terminal UI. */
 export type TerminalViewIssue = 'missingTerminal' | 'inputFull' | 'attachmentEnded' | 'invalidOutput' | 'terminalLimit'
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** Client terminal failure preserved through the Remote stream supervisor. */
     'terminal/view': { readonly issue: TerminalViewIssue }

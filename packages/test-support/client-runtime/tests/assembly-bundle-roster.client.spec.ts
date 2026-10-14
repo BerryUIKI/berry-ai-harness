@@ -31,7 +31,7 @@ describe('webApp (the real web profile)', () => {
     expect(immediate.has(MODULES_PACKAGE)).toBe(true)
     expect(immediate.has('@deepseek-ai/dsh-client-connection')).toBe(true)
     expect(webApp.rows.find(row => row.name === '@deepseek-ai/dsh-api-gateway')?.inject)
-      .toEqual(['@deepseek-ai/dsh-typert-registry', '@deepseek-ai/dsh-client-connection'])
+      .toEqual(['@berry-ai/harness-typert-registry', '@deepseek-ai/dsh-client-connection'])
     const names = webApp.rows.map(row => row.name)
     expect(names).toContain('@deepseek-ai/dsh-client-ui-settings-general')
     expect(names).not.toContain('@deepseek-ai/dsh-llm') // Host only

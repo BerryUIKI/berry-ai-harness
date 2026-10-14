@@ -9,7 +9,7 @@ import SessionStore, { SESSION_FORMAT_VERSION, SessionLogOffset, SessionId } fro
 import type { SessionEvent, SessionHeader } from '@deepseek-ai/dsh-session'
 import { SessionAlreadyOwnedError } from '@deepseek-ai/dsh-session-persistence'
 import type { SessionObservation } from '@berry-ai/harness-session-query'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
+import TypertRegistry from '@berry-ai/harness-typert-registry'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   ApiSessionAgentController,

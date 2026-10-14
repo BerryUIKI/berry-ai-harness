@@ -94,7 +94,7 @@ Host 方法也没有"这次调用是谁发起的"这个概念：`InvokeRemoteReq
 ### 类型签名
 
 ```text
-// @deepseek-ai/dsh-typert-protocol
+// @berry-ai/harness-typert-protocol
 /**
  * One Remote stream. Host face: the method returns it, and at runtime it is AsyncIterable<Out>.
  * On the Client face the generated method returns RemoteStreamHandle<Out, In>; each name has exactly one meaning.
@@ -344,13 +344,13 @@ export interface InvocationDescriptor {
 ### typert generator（`packages/typert/generator/src`）
 
 - `model.ts`：`InvocationModel.uplink?: { boundary: RemoteBoundaryModel }`。
-- `analyzer.ts` `remoteResultType`：对 `mode: 'stream'`，接受的返回类型包装器为 `Iterable<Out>`、`AsyncIterable<Out>`、`RemoteStream<Out, In?>`。识别 `RemoteStream` 的方式与识别标准库 `AsyncIterable` 相同：符号名加声明所在文件（`@deepseek-ai/dsh-typert-protocol` 的 `types.ts`）。第一个类型参数是下行项，第二个存在且不是 `never` 时生成 `uplink` boundary，键名 `${endpoint}:uplink`。
+- `analyzer.ts` `remoteResultType`：对 `mode: 'stream'`，接受的返回类型包装器为 `Iterable<Out>`、`AsyncIterable<Out>`、`RemoteStream<Out, In?>`。识别 `RemoteStream` 的方式与识别标准库 `AsyncIterable` 相同：符号名加声明所在文件（`@berry-ai/harness-typert-protocol` 的 `types.ts`）。第一个类型参数是下行项，第二个存在且不是 `never` 时生成 `uplink` boundary，键名 `${endpoint}:uplink`。
 - `emitter.ts`：描述符字面量输出 `uplink: { codec }`；生成的 Client 签名返回 `RemoteStreamHandle<Out, In>`。
 - 参数循环不再识别任何名为 `uplink` 的参数。
 
 ### 两个名字，一个入口
 
-Host 方法用 `RemoteStream<Out, In>` 声明一条流；Client 持有的是 `RemoteStreamHandle<Out, In>`。两者都从 `@deepseek-ai/dsh-typert-protocol` 主入口导出，句柄接口没有任何 Host 依赖。生成的 Client 契约把返回类型写成 `RemoteStreamHandle<Out, In>`。一个名字只有一个含义：Client 代码从主入口拿到的 `RemoteStream` 永远是声明类型，不会与句柄混淆。
+Host 方法用 `RemoteStream<Out, In>` 声明一条流；Client 持有的是 `RemoteStreamHandle<Out, In>`。两者都从 `@berry-ai/harness-typert-protocol` 主入口导出，句柄接口没有任何 Host 依赖。生成的 Client 契约把返回类型写成 `RemoteStreamHandle<Out, In>`。一个名字只有一个含义：Client 代码从主入口拿到的 `RemoteStream` 永远是声明类型，不会与句柄混淆。
 
 ### 网关 Host（`packages/api/gateway/src`）
 

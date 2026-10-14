@@ -17,7 +17,7 @@ import type {
 } from '@deepseek-ai/dsh-session'
 import { SessionQueryError, type SessionObservation } from '@berry-ai/harness-session-query'
 import type {} from '@deepseek-ai/dsh-subagent'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type {
   SessionAddress,

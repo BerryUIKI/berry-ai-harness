@@ -1,6 +1,6 @@
 /** Authenticated Remote operations for account UI consumers. */
 import { Context } from '@deepseek-ai/cordis'
-import { Remote, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import { isRunningAccountTask } from '@berry-ai/harness-deepseek-account'
 import type {} from '@deepseek-ai/dsh-agent'
 import type { AccountBonusBatch, AccountBonusOrderId, AccountClientMetadata, AccountDetails, AccountUserId } from '@berry-ai/harness-deepseek-account/types'

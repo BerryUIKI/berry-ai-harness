@@ -9,7 +9,7 @@ import type { SessionProjectionMap } from '@deepseek-ai/dsh-session-projection/t
 import {
   createSnapshotStore, notifySubscribers, type ObservableSnapshot, type SnapshotStore,
 } from '@deepseek-ai/dsh-client-store'
-import type { RemoteFailure, RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+import type { RemoteFailure, RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { SessionEventSource } from '../contract/events.ts'
 import type { SessionFace } from '../contract/session.ts'
 import type {

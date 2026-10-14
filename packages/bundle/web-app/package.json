@@ -199,7 +199,7 @@
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@berry-ai/harness-shell-env": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-typert-registry": "workspace:*",
+    "@berry-ai/harness-typert-registry": "workspace:*",
     "@deepseek-ai/libreoffice-kit": "^0.1.5",
     "@berry-ai/harness-otel": "workspace:*"
   }

@@ -38,7 +38,7 @@ export interface JobKillValue {
   readonly outcome: 'requested' | 'already-finished'
 }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** The session's job list no longer carries a killable row under that id. */
     'job/not-found': { readonly sessionId: SessionId; readonly jobId: JobId }

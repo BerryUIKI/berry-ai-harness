@@ -9,7 +9,7 @@ import type { Agent, AgentFactory } from '@deepseek-ai/dsh-agent'
 import { agentPresetProjectionDefinition } from '@berry-ai/harness-agent-preset-registry'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import type { Session } from '@deepseek-ai/dsh-session'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { afterEach, describe, expect, it } from 'vitest'
 import { createSessionTestRemote } from './test-remote.ts'
 

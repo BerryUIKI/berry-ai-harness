@@ -5,7 +5,7 @@
  */
 
 import { Service } from '@deepseek-ai/cordis'
-import { RemoteError, isRemoteUplinkItem, remoteErrorOf } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError, isRemoteUplinkItem, remoteErrorOf } from '@berry-ai/harness-typert-protocol'
 export type { TypertGatewayFaultDetails } from '../remote-error-codes.ts'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
@@ -22,7 +22,7 @@ import type {
   TypertDisposer,
   TypertRemoteContribution,
   TypertRemoteEvent,
-} from '@deepseek-ai/dsh-typert-protocol'
+} from '@berry-ai/harness-typert-protocol'
 import {
   ClientUplinkQueue,
   RemoteStreamCarrierError,

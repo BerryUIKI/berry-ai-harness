@@ -6,7 +6,7 @@ English | [中文](2026-08-28-ctx-remote-failure-vocabulary.zh.md)
 
 ## Problem
 
-Every Remote owner package maintained its own failure surface: an `XxxErrorDetailsMap` interface, an `XxxError` union derived from it, and an exit mapping function that translated domain error classes (`UnknownPresetError`, `PresetMountError`, `SessionTitleInvalidError`, and their peers) into a wire failure value. `@deepseek-ai/dsh-typert-protocol` carried two failure classes at once — `TypertRemoteFailure` for a failure an owner reported and `TypertLookupFailure` for one a lookup resolver produced — while `@deepseek-ai/dsh-client-connection` kept a second typed view, `RpcErrorDetailsMap`, that hardcoded domain codes such as `agent-preset-not-found` and `session-not-found` into the carrier.
+Every Remote owner package maintained its own failure surface: an `XxxErrorDetailsMap` interface, an `XxxError` union derived from it, and an exit mapping function that translated domain error classes (`UnknownPresetError`, `PresetMountError`, `SessionTitleInvalidError`, and their peers) into a wire failure value. `@berry-ai/harness-typert-protocol` carried two failure classes at once — `TypertRemoteFailure` for a failure an owner reported and `TypertLookupFailure` for one a lookup resolver produced — while `@deepseek-ai/dsh-client-connection` kept a second typed view, `RpcErrorDetailsMap`, that hardcoded domain codes such as `agent-preset-not-found` and `session-not-found` into the carrier.
 
 One code therefore existed in three places: the owner's table, the carrier's typed view, and whatever union or cast a consumer wrote to narrow it (`result.error as SessionError`). Adding a domain code meant editing all three, and relaying another domain's code meant copying that code into your own table — `SessionErrorDetailsMap` had absorbed five foreign codes this way, across `agent-preset-*`, `subagent-*`, and `workspace-not-found`.
 
@@ -16,7 +16,7 @@ Fixed Host facts bypassed `ctx.remote` too: the Host home came from `(ctx.get('c
 
 ## Decision
 
-`@deepseek-ai/dsh-typert-protocol` exports one failure class, `RemoteError<Code>`: a real `Error` carrying readonly `code` and `details`, the structural marker `isDSHRemoteError`, and standard `ErrorOptions` (`cause` holds in-process only). The correspondence between codes and details lives in one merge-extensible `RemoteErrorDetailsMap`; `RemoteFailure` is the code-distributed union of instances, and `RemoteResult<T>` keeps its shape.
+`@berry-ai/harness-typert-protocol` exports one failure class, `RemoteError<Code>`: a real `Error` carrying readonly `code` and `details`, the structural marker `isDSHRemoteError`, and standard `ErrorOptions` (`cause` holds in-process only). The correspondence between codes and details lives in one merge-extensible `RemoteErrorDetailsMap`; `RemoteFailure` is the code-distributed union of instances, and `RemoteResult<T>` keeps its shape.
 
 ```text
 export class RemoteError<Code extends RemoteErrorCode = RemoteErrorCode> extends Error {

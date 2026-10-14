@@ -4456,10 +4456,10 @@ export type ToolPresentationMode = 'native' | 'ptc'
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tools -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-typert-loader -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-typert-loader -->
 <a id="deepseek-aidsh-typert-loader"></a>
 
-## `@deepseek-ai/dsh-typert-loader`
+## `@berry-ai/harness-typert-loader`
 
 - `inject`: `typert` · `loader`
 - `source`: [`packages/typert/loader/src/index.ts:48`](../packages/typert/loader/src/index.ts)
@@ -4471,7 +4471,7 @@ export interface Config {
   packages?: string[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-typert-loader -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-typert-loader -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-working-directory -->
 <a id="deepseek-aidsh-working-directory"></a>
@@ -4694,7 +4694,7 @@ Imported as libraries by other packages; a `cordis.yml` cannot load them.
 | `@deepseek-ai/dsh-session-snapshot` | — | [`packages/test-support/session-snapshot/src/index.ts`](../packages/test-support/session-snapshot/src/index.ts) |
 | `@deepseek-ai/dsh-session-telemetry` | — | [`packages/session/session-telemetry/src/index.ts`](../packages/session/session-telemetry/src/index.ts) |
 | `@deepseek-ai/dsh-session-title-llm` | — | [`packages/session/session-title-llm/src/index.ts`](../packages/session/session-title-llm/src/index.ts) |
-| `@deepseek-ai/dsh-typert-generator` | — | [`packages/typert/generator/src/index.ts`](../packages/typert/generator/src/index.ts) |
-| `@deepseek-ai/dsh-typert-protocol` | — | [`packages/typert/protocol/src/index.ts`](../packages/typert/protocol/src/index.ts) |
-| `@deepseek-ai/dsh-typert-registry` | — | [`packages/typert/registry/src/index.ts`](../packages/typert/registry/src/index.ts) |
+| `@berry-ai/harness-typert-generator` | — | [`packages/typert/generator/src/index.ts`](../packages/typert/generator/src/index.ts) |
+| `@berry-ai/harness-typert-protocol` | — | [`packages/typert/protocol/src/index.ts`](../packages/typert/protocol/src/index.ts) |
+| `@berry-ai/harness-typert-registry` | — | [`packages/typert/registry/src/index.ts`](../packages/typert/registry/src/index.ts) |
 <!-- END GENERATED config-catalog:library -->

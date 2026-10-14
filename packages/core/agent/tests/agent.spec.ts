@@ -2,7 +2,7 @@ import { describe, expect, expectTypeOf, it } from 'vitest'
 import { Context, Service, symbols } from '@deepseek-ai/cordis'
 import { Session, SessionId } from '@deepseek-ai/dsh-session'
 import AgentRegistry, { agentEvents } from '@deepseek-ai/dsh-agent'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
+import TypertRegistry from '@berry-ai/harness-typert-registry'
 
 import type {
   Agent,

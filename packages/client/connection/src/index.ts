@@ -36,7 +36,7 @@ export type {
   RpcMessage,
   ServerResponse,
 } from './rpc.ts'
-export type { PeerId, PeerScope, RemoteInvocation } from '@deepseek-ai/dsh-typert-protocol'
+export type { PeerId, PeerScope, RemoteInvocation } from '@berry-ai/harness-typert-protocol'
 export { RpcId, transportError } from './rpc.ts'
 export { OperatorPeer } from './operator-peer.ts'
 export {

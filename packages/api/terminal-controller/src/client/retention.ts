@@ -1,6 +1,6 @@
 /** One reconnecting window hold, shared by all occurrences of a terminal. */
 import type { ClientRemote, RemoteStream } from '@deepseek-ai/dsh-api-gateway/client'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type { TerminalRetentionFrame, WebTerminalId } from '../types.ts'
 import type { TerminalRemote } from './model.ts'

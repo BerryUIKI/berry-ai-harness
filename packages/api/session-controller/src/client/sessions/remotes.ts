@@ -11,7 +11,7 @@ import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type {
   SubagentInterruptReceipt, SubagentPromptReceipt, SubagentPromptRequest,
 } from '@deepseek-ai/dsh-subagent/client'
-import type { RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { SessionRemote } from '../transport.ts'
 
 /** Narrow Commands namespace consumed by a Client Session. */

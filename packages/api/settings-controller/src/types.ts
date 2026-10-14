@@ -7,7 +7,7 @@
  * @module @deepseek-ai/dsh-api-settings-controller/types
  */
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@berry-ai/harness-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /**
      * Every seam refusal that is not a stale write: an unregistered or malformed

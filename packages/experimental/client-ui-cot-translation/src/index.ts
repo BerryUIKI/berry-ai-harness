@@ -2,7 +2,7 @@
 import { addAbortListener } from 'node:events'
 import { Context, type Volatile } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { Remote, RemoteError, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, RemoteError, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import type {} from '@berry-ai/harness-settings'
 import type {} from '@deepseek-ai/dsh-api-session-controller'
 import { TranslationError } from '@deepseek-ai/dsh-experimental-translator'

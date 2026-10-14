@@ -8,7 +8,7 @@
 import { randomUUID } from 'node:crypto'
 import type { Context } from '@deepseek-ai/cordis'
 import { createScope, type Scope } from '@deepseek-ai/dsh-scope'
-import type { PeerId, PeerScope } from '@deepseek-ai/dsh-typert-protocol'
+import type { PeerId, PeerScope } from '@berry-ai/harness-typert-protocol'
 
 /**
  * The operator's scope. The instance is its own scope key, so `scopeOf(peer.ctx)`

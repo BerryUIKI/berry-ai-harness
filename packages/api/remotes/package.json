@@ -82,7 +82,7 @@
     "@berry-ai/harness-session-reference": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
