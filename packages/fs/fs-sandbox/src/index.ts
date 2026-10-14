@@ -31,9 +31,9 @@ import { LocalFileSystem } from '@deepseek-ai/dsh-fs-local'
 import type { Config as LocalConfig } from '@deepseek-ai/dsh-fs-local'
 import { FsError } from '@deepseek-ai/dsh-fs'
 import type { FsEditOutcome, FsEditRequest, FsTarget, FsVersion, FsWriteIntent, FsWriteOutcome } from '@deepseek-ai/dsh-fs'
-import { writableRoots } from '@deepseek-ai/dsh-sandbox'
-import type { SandboxExecutionPolicy, SandboxMode } from '@deepseek-ai/dsh-sandbox'
-import type {} from '@deepseek-ai/dsh-sandbox-policy'
+import { writableRoots } from '@berry-ai/harness-sandbox'
+import type { SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
+import type {} from '@berry-ai/harness-sandbox-policy'
 import { isPathUnder } from './containment.ts'
 
 /**

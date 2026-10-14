@@ -35,8 +35,8 @@
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@berry-ai/harness-workflow": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-sandbox": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
   },
   "dependencies": {
@@ -60,14 +60,14 @@
     "@berry-ai/harness-workflow": "workspace:*",
     "@berry-ai/harness-http-proxy": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-sandbox": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-ptc-runtime-node": "workspace:*",
     "@deepseek-ai/dsh-fs": "workspace:*",
     "@deepseek-ai/dsh-fs-local": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-local": "workspace:*",
+    "@berry-ai/harness-sandbox-local": "workspace:*",
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
   }

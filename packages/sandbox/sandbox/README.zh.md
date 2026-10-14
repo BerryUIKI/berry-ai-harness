@@ -3,7 +3,7 @@ description: "面向用户与维护者的进程沙箱服务约定，用于组合
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-sandbox
+# @berry-ai/harness-sandbox
 
 [English](README.md) | 中文
 
@@ -37,9 +37,9 @@ kind: "package-reference"
 
 ```yaml
 - id: sandbox
-  name: '@deepseek-ai/dsh-sandbox-local'     # the per-platform backend provider (ctx.sandbox)
+  name: '@berry-ai/harness-sandbox-local'     # the per-platform backend provider (ctx.sandbox)
 - id: sandbox-policy
-  name: '@deepseek-ai/dsh-sandbox-policy'    # the deployment default mode and workspace-write root
+  name: '@berry-ai/harness-sandbox-policy'    # the deployment default mode and workspace-write root
   config:
     mode: workspace-write                    # the deployment default every session starts from
     workspaceRoot: !!js process.cwd()        # the boundary workspace-write may write under

@@ -19,7 +19,7 @@
  */
 
 import type { Session } from '@deepseek-ai/dsh-session'
-import type { SandboxMode } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxMode } from '@berry-ai/harness-sandbox'
 
 declare module '@deepseek-ai/dsh-session/types' {
   interface SessionEventMap {

@@ -6,7 +6,7 @@
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
-import type { SandboxMode } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxMode } from '@berry-ai/harness-sandbox'
 import type { ShellExecRequest, ShellExecSpec, ShellExecution } from './types.ts'
 
 export { DSH_ENV_PREFIX } from './types.ts'

@@ -77,7 +77,7 @@ if (downloads !== undefined) process.env.DSH_BUNDLED_OFFICE_SKILLS = join(resour
 const selectorName = 'DSH_SUBPROCESS_RUNNER'
 const selection = process.env[selectorName]
 const aclRunner = process.platform === 'win32'
-  ? fileURLToPath(import.meta.resolve('@deepseek-ai/dsh-sandbox-windows-acl/runner'))
+  ? fileURLToPath(import.meta.resolve('@berry-ai/harness-sandbox-windows-acl/runner'))
   : undefined
 
 const resource = process.env.DSH_RUNTIME_DOWNLOAD
@@ -88,7 +88,7 @@ if (resource !== undefined) {
   console.log(JSON.stringify(path))
 } else if (aclRunner !== undefined && process.argv[2] === aclRunner) {
   process.argv.splice(1, 1)
-  await import('@deepseek-ai/dsh-sandbox-windows-acl/runner')
+  await import('@berry-ai/harness-sandbox-windows-acl/runner')
 } else if (process.env.DSH_PTC_RUNTIME_NODE === '1') {
   Reflect.deleteProperty(process.env, 'DSH_PTC_RUNTIME_NODE')
   await import('@berry-ai/harness-ptc-runtime-node/process')

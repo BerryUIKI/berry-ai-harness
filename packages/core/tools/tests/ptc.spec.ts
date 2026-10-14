@@ -16,7 +16,7 @@ import { Session, SessionId } from '@deepseek-ai/dsh-session'
 import ApprovalService, { type ApprovalOutcome, type ApprovalRequest } from '@deepseek-ai/dsh-user-approval'
 import type { SessionEventMap } from '@deepseek-ai/dsh-session'
 import type { JsonValue } from '@berry-ai/harness-util-values'
-import SandboxPolicy from '@deepseek-ai/dsh-sandbox-policy'
+import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
 import SessionProjections from '@deepseek-ai/dsh-session-projection'
 
 declare module '@deepseek-ai/dsh-llm' {

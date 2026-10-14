@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-sandbox-windows-acl",
+  "name": "@berry-ai/harness-sandbox-windows-acl",
   "description": "Windows ACL write-restriction sandbox backend (restricted-token spawn with capability-SID write allowlist) for the DeepSeek Harness sandbox seam",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -48,7 +48,7 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/dsh-pwsh-local": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-local": "workspace:*",
+    "@berry-ai/harness-sandbox-local": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-skill": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",

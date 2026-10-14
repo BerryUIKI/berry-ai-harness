@@ -29,7 +29,7 @@
       Verify your work by running the code or tests. Keep answers brief and factual.
 
 - id: sandbox
-  name: '@deepseek-ai/dsh-sandbox-local'
+  name: '@berry-ai/harness-sandbox-local'
   config:
     runnerCommand:
       - bash

@@ -9,7 +9,7 @@
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
-import type { SandboxExecutionPolicy, SandboxMode } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import { FsError } from './types.ts'
 import type {
   FsDirEntry,

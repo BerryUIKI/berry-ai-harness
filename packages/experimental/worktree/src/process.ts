@@ -1,7 +1,7 @@
 /** Bounded, cancellable commands under the calling Session's existing file policy. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { SandboxExecutionPolicy } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxExecutionPolicy } from '@berry-ai/harness-sandbox'
 import type { SubprocessCollectedOutputs } from '@berry-ai/harness-subprocess'
 import { deadline } from '@berry-ai/harness-timeout'
 

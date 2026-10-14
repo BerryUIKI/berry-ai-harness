@@ -18,7 +18,7 @@
         contextWindow: !!js Number(process.env.DSH_CONTEXT_WINDOW ?? 1000000)
 
 - id: sandbox-policy
-  name: '@deepseek-ai/dsh-sandbox-policy'
+  name: '@berry-ai/harness-sandbox-policy'
   config:
     mode: danger-full-access
     workspaceRoot: !!js process.cwd()

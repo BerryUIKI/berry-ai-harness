@@ -60,8 +60,8 @@
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-sandbox": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-scope": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-persistence": "workspace:*",
@@ -83,10 +83,10 @@
     "@deepseek-ai/dsh-permission-presets": {
       "optional": true
     },
-    "@deepseek-ai/dsh-sandbox": {
+    "@berry-ai/harness-sandbox": {
       "optional": true
     },
-    "@deepseek-ai/dsh-sandbox-policy": {
+    "@berry-ai/harness-sandbox-policy": {
       "optional": true
     },
     "@deepseek-ai/dsh-session-persistence": {
@@ -111,8 +111,8 @@
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-sandbox": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-scope": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-persistence": "workspace:*",

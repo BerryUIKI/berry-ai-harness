@@ -6,8 +6,8 @@
  * @module @deepseek-ai/dsh-tool-bash/background
  */
 
-import type { SandboxMode } from '@deepseek-ai/dsh-sandbox'
-import { escalationHintMarker, sandboxDenialMarker } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxMode } from '@berry-ai/harness-sandbox'
+import { escalationHintMarker, sandboxDenialMarker } from '@berry-ai/harness-sandbox'
 import type { ShellProcess, ShellSandboxInfo } from '@deepseek-ai/dsh-shell'
 import type { JobChunk, JobHooks, JobOutcome, JobOutputSource } from '@berry-ai/harness-jobs'
 

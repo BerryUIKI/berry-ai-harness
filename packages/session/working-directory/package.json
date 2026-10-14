@@ -36,7 +36,7 @@
     "@deepseek-ai/dsh-system-prompt": "workspace:*"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-user-approval": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-agent": "workspace:*",

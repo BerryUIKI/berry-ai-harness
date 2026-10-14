@@ -84,9 +84,9 @@ flowchart LR
   cfg --> plugin_dsh_base_session_telemetry_otel
   plugin_dsh_base_subprocess["subprocess<br/>@berry-ai/harness-subprocess-local"]
   cfg --> plugin_dsh_base_subprocess
-  plugin_dsh_base_sandbox["sandbox<br/>@deepseek-ai/dsh-sandbox-local"]
+  plugin_dsh_base_sandbox["sandbox<br/>@berry-ai/harness-sandbox-local"]
   cfg --> plugin_dsh_base_sandbox
-  plugin_dsh_base_sandbox_policy["sandbox-policy<br/>@deepseek-ai/dsh-sandbox-policy"]
+  plugin_dsh_base_sandbox_policy["sandbox-policy<br/>@berry-ai/harness-sandbox-policy"]
   cfg --> plugin_dsh_base_sandbox_policy
   plugin_dsh_base_bash_sandbox["bash-sandbox<br/>@deepseek-ai/dsh-bash-sandbox"]
   cfg --> plugin_dsh_base_bash_sandbox
@@ -238,8 +238,8 @@ flowchart LR
 | `otel` | `@berry-ai/harness-otel` |
 | `session-telemetry-otel` | `@deepseek-ai/dsh-session-telemetry-otel` |
 | `subprocess` | `@berry-ai/harness-subprocess-local` |
-| `sandbox` | `@deepseek-ai/dsh-sandbox-local` |
-| `sandbox-policy` | `@deepseek-ai/dsh-sandbox-policy` |
+| `sandbox` | `@berry-ai/harness-sandbox-local` |
+| `sandbox-policy` | `@berry-ai/harness-sandbox-policy` |
 | `bash-sandbox` | `@deepseek-ai/dsh-bash-sandbox` |
 | `pwsh-sandbox` | `@deepseek-ai/dsh-pwsh-sandbox` |
 | `approval` | `@deepseek-ai/dsh-user-approval` |

@@ -3,7 +3,7 @@ description: "面向 Windows 上选择、配置或排查受限令牌进程隔离
 kind: "package-library"
 ---
 
-# @deepseek-ai/dsh-sandbox-windows-acl
+# @berry-ai/harness-sandbox-windows-acl
 
 [English](README.md) | 中文
 
@@ -39,7 +39,7 @@ kind: "package-library"
 import { mkdtempSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { AclSandbox, tempWriteSid, workspaceWriteSid } from '@deepseek-ai/dsh-sandbox-windows-acl'
+import { AclSandbox, tempWriteSid, workspaceWriteSid } from '@berry-ai/harness-sandbox-windows-acl'
 
 const workspaceRoot = process.cwd()
 const tempDir = mkdtempSync(join(tmpdir(), 'dsh-'))

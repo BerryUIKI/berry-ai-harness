@@ -28,17 +28,17 @@
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-util-values": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*"
+    "@berry-ai/harness-sandbox": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*"
   },
   "devDependencies": {
     "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-util-values": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-local": "workspace:*",
+    "@berry-ai/harness-sandbox": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-sandbox-local": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*"
   },

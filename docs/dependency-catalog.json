@@ -457,6 +457,54 @@
       ]
     },
     {
+      "name": "@berry-ai/harness-sandbox",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-sandbox",
+          "direct": false,
+          "optional": false,
+          "peer": true
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-sandbox-local",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-sandbox-local",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-sandbox-policy",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-sandbox-policy",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-sandbox-windows-acl",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-sandbox-windows-acl",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
       "name": "@berry-ai/harness-settings",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -2214,54 +2262,6 @@
       "installations": [
         {
           "location": "node_modules/@deepseek-ai/dsh-repeat-tool-reminder",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-sandbox",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-sandbox",
-          "direct": false,
-          "optional": false,
-          "peer": true
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-sandbox-local",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-sandbox-local",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-sandbox-policy",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-sandbox-policy",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-sandbox-windows-acl",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-sandbox-windows-acl",
           "direct": false,
           "optional": false,
           "peer": false

@@ -7,7 +7,7 @@
  * @module dsh-shell/types
  */
 
-import type { SandboxEnforcement, SandboxExecutionPolicy, SandboxMode } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxEnforcement, SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import type { CollectedOutput, DshEnvironment, SubprocessOutputReader } from '@berry-ai/harness-subprocess'
 
 export { DSH_ENV_PREFIX } from '@berry-ai/harness-subprocess'

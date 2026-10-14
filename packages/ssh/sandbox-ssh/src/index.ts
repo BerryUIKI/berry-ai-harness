@@ -1,6 +1,6 @@
 /** Remote argv wrapper that selects and applies the sandbox on the SSH host. */
-import { SandboxProvider, SandboxUnavailableError } from '@deepseek-ai/dsh-sandbox'
-import type { ConfinedArgv, SandboxPolicy } from '@deepseek-ai/dsh-sandbox'
+import { SandboxProvider, SandboxUnavailableError } from '@berry-ai/harness-sandbox'
+import type { ConfinedArgv, SandboxPolicy } from '@berry-ai/harness-sandbox'
 import type {} from '@berry-ai/harness-ssh'
 import { z } from 'zod'
 

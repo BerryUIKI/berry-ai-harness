@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-sandbox",
+  "name": "@berry-ai/harness-sandbox",
   "description": "Abstract process-sandbox seam (ctx.sandbox) for the DeepSeek Harness: same-world confinement vocabulary and the SandboxProvider contract",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

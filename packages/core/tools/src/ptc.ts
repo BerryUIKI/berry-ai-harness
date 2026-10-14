@@ -17,8 +17,8 @@ declare module '@deepseek-ai/dsh-llm' {
 
 import type { ContentBlock, ToolCallId, ToolSchema } from '@deepseek-ai/dsh-llm'
 import type { PtcBindingFunction, PtcRunResult, PtcRunSandbox, PtcRuntime } from '@berry-ai/harness-ptc-runtime'
-import { approveEscalation, ESCALATION_TARGETS, validateEscalationArgs } from '@deepseek-ai/dsh-sandbox'
-import type { SandboxExecutionPolicy } from '@deepseek-ai/dsh-sandbox'
+import { approveEscalation, ESCALATION_TARGETS, validateEscalationArgs } from '@berry-ai/harness-sandbox'
+import type { SandboxExecutionPolicy } from '@berry-ai/harness-sandbox'
 import type { ApprovalService } from '@deepseek-ai/dsh-user-approval'
 import { deepFreeze, snapshotJsonValue, type JsonValue } from '@berry-ai/harness-util-values'
 import { defineTool, parameterSchemaSpecToJsonSchema } from './schema.ts'

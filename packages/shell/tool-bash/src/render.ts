@@ -5,8 +5,8 @@
  */
 
 import type { ShellRunResult, ShellSandboxInfo, CollectedOutput } from '@deepseek-ai/dsh-shell'
-import type { SandboxMode } from '@deepseek-ai/dsh-sandbox'
-import { escalationHintMarker, sandboxDenialMarker } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxMode } from '@berry-ai/harness-sandbox'
+import { escalationHintMarker, sandboxDenialMarker } from '@berry-ai/harness-sandbox'
 
 /** Append the truncation notice (with the full-output spill path) to a stream's text. */
 function streamText(output: CollectedOutput): string {

@@ -6,7 +6,7 @@
 
 import { Context, Service } from '@deepseek-ai/cordis'
 import type { PtcRunRequest, PtcRunResult, PtcRunSpec } from './types.ts'
-import type { SandboxMode } from '@deepseek-ai/dsh-sandbox'
+import type { SandboxMode } from '@berry-ai/harness-sandbox'
 
 export type {
   PtcBindingErrorClass,

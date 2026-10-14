@@ -1,12 +1,12 @@
 /**
  * Internal platform-profile builders for the local sandbox provider.
  *
- * @module @deepseek-ai/dsh-sandbox-local/profiles
+ * @module @berry-ai/harness-sandbox-local/profiles
  */
 
 import { grantArgs as landlockGrantArgs } from '@deepseek-ai/node-addon-system/landlock-run'
-import { writableRoots } from '@deepseek-ai/dsh-sandbox'
-import type { SandboxPolicy } from '@deepseek-ai/dsh-sandbox'
+import { writableRoots } from '@berry-ai/harness-sandbox'
+import type { SandboxPolicy } from '@berry-ai/harness-sandbox'
 
 /**
  * Build the bwrap profile arguments for one file-effect policy.
