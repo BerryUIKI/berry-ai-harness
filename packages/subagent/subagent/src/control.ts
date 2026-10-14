@@ -5,7 +5,7 @@
  * @module @deepseek-ai/dsh-subagent
  */
 
-import { AttachmentError } from '@deepseek-ai/dsh-attachment'
+import { AttachmentError } from '@berry-ai/harness-attachment'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
 import { z } from 'zod'

@@ -48,7 +48,7 @@
                 imageRequestTokens: 169
 
 - id: attachment-local
-  name: '@deepseek-ai/dsh-attachment-local'
+  name: '@berry-ai/harness-attachment-local'
 
 - id: spill-policy
   name: '@deepseek-ai/dsh-spill-policy'

@@ -11,6 +11,565 @@
 
 每个包的条目用三个标识符标注：`inject` 列出插件注入的服务键，其 `cordis.yml` 树还必须加载这些服务的提供者；`refs` 列出声明引用、但未粘贴在此处的类型；`source` 链接到声明配置的源文件。范围限定为 harness 层级（`packages/`）；配置树还可能加载的 vendored cordis 插件（控制台日志记录器等）固定为上游源代码（参见 [vendoring policy](../vendor/README.md)），未收录于此目录。
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-agent-preset -->
+<a id="berry-aiharness-agent-preset"></a>
+
+## `@berry-ai/harness-agent-preset`
+
+- `inject`: `agentPresets`
+- `refs`: [`PresetDefinition`](../packages/preset/agent-preset-registry/src/index.ts)
+- `source`: [`packages/preset/agent-preset/src/index.ts:9`](../packages/preset/agent-preset/src/index.ts)
+
+```ts config-catalog
+/** Definition submitted to the preset registry. */
+export type Config = PresetDefinition
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-agent-preset -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-agent-preset-registry -->
+<a id="berry-aiharness-agent-preset-registry"></a>
+
+## `@berry-ai/harness-agent-preset-registry`
+
+- `inject`: `loader` · `sessionProjections`
+- `refs`: `Volatile` (`@deepseek-ai/cordis`)
+- `source`: [`packages/preset/agent-preset-registry/src/preset.ts:13`](../packages/preset/agent-preset-registry/src/preset.ts)
+
+```ts config-catalog
+/** Registry selection policy. */
+export interface Config {
+  /** Deployment default when the caller omits a preset. */
+  default: string
+  /** User-selected default; edited through Settings. */
+  selectedDefault: Volatile<string | undefined>
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-agent-preset-registry -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-attachment-local -->
+<a id="berry-aiharness-attachment-local"></a>
+
+## `@berry-ai/harness-attachment-local`
+
+- `source`: [`packages/attachment/attachment-local/src/index.ts:61`](../packages/attachment/attachment-local/src/index.ts)
+
+```ts config-catalog
+/** Local attachment backend configuration. */
+export interface Config {
+  /** Explicit harness home; omitted follows `DSH_HOME`, then `~/.dsh`. */
+  dshHome?: string
+  /** Maximum encoded bytes accepted for one submitted image. Default: 20 MiB. */
+  maxImageBytes?: number
+  /** Maximum image count accepted in one submitted message. Default: 20. */
+  maxImagesPerMessage?: number
+  /** Maximum aggregate encoded image bytes accepted in one submitted message. Default: 200 MiB. */
+  maxMessageImageBytes?: number
+  /** Maximum intrinsic width multiplied by height accepted for one submitted image. Default: 64,000,000. */
+  maxImagePixels?: number
+  /** Maximum intrinsic width and maximum intrinsic height accepted for one submitted image. Default: 8192px. */
+  maxImageDimension?: number
+  /** Total-pixel budget of the stored provider-independent normalized image. */
+  normalizedImageMaxPixels?: number
+  /** Long-edge pixel cap of the stored provider-independent normalized image, applied after the total-pixel budget. */
+  normalizedImageMaxDimension?: number
+  /**
+   * Encoded-byte target of the stored provider-independent normalized image;
+   * the smallest quality-ladder output is kept when no quality fits.
+   */
+  normalizedImageMaxBytes?: number
+  /** Maximum simultaneous normalization or request-image transformations in this service instance. */
+  imageCompressionConcurrency?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-attachment-local -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-hmr -->
+<a id="berry-aiharness-hmr"></a>
+
+## `@berry-ai/harness-hmr`
+
+- `refs`: `ChokidarOptions` (`chokidar`)
+- `source`: [`packages/boot/hmr/src/index.ts:53`](../packages/boot/hmr/src/index.ts)
+
+```ts config-catalog
+/** Module roots and watcher timing, with Chokidar deployment options. */
+export interface HmrConfig extends ChokidarOptions {
+  /** Directory resolved against the owning context's base URL. */
+  base?: string
+  /** Module watch roots; an empty list leaves only explicit configuration watches. */
+  root: string[]
+  /** Milliseconds for combining module changes. */
+  debounce: number
+  /** Glob patterns excluded from module watching. */
+  ignored: string[]
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-hmr -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-mcp-client -->
+<a id="berry-aiharness-mcp-client"></a>
+
+## `@berry-ai/harness-mcp-client`
+
+- `inject`: `tools`
+- `source`: [`packages/mcp/mcp-client/src/index.ts:104`](../packages/mcp/mcp-client/src/index.ts)
+
+```ts config-catalog
+/** Configuration for one stdio or Streamable HTTP MCP server. */
+export type Config = StdioConfig | StreamableHttpConfig
+
+/** Config for connecting to an MCP server via a spawned child process over stdio. */
+export interface StdioConfig {
+  /** Selects child-process stdio transport. */
+  transport: 'stdio'
+  /**
+   * Stable local namespace for this server's model-facing tool names
+   * (`mcp__<serverName>__<rawName>`). Must match `[A-Za-z0-9_-]{1,32}` and be
+   * unique across live mcp-client instances.
+   */
+  serverName: string
+  /** Executable used to start the server. */
+  command: string
+  /** Arguments passed directly, without shell interpolation. */
+  args: string[]
+  /** Extra env vars merged on top of scrubbed ambient env. */
+  env: Record<string, string>
+  /** Working directory for the child process. */
+  cwd: string
+  /** Timeout per tool call or resource request in milliseconds. */
+  toolCallTimeoutMs: number
+  /** Fail plugin activation when the initial connection or tool synchronization fails. */
+  failOnStartupError: boolean
+  /** Maximum UTF-8 bytes of attributed server instructions (default 32768). */
+  maxInstructionBytes?: number
+  /** Automatic reconnect policy after a lost connection; omission uses the defaults. */
+  reconnect?: ReconnectConfig
+}
+
+/** Config for connecting to an MCP server over Streamable HTTP (SSE). */
+export interface StreamableHttpConfig {
+  /** Selects Streamable HTTP transport. */
+  transport: 'streamable-http'
+  /**
+   * Stable local namespace for this server's model-facing tool names
+   * (`mcp__<serverName>__<rawName>`). Must match `[A-Za-z0-9_-]{1,32}` and be
+   * unique across live mcp-client instances.
+   */
+  serverName: string
+  /** MCP endpoint URL. */
+  url: string
+  /** Additional headers attached to MCP requests. */
+  headers: Record<string, string>
+  /** Timeout per tool call or resource request in milliseconds. */
+  toolCallTimeoutMs: number
+  /** Fail plugin activation when the initial connection or tool synchronization fails. */
+  failOnStartupError: boolean
+  /** Maximum UTF-8 bytes of attributed server instructions (default 32768). */
+  maxInstructionBytes?: number
+  /** Automatic reconnect policy after a lost connection; omission uses the defaults. */
+  reconnect?: ReconnectConfig
+}
+
+/** Automatic reconnect policy for one MCP server connection. */
+export interface ReconnectConfig {
+  /** Reconnect automatically after a lost connection (default true). */
+  enabled?: boolean
+  /** First reconnect delay in milliseconds; doubles per consecutive failed attempt (default 500). */
+  initialDelayMs?: number
+  /** Backoff ceiling in milliseconds; also the uptime after which the attempt budget resets (default 30000). */
+  maxDelayMs?: number
+  /** Consecutive failed attempts per outage before giving up for good (default 10). */
+  maxAttempts?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-mcp-client -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-message-feedback -->
+<a id="berry-aiharness-message-feedback"></a>
+
+## `@berry-ai/harness-message-feedback`
+
+- `inject`: `sessionPersistence` · `sessions`
+- `source`: [`packages/feedback/message-feedback/src/index.ts:40`](../packages/feedback/message-feedback/src/index.ts)
+
+```ts config-catalog
+/** Required deployment policy for optional notes. */
+export interface Config {
+  /** Maximum UTF-8 byte length accepted for one note. */
+  readonly maxNoteBytes: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-message-feedback -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-office-to-pdf -->
+<a id="berry-aiharness-office-to-pdf"></a>
+
+## `@berry-ai/harness-office-to-pdf`
+
+- `source`: [`packages/document/office-to-pdf/src/index.ts:31`](../packages/document/office-to-pdf/src/index.ts)
+
+```ts config-catalog
+/** Provider concurrency and kit rendering/font configuration. */
+export interface Config {
+  /** Maximum simultaneous conversions; queued callers remain cancellable. */
+  maxConcurrentConversions: number
+  /** Maximum metadata-only jobs awaiting source admission. */
+  maxQueuedJobs: number
+  /** Maximum outstanding conversion readers. */
+  maxReaders: number
+  /** Maximum reserved bytes across admitted source reads and conversions. */
+  maxSourceBytes: number
+  /** Maximum concurrent background jobs; zero refuses speculative work. */
+  maxBackgroundConversions: number
+  /** Maximum retained content-addressed PDFs. */
+  maxCachedEntries: number
+  /** Maximum retained PDF bytes. */
+  maxCachedBytes: number
+  /** Maximum retained source-version aliases to cached content. */
+  maxSourceEntries: number
+  /** Conversion deadline in milliseconds; excludes the DSH queue. */
+  timeoutMs: number
+  /** Maximum authorized source bytes. */
+  maxInputBytes: number
+  /** Maximum complete PDF bytes. */
+  maxOutputBytes: number
+  /** Exported raster-image DPI. */
+  maxImageResolution: number
+  /** Maximum OOXML ZIP entries. */
+  maxArchiveEntries: number
+  /** Maximum total declared uncompressed OOXML bytes. */
+  maxUncompressedBytes: number
+  /** Absolute font roots; omission uses the kit's platform defaults. */
+  fontDirectories?: string[]
+  /** Ordered font-family preference groups; omission retains the kit defaults. */
+  fontFallbacks?: string[][]
+  /** Maximum physical font files indexed by each converter. */
+  maxFontFiles: number
+  /** Maximum individual font-file bytes. */
+  maxFontFileBytes: number
+  /** Maximum original font bytes loaded for a conversion. */
+  maxLoadedFontBytes: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-office-to-pdf -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-persona -->
+<a id="berry-aiharness-persona"></a>
+
+## `@berry-ai/harness-persona`
+
+- `inject`: `systemPrompt`
+- `source`: [`packages/preset/persona/src/index.ts:30`](../packages/preset/persona/src/index.ts)
+
+```ts config-catalog
+/** Plugin config: the persona text this composition contributes. */
+export interface Config {
+  /**
+   * Persona prose rendered as the `deployment:persona-prefix` section. A template:
+   * complete `{{…}}` groups interpolate strictly against registered prompt
+   * variables. Empty text drops the section at render, matching the registry.
+   */
+  prefix: string
+  /**
+   * Persona suffix template rendered after first-party guidance. Omitted or empty
+   * text shadows the deployment suffix away; interpolation is strict.
+   */
+  suffix?: string
+  /** Make the prefix the complete system prompt, suppressing the suffix and every other section. */
+  complete?: boolean
+  /** Suppress dynamic runtime-context snapshots for this persona's agent scope. */
+  includeRuntimeContext?: boolean
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-persona -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-plan-mode -->
+<a id="berry-aiharness-plan-mode"></a>
+
+## `@berry-ai/harness-plan-mode`
+
+- `inject`: `tools` · `systemPrompt` · `sessionProjections`
+- `source`: [`packages/plan/plan-mode/src/index.ts:69`](../packages/plan/plan-mode/src/index.ts)
+
+```ts config-catalog
+/** Deployment-owned plan guidance. */
+export interface PlanModeConfig {
+  /** Guidance rendered as the `plan:policy` prompt section while plan mode is active. */
+  section: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-plan-mode -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-plugin-manager -->
+<a id="berry-aiharness-plugin-manager"></a>
+
+## `@berry-ai/harness-plugin-manager`
+
+- `inject`: `loader` · `profileContext`
+- `source`: [`packages/boot/plugin-manager/src/index.ts:42`](../packages/boot/plugin-manager/src/index.ts)
+
+```ts config-catalog
+/** The pnpm executable, registries, and limits for diagnostics, lookups and connection checks. */
+export interface Config {
+  /** The pnpm executable name or path; resolved through `PATH` like the `dsh plugin` command. */
+  pnpmCommand?: string
+  /** Maximum retained package-operation diagnostic bytes. */
+  outputBytes?: number
+  /** Maximum time to wait for another process's profile package operation. */
+  lockWaitMs?: number
+  /** Bound on one registry lookup an inspection runs, in milliseconds. */
+  inspectTimeoutMs?: number
+  /** Maximum duration of the GitHub repository connection check before installation, in milliseconds. */
+  githubConnectionTimeoutMs?: number
+  /** Maximum time one captured package run may print nothing before the manager terminates it, in milliseconds. */
+  idleTimeoutMs?: number
+  /** The registry lookups and installations ask first, as an http(s) URL; absent, the one pnpm's own configuration names. */
+  registry?: string
+  /**
+   * Registries asked in turn, as http(s) URLs, while the one before is unreachable or holds no copy of the package.
+   * A registry outside this set and `registry` is asked alone, and so is the one pnpm's own configuration names
+   * unless that is npm's own registry or one of these.
+   */
+  fallbackRegistries?: string[]
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-plugin-manager -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-ptc-runtime-node -->
+<a id="berry-aiharness-ptc-runtime-node"></a>
+
+## `@berry-ai/harness-ptc-runtime-node`
+
+- `inject`: `fs` · `subprocess` · `sandbox` · `sandboxPolicy`
+- `source`: [`packages/ptc-runtime/ptc-runtime-node/src/index.ts:27`](../packages/ptc-runtime/ptc-runtime-node/src/index.ts)
+
+```ts config-catalog
+/** Deployment-varying runtime bounds and launch choices. */
+export interface Config {
+  /** Worker invocation in the subprocess world; omitted selects the local carrier. */
+  launch?: LaunchConfig
+  /** Default elapsed deadline, including nested tool and approval waits. */
+  timeoutMs?: number
+  /** Maximum numeric elapsed budget accepted by resolve. */
+  maxTimeoutMs?: number
+  /** Combined serialized logs, completion and diagnostic byte cap. */
+  maxOutputBytes?: number
+  /** V8 old-generation heap limit in MiB; native allocations are excluded. */
+  maxOldGenerationSizeMb?: number
+  /** Maximum control frame, outstanding argument and queued control-output bytes. */
+  maxMessageBytes?: number
+  /** Maximum simultaneous host binding calls accepted from a program. */
+  maxPendingCalls?: number
+  /** Managed process termination and output-drain grace in milliseconds. */
+  graceMs?: number
+}
+
+/** Deployment-owned worker invocation in the subprocess execution world. */
+export type LaunchConfig = {
+  /** Start a separately installed Node executable and JavaScript bootstrap. */
+  kind: 'node-script'
+  /** Executable name or path resolved by the subprocess provider. */
+  executable: string
+  /** Absolute preinstalled bootstrap; omitted maps this package's bootstrap into the execution world. */
+  bootstrapPath?: string
+} | {
+  /** Start the private PTC worker embedded in a packaged executable. */
+  kind: 'embedded'
+  /** Packaged executable name or path resolved by the subprocess provider. */
+  executable: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-ptc-runtime-node -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-repeat-tool-reminder -->
+<a id="berry-aiharness-repeat-tool-reminder"></a>
+
+## `@berry-ai/harness-repeat-tool-reminder`
+
+- `source`: [`packages/guard/repeat-tool-reminder/src/index.ts:35`](../packages/guard/repeat-tool-reminder/src/index.ts)
+
+```ts config-catalog
+/**
+ * Plugin config, validated by the same-named schemastery schema plus the
+ * load-time checks in `apply` (misconfiguration fails loud: an empty
+ * `thresholds` list, a non-integer, a value below 2, or a duplicate throws at
+ * plugin load, never a silent fall-back). `include`/`exclude` entries are
+ * `*`-wildcard predicates over tool names at call time, not references to
+ * registry entries — a pattern matching no currently registered tool is valid
+ * (`exclude: [mcp_*]` must stay legal in a deployment that loads no MCP tools).
+ */
+export interface Config {
+  /** Consecutive-repeat counts that trigger a reminder (default `[3, 5, 8]`). */
+  thresholds?: number[]
+  /** Tool-name patterns to track; empty means every tool is tracked. */
+  include?: string[]
+  /** Tool-name patterns transparent to the chain (neither count nor reset). */
+  exclude?: string[]
+  /**
+   * Maximum characters of canonical arguments quoted in the DETAILED reminder
+   * (default 500). Large payloads (a `write` body, a long command) would
+   * otherwise ride into the next request unbounded — precisely in a loop
+   * scenario; the cap bounds the reminder, never the detection (the chain key
+   * always compares the FULL canonical string).
+   */
+  argumentsPreviewChars?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-repeat-tool-reminder -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-schedule -->
+<a id="berry-aiharness-schedule"></a>
+
+## `@berry-ai/harness-schedule`
+
+- `inject`: `agents` · `sessions` · `storageDomain` · `sessionController` · `sessionPersistence`
+- `source`: [`packages/schedule/schedule/src/index.ts:72`](../packages/schedule/schedule/src/index.ts)
+
+```ts config-catalog
+/** Configuration for the Host Schedule domain. */
+export interface Config {
+  /**
+   * Delivery-history window retained per task, in days; omission defaults to 30.
+   * Pruning happens when an acknowledgment is appended, and `lastDelivery` is always retained.
+   */
+  deliveryHistoryDays?: number
+  /**
+   * Retained delivery records per task; omission defaults to 200. The older of this
+   * cap and the window wins, and the newest records survive.
+   */
+  deliveryHistoryRecords?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-schedule -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-terminal-bash -->
+<a id="berry-aiharness-terminal-bash"></a>
+
+## `@berry-ai/harness-terminal-bash`
+
+- `inject`: `terminals` · `sandboxPolicy` · `sessionProjections` · `subprocess` · `workingDirectory`
+- `source`: [`packages/terminal/terminal-bash/src/config.ts:10`](../packages/terminal/terminal-bash/src/config.ts)
+
+```ts config-catalog
+/** Public plugin configuration. */
+export interface Config {
+  /** Backend registry type (default: `shell`). */
+  backendType?: string
+  /** Interactive shell dialect (default: `bash`); selects the argv/env/startup defaults. */
+  shellDialect?: ShellDialect
+  /** Interactive shell executable (default per dialect: `/bin/bash`, or the resolved pwsh). */
+  shellPath?: string
+  /** Shell arguments (default per dialect: bash `--noprofile --norc -i`, pwsh `-NoLogo -NoProfile`). */
+  shellArgs?: string[]
+  /** Terminal rows. */
+  rows?: number
+  /** Terminal columns. */
+  cols?: number
+  /** Maximum retained logical lines. */
+  scrollbackLines?: number
+  /** Maximum retained UTF-8 bytes. */
+  scrollbackMaxBytes?: number
+  /** Maximum bytes returned by one read or settled viewport. */
+  maxReadBytes?: number
+  /** Readiness polling interval. */
+  pollIntervalMs?: number
+  /** Delay before Linux exact syscall probes. */
+  exactProbeAfterMs?: number
+  /** Silence duration that yields `inferred_idle`. */
+  idleSilenceMs?: number
+  /**
+   * Extra wait beyond `idleSilenceMs`, once a prompt marker was seen, for the shell to
+   * regain the foreground before `inferred_idle` settles; at least one `pollIntervalMs`.
+   */
+  handoffGraceMs?: number
+  /**
+   * Extra wait beyond `idleSilenceMs` and `handoffGraceMs`, once a prompt marker was seen but
+   * its printable tail has not arrived, before `inferred_idle` settles. The marker is written
+   * by the shell's own prompt function and the tail by the same render, so a missing tail is a
+   * delivery delay on a contended host rather than an absent prompt. Zero keeps the bound at
+   * `idleSilenceMs + handoffGraceMs`; any other value covers at least one `pollIntervalMs`, so a
+   * nonzero tolerance always contains a readiness poll.
+   */
+  promptTailGraceMs?: number
+  /** Absolute bound for one send and the complete pwsh startup sequence. */
+  timeoutMs?: number
+  /** Grace before teardown escalates to `SIGKILL`. */
+  disposeGraceMs?: number
+}
+
+/** One supported interactive shell dialect. */
+export type ShellDialect = 'bash' | 'pwsh'
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-terminal-bash -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-present -->
+<a id="berry-aiharness-tool-present"></a>
+
+## `@berry-ai/harness-tool-present`
+
+- `inject`: `tools` · `fs` · `sessionProjections` · `workingDirectory`
+- `source`: [`packages/deliverables/tool-present/src/index.ts:16`](../packages/deliverables/tool-present/src/index.ts)
+
+```ts config-catalog
+/** Per-call delivery limit. */
+export interface Config {
+  /** Maximum number of files in one call. */
+  maxFiles: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-present -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-todo -->
+<a id="berry-aiharness-tool-todo"></a>
+
+## `@berry-ai/harness-tool-todo`
+
+- `inject`: `tools` · `sessionProjections`
+- `source`: [`packages/todo/tool-todo/src/index.ts:29`](../packages/todo/tool-todo/src/index.ts)
+
+```ts config-catalog
+/** Model-facing todo tool configuration. */
+export interface Config {
+  /**
+   * Required deployment choice for whether several todos may be `in_progress` at once. True suits
+   * agents that run work concurrently — subagents, background commands, workflow fan-out — and the
+   * description then instructs the model to mark every actively worked task. False restores the
+   * single-active discipline: the description asks for exactly one, and a call marking more is
+   * rejected.
+   */
+  allowParallelInProgress: boolean
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-todo -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-workspace-changes -->
+<a id="berry-aiharness-workspace-changes"></a>
+
+## `@berry-ai/harness-workspace-changes`
+
+- `inject`: `subprocess` · `fs`
+- `source`: [`packages/deliverables/workspace-changes/src/index.ts:34`](../packages/deliverables/workspace-changes/src/index.ts)
+
+```ts config-catalog
+/** Snapshot, capture, and comparison bounds. Invalid values fail plugin load. */
+export interface Config {
+  /** Milliseconds one git command may run before the turn's record is abandoned. */
+  timeoutMs: number
+  /** Bytes of git output retained per command; a larger diff listing abandons the record. */
+  outputMaxBytes: number
+  /** Maximum files carried by one summary; `total` still reports the complete count. */
+  maxFiles: number
+  /**
+   * Bytes a file may hold to be captured around a file-tool edit or read from a snapshot for its comparison.
+   * A larger file gets no comparison; one captured around a file-tool edit is also listed without counts.
+   */
+  maxFileBytes: number
+  /** Milliseconds a line comparison may run before it degrades to whole-file replacement. */
+  diffTimeoutMs: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-workspace-changes -->
+
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-acp -->
 <a id="deepseek-aidsh-acp"></a>
 
@@ -118,41 +677,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-loop -->
-
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-agent-preset -->
-<a id="deepseek-aidsh-agent-preset"></a>
-
-## `@berry-ai/harness-agent-preset`
-
-- `inject`: `agentPresets`
-- `refs`: [`PresetDefinition`](../packages/preset/agent-preset-registry/src/index.ts)
-- `source`: [`packages/preset/agent-preset/src/index.ts:9`](../packages/preset/agent-preset/src/index.ts)
-
-```ts config-catalog
-/** Definition submitted to the preset registry. */
-export type Config = PresetDefinition
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-agent-preset -->
-
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-agent-preset-registry -->
-<a id="deepseek-aidsh-agent-preset-registry"></a>
-
-## `@berry-ai/harness-agent-preset-registry`
-
-- `inject`: `loader` · `sessionProjections`
-- `refs`: `Volatile` (`@deepseek-ai/cordis`)
-- `source`: [`packages/preset/agent-preset-registry/src/preset.ts:13`](../packages/preset/agent-preset-registry/src/preset.ts)
-
-```ts config-catalog
-/** Registry selection policy. */
-export interface Config {
-  /** Deployment default when the caller omits a preset. */
-  default: string
-  /** User-selected default; edited through Settings. */
-  selectedDefault: Volatile<string | undefined>
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-agent-preset-registry -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-tool-presentation -->
 <a id="deepseek-aidsh-agent-tool-presentation"></a>
@@ -344,43 +868,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-api-workspace-files -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-attachment-local -->
-<a id="deepseek-aidsh-attachment-local"></a>
-
-## `@deepseek-ai/dsh-attachment-local`
-
-- `source`: [`packages/attachment/attachment-local/src/index.ts:61`](../packages/attachment/attachment-local/src/index.ts)
-
-```ts config-catalog
-/** Local attachment backend configuration. */
-export interface Config {
-  /** Explicit harness home; omitted follows `DSH_HOME`, then `~/.dsh`. */
-  dshHome?: string
-  /** Maximum encoded bytes accepted for one submitted image. Default: 20 MiB. */
-  maxImageBytes?: number
-  /** Maximum image count accepted in one submitted message. Default: 20. */
-  maxImagesPerMessage?: number
-  /** Maximum aggregate encoded image bytes accepted in one submitted message. Default: 200 MiB. */
-  maxMessageImageBytes?: number
-  /** Maximum intrinsic width multiplied by height accepted for one submitted image. Default: 64,000,000. */
-  maxImagePixels?: number
-  /** Maximum intrinsic width and maximum intrinsic height accepted for one submitted image. Default: 8192px. */
-  maxImageDimension?: number
-  /** Total-pixel budget of the stored provider-independent normalized image. */
-  normalizedImageMaxPixels?: number
-  /** Long-edge pixel cap of the stored provider-independent normalized image, applied after the total-pixel budget. */
-  normalizedImageMaxDimension?: number
-  /**
-   * Encoded-byte target of the stored provider-independent normalized image;
-   * the smallest quality-ladder output is kept when no quality fits.
-   */
-  normalizedImageMaxBytes?: number
-  /** Maximum simultaneous normalization or request-image transformations in this service instance. */
-  imageCompressionConcurrency?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-attachment-local -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-bash-local -->
 <a id="deepseek-aidsh-bash-local"></a>
@@ -1431,29 +1918,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-headless -->
 
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-hmr -->
-<a id="deepseek-aidsh-hmr"></a>
-
-## `@berry-ai/harness-hmr`
-
-- `refs`: `ChokidarOptions` (`chokidar`)
-- `source`: [`packages/boot/hmr/src/index.ts:53`](../packages/boot/hmr/src/index.ts)
-
-```ts config-catalog
-/** Module roots and watcher timing, with Chokidar deployment options. */
-export interface HmrConfig extends ChokidarOptions {
-  /** Directory resolved against the owning context's base URL. */
-  base?: string
-  /** Module watch roots; an empty list leaves only explicit configuration watches. */
-  root: string[]
-  /** Milliseconds for combining module changes. */
-  debounce: number
-  /** Glob patterns excluded from module watching. */
-  ignored: string[]
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-hmr -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-hooks-claude-code -->
 <a id="deepseek-aidsh-hooks-claude-code"></a>
 
@@ -2151,153 +2615,6 @@ export interface LspLocalServerConfig {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-lsp-stdio -->
 
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-mcp-client -->
-<a id="deepseek-aidsh-mcp-client"></a>
-
-## `@berry-ai/harness-mcp-client`
-
-- `inject`: `tools`
-- `source`: [`packages/mcp/mcp-client/src/index.ts:104`](../packages/mcp/mcp-client/src/index.ts)
-
-```ts config-catalog
-/** Configuration for one stdio or Streamable HTTP MCP server. */
-export type Config = StdioConfig | StreamableHttpConfig
-
-/** Config for connecting to an MCP server via a spawned child process over stdio. */
-export interface StdioConfig {
-  /** Selects child-process stdio transport. */
-  transport: 'stdio'
-  /**
-   * Stable local namespace for this server's model-facing tool names
-   * (`mcp__<serverName>__<rawName>`). Must match `[A-Za-z0-9_-]{1,32}` and be
-   * unique across live mcp-client instances.
-   */
-  serverName: string
-  /** Executable used to start the server. */
-  command: string
-  /** Arguments passed directly, without shell interpolation. */
-  args: string[]
-  /** Extra env vars merged on top of scrubbed ambient env. */
-  env: Record<string, string>
-  /** Working directory for the child process. */
-  cwd: string
-  /** Timeout per tool call or resource request in milliseconds. */
-  toolCallTimeoutMs: number
-  /** Fail plugin activation when the initial connection or tool synchronization fails. */
-  failOnStartupError: boolean
-  /** Maximum UTF-8 bytes of attributed server instructions (default 32768). */
-  maxInstructionBytes?: number
-  /** Automatic reconnect policy after a lost connection; omission uses the defaults. */
-  reconnect?: ReconnectConfig
-}
-
-/** Config for connecting to an MCP server over Streamable HTTP (SSE). */
-export interface StreamableHttpConfig {
-  /** Selects Streamable HTTP transport. */
-  transport: 'streamable-http'
-  /**
-   * Stable local namespace for this server's model-facing tool names
-   * (`mcp__<serverName>__<rawName>`). Must match `[A-Za-z0-9_-]{1,32}` and be
-   * unique across live mcp-client instances.
-   */
-  serverName: string
-  /** MCP endpoint URL. */
-  url: string
-  /** Additional headers attached to MCP requests. */
-  headers: Record<string, string>
-  /** Timeout per tool call or resource request in milliseconds. */
-  toolCallTimeoutMs: number
-  /** Fail plugin activation when the initial connection or tool synchronization fails. */
-  failOnStartupError: boolean
-  /** Maximum UTF-8 bytes of attributed server instructions (default 32768). */
-  maxInstructionBytes?: number
-  /** Automatic reconnect policy after a lost connection; omission uses the defaults. */
-  reconnect?: ReconnectConfig
-}
-
-/** Automatic reconnect policy for one MCP server connection. */
-export interface ReconnectConfig {
-  /** Reconnect automatically after a lost connection (default true). */
-  enabled?: boolean
-  /** First reconnect delay in milliseconds; doubles per consecutive failed attempt (default 500). */
-  initialDelayMs?: number
-  /** Backoff ceiling in milliseconds; also the uptime after which the attempt budget resets (default 30000). */
-  maxDelayMs?: number
-  /** Consecutive failed attempts per outage before giving up for good (default 10). */
-  maxAttempts?: number
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-mcp-client -->
-
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-message-feedback -->
-<a id="deepseek-aidsh-message-feedback"></a>
-
-## `@berry-ai/harness-message-feedback`
-
-- `inject`: `sessionPersistence` · `sessions`
-- `source`: [`packages/feedback/message-feedback/src/index.ts:40`](../packages/feedback/message-feedback/src/index.ts)
-
-```ts config-catalog
-/** Required deployment policy for optional notes. */
-export interface Config {
-  /** Maximum UTF-8 byte length accepted for one note. */
-  readonly maxNoteBytes: number
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-message-feedback -->
-
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-office-to-pdf -->
-<a id="deepseek-aidsh-office-to-pdf"></a>
-
-## `@berry-ai/harness-office-to-pdf`
-
-- `source`: [`packages/document/office-to-pdf/src/index.ts:31`](../packages/document/office-to-pdf/src/index.ts)
-
-```ts config-catalog
-/** Provider concurrency and kit rendering/font configuration. */
-export interface Config {
-  /** Maximum simultaneous conversions; queued callers remain cancellable. */
-  maxConcurrentConversions: number
-  /** Maximum metadata-only jobs awaiting source admission. */
-  maxQueuedJobs: number
-  /** Maximum outstanding conversion readers. */
-  maxReaders: number
-  /** Maximum reserved bytes across admitted source reads and conversions. */
-  maxSourceBytes: number
-  /** Maximum concurrent background jobs; zero refuses speculative work. */
-  maxBackgroundConversions: number
-  /** Maximum retained content-addressed PDFs. */
-  maxCachedEntries: number
-  /** Maximum retained PDF bytes. */
-  maxCachedBytes: number
-  /** Maximum retained source-version aliases to cached content. */
-  maxSourceEntries: number
-  /** Conversion deadline in milliseconds; excludes the DSH queue. */
-  timeoutMs: number
-  /** Maximum authorized source bytes. */
-  maxInputBytes: number
-  /** Maximum complete PDF bytes. */
-  maxOutputBytes: number
-  /** Exported raster-image DPI. */
-  maxImageResolution: number
-  /** Maximum OOXML ZIP entries. */
-  maxArchiveEntries: number
-  /** Maximum total declared uncompressed OOXML bytes. */
-  maxUncompressedBytes: number
-  /** Absolute font roots; omission uses the kit's platform defaults. */
-  fontDirectories?: string[]
-  /** Ordered font-family preference groups; omission retains the kit defaults. */
-  fontFallbacks?: string[][]
-  /** Maximum physical font files indexed by each converter. */
-  maxFontFiles: number
-  /** Maximum individual font-file bytes. */
-  maxFontFileBytes: number
-  /** Maximum original font bytes loaded for a conversion. */
-  maxLoadedFontBytes: number
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-office-to-pdf -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-permission-presets -->
 <a id="deepseek-aidsh-permission-presets"></a>
 
@@ -2338,88 +2655,6 @@ export interface PresetSpec {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-permission-presets -->
 
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-persona -->
-<a id="deepseek-aidsh-persona"></a>
-
-## `@berry-ai/harness-persona`
-
-- `inject`: `systemPrompt`
-- `source`: [`packages/preset/persona/src/index.ts:30`](../packages/preset/persona/src/index.ts)
-
-```ts config-catalog
-/** Plugin config: the persona text this composition contributes. */
-export interface Config {
-  /**
-   * Persona prose rendered as the `deployment:persona-prefix` section. A template:
-   * complete `{{…}}` groups interpolate strictly against registered prompt
-   * variables. Empty text drops the section at render, matching the registry.
-   */
-  prefix: string
-  /**
-   * Persona suffix template rendered after first-party guidance. Omitted or empty
-   * text shadows the deployment suffix away; interpolation is strict.
-   */
-  suffix?: string
-  /** Make the prefix the complete system prompt, suppressing the suffix and every other section. */
-  complete?: boolean
-  /** Suppress dynamic runtime-context snapshots for this persona's agent scope. */
-  includeRuntimeContext?: boolean
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-persona -->
-
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-plan-mode -->
-<a id="deepseek-aidsh-plan-mode"></a>
-
-## `@berry-ai/harness-plan-mode`
-
-- `inject`: `tools` · `systemPrompt` · `sessionProjections`
-- `source`: [`packages/plan/plan-mode/src/index.ts:69`](../packages/plan/plan-mode/src/index.ts)
-
-```ts config-catalog
-/** Deployment-owned plan guidance. */
-export interface PlanModeConfig {
-  /** Guidance rendered as the `plan:policy` prompt section while plan mode is active. */
-  section: string
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-plan-mode -->
-
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-plugin-manager -->
-<a id="deepseek-aidsh-plugin-manager"></a>
-
-## `@berry-ai/harness-plugin-manager`
-
-- `inject`: `loader` · `profileContext`
-- `source`: [`packages/boot/plugin-manager/src/index.ts:42`](../packages/boot/plugin-manager/src/index.ts)
-
-```ts config-catalog
-/** The pnpm executable, registries, and limits for diagnostics, lookups and connection checks. */
-export interface Config {
-  /** The pnpm executable name or path; resolved through `PATH` like the `dsh plugin` command. */
-  pnpmCommand?: string
-  /** Maximum retained package-operation diagnostic bytes. */
-  outputBytes?: number
-  /** Maximum time to wait for another process's profile package operation. */
-  lockWaitMs?: number
-  /** Bound on one registry lookup an inspection runs, in milliseconds. */
-  inspectTimeoutMs?: number
-  /** Maximum duration of the GitHub repository connection check before installation, in milliseconds. */
-  githubConnectionTimeoutMs?: number
-  /** Maximum time one captured package run may print nothing before the manager terminates it, in milliseconds. */
-  idleTimeoutMs?: number
-  /** The registry lookups and installations ask first, as an http(s) URL; absent, the one pnpm's own configuration names. */
-  registry?: string
-  /**
-   * Registries asked in turn, as http(s) URLs, while the one before is unreachable or holds no copy of the package.
-   * A registry outside this set and `registry` is asked alone, and so is the one pnpm's own configuration names
-   * unless that is npm's own registry or one of these.
-   */
-  fallbackRegistries?: string[]
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-plugin-manager -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-plugin-package-inventory-deepseek -->
 <a id="deepseek-aidsh-plugin-package-inventory-deepseek"></a>
 
@@ -2436,52 +2671,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-plugin-package-inventory-deepseek -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-ptc-runtime-node -->
-<a id="deepseek-aidsh-ptc-runtime-node"></a>
-
-## `@deepseek-ai/dsh-ptc-runtime-node`
-
-- `inject`: `fs` · `subprocess` · `sandbox` · `sandboxPolicy`
-- `source`: [`packages/ptc-runtime/ptc-runtime-node/src/index.ts:27`](../packages/ptc-runtime/ptc-runtime-node/src/index.ts)
-
-```ts config-catalog
-/** Deployment-varying runtime bounds and launch choices. */
-export interface Config {
-  /** Worker invocation in the subprocess world; omitted selects the local carrier. */
-  launch?: LaunchConfig
-  /** Default elapsed deadline, including nested tool and approval waits. */
-  timeoutMs?: number
-  /** Maximum numeric elapsed budget accepted by resolve. */
-  maxTimeoutMs?: number
-  /** Combined serialized logs, completion and diagnostic byte cap. */
-  maxOutputBytes?: number
-  /** V8 old-generation heap limit in MiB; native allocations are excluded. */
-  maxOldGenerationSizeMb?: number
-  /** Maximum control frame, outstanding argument and queued control-output bytes. */
-  maxMessageBytes?: number
-  /** Maximum simultaneous host binding calls accepted from a program. */
-  maxPendingCalls?: number
-  /** Managed process termination and output-drain grace in milliseconds. */
-  graceMs?: number
-}
-
-/** Deployment-owned worker invocation in the subprocess execution world. */
-export type LaunchConfig = {
-  /** Start a separately installed Node executable and JavaScript bootstrap. */
-  kind: 'node-script'
-  /** Executable name or path resolved by the subprocess provider. */
-  executable: string
-  /** Absolute preinstalled bootstrap; omitted maps this package's bootstrap into the execution world. */
-  bootstrapPath?: string
-} | {
-  /** Start the private PTC worker embedded in a packaged executable. */
-  kind: 'embedded'
-  /** Packaged executable name or path resolved by the subprocess provider. */
-  executable: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-ptc-runtime-node -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-pwsh-local -->
 <a id="deepseek-aidsh-pwsh-local"></a>
@@ -2539,42 +2728,6 @@ export interface Config {
 export type Config = LocalConfig
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-pwsh-sandbox -->
-
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-repeat-tool-reminder -->
-<a id="deepseek-aidsh-repeat-tool-reminder"></a>
-
-## `@berry-ai/harness-repeat-tool-reminder`
-
-- `source`: [`packages/guard/repeat-tool-reminder/src/index.ts:35`](../packages/guard/repeat-tool-reminder/src/index.ts)
-
-```ts config-catalog
-/**
- * Plugin config, validated by the same-named schemastery schema plus the
- * load-time checks in `apply` (misconfiguration fails loud: an empty
- * `thresholds` list, a non-integer, a value below 2, or a duplicate throws at
- * plugin load, never a silent fall-back). `include`/`exclude` entries are
- * `*`-wildcard predicates over tool names at call time, not references to
- * registry entries — a pattern matching no currently registered tool is valid
- * (`exclude: [mcp_*]` must stay legal in a deployment that loads no MCP tools).
- */
-export interface Config {
-  /** Consecutive-repeat counts that trigger a reminder (default `[3, 5, 8]`). */
-  thresholds?: number[]
-  /** Tool-name patterns to track; empty means every tool is tracked. */
-  include?: string[]
-  /** Tool-name patterns transparent to the chain (neither count nor reset). */
-  exclude?: string[]
-  /**
-   * Maximum characters of canonical arguments quoted in the DETAILED reminder
-   * (default 500). Large payloads (a `write` body, a long command) would
-   * otherwise ride into the next request unbounded — precisely in a loop
-   * scenario; the cap bounds the reminder, never the detection (the chain key
-   * always compares the FULL canonical string).
-   */
-  argumentsPreviewChars?: number
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-repeat-tool-reminder -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sandbox-local -->
 <a id="deepseek-aidsh-sandbox-local"></a>
@@ -2638,31 +2791,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-sandbox-policy -->
-
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-schedule -->
-<a id="deepseek-aidsh-schedule"></a>
-
-## `@berry-ai/harness-schedule`
-
-- `inject`: `agents` · `sessions` · `storageDomain` · `sessionController` · `sessionPersistence`
-- `source`: [`packages/schedule/schedule/src/index.ts:72`](../packages/schedule/schedule/src/index.ts)
-
-```ts config-catalog
-/** Configuration for the Host Schedule domain. */
-export interface Config {
-  /**
-   * Delivery-history window retained per task, in days; omission defaults to 30.
-   * Pruning happens when an acknowledgment is appended, and `lastDelivery` is always retained.
-   */
-  deliveryHistoryDays?: number
-  /**
-   * Retained delivery records per task; omission defaults to 200. The older of this
-   * cap and the window wins, and the newest records survive.
-   */
-  deliveryHistoryRecords?: number
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-schedule -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sdk-app -->
 <a id="deepseek-aidsh-sdk-app"></a>
@@ -3506,66 +3634,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-system-prompt -->
 
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-terminal-bash -->
-<a id="deepseek-aidsh-terminal-bash"></a>
-
-## `@berry-ai/harness-terminal-bash`
-
-- `inject`: `terminals` · `sandboxPolicy` · `sessionProjections` · `subprocess` · `workingDirectory`
-- `source`: [`packages/terminal/terminal-bash/src/config.ts:10`](../packages/terminal/terminal-bash/src/config.ts)
-
-```ts config-catalog
-/** Public plugin configuration. */
-export interface Config {
-  /** Backend registry type (default: `shell`). */
-  backendType?: string
-  /** Interactive shell dialect (default: `bash`); selects the argv/env/startup defaults. */
-  shellDialect?: ShellDialect
-  /** Interactive shell executable (default per dialect: `/bin/bash`, or the resolved pwsh). */
-  shellPath?: string
-  /** Shell arguments (default per dialect: bash `--noprofile --norc -i`, pwsh `-NoLogo -NoProfile`). */
-  shellArgs?: string[]
-  /** Terminal rows. */
-  rows?: number
-  /** Terminal columns. */
-  cols?: number
-  /** Maximum retained logical lines. */
-  scrollbackLines?: number
-  /** Maximum retained UTF-8 bytes. */
-  scrollbackMaxBytes?: number
-  /** Maximum bytes returned by one read or settled viewport. */
-  maxReadBytes?: number
-  /** Readiness polling interval. */
-  pollIntervalMs?: number
-  /** Delay before Linux exact syscall probes. */
-  exactProbeAfterMs?: number
-  /** Silence duration that yields `inferred_idle`. */
-  idleSilenceMs?: number
-  /**
-   * Extra wait beyond `idleSilenceMs`, once a prompt marker was seen, for the shell to
-   * regain the foreground before `inferred_idle` settles; at least one `pollIntervalMs`.
-   */
-  handoffGraceMs?: number
-  /**
-   * Extra wait beyond `idleSilenceMs` and `handoffGraceMs`, once a prompt marker was seen but
-   * its printable tail has not arrived, before `inferred_idle` settles. The marker is written
-   * by the shell's own prompt function and the tail by the same render, so a missing tail is a
-   * delivery delay on a contended host rather than an absent prompt. Zero keeps the bound at
-   * `idleSilenceMs + handoffGraceMs`; any other value covers at least one `pollIntervalMs`, so a
-   * nonzero tolerance always contains a readiness poll.
-   */
-  promptTailGraceMs?: number
-  /** Absolute bound for one send and the complete pwsh startup sequence. */
-  timeoutMs?: number
-  /** Grace before teardown escalates to `SIGKILL`. */
-  disposeGraceMs?: number
-}
-
-/** One supported interactive shell dialect. */
-export type ShellDialect = 'bash' | 'pwsh'
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-terminal-bash -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-time-context -->
 <a id="deepseek-aidsh-time-context"></a>
 
@@ -3822,23 +3890,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-lsp -->
 
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-present -->
-<a id="deepseek-aidsh-tool-present"></a>
-
-## `@berry-ai/harness-tool-present`
-
-- `inject`: `tools` · `fs` · `sessionProjections` · `workingDirectory`
-- `source`: [`packages/deliverables/tool-present/src/index.ts:16`](../packages/deliverables/tool-present/src/index.ts)
-
-```ts config-catalog
-/** Per-call delivery limit. */
-export interface Config {
-  /** Maximum number of files in one call. */
-  maxFiles: number
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-tool-present -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-pwsh -->
 <a id="deepseek-aidsh-tool-pwsh"></a>
 
@@ -4047,29 +4098,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-terminal -->
-
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-todo -->
-<a id="deepseek-aidsh-tool-todo"></a>
-
-## `@berry-ai/harness-tool-todo`
-
-- `inject`: `tools` · `sessionProjections`
-- `source`: [`packages/todo/tool-todo/src/index.ts:29`](../packages/todo/tool-todo/src/index.ts)
-
-```ts config-catalog
-/** Model-facing todo tool configuration. */
-export interface Config {
-  /**
-   * Required deployment choice for whether several todos may be `in_progress` at once. True suits
-   * agents that run work concurrently — subagents, background commands, workflow fan-out — and the
-   * description then instructs the model to mark every actively worked task. False restores the
-   * single-active discipline: the description asks for exactly one, and a call marking more is
-   * rejected.
-   */
-  allowParallelInProgress: boolean
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-tool-todo -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-web -->
 <a id="deepseek-aidsh-tool-web"></a>
@@ -4464,34 +4492,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-working-directory -->
 
-<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-workspace-changes -->
-<a id="deepseek-aidsh-workspace-changes"></a>
-
-## `@berry-ai/harness-workspace-changes`
-
-- `inject`: `subprocess` · `fs`
-- `source`: [`packages/deliverables/workspace-changes/src/index.ts:34`](../packages/deliverables/workspace-changes/src/index.ts)
-
-```ts config-catalog
-/** Snapshot, capture, and comparison bounds. Invalid values fail plugin load. */
-export interface Config {
-  /** Milliseconds one git command may run before the turn's record is abandoned. */
-  timeoutMs: number
-  /** Bytes of git output retained per command; a larger diff listing abandons the record. */
-  outputMaxBytes: number
-  /** Maximum files carried by one summary; `total` still reports the complete count. */
-  maxFiles: number
-  /**
-   * Bytes a file may hold to be captured around a file-tool edit or read from a snapshot for its comparison.
-   * A larger file gets no comparison; one captured around a file-tool edit is also listed without counts.
-   */
-  maxFileBytes: number
-  /** Milliseconds a line comparison may run before it degrades to whole-file replacement. */
-  diffTimeoutMs: number
-}
-```
-<!-- END GENERATED config-catalog:@berry-ai/harness-workspace-changes -->
-
 ## 无配置的可加载插件
 
 这些插件通过 `cordis.yml` 中不含 `config:` 块的条目加载；它们未声明任何配置接口。
@@ -4499,12 +4499,20 @@ export interface Config {
 <!-- BEGIN GENERATED config-catalog:no-config -->
 | `package` | `inject` | `source` |
 | --- | --- | --- |
+| `@berry-ai/harness-browser-use` | — | [`packages/browser-use/browser-use/src/index.ts`](../packages/browser-use/browser-use/src/index.ts) |
+| `@berry-ai/harness-command-feedback` | `commands` | [`packages/feedback/command-feedback/src/index.ts`](../packages/feedback/command-feedback/src/index.ts) |
+| `@berry-ai/harness-computer-use` | — | [`packages/computer-use/computer-use/src/index.ts`](../packages/computer-use/computer-use/src/index.ts) |
+| `@berry-ai/harness-config-editor` | `loader` · `profileContext` | [`packages/boot/config-editor/src/index.ts`](../packages/boot/config-editor/src/index.ts) |
+| `@berry-ai/harness-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
+| `@berry-ai/harness-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
+| `@berry-ai/harness-terminal` | — | [`packages/terminal/terminal/src/index.ts`](../packages/terminal/terminal/src/index.ts) |
+| `@berry-ai/harness-tool-call-timeout-policy` | `tools` | [`packages/guard/timeout-policy/src/index.ts`](../packages/guard/timeout-policy/src/index.ts) |
+| `@berry-ai/harness-tool-schedule` | `tools` | [`packages/schedule/tool-schedule/src/index.ts`](../packages/schedule/tool-schedule/src/index.ts) |
 | `@deepseek-ai/dsh-acp-app` | `cmdlineArgs` | [`packages/bundle/acp-app/src/index.ts`](../packages/bundle/acp-app/src/index.ts) |
 | `@deepseek-ai/dsh-agent` | — | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
 | `@deepseek-ai/dsh-api-account-controller` | `deepseekAccount` · `agents` | [`packages/api/account-controller/src/index.ts`](../packages/api/account-controller/src/index.ts) |
 | `@deepseek-ai/dsh-api-remotes` | `typertGateway` | [`packages/api/remotes/src/index.ts`](../packages/api/remotes/src/index.ts) |
 | `@deepseek-ai/dsh-authorization` | `credentials` | [`packages/credentials/authorization/src/index.ts`](../packages/credentials/authorization/src/index.ts) |
-| `@berry-ai/harness-browser-use` | — | [`packages/browser-use/browser-use/src/index.ts`](../packages/browser-use/browser-use/src/index.ts) |
 | `@deepseek-ai/dsh-client-file-upload` | `agents` · `attachments` · `commands` · `connection` | [`packages/client/file-upload/src/index.ts`](../packages/client/file-upload/src/index.ts) |
 | `@deepseek-ai/dsh-client-locale` | — | [`packages/client/locale/src/index.ts`](../packages/client/locale/src/index.ts) |
 | `@deepseek-ai/dsh-client-modules` | `loader` | [`packages/client/modules/src/index.ts`](../packages/client/modules/src/index.ts) |
@@ -4556,12 +4564,9 @@ export interface Config {
 | `@deepseek-ai/dsh-client-ui-workflow-run` | — | [`packages/client/ui-workflow-run/src/index.ts`](../packages/client/ui-workflow-run/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-workspace` | — | [`packages/client/ui-workspace/src/index.ts`](../packages/client/ui-workspace/src/index.ts) |
 | `@deepseek-ai/dsh-command-compact` | `commands` · `compaction` | [`packages/compaction/command-compact/src/index.ts`](../packages/compaction/command-compact/src/index.ts) |
-| `@berry-ai/harness-command-feedback` | `commands` | [`packages/feedback/command-feedback/src/index.ts`](../packages/feedback/command-feedback/src/index.ts) |
 | `@deepseek-ai/dsh-command-goal` | `commands` · `goals` | [`packages/goal/command-goal/src/index.ts`](../packages/goal/command-goal/src/index.ts) |
 | `@deepseek-ai/dsh-commands` | — | [`packages/interaction/commands/src/index.ts`](../packages/interaction/commands/src/index.ts) |
 | `@deepseek-ai/dsh-compaction-image-offload` | `agents` · `sessions` | [`packages/compaction/compaction-image-offload/src/index.ts`](../packages/compaction/compaction-image-offload/src/index.ts) |
-| `@berry-ai/harness-computer-use` | — | [`packages/computer-use/computer-use/src/index.ts`](../packages/computer-use/computer-use/src/index.ts) |
-| `@berry-ai/harness-config-editor` | `loader` · `profileContext` | [`packages/boot/config-editor/src/index.ts`](../packages/boot/config-editor/src/index.ts) |
 | `@deepseek-ai/dsh-cordis-client-runner` | — | [`packages/extensions/cordis-client-runner/src/index.ts`](../packages/extensions/cordis-client-runner/src/index.ts) |
 | `@deepseek-ai/dsh-deepseek-llm-api-extensions` | — | [`packages/llm/deepseek-llm-api-extensions/src/index.ts`](../packages/llm/deepseek-llm-api-extensions/src/index.ts) |
 | `@deepseek-ai/dsh-experimental-auto-review` | `approval` · `llm` · `permissionPresets` · `sessions` · `tools` · `workingDirectory` | [`packages/experimental/auto-review/src/index.ts`](../packages/experimental/auto-review/src/index.ts) |
@@ -4579,8 +4584,6 @@ export interface Config {
 | `@deepseek-ai/dsh-host-plugin-inventory` | `loader` | [`packages/host/plugin-inventory/src/index.ts`](../packages/host/plugin-inventory/src/index.ts) |
 | `@deepseek-ai/dsh-llm` | — | [`packages/llm/llm/src/index.ts`](../packages/llm/llm/src/index.ts) |
 | `@deepseek-ai/dsh-lsp` | — | [`packages/lsp/lsp/src/index.ts`](../packages/lsp/lsp/src/index.ts) |
-| `@berry-ai/harness-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
-| `@berry-ai/harness-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
 | `@deepseek-ai/dsh-sandbox-ssh` | `ssh` | [`packages/ssh/sandbox-ssh/src/index.ts`](../packages/ssh/sandbox-ssh/src/index.ts) |
 | `@deepseek-ai/dsh-session` | — | [`packages/core/session/src/index.ts`](../packages/core/session/src/index.ts) |
 | `@deepseek-ai/dsh-session-checkpoint-policy` | `llm` · `sessionPersistence` · `sessions` · `tools` | [`packages/session/session-checkpoint-policy/src/index.ts`](../packages/session/session-checkpoint-policy/src/index.ts) |
@@ -4592,10 +4595,7 @@ export interface Config {
 | `@deepseek-ai/dsh-storage` | — | [`packages/storage/storage/src/index.ts`](../packages/storage/storage/src/index.ts) |
 | `@deepseek-ai/dsh-subprocess-local` | — | [`packages/subprocess/subprocess-local/src/index.ts`](../packages/subprocess/subprocess-local/src/index.ts) |
 | `@deepseek-ai/dsh-subprocess-ssh` | `ssh` | [`packages/ssh/subprocess-ssh/src/index.ts`](../packages/ssh/subprocess-ssh/src/index.ts) |
-| `@berry-ai/harness-terminal` | — | [`packages/terminal/terminal/src/index.ts`](../packages/terminal/terminal/src/index.ts) |
-| `@berry-ai/harness-tool-call-timeout-policy` | `tools` | [`packages/guard/timeout-policy/src/index.ts`](../packages/guard/timeout-policy/src/index.ts) |
 | `@deepseek-ai/dsh-tool-cordis` | `tools` · `cordisInspect` | [`packages/extensions/tool-cordis/src/index.ts`](../packages/extensions/tool-cordis/src/index.ts) |
-| `@berry-ai/harness-tool-schedule` | `tools` | [`packages/schedule/tool-schedule/src/index.ts`](../packages/schedule/tool-schedule/src/index.ts) |
 | `@deepseek-ai/dsh-tool-subagent-control` | `tools` · `subagents` | [`packages/subagent/tool-subagent-control/src/index.ts`](../packages/subagent/tool-subagent-control/src/index.ts) |
 | `@deepseek-ai/dsh-tool-working-directory` | `tools` · `workingDirectory` | [`packages/session/tool-working-directory/src/index.ts`](../packages/session/tool-working-directory/src/index.ts) |
 | `@deepseek-ai/dsh-user-questions` | — | [`packages/interaction/user-questions/src/index.ts`](../packages/interaction/user-questions/src/index.ts) |
@@ -4610,7 +4610,8 @@ export interface Config {
 <!-- BEGIN GENERATED config-catalog:seam -->
 | `package` | `class` | `inject` | `source` |
 | --- | --- | --- | --- |
-| `@deepseek-ai/dsh-attachment` | `AttachmentStore` | — | [`packages/attachment/attachment/src/index.ts`](../packages/attachment/attachment/src/index.ts) |
+| `@berry-ai/harness-attachment` | `AttachmentStore` | — | [`packages/attachment/attachment/src/index.ts`](../packages/attachment/attachment/src/index.ts) |
+| `@berry-ai/harness-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
 | `@deepseek-ai/dsh-compaction` | `CompactionEngine` | — | [`packages/compaction/compaction/src/index.ts`](../packages/compaction/compaction/src/index.ts) |
 | `@deepseek-ai/dsh-credentials` | `CredentialProvider` | — | [`packages/credentials/credentials/src/index.ts`](../packages/credentials/credentials/src/index.ts) |
 | `@deepseek-ai/dsh-deepseek-account` | `DeepSeekAccount` | — | [`packages/credentials/deepseek-account/src/index.ts`](../packages/credentials/deepseek-account/src/index.ts) |
@@ -4618,7 +4619,6 @@ export interface Config {
 | `@deepseek-ai/dsh-fs` | `FileSystem` | — | [`packages/fs/fs/src/index.ts`](../packages/fs/fs/src/index.ts) |
 | `@deepseek-ai/dsh-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
 | `@deepseek-ai/dsh-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
-| `@deepseek-ai/dsh-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
 | `@deepseek-ai/dsh-sandbox` | `SandboxProvider` | — | [`packages/sandbox/sandbox/src/index.ts`](../packages/sandbox/sandbox/src/index.ts) |
 | `@deepseek-ai/dsh-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |
 | `@deepseek-ai/dsh-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |
@@ -4635,21 +4635,34 @@ export interface Config {
 <!-- BEGIN GENERATED config-catalog:library -->
 | `package` | `inject` | `source` |
 | --- | --- | --- |
-| `@deepseek-ai/dsh-agent-loop-testkit` | — | [`packages/test-support/agent-loop-testkit/src/index.ts`](../packages/test-support/agent-loop-testkit/src/index.ts) |
 | `@berry-ai/harness-anonymous-user-id` | — | [`packages/identity/anonymous-user-id/src/index.ts`](../packages/identity/anonymous-user-id/src/index.ts) |
 | `@berry-ai/harness-app-boot` | — | [`packages/boot/app-boot/src/index.ts`](../packages/boot/app-boot/src/index.ts) |
 | `@berry-ai/harness-atomic-write` | — | [`packages/util/atomic-write/src/index.ts`](../packages/util/atomic-write/src/index.ts) |
-| `@deepseek-ai/dsh-base` | — | [`packages/bundle/base/src/index.ts`](../packages/bundle/base/src/index.ts) |
 | `@berry-ai/harness-brand` | — | [`packages/util/brand/src/index.ts`](../packages/util/brand/src/index.ts) |
 | `@berry-ai/harness-chunked-list` | — | [`packages/util/chunked-list/src/index.ts`](../packages/util/chunked-list/src/index.ts) |
+| `@berry-ai/harness-cmdline` | — | [`packages/boot/cmdline/src/index.ts`](../packages/boot/cmdline/src/index.ts) |
+| `@berry-ai/harness-deque` | — | [`packages/util/deque/src/index.ts`](../packages/util/deque/src/index.ts) |
+| `@berry-ai/harness-home-paths` | — | [`packages/util/home-paths/src/index.ts`](../packages/util/home-paths/src/index.ts) |
+| `@berry-ai/harness-http-proxy` | — | [`packages/util/http-proxy/src/index.ts`](../packages/util/http-proxy/src/index.ts) |
+| `@berry-ai/harness-launch-environment` | — | [`packages/util/launch-environment/src/index.ts`](../packages/util/launch-environment/src/index.ts) |
+| `@berry-ai/harness-lazy-require` | — | [`packages/util/lazy-require/src/index.ts`](../packages/util/lazy-require/src/index.ts) |
+| `@berry-ai/harness-native-command` | — | [`packages/util/native-command/src/index.ts`](../packages/util/native-command/src/index.ts) |
+| `@berry-ai/harness-output-retention` | — | [`packages/util/output-retention/src/index.ts`](../packages/util/output-retention/src/index.ts) |
+| `@berry-ai/harness-package-manifest` | — | [`packages/util/package-manifest/src/index.ts`](../packages/util/package-manifest/src/index.ts) |
+| `@berry-ai/harness-timeout` | — | [`packages/util/timeout/src/index.ts`](../packages/util/timeout/src/index.ts) |
+| `@berry-ai/harness-util-code-language` | — | [`packages/util/code-language/src/index.ts`](../packages/util/code-language/src/index.ts) |
+| `@berry-ai/harness-util-crypto` | — | [`packages/util/crypto/src/index.ts`](../packages/util/crypto/src/index.ts) |
+| `@berry-ai/harness-util-time` | — | [`packages/util/time/src/index.ts`](../packages/util/time/src/index.ts) |
+| `@berry-ai/harness-util-values` | — | [`packages/util/values/src/index.ts`](../packages/util/values/src/index.ts) |
+| `@berry-ai/harness-util-workspace-path` | — | [`packages/util/workspace-path/src/index.ts`](../packages/util/workspace-path/src/index.ts) |
+| `@deepseek-ai/dsh-agent-loop-testkit` | — | [`packages/test-support/agent-loop-testkit/src/index.ts`](../packages/test-support/agent-loop-testkit/src/index.ts) |
+| `@deepseek-ai/dsh-base` | — | [`packages/bundle/base/src/index.ts`](../packages/bundle/base/src/index.ts) |
 | `@deepseek-ai/dsh-client-store` | — | [`packages/client/store/src/index.ts`](../packages/client/store/src/index.ts) |
 | `@deepseek-ai/dsh-client-test-runtime` | — | [`packages/test-support/client-runtime/src/index.ts`](../packages/test-support/client-runtime/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-dockkit` | — | [`packages/client/ui-dockkit/src/index.ts`](../packages/client/ui-dockkit/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-primitives` | — | [`packages/client/ui-primitives/src/index.ts`](../packages/client/ui-primitives/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-slots` | — | [`packages/client/ui-slots/src/index.ts`](../packages/client/ui-slots/src/index.ts) |
 | `@deepseek-ai/dsh-client-web` | — | [`packages/client/web/src/index.ts`](../packages/client/web/src/index.ts) |
-| `@berry-ai/harness-cmdline` | — | [`packages/boot/cmdline/src/index.ts`](../packages/boot/cmdline/src/index.ts) |
-| `@berry-ai/harness-deque` | — | [`packages/util/deque/src/index.ts`](../packages/util/deque/src/index.ts) |
 | `@deepseek-ai/dsh-experimental-agent-team-profile` | — | [`packages/experimental/agent-team-profile/src/index.ts`](../packages/experimental/agent-team-profile/src/index.ts) |
 | `@deepseek-ai/dsh-experimental-badge-skill-bundle` | — | [`packages/experimental/badge-skill-bundle/src/index.ts`](../packages/experimental/badge-skill-bundle/src/index.ts) |
 | `@deepseek-ai/dsh-experimental-browser-use-runtime` | — | [`packages/experimental/browser-use-runtime/src/index.ts`](../packages/experimental/browser-use-runtime/src/index.ts) |
@@ -4662,17 +4675,10 @@ export interface Config {
 | `@deepseek-ai/dsh-experimental-voice-input-bundle` | — | [`packages/experimental/voice-input-bundle/src/index.ts`](../packages/experimental/voice-input-bundle/src/index.ts) |
 | `@deepseek-ai/dsh-experimental-webworker-packer` | — | [`packages/experimental/webworker-packer/src/index.ts`](../packages/experimental/webworker-packer/src/index.ts) |
 | `@deepseek-ai/dsh-experimental-webworker-runtime` | — | [`packages/experimental/webworker-runtime/src/index.ts`](../packages/experimental/webworker-runtime/src/index.ts) |
-| `@deepseek-ai/dsh-home-paths` | — | [`packages/util/home-paths/src/index.ts`](../packages/util/home-paths/src/index.ts) |
 | `@deepseek-ai/dsh-hook-protocol` | — | [`packages/experimental/hook-protocol/src/index.ts`](../packages/experimental/hook-protocol/src/index.ts) |
-| `@berry-ai/harness-http-proxy` | — | [`packages/util/http-proxy/src/index.ts`](../packages/util/http-proxy/src/index.ts) |
-| `@berry-ai/harness-launch-environment` | — | [`packages/util/launch-environment/src/index.ts`](../packages/util/launch-environment/src/index.ts) |
-| `@berry-ai/harness-lazy-require` | — | [`packages/util/lazy-require/src/index.ts`](../packages/util/lazy-require/src/index.ts) |
 | `@deepseek-ai/dsh-llm-deepseek` | — | [`packages/llm/llm-deepseek/src/index.ts`](../packages/llm/llm-deepseek/src/index.ts) |
 | `@deepseek-ai/dsh-llm-mock-server` | — | [`packages/test-support/llm-mock-server/src/index.ts`](../packages/test-support/llm-mock-server/src/index.ts) |
 | `@deepseek-ai/dsh-loader-smoke` | — | [`packages/test-support/loader-smoke/src/index.ts`](../packages/test-support/loader-smoke/src/index.ts) |
-| `@berry-ai/harness-native-command` | — | [`packages/util/native-command/src/index.ts`](../packages/util/native-command/src/index.ts) |
-| `@berry-ai/harness-output-retention` | — | [`packages/util/output-retention/src/index.ts`](../packages/util/output-retention/src/index.ts) |
-| `@berry-ai/harness-package-manifest` | — | [`packages/util/package-manifest/src/index.ts`](../packages/util/package-manifest/src/index.ts) |
 | `@deepseek-ai/dsh-remote-mock` | — | [`packages/test-support/remote-mock/src/index.ts`](../packages/test-support/remote-mock/src/index.ts) |
 | `@deepseek-ai/dsh-sandbox-windows-acl` | — | [`packages/sandbox/sandbox-windows-acl/src/index.ts`](../packages/sandbox/sandbox-windows-acl/src/index.ts) |
 | `@deepseek-ai/dsh-scope` | — | [`packages/core/scope/src/index.ts`](../packages/core/scope/src/index.ts) |
@@ -4689,14 +4695,8 @@ export interface Config {
 | `@deepseek-ai/dsh-session-telemetry` | — | [`packages/session/session-telemetry/src/index.ts`](../packages/session/session-telemetry/src/index.ts) |
 | `@deepseek-ai/dsh-session-title-llm` | — | [`packages/session/session-title-llm/src/index.ts`](../packages/session/session-title-llm/src/index.ts) |
 | `@deepseek-ai/dsh-ssh-helper-runtime` | — | [`packages/ssh/ssh-helper-runtime/src/index.ts`](../packages/ssh/ssh-helper-runtime/src/index.ts) |
-| `@berry-ai/harness-timeout` | — | [`packages/util/timeout/src/index.ts`](../packages/util/timeout/src/index.ts) |
 | `@deepseek-ai/dsh-typert-generator` | — | [`packages/typert/generator/src/index.ts`](../packages/typert/generator/src/index.ts) |
 | `@deepseek-ai/dsh-typert-protocol` | — | [`packages/typert/protocol/src/index.ts`](../packages/typert/protocol/src/index.ts) |
 | `@deepseek-ai/dsh-typert-registry` | — | [`packages/typert/registry/src/index.ts`](../packages/typert/registry/src/index.ts) |
-| `@berry-ai/harness-util-code-language` | — | [`packages/util/code-language/src/index.ts`](../packages/util/code-language/src/index.ts) |
-| `@berry-ai/harness-util-crypto` | — | [`packages/util/crypto/src/index.ts`](../packages/util/crypto/src/index.ts) |
-| `@berry-ai/harness-util-time` | — | [`packages/util/time/src/index.ts`](../packages/util/time/src/index.ts) |
-| `@berry-ai/harness-util-values` | — | [`packages/util/values/src/index.ts`](../packages/util/values/src/index.ts) |
-| `@berry-ai/harness-util-workspace-path` | — | [`packages/util/workspace-path/src/index.ts`](../packages/util/workspace-path/src/index.ts) |
 | `@deepseek-ai/dsh-win32-process` | — | [`packages/subprocess/win32-process/src/index.ts`](../packages/subprocess/win32-process/src/index.ts) |
 <!-- END GENERATED config-catalog:library -->

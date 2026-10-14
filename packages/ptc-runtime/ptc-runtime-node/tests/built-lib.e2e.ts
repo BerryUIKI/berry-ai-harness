@@ -19,7 +19,7 @@ describe.skipIf(!built)('built lib real load path (plain node)', () => {
   it('runs a TypeScript program with a binding through lib/index.js and its lib/process.js entry', async () => {
     const script = `
       const { Context } = await import('@deepseek-ai/cordis')
-      const { NodePtcRuntime } = await import('@deepseek-ai/dsh-ptc-runtime-node')
+      const { NodePtcRuntime } = await import('@berry-ai/harness-ptc-runtime-node')
       const ctx = new Context()
       for (const name of ['session-projection', 'fs-local', 'subprocess-local', 'sandbox-local']) {
         const plugin = await import('@deepseek-ai/dsh-' + name)
