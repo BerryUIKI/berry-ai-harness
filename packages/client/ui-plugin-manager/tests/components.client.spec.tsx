@@ -492,7 +492,7 @@ describe('PluginManagerPage', () => {
       packages: [
         pkg({ meta: { description: { en: 'A sidebar.' } } }),
         pkg({ name: 'dsh-broken', enabled: false, error: { code: 'not-bundle' } }),
-        pkg({ name: '@deepseek-ai/dsh-web-app', installed: false, removable: false }),
+        pkg({ name: '@berry-ai/harness-web-app', installed: false, removable: false }),
         pkg({ name: 'dsh-protected', readOnlyReason: 'management-required' }),
         pkg({ name: '@acme/dsh-tool', enabled: false }),
         // Selected by the profile but not a bundle: a problem the person can switch off, in the profile's own group.
@@ -529,7 +529,7 @@ describe('PluginManagerPage', () => {
       packages: [
         ...[
           '@deepseek-ai/dsh-base',
-          '@deepseek-ai/dsh-web-app',
+          '@berry-ai/harness-web-app',
           '@deepseek-ai/dsh-headless',
           '@deepseek-ai/dsh-sdk-app',
           '@deepseek-ai/dsh-acp-app',
@@ -548,7 +548,7 @@ describe('PluginManagerPage', () => {
 
   it.each([false, true])('shows an empty list for built-in bundles with errors and installed=%s', (installed) => {
     renderTab({
-      packages: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app'].map(name => pkg({
+      packages: ['@deepseek-ai/dsh-base', '@berry-ai/harness-web-app'].map(name => pkg({
         name, installed, error: { code: 'operation-error', diagnostic: 'Unreadable bundle' },
       })),
     })

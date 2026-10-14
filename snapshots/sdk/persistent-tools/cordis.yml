@@ -109,7 +109,7 @@
   disabled: true
 
 - id: tool-web
-  name: '@deepseek-ai/dsh-tool-web'
+  name: '@berry-ai/harness-tool-web'
   disabled: true
 
 - id: plan-mode

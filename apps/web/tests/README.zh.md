@@ -7,7 +7,7 @@
 安装工作区依赖后，在仓库根目录安装浏览器及其系统依赖：
 
 ```sh
-pnpm --filter @deepseek-ai/dsh-web-frontend exec playwright install --with-deps chromium webkit
+pnpm --filter @berry-ai/harness-web-frontend exec playwright install --with-deps chromium webkit
 ```
 
 在 Linux 上，`--with-deps` 会通过系统包管理器安装依赖。持久化 CI VM 必须通过镜像维护提供这些依赖，CI 只安装浏览器程序，遵循[故障切换手册](../../../.agents/notes/implemented/process/2026-07-26-ci-failover-runbook.zh.md)的要求。

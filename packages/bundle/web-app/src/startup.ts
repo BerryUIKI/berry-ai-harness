@@ -4,7 +4,7 @@
  * and its `--help` text, then provides the immutable values as
  * {@link WEB_STARTUP_SERVICE}. Ordinary rows inject that service before
  * reading it from lazy config.
- * @module @deepseek-ai/dsh-web-app/startup
+ * @module @berry-ai/harness-web-app/startup
  */
 
 import { Command } from 'commander'

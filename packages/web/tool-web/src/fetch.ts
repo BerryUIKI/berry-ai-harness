@@ -10,7 +10,7 @@ import TurndownService from 'turndown'
 import { gfm } from '@joplin/turndown-plugin-gfm'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import type { GenericCallView, ToolResult, WebFetchResultView } from '@deepseek-ai/dsh-tools'
-import type { WebFetchBody, WebFetchResult } from '@deepseek-ai/dsh-web'
+import type { WebFetchBody, WebFetchResult } from '@berry-ai/harness-web'
 import { assertNever, type JsonValue } from '@berry-ai/harness-util-values'
 import { EXTERNAL_WEB_CONTENT_NOTICE } from './trust.ts'
 

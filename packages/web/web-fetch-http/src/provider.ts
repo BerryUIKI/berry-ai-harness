@@ -1,13 +1,13 @@
 /**
  * Safe HTTP(S) retrieval for `ctx.web`: validates and pins public IP destinations, follows
  * only same-origin redirects, enforces time and size limits, classifies and decodes text,
- * and leaves presentation to `@deepseek-ai/dsh-tool-web`. Requests carry no browser cookies
+ * and leaves presentation to `@berry-ai/harness-tool-web`. Requests carry no browser cookies
  * or ambient credentials.
- * @module @deepseek-ai/dsh-web-fetch-http/provider
+ * @module @berry-ai/harness-web-fetch-http/provider
  */
 
-import { WebError } from '@deepseek-ai/dsh-web'
-import type { WebFetchBody, WebFetchProvider, WebFetchRequest, WebFetchResult } from '@deepseek-ai/dsh-web'
+import { WebError } from '@berry-ai/harness-web'
+import type { WebFetchBody, WebFetchProvider, WebFetchRequest, WebFetchResult } from '@berry-ai/harness-web'
 import { deadline, timeoutOf } from '@berry-ai/harness-timeout'
 import type { Response } from 'undici'
 import { proxyRouteFor } from '@berry-ai/harness-http-proxy'

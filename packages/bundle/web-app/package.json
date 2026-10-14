@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-web-app",
+  "name": "@berry-ai/harness-web-app",
   "description": "The dsh browser-surface bundle: the web patch layer over dsh-base plus the runtime glue plugin (frontend dist serving, web-surface prompt, bash runtime variables, URL line)",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -165,9 +165,9 @@
     "@deepseek-ai/dsh-tool-subagent": "workspace:*",
     "@deepseek-ai/dsh-tool-subagent-control": "workspace:*",
     "@berry-ai/harness-tool-todo": "workspace:*",
-    "@deepseek-ai/dsh-tool-web": "workspace:*",
+    "@berry-ai/harness-tool-web": "workspace:*",
     "@berry-ai/harness-tool-workflow": "workspace:*",
-    "@deepseek-ai/dsh-web-frontend": "workspace:*",
+    "@berry-ai/harness-web-frontend": "workspace:*",
     "@berry-ai/harness-workflow-ptc": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*",
     "@berry-ai/harness-workspace-changes": "workspace:*",

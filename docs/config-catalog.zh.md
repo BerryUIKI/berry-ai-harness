@@ -1624,6 +1624,35 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-tool-todo -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-web -->
+<a id="berry-aiharness-tool-web"></a>
+
+## `@berry-ai/harness-tool-web`
+
+- `inject`: `tools` · `web` · `systemPrompt`
+- `source`: [`packages/web/tool-web/src/index.ts:37`](../packages/web/tool-web/src/index.ts)
+
+```ts config-catalog
+/** Plugin config: which web tools to register, search bounds, per-tool budgets, and the fetch output cap. */
+export interface Config {
+  /** Register `web_search`. Defaults to true. */
+  search?: boolean
+  /** Register `web_fetch`. Defaults to true. */
+  fetch?: boolean
+  /** Upper bound on sources returned by one `web_search` call. */
+  searchMaxResults?: number
+  /** Upper bound on queries accepted by one `web_search` call. */
+  searchMaxQueries?: number
+  /** Cooperative timeout budget (ms) for `web_fetch`. Defaults to 30000. */
+  fetchTimeoutMs?: number
+  /** Cooperative timeout budget (ms) for `web_search`. Defaults to 30000. */
+  searchTimeoutMs?: number
+  /** Cap on source characters converted and complete `web_fetch` output characters. Defaults to 200000. */
+  fetchMaxOutputChars?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-web -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-workflow -->
 <a id="berry-aiharness-tool-workflow"></a>
 
@@ -1706,6 +1735,191 @@ export interface Config {
 export type ApprovalPolicy = 'ask' | 'never'
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-user-approval -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-web -->
+<a id="berry-aiharness-web"></a>
+
+## `@berry-ai/harness-web`
+
+- `source`: [`packages/web/web/src/index.ts:55`](../packages/web/web/src/index.ts)
+
+```ts config-catalog
+/**
+ * Config for the web seam. `searchProvider` / `fetchProvider` pin which provider
+ * wins for each capability; both are optional (a single registered usable
+ * provider auto-selects). Operational overrides such as environment variables
+ * must feed these same fields rather than introduce a hidden priority chain.
+ */
+export interface WebRuntimeConfig {
+  /** Explicit search provider id. Omitted = auto-select when exactly one usable. */
+  readonly searchProvider?: string
+  /** Explicit fetch provider id. Omitted = auto-select when exactly one usable. */
+  readonly fetchProvider?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-web -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-web-app -->
+<a id="berry-aiharness-web-app"></a>
+
+## `@berry-ai/harness-web-app`
+
+- `inject`: `webServer`
+- `source`: [`packages/bundle/web-app/src/index.ts:43`](../packages/bundle/web-app/src/index.ts)
+
+```ts config-catalog
+/** Plugin config: composed deployment settings plus per-invocation command-line values. */
+export interface Config {
+  /** Permit default-browser handoff after the Loader tree settles; an SSH launch suppresses it. */
+  openBrowser: boolean
+  /** Print the URL line on activation; a non-interactive layer can turn it off. */
+  printUrl: boolean
+  /**
+   * Register the model-visible surface context (the `app:web-surface` prompt
+   * section and the `DSH_WEB_URL` bash variable). A one-shot non-interactive
+   * layer can turn it off when its user is not in the GUI, so the
+   * orientation text would be false.
+   */
+  surfaceContext: boolean
+  /**
+   * Canonical HTTP(S) root to advertise in the printed and opened URL,
+   * `DSH_WEB_URL`, and the web-surface orientation, e.g.
+   * `https://app.example/ui/`, normalized to end in `/`. Configures no routing
+   * or authentication; see [public deployments](../README.md#public-deployments).
+   * Absent or YAML `null` advertises the bind-address URL.
+   */
+  publicUrl?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-web-app -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-web-fetch-http -->
+<a id="berry-aiharness-web-fetch-http"></a>
+
+## `@berry-ai/harness-web-fetch-http`
+
+- `inject`: `web`
+- `source`: [`packages/web/web-fetch-http/src/index.ts:32`](../packages/web/web-fetch-http/src/index.ts)
+
+```ts config-catalog
+/** Plugin config: the provider's transport and size limits plus its `User-Agent` (all defaulted). */
+export interface Config {
+  /** Maximum response body size in bytes. */
+  maxResponseBytes?: number
+  /** Maximum decoded body length in characters. */
+  maxBodyChars?: number
+  /** Default fetch timeout in milliseconds, within Node's timer range. */
+  timeoutMs?: number
+  /** Maximum number of same-origin redirect hops to follow. */
+  maxRedirects?: number
+  /** `User-Agent` header sent on every request. */
+  userAgent?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-web-fetch-http -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-web-search-deepseek -->
+<a id="berry-aiharness-web-search-deepseek"></a>
+
+## `@berry-ai/harness-web-search-deepseek`
+
+- `inject`: `web`
+- `refs`: `Volatile` (`@deepseek-ai/cordis`)
+- `source`: [`packages/web/web-search-deepseek/src/index.ts:49`](../packages/web/web-search-deepseek/src/index.ts)
+
+```ts config-catalog
+/** Plugin config (all optional — `apply` fills env-var and constant defaults). */
+export interface Config {
+  /** Literal DeepSeek API key; prefer {@link apiKeyEnv} so no secret enters configuration files. */
+  apiKey: Volatile<string | undefined>
+  /** Credential reference resolved for each search; defaults to `DEEPSEEK_API_KEY`. */
+  apiKeyEnv: Volatile<string>
+  /** Anthropic-compatible endpoint base; `/messages` is appended. */
+  baseURL: Volatile<string | undefined>
+  /** Anthropic-format model name. Defaults to `deepseek-v4-flash`. */
+  model: Volatile<string>
+  /** `anthropic-version` header value. Defaults to `2023-06-01`. */
+  apiVersion: Volatile<string>
+  /** Upper bound on generated tokens for the Messages request. Defaults to 4096. */
+  maxTokens: Volatile<number>
+  /** Maximum `web_search` server-tool uses per request. Defaults to 5. */
+  maxUses: Volatile<number>
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-web-search-deepseek -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-web-search-exa -->
+<a id="berry-aiharness-web-search-exa"></a>
+
+## `@berry-ai/harness-web-search-exa`
+
+- `inject`: `web`
+- `source`: [`packages/web/web-search-exa/src/index.ts:35`](../packages/web/web-search-exa/src/index.ts)
+
+```ts config-catalog
+/** Plugin config (all optional — `apply` fills env-var and constant defaults). */
+export interface Config {
+  /** Exa API key. Falls back to `$EXA_API_KEY`. Empty → provider unavailable. */
+  apiKey?: string
+  /** Endpoint base; `/search` is appended. Defaults to the public API. */
+  baseURL?: string
+  /** Retrieval mode sent as Exa's `type`. Defaults to `auto`. */
+  searchType?: 'auto' | 'keyword' | 'neural'
+  /** Default result count when a request carries no `maxResults`. Omitted = none. */
+  numResults?: number
+  /** Highlight sentences requested per result. Defaults to 1. */
+  highlightsPerResult?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-web-search-exa -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-web-search-perplexity -->
+<a id="berry-aiharness-web-search-perplexity"></a>
+
+## `@berry-ai/harness-web-search-perplexity`
+
+- `inject`: `web`
+- `source`: [`packages/web/web-search-perplexity/src/index.ts:30`](../packages/web/web-search-perplexity/src/index.ts)
+
+```ts config-catalog
+/** Plugin config (all optional — `apply` fills env-var and constant defaults). */
+export interface Config {
+  /** Perplexity API key. Falls back to `$PERPLEXITY_API_KEY`. Empty → unavailable. */
+  apiKey?: string
+  /** Endpoint base; `/chat/completions` is appended. Defaults to the public API. */
+  baseURL?: string
+  /** Search model name. Defaults to `sonar`. */
+  model?: string
+  /** Upper bound on generated answer tokens. Defaults to 1024. */
+  maxTokens?: number
+  /** Recency window sent as `search_recency_filter`. Omitted = no filter. */
+  searchRecency?: 'day' | 'week' | 'month' | 'year'
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-web-search-perplexity -->
+
+<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-webhook-github -->
+<a id="berry-aiharness-webhook-github"></a>
+
+## `@deepseek-ai/dsh-webhook-github`
+
+- `inject`: `webServer` · `webhookRuntime` · `credentials`
+- `source`: [`packages/experimental/webhook-github/src/index.ts:17`](../packages/experimental/webhook-github/src/index.ts)
+
+```ts config-catalog
+/** Required GitHub ingress configuration. */
+export interface Config {
+  /** Adapter instance name carried to rules. */
+  readonly source: string
+  /** Exact absolute route path. */
+  readonly path: string
+  /** Credential reference containing the shared webhook secret. */
+  readonly secretEnv: string
+  /** Positive raw body ceiling in bytes. */
+  readonly maxBodyBytes: number
+}
+```
+<!-- END GENERATED config-catalog:@deepseek-ai/dsh-webhook-github -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-workflow-ptc -->
 <a id="berry-aiharness-workflow-ptc"></a>
@@ -4207,35 +4421,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-terminal -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-web -->
-<a id="deepseek-aidsh-tool-web"></a>
-
-## `@deepseek-ai/dsh-tool-web`
-
-- `inject`: `tools` · `web` · `systemPrompt`
-- `source`: [`packages/web/tool-web/src/index.ts:37`](../packages/web/tool-web/src/index.ts)
-
-```ts config-catalog
-/** Plugin config: which web tools to register, search bounds, per-tool budgets, and the fetch output cap. */
-export interface Config {
-  /** Register `web_search`. Defaults to true. */
-  search?: boolean
-  /** Register `web_fetch`. Defaults to true. */
-  fetch?: boolean
-  /** Upper bound on sources returned by one `web_search` call. */
-  searchMaxResults?: number
-  /** Upper bound on queries accepted by one `web_search` call. */
-  searchMaxQueries?: number
-  /** Cooperative timeout budget (ms) for `web_fetch`. Defaults to 30000. */
-  fetchTimeoutMs?: number
-  /** Cooperative timeout budget (ms) for `web_search`. Defaults to 30000. */
-  searchTimeoutMs?: number
-  /** Cap on source characters converted and complete `web_fetch` output characters. Defaults to 200000. */
-  fetchMaxOutputChars?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-web -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tools -->
 <a id="deepseek-aidsh-tools"></a>
 
@@ -4290,191 +4475,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-typert-loader -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web -->
-<a id="deepseek-aidsh-web"></a>
-
-## `@deepseek-ai/dsh-web`
-
-- `source`: [`packages/web/web/src/index.ts:55`](../packages/web/web/src/index.ts)
-
-```ts config-catalog
-/**
- * Config for the web seam. `searchProvider` / `fetchProvider` pin which provider
- * wins for each capability; both are optional (a single registered usable
- * provider auto-selects). Operational overrides such as environment variables
- * must feed these same fields rather than introduce a hidden priority chain.
- */
-export interface WebRuntimeConfig {
-  /** Explicit search provider id. Omitted = auto-select when exactly one usable. */
-  readonly searchProvider?: string
-  /** Explicit fetch provider id. Omitted = auto-select when exactly one usable. */
-  readonly fetchProvider?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web-app -->
-<a id="deepseek-aidsh-web-app"></a>
-
-## `@deepseek-ai/dsh-web-app`
-
-- `inject`: `webServer`
-- `source`: [`packages/bundle/web-app/src/index.ts:43`](../packages/bundle/web-app/src/index.ts)
-
-```ts config-catalog
-/** Plugin config: composed deployment settings plus per-invocation command-line values. */
-export interface Config {
-  /** Permit default-browser handoff after the Loader tree settles; an SSH launch suppresses it. */
-  openBrowser: boolean
-  /** Print the URL line on activation; a non-interactive layer can turn it off. */
-  printUrl: boolean
-  /**
-   * Register the model-visible surface context (the `app:web-surface` prompt
-   * section and the `DSH_WEB_URL` bash variable). A one-shot non-interactive
-   * layer can turn it off when its user is not in the GUI, so the
-   * orientation text would be false.
-   */
-  surfaceContext: boolean
-  /**
-   * Canonical HTTP(S) root to advertise in the printed and opened URL,
-   * `DSH_WEB_URL`, and the web-surface orientation, e.g.
-   * `https://app.example/ui/`, normalized to end in `/`. Configures no routing
-   * or authentication; see [public deployments](../README.md#public-deployments).
-   * Absent or YAML `null` advertises the bind-address URL.
-   */
-  publicUrl?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web-app -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web-fetch-http -->
-<a id="deepseek-aidsh-web-fetch-http"></a>
-
-## `@deepseek-ai/dsh-web-fetch-http`
-
-- `inject`: `web`
-- `source`: [`packages/web/web-fetch-http/src/index.ts:32`](../packages/web/web-fetch-http/src/index.ts)
-
-```ts config-catalog
-/** Plugin config: the provider's transport and size limits plus its `User-Agent` (all defaulted). */
-export interface Config {
-  /** Maximum response body size in bytes. */
-  maxResponseBytes?: number
-  /** Maximum decoded body length in characters. */
-  maxBodyChars?: number
-  /** Default fetch timeout in milliseconds, within Node's timer range. */
-  timeoutMs?: number
-  /** Maximum number of same-origin redirect hops to follow. */
-  maxRedirects?: number
-  /** `User-Agent` header sent on every request. */
-  userAgent?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web-fetch-http -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web-search-deepseek -->
-<a id="deepseek-aidsh-web-search-deepseek"></a>
-
-## `@deepseek-ai/dsh-web-search-deepseek`
-
-- `inject`: `web`
-- `refs`: `Volatile` (`@deepseek-ai/cordis`)
-- `source`: [`packages/web/web-search-deepseek/src/index.ts:49`](../packages/web/web-search-deepseek/src/index.ts)
-
-```ts config-catalog
-/** Plugin config (all optional — `apply` fills env-var and constant defaults). */
-export interface Config {
-  /** Literal DeepSeek API key; prefer {@link apiKeyEnv} so no secret enters configuration files. */
-  apiKey: Volatile<string | undefined>
-  /** Credential reference resolved for each search; defaults to `DEEPSEEK_API_KEY`. */
-  apiKeyEnv: Volatile<string>
-  /** Anthropic-compatible endpoint base; `/messages` is appended. */
-  baseURL: Volatile<string | undefined>
-  /** Anthropic-format model name. Defaults to `deepseek-v4-flash`. */
-  model: Volatile<string>
-  /** `anthropic-version` header value. Defaults to `2023-06-01`. */
-  apiVersion: Volatile<string>
-  /** Upper bound on generated tokens for the Messages request. Defaults to 4096. */
-  maxTokens: Volatile<number>
-  /** Maximum `web_search` server-tool uses per request. Defaults to 5. */
-  maxUses: Volatile<number>
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web-search-deepseek -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web-search-exa -->
-<a id="deepseek-aidsh-web-search-exa"></a>
-
-## `@deepseek-ai/dsh-web-search-exa`
-
-- `inject`: `web`
-- `source`: [`packages/web/web-search-exa/src/index.ts:35`](../packages/web/web-search-exa/src/index.ts)
-
-```ts config-catalog
-/** Plugin config (all optional — `apply` fills env-var and constant defaults). */
-export interface Config {
-  /** Exa API key. Falls back to `$EXA_API_KEY`. Empty → provider unavailable. */
-  apiKey?: string
-  /** Endpoint base; `/search` is appended. Defaults to the public API. */
-  baseURL?: string
-  /** Retrieval mode sent as Exa's `type`. Defaults to `auto`. */
-  searchType?: 'auto' | 'keyword' | 'neural'
-  /** Default result count when a request carries no `maxResults`. Omitted = none. */
-  numResults?: number
-  /** Highlight sentences requested per result. Defaults to 1. */
-  highlightsPerResult?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web-search-exa -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web-search-perplexity -->
-<a id="deepseek-aidsh-web-search-perplexity"></a>
-
-## `@deepseek-ai/dsh-web-search-perplexity`
-
-- `inject`: `web`
-- `source`: [`packages/web/web-search-perplexity/src/index.ts:30`](../packages/web/web-search-perplexity/src/index.ts)
-
-```ts config-catalog
-/** Plugin config (all optional — `apply` fills env-var and constant defaults). */
-export interface Config {
-  /** Perplexity API key. Falls back to `$PERPLEXITY_API_KEY`. Empty → unavailable. */
-  apiKey?: string
-  /** Endpoint base; `/chat/completions` is appended. Defaults to the public API. */
-  baseURL?: string
-  /** Search model name. Defaults to `sonar`. */
-  model?: string
-  /** Upper bound on generated answer tokens. Defaults to 1024. */
-  maxTokens?: number
-  /** Recency window sent as `search_recency_filter`. Omitted = no filter. */
-  searchRecency?: 'day' | 'week' | 'month' | 'year'
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web-search-perplexity -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-webhook-github -->
-<a id="deepseek-aidsh-webhook-github"></a>
-
-## `@deepseek-ai/dsh-webhook-github`
-
-- `inject`: `webServer` · `webhookRuntime` · `credentials`
-- `source`: [`packages/experimental/webhook-github/src/index.ts:17`](../packages/experimental/webhook-github/src/index.ts)
-
-```ts config-catalog
-/** Required GitHub ingress configuration. */
-export interface Config {
-  /** Adapter instance name carried to rules. */
-  readonly source: string
-  /** Exact absolute route path. */
-  readonly path: string
-  /** Credential reference containing the shared webhook secret. */
-  readonly secretEnv: string
-  /** Positive raw body ceiling in bytes. */
-  readonly maxBodyBytes: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-webhook-github -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-working-directory -->
 <a id="deepseek-aidsh-working-directory"></a>
 
@@ -4514,7 +4514,6 @@ export interface Config {
 | `@berry-ai/harness-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
 | `@berry-ai/harness-sandbox-ssh` | `ssh` | [`packages/ssh/sandbox-ssh/src/index.ts`](../packages/ssh/sandbox-ssh/src/index.ts) |
 | `@berry-ai/harness-settings` | `configEditor` · `profileContext` | [`packages/settings/settings/src/index.ts`](../packages/settings/settings/src/index.ts) |
-| `@deepseek-ai/dsh-skill-badge` | `skills` | [`packages/experimental/skill-badge/src/index.ts`](../packages/experimental/skill-badge/src/index.ts) |
 | `@berry-ai/harness-storage` | — | [`packages/storage/storage/src/index.ts`](../packages/storage/storage/src/index.ts) |
 | `@berry-ai/harness-subprocess-local` | — | [`packages/subprocess/subprocess-local/src/index.ts`](../packages/subprocess/subprocess-local/src/index.ts) |
 | `@berry-ai/harness-subprocess-ssh` | `ssh` | [`packages/ssh/subprocess-ssh/src/index.ts`](../packages/ssh/subprocess-ssh/src/index.ts) |
@@ -4522,6 +4521,7 @@ export interface Config {
 | `@berry-ai/harness-tool-call-timeout-policy` | `tools` | [`packages/guard/timeout-policy/src/index.ts`](../packages/guard/timeout-policy/src/index.ts) |
 | `@berry-ai/harness-tool-schedule` | `tools` | [`packages/schedule/tool-schedule/src/index.ts`](../packages/schedule/tool-schedule/src/index.ts) |
 | `@berry-ai/harness-user-questions` | — | [`packages/interaction/user-questions/src/index.ts`](../packages/interaction/user-questions/src/index.ts) |
+| `@deepseek-ai/dsh-webhook` | `agents` · `agentDefaultModel` · `agentPresets` · `permissionPresets` · `sessionTitle` · `workspaceRegistry` | [`packages/experimental/webhook/src/index.ts`](../packages/experimental/webhook/src/index.ts) |
 | `@berry-ai/harness-workspace` | `storageDomain` · `sessionPersistence` | [`packages/workspace/workspace/src/index.ts`](../packages/workspace/workspace/src/index.ts) |
 | `@deepseek-ai/dsh-acp-app` | `cmdlineArgs` | [`packages/bundle/acp-app/src/index.ts`](../packages/bundle/acp-app/src/index.ts) |
 | `@deepseek-ai/dsh-agent` | — | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
@@ -4597,10 +4597,10 @@ export interface Config {
 | `@deepseek-ai/dsh-session-projection` | — | [`packages/session/session-projection/src/index.ts`](../packages/session/session-projection/src/index.ts) |
 | `@deepseek-ai/dsh-session-stats` | `sessionProjections` | [`packages/session/session-stats/src/index.ts`](../packages/session/session-stats/src/index.ts) |
 | `@deepseek-ai/dsh-session-turn-outline` | `sessionProjections` | [`packages/session/session-turn-outline/src/index.ts`](../packages/session/session-turn-outline/src/index.ts) |
+| `@deepseek-ai/dsh-skill-badge` | `skills` | [`packages/experimental/skill-badge/src/index.ts`](../packages/experimental/skill-badge/src/index.ts) |
 | `@deepseek-ai/dsh-tool-cordis` | `tools` · `cordisInspect` | [`packages/extensions/tool-cordis/src/index.ts`](../packages/extensions/tool-cordis/src/index.ts) |
 | `@deepseek-ai/dsh-tool-subagent-control` | `tools` · `subagents` | [`packages/subagent/tool-subagent-control/src/index.ts`](../packages/subagent/tool-subagent-control/src/index.ts) |
 | `@deepseek-ai/dsh-tool-working-directory` | `tools` · `workingDirectory` | [`packages/session/tool-working-directory/src/index.ts`](../packages/session/tool-working-directory/src/index.ts) |
-| `@deepseek-ai/dsh-webhook` | `agents` · `agentDefaultModel` · `agentPresets` · `permissionPresets` · `sessionTitle` · `workspaceRegistry` | [`packages/experimental/webhook/src/index.ts`](../packages/experimental/webhook/src/index.ts) |
 <!-- END GENERATED config-catalog:no-config -->
 
 ## Seam 包（不可直接加载）

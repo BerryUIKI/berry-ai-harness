@@ -90,7 +90,7 @@ With `dsh-spill-policy` configured, a large formatted fetch result is automatica
 
 ```yaml
 - id: web-fetch-http
-  name: '@deepseek-ai/dsh-web-fetch-http'
+  name: '@berry-ai/harness-web-fetch-http'
   config:
     maxBodyChars: 500000
 

@@ -3,7 +3,7 @@ description: "构建于 ctx.web 之上的面向模型 web 工具（web_search、
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-web
+# @berry-ai/harness-tool-web
 
 [English](README.md) | 中文
 
@@ -36,9 +36,9 @@ kind: "package-reference"
 加载 web 服务、至少一个后端与本包；两个工具默认都会注册。
 
 ```yaml
-- name: '@deepseek-ai/dsh-web'
-- name: '@deepseek-ai/dsh-web-search-exa'
-- name: '@deepseek-ai/dsh-tool-web'
+- name: '@berry-ai/harness-web'
+- name: '@berry-ai/harness-web-search-exa'
+- name: '@berry-ai/harness-tool-web'
 ```
 
 | 字段 | 默认值 | 含义 |

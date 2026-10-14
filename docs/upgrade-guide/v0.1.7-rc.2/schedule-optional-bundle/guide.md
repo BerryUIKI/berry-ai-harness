@@ -9,7 +9,7 @@ English | [中文](guide.zh.md)
 
 ## Change
 
-In v0.1.7-rc.2, `@deepseek-ai/dsh-web-app` carried the `time-context`, `schedule`, and `ui-schedule` rows with `disabled: true`. Turning Schedule on in the Plugins page, or by hand, wrote id-targeted overrides such as `- id: schedule` with `disabled: false` into `$DSH_HOME/profiles/<name>/cordis.patch.yml` or a `--patch` overlay.
+In v0.1.7-rc.2, `@berry-ai/harness-web-app` carried the `time-context`, `schedule`, and `ui-schedule` rows with `disabled: true`. Turning Schedule on in the Plugins page, or by hand, wrote id-targeted overrides such as `- id: schedule` with `disabled: false` into `$DSH_HOME/profiles/<name>/cordis.patch.yml` or a `--patch` overlay.
 
 The next release removes the three rows from the Web composition. `@deepseek-ai/dsh-experimental-schedule-bundle`, shown as Automation tasks in the Plugins page's Official group, inserts them. Every installation ships the bundle switched off.
 

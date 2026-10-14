@@ -67,7 +67,7 @@ const ASSET_GLOBS = [
   'node_modules/**/*.yaml',
   'node_modules/**/*.yml',
   // web-app builds this path dynamically, so pkg cannot discover the static frontend.
-  'node_modules/@deepseek-ai/dsh-web-frontend/dist/**/*',
+  'node_modules/@berry-ai/harness-web-frontend/dist/**/*',
   // The diagnosis provider extracts its PowerShell script for an external interpreter.
   'node_modules/@berry-ai/harness-sandbox-windows-acl/assets/**/*',
 ]

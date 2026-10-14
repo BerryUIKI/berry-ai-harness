@@ -174,13 +174,13 @@ flowchart LR
   cfg --> plugin_dsh_base_tool_goal
   plugin_dsh_base_repeat_tool_reminder["repeat-tool-reminder<br/>@berry-ai/harness-repeat-tool-reminder"]
   cfg --> plugin_dsh_base_repeat_tool_reminder
-  plugin_dsh_base_web["web<br/>@deepseek-ai/dsh-web"]
+  plugin_dsh_base_web["web<br/>@berry-ai/harness-web"]
   cfg --> plugin_dsh_base_web
-  plugin_dsh_base_web_search_deepseek["web-search-deepseek<br/>@deepseek-ai/dsh-web-search-deepseek"]
+  plugin_dsh_base_web_search_deepseek["web-search-deepseek<br/>@berry-ai/harness-web-search-deepseek"]
   cfg --> plugin_dsh_base_web_search_deepseek
-  plugin_dsh_base_web_fetch_http["web-fetch-http<br/>@deepseek-ai/dsh-web-fetch-http"]
+  plugin_dsh_base_web_fetch_http["web-fetch-http<br/>@berry-ai/harness-web-fetch-http"]
   cfg --> plugin_dsh_base_web_fetch_http
-  plugin_dsh_base_tool_web["tool-web<br/>@deepseek-ai/dsh-tool-web"]
+  plugin_dsh_base_tool_web["tool-web<br/>@berry-ai/harness-tool-web"]
   cfg --> plugin_dsh_base_tool_web
   plugin_dsh_base_mcp_resources["mcp-resources<br/>@berry-ai/harness-mcp-resources"]
   cfg --> plugin_dsh_base_mcp_resources
@@ -283,10 +283,10 @@ flowchart LR
 | `tool-todo` | `@berry-ai/harness-tool-todo` |
 | `tool-goal` | `@berry-ai/harness-tool-goal` |
 | `repeat-tool-reminder` | `@berry-ai/harness-repeat-tool-reminder` |
-| `web` | `@deepseek-ai/dsh-web` |
-| `web-search-deepseek` | `@deepseek-ai/dsh-web-search-deepseek` |
-| `web-fetch-http` | `@deepseek-ai/dsh-web-fetch-http` |
-| `tool-web` | `@deepseek-ai/dsh-tool-web` |
+| `web` | `@berry-ai/harness-web` |
+| `web-search-deepseek` | `@berry-ai/harness-web-search-deepseek` |
+| `web-fetch-http` | `@berry-ai/harness-web-fetch-http` |
+| `tool-web` | `@berry-ai/harness-tool-web` |
 | `mcp-resources` | `@berry-ai/harness-mcp-resources` |
 | `tools` | `@deepseek-ai/dsh-tools` |
 | `system-prompt` | `@deepseek-ai/dsh-system-prompt` |

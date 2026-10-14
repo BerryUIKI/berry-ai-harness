@@ -9,7 +9,7 @@ description: "Web 组合不再包含 Schedule 的三行；改由“自动化任�
 
 ## 变更
 
-在 v0.1.7-rc.2 中，`@deepseek-ai/dsh-web-app` 以 `disabled: true` 包含 `time-context`、`schedule` 和 `ui-schedule` 三行。在插件管理页或手动开启 Schedule，会向 `$DSH_HOME/profiles/<name>/cordis.patch.yml` 或 `--patch` overlay 写入按 id 定位的覆盖项，例如 `- id: schedule` 加 `disabled: false`。
+在 v0.1.7-rc.2 中，`@berry-ai/harness-web-app` 以 `disabled: true` 包含 `time-context`、`schedule` 和 `ui-schedule` 三行。在插件管理页或手动开启 Schedule，会向 `$DSH_HOME/profiles/<name>/cordis.patch.yml` 或 `--patch` overlay 写入按 id 定位的覆盖项，例如 `- id: schedule` 加 `disabled: false`。
 
 下一版本从 Web 组合中移除这三行。插件管理页“官方”分组中的“自动化任务”，即 `@deepseek-ai/dsh-experimental-schedule-bundle`，负责插入它们。每个安装都自带该 bundle，默认关闭。
 

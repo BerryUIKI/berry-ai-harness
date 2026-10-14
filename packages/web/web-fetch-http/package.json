@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-web-fetch-http",
+  "name": "@berry-ai/harness-web-fetch-http",
   "description": "Anonymous public HTTP(S) fetch provider for the DeepSeek Harness web capability seam (ctx.web)",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -29,7 +29,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-timeout": "workspace:*",
-    "@deepseek-ai/dsh-web": "workspace:*",
+    "@berry-ai/harness-web": "workspace:*",
     "@berry-ai/harness-http-proxy": "workspace:*"
   },
   "dependencies": {
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-timeout": "workspace:*",
-    "@deepseek-ai/dsh-web": "workspace:*",
+    "@berry-ai/harness-web": "workspace:*",
     "@berry-ai/harness-http-proxy": "workspace:*"
   }
 }

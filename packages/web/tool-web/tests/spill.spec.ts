@@ -22,11 +22,11 @@ import ToolRuntime from '@deepseek-ai/dsh-tools'
 import type { ToolExecution } from '@deepseek-ai/dsh-tools'
 
 const testToolSignal = new AbortController().signal
-import WebRuntime from '@deepseek-ai/dsh-web'
-import * as WebFetchLocal from '@deepseek-ai/dsh-web-fetch-http'
+import WebRuntime from '@berry-ai/harness-web'
+import * as WebFetchLocal from '@berry-ai/harness-web-fetch-http'
 import LocalSpillStore from '@berry-ai/harness-spill-local'
 import * as SpillPolicy from '@berry-ai/harness-spill-policy'
-import * as ToolWeb from '@deepseek-ai/dsh-tool-web'
+import * as ToolWeb from '@berry-ai/harness-tool-web'
 import { publicHttpNetwork } from '../../web-fetch-http/src/network.ts'
 
 type Handler = (req: IncomingMessage, res: ServerResponse) => void
