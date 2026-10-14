@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import CommandRuntime, { type CommandResult } from '@deepseek-ai/dsh-commands'
+import CommandRuntime, { type CommandResult } from '@berry-ai/harness-commands'
 import {
   CompactionId,
   CompactionEngine,

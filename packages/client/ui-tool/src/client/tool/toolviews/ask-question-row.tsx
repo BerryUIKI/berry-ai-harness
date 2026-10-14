@@ -6,7 +6,7 @@ import type { InjectFace, PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
 // Also merges the userQuestions key into SessionProjectionMap for useProjection.
 import type {
   AskUserQuestionAnswerItem, AskUserQuestionItem, AskUserQuestionOption,
-} from '@deepseek-ai/dsh-user-questions/types'
+} from '@berry-ai/harness-user-questions/types'
 import type { ToolCallViewProps, UserQuestionRecord } from '../../contract/slots.ts'
 import type { AskQuestionCardModel } from '../models/ask-question-card-model.ts'
 import { singleResultText } from '../models/raw-tool-call.ts'

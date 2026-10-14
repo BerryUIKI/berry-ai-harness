@@ -37,7 +37,7 @@
     "@deepseek-ai/dsh-shell-env": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-user-approval": "workspace:*",
+    "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
   },
   "dependencies": {
@@ -63,7 +63,7 @@
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-tool-jobs": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-user-approval": "workspace:*",
+    "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*",
     "@deepseek-ai/dsh-fs-local": "workspace:*"
   }

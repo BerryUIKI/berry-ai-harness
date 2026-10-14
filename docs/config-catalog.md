@@ -297,6 +297,46 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-office-to-pdf -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-permission-presets -->
+<a id="berry-aiharness-permission-presets"></a>
+
+## `@berry-ai/harness-permission-presets`
+
+- `inject`: `shell` · `approval` · `sessions` · `sessionProjections`
+- `refs`: [`ApprovalPolicy`](subsystems/approval.md) · [`SandboxMode`](subsystems/sandbox.md) · `Volatile` (`@deepseek-ai/cordis`)
+- `source`: [`packages/interaction/permission-presets/src/index.ts:159`](../packages/interaction/permission-presets/src/index.ts)
+
+```ts config-catalog
+/** The {@link PermissionPresetService} config: preset table and composition default. */
+export interface Config {
+  /**
+   * The preset table: name → knob bundle. Defaults to `workspace-write`
+   * (workspace-write + ask) and `danger-full-access` (danger-full-access +
+   * never). The names `custom` and `auto` are reserved for derived state and
+   * the Auto review integration respectively.
+   */
+  presets: Record<string, PresetSpec>
+  /**
+   * Default for new sessions. When omitted, the preset matching the composed
+   * sandbox and approval defaults is used.
+   */
+  defaultPreset: Volatile<string | undefined>
+}
+
+/** One preset's sandbox/approval bundle and optional client presentation. */
+export interface PresetSpec {
+  /** The `sandbox/mode` value the preset writes through. */
+  sandbox: SandboxMode
+  /** The `approval/policy` value the preset writes through. */
+  approval: ApprovalPolicy
+  /** The display label a client shows for this preset; the raw table key when omitted. */
+  name?: string
+  /** One user-facing sentence on what the preset means; omitted when not configured. */
+  description?: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-permission-presets -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-persona -->
 <a id="berry-aiharness-persona"></a>
 
@@ -791,6 +831,25 @@ export type ShellDialect = 'bash' | 'pwsh'
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-terminal-bash -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-ask-user -->
+<a id="berry-aiharness-tool-ask-user"></a>
+
+## `@berry-ai/harness-tool-ask-user`
+
+- `inject`: `tools` · `userQuestions`
+- `source`: [`packages/interaction/tool-ask-user/src/index.ts:16`](../packages/interaction/tool-ask-user/src/index.ts)
+
+```ts config-catalog
+/** Cordis row selecting the tool schema and its default foreground wait. */
+export interface Config {
+  /** Tool definition selected by this Cordis row. Defaults to the blocking legacy tool. */
+  mode?: 'legacy' | 'timed'
+  /** Foreground wait before automatic continuation. Defaults to 120 seconds. */
+  timeout?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-ask-user -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-goal -->
 <a id="berry-aiharness-tool-goal"></a>
 
@@ -911,6 +970,39 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-tool-workflow -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-user-approval -->
+<a id="berry-aiharness-user-approval"></a>
+
+## `@berry-ai/harness-user-approval`
+
+- `source`: [`packages/interaction/user-approval/src/index.ts:135`](../packages/interaction/user-approval/src/index.ts)
+
+```ts config-catalog
+/** Plugin config. All optional — `static Config` supplies the defaults. */
+export interface Config {
+  /**
+   * The deployment's default {@link ApprovalPolicy} for sessions without an
+   * `approval/policy` override — `'ask'` delegates to the composed answerers
+   * (fail-closed with none); `'never'` auto-rejects every ask without
+   * prompting (the deterministic CI/unattended stance).
+   */
+  readonly policy?: ApprovalPolicy
+}
+
+/**
+ * A session's approval policy — what happens to an {@link ApprovalService}
+ * ask BEFORE any interactive answerer sees it:
+ *
+ * - `'ask'` (the default) — delegate to the composed answerers; with none
+ *   composed the chain falls through to the fail-closed `'unavailable'`.
+ * - `'never'` — never prompt anyone: every ask resolves `'rejected'`
+ *   deterministically. The strict headless stance (CI, unattended runs) and
+ *   the policy whose outcome is knowable without asking.
+ */
+export type ApprovalPolicy = 'ask' | 'never'
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-user-approval -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-workflow-ptc -->
 <a id="berry-aiharness-workflow-ptc"></a>
@@ -2964,46 +3056,6 @@ export interface LspLocalServerConfig {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-lsp-stdio -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-permission-presets -->
-<a id="deepseek-aidsh-permission-presets"></a>
-
-## `@deepseek-ai/dsh-permission-presets`
-
-- `inject`: `shell` · `approval` · `sessions` · `sessionProjections`
-- `refs`: [`ApprovalPolicy`](subsystems/approval.md) · [`SandboxMode`](subsystems/sandbox.md) · `Volatile` (`@deepseek-ai/cordis`)
-- `source`: [`packages/interaction/permission-presets/src/index.ts:159`](../packages/interaction/permission-presets/src/index.ts)
-
-```ts config-catalog
-/** The {@link PermissionPresetService} config: preset table and composition default. */
-export interface Config {
-  /**
-   * The preset table: name → knob bundle. Defaults to `workspace-write`
-   * (workspace-write + ask) and `danger-full-access` (danger-full-access +
-   * never). The names `custom` and `auto` are reserved for derived state and
-   * the Auto review integration respectively.
-   */
-  presets: Record<string, PresetSpec>
-  /**
-   * Default for new sessions. When omitted, the preset matching the composed
-   * sandbox and approval defaults is used.
-   */
-  defaultPreset: Volatile<string | undefined>
-}
-
-/** One preset's sandbox/approval bundle and optional client presentation. */
-export interface PresetSpec {
-  /** The `sandbox/mode` value the preset writes through. */
-  sandbox: SandboxMode
-  /** The `approval/policy` value the preset writes through. */
-  approval: ApprovalPolicy
-  /** The display label a client shows for this preset; the raw table key when omitted. */
-  name?: string
-  /** One user-facing sentence on what the preset means; omitted when not configured. */
-  description?: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-permission-presets -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-plugin-package-inventory-deepseek -->
 <a id="deepseek-aidsh-plugin-package-inventory-deepseek"></a>
 
@@ -3788,25 +3840,6 @@ export type TokenMeterConfig = Record<string, never>
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-token-meter -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-ask-user -->
-<a id="deepseek-aidsh-tool-ask-user"></a>
-
-## `@deepseek-ai/dsh-tool-ask-user`
-
-- `inject`: `tools` · `userQuestions`
-- `source`: [`packages/interaction/tool-ask-user/src/index.ts:16`](../packages/interaction/tool-ask-user/src/index.ts)
-
-```ts config-catalog
-/** Cordis row selecting the tool schema and its default foreground wait. */
-export interface Config {
-  /** Tool definition selected by this Cordis row. Defaults to the blocking legacy tool. */
-  mode?: 'legacy' | 'timed'
-  /** Foreground wait before automatic continuation. Defaults to 120 seconds. */
-  timeout?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-ask-user -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-bash -->
 <a id="deepseek-aidsh-tool-bash"></a>
 
@@ -4255,39 +4288,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-typert-loader -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-user-approval -->
-<a id="deepseek-aidsh-user-approval"></a>
-
-## `@deepseek-ai/dsh-user-approval`
-
-- `source`: [`packages/interaction/user-approval/src/index.ts:135`](../packages/interaction/user-approval/src/index.ts)
-
-```ts config-catalog
-/** Plugin config. All optional — `static Config` supplies the defaults. */
-export interface Config {
-  /**
-   * The deployment's default {@link ApprovalPolicy} for sessions without an
-   * `approval/policy` override — `'ask'` delegates to the composed answerers
-   * (fail-closed with none); `'never'` auto-rejects every ask without
-   * prompting (the deterministic CI/unattended stance).
-   */
-  readonly policy?: ApprovalPolicy
-}
-
-/**
- * A session's approval policy — what happens to an {@link ApprovalService}
- * ask BEFORE any interactive answerer sees it:
- *
- * - `'ask'` (the default) — delegate to the composed answerers; with none
- *   composed the chain falls through to the fail-closed `'unavailable'`.
- * - `'never'` — never prompt anyone: every ask resolves `'rejected'`
- *   deterministically. The strict headless stance (CI, unattended runs) and
- *   the policy whose outcome is knowable without asking.
- */
-export type ApprovalPolicy = 'ask' | 'never'
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-user-approval -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web -->
 <a id="deepseek-aidsh-web"></a>
 
@@ -4500,6 +4500,7 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@berry-ai/harness-browser-use` | — | [`packages/browser-use/browser-use/src/index.ts`](../packages/browser-use/browser-use/src/index.ts) |
 | `@berry-ai/harness-command-feedback` | `commands` | [`packages/feedback/command-feedback/src/index.ts`](../packages/feedback/command-feedback/src/index.ts) |
 | `@berry-ai/harness-command-goal` | `commands` · `goals` | [`packages/goal/command-goal/src/index.ts`](../packages/goal/command-goal/src/index.ts) |
+| `@berry-ai/harness-commands` | — | [`packages/interaction/commands/src/index.ts`](../packages/interaction/commands/src/index.ts) |
 | `@berry-ai/harness-computer-use` | — | [`packages/computer-use/computer-use/src/index.ts`](../packages/computer-use/computer-use/src/index.ts) |
 | `@berry-ai/harness-config-editor` | `loader` · `profileContext` | [`packages/boot/config-editor/src/index.ts`](../packages/boot/config-editor/src/index.ts) |
 | `@berry-ai/harness-fs-ssh` | `ssh` · `sandboxPolicy` | [`packages/ssh/fs-ssh/src/index.ts`](../packages/ssh/fs-ssh/src/index.ts) |
@@ -4514,6 +4515,7 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@berry-ai/harness-terminal` | — | [`packages/terminal/terminal/src/index.ts`](../packages/terminal/terminal/src/index.ts) |
 | `@berry-ai/harness-tool-call-timeout-policy` | `tools` | [`packages/guard/timeout-policy/src/index.ts`](../packages/guard/timeout-policy/src/index.ts) |
 | `@berry-ai/harness-tool-schedule` | `tools` | [`packages/schedule/tool-schedule/src/index.ts`](../packages/schedule/tool-schedule/src/index.ts) |
+| `@berry-ai/harness-user-questions` | — | [`packages/interaction/user-questions/src/index.ts`](../packages/interaction/user-questions/src/index.ts) |
 | `@berry-ai/harness-workspace` | `storageDomain` · `sessionPersistence` | [`packages/workspace/workspace/src/index.ts`](../packages/workspace/workspace/src/index.ts) |
 | `@deepseek-ai/dsh-acp-app` | `cmdlineArgs` | [`packages/bundle/acp-app/src/index.ts`](../packages/bundle/acp-app/src/index.ts) |
 | `@deepseek-ai/dsh-agent` | — | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
@@ -4571,7 +4573,6 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@deepseek-ai/dsh-client-ui-workflow-run` | — | [`packages/client/ui-workflow-run/src/index.ts`](../packages/client/ui-workflow-run/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-workspace` | — | [`packages/client/ui-workspace/src/index.ts`](../packages/client/ui-workspace/src/index.ts) |
 | `@deepseek-ai/dsh-command-compact` | `commands` · `compaction` | [`packages/compaction/command-compact/src/index.ts`](../packages/compaction/command-compact/src/index.ts) |
-| `@deepseek-ai/dsh-commands` | — | [`packages/interaction/commands/src/index.ts`](../packages/interaction/commands/src/index.ts) |
 | `@deepseek-ai/dsh-compaction-image-offload` | `agents` · `sessions` | [`packages/compaction/compaction-image-offload/src/index.ts`](../packages/compaction/compaction-image-offload/src/index.ts) |
 | `@deepseek-ai/dsh-cordis-client-runner` | — | [`packages/extensions/cordis-client-runner/src/index.ts`](../packages/extensions/cordis-client-runner/src/index.ts) |
 | `@deepseek-ai/dsh-deepseek-llm-api-extensions` | — | [`packages/llm/deepseek-llm-api-extensions/src/index.ts`](../packages/llm/deepseek-llm-api-extensions/src/index.ts) |
@@ -4597,7 +4598,6 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@deepseek-ai/dsh-tool-cordis` | `tools` · `cordisInspect` | [`packages/extensions/tool-cordis/src/index.ts`](../packages/extensions/tool-cordis/src/index.ts) |
 | `@deepseek-ai/dsh-tool-subagent-control` | `tools` · `subagents` | [`packages/subagent/tool-subagent-control/src/index.ts`](../packages/subagent/tool-subagent-control/src/index.ts) |
 | `@deepseek-ai/dsh-tool-working-directory` | `tools` · `workingDirectory` | [`packages/session/tool-working-directory/src/index.ts`](../packages/session/tool-working-directory/src/index.ts) |
-| `@deepseek-ai/dsh-user-questions` | — | [`packages/interaction/user-questions/src/index.ts`](../packages/interaction/user-questions/src/index.ts) |
 | `@deepseek-ai/dsh-webhook` | `agents` · `agentDefaultModel` · `agentPresets` · `permissionPresets` · `sessionTitle` · `workspaceRegistry` | [`packages/experimental/webhook/src/index.ts`](../packages/experimental/webhook/src/index.ts) |
 <!-- END GENERATED config-catalog:no-config -->
 

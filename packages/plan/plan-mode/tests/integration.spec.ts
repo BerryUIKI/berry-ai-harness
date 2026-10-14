@@ -8,7 +8,7 @@ import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
 import AgentRegistry, { type Agent } from '@deepseek-ai/dsh-agent'
 import AgentLoop from '@deepseek-ai/dsh-agent-loop'
 import PlanModeController from '@berry-ai/harness-plan-mode'
-import UserQuestionService, { UserQuestionError } from '@deepseek-ai/dsh-user-questions'
+import UserQuestionService, { UserQuestionError } from '@berry-ai/harness-user-questions'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 
 const PLAN_CONFIG = { section: 'Test plan mode instructions.' }

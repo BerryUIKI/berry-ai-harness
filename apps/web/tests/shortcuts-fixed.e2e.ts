@@ -5,7 +5,7 @@ import { join } from 'node:path'
 import { chromium, type Browser, type Page } from 'playwright'
 import { afterEach, describe, expect, it } from 'vitest'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-user-approval'
+import type {} from '@berry-ai/harness-user-approval'
 import { fixtureUserPrompts, launchWebScaffold, watchConsole, webSnapshotMode, type WebScaffold } from './scaffold.ts'
 import { connectFreshWorkspace, newEnglishPage } from './support.ts'
 

@@ -8,7 +8,7 @@ import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import type { Agent, AgentStatus } from '@deepseek-ai/dsh-agent'
-import CommandRuntime from '@deepseek-ai/dsh-commands'
+import CommandRuntime from '@berry-ai/harness-commands'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import * as CommandFeedback from '@berry-ai/harness-command-feedback'
 import { getOrCreateAnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
@@ -58,7 +58,7 @@ describe('/feedback real Loader composition through cordis.yml', () => {
     await writeFile(configPath, [
       "- name: '@deepseek-ai/dsh-agent'",
       "- name: '@deepseek-ai/dsh-session'",
-      "- name: '@deepseek-ai/dsh-commands'",
+      "- name: '@berry-ai/harness-commands'",
       "- name: '@berry-ai/harness-command-feedback'",
       '',
     ].join('\n'))
@@ -70,7 +70,7 @@ describe('/feedback real Loader composition through cordis.yml', () => {
     const modules = new Map<string, unknown>([
       ['@deepseek-ai/dsh-agent', AgentRegistry],
       ['@deepseek-ai/dsh-session', SessionStore],
-      ['@deepseek-ai/dsh-commands', CommandRuntime],
+      ['@berry-ai/harness-commands', CommandRuntime],
       ['@berry-ai/harness-command-feedback', CommandFeedback],
     ])
     context.loader.internal = {

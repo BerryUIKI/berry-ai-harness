@@ -4,7 +4,7 @@ import { createScope } from '@deepseek-ai/dsh-scope'
 import type { Scope } from '@deepseek-ai/dsh-scope'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import CommandRuntime, { CommandDefinitionId, parseCommand, type CommandDefinition } from '@deepseek-ai/dsh-commands'
+import CommandRuntime, { CommandDefinitionId, parseCommand, type CommandDefinition } from '@berry-ai/harness-commands'
 import { AttachmentStore } from '@berry-ai/harness-attachment'
 
 function command(name: string, text = `ran:${name}`): CommandDefinition {

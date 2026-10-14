@@ -4,7 +4,7 @@
  * reaches a Host-only symbol, so a Client compilation face reads the same
  * `commands/change` signature the Host emits.
  *
- * @module @deepseek-ai/dsh-commands/types
+ * @module @berry-ai/harness-commands/types
  */
 
 import type { SessionSeq } from '@deepseek-ai/dsh-session/types'

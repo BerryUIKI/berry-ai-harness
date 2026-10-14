@@ -289,6 +289,9 @@ importers:
       '@berry-ai/harness-terminal-bash':
         specifier: workspace:*
         version: link:../../packages/terminal/terminal-bash
+      '@berry-ai/harness-tool-ask-user':
+        specifier: workspace:*
+        version: link:../../packages/interaction/tool-ask-user
       '@berry-ai/harness-tool-goal':
         specifier: workspace:*
         version: link:../../packages/goal/tool-goal
@@ -427,9 +430,6 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../packages/llm/token-meter
-      '@deepseek-ai/dsh-tool-ask-user':
-        specifier: workspace:*
-        version: link:../../packages/interaction/tool-ask-user
       '@deepseek-ai/dsh-tool-bash':
         specifier: workspace:*
         version: link:../../packages/shell/tool-bash
@@ -503,6 +503,9 @@ importers:
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../packages/subprocess/subprocess-local
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../packages/interaction/user-approval
       '@deepseek-ai/dsh-acp':
         specifier: workspace:*
         version: link:../../packages/acp/acp
@@ -620,9 +623,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../packages/core/tools
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../packages/interaction/user-approval
       '@deepseek-ai/dsh-webhook':
         specifier: workspace:*
         version: link:../../packages/experimental/webhook
@@ -1123,6 +1123,9 @@ importers:
       '@berry-ai/harness-mcp-client':
         specifier: workspace:*
         version: link:../../mcp/mcp-client
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1159,9 +1162,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
 
   packages/api/account-controller:
     dependencies:
@@ -1286,6 +1286,9 @@ importers:
       '@berry-ai/harness-command-feedback':
         specifier: workspace:*
         version: link:../../feedback/command-feedback
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-goal':
         specifier: workspace:*
         version: link:../../goal/goal
@@ -1295,6 +1298,9 @@ importers:
       '@berry-ai/harness-office-to-pdf':
         specifier: workspace:*
         version: link:../../document/office-to-pdf
+      '@berry-ai/harness-permission-presets':
+        specifier: workspace:*
+        version: link:../../interaction/permission-presets
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../boot/plugin-manager
@@ -1304,6 +1310,12 @@ importers:
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../settings/settings
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
+      '@berry-ai/harness-user-questions':
+        specifier: workspace:*
+        version: link:../../interaction/user-questions
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -1346,9 +1358,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../../client/ui-plugin-manager
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-cordis-host-runner':
         specifier: workspace:*
         version: link:../../extensions/cordis-host-runner
@@ -1367,9 +1376,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-permission-presets':
-        specifier: workspace:*
-        version: link:../../interaction/permission-presets
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
@@ -1382,12 +1388,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
-      '@deepseek-ai/dsh-user-questions':
-        specifier: workspace:*
-        version: link:../../interaction/user-questions
       zod:
         specifier: ^4.4.3
         version: 4.4.3
@@ -1416,9 +1416,15 @@ importers:
       '@berry-ai/harness-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-native-command':
         specifier: workspace:*
         version: link:../../util/native-command
+      '@berry-ai/harness-permission-presets':
+        specifier: workspace:*
+        version: link:../../interaction/permission-presets
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../settings/settings
@@ -1476,9 +1482,6 @@ importers:
       '@deepseek-ai/dsh-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-credentials':
         specifier: workspace:*
         version: link:../../credentials/credentials
@@ -1494,9 +1497,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-permission-presets':
-        specifier: workspace:*
-        version: link:../../interaction/permission-presets
       '@deepseek-ai/dsh-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
@@ -1971,6 +1971,9 @@ importers:
       '@berry-ai/harness-subprocess':
         specifier: workspace:*
         version: link:../../subprocess/subprocess
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -2001,9 +2004,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
       chokidar:
         specifier: ^4.0.3
         version: 4.0.3
@@ -2047,6 +2047,9 @@ importers:
       '@berry-ai/harness-command-goal':
         specifier: workspace:*
         version: link:../../goal/command-goal
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-config-editor':
         specifier: workspace:*
         version: link:../../boot/config-editor
@@ -2068,6 +2071,9 @@ importers:
       '@berry-ai/harness-otel':
         specifier: workspace:*
         version: link:../../telemetry/otel
+      '@berry-ai/harness-permission-presets':
+        specifier: workspace:*
+        version: link:../../interaction/permission-presets
       '@berry-ai/harness-plan-mode':
         specifier: workspace:*
         version: link:../../plan/plan-mode
@@ -2125,6 +2131,12 @@ importers:
       '@berry-ai/harness-tool-workflow':
         specifier: workspace:*
         version: link:../../workflow/tool-workflow
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
+      '@berry-ai/harness-user-questions':
+        specifier: workspace:*
+        version: link:../../interaction/user-questions
       '@berry-ai/harness-workflow-ptc':
         specifier: workspace:*
         version: link:../../workflow/workflow-ptc
@@ -2155,9 +2167,6 @@ importers:
       '@deepseek-ai/dsh-command-compact':
         specifier: workspace:*
         version: link:../../compaction/command-compact
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-compaction-basic':
         specifier: workspace:*
         version: link:../../compaction/compaction-basic
@@ -2200,9 +2209,6 @@ importers:
       '@deepseek-ai/dsh-llm-retry':
         specifier: workspace:*
         version: link:../../llm/llm-retry
-      '@deepseek-ai/dsh-permission-presets':
-        specifier: workspace:*
-        version: link:../../interaction/permission-presets
       '@deepseek-ai/dsh-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../llm/plugin-package-inventory-deepseek
@@ -2299,12 +2305,6 @@ importers:
       '@deepseek-ai/dsh-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
-      '@deepseek-ai/dsh-user-questions':
-        specifier: workspace:*
-        version: link:../../interaction/user-questions
       '@deepseek-ai/dsh-web':
         specifier: workspace:*
         version: link:../../web/web
@@ -2543,6 +2543,9 @@ importers:
       '@berry-ai/harness-terminal-bash':
         specifier: workspace:*
         version: link:../../terminal/terminal-bash
+      '@berry-ai/harness-tool-ask-user':
+        specifier: workspace:*
+        version: link:../../interaction/tool-ask-user
       '@berry-ai/harness-tool-goal':
         specifier: workspace:*
         version: link:../../goal/tool-goal
@@ -2840,9 +2843,6 @@ importers:
       '@deepseek-ai/dsh-time-context':
         specifier: workspace:*
         version: link:../../context/time-context
-      '@deepseek-ai/dsh-tool-ask-user':
-        specifier: workspace:*
-        version: link:../../interaction/tool-ask-user
       '@deepseek-ai/dsh-tool-bash':
         specifier: workspace:*
         version: link:../../shell/tool-bash
@@ -2981,6 +2981,9 @@ importers:
       '@berry-ai/harness-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
@@ -2996,9 +2999,6 @@ importers:
       '@deepseek-ai/dsh-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -3394,6 +3394,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../settings/settings
@@ -3469,9 +3472,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
@@ -3517,6 +3517,9 @@ importers:
 
   packages/client/ui-commands:
     devDependencies:
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -3559,9 +3562,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -3587,6 +3587,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-goal':
         specifier: workspace:*
         version: link:../../goal/goal
@@ -3665,9 +3668,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-file-reference':
         specifier: workspace:*
         version: link:../../context/file-reference
@@ -3921,6 +3921,9 @@ importers:
 
   packages/client/ui-goal:
     devDependencies:
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-goal':
         specifier: workspace:*
         version: link:../../goal/goal
@@ -3957,9 +3960,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -4326,6 +4326,9 @@ importers:
 
   packages/client/ui-permission-presets:
     devDependencies:
+      '@berry-ai/harness-permission-presets':
+        specifier: workspace:*
+        version: link:../../interaction/permission-presets
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -4371,9 +4374,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-permission-presets':
-        specifier: workspace:*
-        version: link:../../interaction/permission-presets
       '@deepseek-ai/dsh-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
@@ -6043,6 +6043,9 @@ importers:
       '@berry-ai/harness-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
+      '@berry-ai/harness-user-questions':
+        specifier: workspace:*
+        version: link:../../interaction/user-questions
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
@@ -6109,9 +6112,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-questions':
-        specifier: workspace:*
-        version: link:../../interaction/user-questions
       '@testing-library/react':
         specifier: ^16.3.3
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6208,6 +6208,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-user-questions':
+        specifier: workspace:*
+        version: link:../../interaction/user-questions
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6265,9 +6268,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-user-questions':
-        specifier: workspace:*
-        version: link:../../interaction/user-questions
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -6466,6 +6466,9 @@ importers:
 
   packages/compaction/command-compact:
     devDependencies:
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6478,9 +6481,6 @@ importers:
       '@deepseek-ai/dsh-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-compaction':
         specifier: workspace:*
         version: link:../compaction
@@ -6496,12 +6496,12 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -6518,6 +6518,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6536,9 +6539,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-compaction':
         specifier: workspace:*
         version: link:../compaction
@@ -7134,6 +7134,9 @@ importers:
       '@berry-ai/harness-sandbox-policy':
         specifier: workspace:*
         version: link:../../sandbox/sandbox-policy
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7158,9 +7161,6 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../system-prompt
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -7495,6 +7495,9 @@ importers:
         specifier: workspace:*
         version: link:../../util/values
     devDependencies:
+      '@berry-ai/harness-permission-presets':
+        specifier: workspace:*
+        version: link:../../interaction/permission-presets
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
@@ -7507,6 +7510,9 @@ importers:
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7546,9 +7552,6 @@ importers:
       '@deepseek-ai/dsh-llm-deepseek-api-key':
         specifier: workspace:*
         version: link:../../llm/llm-deepseek-api-key
-      '@deepseek-ai/dsh-permission-presets':
-        specifier: workspace:*
-        version: link:../../interaction/permission-presets
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -7579,9 +7582,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -7846,6 +7846,9 @@ importers:
       '@berry-ai/harness-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-storage':
         specifier: workspace:*
         version: link:../../storage/storage
@@ -7861,6 +7864,9 @@ importers:
       '@berry-ai/harness-subprocess-local':
         specifier: workspace:*
         version: link:../../subprocess/subprocess-local
+      '@berry-ai/harness-user-questions':
+        specifier: workspace:*
+        version: link:../../interaction/user-questions
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7879,9 +7885,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-fs':
         specifier: workspace:*
         version: link:../../fs/fs
@@ -7915,9 +7918,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-user-questions':
-        specifier: workspace:*
-        version: link:../../interaction/user-questions
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -9169,6 +9169,9 @@ importers:
       '@berry-ai/harness-agent-preset-registry':
         specifier: workspace:*
         version: link:../../preset/agent-preset-registry
+      '@berry-ai/harness-permission-presets':
+        specifier: workspace:*
+        version: link:../../interaction/permission-presets
       '@berry-ai/harness-workspace':
         specifier: workspace:*
         version: link:../../workspace/workspace
@@ -9190,9 +9193,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-permission-presets':
-        specifier: workspace:*
-        version: link:../../interaction/permission-presets
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -9571,6 +9571,9 @@ importers:
       '@berry-ai/harness-anonymous-user-id':
         specifier: workspace:*
         version: link:../../identity/anonymous-user-id
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9586,9 +9589,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -9733,6 +9733,9 @@ importers:
       '@berry-ai/harness-sandbox-policy':
         specifier: workspace:*
         version: link:../../sandbox/sandbox-policy
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9778,9 +9781,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -9891,6 +9891,9 @@ importers:
 
   packages/goal/command-goal:
     devDependencies:
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-goal':
         specifier: workspace:*
         version: link:../goal
@@ -9909,9 +9912,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -10360,6 +10360,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../commands
       '@berry-ai/harness-sandbox':
         specifier: workspace:*
         version: link:../../sandbox/sandbox
@@ -10369,12 +10372,12 @@ importers:
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../settings/settings
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../user-approval
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../commands
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -10387,9 +10390,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../user-approval
 
   packages/interaction/tool-ask-user:
     dependencies:
@@ -10397,6 +10397,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-user-questions':
+        specifier: workspace:*
+        version: link:../user-questions
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10412,9 +10415,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-questions':
-        specifier: workspace:*
-        version: link:../user-questions
 
   packages/interaction/user-approval:
     dependencies:
@@ -11154,9 +11154,15 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@berry-ai/harness-ptc-runtime':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime
+      '@berry-ai/harness-user-questions':
+        specifier: workspace:*
+        version: link:../../interaction/user-questions
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11169,9 +11175,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -11187,9 +11190,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-questions':
-        specifier: workspace:*
-        version: link:../../interaction/user-questions
 
   packages/preset/agent-preset:
     dependencies:
@@ -11258,6 +11258,9 @@ importers:
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../settings/settings
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11297,9 +11300,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
       '@types/js-yaml':
         specifier: ^4.0.9
         version: 4.0.9
@@ -11697,6 +11697,9 @@ importers:
       '@berry-ai/harness-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../interaction/commands
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -11736,9 +11739,6 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../interaction/commands
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -12389,6 +12389,9 @@ importers:
       '@berry-ai/harness-sandbox-policy':
         specifier: workspace:*
         version: link:../../sandbox/sandbox-policy
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12422,9 +12425,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
 
   packages/settings/settings:
     dependencies:
@@ -12637,6 +12637,9 @@ importers:
       '@berry-ai/harness-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12676,9 +12679,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -12771,6 +12771,9 @@ importers:
       '@berry-ai/harness-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -12810,9 +12813,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -13448,12 +13448,18 @@ importers:
       '@berry-ai/harness-attachment':
         specifier: workspace:*
         version: link:../../attachment/attachment
+      '@berry-ai/harness-permission-presets':
+        specifier: workspace:*
+        version: link:../../interaction/permission-presets
       '@berry-ai/harness-sandbox':
         specifier: workspace:*
         version: link:../../sandbox/sandbox
       '@berry-ai/harness-sandbox-policy':
         specifier: workspace:*
         version: link:../../sandbox/sandbox-policy
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../interaction/user-approval
       '@berry-ai/harness-util-time':
         specifier: workspace:*
         version: link:../../util/time
@@ -13484,9 +13490,6 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-permission-presets':
-        specifier: workspace:*
-        version: link:../../interaction/permission-presets
       '@deepseek-ai/dsh-scope':
         specifier: workspace:*
         version: link:../../core/scope
@@ -13517,9 +13520,6 @@ importers:
       '@deepseek-ai/dsh-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../interaction/user-approval
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -14404,6 +14404,9 @@ importers:
       '@berry-ai/harness-sandbox-policy':
         specifier: workspace:*
         version: link:../../sandbox/sandbox-policy
+      '@berry-ai/harness-user-questions':
+        specifier: workspace:*
+        version: link:../../interaction/user-questions
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -14431,9 +14434,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-questions':
-        specifier: workspace:*
-        version: link:../../interaction/user-questions
       '@types/js-yaml':
         specifier: ^4.0.9
         version: 4.0.9
@@ -14447,6 +14447,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@berry-ai/harness-user-questions':
+        specifier: workspace:*
+        version: link:../../interaction/user-questions
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -14480,9 +14483,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-user-questions':
-        specifier: workspace:*
-        version: link:../../interaction/user-questions
 
   packages/typert/generator:
     dependencies:
@@ -15047,6 +15047,9 @@ importers:
       '@berry-ai/harness-command-goal':
         specifier: workspace:*
         version: link:../../packages/goal/command-goal
+      '@berry-ai/harness-commands':
+        specifier: workspace:*
+        version: link:../../packages/interaction/commands
       '@berry-ai/harness-config-editor':
         specifier: workspace:*
         version: link:../../packages/boot/config-editor
@@ -15086,6 +15089,9 @@ importers:
       '@berry-ai/harness-output-retention':
         specifier: workspace:*
         version: link:../../packages/util/output-retention
+      '@berry-ai/harness-permission-presets':
+        specifier: workspace:*
+        version: link:../../packages/interaction/permission-presets
       '@berry-ai/harness-persona':
         specifier: workspace:*
         version: link:../../packages/preset/persona
@@ -15143,6 +15149,9 @@ importers:
       '@berry-ai/harness-timeout':
         specifier: workspace:*
         version: link:../../packages/util/timeout
+      '@berry-ai/harness-tool-ask-user':
+        specifier: workspace:*
+        version: link:../../packages/interaction/tool-ask-user
       '@berry-ai/harness-tool-call-timeout-policy':
         specifier: workspace:*
         version: link:../../packages/guard/timeout-policy
@@ -15164,6 +15173,12 @@ importers:
       '@berry-ai/harness-tool-workflow':
         specifier: workspace:*
         version: link:../../packages/workflow/tool-workflow
+      '@berry-ai/harness-user-approval':
+        specifier: workspace:*
+        version: link:../../packages/interaction/user-approval
+      '@berry-ai/harness-user-questions':
+        specifier: workspace:*
+        version: link:../../packages/interaction/user-questions
       '@berry-ai/harness-util-time':
         specifier: workspace:*
         version: link:../../packages/util/time
@@ -15242,9 +15257,6 @@ importers:
       '@deepseek-ai/dsh-command-compact':
         specifier: workspace:*
         version: link:../../packages/compaction/command-compact
-      '@deepseek-ai/dsh-commands':
-        specifier: workspace:*
-        version: link:../../packages/interaction/commands
       '@deepseek-ai/dsh-compaction':
         specifier: workspace:*
         version: link:../../packages/compaction/compaction
@@ -15308,9 +15320,6 @@ importers:
       '@deepseek-ai/dsh-llm-retry':
         specifier: workspace:*
         version: link:../../packages/llm/llm-retry
-      '@deepseek-ai/dsh-permission-presets':
-        specifier: workspace:*
-        version: link:../../packages/interaction/permission-presets
       '@deepseek-ai/dsh-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../packages/llm/plugin-package-inventory-deepseek
@@ -15398,9 +15407,6 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../packages/llm/token-meter
-      '@deepseek-ai/dsh-tool-ask-user':
-        specifier: workspace:*
-        version: link:../../packages/interaction/tool-ask-user
       '@deepseek-ai/dsh-tool-bash':
         specifier: workspace:*
         version: link:../../packages/shell/tool-bash
@@ -15452,12 +15458,6 @@ importers:
       '@deepseek-ai/dsh-typert-registry':
         specifier: workspace:*
         version: link:../../packages/typert/registry
-      '@deepseek-ai/dsh-user-approval':
-        specifier: workspace:*
-        version: link:../../packages/interaction/user-approval
-      '@deepseek-ai/dsh-user-questions':
-        specifier: workspace:*
-        version: link:../../packages/interaction/user-questions
       '@deepseek-ai/dsh-web':
         specifier: workspace:*
         version: link:../../packages/web/web

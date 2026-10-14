@@ -70,9 +70,9 @@
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-user-approval": "workspace:*",
+    "@berry-ai/harness-user-approval": "workspace:*",
     "@berry-ai/harness-util-time": "workspace:*",
-    "@deepseek-ai/dsh-permission-presets": "workspace:*",
+    "@berry-ai/harness-permission-presets": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
   },
@@ -80,7 +80,7 @@
     "@berry-ai/harness-agent-preset-registry": {
       "optional": true
     },
-    "@deepseek-ai/dsh-permission-presets": {
+    "@berry-ai/harness-permission-presets": {
       "optional": true
     },
     "@berry-ai/harness-sandbox": {
@@ -101,7 +101,7 @@
     "@berry-ai/harness-workspace": {
       "optional": true
     },
-    "@deepseek-ai/dsh-user-approval": {
+    "@berry-ai/harness-user-approval": {
       "optional": true
     }
   },
@@ -121,9 +121,9 @@
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-user-approval": "workspace:*",
+    "@berry-ai/harness-user-approval": "workspace:*",
     "@berry-ai/harness-util-time": "workspace:*",
-    "@deepseek-ai/dsh-permission-presets": "workspace:*",
+    "@berry-ai/harness-permission-presets": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",

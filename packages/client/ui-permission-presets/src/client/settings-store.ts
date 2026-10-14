@@ -11,7 +11,7 @@ import {
   createSnapshotStore, type SnapshotStore,
 } from '@deepseek-ai/dsh-client-store'
 import type { SettingsDescribeFace } from '@deepseek-ai/dsh-client-ui-settings/client'
-import type { PermissionCatalog } from '@deepseek-ai/dsh-permission-presets/client'
+import type { PermissionCatalog } from '@berry-ai/harness-permission-presets/client'
 import type { PermissionCatalogDirectory } from './catalog.ts'
 import { displayPermissionPreset } from './presentation.ts'
 

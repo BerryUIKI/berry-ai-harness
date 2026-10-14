@@ -208,7 +208,7 @@
         }
       },
       {
-        "definitionId": "@deepseek-ai/dsh-permission-presets",
+        "definitionId": "@berry-ai/harness-permission-presets",
         "name": "permission",
         "description": "Switch the permission preset (sandbox mode + approval policy)",
         "input": {

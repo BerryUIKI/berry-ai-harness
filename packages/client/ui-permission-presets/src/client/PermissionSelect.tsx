@@ -9,7 +9,7 @@ import type { MenuEntry } from '@deepseek-ai/dsh-client-ui-primitives'
 import type {
   HostObservable, InjectFace, PropsLocale, PropsRuntime,
 } from '@deepseek-ai/dsh-client-ui-slots'
-import type { PresetOption } from '@deepseek-ai/dsh-permission-presets/client'
+import type { PresetOption } from '@berry-ai/harness-permission-presets/client'
 // Type-only: pulls the conversation-owned permission slot declaration and
 // the standard session projection hook into this package's Client face.
 import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'

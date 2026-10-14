@@ -24,12 +24,12 @@
     workspaceRoot: !!js process.cwd()
 
 - id: approval
-  name: '@deepseek-ai/dsh-user-approval'
+  name: '@berry-ai/harness-user-approval'
   config:
     policy: never
 
 - id: permission
-  name: '@deepseek-ai/dsh-permission-presets'
+  name: '@berry-ai/harness-permission-presets'
   disabled: true
 
 - id: bash-sandbox

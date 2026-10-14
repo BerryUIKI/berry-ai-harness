@@ -9,8 +9,8 @@ import AgentRegistry, { agentEvents, type Agent } from '@deepseek-ai/dsh-agent'
 import { createScope } from '@deepseek-ai/dsh-scope'
 import UserQuestionService, {
   UserQuestionError, type AskUserQuestionAnswer, type AskUserQuestionRequest,
-} from '@deepseek-ai/dsh-user-questions'
-import CommandRuntime from '@deepseek-ai/dsh-commands'
+} from '@berry-ai/harness-user-questions'
+import CommandRuntime from '@berry-ai/harness-commands'
 import { PtcRuntime, type PtcRunRequest, type PtcRunResult } from '@berry-ai/harness-ptc-runtime'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { turnBoundaryProjectionDefinition } from '@deepseek-ai/dsh-agent-loop'

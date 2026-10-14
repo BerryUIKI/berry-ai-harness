@@ -6,7 +6,7 @@
  * browser half-entry's re-export) for client aggregates — with zero content
  * duplication.
  *
- * @module @deepseek-ai/dsh-permission-presets/types
+ * @module @berry-ai/harness-permission-presets/types
  */
 
 /** Presentation for an available preset or the derived `custom` current value. */

@@ -22,10 +22,10 @@ import {
   type ToolSchema,
 } from '@deepseek-ai/dsh-llm'
 import { deepFreeze } from '@berry-ai/harness-util-values'
-import { AUTO_PRESET } from '@deepseek-ai/dsh-permission-presets'
+import { AUTO_PRESET } from '@berry-ai/harness-permission-presets'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 import type {} from '@deepseek-ai/dsh-subagent'
-import type {} from '@deepseek-ai/dsh-user-approval'
+import type {} from '@berry-ai/harness-user-approval'
 import {
   RUN_CODE_NAME,
   type PreToolDecision,

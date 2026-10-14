@@ -18,16 +18,16 @@ import { API_REMOTE_FORWARDED_EVENTS } from './remote-events.ts'
 // declarations for every allowlisted event. Pulling them into this face is what
 // makes the shape assertion below judge real signatures rather than an empty
 // event vocabulary.
-import type {} from '@deepseek-ai/dsh-commands/types'
+import type {} from '@berry-ai/harness-commands/types'
 import type {} from '@deepseek-ai/dsh-cordis-host-runner/types'
 import type {} from '@deepseek-ai/dsh-credentials/types'
 import type {} from '@berry-ai/harness-goal/types'
 import type {} from '@deepseek-ai/dsh-llm/types'
 import type {} from '@berry-ai/harness-agent-preset-registry/types'
-import type {} from '@deepseek-ai/dsh-permission-presets/types'
+import type {} from '@berry-ai/harness-permission-presets/types'
 import type {} from '@berry-ai/harness-settings/types'
-import type {} from '@deepseek-ai/dsh-user-approval'
-import type {} from '@deepseek-ai/dsh-user-questions'
+import type {} from '@berry-ai/harness-user-approval'
+import type {} from '@berry-ai/harness-user-questions'
 export type {} from '@deepseek-ai/dsh-api-session-controller/types'
 
 export { API_REMOTE_FORWARDED_EVENTS } from './remote-events.ts'

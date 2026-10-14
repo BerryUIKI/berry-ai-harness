@@ -1,11 +1,11 @@
 /** Session-log download command and Host-owned streaming route. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { CommandDefinitionId } from '@deepseek-ai/dsh-commands/brand'
+import type { CommandDefinitionId } from '@berry-ai/harness-commands/brand'
 import Schema from '@deepseek-ai/schemastery'
 import { brandString } from '@berry-ai/harness-brand'
 import type {} from '@berry-ai/harness-attachment'
-import type { CommandResult } from '@deepseek-ai/dsh-commands'
+import type { CommandResult } from '@berry-ai/harness-commands'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import {
   DEFAULT_SESSION_LOG_COMPRESSION_LEVEL,

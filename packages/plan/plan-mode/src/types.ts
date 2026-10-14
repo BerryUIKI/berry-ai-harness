@@ -8,7 +8,7 @@
  * @module @berry-ai/harness-plan-mode/types
  */
 
-import type { CommandId } from '@deepseek-ai/dsh-commands/brand'
+import type { CommandId } from '@berry-ai/harness-commands/brand'
 
 /**
  * The plan projection's wire value. `active` is the logged state in force

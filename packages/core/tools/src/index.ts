@@ -19,7 +19,7 @@ import type { PtcRuntime } from '@berry-ai/harness-ptc-runtime'
 import type {} from '@berry-ai/harness-sandbox-policy'
 // Type-only: makes `ctx.get('approval')` resolve to the ApprovalService
 // augmentation. The seam stays optional at runtime — see `serviceAsk`.
-import type {} from '@deepseek-ai/dsh-user-approval'
+import type {} from '@berry-ai/harness-user-approval'
 import type { ToolCallView, ToolResultView } from './presentation.ts'
 import { assertSupportedJsonSchema, validateJsonSchemaValue } from './json-schema.ts'
 import type { JsonSchemaNode } from './json-schema.ts'

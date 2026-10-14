@@ -4,8 +4,8 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { CommandDefinitionId } from '@deepseek-ai/dsh-commands/brand'
-import type { CommandInvocation, CommandResult } from '@deepseek-ai/dsh-commands'
+import { CommandDefinitionId } from '@berry-ai/harness-commands/brand'
+import type { CommandInvocation, CommandResult } from '@berry-ai/harness-commands'
 import { GoalError } from '@berry-ai/harness-goal'
 import type { GoalPhase, GoalRef, GoalView } from '@berry-ai/harness-goal'
 import { createUserMessage } from '@deepseek-ai/dsh-llm'

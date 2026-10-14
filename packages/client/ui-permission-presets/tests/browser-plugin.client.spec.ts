@@ -20,7 +20,7 @@ import type { CommandDecoration, PopupSelectSpec } from '@deepseek-ai/dsh-client
 import { PopupSelectController } from '@deepseek-ai/dsh-client-ui-commands/client'
 import type {
   PermissionCatalog, PermissionSelection,
-} from '@deepseek-ai/dsh-permission-presets/client'
+} from '@berry-ai/harness-permission-presets/client'
 import {
   PermissionRow, type PermissionRowInjected,
 } from '../src/client/PermissionRow.tsx'

@@ -9,8 +9,8 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { CommandDefinitionId } from '@deepseek-ai/dsh-commands/brand'
-import type { CommandInvocation, CommandResult } from '@deepseek-ai/dsh-commands'
+import { CommandDefinitionId } from '@berry-ai/harness-commands/brand'
+import type { CommandInvocation, CommandResult } from '@berry-ai/harness-commands'
 import type { Session } from '@deepseek-ai/dsh-session'
 import { getOrCreateAnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import { TypertRemoteService, Remote } from '@deepseek-ai/dsh-typert-protocol'

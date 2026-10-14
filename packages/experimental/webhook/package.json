@@ -37,7 +37,7 @@
     "@deepseek-ai/dsh-agent-default-model": "workspace:*",
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-permission-presets": "workspace:*",
+    "@berry-ai/harness-permission-presets": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-title": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*"
@@ -50,7 +50,7 @@
     "@deepseek-ai/dsh-agent-default-model": "workspace:*",
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-permission-presets": "workspace:*",
+    "@berry-ai/harness-permission-presets": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-title": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*"
