@@ -241,6 +241,15 @@ importers:
       '@berry-ai/harness-cmdline':
         specifier: workspace:*
         version: link:../../packages/boot/cmdline
+      '@berry-ai/harness-command-goal':
+        specifier: workspace:*
+        version: link:../../packages/goal/command-goal
+      '@berry-ai/harness-goal':
+        specifier: workspace:*
+        version: link:../../packages/goal/goal
+      '@berry-ai/harness-goal-round-driver':
+        specifier: workspace:*
+        version: link:../../packages/goal/goal-round-driver
       '@berry-ai/harness-hmr':
         specifier: workspace:*
         version: link:../../packages/boot/hmr
@@ -280,6 +289,9 @@ importers:
       '@berry-ai/harness-terminal-bash':
         specifier: workspace:*
         version: link:../../packages/terminal/terminal-bash
+      '@berry-ai/harness-tool-goal':
+        specifier: workspace:*
+        version: link:../../packages/goal/tool-goal
       '@berry-ai/harness-tool-jobs':
         specifier: workspace:*
         version: link:../../packages/jobs/tool-jobs
@@ -292,6 +304,12 @@ importers:
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../packages/todo/tool-todo
+      '@berry-ai/harness-tool-workflow':
+        specifier: workspace:*
+        version: link:../../packages/workflow/tool-workflow
+      '@berry-ai/harness-workflow-ptc':
+        specifier: workspace:*
+        version: link:../../packages/workflow/workflow-ptc
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../vendor/cordis
@@ -325,9 +343,6 @@ importers:
       '@deepseek-ai/dsh-command-compact':
         specifier: workspace:*
         version: link:../../packages/compaction/command-compact
-      '@deepseek-ai/dsh-command-goal':
-        specifier: workspace:*
-        version: link:../../packages/goal/command-goal
       '@deepseek-ai/dsh-compaction-basic':
         specifier: workspace:*
         version: link:../../packages/compaction/compaction-basic
@@ -373,12 +388,6 @@ importers:
       '@deepseek-ai/dsh-fs-local':
         specifier: workspace:*
         version: link:../../packages/fs/fs-local
-      '@deepseek-ai/dsh-goal':
-        specifier: workspace:*
-        version: link:../../packages/goal/goal
-      '@deepseek-ai/dsh-goal-round-driver':
-        specifier: workspace:*
-        version: link:../../packages/goal/goal-round-driver
       '@deepseek-ai/dsh-headless':
         specifier: workspace:*
         version: link:../../packages/bundle/headless
@@ -436,9 +445,6 @@ importers:
       '@deepseek-ai/dsh-tool-fs-search':
         specifier: workspace:*
         version: link:../../packages/fs/tool-fs-search
-      '@deepseek-ai/dsh-tool-goal':
-        specifier: workspace:*
-        version: link:../../packages/goal/tool-goal
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh
@@ -460,18 +466,12 @@ importers:
       '@deepseek-ai/dsh-tool-web':
         specifier: workspace:*
         version: link:../../packages/web/tool-web
-      '@deepseek-ai/dsh-tool-workflow':
-        specifier: workspace:*
-        version: link:../../packages/workflow/tool-workflow
       '@deepseek-ai/dsh-tool-workspace-dependencies':
         specifier: workspace:*
         version: link:../../packages/skill/tool-workspace-dependencies
       '@deepseek-ai/dsh-web-app':
         specifier: workspace:*
         version: link:../../packages/bundle/web-app
-      '@deepseek-ai/dsh-workflow-ptc':
-        specifier: workspace:*
-        version: link:../../packages/workflow/workflow-ptc
       '@deepseek-ai/schemastery':
         specifier: link:../../vendor/schemastery
         version: link:../../vendor/schemastery
@@ -1286,6 +1286,9 @@ importers:
       '@berry-ai/harness-command-feedback':
         specifier: workspace:*
         version: link:../../feedback/command-feedback
+      '@berry-ai/harness-goal':
+        specifier: workspace:*
+        version: link:../../goal/goal
       '@berry-ai/harness-message-feedback':
         specifier: workspace:*
         version: link:../../feedback/message-feedback
@@ -1358,9 +1361,6 @@ importers:
       '@deepseek-ai/dsh-file-reference':
         specifier: workspace:*
         version: link:../../context/file-reference
-      '@deepseek-ai/dsh-goal':
-        specifier: workspace:*
-        version: link:../../goal/goal
       '@deepseek-ai/dsh-host-plugin-inventory':
         specifier: workspace:*
         version: link:../../host/plugin-inventory
@@ -2044,9 +2044,18 @@ importers:
       '@berry-ai/harness-command-feedback':
         specifier: workspace:*
         version: link:../../feedback/command-feedback
+      '@berry-ai/harness-command-goal':
+        specifier: workspace:*
+        version: link:../../goal/command-goal
       '@berry-ai/harness-config-editor':
         specifier: workspace:*
         version: link:../../boot/config-editor
+      '@berry-ai/harness-goal':
+        specifier: workspace:*
+        version: link:../../goal/goal
+      '@berry-ai/harness-goal-round-driver':
+        specifier: workspace:*
+        version: link:../../goal/goal-round-driver
       '@berry-ai/harness-hmr':
         specifier: workspace:*
         version: link:../../boot/hmr
@@ -2092,6 +2101,9 @@ importers:
       '@berry-ai/harness-tool-call-timeout-policy':
         specifier: workspace:*
         version: link:../../guard/timeout-policy
+      '@berry-ai/harness-tool-goal':
+        specifier: workspace:*
+        version: link:../../goal/tool-goal
       '@berry-ai/harness-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
@@ -2101,6 +2113,12 @@ importers:
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../todo/tool-todo
+      '@berry-ai/harness-tool-workflow':
+        specifier: workspace:*
+        version: link:../../workflow/tool-workflow
+      '@berry-ai/harness-workflow-ptc':
+        specifier: workspace:*
+        version: link:../../workflow/workflow-ptc
       '@deepseek-ai/cordis-plugin-timer':
         specifier: workspace:~
         version: link:../../../vendor/timer
@@ -2128,9 +2146,6 @@ importers:
       '@deepseek-ai/dsh-command-compact':
         specifier: workspace:*
         version: link:../../compaction/command-compact
-      '@deepseek-ai/dsh-command-goal':
-        specifier: workspace:*
-        version: link:../../goal/command-goal
       '@deepseek-ai/dsh-commands':
         specifier: workspace:*
         version: link:../../interaction/commands
@@ -2161,12 +2176,6 @@ importers:
       '@deepseek-ai/dsh-fs-sandbox':
         specifier: workspace:*
         version: link:../../fs/fs-sandbox
-      '@deepseek-ai/dsh-goal':
-        specifier: workspace:*
-        version: link:../../goal/goal
-      '@deepseek-ai/dsh-goal-round-driver':
-        specifier: workspace:*
-        version: link:../../goal/goal-round-driver
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -2263,9 +2272,6 @@ importers:
       '@deepseek-ai/dsh-tool-fs-search':
         specifier: workspace:*
         version: link:../../fs/tool-fs-search
-      '@deepseek-ai/dsh-tool-goal':
-        specifier: workspace:*
-        version: link:../../goal/tool-goal
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh
@@ -2281,9 +2287,6 @@ importers:
       '@deepseek-ai/dsh-tool-web':
         specifier: workspace:*
         version: link:../../web/tool-web
-      '@deepseek-ai/dsh-tool-workflow':
-        specifier: workspace:*
-        version: link:../../workflow/tool-workflow
       '@deepseek-ai/dsh-tool-working-directory':
         specifier: workspace:*
         version: link:../../session/tool-working-directory
@@ -2311,9 +2314,6 @@ importers:
       '@deepseek-ai/dsh-web-search-deepseek':
         specifier: workspace:*
         version: link:../../web/web-search-deepseek
-      '@deepseek-ai/dsh-workflow-ptc':
-        specifier: workspace:*
-        version: link:../../workflow/workflow-ptc
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -2510,6 +2510,9 @@ importers:
       '@berry-ai/harness-cmdline':
         specifier: workspace:*
         version: link:../../boot/cmdline
+      '@berry-ai/harness-command-goal':
+        specifier: workspace:*
+        version: link:../../goal/command-goal
       '@berry-ai/harness-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
@@ -2537,6 +2540,9 @@ importers:
       '@berry-ai/harness-terminal-bash':
         specifier: workspace:*
         version: link:../../terminal/terminal-bash
+      '@berry-ai/harness-tool-goal':
+        specifier: workspace:*
+        version: link:../../goal/tool-goal
       '@berry-ai/harness-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
@@ -2549,6 +2555,12 @@ importers:
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../todo/tool-todo
+      '@berry-ai/harness-tool-workflow':
+        specifier: workspace:*
+        version: link:../../workflow/tool-workflow
+      '@berry-ai/harness-workflow-ptc':
+        specifier: workspace:*
+        version: link:../../workflow/workflow-ptc
       '@berry-ai/harness-workspace':
         specifier: workspace:*
         version: link:../../workspace/workspace
@@ -2765,9 +2777,6 @@ importers:
       '@deepseek-ai/dsh-command-compact':
         specifier: workspace:*
         version: link:../../compaction/command-compact
-      '@deepseek-ai/dsh-command-goal':
-        specifier: workspace:*
-        version: link:../../goal/command-goal
       '@deepseek-ai/dsh-compaction-basic':
         specifier: workspace:*
         version: link:../../compaction/compaction-basic
@@ -2849,9 +2858,6 @@ importers:
       '@deepseek-ai/dsh-tool-fs-search':
         specifier: workspace:*
         version: link:../../fs/tool-fs-search
-      '@deepseek-ai/dsh-tool-goal':
-        specifier: workspace:*
-        version: link:../../goal/tool-goal
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh
@@ -2870,15 +2876,9 @@ importers:
       '@deepseek-ai/dsh-tool-web':
         specifier: workspace:*
         version: link:../../web/tool-web
-      '@deepseek-ai/dsh-tool-workflow':
-        specifier: workspace:*
-        version: link:../../workflow/tool-workflow
       '@deepseek-ai/dsh-web-frontend':
         specifier: workspace:*
         version: link:../../../apps/web
-      '@deepseek-ai/dsh-workflow-ptc':
-        specifier: workspace:*
-        version: link:../../workflow/workflow-ptc
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -3587,6 +3587,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-goal':
+        specifier: workspace:*
+        version: link:../../goal/goal
       '@berry-ai/harness-plan-mode':
         specifier: workspace:*
         version: link:../../plan/plan-mode
@@ -3668,9 +3671,6 @@ importers:
       '@deepseek-ai/dsh-file-reference':
         specifier: workspace:*
         version: link:../../context/file-reference
-      '@deepseek-ai/dsh-goal':
-        specifier: workspace:*
-        version: link:../../goal/goal
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -3921,6 +3921,9 @@ importers:
 
   packages/client/ui-goal:
     devDependencies:
+      '@berry-ai/harness-goal':
+        specifier: workspace:*
+        version: link:../../goal/goal
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -3957,9 +3960,6 @@ importers:
       '@deepseek-ai/dsh-commands':
         specifier: workspace:*
         version: link:../../interaction/commands
-      '@deepseek-ai/dsh-goal':
-        specifier: workspace:*
-        version: link:../../goal/goal
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -6280,6 +6280,12 @@ importers:
 
   packages/client/ui-workflow-run:
     devDependencies:
+      '@berry-ai/harness-tool-workflow':
+        specifier: workspace:*
+        version: link:../../workflow/tool-workflow
+      '@berry-ai/harness-workflow':
+        specifier: workspace:*
+        version: link:../../workflow/workflow
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -6319,12 +6325,6 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-tool-workflow':
-        specifier: workspace:*
-        version: link:../../workflow/tool-workflow
-      '@deepseek-ai/dsh-workflow':
-        specifier: workspace:*
-        version: link:../../workflow/workflow
       '@types/react':
         specifier: ~18.3.1
         version: 18.3.31
@@ -8569,12 +8569,12 @@ importers:
 
   packages/experimental/ralph-bundle:
     dependencies:
+      '@berry-ai/harness-workflow-ptc':
+        specifier: workspace:*
+        version: link:../../workflow/workflow-ptc
       '@deepseek-ai/dsh-tool-ralph':
         specifier: workspace:*
         version: link:../tool-ralph
-      '@deepseek-ai/dsh-workflow-ptc':
-        specifier: workspace:*
-        version: link:../../workflow/workflow-ptc
     devDependencies:
       '@deepseek-ai/cordis':
         specifier: workspace:~
@@ -8845,6 +8845,12 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-workflow':
+        specifier: workspace:*
+        version: link:../../workflow/workflow
+      '@berry-ai/harness-workflow-ptc':
+        specifier: workspace:*
+        version: link:../../workflow/workflow-ptc
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -8884,12 +8890,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-workflow':
-        specifier: workspace:*
-        version: link:../../workflow/workflow
-      '@deepseek-ai/dsh-workflow-ptc':
-        specifier: workspace:*
-        version: link:../../workflow/workflow-ptc
 
   packages/experimental/tool-session-query:
     dependencies:
@@ -9891,6 +9891,9 @@ importers:
 
   packages/goal/command-goal:
     devDependencies:
+      '@berry-ai/harness-goal':
+        specifier: workspace:*
+        version: link:../goal
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9909,9 +9912,6 @@ importers:
       '@deepseek-ai/dsh-commands':
         specifier: workspace:*
         version: link:../../interaction/commands
-      '@deepseek-ai/dsh-goal':
-        specifier: workspace:*
-        version: link:../goal
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -9979,6 +9979,9 @@ importers:
 
   packages/goal/goal-round-driver:
     devDependencies:
+      '@berry-ai/harness-goal':
+        specifier: workspace:*
+        version: link:../goal
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -9991,9 +9994,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-goal':
-        specifier: workspace:*
-        version: link:../goal
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -10016,6 +10016,9 @@ importers:
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
     devDependencies:
+      '@berry-ai/harness-goal':
+        specifier: workspace:*
+        version: link:../goal
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -10031,9 +10034,6 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-goal':
-        specifier: workspace:*
-        version: link:../goal
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
@@ -14847,6 +14847,12 @@ importers:
       '@berry-ai/harness-tool-jobs':
         specifier: workspace:*
         version: link:../../jobs/tool-jobs
+      '@berry-ai/harness-workflow':
+        specifier: workspace:*
+        version: link:../workflow
+      '@berry-ai/harness-workflow-ptc':
+        specifier: workspace:*
+        version: link:../workflow-ptc
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -14874,12 +14880,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-workflow':
-        specifier: workspace:*
-        version: link:../workflow
-      '@deepseek-ai/dsh-workflow-ptc':
-        specifier: workspace:*
-        version: link:../workflow-ptc
 
   packages/workflow/workflow:
     devDependencies:
@@ -14920,6 +14920,9 @@ importers:
       '@berry-ai/harness-ptc-runtime-node':
         specifier: workspace:*
         version: link:../../ptc-runtime/ptc-runtime-node
+      '@berry-ai/harness-workflow':
+        specifier: workspace:*
+        version: link:../workflow
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -14980,9 +14983,6 @@ importers:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-workflow':
-        specifier: workspace:*
-        version: link:../workflow
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
@@ -15044,9 +15044,18 @@ importers:
       '@berry-ai/harness-command-feedback':
         specifier: workspace:*
         version: link:../../packages/feedback/command-feedback
+      '@berry-ai/harness-command-goal':
+        specifier: workspace:*
+        version: link:../../packages/goal/command-goal
       '@berry-ai/harness-config-editor':
         specifier: workspace:*
         version: link:../../packages/boot/config-editor
+      '@berry-ai/harness-goal':
+        specifier: workspace:*
+        version: link:../../packages/goal/goal
+      '@berry-ai/harness-goal-round-driver':
+        specifier: workspace:*
+        version: link:../../packages/goal/goal-round-driver
       '@berry-ai/harness-home-paths':
         specifier: workspace:*
         version: link:../../packages/util/home-paths
@@ -15122,6 +15131,9 @@ importers:
       '@berry-ai/harness-tool-call-timeout-policy':
         specifier: workspace:*
         version: link:../../packages/guard/timeout-policy
+      '@berry-ai/harness-tool-goal':
+        specifier: workspace:*
+        version: link:../../packages/goal/tool-goal
       '@berry-ai/harness-tool-jobs':
         specifier: workspace:*
         version: link:../../packages/jobs/tool-jobs
@@ -15134,6 +15146,9 @@ importers:
       '@berry-ai/harness-tool-todo':
         specifier: workspace:*
         version: link:../../packages/todo/tool-todo
+      '@berry-ai/harness-tool-workflow':
+        specifier: workspace:*
+        version: link:../../packages/workflow/tool-workflow
       '@berry-ai/harness-util-time':
         specifier: workspace:*
         version: link:../../packages/util/time
@@ -15143,6 +15158,12 @@ importers:
       '@berry-ai/harness-util-workspace-path':
         specifier: workspace:*
         version: link:../../packages/util/workspace-path
+      '@berry-ai/harness-workflow':
+        specifier: workspace:*
+        version: link:../../packages/workflow/workflow
+      '@berry-ai/harness-workflow-ptc':
+        specifier: workspace:*
+        version: link:../../packages/workflow/workflow-ptc
       '@berry-ai/harness-workspace':
         specifier: workspace:*
         version: link:../../packages/workspace/workspace
@@ -15206,9 +15227,6 @@ importers:
       '@deepseek-ai/dsh-command-compact':
         specifier: workspace:*
         version: link:../../packages/compaction/command-compact
-      '@deepseek-ai/dsh-command-goal':
-        specifier: workspace:*
-        version: link:../../packages/goal/command-goal
       '@deepseek-ai/dsh-commands':
         specifier: workspace:*
         version: link:../../packages/interaction/commands
@@ -15251,12 +15269,6 @@ importers:
       '@deepseek-ai/dsh-fs-sandbox':
         specifier: workspace:*
         version: link:../../packages/fs/fs-sandbox
-      '@deepseek-ai/dsh-goal':
-        specifier: workspace:*
-        version: link:../../packages/goal/goal
-      '@deepseek-ai/dsh-goal-round-driver':
-        specifier: workspace:*
-        version: link:../../packages/goal/goal-round-driver
       '@deepseek-ai/dsh-host-plugin-inventory':
         specifier: workspace:*
         version: link:../../packages/host/plugin-inventory
@@ -15404,9 +15416,6 @@ importers:
       '@deepseek-ai/dsh-tool-fs-search':
         specifier: workspace:*
         version: link:../../packages/fs/tool-fs-search
-      '@deepseek-ai/dsh-tool-goal':
-        specifier: workspace:*
-        version: link:../../packages/goal/tool-goal
       '@deepseek-ai/dsh-tool-pwsh':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh
@@ -15428,9 +15437,6 @@ importers:
       '@deepseek-ai/dsh-tool-web':
         specifier: workspace:*
         version: link:../../packages/web/tool-web
-      '@deepseek-ai/dsh-tool-workflow':
-        specifier: workspace:*
-        version: link:../../packages/workflow/tool-workflow
       '@deepseek-ai/dsh-tool-working-directory':
         specifier: workspace:*
         version: link:../../packages/session/tool-working-directory
@@ -15467,12 +15473,6 @@ importers:
       '@deepseek-ai/dsh-web-search-perplexity':
         specifier: workspace:*
         version: link:../../packages/web/web-search-perplexity
-      '@deepseek-ai/dsh-workflow':
-        specifier: workspace:*
-        version: link:../../packages/workflow/workflow
-      '@deepseek-ai/dsh-workflow-ptc':
-        specifier: workspace:*
-        version: link:../../packages/workflow/workflow-ptc
       '@deepseek-ai/dsh-working-directory':
         specifier: workspace:*
         version: link:../../packages/session/working-directory

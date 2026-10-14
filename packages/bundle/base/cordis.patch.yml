@@ -316,13 +316,13 @@
       name: '@berry-ai/harness-command-feedback'
 
     - id: goal
-      name: '@deepseek-ai/dsh-goal'
+      name: '@berry-ai/harness-goal'
 
     - id: goal-round-driver
-      name: '@deepseek-ai/dsh-goal-round-driver'
+      name: '@berry-ai/harness-goal-round-driver'
 
     - id: command-goal
-      name: '@deepseek-ai/dsh-command-goal'
+      name: '@berry-ai/harness-command-goal'
 
     - id: plan-mode
       name: '@berry-ai/harness-plan-mode'
@@ -393,12 +393,12 @@
       name: '@berry-ai/harness-ptc-runtime-node'
 
     - id: workflow-ptc
-      name: '@deepseek-ai/dsh-workflow-ptc'
+      name: '@berry-ai/harness-workflow-ptc'
       config:
         provider: spawn
 
     - id: tool-workflow
-      name: '@deepseek-ai/dsh-tool-workflow'
+      name: '@berry-ai/harness-tool-workflow'
 
     - id: timeout-policy
       name: '@berry-ai/harness-tool-call-timeout-policy'
@@ -437,7 +437,7 @@
     # Persisted same-session goals reach the model and the slash menu here; the
     # domain, driver, and `/goal` command are above.
     - id: tool-goal
-      name: '@deepseek-ai/dsh-tool-goal'
+      name: '@berry-ai/harness-tool-goal'
 
     # Consecutive-repeat reminders on the tool chain.
     - id: repeat-tool-reminder

@@ -41,19 +41,19 @@
     personaPrefix: You are a concise snapshot agent.
 
 - id: goal
-  name: '@deepseek-ai/dsh-goal'
+  name: '@berry-ai/harness-goal'
   disabled: true
 
 - id: goal-round-driver
-  name: '@deepseek-ai/dsh-goal-round-driver'
+  name: '@berry-ai/harness-goal-round-driver'
   disabled: true
 
 - id: command-goal
-  name: '@deepseek-ai/dsh-command-goal'
+  name: '@berry-ai/harness-command-goal'
   disabled: true
 
 - id: tool-goal
-  name: '@deepseek-ai/dsh-tool-goal'
+  name: '@berry-ai/harness-tool-goal'
   disabled: true
 
 - id: skill

@@ -5,8 +5,8 @@ import type { ChatConversationViewNode } from '@deepseek-ai/dsh-client-ui-chat/c
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type {
   ToolWorkflowAgentEndData, ToolWorkflowAgentStartData,
-} from '@deepseek-ai/dsh-tool-workflow/types'
-import type { WorkflowAgentOutcome, WorkflowStopReason } from '@deepseek-ai/dsh-workflow/types'
+} from '@berry-ai/harness-tool-workflow/types'
+import type { WorkflowAgentOutcome, WorkflowStopReason } from '@berry-ai/harness-workflow/types'
 
 /** Status shown for a workflow, phase, or member. */
 export type WorkflowRunStatus = 'running' | 'completed' | 'failed' | 'cancelled' | 'interrupted'

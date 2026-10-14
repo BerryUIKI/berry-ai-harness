@@ -241,10 +241,10 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-command-goal` | no | Human-facing slash command for persisted same-session goals |
-| `@deepseek-ai/dsh-goal` | yes | Event-sourced same-session goal state and lifecycle service for the DeepSeek Harness |
-| `@deepseek-ai/dsh-goal-round-driver` | no | Race-fenced same-session goal-round driver |
-| `@deepseek-ai/dsh-tool-goal` | yes | Model-facing same-session goal tools with execution-time authority checks |
+| `@berry-ai/harness-command-goal` | no | Human-facing slash command for persisted same-session goals |
+| `@berry-ai/harness-goal` | yes | Event-sourced same-session goal state and lifecycle service for the DeepSeek Harness |
+| `@berry-ai/harness-goal-round-driver` | no | Race-fenced same-session goal-round driver |
+| `@berry-ai/harness-tool-goal` | yes | Model-facing same-session goal tools with execution-time authority checks |
 
 ## guard
 
@@ -496,8 +496,8 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-tool-workflow` | yes | Model-facing workflow tool: run a JavaScript orchestration script over ctx.workflowEngine |
-| `@deepseek-ai/dsh-workflow-ptc` | yes | Workflow orchestration in the shared sandboxed Node PTC runtime |
+| `@berry-ai/harness-tool-workflow` | yes | Model-facing workflow tool: run a JavaScript orchestration script over ctx.workflowEngine |
+| `@berry-ai/harness-workflow-ptc` | yes | Workflow orchestration in the shared sandboxed Node PTC runtime |
 
 ## workspace
 

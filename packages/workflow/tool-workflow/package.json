@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tool-workflow",
+  "name": "@berry-ai/harness-tool-workflow",
   "description": "Model-facing workflow tool: run a JavaScript orchestration script over ctx.workflowEngine",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -39,7 +39,7 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-workflow": "workspace:*"
+    "@berry-ai/harness-workflow": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"
@@ -57,7 +57,7 @@
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-tool-jobs": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-workflow": "workspace:*",
-    "@deepseek-ai/dsh-workflow-ptc": "workspace:*"
+    "@berry-ai/harness-workflow": "workspace:*",
+    "@berry-ai/harness-workflow-ptc": "workspace:*"
   }
 }

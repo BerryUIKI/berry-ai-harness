@@ -17,8 +17,8 @@ import type { ContextFormed } from '@deepseek-ai/dsh-llm'
 import SessionStore from '@deepseek-ai/dsh-session'
 import type { Session } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import GoalService, { GoalId, applyGoalProjection, foldGoal, goalProjectionDefinition } from '@deepseek-ai/dsh-goal'
-import type { GoalProjection, GoalProjectionState, GoalRef } from '@deepseek-ai/dsh-goal'
+import GoalService, { GoalId, applyGoalProjection, foldGoal, goalProjectionDefinition } from '@berry-ai/harness-goal'
+import type { GoalProjection, GoalProjectionState, GoalRef } from '@berry-ai/harness-goal'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 
 declare module '@deepseek-ai/dsh-llm' {

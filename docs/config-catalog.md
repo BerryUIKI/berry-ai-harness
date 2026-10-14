@@ -81,6 +81,23 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-attachment-local -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-goal -->
+<a id="berry-aiharness-goal"></a>
+
+## `@berry-ai/harness-goal`
+
+- `inject`: `agents` · `sessionProjections`
+- `source`: [`packages/goal/goal/src/index.ts:172`](../packages/goal/goal/src/index.ts)
+
+```ts config-catalog
+/** Deployment defaults for goal creation. */
+export interface Config {
+  /** Total rounds used when a create request omits its own cap. */
+  defaultMaxGoalRounds?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-goal -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-hmr -->
 <a id="berry-aiharness-hmr"></a>
 
@@ -664,6 +681,23 @@ export type ShellDialect = 'bash' | 'pwsh'
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-terminal-bash -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-goal -->
+<a id="berry-aiharness-tool-goal"></a>
+
+## `@berry-ai/harness-tool-goal`
+
+- `inject`: `agents` · `goals` · `tools` · `systemPrompt` · `sessionProjections`
+- `source`: [`packages/goal/tool-goal/src/index.ts:32`](../packages/goal/tool-goal/src/index.ts)
+
+```ts config-catalog
+/** Model policy and hard lower bounds for goal-state updates. */
+export interface Config {
+  /** Minimum admitted goal rounds before the model may self-report `blocked`. */
+  blockedAfterConsecutiveRounds?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-goal -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-jobs -->
 <a id="berry-aiharness-tool-jobs"></a>
 
@@ -740,6 +774,58 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-tool-todo -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-workflow -->
+<a id="berry-aiharness-tool-workflow"></a>
+
+## `@berry-ai/harness-tool-workflow`
+
+- `inject`: `tools` · `workflowEngine` · `systemPrompt`
+- `source`: [`packages/workflow/tool-workflow/src/index.ts:44`](../packages/workflow/tool-workflow/src/index.ts)
+
+```ts config-catalog
+/** Config: the model-facing tool name plus result rendering caps. */
+export interface Config {
+  /** The model-facing tool name to register (default `workflow`). */
+  toolName?: string
+  /** Rendered-result ceiling, in characters: a longer JSON value is truncated with a notice (default 50000). */
+  maxResultChars?: number
+  /**
+   * Expose `run_in_background` (default true); disabled calls are also
+   * rejected. A background run needs a live `ctx.jobs` registry with a
+   * controller serving the caller (`dsh-jobs-local` plus `dsh-tool-jobs` in
+   * the shipped composition); without one the call fails with the missing
+   * piece named.
+   */
+  enableRunInBackground?: boolean
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-workflow -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-workflow-ptc -->
+<a id="berry-aiharness-workflow-ptc"></a>
+
+## `@berry-ai/harness-workflow-ptc`
+
+- `inject`: `subagents` · `ptcRuntime` · `sandboxPolicy` · `workingDirectory`
+- `source`: [`packages/workflow/workflow-ptc/src/index.ts:33`](../packages/workflow/workflow-ptc/src/index.ts)
+
+```ts config-catalog
+/** Plugin config (all optional — `static Config` supplies the defaults). */
+export interface Config {
+  /** The `ctx.subagents` provider children run on (default `spawn`). */
+  provider?: string
+  /** Concurrent `agent()` ceiling; `0` (the default) auto-resolves to `min(16, max(1, cores - 2))`. */
+  maxConcurrentAgents?: number
+  /** Total `agent()` calls one run may start — the runaway-loop backstop (default 1000). */
+  maxTotalAgents?: number
+  /** Items accepted by a single `parallel()`/`pipeline()` call (default 4096). */
+  maxItemsPerCall?: number
+  /** VM timeout for the script's initial synchronous slice (default 5000 ms). */
+  syncTimeoutMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-workflow-ptc -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-workspace-changes -->
 <a id="berry-aiharness-workspace-changes"></a>
@@ -2078,23 +2164,6 @@ export interface Config {
 export type Config = LocalConfig
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-fs-sandbox -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-goal -->
-<a id="deepseek-aidsh-goal"></a>
-
-## `@deepseek-ai/dsh-goal`
-
-- `inject`: `agents` · `sessionProjections`
-- `source`: [`packages/goal/goal/src/index.ts:172`](../packages/goal/goal/src/index.ts)
-
-```ts config-catalog
-/** Deployment defaults for goal creation. */
-export interface Config {
-  /** Total rounds used when a create request omits its own cap. */
-  defaultMaxGoalRounds?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-goal -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-headless -->
 <a id="deepseek-aidsh-headless"></a>
@@ -3850,23 +3919,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-fs-search -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-goal -->
-<a id="deepseek-aidsh-tool-goal"></a>
-
-## `@deepseek-ai/dsh-tool-goal`
-
-- `inject`: `agents` · `goals` · `tools` · `systemPrompt` · `sessionProjections`
-- `source`: [`packages/goal/tool-goal/src/index.ts:32`](../packages/goal/tool-goal/src/index.ts)
-
-```ts config-catalog
-/** Model policy and hard lower bounds for goal-state updates. */
-export interface Config {
-  /** Minimum admitted goal rounds before the model may self-report `blocked`. */
-  blockedAfterConsecutiveRounds?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-goal -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-lsp -->
 <a id="deepseek-aidsh-tool-lsp"></a>
 
@@ -4125,33 +4177,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-web -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-workflow -->
-<a id="deepseek-aidsh-tool-workflow"></a>
-
-## `@deepseek-ai/dsh-tool-workflow`
-
-- `inject`: `tools` · `workflowEngine` · `systemPrompt`
-- `source`: [`packages/workflow/tool-workflow/src/index.ts:44`](../packages/workflow/tool-workflow/src/index.ts)
-
-```ts config-catalog
-/** Config: the model-facing tool name plus result rendering caps. */
-export interface Config {
-  /** The model-facing tool name to register (default `workflow`). */
-  toolName?: string
-  /** Rendered-result ceiling, in characters: a longer JSON value is truncated with a notice (default 50000). */
-  maxResultChars?: number
-  /**
-   * Expose `run_in_background` (default true); disabled calls are also
-   * rejected. A background run needs a live `ctx.jobs` registry with a
-   * controller serving the caller (`dsh-jobs-local` plus `dsh-tool-jobs` in
-   * the shipped composition); without one the call fails with the missing
-   * piece named.
-   */
-  enableRunInBackground?: boolean
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-workflow -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-workspace-dependencies -->
 <a id="deepseek-aidsh-tool-workspace-dependencies"></a>
@@ -4448,31 +4473,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-webhook-github -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-workflow-ptc -->
-<a id="deepseek-aidsh-workflow-ptc"></a>
-
-## `@deepseek-ai/dsh-workflow-ptc`
-
-- `inject`: `subagents` · `ptcRuntime` · `sandboxPolicy` · `workingDirectory`
-- `source`: [`packages/workflow/workflow-ptc/src/index.ts:33`](../packages/workflow/workflow-ptc/src/index.ts)
-
-```ts config-catalog
-/** Plugin config (all optional — `static Config` supplies the defaults). */
-export interface Config {
-  /** The `ctx.subagents` provider children run on (default `spawn`). */
-  provider?: string
-  /** Concurrent `agent()` ceiling; `0` (the default) auto-resolves to `min(16, max(1, cores - 2))`. */
-  maxConcurrentAgents?: number
-  /** Total `agent()` calls one run may start — the runaway-loop backstop (default 1000). */
-  maxTotalAgents?: number
-  /** Items accepted by a single `parallel()`/`pipeline()` call (default 4096). */
-  maxItemsPerCall?: number
-  /** VM timeout for the script's initial synchronous slice (default 5000 ms). */
-  syncTimeoutMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-workflow-ptc -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-working-directory -->
 <a id="deepseek-aidsh-working-directory"></a>
 
@@ -4499,8 +4499,10 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | --- | --- | --- |
 | `@berry-ai/harness-browser-use` | — | [`packages/browser-use/browser-use/src/index.ts`](../packages/browser-use/browser-use/src/index.ts) |
 | `@berry-ai/harness-command-feedback` | `commands` | [`packages/feedback/command-feedback/src/index.ts`](../packages/feedback/command-feedback/src/index.ts) |
+| `@berry-ai/harness-command-goal` | `commands` · `goals` | [`packages/goal/command-goal/src/index.ts`](../packages/goal/command-goal/src/index.ts) |
 | `@berry-ai/harness-computer-use` | — | [`packages/computer-use/computer-use/src/index.ts`](../packages/computer-use/computer-use/src/index.ts) |
 | `@berry-ai/harness-config-editor` | `loader` · `profileContext` | [`packages/boot/config-editor/src/index.ts`](../packages/boot/config-editor/src/index.ts) |
+| `@berry-ai/harness-goal-round-driver` | `agents` · `goals` · `sessions` | [`packages/goal/goal-round-driver/src/index.ts`](../packages/goal/goal-round-driver/src/index.ts) |
 | `@berry-ai/harness-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
 | `@berry-ai/harness-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
 | `@berry-ai/harness-settings` | `configEditor` · `profileContext` | [`packages/settings/settings/src/index.ts`](../packages/settings/settings/src/index.ts) |
@@ -4565,7 +4567,6 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@deepseek-ai/dsh-client-ui-workflow-run` | — | [`packages/client/ui-workflow-run/src/index.ts`](../packages/client/ui-workflow-run/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-workspace` | — | [`packages/client/ui-workspace/src/index.ts`](../packages/client/ui-workspace/src/index.ts) |
 | `@deepseek-ai/dsh-command-compact` | `commands` · `compaction` | [`packages/compaction/command-compact/src/index.ts`](../packages/compaction/command-compact/src/index.ts) |
-| `@deepseek-ai/dsh-command-goal` | `commands` · `goals` | [`packages/goal/command-goal/src/index.ts`](../packages/goal/command-goal/src/index.ts) |
 | `@deepseek-ai/dsh-commands` | — | [`packages/interaction/commands/src/index.ts`](../packages/interaction/commands/src/index.ts) |
 | `@deepseek-ai/dsh-compaction-image-offload` | `agents` · `sessions` | [`packages/compaction/compaction-image-offload/src/index.ts`](../packages/compaction/compaction-image-offload/src/index.ts) |
 | `@deepseek-ai/dsh-cordis-client-runner` | — | [`packages/extensions/cordis-client-runner/src/index.ts`](../packages/extensions/cordis-client-runner/src/index.ts) |
@@ -4579,7 +4580,6 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@deepseek-ai/dsh-experimental-tool-worktree` | `tools` · `worktrees` | [`packages/experimental/tool-worktree/src/index.ts`](../packages/experimental/tool-worktree/src/index.ts) |
 | `@deepseek-ai/dsh-fs-observation-policy` | — | [`packages/fs/fs-observation-policy/src/index.ts`](../packages/fs/fs-observation-policy/src/index.ts) |
 | `@deepseek-ai/dsh-fs-ssh` | `ssh` · `sandboxPolicy` | [`packages/ssh/fs-ssh/src/index.ts`](../packages/ssh/fs-ssh/src/index.ts) |
-| `@deepseek-ai/dsh-goal-round-driver` | `agents` · `goals` · `sessions` | [`packages/goal/goal-round-driver/src/index.ts`](../packages/goal/goal-round-driver/src/index.ts) |
 | `@deepseek-ai/dsh-host-directory-picker-auto` | `webServer` · `connection` · `loader` | [`packages/host/directory-picker-auto/src/index.ts`](../packages/host/directory-picker-auto/src/index.ts) |
 | `@deepseek-ai/dsh-host-directory-picker-native` | — | [`packages/host/directory-picker-native/src/index.ts`](../packages/host/directory-picker-native/src/index.ts) |
 | `@deepseek-ai/dsh-host-plugin-inventory` | `loader` | [`packages/host/plugin-inventory/src/index.ts`](../packages/host/plugin-inventory/src/index.ts) |
@@ -4612,6 +4612,7 @@ Abstract service classes — a deployment loads a concrete implementation packag
 | `@berry-ai/harness-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
 | `@berry-ai/harness-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
 | `@berry-ai/harness-spill` | `SpillStore` | — | [`packages/spill/spill/src/index.ts`](../packages/spill/spill/src/index.ts) |
+| `@berry-ai/harness-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
 | `@deepseek-ai/dsh-compaction` | `CompactionEngine` | — | [`packages/compaction/compaction/src/index.ts`](../packages/compaction/compaction/src/index.ts) |
 | `@deepseek-ai/dsh-credentials` | `CredentialProvider` | — | [`packages/credentials/credentials/src/index.ts`](../packages/credentials/credentials/src/index.ts) |
 | `@deepseek-ai/dsh-deepseek-account` | `DeepSeekAccount` | — | [`packages/credentials/deepseek-account/src/index.ts`](../packages/credentials/deepseek-account/src/index.ts) |
@@ -4623,7 +4624,6 @@ Abstract service classes — a deployment loads a concrete implementation packag
 | `@deepseek-ai/dsh-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |
 | `@deepseek-ai/dsh-shell` | `ShellExecutor` | — | [`packages/shell/shell/src/index.ts`](../packages/shell/shell/src/index.ts) |
 | `@deepseek-ai/dsh-subprocess` | `SubprocessRuntime` | — | [`packages/subprocess/subprocess/src/index.ts`](../packages/subprocess/subprocess/src/index.ts) |
-| `@deepseek-ai/dsh-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
 <!-- END GENERATED config-catalog:seam -->
 
 ## Library packages (no plugin entry)

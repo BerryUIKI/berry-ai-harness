@@ -2,13 +2,13 @@
  * Browser-safe durable workflow-record events written by the model-facing
  * workflow tool into its calling parent Session.
  *
- * @module @deepseek-ai/dsh-tool-workflow/types
+ * @module @berry-ai/harness-tool-workflow/types
  */
 
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type {
   WorkflowAgentOutcome, WorkflowRunId, WorkflowStopReason,
-} from '@deepseek-ai/dsh-workflow/types'
+} from '@berry-ai/harness-workflow/types'
 
 /** Opens one durable top-level workflow run record. */
 export interface ToolWorkflowRunStartData {

@@ -7,7 +7,7 @@
  * aggregates — with zero content duplication. Host-coupled domain
  * vocabulary (message sources, events, fold shapes) lives in ./domain.ts.
  *
- * @module @deepseek-ai/dsh-goal/types
+ * @module @berry-ai/harness-goal/types
  */
 
 import type { Branded } from '@berry-ai/harness-brand'

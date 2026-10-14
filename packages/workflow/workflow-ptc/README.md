@@ -3,7 +3,7 @@ description: "Run workflow orchestration through the shared sandboxed PTC Node p
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-workflow-ptc
+# @berry-ai/harness-workflow-ptc
 
 English | [中文](README.zh.md)
 
@@ -32,8 +32,8 @@ Mount this engine in a composition that provides subagents, sandbox policy and t
 With those dependencies available, mount the engine and its model-facing consumer:
 
 ```yaml
-- name: '@deepseek-ai/dsh-workflow-ptc'
-- name: '@deepseek-ai/dsh-tool-workflow'
+- name: '@berry-ai/harness-workflow-ptc'
+- name: '@berry-ai/harness-tool-workflow'
 ```
 
 | Field | Default | Meaning |

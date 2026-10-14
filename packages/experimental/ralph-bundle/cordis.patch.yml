@@ -6,7 +6,7 @@
         workflowEngine: true
       config:
         - id: optional-ralph-workflow
-          name: '@deepseek-ai/dsh-workflow-ptc'
+          name: '@berry-ai/harness-workflow-ptc'
           config:
             provider: spawn
         - id: tool-ralph

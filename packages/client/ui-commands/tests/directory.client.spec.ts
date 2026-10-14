@@ -55,7 +55,7 @@ function bench() {
 describe('status and resolve (per key)', () => {
   it('resolves bilingual aliases by definition identity and retains exact-name priority', async () => {
     const goal = {
-      definitionId: CommandDefinitionId('@deepseek-ai/dsh-command-goal'),
+      definitionId: CommandDefinitionId('@berry-ai/harness-command-goal'),
       name: 'objective',
       description: 'Reworded description.',
     }

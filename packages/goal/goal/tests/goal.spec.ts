@@ -11,8 +11,8 @@ import GoalService, {
   GoalId,
   decodeGoalChange,
   foldGoal,
-} from '@deepseek-ai/dsh-goal'
-import type { GoalChangeMeta, GoalRef, GoalSnapshotChangeMeta } from '@deepseek-ai/dsh-goal'
+} from '@berry-ai/harness-goal'
+import type { GoalChangeMeta, GoalRef, GoalSnapshotChangeMeta } from '@berry-ai/harness-goal'
 import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
 
 declare module '@deepseek-ai/dsh-llm' {

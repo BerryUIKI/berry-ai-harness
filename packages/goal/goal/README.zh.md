@@ -3,7 +3,7 @@ description: "面向选择、配置或排查同会话持久 goal 服务的用户
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-goal
+# @berry-ai/harness-goal
 
 [English](README.md) | 中文
 
@@ -36,7 +36,7 @@ goal 适合一个需要跨自动 Goal Round 持续的长期完成目标——例
 通过组合配置项加载本包；唯一的部署选择是默认 Round 上限，应用于未自行指定上限的 create。
 
 ```yaml
-- name: '@deepseek-ai/dsh-goal'
+- name: '@berry-ai/harness-goal'
   config:
     defaultMaxGoalRounds: 256
 ```

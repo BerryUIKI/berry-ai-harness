@@ -23,7 +23,7 @@ import {
 // composer reads a host-computed value; the domain owns the key).
 import type {} from '@berry-ai/harness-plan-mode/client'
 // Type-only: the `goal` projection key merge (hint disambiguation).
-import type {} from '@deepseek-ai/dsh-goal/client'
+import type {} from '@berry-ai/harness-goal/client'
 // The `imageLimits` projection key merge (intake pre-check) arrives with the
 // wire types: apiproxy's sessions contract declares it, and client-runtime's
 // api-remotes import already places it in every client program.

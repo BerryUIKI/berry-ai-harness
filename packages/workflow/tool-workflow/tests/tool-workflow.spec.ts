@@ -7,18 +7,18 @@ import ToolRuntime, { TOOL_ABORTED_BEFORE_DISPATCH } from '@deepseek-ai/dsh-tool
 import type { ToolExecutionResult, ToolExecutionToken } from '@deepseek-ai/dsh-tools'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
-import { WorkflowRunId, WorkflowEngine } from '@deepseek-ai/dsh-workflow'
+import { WorkflowRunId, WorkflowEngine } from '@berry-ai/harness-workflow'
 import type {
   WorkflowAgentEndInfo, WorkflowAgentInfo, WorkflowResult, WorkflowRun,
   WorkflowRunId as WorkflowRunIdType, WorkflowStartRequest,
-} from '@deepseek-ai/dsh-workflow'
+} from '@berry-ai/harness-workflow'
 import { ToolCallId } from '@deepseek-ai/dsh-llm'
 import type { JobId } from '@berry-ai/harness-jobs'
 import AgentRegistry from '@deepseek-ai/dsh-agent'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import * as ToolTasks from '@berry-ai/harness-tool-jobs'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'
-import PtcWorkflowEngine from '@deepseek-ai/dsh-workflow-ptc'
+import PtcWorkflowEngine from '@berry-ai/harness-workflow-ptc'
 import { mountWorkflowRuntime } from '../../workflow-ptc/tests/setup.ts'
 import * as toolWorkflow from '../src/index.ts'
 import type {} from '../src/types.ts'

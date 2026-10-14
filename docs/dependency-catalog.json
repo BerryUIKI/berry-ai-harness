@@ -397,6 +397,42 @@
       ]
     },
     {
+      "name": "@berry-ai/harness-command-goal",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-command-goal",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-goal",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-goal",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-goal-round-driver",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-goal-round-driver",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
       "name": "@berry-ai/harness-jobs",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -517,11 +553,59 @@
       ]
     },
     {
+      "name": "@berry-ai/harness-tool-goal",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-tool-goal",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
       "name": "@berry-ai/harness-tool-jobs",
       "version": "0.1.5-rc.2",
       "installations": [
         {
           "location": "node_modules/@berry-ai/harness-tool-jobs",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-tool-workflow",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-tool-workflow",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-workflow",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-workflow",
+          "direct": false,
+          "optional": false,
+          "peer": true
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-workflow-worker-thread",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-workflow-worker-thread",
           "direct": true,
           "optional": false,
           "peer": false
@@ -1525,18 +1609,6 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-command-goal",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-command-goal",
-          "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
       "name": "@deepseek-ai/dsh-commands",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -1723,30 +1795,6 @@
         {
           "location": "node_modules/@deepseek-ai/dsh-fs-sandbox",
           "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-goal",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-goal",
-          "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-goal-round-driver",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-goal-round-driver",
-          "direct": true,
           "optional": false,
           "peer": false
         }
@@ -2833,18 +2881,6 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-tool-goal",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-tool-goal",
-          "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
       "name": "@deepseek-ai/dsh-tool-present",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -2958,18 +2994,6 @@
       "installations": [
         {
           "location": "node_modules/@deepseek-ai/dsh-tool-web",
-          "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-tool-workflow",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-tool-workflow",
           "direct": true,
           "optional": false,
           "peer": false
@@ -3187,30 +3211,6 @@
         {
           "location": "node_modules/@deepseek-ai/dsh-win32-process",
           "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-workflow",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-workflow",
-          "direct": false,
-          "optional": false,
-          "peer": true
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-workflow-worker-thread",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-workflow-worker-thread",
-          "direct": true,
           "optional": false,
           "peer": false
         }
