@@ -35,8 +35,8 @@ function fixture(): string {
   write(root, 'packages/core/core/src/index.ts', 'export {}\n')
   write(root, 'packages/bundle/base/package.json', { name: base, dsh: { bundle: { patch: './cordis.patch.yml' } } })
   write(root, patch, [{ insert: [{ name: core }] }])
-  write(root, preset, [{ insert: [{ name: '@deepseek-ai/dsh-agent-preset', config: { id: 'standard', plugins: [{ name: core }] } }] }])
-  write(root, 'packages/preset/agent-preset/package.json', { name: '@deepseek-ai/dsh-agent-preset' })
+  write(root, preset, [{ insert: [{ name: '@berry-ai/harness-agent-preset', config: { id: 'standard', plugins: [{ name: core }] } }] }])
+  write(root, 'packages/preset/agent-preset/package.json', { name: '@berry-ai/harness-agent-preset' })
   write(root, profile, `export const PROFILE_TEMPLATES = { web: { bundles: ['${base}'] } }\n`
     + `export const DEFAULT_PROFILE_BUNDLES = ['${base}']\n`)
   write(root, 'packages/experimental/prototype/package.json', { name: experimental })
@@ -59,7 +59,7 @@ describe('default product isolation', () => {
         if (route === 'value import') write(root, 'apps/cli/src/bin.ts', `import '${name}'\n`)
         if (route === 'subpath import') write(root, 'apps/cli/src/bin.ts', `import '${name}/feature'\n`)
         if (route === 'profile row') write(root, patch, [{ insert: [{ name }] }])
-        if (route === 'preset row') write(root, preset, [{ insert: [{ name: '@deepseek-ai/dsh-agent-preset', config: { id: 'standard', plugins: [{ name }] } }] }])
+        if (route === 'preset row') write(root, preset, [{ insert: [{ name: '@berry-ai/harness-agent-preset', config: { id: 'standard', plugins: [{ name }] } }] }])
         expect(verifyDefaultProductIsolation(root).failures).toEqual(expect.arrayContaining([
           expect.stringMatching(new RegExp(`${name}.*default product must not include experimental packages`)),
         ]))

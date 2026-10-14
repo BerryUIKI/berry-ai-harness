@@ -5,7 +5,7 @@ description: Use when creating, changing, or validating an agent preset or other
 
 # Editing Cordis compositions
 
-Agent presets are ordinary `@deepseek-ai/dsh-agent-preset` declarations carried by bundle patches. Nothing edits a declaration in place: a preset is created or changed by installing a bundle whose patch declares or overrides it. This file states the declaration format; when it leaves a question open, read the `@deepseek-ai/dsh-agent-preset` README and `lib/types` declarations under the `packageDir` that `cordis_inspect_query` `Config.listConfigs` returns when queried with a `preset-<id>` row's `entry` id, or `packages/preset/agent-preset/src` in a source checkout.
+Agent presets are ordinary `@berry-ai/harness-agent-preset` declarations carried by bundle patches. Nothing edits a declaration in place: a preset is created or changed by installing a bundle whose patch declares or overrides it. This file states the declaration format; when it leaves a question open, read the `@berry-ai/harness-agent-preset` README and `lib/types` declarations under the `packageDir` that `cordis_inspect_query` `Config.listConfigs` returns when queried with a `preset-<id>` row's `entry` id, or `packages/preset/agent-preset/src` in a source checkout.
 
 ## Where declarations live
 
@@ -34,7 +34,7 @@ Write a bundle directory in the workspace with exactly two files, then install i
 ```yaml
 - insert:
     - id: preset-review
-      name: '@deepseek-ai/dsh-agent-preset'
+      name: '@berry-ai/harness-agent-preset'
       config:
         id: review
         name: Review
@@ -42,7 +42,7 @@ Write a bundle directory in the workspace with exactly two files, then install i
         order: 10
         plugins:
           - id: persona
-            name: '@deepseek-ai/dsh-persona'
+            name: '@berry-ai/harness-persona'
             config:
               prefix: You review software changes.
           - id: tool-bash
@@ -57,7 +57,7 @@ Override the declaration by its Loader row id instead of inserting. The override
 
 ```yaml
 - id: preset-standard
-  name: '@deepseek-ai/dsh-agent-preset'
+  name: '@berry-ai/harness-agent-preset'
   config:
     id: standard
     order: 1

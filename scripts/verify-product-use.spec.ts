@@ -185,8 +185,8 @@ describe('product package use', () => {
   it('visits nested preset entries only while the preset is enabled', () => {
     const root = fixture()
     pkg(root, candidateDir, candidate)
-    pkg(root, 'packages/preset/agent-preset', '@deepseek-ai/dsh-agent-preset')
-    const entry = { id: 'preset', name: '@deepseek-ai/dsh-agent-preset', config: {
+    pkg(root, 'packages/preset/agent-preset', '@berry-ai/harness-agent-preset')
+    const entry = { id: 'preset', name: '@berry-ai/harness-agent-preset', config: {
       id: 'standard', plugins: [{ group: true, config: [{ name: candidate }] }],
     } }
     write(root, patch, [{ insert: [{ name: core }, entry] }])

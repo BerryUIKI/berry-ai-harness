@@ -1,9 +1,9 @@
-# Agent preset cordis: one `@deepseek-ai/dsh-agent-preset` declaration inserted
+# Agent preset cordis: one `@berry-ai/harness-agent-preset` declaration inserted
 # after the web patch. Edits saved from the Web editor override this row's
 # `config.plugins` by id from the profile patch.
 - insert:
     - id: preset-cordis
-      name: '@deepseek-ai/dsh-agent-preset'
+      name: '@berry-ai/harness-agent-preset'
       config:
         id: cordis
         order: 4
@@ -11,7 +11,7 @@
           # Same persona as `standard`: tool descriptions and the skill catalog carry
           # the operating detail, and the skills own the preset-authoring rules.
           - id: persona
-            name: '@deepseek-ai/dsh-persona'
+            name: '@berry-ai/harness-persona'
             config:
               prefix: >-
                 You are a coding agent powered by the {{model}} model.
@@ -135,7 +135,7 @@
             name: '@deepseek-ai/dsh-skill-filesystem'
             config:
               customSkillDirs:
-                - !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@deepseek-ai/dsh-agent-preset/package.json')), 'skills')
+                - !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@berry-ai/harness-agent-preset/package.json')), 'skills')
           - id: tool-skill
             name: '@deepseek-ai/dsh-tool-skill'
           - id: present

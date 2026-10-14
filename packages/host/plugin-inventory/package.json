@@ -48,13 +48,13 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-agent-preset-registry": "workspace:*",
+    "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-agent-preset-registry": {
+    "@berry-ai/harness-agent-preset-registry": {
       "optional": true
     }
   },
@@ -62,7 +62,7 @@
     "@deepseek-ai/dsh-app-boot": "workspace:*",
     "@berry-ai/harness-package-manifest": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-agent-preset-registry": "workspace:*",
+    "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-typert-protocol": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"

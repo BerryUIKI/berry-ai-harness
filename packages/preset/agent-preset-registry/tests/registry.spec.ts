@@ -341,7 +341,7 @@ it('refuses to inherit a revision owned by a different registry', async () => {
 
 it('validates malformed child YAML at the declaring plugin and retains diagnostics', async () => {
   const ctx = await setup()
-  const { default: Preset } = await import('@deepseek-ai/dsh-agent-preset')
+  const { default: Preset } = await import('@berry-ai/harness-agent-preset')
   ctx.loader.builtins.preset = Preset
   await ctx.loader.root.update([{ id: 'invalid', name: 'cordis:preset', config: { id: 'invalid', plugins: [1] } }])
   expect((await ctx.agentPresets.resolve('invalid')).broken).toContain('not a plugin row')
