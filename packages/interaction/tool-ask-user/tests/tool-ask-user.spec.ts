@@ -9,10 +9,10 @@ import UserQuestionService, {
   isTimedAskUserQuestionSchema,
   type AskUserQuestionAnswer,
   type AskUserQuestionRequest,
-} from '@deepseek-ai/dsh-user-questions'
+} from '@berry-ai/harness-user-questions'
 // The fold is the projection's own reader of a recorded result, not a service method.
-import { foldUserQuestions } from '@deepseek-ai/dsh-user-questions/src/projection.ts'
-import * as toolAskUser from '@deepseek-ai/dsh-tool-ask-user'
+import { foldUserQuestions } from '@berry-ai/harness-user-questions/src/projection.ts'
+import * as toolAskUser from '@berry-ai/harness-tool-ask-user'
 
 const testToolSignal = new AbortController().signal
 

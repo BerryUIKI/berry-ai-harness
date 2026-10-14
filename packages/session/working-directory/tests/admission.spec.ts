@@ -7,7 +7,7 @@ import { createUserMessage } from '@deepseek-ai/dsh-llm'
 import { Session, SessionId } from '@deepseek-ai/dsh-session'
 import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
 import SandboxPolicy, { setSandboxMode } from '@berry-ai/harness-sandbox-policy'
-import ApprovalService from '@deepseek-ai/dsh-user-approval'
+import ApprovalService from '@berry-ai/harness-user-approval'
 import { describe, expect, it, vi } from 'vitest'
 import { MockAdapter, textResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 

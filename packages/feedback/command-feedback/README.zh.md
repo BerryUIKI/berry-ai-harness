@@ -63,7 +63,7 @@ kind: "package-reference"
 - id: session
   name: '@deepseek-ai/dsh-session'
 - id: commands
-  name: '@deepseek-ai/dsh-commands'
+  name: '@berry-ai/harness-commands'
 - id: command-feedback
   name: '@berry-ai/harness-command-feedback'
 ```

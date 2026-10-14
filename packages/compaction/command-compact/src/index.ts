@@ -4,9 +4,9 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { CommandDefinitionId } from '@deepseek-ai/dsh-commands/brand'
+import { CommandDefinitionId } from '@berry-ai/harness-commands/brand'
 import { ManualCompactionError } from '@deepseek-ai/dsh-compaction'
-import type { CommandInvocation, CommandResult } from '@deepseek-ai/dsh-commands'
+import type { CommandInvocation, CommandResult } from '@berry-ai/harness-commands'
 
 export const name = 'command-compact'
 export const inject = ['commands', 'compaction']

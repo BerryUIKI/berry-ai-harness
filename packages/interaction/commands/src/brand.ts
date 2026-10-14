@@ -6,7 +6,7 @@
  * augmentation) so wire and client programs can name the brand without
  * loading the host plugin's Context merges — the `dsh-llm/brand` shape.
  *
- * @module @deepseek-ai/dsh-commands/brand
+ * @module @berry-ai/harness-commands/brand
  */
 
 import type { Branded } from '@berry-ai/harness-brand'

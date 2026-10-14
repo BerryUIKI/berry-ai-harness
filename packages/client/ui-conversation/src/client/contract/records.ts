@@ -2,7 +2,7 @@
 // substructure references. Stable node and location stores make old snapshots
 // live readers rather than time-point views.
 
-import type { CommandId } from '@deepseek-ai/dsh-commands/brand'
+import type { CommandId } from '@berry-ai/harness-commands/brand'
 import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
 import type { ContentBlock } from '@deepseek-ai/dsh-llm/types'
 import type { ImageAttachmentRef } from '@berry-ai/harness-attachment'

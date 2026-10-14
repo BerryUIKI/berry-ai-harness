@@ -9,8 +9,8 @@
  */
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import type { CommandResult } from '@deepseek-ai/dsh-commands/types'
-import { CommandDefinitionId } from '@deepseek-ai/dsh-commands/brand'
+import type { CommandResult } from '@berry-ai/harness-commands/types'
+import { CommandDefinitionId } from '@berry-ai/harness-commands/brand'
 import { scopeOf } from '@deepseek-ai/dsh-api-session-controller/client'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import { RemoteError, TestRemote, TestSessions } from '@deepseek-ai/dsh-client-test-runtime'
@@ -363,7 +363,7 @@ describe('candidates', () => {
       { definitionId: CommandDefinitionId('@deepseek-ai/dsh-session-log-export'), name: 'export', description: 'Download this Session log as a ZIP archive' },
       { definitionId: CommandDefinitionId('@berry-ai/harness-command-feedback'), name: 'feedback', description: 'Record feedback about this session', input: { hint: '<text>' } },
       { definitionId: CommandDefinitionId('@berry-ai/harness-command-goal'), name: 'goal', description: 'Set or view the goal for a long-running task', input: { hint: '<objective>', attachments: true } },
-      { definitionId: CommandDefinitionId('@deepseek-ai/dsh-permission-presets'), name: 'permission', description: 'Switch the permission preset (sandbox mode + approval policy)', input: { hint: '<preset>' } },
+      { definitionId: CommandDefinitionId('@berry-ai/harness-permission-presets'), name: 'permission', description: 'Switch the permission preset (sandbox mode + approval policy)', input: { hint: '<preset>' } },
       { definitionId: CommandDefinitionId('@berry-ai/harness-plan-mode'), name: 'plan', description: 'Enter or leave plan mode', input: { hint: '[off|message]', attachments: true } },
       { name: 'deploy', description: 'third-party command' },
     ]

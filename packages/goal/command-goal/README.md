@@ -54,7 +54,7 @@ The command injects the commands registry and the goal service. A custom app mou
 
 ```yaml
 - id: commands
-  name: '@deepseek-ai/dsh-commands'
+  name: '@berry-ai/harness-commands'
 - id: goal
   name: '@berry-ai/harness-goal'
 - id: command-goal

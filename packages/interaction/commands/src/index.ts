@@ -1,6 +1,6 @@
 /**
  * Plugin-owned human-command registry shared by interactive UI adapters.
- * @module @deepseek-ai/dsh-commands
+ * @module @berry-ai/harness-commands
  */
 
 import { Context } from '@deepseek-ai/cordis'

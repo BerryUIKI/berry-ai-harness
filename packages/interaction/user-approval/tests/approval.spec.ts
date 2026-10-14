@@ -7,7 +7,7 @@ import type { Scope } from '@deepseek-ai/dsh-scope'
 import SessionStore, { Session, SessionId } from '@deepseek-ai/dsh-session'
 import type { SessionEvent } from '@deepseek-ai/dsh-session'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ApprovalService, { ApprovalOutcome, ApprovalRequest, setApprovalPolicy } from '@deepseek-ai/dsh-user-approval'
+import ApprovalService, { ApprovalOutcome, ApprovalRequest, setApprovalPolicy } from '@berry-ai/harness-user-approval'
 
 /**
  * A minimal Agent stand-in — the service only reaches `agent.session.append`

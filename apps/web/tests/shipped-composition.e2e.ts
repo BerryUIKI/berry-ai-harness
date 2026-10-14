@@ -17,10 +17,10 @@ import { auditStartupEntries, composeEntries, loadOverlayPatches } from '@berry-
 // These imports carry the tools/sandboxPolicy/approval Context merges.
 import { RUN_CODE_NAME } from '@deepseek-ai/dsh-tools'
 import type {} from '@berry-ai/harness-sandbox-policy'
-import type {} from '@deepseek-ai/dsh-user-approval'
-import type {} from '@deepseek-ai/dsh-permission-presets'
+import type {} from '@berry-ai/harness-user-approval'
+import type {} from '@berry-ai/harness-permission-presets'
 import type {} from '@berry-ai/harness-agent-preset-registry'
-import type {} from '@deepseek-ai/dsh-commands'
+import type {} from '@berry-ai/harness-commands'
 import type {} from '@deepseek-ai/dsh-system-prompt'
 import type {} from '@berry-ai/harness-terminal'
 import { launchWebScaffold, readPersistedEvents, type WebScaffold } from './scaffold.ts'

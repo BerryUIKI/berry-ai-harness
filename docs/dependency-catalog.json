@@ -409,6 +409,18 @@
       ]
     },
     {
+      "name": "@berry-ai/harness-commands",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-commands",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
       "name": "@berry-ai/harness-goal",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -451,6 +463,18 @@
         {
           "location": "node_modules/@berry-ai/harness-jobs-local",
           "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-permission-presets",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-permission-presets",
+          "direct": false,
           "optional": false,
           "peer": false
         }
@@ -625,6 +649,18 @@
       ]
     },
     {
+      "name": "@berry-ai/harness-tool-ask-user",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-tool-ask-user",
+          "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
       "name": "@berry-ai/harness-tool-goal",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -655,6 +691,30 @@
         {
           "location": "node_modules/@berry-ai/harness-tool-workflow",
           "direct": true,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-user-approval",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-user-approval",
+          "direct": false,
+          "optional": false,
+          "peer": false
+        }
+      ]
+    },
+    {
+      "name": "@berry-ai/harness-user-questions",
+      "version": "0.1.5-rc.2",
+      "installations": [
+        {
+          "location": "node_modules/@berry-ai/harness-user-questions",
+          "direct": false,
           "optional": false,
           "peer": false
         }
@@ -1693,18 +1753,6 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-commands",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-commands",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
       "name": "@deepseek-ai/dsh-compaction",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -2178,18 +2226,6 @@
       "installations": [
         {
           "location": "node_modules/@deepseek-ai/dsh-package-manifest",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-permission-presets",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-permission-presets",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2809,18 +2845,6 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-tool-ask-user",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-tool-ask-user",
-          "direct": true,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
       "name": "@deepseek-ai/dsh-tool-bash",
       "version": "0.1.5-rc.2",
       "installations": [
@@ -3054,30 +3078,6 @@
       "installations": [
         {
           "location": "node_modules/@deepseek-ai/dsh-typert-registry",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-user-approval",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-user-approval",
-          "direct": false,
-          "optional": false,
-          "peer": false
-        }
-      ]
-    },
-    {
-      "name": "@deepseek-ai/dsh-user-questions",
-      "version": "0.1.5-rc.2",
-      "installations": [
-        {
-          "location": "node_modules/@deepseek-ai/dsh-user-questions",
           "direct": false,
           "optional": false,
           "peer": false

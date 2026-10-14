@@ -1,7 +1,7 @@
 /**
  * Service Definition for the approval capability seam, covering requests, cancellation, audit, and per-session policy. Missing
  * answerers fail closed; grants apply only to the requested action.
- * @module @deepseek-ai/dsh-user-approval
+ * @module @berry-ai/harness-user-approval
  */
 
 import { randomUUID } from 'node:crypto'

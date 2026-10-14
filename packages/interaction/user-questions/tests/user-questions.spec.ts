@@ -6,7 +6,7 @@ import UserQuestionService, {
   UserQuestionError,
   type AskUserQuestionAnswer,
   type AskUserQuestionRequest,
-} from '@deepseek-ai/dsh-user-questions'
+} from '@berry-ai/harness-user-questions'
 import { createToolResultMessage, createUserMessage, ToolCallId, type ToolSchema, type UserMessage } from '@deepseek-ai/dsh-llm'
 import { Session, SessionId, TOOL_OUTCOME_UNKNOWN } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'

@@ -85,7 +85,7 @@
     "@berry-ai/harness-hmr": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-user-approval": "workspace:*",
+    "@berry-ai/harness-user-approval": "workspace:*",
     "@berry-ai/harness-agent-preset": "workspace:*",
     "@types/js-yaml": "^4.0.9"
   }

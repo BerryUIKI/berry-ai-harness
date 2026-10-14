@@ -30,7 +30,7 @@ import type { GenericCallView, TerminalCallView, ToolDefinition, ToolExecution, 
 import { HarnessError } from '@deepseek-ai/dsh-llm'
 import type { JobId, JobRegistry, JobView } from '@berry-ai/harness-jobs'
 import type {} from '@deepseek-ai/dsh-shell-env'
-import type {} from '@deepseek-ai/dsh-user-approval'
+import type {} from '@berry-ai/harness-user-approval'
 import type { SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import { ESCALATION_TARGETS, approveEscalation, sandboxPermissionsDescription, validateEscalationArgs } from '@berry-ai/harness-sandbox'
 import type { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'

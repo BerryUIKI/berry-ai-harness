@@ -1,5 +1,5 @@
 /** Command identity and localized input spelling over the effective Host catalog. */
-import type { CommandDescriptor } from '@deepseek-ai/dsh-commands/types'
+import type { CommandDescriptor } from '@berry-ai/harness-commands/types'
 import type { TranslateNS } from '@deepseek-ai/dsh-client-locale/client'
 import { en, zh } from './locales.ts'
 
@@ -8,7 +8,7 @@ const BUILTINS = {
   plan: '@berry-ai/harness-plan-mode',
   feedback: '@berry-ai/harness-command-feedback',
   compact: '@deepseek-ai/dsh-command-compact',
-  permission: '@deepseek-ai/dsh-permission-presets',
+  permission: '@berry-ai/harness-permission-presets',
   export: '@deepseek-ai/dsh-session-log-export',
 } as const
 

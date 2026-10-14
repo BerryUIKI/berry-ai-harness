@@ -9,7 +9,7 @@ import type {
 import { createUserMessage } from '@deepseek-ai/dsh-llm'
 import type { UserMessage } from '@deepseek-ai/dsh-llm'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import CommandRuntime from '@deepseek-ai/dsh-commands'
+import CommandRuntime from '@berry-ai/harness-commands'
 import { createScope } from '@deepseek-ai/dsh-scope'
 import FileUploads from '@deepseek-ai/dsh-client-file-upload'
 import type { FileUploadReceiptId } from '@deepseek-ai/dsh-client-file-upload/types'

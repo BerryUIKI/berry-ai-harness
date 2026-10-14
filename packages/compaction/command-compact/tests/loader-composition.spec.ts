@@ -7,7 +7,7 @@ import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import CommandRuntime from '@deepseek-ai/dsh-commands'
+import CommandRuntime from '@berry-ai/harness-commands'
 import {
   CompactionId,
   CompactionEngine,
@@ -84,7 +84,7 @@ describe('command-compact real Loader composition', () => {
     root = await mkdtemp(join(tmpdir(), 'dsh-command-compact-loader-'))
     const configPath = join(root, 'cordis.yml')
     await writeFile(configPath, [
-      "- name: '@deepseek-ai/dsh-commands'",
+      "- name: '@berry-ai/harness-commands'",
       "- name: '@test/compact-backend'",
       "- name: '@deepseek-ai/dsh-command-compact'",
       '',
@@ -95,7 +95,7 @@ describe('command-compact real Loader composition', () => {
     await context.plugin(Loader)
     context.loader.builtins.include = Include
     const modules = new Map<string, unknown>([
-      ['@deepseek-ai/dsh-commands', CommandRuntime],
+      ['@berry-ai/harness-commands', CommandRuntime],
       ['@test/compact-backend', LoaderCompactionEngine],
       ['@deepseek-ai/dsh-command-compact', commandCompact],
     ])

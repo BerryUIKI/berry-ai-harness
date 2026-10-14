@@ -55,7 +55,7 @@ Mount the command registry, one condensation backend, and this plugin:
 
 ```yaml
 - id: commands
-  name: '@deepseek-ai/dsh-commands'
+  name: '@berry-ai/harness-commands'
 - id: compaction-basic
   name: '@deepseek-ai/dsh-compaction-basic'
 - id: command-compact

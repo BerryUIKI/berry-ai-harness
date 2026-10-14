@@ -5,7 +5,7 @@ import type { ToolCallId } from '@deepseek-ai/dsh-llm/brand'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type {
   AskUserQuestionAnswer, AskUserQuestionAnswerItem, AskUserQuestionItem, UserQuestionState,
-} from '@deepseek-ai/dsh-user-questions/types'
+} from '@berry-ai/harness-user-questions/types'
 import type { createQuestionDraftStore } from '../draft-store.ts'
 
 declare module '@deepseek-ai/dsh-client-ui-session/client' {

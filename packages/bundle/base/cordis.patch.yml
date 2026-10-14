@@ -72,7 +72,7 @@
         timeoutMs: 60000
 
     - id: user-questions
-      name: '@deepseek-ai/dsh-user-questions'
+      name: '@berry-ai/harness-user-questions'
 
     - id: agent
       name: '@deepseek-ai/dsh-agent'
@@ -252,12 +252,12 @@
       disabled: !!js process.platform !== 'win32'
 
     - id: approval
-      name: '@deepseek-ai/dsh-user-approval'
+      name: '@berry-ai/harness-user-approval'
       config:
         policy: !!js "(process.env.DSH_PERMISSION_MODE ?? 'workspace-write') === 'danger-full-access' ? 'never' : 'ask'"
 
     - id: permission
-      name: '@deepseek-ai/dsh-permission-presets'
+      name: '@berry-ai/harness-permission-presets'
       config:
         presets:
           read-only:
@@ -310,7 +310,7 @@
       name: '@deepseek-ai/dsh-tool-skill'
 
     - id: commands
-      name: '@deepseek-ai/dsh-commands'
+      name: '@berry-ai/harness-commands'
 
     - id: command-feedback
       name: '@berry-ai/harness-command-feedback'

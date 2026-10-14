@@ -19,7 +19,7 @@ import type { ComposerChainProps } from '@deepseek-ai/dsh-client-ui-conversation
 import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type { PendingInteractionPublisher } from '@deepseek-ai/dsh-client-ui-session/client'
 import type { TypertClientEventListener } from '@deepseek-ai/dsh-typert-protocol'
-import type { AskUserQuestionItem, PendingUserQuestion, UserQuestionProjectionView } from '@deepseek-ai/dsh-user-questions/types'
+import type { AskUserQuestionItem, PendingUserQuestion, UserQuestionProjectionView } from '@berry-ai/harness-user-questions/types'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
 import type {} from '@deepseek-ai/dsh-client-locale/client'
 import type { UserQuestionPanels, UserQuestionRecord } from '@deepseek-ai/dsh-client-ui-tool/client'

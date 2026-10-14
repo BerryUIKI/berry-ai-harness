@@ -120,7 +120,7 @@
               - id: tool-workflow
                 name: '@berry-ai/harness-tool-workflow'
           - id: tool-ask-user
-            name: '@deepseek-ai/dsh-tool-ask-user'
+            name: '@berry-ai/harness-tool-ask-user'
           - id: tool-todo
             name: '@berry-ai/harness-tool-todo'
             config:

@@ -20,7 +20,7 @@
     workspaceRoot: !!js process.cwd()
 
 - id: approval
-  name: '@deepseek-ai/dsh-user-approval'
+  name: '@berry-ai/harness-user-approval'
   config:
     policy: !!js "(process.env.DSH_PERMISSION_MODE ?? (process.env.DSH_SNAPSHOT === undefined ? 'workspace-write' : 'danger-full-access')) === 'danger-full-access' ? 'never' : 'ask'"
 

@@ -17,8 +17,8 @@ import type { ToolRestriction } from '@deepseek-ai/dsh-tools'
 // opportunistically (the documented `ctx.get` pattern), never as a hard dep —
 // and merge the inherited permission session-event payloads.
 import type {} from '@berry-ai/harness-sandbox-policy'
-import type {} from '@deepseek-ai/dsh-user-approval'
-import type {} from '@deepseek-ai/dsh-permission-presets'
+import type {} from '@berry-ai/harness-user-approval'
+import type {} from '@berry-ai/harness-permission-presets'
 // Type-only: make `ctx.get('agentPresets')` resolve to the preset roster when
 // composed — a child inherits its parent's composition opportunistically (the
 // documented `ctx.get` pattern), never as a hard dep. A rosterless deployment

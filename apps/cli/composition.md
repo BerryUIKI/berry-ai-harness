@@ -34,7 +34,7 @@ flowchart LR
   cfg --> plugin_dsh_base_session_title
   plugin_dsh_base_session_title_llm["session-title-llm<br/>@deepseek-ai/dsh-session-title-first-prompt-llm"]
   cfg --> plugin_dsh_base_session_title_llm
-  plugin_dsh_base_user_questions["user-questions<br/>@deepseek-ai/dsh-user-questions"]
+  plugin_dsh_base_user_questions["user-questions<br/>@berry-ai/harness-user-questions"]
   cfg --> plugin_dsh_base_user_questions
   plugin_dsh_base_agent["agent<br/>@deepseek-ai/dsh-agent"]
   cfg --> plugin_dsh_base_agent
@@ -92,9 +92,9 @@ flowchart LR
   cfg --> plugin_dsh_base_bash_sandbox
   plugin_dsh_base_pwsh_sandbox["pwsh-sandbox<br/>@deepseek-ai/dsh-pwsh-sandbox"]
   cfg --> plugin_dsh_base_pwsh_sandbox
-  plugin_dsh_base_approval["approval<br/>@deepseek-ai/dsh-user-approval"]
+  plugin_dsh_base_approval["approval<br/>@berry-ai/harness-user-approval"]
   cfg --> plugin_dsh_base_approval
-  plugin_dsh_base_permission["permission<br/>@deepseek-ai/dsh-permission-presets"]
+  plugin_dsh_base_permission["permission<br/>@berry-ai/harness-permission-presets"]
   cfg --> plugin_dsh_base_permission
   plugin_dsh_base_shell_env["shell-env<br/>@deepseek-ai/dsh-shell-env"]
   cfg --> plugin_dsh_base_shell_env
@@ -118,7 +118,7 @@ flowchart LR
   cfg --> plugin_dsh_base_skill_filesystem
   plugin_dsh_base_tool_skill["tool-skill<br/>@deepseek-ai/dsh-tool-skill"]
   cfg --> plugin_dsh_base_tool_skill
-  plugin_dsh_base_commands["commands<br/>@deepseek-ai/dsh-commands"]
+  plugin_dsh_base_commands["commands<br/>@berry-ai/harness-commands"]
   cfg --> plugin_dsh_base_commands
   plugin_dsh_base_command_feedback["command-feedback<br/>@berry-ai/harness-command-feedback"]
   cfg --> plugin_dsh_base_command_feedback
@@ -213,7 +213,7 @@ flowchart LR
 | `typert-gateway` | `@deepseek-ai/dsh-api-gateway` |
 | `session-title` | `@deepseek-ai/dsh-session-title` |
 | `session-title-llm` | `@deepseek-ai/dsh-session-title-first-prompt-llm` |
-| `user-questions` | `@deepseek-ai/dsh-user-questions` |
+| `user-questions` | `@berry-ai/harness-user-questions` |
 | `agent` | `@deepseek-ai/dsh-agent` |
 | `plugin-package-inventory-deepseek` | `@deepseek-ai/dsh-plugin-package-inventory-deepseek` |
 | `agent-default-model` | `@deepseek-ai/dsh-agent-default-model` |
@@ -242,8 +242,8 @@ flowchart LR
 | `sandbox-policy` | `@berry-ai/harness-sandbox-policy` |
 | `bash-sandbox` | `@deepseek-ai/dsh-bash-sandbox` |
 | `pwsh-sandbox` | `@deepseek-ai/dsh-pwsh-sandbox` |
-| `approval` | `@deepseek-ai/dsh-user-approval` |
-| `permission` | `@deepseek-ai/dsh-permission-presets` |
+| `approval` | `@berry-ai/harness-user-approval` |
+| `permission` | `@berry-ai/harness-permission-presets` |
 | `shell-env` | `@deepseek-ai/dsh-shell-env` |
 | `tool-bash` | `@deepseek-ai/dsh-tool-bash` |
 | `tool-pwsh` | `@deepseek-ai/dsh-tool-pwsh` |
@@ -255,7 +255,7 @@ flowchart LR
 | `skill` | `@deepseek-ai/dsh-skill` |
 | `skill-filesystem` | `@deepseek-ai/dsh-skill-filesystem` |
 | `tool-skill` | `@deepseek-ai/dsh-tool-skill` |
-| `commands` | `@deepseek-ai/dsh-commands` |
+| `commands` | `@berry-ai/harness-commands` |
 | `command-feedback` | `@berry-ai/harness-command-feedback` |
 | `goal` | `@berry-ai/harness-goal` |
 | `goal-round-driver` | `@berry-ai/harness-goal-round-driver` |

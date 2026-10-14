@@ -29,7 +29,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-commands": "workspace:*",
+    "@berry-ai/harness-commands": "workspace:*",
     "@deepseek-ai/dsh-compaction": "workspace:*",
     "@deepseek-ai/dsh-compaction-tool-result-pruner": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
@@ -52,7 +52,7 @@
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-agent-loop": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-commands": "workspace:*",
+    "@berry-ai/harness-commands": "workspace:*",
     "@deepseek-ai/dsh-compaction": "workspace:*",
     "@deepseek-ai/dsh-compaction-tool-result-pruner": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",

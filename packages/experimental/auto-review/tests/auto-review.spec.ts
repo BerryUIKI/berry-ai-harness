@@ -20,7 +20,7 @@ import LlmRuntime, {
 import PermissionPresetService, {
   AUTO_PRESET,
   type Config as PermissionConfig,
-} from '@deepseek-ai/dsh-permission-presets'
+} from '@berry-ai/harness-permission-presets'
 import SessionStore, {
   SessionId,
   SessionLogOffset,
@@ -42,7 +42,7 @@ import ToolRuntime, {
   type PreToolDecision,
   type ToolExecutionToken,
 } from '@deepseek-ai/dsh-tools'
-import ApprovalService, { setApprovalPolicy, type ApprovalOutcome } from '@deepseek-ai/dsh-user-approval'
+import ApprovalService, { setApprovalPolicy, type ApprovalOutcome } from '@berry-ai/harness-user-approval'
 import * as AutoReview from '@deepseek-ai/dsh-experimental-auto-review'
 
 const EXPECTED_REVIEW_POLICY = `REVIEW_POLICY

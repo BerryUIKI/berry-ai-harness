@@ -15,7 +15,7 @@
   name: '@deepseek-ai/dsh-pwsh-sandbox'
   disabled: true
 - id: permission
-  name: '@deepseek-ai/dsh-permission-presets'
+  name: '@berry-ai/harness-permission-presets'
   disabled: true
 - insert:
     - id: pwsh-local

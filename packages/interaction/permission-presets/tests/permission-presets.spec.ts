@@ -6,10 +6,10 @@ import SessionStore, {
 } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import type { SandboxMode } from '@berry-ai/harness-sandbox'
-import type { ApprovalPolicy } from '@deepseek-ai/dsh-user-approval'
+import type { ApprovalPolicy } from '@berry-ai/harness-user-approval'
 import PermissionPresetService, {
   AUTO_PRESET, CUSTOM_PRESET,
-} from '@deepseek-ai/dsh-permission-presets'
+} from '@berry-ai/harness-permission-presets'
 import { liveConfig } from '../../../settings/settings/tests/live-config.ts'
 
 const configurations = new WeakMap<Context, Awaited<ReturnType<typeof liveConfig>>>()

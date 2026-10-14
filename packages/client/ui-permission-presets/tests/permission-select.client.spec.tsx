@@ -5,7 +5,7 @@ import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { bindSnapshotSelector, makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
 import type {
   PermissionCatalog, PermissionSelection,
-} from '@deepseek-ai/dsh-permission-presets/client'
+} from '@berry-ai/harness-permission-presets/client'
 import {
   PermissionSelect, type PermissionSelectProps,
 } from '../src/client/PermissionSelect.tsx'

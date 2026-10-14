@@ -37,17 +37,17 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-commands": "workspace:*",
+    "@berry-ai/harness-commands": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-user-questions": "workspace:*",
+    "@berry-ai/harness-user-questions": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-commands": {
+    "@berry-ai/harness-commands": {
       "optional": true
     }
   },
@@ -59,13 +59,13 @@
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-agent-loop": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-commands": "workspace:*",
+    "@berry-ai/harness-commands": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-user-questions": "workspace:*",
+    "@berry-ai/harness-user-questions": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*"
   }

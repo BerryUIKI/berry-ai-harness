@@ -18,7 +18,7 @@
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { SessionFace } from '@deepseek-ai/dsh-api-session-controller/client'
 import type { SessionId } from '@deepseek-ai/dsh-api-remotes/client'
-import type { PermissionCatalog, PermissionSelection } from '@deepseek-ai/dsh-permission-presets/client'
+import type { PermissionCatalog, PermissionSelection } from '@berry-ai/harness-permission-presets/client'
 // Direct dependency: catalog settlements are fenced by the actual connection
 // generation rather than by a parallel domain counter.
 import type {} from '@deepseek-ai/dsh-client-connection/client'

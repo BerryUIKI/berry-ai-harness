@@ -15,7 +15,7 @@ import {
   type StreamChunk,
 } from '@deepseek-ai/dsh-llm'
 import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
-import PermissionPresetService, { AUTO_PRESET } from '@deepseek-ai/dsh-permission-presets'
+import PermissionPresetService, { AUTO_PRESET } from '@berry-ai/harness-permission-presets'
 import SandboxProvider, { type ConfinedArgv, type SandboxPolicy } from '@berry-ai/harness-sandbox'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import { SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
@@ -24,7 +24,7 @@ import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import * as ToolBash from '@deepseek-ai/dsh-tool-bash'
 import * as ToolFs from '@deepseek-ai/dsh-tool-fs'
 import { RUN_CODE_NAME } from '@deepseek-ai/dsh-tools'
-import ApprovalService, { setApprovalPolicy } from '@deepseek-ai/dsh-user-approval'
+import ApprovalService, { setApprovalPolicy } from '@berry-ai/harness-user-approval'
 import { expect, it, vi } from 'vitest'
 import * as AutoReview from '@deepseek-ai/dsh-experimental-auto-review'
 

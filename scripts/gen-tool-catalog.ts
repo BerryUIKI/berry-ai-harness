@@ -30,7 +30,7 @@ import * as ToolWorkingDirectory from '@deepseek-ai/dsh-tool-working-directory'
 import * as ToolWorktree from '@deepseek-ai/dsh-experimental-tool-worktree'
 import { AttachmentStore } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentLimits, ImageAttachmentRef, SaveImageAttachment, StoredImageAttachment } from '@berry-ai/harness-attachment'
-import UserQuestionService from '@deepseek-ai/dsh-user-questions'
+import UserQuestionService from '@berry-ai/harness-user-questions'
 import PlanModeController from '@berry-ai/harness-plan-mode'
 import WebRuntime from '@deepseek-ai/dsh-web'
 import * as WebSearchExa from '@deepseek-ai/dsh-web-search-exa'
@@ -42,7 +42,7 @@ import * as ToolSubagentListAgents from '@deepseek-ai/dsh-tool-subagent-control/
 import SkillRegistry from '@deepseek-ai/dsh-skill'
 import * as SkillFileSystem from '@deepseek-ai/dsh-skill-filesystem'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
-import * as ToolAskUser from '@deepseek-ai/dsh-tool-ask-user'
+import * as ToolAskUser from '@berry-ai/harness-tool-ask-user'
 import * as ToolBash from '@deepseek-ai/dsh-tool-bash'
 import * as ToolPwsh from '@deepseek-ai/dsh-tool-pwsh'
 import * as ToolBashPersistent from '@deepseek-ai/dsh-tool-bash-persistent'
@@ -228,7 +228,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
     },
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-ask-user',
+    pkg: '@berry-ai/harness-tool-ask-user',
     dir: 'tool-ask-user',
     source: 'packages/interaction/tool-ask-user/src/index.ts',
     requires: ['ctx.tools', 'ctx.userQuestions'],

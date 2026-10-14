@@ -75,13 +75,13 @@
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-user-approval": "workspace:*"
+    "@berry-ai/harness-user-approval": "workspace:*"
   },
   "peerDependenciesMeta": {
     "@berry-ai/harness-hmr": {
       "optional": true
     },
-    "@deepseek-ai/dsh-user-approval": {
+    "@berry-ai/harness-user-approval": {
       "optional": true
     }
   },
@@ -103,6 +103,6 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-user-approval": "workspace:*"
+    "@berry-ai/harness-user-approval": "workspace:*"
   }
 }
