@@ -649,11 +649,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-atomic-write",
+      "name": "@berry-ai/harness-atomic-write",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-atomic-write",
+          "location": "node_modules/@berry-ai/harness-atomic-write",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1765,11 +1765,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-http-proxy",
+      "name": "@berry-ai/harness-http-proxy",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-http-proxy",
+          "location": "node_modules/@berry-ai/harness-http-proxy",
           "direct": true,
           "optional": false,
           "peer": false
@@ -1813,11 +1813,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-launch-environment",
+      "name": "@berry-ai/harness-launch-environment",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-launch-environment",
+          "location": "node_modules/@berry-ai/harness-launch-environment",
           "direct": true,
           "optional": false,
           "peer": false
@@ -1909,11 +1909,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-output-retention",
+      "name": "@berry-ai/harness-output-retention",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-output-retention",
+          "location": "node_modules/@berry-ai/harness-output-retention",
           "direct": false,
           "optional": false,
           "peer": true
@@ -3037,11 +3037,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-util-crypto",
+      "name": "@berry-ai/harness-util-crypto",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-util-crypto",
+          "location": "node_modules/@berry-ai/harness-util-crypto",
           "direct": false,
           "optional": false,
           "peer": false
@@ -3073,11 +3073,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-util-workspace-path",
+      "name": "@berry-ai/harness-util-workspace-path",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-util-workspace-path",
+          "location": "node_modules/@berry-ai/harness-util-workspace-path",
           "direct": false,
           "optional": false,
           "peer": true

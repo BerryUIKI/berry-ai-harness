@@ -29,7 +29,7 @@ async function downloadResource(kind) {
     const staging = await mkdtemp(join(cache, `.${kind}-`))
     let disposeProxy
     try {
-      const { installProxyFromEnvironment } = await import('@deepseek-ai/dsh-http-proxy')
+      const { installProxyFromEnvironment } = await import('@berry-ai/harness-http-proxy')
       disposeProxy = await installProxyFromEnvironment({ get(name) {
         const value = process.env[name]
         return value === undefined ? undefined : { value }

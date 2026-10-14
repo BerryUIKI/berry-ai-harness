@@ -9,7 +9,7 @@
 import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'
 import type { WorkspaceFileBytes, WorkspaceFileRange, WorkspaceFileText } from '@deepseek-ai/dsh-api-workspace-files/types'
-import { parseFileAddress } from '@deepseek-ai/dsh-util-workspace-path'
+import { parseFileAddress } from '@berry-ai/harness-util-workspace-path'
 
 /** The slice of the Client Remote this package calls. */
 export interface WorkspaceFilesReadRemote {

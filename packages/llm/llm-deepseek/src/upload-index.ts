@@ -3,7 +3,7 @@
 import { createHash } from 'node:crypto'
 import { readFile, mkdir } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
-import { withFileLock, writeFileAtomic } from '@deepseek-ai/dsh-atomic-write'
+import { withFileLock, writeFileAtomic } from '@berry-ai/harness-atomic-write'
 import { resolveDshHome } from '@berry-ai/harness-home-paths'
 import { ImageVariantId } from '@deepseek-ai/dsh-attachment'
 import type { AttachmentId, ImageVariantId as ImageVariantIdType } from '@deepseek-ai/dsh-attachment'

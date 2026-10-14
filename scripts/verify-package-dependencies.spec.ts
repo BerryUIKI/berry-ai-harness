@@ -208,9 +208,9 @@ describe('package dependency scope', () => {
     expect(PACKAGE_DEPENDENCY_POLICY.duplicateSafePackages).toEqual([
       '@berry-ai/harness-lazy-require',
       '@berry-ai/harness-util-code-language',
+      '@berry-ai/harness-util-crypto',
       '@deepseek-ai/dsh-brand',
       '@deepseek-ai/dsh-typert-protocol',
-      '@deepseek-ai/dsh-util-crypto',
       '@deepseek-ai/dsh-util-values',
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@berry-ai/harness-deque']).toEqual(['Deque'])

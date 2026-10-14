@@ -1,5 +1,5 @@
 /** Serialized preference transactions; storage owners publish only accepted writes or read diagnostics. */
-import { randomUUID } from '@deepseek-ai/dsh-util-crypto'
+import { randomUUID } from '@berry-ai/harness-util-crypto'
 import type { Branded } from '@deepseek-ai/dsh-brand'
 import { editShortcutDocument, effectiveShortcuts, parseShortcutDocument } from './configuration.ts'
 import type { BindingIssue, ShortcutDefinition, ShortcutDocument, ShortcutEdit } from './configuration.ts'

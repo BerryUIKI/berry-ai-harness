@@ -48,7 +48,7 @@
   "dependencies": {
     "@deepseek-ai/dsh-app-boot": "workspace:*",
     "@deepseek-ai/dsh-brand": "workspace:*",
-    "@deepseek-ai/dsh-util-crypto": "workspace:*",
+    "@berry-ai/harness-util-crypto": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "open": "^11.0.2",
     "serve-static": "^2.2.1",

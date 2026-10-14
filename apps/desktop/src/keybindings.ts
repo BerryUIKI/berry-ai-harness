@@ -1,7 +1,7 @@
 /** Device-local shortcut preferences in Electron userData; writes share one serialized coordinator. */
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import { writeFileAtomic } from '@deepseek-ai/dsh-atomic-write'
+import { writeFileAtomic } from '@berry-ai/harness-atomic-write'
 import { ShortcutPersistence } from '@deepseek-ai/dsh-client-shortcuts/protocol'
 import type { ShortcutConfigSnapshot, ShortcutPlatform } from '@deepseek-ai/dsh-client-shortcuts/protocol'
 

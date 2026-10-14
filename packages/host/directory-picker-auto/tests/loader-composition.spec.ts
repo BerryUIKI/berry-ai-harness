@@ -23,7 +23,7 @@ import BrowseDirectoryPicker from '@deepseek-ai/dsh-host-directory-picker-browse
 import NativeDirectoryPicker from '@deepseek-ai/dsh-host-directory-picker-native'
 import {
   createLaunchEnvironmentSnapshot, DSH_LAUNCH_ENVIRONMENT_KEY, type LaunchEnvironmentSnapshot,
-} from '@deepseek-ai/dsh-launch-environment'
+} from '@berry-ai/harness-launch-environment'
 import { probeNonLoopbackIpv4 } from '../../../../scripts/test-non-loopback-address.ts'
 import * as DirectoryPickerAuto from '../src/index.ts'
 

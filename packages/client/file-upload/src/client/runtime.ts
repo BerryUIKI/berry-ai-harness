@@ -1,7 +1,7 @@
 /** Background browser upload implementation for Blob and byte-stream bodies. */
 
 import { Service, type Context } from '@deepseek-ai/cordis'
-import { bytesToBase64 } from '@deepseek-ai/dsh-util-crypto'
+import { bytesToBase64 } from '@berry-ai/harness-util-crypto'
 import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
 import type { RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
 import type { SessionId } from '@deepseek-ai/dsh-session/types'

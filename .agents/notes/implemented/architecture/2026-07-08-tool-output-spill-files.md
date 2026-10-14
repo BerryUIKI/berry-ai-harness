@@ -109,7 +109,7 @@ This separation is important. `web-fetch-http` still owns resource caps (`maxRes
 
 Retention is separate from spill storage:
 
-- `@deepseek-ai/dsh-output-retention` owns preview mechanics (`TextRetainer`, `ItemRetainer`, and omitted metadata).
+- `@berry-ai/harness-output-retention` owns preview mechanics (`TextRetainer`, `ItemRetainer`, and omitted metadata).
 - `@deepseek-ai/dsh-spill` owns saving final text and returning a locator plus retrieval hint.
 - `@deepseek-ai/dsh-spill-policy` applies the default final-result policy in the tool pipeline, composing the two.
 

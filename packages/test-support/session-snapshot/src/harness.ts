@@ -35,7 +35,7 @@ import {
   type AgentUnderTest,
   type LaunchedAcpTestAgent,
 } from './launcher.ts'
-import { clearedProxyEnv } from '@deepseek-ai/dsh-http-proxy'
+import { clearedProxyEnv } from '@berry-ai/harness-http-proxy'
 import {
   assertPersistedSessionVersion,
   latestPersistedSessionPaths,

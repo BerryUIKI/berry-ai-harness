@@ -8,7 +8,7 @@ import {
   type RemoteStreamServerMessage,
 } from '../stream-protocol.ts'
 import { Deque } from '@berry-ai/harness-deque'
-import { randomUUID } from '@deepseek-ai/dsh-util-crypto'
+import { randomUUID } from '@berry-ai/harness-util-crypto'
 
 /** Physical Remote stream socket failure that may be retried by a domain transport. */
 export class RemoteStreamCarrierError extends Error {

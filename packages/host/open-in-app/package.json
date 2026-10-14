@@ -36,7 +36,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-launch-environment": "workspace:*",
+    "@berry-ai/harness-launch-environment": "workspace:*",
     "@berry-ai/harness-native-command": "workspace:*",
     "@deepseek-ai/dsh-subprocess": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~"

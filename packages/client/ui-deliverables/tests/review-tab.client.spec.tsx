@@ -9,7 +9,7 @@ import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
 import type { SidebarRightTabActions } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
 import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
 import { SessionId } from '@deepseek-ai/dsh-session/types'
-import { fileAddressFor } from '@deepseek-ai/dsh-util-workspace-path'
+import { fileAddressFor } from '@berry-ai/harness-util-workspace-path'
 import type { WorkspaceDiffHunk } from '@deepseek-ai/dsh-workspace-changes/types'
 import {
   changesDiffUrl, changesReviewAddress, changesSummaryUrl, parseChangesReviewAddress, type ChangesDiff, type ChangesSummary,

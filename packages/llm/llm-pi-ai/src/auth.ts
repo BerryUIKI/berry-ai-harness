@@ -17,7 +17,7 @@ import {
   credentialKey, credentialKeyId, credentialKeyScope, credentialRef, isCredentialKeySegment, isCredentialRefName,
 } from '@deepseek-ai/dsh-credentials'
 import type { CredentialKey, CredentialProvider, CredentialRecord } from '@deepseek-ai/dsh-credentials'
-import { launchEnvironmentOf } from '@deepseek-ai/dsh-launch-environment'
+import { launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
 import { LlmError } from '@deepseek-ai/dsh-llm'
 
 /**

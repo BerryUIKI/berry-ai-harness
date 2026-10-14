@@ -22,7 +22,7 @@ import WebServer from '@deepseek-ai/dsh-host-webserver'
 import type { NativeCommandRunner } from '@berry-ai/harness-native-command'
 import {
   createLaunchEnvironmentSnapshot, DSH_LAUNCH_ENVIRONMENT_KEY, type LaunchEnvironmentLayerInput,
-} from '@deepseek-ai/dsh-launch-environment'
+} from '@berry-ai/harness-launch-environment'
 import * as OpenInApp from '../src/index.ts'
 import { internals } from '../src/internals.ts'
 import type { OpenInAppLauncher } from '../src/resolver.ts'

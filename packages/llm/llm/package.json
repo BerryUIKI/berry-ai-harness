@@ -59,7 +59,7 @@
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-util-crypto": "workspace:*",
+    "@berry-ai/harness-util-crypto": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "^4.4.3",
     "@deepseek-ai/dsh-timeout": "workspace:*",
