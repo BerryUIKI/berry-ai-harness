@@ -39,7 +39,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-terminal'
-- name: '@deepseek-ai/dsh-subprocess-local'
+- name: '@berry-ai/harness-subprocess-local'
 - name: '@deepseek-ai/dsh-sandbox-local'
 - name: '@deepseek-ai/dsh-sandbox-policy'
 - name: '@berry-ai/harness-terminal-bash'

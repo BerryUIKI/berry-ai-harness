@@ -31,7 +31,7 @@ export type TerminalWaitReason = 'stdin_read' | 'inferred_idle' | 'timeout' | 's
 /**
  * Signals the model-facing PTY surface permits for foreground process groups.
  * Kept member-identical to `SubprocessTerminalSignal` in
- * `@deepseek-ai/dsh-subprocess` without a cross-seam dependency; change both together.
+ * `@berry-ai/harness-subprocess` without a cross-seam dependency; change both together.
  */
 export type TerminalSignal = 'SIGINT' | 'SIGTERM' | 'SIGKILL' | 'SIGTSTP' | 'SIGHUP'
 

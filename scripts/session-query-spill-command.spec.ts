@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import { LocalSpillStore } from '@berry-ai/harness-spill-local'
 import { LocalFileSystem } from '@deepseek-ai/dsh-fs-local'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
+import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import { LocalBashExecutor } from '@deepseek-ai/dsh-bash-local'
 import { SessionId } from '@deepseek-ai/dsh-session'
 import { ToolCallId } from '@deepseek-ai/dsh-llm'

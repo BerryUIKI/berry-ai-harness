@@ -2,7 +2,7 @@
 import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
 import type { Terminal as HeadlessTerminal } from '@xterm/headless'
 import type { SerializeAddon as Serializer } from '@xterm/addon-serialize'
-import type { SubprocessTerminalHandle } from '@deepseek-ai/dsh-subprocess'
+import type { SubprocessTerminalHandle } from '@berry-ai/harness-subprocess'
 import { createLazyRequire } from '@berry-ai/harness-lazy-require'
 import { TerminalFollower } from './stream.ts'
 import { TerminalRetention, type TerminalRetentionPolicy } from './retention.ts'

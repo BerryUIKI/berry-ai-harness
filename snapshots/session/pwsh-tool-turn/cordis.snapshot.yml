@@ -14,7 +14,7 @@
               - id: deepseek-v4-pro
 
 - id: subprocess
-  name: '@deepseek-ai/dsh-subprocess-local'
+  name: '@berry-ai/harness-subprocess-local'
 
 - id: bash-sandbox
   name: '@deepseek-ai/dsh-bash-sandbox'

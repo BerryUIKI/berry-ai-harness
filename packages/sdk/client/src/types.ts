@@ -36,7 +36,7 @@ export interface HarnessClientOptions {
    * The complete child environment, read when {@link HarnessClient.start}
    * spawns. `undefined` reads the parent env at that time; passing an object
    * reads that object at spawn and replaces the parent environment entirely, so callers own
-   * credential policy (see `scrubbedParentEnv` in `@deepseek-ai/dsh-subprocess`
+   * credential policy (see `scrubbedParentEnv` in `@berry-ai/harness-subprocess`
    * for the shared scrub-then-merge base).
    */
   env?: NodeJS.ProcessEnv

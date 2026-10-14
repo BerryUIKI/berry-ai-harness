@@ -2,7 +2,7 @@
 import { randomBytes } from 'node:crypto'
 import { mkdir } from 'node:fs/promises'
 import type { Context } from '@deepseek-ai/cordis'
-import type { SubprocessHandle } from '@deepseek-ai/dsh-subprocess'
+import type { SubprocessHandle } from '@berry-ai/harness-subprocess'
 import type { SpeechPreparationOptions, SpeechInput, SpeechPreparationState, SpeechPreparationStep, SpeechPreparationStepKind, Transcript } from '@deepseek-ai/dsh-experimental-speech-to-text/types'
 import { deadline } from '@berry-ai/harness-timeout'
 import { z } from 'zod'

@@ -12,12 +12,12 @@ import SubagentRuntime from '@deepseek-ai/dsh-subagent'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
-import type { SubprocessHandle, SubprocessOutcome } from '@deepseek-ai/dsh-subprocess'
+import type { SubprocessHandle, SubprocessOutcome } from '@berry-ai/harness-subprocess'
 import * as acp from '../src/index.ts'
 import * as acpRun from '../src/run.ts'
 import { acpStopReason, acpContentText, DEFAULT_DISPOSE_EOF_GRACE_MS, DEFAULT_DISPOSE_GRACE_MS, disposeAcpChild, startAcpRun, toAcpPrompt, type AcpRunSpec } from '../src/run.ts'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
-import { spawnSubprocess } from '@deepseek-ai/dsh-subprocess-local/src/spawn.ts'
+import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
+import { spawnSubprocess } from '@berry-ai/harness-subprocess-local/src/spawn.ts'
 
 /**
  * Keyless integration tests for the ACP subagent backend. Each spawns a REAL

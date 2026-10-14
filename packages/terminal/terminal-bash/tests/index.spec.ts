@@ -17,13 +17,13 @@ import { ENCODING_PREAMBLE } from '@deepseek-ai/dsh-pwsh-local'
 import * as ptyLocal from '@berry-ai/harness-terminal-bash'
 import type { ResolvedConfig } from '@berry-ai/harness-terminal-bash/src/config.ts'
 import type { LocalPtySession } from '@berry-ai/harness-terminal-bash/src/session.ts'
-import { SubprocessRuntime } from '@deepseek-ai/dsh-subprocess'
+import { SubprocessRuntime } from '@berry-ai/harness-subprocess'
 import type {
   SubprocessHandle,
   SubprocessSpawnSpec,
   SubprocessTerminalHandle,
   SubprocessTerminalSpawnSpec,
-} from '@deepseek-ai/dsh-subprocess'
+} from '@berry-ai/harness-subprocess'
 
 class EmptySandbox extends SandboxProvider {
   async confine(_argv: readonly string[], _policy: SandboxPolicy): Promise<ConfinedArgv> {

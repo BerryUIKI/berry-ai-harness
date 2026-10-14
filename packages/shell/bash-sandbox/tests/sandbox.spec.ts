@@ -16,8 +16,8 @@ import { SANDBOX_UNAVAILABLE, SandboxProvider, SandboxUnavailableError } from '@
 import type { ConfinedArgv, SandboxExecutionPolicy, SandboxMode, SandboxPolicy } from '@deepseek-ai/dsh-sandbox'
 import { SandboxPolicyService } from '@deepseek-ai/dsh-sandbox-policy'
 import { SandboxBashExecutor } from '@deepseek-ai/dsh-bash-sandbox'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
-import type { SubprocessHandle, SubprocessOutputReader } from '@deepseek-ai/dsh-subprocess'
+import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
+import type { SubprocessHandle, SubprocessOutputReader } from '@berry-ai/harness-subprocess'
 import { classifyDenial } from '../src/helpers.ts'
 
 /** Historical foreground shorthand over the unified execute() seam. */

@@ -9,7 +9,7 @@ import { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
+import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import { resolveExampleLaunch } from '@deepseek-ai/dsh-loader-smoke'
 import * as acp from '../src/index.ts'
 

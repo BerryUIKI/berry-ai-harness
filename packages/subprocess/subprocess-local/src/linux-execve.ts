@@ -1,7 +1,7 @@
 /** Lazy libc execve and descriptor bindings used by the one-shot Linux bootstrap. */
 
 import { getSystemErrorMessage, getSystemErrorName } from 'node:util'
-import { SUBPROCESS_CONTROL_FD } from '@deepseek-ai/dsh-subprocess/control'
+import { SUBPROCESS_CONTROL_FD } from '@berry-ai/harness-subprocess/control'
 import { createLazyRequire } from '@berry-ai/harness-lazy-require'
 
 const requireKoffi = createLazyRequire<typeof import('koffi')['default']>('koffi', import.meta.url)

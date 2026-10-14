@@ -36,7 +36,7 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
+    "@berry-ai/harness-subprocess": "workspace:*",
     "@deepseek-ai/dsh-sandbox": "workspace:*",
     "@deepseek-ai/dsh-sandbox-policy": "workspace:*"
   },
@@ -50,11 +50,11 @@
     "@deepseek-ai/dsh-session": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
+    "@berry-ai/harness-subprocess": "workspace:*",
     "@deepseek-ai/dsh-sandbox": "workspace:*",
     "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-fs-local": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
+    "@berry-ai/harness-subprocess-local": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-sandbox-local": "workspace:*"
   }

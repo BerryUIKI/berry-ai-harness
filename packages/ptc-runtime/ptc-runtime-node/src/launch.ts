@@ -61,7 +61,7 @@ function scriptBootstrapArgs(fs: Pick<FileSystem, 'processPathFromHostPath'>, bo
     return [mapped(fileURLToPath(new URL('./process.js', import.meta.url))), String(maxMessageBytes)]
   }
   const entry = mapped(fileURLToPath(new URL('./process.ts', import.meta.url)))
-  const subprocess = dirname(fileURLToPath(import.meta.resolve('@deepseek-ai/dsh-subprocess/package.json')))
+  const subprocess = dirname(fileURLToPath(import.meta.resolve('@berry-ai/harness-subprocess/package.json')))
   const helper = mapped(resolve(subprocess, 'src/control.ts'))
   const source = `const {openInheritedControlChannel}=await import(${JSON.stringify(pathToFileURL(helper).href)});const {runNodeMain}=await import(${JSON.stringify(pathToFileURL(entry).href)});await runNodeMain(openInheritedControlChannel(),${maxMessageBytes},process);`
   return ['--input-type=module', '--eval', source]

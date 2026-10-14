@@ -24,7 +24,7 @@
     workspaceRoot: !!js process.cwd()
 
 - id: subprocess
-  name: '@deepseek-ai/dsh-subprocess-local'
+  name: '@berry-ai/harness-subprocess-local'
 
 - insert:
     - id: padded-pwsh-backend

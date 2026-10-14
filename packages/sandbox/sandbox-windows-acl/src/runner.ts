@@ -44,7 +44,7 @@
  * @module @deepseek-ai/dsh-sandbox-windows-acl/runner
  */
 
-import { SUBPROCESS_CONTROL_ENV, SUBPROCESS_CONTROL_FD } from '@deepseek-ai/dsh-subprocess/control'
+import { SUBPROCESS_CONTROL_ENV, SUBPROCESS_CONTROL_FD } from '@berry-ai/harness-subprocess/control'
 import { closeSync, existsSync, mkdtempSync, rmSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 

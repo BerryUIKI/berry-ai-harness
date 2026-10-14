@@ -211,16 +211,16 @@ const packageFileExtras: Readonly<Record<string, readonly string[]>> = {
   '@deepseek-ai/dsh-sandbox-windows-acl': ['lib/runner.js', 'lib/types-*.js', 'assets'],
   '@deepseek-ai/dsh-skill-badge': ['assets'],
   '@deepseek-ai/dsh-skill-office': ['assets'],
-  '@deepseek-ai/dsh-subprocess': ['lib/control.js'],
+  '@berry-ai/harness-subprocess': ['lib/control.js'],
   // SSH launches a private helper and shares wire definitions and TLS setup
   // between that helper and the connection owner.
-  '@deepseek-ai/dsh-ssh': [
+  '@berry-ai/harness-ssh': [
     'lib/helper.js', 'lib/protocol.js', 'lib/schemas.js',
     'lib/protocol-*.js', 'lib/schemas-*.js', 'lib/stream-security-*.js',
   ],
   // Ordinary native containment ships a path-loaded runner and its shared
   // runner chunk beside the existing node-pty permission repair.
-  '@deepseek-ai/dsh-subprocess-local': [
+  '@berry-ai/harness-subprocess-local': [
     'lib/runner.js',
     'lib/runner-*.js',
     'lib/output.js',

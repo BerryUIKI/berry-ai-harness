@@ -86,9 +86,9 @@ export function artifactComposition(connection: { id: string; name: string; conf
     { id: 'projections', name: '@deepseek-ai/dsh-session-projection' },
     { id: 'policy', name: '@deepseek-ai/dsh-sandbox-policy', config: { mode: 'workspace-write', workspaceRoot: workspace } },
     connection,
-    { id: 'fs', name: '@deepseek-ai/dsh-fs-ssh' },
-    { id: 'subprocess', name: '@deepseek-ai/dsh-subprocess-ssh' },
-    { id: 'sandbox', name: '@deepseek-ai/dsh-sandbox-ssh' },
+    { id: 'fs', name: '@berry-ai/harness-fs-ssh' },
+    { id: 'subprocess', name: '@berry-ai/harness-subprocess-ssh' },
+    { id: 'sandbox', name: '@berry-ai/harness-sandbox-ssh' },
   ]
   return rows.map(row => `- ${JSON.stringify(row)}`).join('\n')
     + '\n- id: ptc\n  name: "@berry-ai/harness-ptc-runtime-node"\n  inject: [ssh]\n  config:\n    launch: !!js ctx.ssh.ptcLaunch\n'

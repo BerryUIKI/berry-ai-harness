@@ -19,7 +19,7 @@ import * as TerminalBash from '@berry-ai/harness-terminal-bash'
 import SandboxProvider from '@deepseek-ai/dsh-sandbox'
 import type { ConfinedArgv, SandboxPolicy } from '@deepseek-ai/dsh-sandbox'
 import SandboxPolicyService from '@deepseek-ai/dsh-sandbox-policy'
-import LocalSubprocessService from '@deepseek-ai/dsh-subprocess-local'
+import LocalSubprocessService from '@berry-ai/harness-subprocess-local'
 import { resolvePwshPath } from '@deepseek-ai/dsh-pwsh-local/src/resolve.ts'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRegistry from '@deepseek-ai/dsh-tools'
@@ -117,7 +117,7 @@ describe.skipIf(!hasPwsh)('persistent pwsh through a real cordis.yml Loader comp
       '  config:',
       '    mode: danger-full-access',
       `    workspaceRoot: ${JSON.stringify(root)}`,
-      "- name: '@deepseek-ai/dsh-subprocess-local'",
+      "- name: '@berry-ai/harness-subprocess-local'",
       "- name: '@berry-ai/harness-terminal-bash'",
       '  config:',
       '    shellDialect: pwsh',
@@ -161,7 +161,7 @@ describe.skipIf(!hasPwsh)('persistent pwsh through a real cordis.yml Loader comp
       ['@deepseek-ai/dsh-test-sandbox', PassthroughSandbox],
       ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
       ['@deepseek-ai/dsh-sandbox-policy', SandboxPolicyService],
-      ['@deepseek-ai/dsh-subprocess-local', LocalSubprocessService],
+      ['@berry-ai/harness-subprocess-local', LocalSubprocessService],
       ['@berry-ai/harness-terminal-bash', TerminalBash],
       ['@deepseek-ai/dsh-tool-pwsh-persistent', ToolPwshPersistent],
     ])

@@ -11,8 +11,8 @@ import { encodeMessage } from '@deepseek-ai/dsh-lsp-stdio'
 import type { ConnectionSpawner, ConnectionWriter } from '@deepseek-ai/dsh-lsp-stdio/src/connection.ts'
 import type { InstanceSpec } from '@deepseek-ai/dsh-lsp-stdio/src/instance.ts'
 import type { LspProviderQuery, LspQueryResult } from '@deepseek-ai/dsh-lsp'
-import { scrubbedParentEnv } from '@deepseek-ai/dsh-subprocess'
-import { spawnSubprocess } from '@deepseek-ai/dsh-subprocess-local/src/spawn.ts'
+import { scrubbedParentEnv } from '@berry-ai/harness-subprocess'
+import { spawnSubprocess } from '@berry-ai/harness-subprocess-local/src/spawn.ts'
 
 const fixtureServer = fileURLToPath(new URL('./fixture-server.ts', import.meta.url))
 

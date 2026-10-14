@@ -7,7 +7,7 @@ import type {
   SubprocessOutcome,
   SubprocessTerminalForeground,
   SubprocessTerminalHandle,
-} from '@deepseek-ai/dsh-subprocess'
+} from '@berry-ai/harness-subprocess'
 import { TerminalError } from '@berry-ai/harness-terminal'
 import type {
   TerminalBackendSession,

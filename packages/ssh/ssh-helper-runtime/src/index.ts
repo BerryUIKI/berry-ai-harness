@@ -31,9 +31,9 @@ export async function runSshHelperRuntime(): Promise<void> {
     Reflect.deleteProperty(process.env, 'DSH_PTC_RUNTIME_NODE')
     await import('@berry-ai/harness-ptc-runtime-node/process')
   } else if (selection !== undefined) {
-    const { runSelectedSubprocessRunner } = await import('@deepseek-ai/dsh-subprocess-local/runner')
+    const { runSelectedSubprocessRunner } = await import('@berry-ai/harness-subprocess-local/runner')
     await runSelectedSubprocessRunner(selection)
   } else {
-    await import('@deepseek-ai/dsh-ssh/helper')
+    await import('@berry-ai/harness-ssh/helper')
   }
 }

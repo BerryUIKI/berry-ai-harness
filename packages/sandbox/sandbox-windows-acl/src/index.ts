@@ -45,7 +45,7 @@
 
 import { existsSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { Win32Error } from '@deepseek-ai/dsh-win32-process'
+import { Win32Error } from '@berry-ai/harness-win32-process'
 
 import { grantWrite, revokeWrite } from './acl.ts'
 import { allocPtrSlot, decodePtr, isNullPtr, throwLastError, win32 } from './ffi.ts'

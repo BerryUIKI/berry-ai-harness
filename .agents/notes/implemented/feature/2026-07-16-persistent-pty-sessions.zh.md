@@ -110,7 +110,7 @@ plugins:
       mode: workspace-write
       workspaceRoot: .
   '@berry-ai/harness-terminal':
-  '@deepseek-ai/dsh-subprocess-local':
+  '@berry-ai/harness-subprocess-local':
   '@berry-ai/harness-terminal-bash':
     config:
       scrollbackLines: 10000

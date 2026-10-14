@@ -227,7 +227,7 @@
           exportTimeoutMillis: 1500
 
     - id: subprocess
-      name: '@deepseek-ai/dsh-subprocess-local'
+      name: '@berry-ai/harness-subprocess-local'
 
     # Every shipped CLI mode starts with the same file-effect boundary.
     # The environment remains an explicit deployment override; otherwise fresh

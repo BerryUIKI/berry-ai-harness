@@ -45,7 +45,7 @@
     "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "^4.4.3",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
+    "@berry-ai/harness-subprocess": "workspace:*",
     "@puppeteer/browsers": "3.2.2"
   },
   "devDependencies": {

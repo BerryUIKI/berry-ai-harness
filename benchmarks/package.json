@@ -8,7 +8,7 @@
     "playwright": "^1.49.0",
     "@xterm/headless": "^6.0.0",
     "@berry-ai/harness-terminal": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
+    "@berry-ai/harness-subprocess": "workspace:*",
     "@deepseek-ai/dsh-llm-replay": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-agent": "workspace:*",

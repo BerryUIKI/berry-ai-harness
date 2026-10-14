@@ -10,7 +10,7 @@
  */
 
 import { spawnSync } from 'node:child_process'
-import type { SubprocessTerminalSignal } from '@deepseek-ai/dsh-subprocess'
+import type { SubprocessTerminalSignal } from '@berry-ai/harness-subprocess'
 import { createLazyRequire } from '@berry-ai/harness-lazy-require'
 import type { ProcessIdentity, ProcessInspector, ProcessSnapshot } from './process-inspector.ts'
 

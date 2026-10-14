@@ -19,7 +19,7 @@ import { dirname, isAbsolute, join } from 'node:path'
 import {
   canOpenNativePath, openNativePath, runNativeCommand, desktopEntryFields, desktopDataDirectories, type NativeCommandRunner,
 } from '@berry-ai/harness-native-command'
-import { scrubbedParentEnv } from '@deepseek-ai/dsh-subprocess'
+import { scrubbedParentEnv } from '@berry-ai/harness-subprocess'
 import {
   OPEN_IN_APP_CATALOG, PATH_TOKEN,
   type OpenInAppApp, type OpenInAppLaunch, type OpenInAppLocator, type OpenInAppPlatformSpec,

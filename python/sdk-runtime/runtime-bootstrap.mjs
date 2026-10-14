@@ -100,6 +100,6 @@ if (resource !== undefined) {
   await runCli()
 } else {
   Reflect.deleteProperty(process.env, selectorName)
-  const { runSelectedSubprocessRunner } = await import('@deepseek-ai/dsh-subprocess-local/runner')
+  const { runSelectedSubprocessRunner } = await import('@berry-ai/harness-subprocess-local/runner')
   await runSelectedSubprocessRunner(selection)
 }

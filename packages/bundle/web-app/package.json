@@ -145,7 +145,7 @@
     "@deepseek-ai/dsh-session-stats": "workspace:*",
     "@deepseek-ai/dsh-session-turn-outline": "workspace:*",
     "@deepseek-ai/dsh-skill-filesystem": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
+    "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-terminal": "workspace:*",
     "@berry-ai/harness-terminal-bash": "workspace:*",
     "@deepseek-ai/dsh-time-context": "workspace:*",

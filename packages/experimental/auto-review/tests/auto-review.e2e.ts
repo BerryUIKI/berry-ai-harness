@@ -20,7 +20,7 @@ import SandboxProvider, { type ConfinedArgv, type SandboxPolicy } from '@deepsee
 import SandboxPolicyService from '@deepseek-ai/dsh-sandbox-policy'
 import { SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
 import * as ShellEnv from '@deepseek-ai/dsh-shell-env'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
+import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import * as ToolBash from '@deepseek-ai/dsh-tool-bash'
 import * as ToolFs from '@deepseek-ai/dsh-tool-fs'
 import { RUN_CODE_NAME } from '@deepseek-ai/dsh-tools'

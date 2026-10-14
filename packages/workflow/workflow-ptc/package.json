@@ -65,8 +65,8 @@
     "@berry-ai/harness-ptc-runtime-node": "workspace:*",
     "@deepseek-ai/dsh-fs": "workspace:*",
     "@deepseek-ai/dsh-fs-local": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
+    "@berry-ai/harness-subprocess": "workspace:*",
+    "@berry-ai/harness-subprocess-local": "workspace:*",
     "@deepseek-ai/dsh-sandbox-local": "workspace:*",
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"

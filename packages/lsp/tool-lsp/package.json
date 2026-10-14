@@ -47,7 +47,7 @@
     "@deepseek-ai/dsh-lsp": "workspace:*",
     "@deepseek-ai/dsh-lsp-stdio": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
+    "@berry-ai/harness-subprocess-local": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-tool-call-timeout-policy": "workspace:*",

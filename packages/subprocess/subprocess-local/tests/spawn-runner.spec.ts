@@ -14,11 +14,11 @@ import {
 import { tmpdir } from 'node:os'
 import { join, posix, resolve } from 'node:path'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { Win32Error } from '@deepseek-ai/dsh-win32-process'
+import { Win32Error } from '@berry-ai/harness-win32-process'
 import type {
   CurrentTokenProcessBindings,
   NativePtr,
-} from '@deepseek-ai/dsh-win32-process'
+} from '@berry-ai/harness-win32-process'
 import {
   cleanupLinuxLaunchFiles,
   consumeLinuxLaunchRequest,

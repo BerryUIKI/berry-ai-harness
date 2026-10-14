@@ -174,7 +174,7 @@ export async function createPackedInstallation(temporaryPrefix: string, extraPac
     ignoredOptionalDependencies: closure.filter(member => !members.has(member.name)).map(member => member.name),
     allowBuilds: {
       ...workspaceSettings.allowBuilds,
-      [`@deepseek-ai/dsh-subprocess-local@file:${relative(installation, tarballs.get('@deepseek-ai/dsh-subprocess-local')!).split(sep).join('/')}`]: true,
+      [`@berry-ai/harness-subprocess-local@file:${relative(installation, tarballs.get('@berry-ai/harness-subprocess-local')!).split(sep).join('/')}`]: true,
     },
     patchedDependencies: workspaceSettings.patchedDependencies,
     minimumReleaseAgeExclude: workspaceSettings.minimumReleaseAgeExclude,

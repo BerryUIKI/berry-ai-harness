@@ -416,10 +416,10 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-fs-ssh` | no | Filesystem provider over the shared POSIX SSH helper |
-| `@deepseek-ai/dsh-sandbox-ssh` | no | Remote POSIX sandbox argv provider over the shared SSH helper |
-| `@deepseek-ai/dsh-ssh` | yes | Shared OpenSSH connection and versioned POSIX remote helper |
-| `@deepseek-ai/dsh-subprocess-ssh` | no | Subprocess and terminal provider over the shared POSIX SSH helper |
+| `@berry-ai/harness-fs-ssh` | no | Filesystem provider over the shared POSIX SSH helper |
+| `@berry-ai/harness-sandbox-ssh` | no | Remote POSIX sandbox argv provider over the shared SSH helper |
+| `@berry-ai/harness-ssh` | yes | Shared OpenSSH connection and versioned POSIX remote helper |
+| `@berry-ai/harness-subprocess-ssh` | no | Subprocess and terminal provider over the shared POSIX SSH helper |
 
 ## storage
 
@@ -448,7 +448,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-subprocess-local` | no | Local-subprocess implementation of the DeepSeek Harness subprocess seam |
+| `@berry-ai/harness-subprocess-local` | no | Local-subprocess implementation of the DeepSeek Harness subprocess seam |
 
 ## telemetry
 

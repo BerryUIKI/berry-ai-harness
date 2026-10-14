@@ -36,11 +36,11 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-skill": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*"
+    "@berry-ai/harness-subprocess": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-lazy-require": "workspace:*",
-    "@deepseek-ai/dsh-win32-process": "workspace:*",
+    "@berry-ai/harness-win32-process": "workspace:*",
     "koffi": "3.1.1",
     "yaml": "^2.4.2"
   },
@@ -51,7 +51,7 @@
     "@deepseek-ai/dsh-sandbox-local": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-skill": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*"
+    "@berry-ai/harness-subprocess": "workspace:*",
+    "@berry-ai/harness-subprocess-local": "workspace:*"
   }
 }

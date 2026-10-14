@@ -59,7 +59,7 @@
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-shell": "workspace:*",
     "@deepseek-ai/dsh-shell-env": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
+    "@berry-ai/harness-subprocess-local": "workspace:*",
     "@deepseek-ai/dsh-system-prompt": "workspace:*",
     "@berry-ai/harness-tool-jobs": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*",

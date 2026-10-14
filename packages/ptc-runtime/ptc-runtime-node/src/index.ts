@@ -8,7 +8,7 @@ import type { PtcBindingNamespace, PtcJsonValue, PtcRunFailure, PtcRunRequest, P
 import { MAX_TIMER_DELAY_MS, clampTimeout } from '@berry-ai/harness-timeout'
 import { SandboxUnavailableError, classifyRunnerFailure, isRunnerSpawnFailure } from '@deepseek-ai/dsh-sandbox'
 import type { ConfinedArgv, SandboxExecutionPolicy, SandboxMode } from '@deepseek-ai/dsh-sandbox'
-import type { SubprocessHandle, SubprocessOutcome } from '@deepseek-ai/dsh-subprocess'
+import type { SubprocessHandle, SubprocessOutcome } from '@berry-ai/harness-subprocess'
 import type {} from '@deepseek-ai/dsh-sandbox-policy'
 import type {} from '@deepseek-ai/dsh-fs'
 import { snapshotJsonValue } from '@berry-ai/harness-util-values'

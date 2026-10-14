@@ -1,5 +1,5 @@
 import { Context } from '@deepseek-ai/cordis'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
+import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import { LocalBashExecutor } from '@deepseek-ai/dsh-bash-local'
 import { mkdtemp, readFile, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'

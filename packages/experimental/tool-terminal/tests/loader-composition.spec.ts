@@ -18,7 +18,7 @@ import SandboxProvider from '@deepseek-ai/dsh-sandbox'
 import type { ConfinedArgv, SandboxPolicy } from '@deepseek-ai/dsh-sandbox'
 import SandboxPolicyService from '@deepseek-ai/dsh-sandbox-policy'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
+import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import * as TerminalLocal from '@berry-ai/harness-terminal-bash'
 import * as ToolPty from '@deepseek-ai/dsh-tool-terminal'
 
@@ -76,7 +76,7 @@ suite('terminal real Loader composition through cordis.yml', () => {
       '  config:',
       '    mode: danger-full-access',
       `    workspaceRoot: ${JSON.stringify(root)}`,
-      "- name: '@deepseek-ai/dsh-subprocess-local'",
+      "- name: '@berry-ai/harness-subprocess-local'",
       "- name: '@berry-ai/harness-terminal-bash'",
       '  config:',
       '    pollIntervalMs: 10',
@@ -103,7 +103,7 @@ suite('terminal real Loader composition through cordis.yml', () => {
       ['@deepseek-ai/dsh-test-sandbox', PassthroughSandbox],
       ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
       ['@deepseek-ai/dsh-sandbox-policy', SandboxPolicyService],
-      ['@deepseek-ai/dsh-subprocess-local', LocalSubprocessRuntime],
+      ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],
       ['@berry-ai/harness-terminal-bash', TerminalLocal],
       ['@deepseek-ai/dsh-tool-terminal', ToolPty],
     ])

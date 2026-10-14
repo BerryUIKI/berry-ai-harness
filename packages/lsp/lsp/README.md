@@ -37,7 +37,7 @@ The seam needs a provider and a consumer to do anything. A minimal composition m
 
 ```yaml
 - name: '@deepseek-ai/dsh-fs-local'
-- name: '@deepseek-ai/dsh-subprocess-local'
+- name: '@berry-ai/harness-subprocess-local'
 - name: '@deepseek-ai/dsh-lsp'
 - name: '@deepseek-ai/dsh-lsp-stdio'
 - name: '@deepseek-ai/dsh-tool-lsp'

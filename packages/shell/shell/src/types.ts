@@ -8,10 +8,10 @@
  */
 
 import type { SandboxEnforcement, SandboxExecutionPolicy, SandboxMode } from '@deepseek-ai/dsh-sandbox'
-import type { CollectedOutput, DshEnvironment, SubprocessOutputReader } from '@deepseek-ai/dsh-subprocess'
+import type { CollectedOutput, DshEnvironment, SubprocessOutputReader } from '@berry-ai/harness-subprocess'
 
-export { DSH_ENV_PREFIX } from '@deepseek-ai/dsh-subprocess'
-export type { CollectedOutput, DshEnvironment, DshEnvironmentKey, SubprocessOutputRead, SubprocessOutputReader } from '@deepseek-ai/dsh-subprocess'
+export { DSH_ENV_PREFIX } from '@berry-ai/harness-subprocess'
+export type { CollectedOutput, DshEnvironment, DshEnvironmentKey, SubprocessOutputRead, SubprocessOutputReader } from '@berry-ai/harness-subprocess'
 
 /**
  * Non-consuming offset readers over a background process's captured streams,

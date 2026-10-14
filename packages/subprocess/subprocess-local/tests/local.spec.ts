@@ -7,20 +7,20 @@ import { mkdtempSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { Context } from '@deepseek-ai/cordis'
 import type { IPtyForkOptions, IWindowsPtyForkOptions } from 'node-pty'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
-import type { SubprocessSpawnSpec, SubprocessTerminalHandle, SubprocessTerminalSpawnSpec } from '@deepseek-ai/dsh-subprocess'
+import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
+import type { SubprocessSpawnSpec, SubprocessTerminalHandle, SubprocessTerminalSpawnSpec } from '@berry-ai/harness-subprocess'
 import { childEnv } from '../src/spawn.ts'
 import { signalLinuxDirectProcess } from '../src/linux-scope.ts'
 
 function mockWin32ForIsolatedRuntime(): void {
-  vi.doMock('@deepseek-ai/dsh-win32-process', () => ({
+  vi.doMock('@berry-ai/harness-win32-process', () => ({
     loadWin32ProcessBindings: vi.fn(),
     probeCurrentTokenJobSupport: vi.fn(),
   }))
 }
 
 function unmockWin32ForIsolatedRuntime(): void {
-  vi.doUnmock('@deepseek-ai/dsh-win32-process')
+  vi.doUnmock('@berry-ai/harness-win32-process')
 }
 
 function mockNodePtyForIsolatedRuntime(spawn: unknown): void {

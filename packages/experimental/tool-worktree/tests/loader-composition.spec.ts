@@ -16,7 +16,7 @@ import LocalSandbox from '@deepseek-ai/dsh-sandbox-local'
 import SandboxPolicyService from '@deepseek-ai/dsh-sandbox-policy'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
+import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
 import WorkingDirectoryService from '@deepseek-ai/dsh-working-directory'
@@ -58,7 +58,7 @@ describe('worktree tool through real Loader composition', () => {
       ['@deepseek-ai/dsh-llm', LlmRuntime],
       ['@deepseek-ai/dsh-tools', ToolRuntime],
       ['@deepseek-ai/dsh-fs-local', LocalFileSystem],
-      ['@deepseek-ai/dsh-subprocess-local', LocalSubprocessRuntime],
+      ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],
       ['@deepseek-ai/dsh-sandbox-local', LocalSandbox],
       ['@deepseek-ai/dsh-sandbox-policy', SandboxPolicyService],
       ['@deepseek-ai/dsh-working-directory', WorkingDirectoryService],
