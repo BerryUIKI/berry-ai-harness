@@ -10,7 +10,7 @@ import AgentRegistry from '@deepseek-ai/dsh-agent'
 import type { Agent, AgentStatus } from '@deepseek-ai/dsh-agent'
 import CommandRuntime from '@deepseek-ai/dsh-commands'
 import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import * as CommandFeedback from '@deepseek-ai/dsh-command-feedback'
+import * as CommandFeedback from '@berry-ai/harness-command-feedback'
 import { getOrCreateAnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 
@@ -59,7 +59,7 @@ describe('/feedback real Loader composition through cordis.yml', () => {
       "- name: '@deepseek-ai/dsh-agent'",
       "- name: '@deepseek-ai/dsh-session'",
       "- name: '@deepseek-ai/dsh-commands'",
-      "- name: '@deepseek-ai/dsh-command-feedback'",
+      "- name: '@berry-ai/harness-command-feedback'",
       '',
     ].join('\n'))
 
@@ -71,7 +71,7 @@ describe('/feedback real Loader composition through cordis.yml', () => {
       ['@deepseek-ai/dsh-agent', AgentRegistry],
       ['@deepseek-ai/dsh-session', SessionStore],
       ['@deepseek-ai/dsh-commands', CommandRuntime],
-      ['@deepseek-ai/dsh-command-feedback', CommandFeedback],
+      ['@berry-ai/harness-command-feedback', CommandFeedback],
     ])
     context.loader.internal = {
       version: 'v2',

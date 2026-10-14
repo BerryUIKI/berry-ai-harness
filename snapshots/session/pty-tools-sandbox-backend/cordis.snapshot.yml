@@ -5,7 +5,7 @@
 
 - insert:
     - id: pty
-      name: '@deepseek-ai/dsh-terminal'
+      name: '@berry-ai/harness-terminal'
     - id: pty-snapshot-backend
       name: './pty-snapshot-backend.mjs'
     - id: tool-terminal

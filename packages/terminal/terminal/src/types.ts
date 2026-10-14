@@ -1,7 +1,7 @@
 /**
  * Types shared by PTY backends, the owner-scoped registry, and tool consumers.
  * Runtime service code lives in `./index.ts`.
- * @module @deepseek-ai/dsh-terminal/types
+ * @module @berry-ai/harness-terminal/types
  */
 
 import type { Branded } from '@berry-ai/harness-brand'

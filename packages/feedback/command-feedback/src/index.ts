@@ -5,7 +5,7 @@
  * authoritative log-only event and does not start model work. The append is
  * eager but unflushed, so acknowledgement reports that the entry is logged,
  * not that it reached disk.
- * @module @deepseek-ai/dsh-command-feedback
+ * @module @berry-ai/harness-command-feedback
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -117,7 +117,7 @@ export class SessionFeedbackService extends TypertRemoteService {
 export function apply(ctx: Context): void {
   ctx.plugin(SessionFeedbackService)
   ctx.commands.register({
-    definitionId: CommandDefinitionId('@deepseek-ai/dsh-command-feedback'),
+    definitionId: CommandDefinitionId('@berry-ai/harness-command-feedback'),
     name: 'feedback',
     description: 'Record feedback about this session',
     input: { hint: '<text>' },

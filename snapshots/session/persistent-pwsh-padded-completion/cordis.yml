@@ -16,7 +16,7 @@
 
 - insert:
     - id: terminal
-      name: '@deepseek-ai/dsh-terminal'
+      name: '@berry-ai/harness-terminal'
 
 - insert:
     - id: padded-pwsh-backend

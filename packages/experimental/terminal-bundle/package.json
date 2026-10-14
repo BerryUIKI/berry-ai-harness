@@ -39,8 +39,8 @@
   },
   "dependencies": {
     "@deepseek-ai/dsh-tool-terminal": "workspace:*",
-    "@deepseek-ai/dsh-terminal": "workspace:*",
-    "@deepseek-ai/dsh-terminal-bash": "workspace:*"
+    "@berry-ai/harness-terminal": "workspace:*",
+    "@berry-ai/harness-terminal-bash": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"

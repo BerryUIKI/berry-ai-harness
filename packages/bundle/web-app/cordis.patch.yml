@@ -67,7 +67,7 @@
       name: '@deepseek-ai/dsh-tool-subagent/model-selection-settings'
 
     - id: message-feedback
-      name: '@deepseek-ai/dsh-message-feedback'
+      name: '@berry-ai/harness-message-feedback'
       config:
         maxNoteBytes: 8192
 

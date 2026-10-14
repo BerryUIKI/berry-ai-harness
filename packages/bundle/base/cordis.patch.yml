@@ -313,7 +313,7 @@
       name: '@deepseek-ai/dsh-commands'
 
     - id: command-feedback
-      name: '@deepseek-ai/dsh-command-feedback'
+      name: '@berry-ai/harness-command-feedback'
 
     - id: goal
       name: '@deepseek-ai/dsh-goal'

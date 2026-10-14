@@ -5,8 +5,8 @@ import AgentRegistry from '@deepseek-ai/dsh-agent'
 import type { Agent, AgentStatus } from '@deepseek-ai/dsh-agent'
 import CommandRuntime from '@deepseek-ai/dsh-commands'
 import SessionStore, { foldSurface, Session, SessionId } from '@deepseek-ai/dsh-session'
-import * as commandFeedback from '@deepseek-ai/dsh-command-feedback'
-import type { FeedbackRecord } from '@deepseek-ai/dsh-command-feedback/types'
+import * as commandFeedback from '@berry-ai/harness-command-feedback'
+import type { FeedbackRecord } from '@berry-ai/harness-command-feedback/types'
 import { remoteMethods } from '@deepseek-ai/dsh-typert-protocol'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 
@@ -85,7 +85,7 @@ function feedbackTexts(session: Session): (string | undefined)[] {
   return feedbackRecords(session).map(record => record.text)
 }
 
-describe('@deepseek-ai/dsh-command-feedback registration', () => {
+describe('@berry-ai/harness-command-feedback registration', () => {
   it('registers one global command with Loader-safe exports and disposes it', async () => {
     const test = await harness()
     expect(commandFeedback.name).toBe('command-feedback')
@@ -95,7 +95,7 @@ describe('@deepseek-ai/dsh-command-feedback registration', () => {
     expect(loader.unwrapExports(commandFeedback)).toBe(commandFeedback)
 
     expect(test.ctx.commands.list(test.agent)).toContainEqual({
-      definitionId: '@deepseek-ai/dsh-command-feedback',
+      definitionId: '@berry-ai/harness-command-feedback',
       name: 'feedback',
       description: 'Record feedback about this session',
       input: { hint: '<text>' },

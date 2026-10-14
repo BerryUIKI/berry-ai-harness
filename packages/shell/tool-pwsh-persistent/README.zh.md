@@ -38,8 +38,8 @@ kind: "package-reference"
 默认的 `shell` 后端通过配置了 `shellDialect: pwsh` 的 `dsh-terminal-bash` 实例启动 PowerShell shell；部署方可以注册其他 pwsh 方言 PTY 后端并按名称选择。
 
 ```yaml
-- name: '@deepseek-ai/dsh-terminal'
-- name: '@deepseek-ai/dsh-terminal-bash'
+- name: '@berry-ai/harness-terminal'
+- name: '@berry-ai/harness-terminal-bash'
   config:
     shellDialect: pwsh
 - name: '@deepseek-ai/dsh-tool-pwsh-persistent'

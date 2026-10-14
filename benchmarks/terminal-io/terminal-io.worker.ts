@@ -97,7 +97,7 @@ async function measure(capacityBytes: number, mode: string): Promise<TerminalIoR
 }
 
 assertBuiltBenchmarkRuntime(import.meta.url, {
-  '@deepseek-ai/dsh-terminal': import.meta.resolve('@deepseek-ai/dsh-terminal'),
+  '@berry-ai/harness-terminal': import.meta.resolve('@berry-ai/harness-terminal'),
 })
 const capacityBytes = Number(process.argv[2])
 const mode = process.argv[3]
