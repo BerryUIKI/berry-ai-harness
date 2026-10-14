@@ -3,7 +3,7 @@ description: "面向部署方与维护者的沙箱 PowerShell 执行器说明，
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-pwsh-sandbox
+# @berry-ai/harness-pwsh-sandbox
 
 [English](README.md) | 中文
 
@@ -52,7 +52,7 @@ kind: "package-reference"
     mode: read-only
     workspaceRoot: !!js process.cwd() # fallback for calls without a session cwd
 - id: bash
-  name: '@deepseek-ai/dsh-pwsh-sandbox'
+  name: '@berry-ai/harness-pwsh-sandbox'
 ```
 
 ### 拒绝与升权

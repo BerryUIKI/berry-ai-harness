@@ -25,7 +25,7 @@ import type { SandboxMode } from '@berry-ai/harness-sandbox'
 import { SANDBOX_MODES, setSandboxMode } from '@berry-ai/harness-sandbox-policy'
 // Side-effect type import: declaration-merges `ctx.shell` (the capability fact
 // `sandboxMode` this service reads), without a value dependency on the seam.
-import type {} from '@deepseek-ai/dsh-shell'
+import type {} from '@berry-ai/harness-shell'
 import type { ApprovalPolicy } from '@berry-ai/harness-user-approval'
 import { APPROVAL_POLICIES, setApprovalPolicy } from '@berry-ai/harness-user-approval'
 // Type-only: resolves the required projection service and optional settings/command children.

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-shell-env",
+  "name": "@berry-ai/harness-shell-env",
   "description": "Tool-independent managed DSH_* shell environment registry",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -30,7 +30,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
-    "@deepseek-ai/dsh-shell": "workspace:*",
+    "@berry-ai/harness-shell": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*"
   },
   "dependencies": {
@@ -42,7 +42,7 @@
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-shell": "workspace:*",
+    "@berry-ai/harness-shell": "workspace:*",
     "@deepseek-ai/dsh-tools": "workspace:*"
   }
 }

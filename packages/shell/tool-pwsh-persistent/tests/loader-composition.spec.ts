@@ -20,10 +20,10 @@ import SandboxProvider from '@berry-ai/harness-sandbox'
 import type { ConfinedArgv, SandboxPolicy } from '@berry-ai/harness-sandbox'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import LocalSubprocessService from '@berry-ai/harness-subprocess-local'
-import { resolvePwshPath } from '@deepseek-ai/dsh-pwsh-local/src/resolve.ts'
+import { resolvePwshPath } from '@berry-ai/harness-pwsh-local/src/resolve.ts'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRegistry from '@deepseek-ai/dsh-tools'
-import * as ToolPwshPersistent from '@deepseek-ai/dsh-tool-pwsh-persistent'
+import * as ToolPwshPersistent from '@berry-ai/harness-tool-pwsh-persistent'
 import { ReadinessTimeline, TIMELINE_HEADER } from './readiness-timeline.ts'
 
 const pwshPath = resolvePwshPath()
@@ -141,7 +141,7 @@ describe.skipIf(!hasPwsh)('persistent pwsh through a real cordis.yml Loader comp
       // would not).
       '    timeoutMs: 300000',
       '    disposeGraceMs: 500',
-      "- name: '@deepseek-ai/dsh-tool-pwsh-persistent'",
+      "- name: '@berry-ai/harness-tool-pwsh-persistent'",
       '  config:',
       '    timeoutMs: 300000',
       '',
@@ -163,7 +163,7 @@ describe.skipIf(!hasPwsh)('persistent pwsh through a real cordis.yml Loader comp
       ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
       ['@berry-ai/harness-subprocess-local', LocalSubprocessService],
       ['@berry-ai/harness-terminal-bash', TerminalBash],
-      ['@deepseek-ai/dsh-tool-pwsh-persistent', ToolPwshPersistent],
+      ['@berry-ai/harness-tool-pwsh-persistent', ToolPwshPersistent],
     ])
     context.loader.internal = {
       version: 'v2',

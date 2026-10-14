@@ -22,10 +22,10 @@
           - id: time-context
             name: '@deepseek-ai/dsh-time-context'
           - id: tool-bash
-            name: '@deepseek-ai/dsh-tool-bash'
+            name: '@berry-ai/harness-tool-bash'
             disabled: !!js process.platform === 'win32'
           - id: tool-pwsh
-            name: '@deepseek-ai/dsh-tool-pwsh'
+            name: '@berry-ai/harness-tool-pwsh'
             disabled: !!js process.platform !== 'win32'
           - id: tool-fs
             name: '@berry-ai/harness-tool-fs'

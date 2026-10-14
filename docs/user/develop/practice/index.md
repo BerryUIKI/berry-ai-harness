@@ -34,7 +34,7 @@ One Service Definition can have multiple providers selected through `cordis.yml`
 
 ```yaml
 # Local execution
-- name: '@deepseek-ai/dsh-bash-local'
+- name: '@berry-ai/harness-bash-local'
 
 # Replace this row with another package that provides the same service.
 ```

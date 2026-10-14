@@ -3,12 +3,12 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { afterAll, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { LocalBashExecutor } from '@deepseek-ai/dsh-bash-local'
+import { LocalBashExecutor } from '@berry-ai/harness-bash-local'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import SubprocessRuntime from '@berry-ai/harness-subprocess'
 import type { SubprocessHandle, SubprocessOutcome, SubprocessOutputReader } from '@berry-ai/harness-subprocess'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
-import type { ShellExecSpec, ShellExecution, ShellProcess, ShellRunResult } from '@deepseek-ai/dsh-shell'
+import type { ShellExecSpec, ShellExecution, ShellProcess, ShellRunResult } from '@berry-ai/harness-shell'
 
 /** Historical foreground shorthand over the unified execute() seam. */
 async function run(x: { execute(spec: ShellExecSpec): Promise<ShellExecution> }, spec: ShellExecSpec): Promise<ShellRunResult> {

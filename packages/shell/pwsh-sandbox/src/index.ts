@@ -1,6 +1,6 @@
 /**
  * Sandbox-consuming PowerShell executor — the pwsh twin of
- * `@deepseek-ai/dsh-bash-sandbox`. It wraps the exact local pwsh argv through
+ * `@berry-ai/harness-bash-sandbox`. It wraps the exact local pwsh argv through
  * `ctx.sandbox` (which on Windows resolves to the ACL restricted-token runner
  * chain), inherits local process mechanics, and reports the selected mode,
  * enforcement, and denial facts. Positive runner-executable evidence
@@ -9,11 +9,11 @@
  * other provider rejections retain stage-neutral local-executor semantics. The
  * tool layer owns the escalation approval flow through `ctx.approval`; this
  * executor reports the sandbox facts the tool renders.
- * @module @deepseek-ai/dsh-pwsh-sandbox
+ * @module @berry-ai/harness-pwsh-sandbox
  */
 
 import { Context } from '@deepseek-ai/cordis'
-import type { ShellExecRequest, ShellExecSpec, ShellExecution, ShellProcess, ShellRunResult } from '@deepseek-ai/dsh-shell'
+import type { ShellExecRequest, ShellExecSpec, ShellExecution, ShellProcess, ShellRunResult } from '@berry-ai/harness-shell'
 import { SandboxUnavailableError } from '@berry-ai/harness-sandbox'
 import type {
   ConfinedArgv,
@@ -25,8 +25,8 @@ import type {
   SandboxPolicy,
 } from '@berry-ai/harness-sandbox'
 import type {} from '@berry-ai/harness-sandbox-policy'
-import { PwshLocalExecutor } from '@deepseek-ai/dsh-pwsh-local'
-import type { Config as LocalConfig } from '@deepseek-ai/dsh-pwsh-local'
+import { PwshLocalExecutor } from '@berry-ai/harness-pwsh-local'
+import type { Config as LocalConfig } from '@berry-ai/harness-pwsh-local'
 import { classifyDenial, classifyRunnerFailure, isRunnerSpawnFailure, matchesSignature } from './helpers.ts'
 
 /**

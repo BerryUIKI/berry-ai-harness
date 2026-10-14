@@ -3,7 +3,7 @@ description: "面向部署方与维护者的沙箱 Bash 执行器说明，用于
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-bash-sandbox
+# @berry-ai/harness-bash-sandbox
 
 [English](README.md) | 中文
 
@@ -52,7 +52,7 @@ kind: "package-reference"
     mode: read-only
     workspaceRoot: !!js process.cwd() # fallback for calls without a session cwd
 - id: bash
-  name: '@deepseek-ai/dsh-bash-sandbox'
+  name: '@berry-ai/harness-bash-sandbox'
 ```
 
 ### 拒绝是结果事实

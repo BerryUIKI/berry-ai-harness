@@ -12,10 +12,10 @@ import { PtcRuntime, type PtcRunRequest, type PtcRunResult, type PtcRunSpec } fr
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import * as ToolJobs from '@berry-ai/harness-tool-jobs'
-import { LocalBashExecutor } from '@deepseek-ai/dsh-bash-local'
+import { LocalBashExecutor } from '@berry-ai/harness-bash-local'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import * as ToolBash from '@deepseek-ai/dsh-tool-bash'
-import * as BashEnvPlugin from '@deepseek-ai/dsh-shell-env'
+import * as ToolBash from '@berry-ai/harness-tool-bash'
+import * as BashEnvPlugin from '@berry-ai/harness-shell-env'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 
 /**

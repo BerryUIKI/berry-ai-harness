@@ -5,13 +5,13 @@
  * the registry itself while plugins can register additional, enumerable facts
  * with effect-scoped disposal.
  *
- * @module @deepseek-ai/dsh-shell-env
+ * @module @berry-ai/harness-shell-env
  */
 
 import { Service, type Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { DSH_ENV_PREFIX } from '@deepseek-ai/dsh-shell'
-import type { DshEnvironment, DshEnvironmentKey } from '@deepseek-ai/dsh-shell'
+import { DSH_ENV_PREFIX } from '@berry-ai/harness-shell'
+import type { DshEnvironment, DshEnvironmentKey } from '@berry-ai/harness-shell'
 import { DSH_HOME_ENV, resolveDshHome } from '@berry-ai/harness-home-paths'
 import type { ToolExecution } from '@deepseek-ai/dsh-tools'
 // Declares `Context.profileContext`, the launcher-provided profile the built-ins read.

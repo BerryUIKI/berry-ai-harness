@@ -51,7 +51,7 @@ import {
   type WorkspaceSnapshotEntry,
 } from '@deepseek-ai/dsh-session-snapshot'
 import { LOADER_SMOKE_TEST_TIMEOUT_MS, runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
-import { resolvePwshPath } from '@deepseek-ai/dsh-pwsh-local'
+import { resolvePwshPath } from '@berry-ai/harness-pwsh-local'
 import { parseSessionLog, prepareSessionSnapshotFixtureForComparison } from '@deepseek-ai/dsh-llm-replay'
 
 const repoRoot = fileURLToPath(new URL('../../', import.meta.url))

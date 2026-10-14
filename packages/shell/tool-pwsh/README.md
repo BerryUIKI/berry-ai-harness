@@ -3,7 +3,7 @@ description: "The model-facing pwsh tool for users and maintainers choosing, con
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-pwsh
+# @berry-ai/harness-tool-pwsh
 
 English | [中文](README.zh.md)
 
@@ -38,9 +38,9 @@ Choose the pwsh tool when commands must be written in PowerShell — native path
 The common path is a PowerShell executor provider, the environment registry, and this tool.
 
 ```yaml
-- name: '@deepseek-ai/dsh-pwsh-local'
-- name: '@deepseek-ai/dsh-shell-env'
-- name: '@deepseek-ai/dsh-tool-pwsh'
+- name: '@berry-ai/harness-pwsh-local'
+- name: '@berry-ai/harness-shell-env'
+- name: '@berry-ai/harness-tool-pwsh'
 ```
 
 The config fields govern the background surface.
@@ -206,7 +206,7 @@ Append-only; newly visible content follows the reusable request prefix and does 
 These limits define when the tool is a poor fit or needs special care. They are current package constraints, not a task backlog.
 
 - **Language mode and named-pipe capture under the Windows sandbox** — under the [Windows ACL sandbox](../../sandbox/sandbox-windows-acl/README.md), read-only pwsh starts in ConstrainedLanguage because its temp write denial makes PowerShell's AppLocker probe fail closed: `Add-Type`, non-core .NET statics (`[System.IO.*]::`, `[math]::`), COM objects, and reflection fail with "only core types" errors, and the mode cannot be lifted from inside. Workspace-write's private temp lets the probe complete, so it stays in FullLanguage unless host policy says otherwise. Both confined modes deny named-pipe opens, so a piped-stdio spawn inside a confined command fails with EPERM. The tool description teaches both contracts to the model; the backend README owns the full limitations.
-- **No persistent shell** — every call starts a fresh `pwsh -Command`; the persistent-shell counterpart is [`@deepseek-ai/dsh-tool-pwsh-persistent`](../tool-pwsh-persistent/README.md), which keeps one owner-scoped pwsh alive across calls.
+- **No persistent shell** — every call starts a fresh `pwsh -Command`; the persistent-shell counterpart is [`@berry-ai/harness-tool-pwsh-persistent`](../tool-pwsh-persistent/README.md), which keeps one owner-scoped pwsh alive across calls.
 - **PowerShell-dialect contract** — the model must write PowerShell (native paths, `$env:` variables), not bash; there is no dialect translation.
 
 <a id="dev-note"></a>

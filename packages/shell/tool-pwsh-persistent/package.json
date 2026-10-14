@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tool-pwsh-persistent",
+  "name": "@berry-ai/harness-tool-pwsh-persistent",
   "description": "Model-facing owner-scoped persistent PowerShell tool backed by the Harness PTY service",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -46,7 +46,7 @@
     "@berry-ai/harness-output-retention": "workspace:*",
     "@berry-ai/harness-terminal": "workspace:*",
     "@berry-ai/harness-terminal-bash": "workspace:*",
-    "@deepseek-ai/dsh-pwsh-local": "workspace:*",
+    "@berry-ai/harness-pwsh-local": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/dsh-session": "workspace:*",

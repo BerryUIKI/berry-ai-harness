@@ -394,10 +394,10 @@ importers:
       '@deepseek-ai/dsh-headless':
         specifier: workspace:*
         version: link:../../packages/bundle/headless
-      '@deepseek-ai/dsh-pwsh-local':
+      '@berry-ai/harness-pwsh-local':
         specifier: workspace:*
         version: link:../../packages/shell/pwsh-local
-      '@deepseek-ai/dsh-pwsh-sandbox':
+      '@berry-ai/harness-pwsh-sandbox':
         specifier: workspace:*
         version: link:../../packages/shell/pwsh-sandbox
       '@deepseek-ai/dsh-sdk-app':
@@ -430,10 +430,10 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../packages/llm/token-meter
-      '@deepseek-ai/dsh-tool-bash':
+      '@berry-ai/harness-tool-bash':
         specifier: workspace:*
         version: link:../../packages/shell/tool-bash
-      '@deepseek-ai/dsh-tool-bash-persistent':
+      '@berry-ai/harness-tool-bash-persistent':
         specifier: workspace:*
         version: link:../../packages/shell/tool-bash-persistent
       '@deepseek-ai/dsh-tool-cordis':
@@ -445,10 +445,10 @@ importers:
       '@berry-ai/harness-tool-fs-search':
         specifier: workspace:*
         version: link:../../packages/fs/tool-fs-search
-      '@deepseek-ai/dsh-tool-pwsh':
+      '@berry-ai/harness-tool-pwsh':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh
-      '@deepseek-ai/dsh-tool-pwsh-persistent':
+      '@berry-ai/harness-tool-pwsh-persistent':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh-persistent
       '@deepseek-ai/dsh-tool-skill':
@@ -518,7 +518,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../packages/test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-bash-local':
+      '@berry-ai/harness-bash-local':
         specifier: workspace:*
         version: link:../../packages/shell/bash-local
       '@berry-ai/harness-credentials-local':
@@ -599,7 +599,7 @@ importers:
       '@deepseek-ai/dsh-session-query':
         specifier: workspace:*
         version: link:../../packages/session-query/session-query
-      '@deepseek-ai/dsh-shell-env':
+      '@berry-ai/harness-shell-env':
         specifier: workspace:*
         version: link:../../packages/shell/shell-env
       '@deepseek-ai/dsh-skill-badge':
@@ -892,7 +892,7 @@ importers:
       '@deepseek-ai/dsh-llm-mock-server':
         specifier: workspace:*
         version: link:../../packages/test-support/llm-mock-server
-      '@deepseek-ai/dsh-pwsh-local':
+      '@berry-ai/harness-pwsh-local':
         specifier: workspace:*
         version: link:../../packages/shell/pwsh-local
       '@deepseek-ai/dsh-remote-mock':
@@ -2161,7 +2161,7 @@ importers:
       '@berry-ai/harness-authorization':
         specifier: workspace:*
         version: link:../../credentials/authorization
-      '@deepseek-ai/dsh-bash-sandbox':
+      '@berry-ai/harness-bash-sandbox':
         specifier: workspace:*
         version: link:../../shell/bash-sandbox
       '@deepseek-ai/dsh-command-compact':
@@ -2212,7 +2212,7 @@ importers:
       '@deepseek-ai/dsh-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../llm/plugin-package-inventory-deepseek
-      '@deepseek-ai/dsh-pwsh-sandbox':
+      '@berry-ai/harness-pwsh-sandbox':
         specifier: workspace:*
         version: link:../../shell/pwsh-sandbox
       '@deepseek-ai/dsh-session':
@@ -2245,7 +2245,7 @@ importers:
       '@deepseek-ai/dsh-session-title-first-prompt-llm':
         specifier: workspace:*
         version: link:../../session/session-title-first-prompt-llm
-      '@deepseek-ai/dsh-shell-env':
+      '@berry-ai/harness-shell-env':
         specifier: workspace:*
         version: link:../../shell/shell-env
       '@deepseek-ai/dsh-skill':
@@ -2269,7 +2269,7 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../llm/token-meter
-      '@deepseek-ai/dsh-tool-bash':
+      '@berry-ai/harness-tool-bash':
         specifier: workspace:*
         version: link:../../shell/tool-bash
       '@berry-ai/harness-tool-fs':
@@ -2278,7 +2278,7 @@ importers:
       '@berry-ai/harness-tool-fs-search':
         specifier: workspace:*
         version: link:../../fs/tool-fs-search
-      '@deepseek-ai/dsh-tool-pwsh':
+      '@berry-ai/harness-tool-pwsh':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh
       '@deepseek-ai/dsh-tool-skill':
@@ -2476,10 +2476,10 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-bash-persistent':
+      '@berry-ai/harness-tool-bash-persistent':
         specifier: workspace:*
         version: link:../../shell/tool-bash-persistent
-      '@deepseek-ai/dsh-tool-pwsh-persistent':
+      '@berry-ai/harness-tool-pwsh-persistent':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh-persistent
       '@deepseek-ai/dsh-tool-working-directory':
@@ -2843,10 +2843,10 @@ importers:
       '@deepseek-ai/dsh-time-context':
         specifier: workspace:*
         version: link:../../context/time-context
-      '@deepseek-ai/dsh-tool-bash':
+      '@berry-ai/harness-tool-bash':
         specifier: workspace:*
         version: link:../../shell/tool-bash
-      '@deepseek-ai/dsh-tool-bash-persistent':
+      '@berry-ai/harness-tool-bash-persistent':
         specifier: workspace:*
         version: link:../../shell/tool-bash-persistent
       '@deepseek-ai/dsh-tool-cordis':
@@ -2858,10 +2858,10 @@ importers:
       '@berry-ai/harness-tool-fs-search':
         specifier: workspace:*
         version: link:../../fs/tool-fs-search
-      '@deepseek-ai/dsh-tool-pwsh':
+      '@berry-ai/harness-tool-pwsh':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh
-      '@deepseek-ai/dsh-tool-pwsh-persistent':
+      '@berry-ai/harness-tool-pwsh-persistent':
         specifier: workspace:*
         version: link:../../shell/tool-pwsh-persistent
       '@deepseek-ai/dsh-tool-skill':
@@ -2916,7 +2916,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-shell-env':
+      '@berry-ai/harness-shell-env':
         specifier: workspace:*
         version: link:../../shell/shell-env
       '@deepseek-ai/dsh-system-prompt':
@@ -6869,7 +6869,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-bash-local':
+      '@berry-ai/harness-bash-local':
         specifier: workspace:*
         version: link:../../shell/bash-local
       '@deepseek-ai/dsh-llm':
@@ -6924,7 +6924,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../../shell/shell
       '@deepseek-ai/dsh-system-prompt':
@@ -7528,7 +7528,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-bash-sandbox':
+      '@berry-ai/harness-bash-sandbox':
         specifier: workspace:*
         version: link:../../shell/bash-sandbox
       '@deepseek-ai/dsh-compaction':
@@ -7558,10 +7558,10 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../../shell/shell
-      '@deepseek-ai/dsh-shell-env':
+      '@berry-ai/harness-shell-env':
         specifier: workspace:*
         version: link:../../shell/shell-env
       '@deepseek-ai/dsh-subagent':
@@ -7570,7 +7570,7 @@ importers:
       '@deepseek-ai/dsh-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-bash':
+      '@berry-ai/harness-tool-bash':
         specifier: workspace:*
         version: link:../../shell/tool-bash
       '@berry-ai/harness-tool-fs':
@@ -8312,7 +8312,7 @@ importers:
       '@deepseek-ai/dsh-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../../shell/shell
 
@@ -8337,7 +8337,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-bash-local':
+      '@berry-ai/harness-bash-local':
         specifier: workspace:*
         version: link:../../shell/bash-local
       '@berry-ai/harness-fs-local':
@@ -8358,7 +8358,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../../shell/shell
       '@deepseek-ai/dsh-subagent':
@@ -8392,7 +8392,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-bash-local':
+      '@berry-ai/harness-bash-local':
         specifier: workspace:*
         version: link:../../shell/bash-local
       '@deepseek-ai/dsh-hook-protocol':
@@ -8410,7 +8410,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../../shell/shell
       '@deepseek-ai/dsh-tools':
@@ -9319,7 +9319,7 @@ importers:
       '@deepseek-ai/dsh-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
-      '@deepseek-ai/dsh-bash-sandbox':
+      '@berry-ai/harness-bash-sandbox':
         specifier: workspace:*
         version: link:../../shell/bash-sandbox
       '@deepseek-ai/dsh-client-connection':
@@ -9949,7 +9949,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-bash-local':
+      '@berry-ai/harness-bash-local':
         specifier: workspace:*
         version: link:../../shell/bash-local
       '@deepseek-ai/dsh-llm':
@@ -10384,7 +10384,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../../shell/shell
       '@deepseek-ai/dsh-typert-protocol':
@@ -11480,7 +11480,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-pwsh-local':
+      '@berry-ai/harness-pwsh-local':
         specifier: workspace:*
         version: link:../../shell/pwsh-local
       '@deepseek-ai/dsh-skill':
@@ -12189,7 +12189,7 @@ importers:
       '@deepseek-ai/cordis-plugin-logger-console':
         specifier: workspace:~
         version: link:../../../vendor/logger-console
-      '@deepseek-ai/dsh-bash-local':
+      '@berry-ai/harness-bash-local':
         specifier: workspace:*
         version: link:../../shell/bash-local
       '@deepseek-ai/dsh-llm':
@@ -12487,7 +12487,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../shell
 
@@ -12508,13 +12508,13 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-bash-local':
+      '@berry-ai/harness-bash-local':
         specifier: workspace:*
         version: link:../bash-local
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../shell
       '@deepseek-ai/node-addon-system':
@@ -12539,7 +12539,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../shell
 
@@ -12560,13 +12560,13 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-pwsh-local':
+      '@berry-ai/harness-pwsh-local':
         specifier: workspace:*
         version: link:../pwsh-local
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../shell
 
@@ -12603,7 +12603,7 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../shell
       '@deepseek-ai/dsh-tools':
@@ -12652,7 +12652,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-bash-local':
+      '@berry-ai/harness-bash-local':
         specifier: workspace:*
         version: link:../bash-local
       '@deepseek-ai/dsh-llm':
@@ -12667,10 +12667,10 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../shell
-      '@deepseek-ai/dsh-shell-env':
+      '@berry-ai/harness-shell-env':
         specifier: workspace:*
         version: link:../shell-env
       '@deepseek-ai/dsh-system-prompt':
@@ -12795,16 +12795,16 @@ importers:
       '@deepseek-ai/dsh-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
-      '@deepseek-ai/dsh-pwsh-local':
+      '@berry-ai/harness-pwsh-local':
         specifier: workspace:*
         version: link:../pwsh-local
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../shell
-      '@deepseek-ai/dsh-shell-env':
+      '@berry-ai/harness-shell-env':
         specifier: workspace:*
         version: link:../shell-env
       '@deepseek-ai/dsh-system-prompt':
@@ -12862,7 +12862,7 @@ importers:
       '@deepseek-ai/dsh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-pwsh-local':
+      '@berry-ai/harness-pwsh-local':
         specifier: workspace:*
         version: link:../pwsh-local
       '@deepseek-ai/dsh-session':
@@ -13856,7 +13856,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-bash-local':
+      '@berry-ai/harness-bash-local':
         specifier: workspace:*
         version: link:../../shell/bash-local
       '@deepseek-ai/dsh-llm':
@@ -13880,7 +13880,7 @@ importers:
       '@deepseek-ai/dsh-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-tool-bash':
+      '@berry-ai/harness-tool-bash':
         specifier: workspace:*
         version: link:../../shell/tool-bash
       '@deepseek-ai/dsh-tool-subagent':
@@ -14098,7 +14098,7 @@ importers:
       '@berry-ai/harness-lazy-require':
         specifier: workspace:*
         version: link:../../util/lazy-require
-      '@deepseek-ai/dsh-pwsh-local':
+      '@berry-ai/harness-pwsh-local':
         specifier: workspace:*
         version: link:../../shell/pwsh-local
       '@deepseek-ai/dsh-session-projection':
@@ -15245,7 +15245,7 @@ importers:
       '@deepseek-ai/dsh-base':
         specifier: workspace:*
         version: link:../../packages/bundle/base
-      '@deepseek-ai/dsh-bash-local':
+      '@berry-ai/harness-bash-local':
         specifier: workspace:*
         version: link:../../packages/shell/bash-local
       '@deepseek-ai/dsh-client-connection':
@@ -15323,7 +15323,7 @@ importers:
       '@deepseek-ai/dsh-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../packages/llm/plugin-package-inventory-deepseek
-      '@deepseek-ai/dsh-pwsh-local':
+      '@berry-ai/harness-pwsh-local':
         specifier: workspace:*
         version: link:../../packages/shell/pwsh-local
       '@deepseek-ai/dsh-scope':
@@ -15371,10 +15371,10 @@ importers:
       '@deepseek-ai/dsh-session-title-llm':
         specifier: workspace:*
         version: link:../../packages/session/session-title-llm
-      '@deepseek-ai/dsh-shell':
+      '@berry-ai/harness-shell':
         specifier: workspace:*
         version: link:../../packages/shell/shell
-      '@deepseek-ai/dsh-shell-env':
+      '@berry-ai/harness-shell-env':
         specifier: workspace:*
         version: link:../../packages/shell/shell-env
       '@deepseek-ai/dsh-skill':
@@ -15407,10 +15407,10 @@ importers:
       '@deepseek-ai/dsh-token-meter':
         specifier: workspace:*
         version: link:../../packages/llm/token-meter
-      '@deepseek-ai/dsh-tool-bash':
+      '@berry-ai/harness-tool-bash':
         specifier: workspace:*
         version: link:../../packages/shell/tool-bash
-      '@deepseek-ai/dsh-tool-bash-persistent':
+      '@berry-ai/harness-tool-bash-persistent':
         specifier: workspace:*
         version: link:../../packages/shell/tool-bash-persistent
       '@deepseek-ai/dsh-tool-cordis':
@@ -15422,10 +15422,10 @@ importers:
       '@berry-ai/harness-tool-fs-search':
         specifier: workspace:*
         version: link:../../packages/fs/tool-fs-search
-      '@deepseek-ai/dsh-tool-pwsh':
+      '@berry-ai/harness-tool-pwsh':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh
-      '@deepseek-ai/dsh-tool-pwsh-persistent':
+      '@berry-ai/harness-tool-pwsh-persistent':
         specifier: workspace:*
         version: link:../../packages/shell/tool-pwsh-persistent
       '@deepseek-ai/dsh-tool-skill':

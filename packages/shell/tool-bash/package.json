@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tool-bash",
+  "name": "@berry-ai/harness-tool-bash",
   "description": "Model-facing bash tool with optional generic background-job and sandbox-escalation support",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -28,8 +28,8 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-shell": "workspace:*",
-    "@deepseek-ai/dsh-shell-env": "workspace:*",
+    "@berry-ai/harness-shell": "workspace:*",
+    "@berry-ai/harness-shell-env": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
@@ -48,9 +48,9 @@
     "@deepseek-ai/dsh-agent": "workspace:*",
     "@deepseek-ai/dsh-agent-loop": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-shell": "workspace:*",
-    "@deepseek-ai/dsh-shell-env": "workspace:*",
-    "@deepseek-ai/dsh-bash-local": "workspace:*",
+    "@berry-ai/harness-shell": "workspace:*",
+    "@berry-ai/harness-shell-env": "workspace:*",
+    "@berry-ai/harness-bash-local": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",

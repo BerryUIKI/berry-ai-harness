@@ -20,9 +20,9 @@ import SqliteSessionQueryEngine from '@deepseek-ai/dsh-session-query-sqlite'
 import GoalService from '@berry-ai/harness-goal'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime, { type Config as ToolsConfig } from '@deepseek-ai/dsh-tools'
-import LocalBashExecutor from '@deepseek-ai/dsh-bash-local'
-import * as BashEnvPlugin from '@deepseek-ai/dsh-shell-env'
-import { PwshLocalExecutor } from '@deepseek-ai/dsh-pwsh-local'
+import LocalBashExecutor from '@berry-ai/harness-bash-local'
+import * as BashEnvPlugin from '@berry-ai/harness-shell-env'
+import { PwshLocalExecutor } from '@berry-ai/harness-pwsh-local'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import WorkingDirectory from '@deepseek-ai/dsh-working-directory'
@@ -43,10 +43,10 @@ import SkillRegistry from '@deepseek-ai/dsh-skill'
 import * as SkillFileSystem from '@deepseek-ai/dsh-skill-filesystem'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import * as ToolAskUser from '@berry-ai/harness-tool-ask-user'
-import * as ToolBash from '@deepseek-ai/dsh-tool-bash'
-import * as ToolPwsh from '@deepseek-ai/dsh-tool-pwsh'
-import * as ToolBashPersistent from '@deepseek-ai/dsh-tool-bash-persistent'
-import * as ToolPwshPersistent from '@deepseek-ai/dsh-tool-pwsh-persistent'
+import * as ToolBash from '@berry-ai/harness-tool-bash'
+import * as ToolPwsh from '@berry-ai/harness-tool-pwsh'
+import * as ToolBashPersistent from '@berry-ai/harness-tool-bash-persistent'
+import * as ToolPwshPersistent from '@berry-ai/harness-tool-pwsh-persistent'
 import CordisHostRunner from '@deepseek-ai/dsh-cordis-host-runner'
 import * as ToolCordis from '@deepseek-ai/dsh-tool-cordis'
 import * as ToolPresent from '@berry-ai/harness-tool-present'
@@ -267,7 +267,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'exit_plan_mode stays in the model-facing schema while planning is inactive so transitions add no tool-catalog churn on top of the plan-policy change. Its execute path rejects calls outside plan mode; in plan mode it presents the plan over the user-questions seam (approve / keep planning with feedback), and approval logs plan mode inactive at the step boundary.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-bash',
+    pkg: '@berry-ai/harness-tool-bash',
     dir: 'tool-bash',
     source: 'packages/shell/tool-bash/src/index.ts',
     requires: ['ctx.workingDirectory', 'ctx.tools', 'ctx.shell', 'ctx.systemPrompt', 'ctx.shellEnv', 'ctx.jobs for run_in_background and the job-backed foreground path'],
@@ -296,7 +296,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
     note: 'Deliveries belong to the calling Session; Web ui-deliverables supplies source-file opening and cards.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-pwsh',
+    pkg: '@berry-ai/harness-tool-pwsh',
     dir: 'tool-pwsh',
     source: 'packages/shell/tool-pwsh/src/index.ts',
     requires: ['ctx.workingDirectory', 'ctx.tools', 'ctx.shell', 'ctx.systemPrompt', 'ctx.shellEnv', 'ctx.jobs for run_in_background and the job-backed foreground path'],
@@ -313,7 +313,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       await ctx.plugin(ToolPwsh)
     },
     note:
-      'The pwsh tool is the PowerShell-dialect consumer of the bash executor seam for Windows compositions (a PowerShell executor such as `@deepseek-ai/dsh-pwsh-local` backs `ctx.shell`); it mirrors the bash tool call-for-call minus sandbox controls — `run_in_background` runs register with the generic `ctx.jobs` runtime and are collected/stopped through the `job_*` tools, and the managed `DSH_*` environment comes from `@deepseek-ai/dsh-shell-env`. Each call runs in a fresh process (no persistent PTY session), with native `C:\\...` paths and `$env:NAME` variables.',
+      'The pwsh tool is the PowerShell-dialect consumer of the bash executor seam for Windows compositions (a PowerShell executor such as `@berry-ai/harness-pwsh-local` backs `ctx.shell`); it mirrors the bash tool call-for-call minus sandbox controls — `run_in_background` runs register with the generic `ctx.jobs` runtime and are collected/stopped through the `job_*` tools, and the managed `DSH_*` environment comes from `@berry-ai/harness-shell-env`. Each call runs in a fresh process (no persistent PTY session), with native `C:\\...` paths and `$env:NAME` variables.',
   },
   {
     pkg: '@deepseek-ai/dsh-tool-cordis',
@@ -329,7 +329,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'Creator mode provides two read-only runtime inspection tools. The Cordis host runner supplies the inspection registry; Client queries require a connected page. Author persistent changes as bundles and install them with plugin_manager.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-bash-persistent',
+    pkg: '@berry-ai/harness-tool-bash-persistent',
     dir: 'tool-bash-persistent',
     source: 'packages/shell/tool-bash-persistent/src/index.ts',
     requires: ['ctx.workingDirectory', 'ctx.tools', 'ctx.terminals', 'an owning Agent at execution time'],
@@ -342,7 +342,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'One owner-isolated persistent bash tool; deployment composition supplies the PTY backend and may override the model-facing environment description.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-pwsh-persistent',
+    pkg: '@berry-ai/harness-tool-pwsh-persistent',
     dir: 'tool-pwsh-persistent',
     source: 'packages/shell/tool-pwsh-persistent/src/index.ts',
     requires: ['ctx.workingDirectory', 'ctx.tools', 'ctx.terminals', 'an owning Agent at execution time'],

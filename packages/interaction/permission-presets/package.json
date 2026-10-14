@@ -48,7 +48,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-shell": "workspace:*",
+    "@berry-ai/harness-shell": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
@@ -63,7 +63,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-shell": "workspace:*",
+    "@berry-ai/harness-shell": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",

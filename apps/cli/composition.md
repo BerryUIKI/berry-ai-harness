@@ -88,19 +88,19 @@ flowchart LR
   cfg --> plugin_dsh_base_sandbox
   plugin_dsh_base_sandbox_policy["sandbox-policy<br/>@berry-ai/harness-sandbox-policy"]
   cfg --> plugin_dsh_base_sandbox_policy
-  plugin_dsh_base_bash_sandbox["bash-sandbox<br/>@deepseek-ai/dsh-bash-sandbox"]
+  plugin_dsh_base_bash_sandbox["bash-sandbox<br/>@berry-ai/harness-bash-sandbox"]
   cfg --> plugin_dsh_base_bash_sandbox
-  plugin_dsh_base_pwsh_sandbox["pwsh-sandbox<br/>@deepseek-ai/dsh-pwsh-sandbox"]
+  plugin_dsh_base_pwsh_sandbox["pwsh-sandbox<br/>@berry-ai/harness-pwsh-sandbox"]
   cfg --> plugin_dsh_base_pwsh_sandbox
   plugin_dsh_base_approval["approval<br/>@berry-ai/harness-user-approval"]
   cfg --> plugin_dsh_base_approval
   plugin_dsh_base_permission["permission<br/>@berry-ai/harness-permission-presets"]
   cfg --> plugin_dsh_base_permission
-  plugin_dsh_base_shell_env["shell-env<br/>@deepseek-ai/dsh-shell-env"]
+  plugin_dsh_base_shell_env["shell-env<br/>@berry-ai/harness-shell-env"]
   cfg --> plugin_dsh_base_shell_env
-  plugin_dsh_base_tool_bash["tool-bash<br/>@deepseek-ai/dsh-tool-bash"]
+  plugin_dsh_base_tool_bash["tool-bash<br/>@berry-ai/harness-tool-bash"]
   cfg --> plugin_dsh_base_tool_bash
-  plugin_dsh_base_tool_pwsh["tool-pwsh<br/>@deepseek-ai/dsh-tool-pwsh"]
+  plugin_dsh_base_tool_pwsh["tool-pwsh<br/>@berry-ai/harness-tool-pwsh"]
   cfg --> plugin_dsh_base_tool_pwsh
   plugin_dsh_base_tool_jobs["tool-jobs<br/>@berry-ai/harness-tool-jobs"]
   cfg --> plugin_dsh_base_tool_jobs
@@ -240,13 +240,13 @@ flowchart LR
 | `subprocess` | `@berry-ai/harness-subprocess-local` |
 | `sandbox` | `@berry-ai/harness-sandbox-local` |
 | `sandbox-policy` | `@berry-ai/harness-sandbox-policy` |
-| `bash-sandbox` | `@deepseek-ai/dsh-bash-sandbox` |
-| `pwsh-sandbox` | `@deepseek-ai/dsh-pwsh-sandbox` |
+| `bash-sandbox` | `@berry-ai/harness-bash-sandbox` |
+| `pwsh-sandbox` | `@berry-ai/harness-pwsh-sandbox` |
 | `approval` | `@berry-ai/harness-user-approval` |
 | `permission` | `@berry-ai/harness-permission-presets` |
-| `shell-env` | `@deepseek-ai/dsh-shell-env` |
-| `tool-bash` | `@deepseek-ai/dsh-tool-bash` |
-| `tool-pwsh` | `@deepseek-ai/dsh-tool-pwsh` |
+| `shell-env` | `@berry-ai/harness-shell-env` |
+| `tool-bash` | `@berry-ai/harness-tool-bash` |
+| `tool-pwsh` | `@berry-ai/harness-tool-pwsh` |
 | `tool-jobs` | `@berry-ai/harness-tool-jobs` |
 | `fs-observation-policy` | `@berry-ai/harness-fs-observation-policy` |
 | `tool-fs` | `@berry-ai/harness-tool-fs` |

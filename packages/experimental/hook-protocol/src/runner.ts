@@ -6,7 +6,7 @@
  * @module @deepseek-ai/dsh-hook-protocol/runner
  */
 
-import type { ShellExecutor } from '@deepseek-ai/dsh-shell'
+import type { ShellExecutor } from '@berry-ai/harness-shell'
 import { parseHookOutput } from './codec.ts'
 import type { CommandHook, HookOutput } from './types.ts'
 

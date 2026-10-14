@@ -1,5 +1,5 @@
 /** Shell-result projection over shared sandbox diagnostics. */
-import type { ShellRunResult } from '@deepseek-ai/dsh-shell'
+import type { ShellRunResult } from '@berry-ai/harness-shell'
 import { matchesSignature } from '@berry-ai/harness-sandbox'
 export { isRunnerSpawnFailure, classifyRunnerFailure, matchesSignature } from '@berry-ai/harness-sandbox'
 

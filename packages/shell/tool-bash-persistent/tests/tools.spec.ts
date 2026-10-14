@@ -18,7 +18,7 @@ import type {
 } from '@berry-ai/harness-terminal'
 import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
 import ToolRuntime from '@deepseek-ai/dsh-tools'
-import * as ToolBashPersistent from '@deepseek-ai/dsh-tool-bash-persistent'
+import * as ToolBashPersistent from '@berry-ai/harness-tool-bash-persistent'
 
 const contexts: Context[] = []
 let callNumber = 0

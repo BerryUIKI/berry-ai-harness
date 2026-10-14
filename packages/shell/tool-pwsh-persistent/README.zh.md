@@ -3,7 +3,7 @@ description: "面向模型的持久 pwsh 工具，供选择、配置或排查跨
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-pwsh-persistent
+# @berry-ai/harness-tool-pwsh-persistent
 
 [English](README.md) | 中文
 
@@ -42,7 +42,7 @@ kind: "package-reference"
 - name: '@berry-ai/harness-terminal-bash'
   config:
     shellDialect: pwsh
-- name: '@deepseek-ai/dsh-tool-pwsh-persistent'
+- name: '@berry-ai/harness-tool-pwsh-persistent'
 ```
 
 | 字段 | 默认值 | 含义 |

@@ -53,8 +53,8 @@ describe('dsh-sdk-minimal bundle', () => {
       ['llm-retry', '@deepseek-ai/dsh-llm-retry'],
       ['jobs', '@berry-ai/harness-jobs-local'],
       ['agent-loop', '@deepseek-ai/dsh-agent-loop'],
-      ['persistent-bash', '@deepseek-ai/dsh-tool-bash-persistent'],
-      ['persistent-pwsh', '@deepseek-ai/dsh-tool-pwsh-persistent'],
+      ['persistent-bash', '@berry-ai/harness-tool-bash-persistent'],
+      ['persistent-pwsh', '@berry-ai/harness-tool-pwsh-persistent'],
       ['sessions', '@deepseek-ai/dsh-session-persistence-jsonl'],
     ])
     expect(rows.find(row => row.id === 'sdk-app-startup')?.config).toEqual({ profile: 'sdk-minimal' })

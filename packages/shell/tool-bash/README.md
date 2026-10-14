@@ -3,7 +3,7 @@ description: "The model-facing bash tool for users and maintainers choosing, con
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-bash
+# @berry-ai/harness-tool-bash
 
 English | [中文](README.zh.md)
 
@@ -34,9 +34,9 @@ Load this plugin in any composition where the agent should run bash commands: it
 The common path is an executor provider, the environment registry, and this tool; add the job runtime when the agent may run commands in the background.
 
 ```yaml
-- name: '@deepseek-ai/dsh-bash-local'
-- name: '@deepseek-ai/dsh-shell-env'
-- name: '@deepseek-ai/dsh-tool-bash'
+- name: '@berry-ai/harness-bash-local'
+- name: '@berry-ai/harness-shell-env'
+- name: '@berry-ai/harness-tool-bash'
 
 # Optional: background jobs
 - name: '@berry-ai/harness-jobs-local'

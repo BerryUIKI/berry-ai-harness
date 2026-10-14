@@ -26,7 +26,7 @@ import { isLoopbackHost, normalizeBindAddress } from '@deepseek-ai/dsh-host-webs
 import { launchedThroughSsh, launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
 import { scrubbedParentEnv } from '@berry-ai/harness-subprocess'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
-import type {} from '@deepseek-ai/dsh-shell-env'
+import type {} from '@berry-ai/harness-shell-env'
 import { parsePublicUrl } from './public-url.ts'
 
 /** Stable Cordis plugin name. */

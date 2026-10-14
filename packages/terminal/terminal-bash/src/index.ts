@@ -14,7 +14,7 @@ import type { SubprocessTerminalHandle, SubprocessTerminalSpawnSpec } from '@ber
 import type { SandboxExecutionPolicy } from '@berry-ai/harness-sandbox'
 import type {} from '@berry-ai/harness-sandbox-policy'
 import type {} from '@deepseek-ai/dsh-session-projection'
-import { ENCODING_PREAMBLE } from '@deepseek-ai/dsh-pwsh-local'
+import { ENCODING_PREAMBLE } from '@berry-ai/harness-pwsh-local'
 import { type Config, type ResolvedConfig, resolveConfig, type ShellDialect, validateConfig } from './config.ts'
 import { LocalPtySession } from './session.ts'
 import { CONTROLLED_PROMPT } from './sanitize.ts'

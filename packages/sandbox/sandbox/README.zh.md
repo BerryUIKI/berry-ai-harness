@@ -44,7 +44,7 @@ kind: "package-reference"
     mode: workspace-write                    # the deployment default every session starts from
     workspaceRoot: !!js process.cwd()        # the boundary workspace-write may write under
 - id: bash
-  name: '@deepseek-ai/dsh-bash-sandbox'      # the confined executor behind ctx.shell
+  name: '@berry-ai/harness-bash-sandbox'      # the confined executor behind ctx.shell
 ```
 
 使用该组合时，bash 调用在 `workspace-write` 下受限运行：工作区内写入成功，工作区外写入被拒绝，模型可以通过下面的升权流程恢复。

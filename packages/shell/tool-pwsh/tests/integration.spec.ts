@@ -1,5 +1,5 @@
 /**
- * Integration tests: the REAL `@deepseek-ai/dsh-pwsh-local` executor plus the
+ * Integration tests: the REAL `@berry-ai/harness-pwsh-local` executor plus the
  * `pwsh` tool, exercised through `ctx.tools.execute()` with a real PowerShell
  * process. These verify the world — actual commands run, stdout/stderr come
  * back, exit codes render, timeouts abort, background jobs settle through the
@@ -22,9 +22,9 @@ import ToolRuntime, { TOOL_ABORTED } from '@deepseek-ai/dsh-tools'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import * as ToolJobs from '@berry-ai/harness-tool-jobs'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import { PwshLocalExecutor, resolvePwshPath } from '@deepseek-ai/dsh-pwsh-local'
-import * as ToolPwsh from '@deepseek-ai/dsh-tool-pwsh'
-import * as BashEnvPlugin from '@deepseek-ai/dsh-shell-env'
+import { PwshLocalExecutor, resolvePwshPath } from '@berry-ai/harness-pwsh-local'
+import * as ToolPwsh from '@berry-ai/harness-tool-pwsh'
+import * as BashEnvPlugin from '@berry-ai/harness-shell-env'
 
 const testToolSignal = new AbortController().signal
 

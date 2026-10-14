@@ -3,7 +3,7 @@ description: "面向模型的 pwsh 工具，供选择、配置或排查 Windows 
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-pwsh
+# @berry-ai/harness-tool-pwsh
 
 [English](README.md) | 中文
 
@@ -38,9 +38,9 @@ kind: "package-reference"
 常用路径是 PowerShell 执行器提供方、环境注册表与本工具。
 
 ```yaml
-- name: '@deepseek-ai/dsh-pwsh-local'
-- name: '@deepseek-ai/dsh-shell-env'
-- name: '@deepseek-ai/dsh-tool-pwsh'
+- name: '@berry-ai/harness-pwsh-local'
+- name: '@berry-ai/harness-shell-env'
+- name: '@berry-ai/harness-tool-pwsh'
 ```
 
 配置字段决定后台能力面。
@@ -206,7 +206,7 @@ Non-zero exits are reported as `[exit code: N]` markers; investigate failures be
 这些限制说明工具何时不合适或需要特别小心。它们是当前包约束，不是任务积压。
 
 - **Windows 沙箱下的语言模式与命名管道捕获**——在 [Windows ACL 沙箱](../../sandbox/sandbox-windows-acl/README.zh.md)下，只读 pwsh 以 ConstrainedLanguage 启动，因为其临时目录写入被拒绝，导致 PowerShell 的 AppLocker 探测失败并按拒绝处理：`Add-Type`、非核心 .NET 静态调用（`[System.IO.*]::`、`[math]::`）、COM 对象与反射会以 "only core types" 错误失败，且该模式无法从内部解除。workspace-write 的私有临时目录让探测完成，因此除非宿主策略另有规定，它保持 FullLanguage。两种受限模式都拒绝命名管道打开，因此受限命令内部的管道 stdio spawn 会以 EPERM 失败。工具描述把两条约定都教给模型；完整限制以后端 README 为准。
-- **没有持久 shell**——每次调用都启动全新的 `pwsh -Command`；持久 shell 对应物是 [`@deepseek-ai/dsh-tool-pwsh-persistent`](../tool-pwsh-persistent/README.zh.md)，它跨调用保持一个按所有者隔离的 pwsh 存活。
+- **没有持久 shell**——每次调用都启动全新的 `pwsh -Command`；持久 shell 对应物是 [`@berry-ai/harness-tool-pwsh-persistent`](../tool-pwsh-persistent/README.zh.md)，它跨调用保持一个按所有者隔离的 pwsh 存活。
 - **PowerShell 方言约定**——模型必须编写 PowerShell（原生路径、`$env:` 变量），而不是 bash；没有方言翻译。
 
 <a id="dev-note"></a>

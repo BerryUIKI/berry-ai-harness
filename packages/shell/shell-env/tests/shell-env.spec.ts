@@ -1,5 +1,5 @@
 /**
- * Registry tests for `@deepseek-ai/dsh-shell-env`: built-in facts, contributor
+ * Registry tests for `@berry-ai/harness-shell-env`: built-in facts, contributor
  * ownership and validation, collection ordering, effect-scoped disposal, and
  * the explicit disposer contract.
  */
@@ -12,8 +12,8 @@ import { ToolCallId } from '@deepseek-ai/dsh-llm'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
 import type { ToolExecution } from '@deepseek-ai/dsh-tools'
-import { ShellEnvRegistry } from '@deepseek-ai/dsh-shell-env'
-import * as BashEnvPlugin from '@deepseek-ai/dsh-shell-env'
+import { ShellEnvRegistry } from '@berry-ai/harness-shell-env'
+import * as BashEnvPlugin from '@berry-ai/harness-shell-env'
 
 const testToolSignal = new AbortController().signal
 

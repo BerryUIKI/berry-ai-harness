@@ -33,7 +33,7 @@ One provider registers `ctx.subprocess` per composition; load it beside the cons
 
 ```yaml
 - name: '@berry-ai/harness-subprocess-local'
-- name: '@deepseek-ai/dsh-bash-local'
+- name: '@berry-ai/harness-bash-local'
 ```
 
 ### Starting a managed process

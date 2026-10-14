@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-pwsh-local",
+  "name": "@berry-ai/harness-pwsh-local",
   "description": "Local PowerShell implementation of the DeepSeek Harness bash executor seam",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -27,7 +27,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-shell": "workspace:*",
+    "@berry-ai/harness-shell": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
@@ -36,7 +36,7 @@
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-shell": "workspace:*",
+    "@berry-ai/harness-shell": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",

@@ -44,7 +44,7 @@
     "@deepseek-ai/cordis-plugin-logger-console": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-bash-local": "workspace:*",
+    "@berry-ai/harness-bash-local": "workspace:*",
     "@berry-ai/harness-command-feedback": "workspace:*",
     "@berry-ai/harness-message-feedback": "workspace:*",
     "@deepseek-ai/dsh-llm": "workspace:*",
