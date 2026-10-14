@@ -38,9 +38,9 @@ kind: "package-reference"
 ```yaml
 - name: '@deepseek-ai/dsh-session'
 - name: '@deepseek-ai/dsh-session-persistence-jsonl'
-- name: '@deepseek-ai/dsh-storage'
-- name: '@deepseek-ai/dsh-storage-json'
-- name: '@deepseek-ai/dsh-storage-domain'
+- name: '@berry-ai/harness-storage'
+- name: '@berry-ai/harness-storage-json'
+- name: '@berry-ai/harness-storage-domain'
   config:
     backend: json
 - name: '@deepseek-ai/dsh-workspace'

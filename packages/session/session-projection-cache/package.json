@@ -35,14 +35,14 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-storage-domain": "workspace:*"
+    "@berry-ai/harness-storage-domain": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-storage": "workspace:*",
-    "@deepseek-ai/dsh-storage-domain": "workspace:*",
-    "@deepseek-ai/dsh-storage-json": "workspace:*"
+    "@berry-ai/harness-storage": "workspace:*",
+    "@berry-ai/harness-storage-domain": "workspace:*",
+    "@berry-ai/harness-storage-json": "workspace:*"
   }
 }

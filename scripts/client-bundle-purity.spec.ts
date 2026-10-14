@@ -148,10 +148,10 @@ describe('client bundle purity gate', () => {
   })
 
   it('admits only the pure spill notice entry, not its Host policy', () => {
-    expect(resolveId('@deepseek-ai/dsh-spill-policy/notice')).toBeNull()
+    expect(resolveId('@berry-ai/harness-spill-policy/notice')).toBeNull()
     expect(resolveId('@berry-ai/harness-output-retention')).toBeNull()
-    expect(() => resolveId('@deepseek-ai/dsh-spill-policy')).toThrow(/purity/)
-    expect(() => resolveId('@deepseek-ai/dsh-spill-policy/notice/internal')).toThrow(/purity/)
+    expect(() => resolveId('@berry-ai/harness-spill-policy')).toThrow(/purity/)
+    expect(() => resolveId('@berry-ai/harness-spill-policy/notice/internal')).toThrow(/purity/)
   })
 
   it('lets exact generated Remote contributions inline without admitting their package implementation', () => {

@@ -1,6 +1,6 @@
 /** Host timing updates share delivery FIFO and publish only durable task writes. */
 import type { Context } from '@deepseek-ai/cordis'
-import type { KvTable } from '@deepseek-ai/dsh-storage-domain'
+import type { KvTable } from '@berry-ai/harness-storage-domain'
 import { SessionId } from '@deepseek-ai/dsh-session'
 import { MessageId } from '@deepseek-ai/dsh-llm/brand'
 import { afterEach, beforeEach, expect, it, vi } from 'vitest'

@@ -13,7 +13,7 @@
   config:
     maxReferenceBytes: 360
 - name: './source-session.ts'
-- name: '@deepseek-ai/dsh-spill-local'
+- name: '@berry-ai/harness-spill-local'
   config:
     root: '{{spillRoot}}'
     cleanupPeriodDays: 0

@@ -9,10 +9,10 @@ import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts
 import { statusLine } from '@deepseek-ai/dsh-tool-jobs/src/render.ts'
 import { presentation } from '@deepseek-ai/dsh-tool-session-query/src/presentation.ts'
 import { renderList, renderRead, renderSpawn } from '@deepseek-ai/dsh-tool-terminal/src/render.ts'
-import { formatSpillNotice } from '@deepseek-ai/dsh-spill-policy/notice'
+import { formatSpillNotice } from '@berry-ai/harness-spill-policy/notice'
 import { detailBadge, detailJson, detailList, detailRecord, inspectionItems, nonempty } from '../src/client/tool/models/detail-model-shared.ts'
 import { detailsCardModel } from '../src/client/tool/models/details-card-model.ts'
-import { SpillLocator } from '@deepseek-ai/dsh-spill'
+import { SpillLocator } from '@berry-ai/harness-spill'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 
 const t = makeTranslate(en, commonEn)

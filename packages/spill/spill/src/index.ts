@@ -3,15 +3,15 @@
  * spill backend does — persist oversized text and return a model-facing
  * locator plus retrieval guidance — without saying HOW. Implementations
  * subclass {@link SpillStore} and register as the `spillStore` service;
- * `@deepseek-ai/dsh-spill-local` (host filesystem) is the first.
+ * `@berry-ai/harness-spill-local` (host filesystem) is the first.
  *
  * The Service Definition is deliberately minimal: `saveText` and nothing else. It owns NO
  * retention policy (that is `@berry-ai/harness-output-retention`), NO tool-result
- * replacement (that is `@deepseek-ai/dsh-spill-policy`), and NO retrieval or
+ * replacement (that is `@berry-ai/harness-spill-policy`), and NO retrieval or
  * search API. The backend supplies the locator and retrieval hint appropriate
  * for its storage substrate.
  *
- * @module @deepseek-ai/dsh-spill
+ * @module @berry-ai/harness-spill
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'

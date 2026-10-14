@@ -18,7 +18,7 @@ import SessionReferenceResolver, {
   type SessionReferenceErrorCode,
 } from '@deepseek-ai/dsh-session-reference'
 import { stringifyTagSafeJson } from '../src/serialization.ts'
-import { SpillLocator, SpillStore, type SaveTextSpill, type SpillRef } from '@deepseek-ai/dsh-spill'
+import { SpillLocator, SpillStore, type SaveTextSpill, type SpillRef } from '@berry-ai/harness-spill'
 
 declare module '@deepseek-ai/dsh-llm' {
   interface MessageSourceMap {

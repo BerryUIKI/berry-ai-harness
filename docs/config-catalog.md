@@ -440,6 +440,141 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-schedule -->
 
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-spill-local -->
+<a id="berry-aiharness-spill-local"></a>
+
+## `@berry-ai/harness-spill-local`
+
+- `source`: [`packages/spill/spill-local/src/index.ts:31`](../packages/spill/spill-local/src/index.ts)
+
+```ts config-catalog
+/** Plugin config (all optional — `static Config` supplies the defaults). */
+export interface Config {
+  /**
+   * Root directory for spill files. Omitted uses a lazily-created private
+   * (0700) per-process directory under the OS temp dir — the safe default for
+   * a local deployment. Set it to keep spill files under a known location.
+   */
+  root?: string
+  /**
+   * Age in days after which a spill file is eligible for the one-shot startup
+   * cleanup sweep. Defaults to `30`; `0` disables cleanup entirely. Files whose
+   * `mtime` is strictly older than the cutoff are deleted and emptied
+   * directories are pruned; fresh files, symlinks, and unrelated entries are
+   * left untouched. On POSIX, cleanup skips roots and session directories that
+   * another local user could modify or replace. Retention is deliberate — a
+   * resumed or forked session may still reference an older locator until it
+   * ages out.
+   */
+  cleanupPeriodDays?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-spill-local -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-spill-policy -->
+<a id="berry-aiharness-spill-policy"></a>
+
+## `@berry-ai/harness-spill-policy`
+
+- `inject`: `tools`
+- `source`: [`packages/spill/spill-policy/src/index.ts:25`](../packages/spill/spill-policy/src/index.ts)
+
+```ts config-catalog
+/** Optional result-retention budget. */
+export interface Config {
+  /** Maximum estimated tokens in a retained result, including image descriptors and omission notices. Omitted disables retention. */
+  maxInlineTokens?: number
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-spill-policy -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-storage-domain -->
+<a id="berry-aiharness-storage-domain"></a>
+
+## `@berry-ai/harness-storage-domain`
+
+- `inject`: `storage`
+- `source`: [`packages/storage/storage-domain/src/index.ts:52`](../packages/storage/storage-domain/src/index.ts)
+
+```ts config-catalog
+/**
+ * Plugin config. Which backend serves which domain is decided here, not
+ * globally on the hub: `backend` is the default route and `routes` overrides
+ * it per domain name. A route naming an unregistered backend fails loud at
+ * `open` with `backend-not-found`.
+ */
+export interface Config {
+  /** Default backend name for every domain without an explicit route. Required: there is no universally correct medium. */
+  backend: string
+  /** Per-domain overrides: domain name → backend name. */
+  routes?: Record<string, string>
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-storage-domain -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-storage-json -->
+<a id="berry-aiharness-storage-json"></a>
+
+## `@berry-ai/harness-storage-json`
+
+- `inject`: `storage`
+- `source`: [`packages/storage/storage-json/src/index.ts:28`](../packages/storage/storage-json/src/index.ts)
+
+```ts config-catalog
+/**
+ * Plugin configuration.
+ * `root` has NO default on purpose: a `process.cwd()` fallback would scatter
+ * unit files wherever the process happens to start; assemblies state the
+ * location explicitly.
+ */
+export interface Config {
+  /** Directory holding one `<unit>.json` file (or `<unit>/` tree) per unit. */
+  root: string
+}
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-storage-json -->
+
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-storage-sqlite -->
+<a id="berry-aiharness-storage-sqlite"></a>
+
+## `@berry-ai/harness-storage-sqlite`
+
+- `inject`: `storage`
+- `source`: [`packages/storage/storage-sqlite/src/index.ts:24`](../packages/storage/storage-sqlite/src/index.ts)
+
+```ts config-catalog
+/** Plugin configuration. */
+export interface Config {
+  /**
+   * Filesystem path to the SQLite database file. The special value `:memory:`
+   * opens an in-process database (tests). On filesystems with POSIX modes,
+   * missing directories and databases are created owner-only; existing path
+   * modes are preserved. Filesystem setup errors other than an existing
+   * database fail the open. The backend does not protect confidentiality or
+   * integrity when another principal can replace the database entry in its
+   * parent directory.
+   */
+  path: string
+  /**
+   * SQLite `journal_mode` pragma. `wal` (the default) suits local disks; pick
+   * a rollback-journal mode (`delete`/`truncate`/`persist`) on filesystems
+   * where WAL's shared-memory files do not work (network mounts). See
+   * {@link JournalMode}.
+   */
+  journalMode?: JournalMode
+}
+
+/**
+ * Journal modes the backend will run under. `wal` is the default; the
+ * rollback-journal modes (`delete`/`truncate`/`persist`) exist for
+ * filesystems where WAL's shared-memory files do not work (network mounts).
+ * `memory`/`off` are excluded: dropping journal durability silently
+ * contradicts the durability clause of the KV backend contract.
+ */
+export type JournalMode = 'wal' | 'delete' | 'truncate' | 'persist'
+```
+<!-- END GENERATED config-catalog:@berry-ai/harness-storage-sqlite -->
+
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-terminal-bash -->
 <a id="berry-aiharness-terminal-bash"></a>
 
@@ -3198,54 +3333,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-skill-office -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-spill-local -->
-<a id="deepseek-aidsh-spill-local"></a>
-
-## `@deepseek-ai/dsh-spill-local`
-
-- `source`: [`packages/spill/spill-local/src/index.ts:31`](../packages/spill/spill-local/src/index.ts)
-
-```ts config-catalog
-/** Plugin config (all optional — `static Config` supplies the defaults). */
-export interface Config {
-  /**
-   * Root directory for spill files. Omitted uses a lazily-created private
-   * (0700) per-process directory under the OS temp dir — the safe default for
-   * a local deployment. Set it to keep spill files under a known location.
-   */
-  root?: string
-  /**
-   * Age in days after which a spill file is eligible for the one-shot startup
-   * cleanup sweep. Defaults to `30`; `0` disables cleanup entirely. Files whose
-   * `mtime` is strictly older than the cutoff are deleted and emptied
-   * directories are pruned; fresh files, symlinks, and unrelated entries are
-   * left untouched. On POSIX, cleanup skips roots and session directories that
-   * another local user could modify or replace. Retention is deliberate — a
-   * resumed or forked session may still reference an older locator until it
-   * ages out.
-   */
-  cleanupPeriodDays?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-spill-local -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-spill-policy -->
-<a id="deepseek-aidsh-spill-policy"></a>
-
-## `@deepseek-ai/dsh-spill-policy`
-
-- `inject`: `tools`
-- `source`: [`packages/spill/spill-policy/src/index.ts:25`](../packages/spill/spill-policy/src/index.ts)
-
-```ts config-catalog
-/** Optional result-retention budget. */
-export interface Config {
-  /** Maximum estimated tokens in a retained result, including image descriptors and omission notices. Omitted disables retention. */
-  maxInlineTokens?: number
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-spill-policy -->
-
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-ssh -->
 <a id="deepseek-aidsh-ssh"></a>
 
@@ -3292,93 +3379,6 @@ export type HelperLaunch = {
 }
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-ssh -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-storage-domain -->
-<a id="deepseek-aidsh-storage-domain"></a>
-
-## `@deepseek-ai/dsh-storage-domain`
-
-- `inject`: `storage`
-- `source`: [`packages/storage/storage-domain/src/index.ts:52`](../packages/storage/storage-domain/src/index.ts)
-
-```ts config-catalog
-/**
- * Plugin config. Which backend serves which domain is decided here, not
- * globally on the hub: `backend` is the default route and `routes` overrides
- * it per domain name. A route naming an unregistered backend fails loud at
- * `open` with `backend-not-found`.
- */
-export interface Config {
-  /** Default backend name for every domain without an explicit route. Required: there is no universally correct medium. */
-  backend: string
-  /** Per-domain overrides: domain name → backend name. */
-  routes?: Record<string, string>
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-storage-domain -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-storage-json -->
-<a id="deepseek-aidsh-storage-json"></a>
-
-## `@deepseek-ai/dsh-storage-json`
-
-- `inject`: `storage`
-- `source`: [`packages/storage/storage-json/src/index.ts:28`](../packages/storage/storage-json/src/index.ts)
-
-```ts config-catalog
-/**
- * Plugin configuration.
- * `root` has NO default on purpose: a `process.cwd()` fallback would scatter
- * unit files wherever the process happens to start; assemblies state the
- * location explicitly.
- */
-export interface Config {
-  /** Directory holding one `<unit>.json` file (or `<unit>/` tree) per unit. */
-  root: string
-}
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-storage-json -->
-
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-storage-sqlite -->
-<a id="deepseek-aidsh-storage-sqlite"></a>
-
-## `@deepseek-ai/dsh-storage-sqlite`
-
-- `inject`: `storage`
-- `source`: [`packages/storage/storage-sqlite/src/index.ts:24`](../packages/storage/storage-sqlite/src/index.ts)
-
-```ts config-catalog
-/** Plugin configuration. */
-export interface Config {
-  /**
-   * Filesystem path to the SQLite database file. The special value `:memory:`
-   * opens an in-process database (tests). On filesystems with POSIX modes,
-   * missing directories and databases are created owner-only; existing path
-   * modes are preserved. Filesystem setup errors other than an existing
-   * database fail the open. The backend does not protect confidentiality or
-   * integrity when another principal can replace the database entry in its
-   * parent directory.
-   */
-  path: string
-  /**
-   * SQLite `journal_mode` pragma. `wal` (the default) suits local disks; pick
-   * a rollback-journal mode (`delete`/`truncate`/`persist`) on filesystems
-   * where WAL's shared-memory files do not work (network mounts). See
-   * {@link JournalMode}.
-   */
-  journalMode?: JournalMode
-}
-
-/**
- * Journal modes the backend will run under. `wal` is the default; the
- * rollback-journal modes (`delete`/`truncate`/`persist`) exist for
- * filesystems where WAL's shared-memory files do not work (network mounts).
- * `memory`/`off` are excluded: dropping journal durability silently
- * contradicts the durability clause of the KV backend contract.
- */
-export type JournalMode = 'wal' | 'delete' | 'truncate' | 'persist'
-```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-storage-sqlite -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent -->
 <a id="deepseek-aidsh-subagent"></a>
@@ -4503,6 +4503,7 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@berry-ai/harness-config-editor` | `loader` · `profileContext` | [`packages/boot/config-editor/src/index.ts`](../packages/boot/config-editor/src/index.ts) |
 | `@berry-ai/harness-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
 | `@berry-ai/harness-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
+| `@berry-ai/harness-storage` | — | [`packages/storage/storage/src/index.ts`](../packages/storage/storage/src/index.ts) |
 | `@berry-ai/harness-terminal` | — | [`packages/terminal/terminal/src/index.ts`](../packages/terminal/terminal/src/index.ts) |
 | `@berry-ai/harness-tool-call-timeout-policy` | `tools` | [`packages/guard/timeout-policy/src/index.ts`](../packages/guard/timeout-policy/src/index.ts) |
 | `@berry-ai/harness-tool-schedule` | `tools` | [`packages/schedule/tool-schedule/src/index.ts`](../packages/schedule/tool-schedule/src/index.ts) |
@@ -4590,7 +4591,6 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@deepseek-ai/dsh-session-turn-outline` | `sessionProjections` | [`packages/session/session-turn-outline/src/index.ts`](../packages/session/session-turn-outline/src/index.ts) |
 | `@deepseek-ai/dsh-settings` | `configEditor` · `profileContext` | [`packages/settings/settings/src/index.ts`](../packages/settings/settings/src/index.ts) |
 | `@deepseek-ai/dsh-skill-badge` | `skills` | [`packages/experimental/skill-badge/src/index.ts`](../packages/experimental/skill-badge/src/index.ts) |
-| `@deepseek-ai/dsh-storage` | — | [`packages/storage/storage/src/index.ts`](../packages/storage/storage/src/index.ts) |
 | `@deepseek-ai/dsh-subprocess-local` | — | [`packages/subprocess/subprocess-local/src/index.ts`](../packages/subprocess/subprocess-local/src/index.ts) |
 | `@deepseek-ai/dsh-subprocess-ssh` | `ssh` | [`packages/ssh/subprocess-ssh/src/index.ts`](../packages/ssh/subprocess-ssh/src/index.ts) |
 | `@deepseek-ai/dsh-tool-cordis` | `tools` · `cordisInspect` | [`packages/extensions/tool-cordis/src/index.ts`](../packages/extensions/tool-cordis/src/index.ts) |
@@ -4610,6 +4610,7 @@ Abstract service classes — a deployment loads a concrete implementation packag
 | --- | --- | --- | --- |
 | `@berry-ai/harness-attachment` | `AttachmentStore` | — | [`packages/attachment/attachment/src/index.ts`](../packages/attachment/attachment/src/index.ts) |
 | `@berry-ai/harness-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
+| `@berry-ai/harness-spill` | `SpillStore` | — | [`packages/spill/spill/src/index.ts`](../packages/spill/spill/src/index.ts) |
 | `@deepseek-ai/dsh-compaction` | `CompactionEngine` | — | [`packages/compaction/compaction/src/index.ts`](../packages/compaction/compaction/src/index.ts) |
 | `@deepseek-ai/dsh-credentials` | `CredentialProvider` | — | [`packages/credentials/credentials/src/index.ts`](../packages/credentials/credentials/src/index.ts) |
 | `@deepseek-ai/dsh-deepseek-account` | `DeepSeekAccount` | — | [`packages/credentials/deepseek-account/src/index.ts`](../packages/credentials/deepseek-account/src/index.ts) |
@@ -4621,7 +4622,6 @@ Abstract service classes — a deployment loads a concrete implementation packag
 | `@deepseek-ai/dsh-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |
 | `@deepseek-ai/dsh-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |
 | `@deepseek-ai/dsh-shell` | `ShellExecutor` | — | [`packages/shell/shell/src/index.ts`](../packages/shell/shell/src/index.ts) |
-| `@deepseek-ai/dsh-spill` | `SpillStore` | — | [`packages/spill/spill/src/index.ts`](../packages/spill/spill/src/index.ts) |
 | `@deepseek-ai/dsh-subprocess` | `SubprocessRuntime` | — | [`packages/subprocess/subprocess/src/index.ts`](../packages/subprocess/subprocess/src/index.ts) |
 | `@deepseek-ai/dsh-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
 <!-- END GENERATED config-catalog:seam -->

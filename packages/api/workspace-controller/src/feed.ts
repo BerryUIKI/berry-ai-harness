@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import { Deque } from '@berry-ai/harness-deque'
-import type { DomainChanged } from '@deepseek-ai/dsh-storage-domain'
+import type { DomainChanged } from '@berry-ai/harness-storage-domain'
 import type { Workspace, WorkspaceRecord } from '@deepseek-ai/dsh-workspace'
 import {
   workspaceDomainState,

@@ -17,9 +17,9 @@ import SessionProjectionCache, {
   type CheckpointRecord,
 } from '@deepseek-ai/dsh-session-projection-cache'
 import { titleProjectionDefinition } from '@deepseek-ai/dsh-session-title'
-import Storage from '@deepseek-ai/dsh-storage'
-import * as StorageDomain from '@deepseek-ai/dsh-storage-domain'
-import * as StorageJson from '@deepseek-ai/dsh-storage-json'
+import Storage from '@berry-ai/harness-storage'
+import * as StorageDomain from '@berry-ai/harness-storage-domain'
+import * as StorageJson from '@berry-ai/harness-storage-json'
 import { subagentCatalogProjectionDefinition } from '@deepseek-ai/dsh-subagent/src/catalog.ts'
 import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
 import { createSessionTestController } from './test-remote.ts'
