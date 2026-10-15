@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-subagent-dsh-sdk",
+  "name": "@berry-ai/harness-subagent-dsh-sdk",
   "description": "Out-of-process SDK subagent backend: drives a child DeepSeek Harness runtime subprocess over stdio JSON-RPC through the TypeScript SDK client",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -32,7 +32,7 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-sdk-client": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*"
   },
   "dependencies": {
@@ -56,9 +56,9 @@
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@berry-ai/harness-skill-filesystem": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-tool-subagent": "workspace:*"
+    "@berry-ai/harness-tool-subagent": "workspace:*"
   }
 }

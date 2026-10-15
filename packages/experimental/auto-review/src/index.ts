@@ -24,7 +24,7 @@ import {
 import { deepFreeze } from '@berry-ai/harness-util-values'
 import { AUTO_PRESET } from '@berry-ai/harness-permission-presets'
 import type { SessionEvent } from '@berry-ai/harness-session'
-import type {} from '@deepseek-ai/dsh-subagent'
+import type {} from '@berry-ai/harness-subagent'
 import type {} from '@berry-ai/harness-user-approval'
 import {
   RUN_CODE_NAME,

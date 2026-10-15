@@ -1,7 +1,7 @@
 /**
  * Pure client-safe subagent projection vocabulary.
  *
- * @module @deepseek-ai/dsh-subagent/projection-types
+ * @module @berry-ai/harness-subagent/projection-types
  */
 
 import type { SessionId, SessionSeq } from '@berry-ai/harness-session/types'

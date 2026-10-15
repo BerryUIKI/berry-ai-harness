@@ -69,7 +69,7 @@ describe('gen-tool-catalog collectToolCatalog', () => {
     const catalog = await collectToolCatalog()
     const bash = catalog.find(entry => entry.pkg === '@berry-ai/harness-tool-bash')
     expect(bash?.sources.bash).toBe('packages/shell/tool-bash/src/index.ts')
-    const control = catalog.find(entry => entry.pkg === '@deepseek-ai/dsh-tool-subagent-control')
+    const control = catalog.find(entry => entry.pkg === '@berry-ai/harness-tool-subagent-control')
     expect(control?.sources).toEqual({
       interrupt_agent: 'packages/subagent/tool-subagent-control/src/index.ts',
       list_agents: 'packages/subagent/tool-subagent-control/src/list-agents.ts',
@@ -94,7 +94,7 @@ describe('gen-tool-catalog collectToolCatalog', () => {
     // `tool-subagent`'s registered name is the load-time `toolName` config, so the shipped
     // agents surface this one package as both `subagent` and `subagent_fork`.
     const catalog = await collectToolCatalog()
-    const subagent = catalog.find(entry => entry.pkg === '@deepseek-ai/dsh-tool-subagent')
+    const subagent = catalog.find(entry => entry.pkg === '@berry-ai/harness-tool-subagent')
     expect(subagent?.schemas.map(s => s.name)).toEqual(['list_subagent_models', 'subagent'])
     expect(subagent?.note).toMatch(/subagent_fork/)
   })

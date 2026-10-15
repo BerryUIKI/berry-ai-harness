@@ -10,8 +10,8 @@ import { SessionId } from '@berry-ai/harness-session'
 import SubagentRuntime, {
   SubagentError,
   type SubagentPromptRequestId,
-} from '@deepseek-ai/dsh-subagent'
-import { deliverSubagentPrompt, type HostPromptDeliverer } from '@deepseek-ai/dsh-subagent/internal'
+} from '@berry-ai/harness-subagent'
+import { deliverSubagentPrompt, type HostPromptDeliverer } from '@berry-ai/harness-subagent/internal'
 
 const PARENT = SessionId('parent')
 const CHILD = SessionId('child')

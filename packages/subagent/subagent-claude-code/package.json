@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-subagent-claude-code",
+  "name": "@berry-ai/harness-subagent-claude-code",
   "description": "One-shot Claude Code subagent provider over the official Agent SDK",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -40,7 +40,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*"
   },
@@ -51,7 +51,7 @@
     "@deepseek-ai/schemastery": "workspace:~",
     "@modelcontextprotocol/sdk": "^1.31.0",
     "zod": "^4.4.3",
-    "@deepseek-ai/dsh-tool-subagent": "workspace:*"
+    "@berry-ai/harness-tool-subagent": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -63,8 +63,8 @@
     "@deepseek-ai/dsh-session-checkpoint-policy": "workspace:*",
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
-    "@deepseek-ai/dsh-subagent-codex": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
+    "@berry-ai/harness-subagent-codex": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",

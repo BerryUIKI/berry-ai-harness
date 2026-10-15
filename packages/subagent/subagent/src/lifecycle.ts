@@ -4,7 +4,7 @@
  * Public event payloads live in `./types.ts`; the package-private observer
  * retains only the identity shared by each start/end pair.
  *
- * @module @deepseek-ai/dsh-subagent/lifecycle
+ * @module @berry-ai/harness-subagent/lifecycle
  */
 
 import { randomUUID } from 'node:crypto'

@@ -5,7 +5,7 @@
  * explicit act of widening what features may do to the sessions domain.
  */
 import type { Context } from '@deepseek-ai/cordis'
-import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
+import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'

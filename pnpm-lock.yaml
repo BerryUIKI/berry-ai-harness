@@ -460,10 +460,10 @@ importers:
       '@berry-ai/harness-tool-cordis':
         specifier: workspace:*
         version: link:../../packages/extensions/tool-cordis
-      '@deepseek-ai/dsh-tool-subagent':
+      '@berry-ai/harness-tool-subagent':
         specifier: workspace:*
         version: link:../../packages/subagent/tool-subagent
-      '@deepseek-ai/dsh-tool-subagent-control':
+      '@berry-ai/harness-tool-subagent-control':
         specifier: workspace:*
         version: link:../../packages/subagent/tool-subagent-control
       '@berry-ai/harness-tool-web':
@@ -605,13 +605,13 @@ importers:
       '@deepseek-ai/dsh-skill-badge':
         specifier: workspace:*
         version: link:../../packages/experimental/skill-badge
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../packages/subagent/subagent
-      '@deepseek-ai/dsh-subagent-fork-in-process':
+      '@berry-ai/harness-subagent-fork-in-process':
         specifier: workspace:*
         version: link:../../packages/subagent/subagent-fork-in-process
-      '@deepseek-ai/dsh-subagent-spawn-in-process':
+      '@berry-ai/harness-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../packages/subagent/subagent-spawn-in-process
       '@berry-ai/harness-system-prompt':
@@ -1045,7 +1045,7 @@ importers:
       '@deepseek-ai/dsh-session-turn-outline':
         specifier: workspace:*
         version: link:../packages/session/session-turn-outline
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../packages/subagent/subagent
       '@berry-ai/harness-token-meter':
@@ -1153,7 +1153,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-token-meter':
@@ -1382,7 +1382,7 @@ importers:
       '@berry-ai/harness-scope':
         specifier: workspace:*
         version: link:../../core/scope
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-typert-protocol':
@@ -1527,7 +1527,7 @@ importers:
       '@deepseek-ai/dsh-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-typert-protocol':
@@ -2269,13 +2269,13 @@ importers:
       '@deepseek-ai/dsh-session-title-first-prompt-llm':
         specifier: workspace:*
         version: link:../../session/session-title-first-prompt-llm
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-subagent-fork-in-process':
+      '@berry-ai/harness-subagent-fork-in-process':
         specifier: workspace:*
         version: link:../../subagent/subagent-fork-in-process
-      '@deepseek-ai/dsh-subagent-spawn-in-process':
+      '@berry-ai/harness-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../subagent/subagent-spawn-in-process
       '@berry-ai/harness-system-prompt':
@@ -2284,10 +2284,10 @@ importers:
       '@berry-ai/harness-token-meter':
         specifier: workspace:*
         version: link:../../llm/token-meter
-      '@deepseek-ai/dsh-tool-subagent':
+      '@berry-ai/harness-tool-subagent':
         specifier: workspace:*
         version: link:../../subagent/tool-subagent
-      '@deepseek-ai/dsh-tool-subagent-control':
+      '@berry-ai/harness-tool-subagent-control':
         specifier: workspace:*
         version: link:../../subagent/tool-subagent-control
       '@berry-ai/harness-tool-web':
@@ -2370,7 +2370,7 @@ importers:
       '@berry-ai/harness-session-query':
         specifier: workspace:*
         version: link:../../session-query/session-query
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
 
@@ -2867,10 +2867,10 @@ importers:
       '@berry-ai/harness-tool-cordis':
         specifier: workspace:*
         version: link:../../extensions/tool-cordis
-      '@deepseek-ai/dsh-tool-subagent':
+      '@berry-ai/harness-tool-subagent':
         specifier: workspace:*
         version: link:../../subagent/tool-subagent
-      '@deepseek-ai/dsh-tool-subagent-control':
+      '@berry-ai/harness-tool-subagent-control':
         specifier: workspace:*
         version: link:../../subagent/tool-subagent-control
       '@berry-ai/harness-tool-web':
@@ -3490,7 +3490,7 @@ importers:
       '@deepseek-ai/dsh-session-turn-outline':
         specifier: workspace:*
         version: link:../../session/session-turn-outline
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-token-meter':
@@ -5955,7 +5955,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-token-meter':
@@ -6403,7 +6403,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-typert-protocol':
@@ -6823,7 +6823,7 @@ importers:
       '@deepseek-ai/dsh-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-system-prompt':
@@ -7438,13 +7438,13 @@ importers:
       '@berry-ai/harness-session-query':
         specifier: workspace:*
         version: link:../../session-query/session-query
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-subagent-fork-in-process':
+      '@berry-ai/harness-subagent-fork-in-process':
         specifier: workspace:*
         version: link:../../subagent/subagent-fork-in-process
-      '@deepseek-ai/dsh-subagent-spawn-in-process':
+      '@berry-ai/harness-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../subagent/subagent-spawn-in-process
 
@@ -7570,13 +7570,13 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-subagent':
+      '@berry-ai/harness-tool-subagent':
         specifier: workspace:*
         version: link:../../subagent/tool-subagent
       '@berry-ai/harness-tools':
@@ -8361,7 +8361,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-tools':
@@ -8820,19 +8820,19 @@ importers:
       '@berry-ai/harness-session-query':
         specifier: workspace:*
         version: link:../../session-query/session-query
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-subagent-fork-in-process':
+      '@berry-ai/harness-subagent-fork-in-process':
         specifier: workspace:*
         version: link:../../subagent/subagent-fork-in-process
-      '@deepseek-ai/dsh-subagent-spawn-in-process':
+      '@berry-ai/harness-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../subagent/subagent-spawn-in-process
       '@berry-ai/harness-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-subagent-control':
+      '@berry-ai/harness-tool-subagent-control':
         specifier: workspace:*
         version: link:../../subagent/tool-subagent-control
       '@berry-ai/harness-tools':
@@ -8878,10 +8878,10 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-subagent-spawn-in-process':
+      '@berry-ai/harness-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../subagent/subagent-spawn-in-process
       '@berry-ai/harness-system-prompt':
@@ -9343,7 +9343,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@deepseek-ai/node-addon-system':
@@ -11547,7 +11547,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-system-prompt':
@@ -11580,7 +11580,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-tools':
@@ -11620,7 +11620,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
 
@@ -11672,7 +11672,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@deepseek-ai/dsh-working-directory':
@@ -13575,10 +13575,10 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-tool-subagent':
+      '@berry-ai/harness-tool-subagent':
         specifier: workspace:*
         version: link:../tool-subagent
 
@@ -13593,7 +13593,7 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-tool-subagent':
+      '@berry-ai/harness-tool-subagent':
         specifier: workspace:*
         version: link:../tool-subagent
       '@deepseek-ai/schemastery':
@@ -13648,10 +13648,10 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-subagent-codex':
+      '@berry-ai/harness-subagent-codex':
         specifier: workspace:*
         version: link:../subagent-codex
       '@berry-ai/harness-tools':
@@ -13666,7 +13666,7 @@ importers:
       '@deepseek-ai/dsh-sdk-protocol':
         specifier: workspace:*
         version: link:../../sdk/protocol
-      '@deepseek-ai/dsh-tool-subagent':
+      '@berry-ai/harness-tool-subagent':
         specifier: workspace:*
         version: link:../tool-subagent
       '@deepseek-ai/schemastery':
@@ -13718,7 +13718,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../subagent
       '@berry-ai/harness-tools':
@@ -13785,13 +13785,13 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../subagent
       '@berry-ai/harness-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-subagent':
+      '@berry-ai/harness-tool-subagent':
         specifier: workspace:*
         version: link:../tool-subagent
 
@@ -13825,10 +13825,10 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-subagent-spawn-in-process':
+      '@berry-ai/harness-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../subagent-spawn-in-process
 
@@ -13880,10 +13880,10 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-tool-subagent':
+      '@berry-ai/harness-tool-subagent':
         specifier: workspace:*
         version: link:../tool-subagent
 
@@ -13923,10 +13923,10 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-subagent-spawn-in-process':
+      '@berry-ai/harness-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../subagent-spawn-in-process
       '@berry-ai/harness-system-prompt':
@@ -13975,13 +13975,13 @@ importers:
       '@berry-ai/harness-session-query':
         specifier: workspace:*
         version: link:../../session-query/session-query
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../subagent
-      '@deepseek-ai/dsh-subagent-fork-in-process':
+      '@berry-ai/harness-subagent-fork-in-process':
         specifier: workspace:*
         version: link:../subagent-fork-in-process
-      '@deepseek-ai/dsh-subagent-spawn-in-process':
+      '@berry-ai/harness-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../subagent-spawn-in-process
       '@berry-ai/harness-tools':
@@ -14265,7 +14265,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-typert-protocol':
@@ -14428,7 +14428,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-tools':
@@ -14871,7 +14871,7 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
       '@berry-ai/harness-system-prompt':
@@ -14971,10 +14971,10 @@ importers:
       '@deepseek-ai/dsh-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-subagent-spawn-in-process':
+      '@berry-ai/harness-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../subagent/subagent-spawn-in-process
       '@berry-ai/harness-system-prompt':
@@ -15416,16 +15416,16 @@ importers:
       '@deepseek-ai/dsh-session-title-llm':
         specifier: workspace:*
         version: link:../../packages/session/session-title-llm
-      '@deepseek-ai/dsh-subagent':
+      '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../packages/subagent/subagent
-      '@deepseek-ai/dsh-subagent-acp':
+      '@berry-ai/harness-subagent-acp':
         specifier: workspace:*
         version: link:../../packages/subagent/subagent-acp
-      '@deepseek-ai/dsh-subagent-fork-in-process':
+      '@berry-ai/harness-subagent-fork-in-process':
         specifier: workspace:*
         version: link:../../packages/subagent/subagent-fork-in-process
-      '@deepseek-ai/dsh-subagent-spawn-in-process':
+      '@berry-ai/harness-subagent-spawn-in-process':
         specifier: workspace:*
         version: link:../../packages/subagent/subagent-spawn-in-process
       '@berry-ai/harness-system-prompt':
@@ -15437,10 +15437,10 @@ importers:
       '@berry-ai/harness-tool-cordis':
         specifier: workspace:*
         version: link:../../packages/extensions/tool-cordis
-      '@deepseek-ai/dsh-tool-subagent':
+      '@berry-ai/harness-tool-subagent':
         specifier: workspace:*
         version: link:../../packages/subagent/tool-subagent
-      '@deepseek-ai/dsh-tool-subagent-control':
+      '@berry-ai/harness-tool-subagent-control':
         specifier: workspace:*
         version: link:../../packages/subagent/tool-subagent-control
       '@berry-ai/harness-tool-web':

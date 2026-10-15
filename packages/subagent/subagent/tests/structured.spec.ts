@@ -10,7 +10,7 @@ import SubagentRuntime, {
   type SubagentStartRequest,
   type SubagentActivation,
   type SubagentResult,
-} from '@deepseek-ai/dsh-subagent'
+} from '@berry-ai/harness-subagent'
 import type { Config as ToolConfig, ObjectJsonSchema } from '@berry-ai/harness-tools'
 import { defineContentToolFixture, RUN_CODE_NAME } from '@berry-ai/harness-tools'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'

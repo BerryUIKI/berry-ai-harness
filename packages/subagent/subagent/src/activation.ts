@@ -1,5 +1,5 @@
 /** Execution-period records, capacity slots, child serialization, and local output capture.
- * @module @deepseek-ai/dsh-subagent/activation
+ * @module @berry-ai/harness-subagent/activation
  */
 
 import type { Agent, AgentHandle } from '@berry-ai/harness-agent'

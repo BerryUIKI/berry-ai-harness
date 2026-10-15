@@ -20,7 +20,7 @@ import type { Session, SessionId, UserMessage } from '@berry-ai/harness-session'
 import { SessionQueryError } from '@berry-ai/harness-session-query'
 import { createInboxStub, provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { apply, Config } from '../src/index.ts'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@berry-ai/harness-subagent'
 import { internals } from '../src/runner-internals.ts'
 
 const originalInternals = { ...internals }

@@ -10,8 +10,8 @@ import SessionStore, {
   SESSION_FORMAT_VERSION, Session, SessionId, SessionLogOffset, SessionSeq,
 } from '@berry-ai/harness-session'
 import type { SessionEvent, SessionHeader, UserMessage } from '@berry-ai/harness-session'
-import { snapshotSubagentDescriptor, SUBAGENT_DESCRIPTOR_VERSION } from '@deepseek-ai/dsh-subagent'
-import { subagentIdentityProjectionDefinition } from '@deepseek-ai/dsh-subagent/src/projection.ts'
+import { snapshotSubagentDescriptor, SUBAGENT_DESCRIPTOR_VERSION } from '@berry-ai/harness-subagent'
+import { subagentIdentityProjectionDefinition } from '@berry-ai/harness-subagent/src/projection.ts'
 import { describe, expect, it, vi } from 'vitest'
 import { ApiSessionAgentController } from '../src/agent.ts'
 import { SessionCommandController } from '../src/commands.ts'

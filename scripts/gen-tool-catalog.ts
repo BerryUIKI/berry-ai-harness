@@ -35,10 +35,10 @@ import PlanModeController from '@berry-ai/harness-plan-mode'
 import WebRuntime from '@berry-ai/harness-web'
 import * as WebSearchExa from '@berry-ai/harness-web-search-exa'
 import * as WebFetchLocal from '@berry-ai/harness-web-fetch-http'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
-import type { SubagentProvider } from '@deepseek-ai/dsh-subagent'
-import * as ToolSubagentControl from '@deepseek-ai/dsh-tool-subagent-control'
-import * as ToolSubagentListAgents from '@deepseek-ai/dsh-tool-subagent-control/list-agents'
+import SubagentRuntime from '@berry-ai/harness-subagent'
+import type { SubagentProvider } from '@berry-ai/harness-subagent'
+import * as ToolSubagentControl from '@berry-ai/harness-tool-subagent-control'
+import * as ToolSubagentListAgents from '@berry-ai/harness-tool-subagent-control/list-agents'
 import SkillRegistry from '@berry-ai/harness-skill'
 import * as SkillFileSystem from '@berry-ai/harness-skill-filesystem'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
@@ -72,7 +72,7 @@ import type PluginManager from '@berry-ai/harness-plugin-manager'
 import * as PluginManagerTools from '@berry-ai/harness-plugin-manager/tools'
 import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
 import McpResources from '@berry-ai/harness-mcp-resources'
-import * as ToolSubagent from '@deepseek-ai/dsh-tool-subagent'
+import * as ToolSubagent from '@berry-ai/harness-tool-subagent'
 import { registerListSubagentModels } from '../packages/subagent/tool-subagent/src/list-models.ts'
 import * as ToolWeb from '@berry-ai/harness-tool-web'
 import WorkflowEngine from '@berry-ai/harness-workflow'
@@ -505,7 +505,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'The five read-only tools hide provider cursors and authorize every result from the immutable calling agent session. The package is opt-in; compositions that need enforced deadlines or bounded inline output also mount the generic timeout or spill policies.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-subagent',
+    pkg: '@berry-ai/harness-tool-subagent',
     dir: 'tool-subagent',
     source: {
       list_subagent_models: 'packages/subagent/tool-subagent/src/list-models.ts',
@@ -525,7 +525,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'The registered delegation name is the load-time `toolName` config (default `subagent`); the default schema above has model selection off, while the discovery schema is shown as the fixed companion available in an enabled Session. Web presets sample the Plugins preference for each new top-level Session and preserve that decision for its child Sessions; `subagent_fork` remains fixed-route. Each instance selects its backend through `provider` and reads model-selection settings through `modelSelectionSettings`. Every delegation returns a child id promptly; local children accept follow-ups, while external backends report their single execution automatically.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-subagent-control',
+    pkg: '@berry-ai/harness-tool-subagent-control',
     dir: 'tool-subagent-control',
     source: {
       interrupt_agent: 'packages/subagent/tool-subagent-control/src/index.ts',

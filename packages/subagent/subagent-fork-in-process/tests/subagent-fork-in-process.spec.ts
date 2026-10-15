@@ -8,12 +8,12 @@ import AgentRegistry from '@berry-ai/harness-agent'
 import { SessionId } from '@berry-ai/harness-session'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@berry-ai/harness-subagent'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import * as fork from '../src/index.ts'
-import { STRUCTURED_OUTPUT_TOOL } from '@deepseek-ai/dsh-subagent'
+import { STRUCTURED_OUTPUT_TOOL } from '@berry-ai/harness-subagent'
 
 type Script = ConstructorParameters<typeof MockAdapter>[0]
 

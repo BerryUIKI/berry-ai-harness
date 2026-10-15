@@ -1,7 +1,7 @@
 /**
  * Continuation integration markers and host adapters outside the public
  * Service Definition and model-facing Agent messaging contract.
- * @module @deepseek-ai/dsh-subagent/internal
+ * @module @berry-ai/harness-subagent/internal
  */
 
 import type { Agent } from '@berry-ai/harness-agent'

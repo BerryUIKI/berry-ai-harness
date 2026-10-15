@@ -4,12 +4,12 @@
  * product methods, current thread/turn association, unattended approval
  * responses, and terminal-answer selection.
  *
- * @module @deepseek-ai/dsh-subagent-codex/wire
+ * @module @berry-ai/harness-subagent-codex/wire
  */
 
 import type { Readable, Writable } from 'node:stream'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import type { SubagentResult } from '@deepseek-ai/dsh-subagent'
+import type { SubagentResult } from '@berry-ai/harness-subagent'
 import { JsonRpcLineTransport } from '@deepseek-ai/dsh-sdk-protocol'
 import type { CodexPermissionMode } from './run.ts'
 

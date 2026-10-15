@@ -4,7 +4,7 @@
  * creation, flatten post-publication failures, and dispose to whole-range
  * quiescence.
  *
- * @module @deepseek-ai/dsh-subagent-codex/run
+ * @module @berry-ai/harness-subagent-codex/run
  */
 
 import { randomUUID } from 'node:crypto'
@@ -21,7 +21,7 @@ import {
   type SubagentRun,
   type SubagentStartRequest,
   type SubagentStopReason,
-} from '@deepseek-ai/dsh-subagent'
+} from '@berry-ai/harness-subagent'
 import type {
   SubprocessHandle,
   SubprocessOutcome,

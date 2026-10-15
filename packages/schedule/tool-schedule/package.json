@@ -30,7 +30,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-schedule": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*"
   },
   "devDependencies": {
@@ -40,7 +40,7 @@
     "@berry-ai/harness-schedule": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*"
   }
 }

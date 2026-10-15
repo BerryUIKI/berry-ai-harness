@@ -39,7 +39,7 @@
     "@berry-ai/harness-storage": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
     "@berry-ai/harness-storage-json": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-token-meter": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",

@@ -84,9 +84,9 @@ it('preserves selected bundle load errors in the agent list result', async () =>
 it('exposes an absent Official bundle installation target without display metadata', async () => {
   const { manager, call } = await fixture()
   const offered: BundleInfo = {
-    name: '@deepseek-ai/dsh-subagent-codex', official: true, availability: 'missing',
+    name: '@berry-ai/harness-subagent-codex', official: true, availability: 'missing',
     installed: false, enabled: false, optional: false, removable: false, rows: [], overrides: [],
-    installTarget: { spec: '@deepseek-ai/dsh-subagent-codex@1.2.3', version: '1.2.3' },
+    installTarget: { spec: '@berry-ai/harness-subagent-codex@1.2.3', version: '1.2.3' },
     meta: { title: 'Codex subagent' },
   }
   manager.listBundles.mockResolvedValue([offered])
@@ -97,11 +97,11 @@ it('exposes an absent Official bundle installation target without display metada
           "availability": "missing",
           "enabled": false,
           "installTarget": {
-            "spec": "@deepseek-ai/dsh-subagent-codex@1.2.3",
+            "spec": "@berry-ai/harness-subagent-codex@1.2.3",
             "version": "1.2.3",
           },
           "installed": false,
-          "name": "@deepseek-ai/dsh-subagent-codex",
+          "name": "@berry-ai/harness-subagent-codex",
           "official": true,
           "optional": false,
           "overrides": [],

@@ -10,7 +10,7 @@ import type { CommandSubmitAttachment } from '@berry-ai/harness-commands/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   SubagentInterruptReceipt, SubagentPromptReceipt, SubagentPromptRequest,
-} from '@deepseek-ai/dsh-subagent/client'
+} from '@berry-ai/harness-subagent/client'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { SessionRemote } from '../transport.ts'
 

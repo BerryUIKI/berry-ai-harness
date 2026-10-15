@@ -5,7 +5,7 @@ import {
   NO_START_CAPABILITIES,
   type SubagentStartRequest,
   type SubagentProvider,
-} from '@deepseek-ai/dsh-subagent'
+} from '@berry-ai/harness-subagent'
 import { SessionId } from '@berry-ai/harness-session'
 
 export const name = 'subagent-result-diagnostic'

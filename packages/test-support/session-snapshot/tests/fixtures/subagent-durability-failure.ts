@@ -1,6 +1,6 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { SessionId } from '@berry-ai/harness-session'
-import type { SubagentPromptRequestId } from '@deepseek-ai/dsh-subagent'
+import type { SubagentPromptRequestId } from '@berry-ai/harness-subagent'
 
 export const name = 'subagent-durability-failure'
 export const inject = ['agents', 'sessionPersistence', 'subagents']

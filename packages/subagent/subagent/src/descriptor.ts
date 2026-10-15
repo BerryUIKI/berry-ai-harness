@@ -18,7 +18,7 @@
  * durable descriptor, so it neither restores the prior budget nor inherits
  * the parent's current one; the resumed route's defaults apply instead.
  *
- * @module @deepseek-ai/dsh-subagent/descriptor
+ * @module @berry-ai/harness-subagent/descriptor
  */
 
 import { snapshotJsonValue } from '@berry-ai/harness-util-values'

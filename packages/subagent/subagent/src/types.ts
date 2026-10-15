@@ -6,7 +6,7 @@
  * manager host in `./manager.ts` — so this module stays the published
  * surface rather than a bag of everything type-shaped.
  *
- * @module @deepseek-ai/dsh-subagent/types
+ * @module @berry-ai/harness-subagent/types
  */
 
 import type { Agent, AgentOptions } from '@berry-ai/harness-agent'

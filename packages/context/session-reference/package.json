@@ -61,7 +61,7 @@
     "@berry-ai/harness-session-query": "workspace:*",
     "@deepseek-ai/dsh-session-title": "workspace:*",
     "@berry-ai/harness-spill": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*"
   },
@@ -89,7 +89,7 @@
     "@berry-ai/harness-session-query-sqlite": "workspace:*",
     "@deepseek-ai/dsh-session-title": "workspace:*",
     "@berry-ai/harness-spill": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-spill-local": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-tool-fs": "workspace:*",

@@ -87,11 +87,11 @@ New directories and files request modes `0700` and `0600` on POSIX. The CLI prin
 The Codex and Claude Code subagent providers are separate optional Bundles. Add either package, both in one command, or remove either package independently:
 
 ```sh
-dsh plugin --profile <name> add @deepseek-ai/dsh-subagent-codex
-dsh plugin --profile <name> add @deepseek-ai/dsh-subagent-claude-code
-dsh plugin --profile <name> add @deepseek-ai/dsh-subagent-codex @deepseek-ai/dsh-subagent-claude-code
-dsh plugin --profile <name> remove @deepseek-ai/dsh-subagent-codex
-dsh plugin --profile <name> remove @deepseek-ai/dsh-subagent-claude-code
+dsh plugin --profile <name> add @berry-ai/harness-subagent-codex
+dsh plugin --profile <name> add @berry-ai/harness-subagent-claude-code
+dsh plugin --profile <name> add @berry-ai/harness-subagent-codex @berry-ai/harness-subagent-claude-code
+dsh plugin --profile <name> remove @berry-ai/harness-subagent-codex
+dsh plugin --profile <name> remove @berry-ai/harness-subagent-claude-code
 ```
 
 The successful pnpm operation changes the Profile manifest and Bundle list on disk; a running Profile keeps the Bundle set from its current start. Restart that Profile after adding, removing, or updating a Bundle. This startup boundary applies to Bundle membership, while ordinary edits to the Profile or home `cordis.patch.yml` take effect through hot reload. On the next start, each installed Bundle registers only its dormant Host provider; a copied Preset must separately enable the matching tool row for new Agents. The [Codex provider README](../../../packages/subagent/subagent-codex/README.md) and [Claude Code provider README](../../../packages/subagent/subagent-claude-code/README.md) own executable, authentication, payload, and failure details; the [base Bundle reference](../../../packages/bundle/base/README.md) owns the default dependency closure.

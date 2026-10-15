@@ -21,7 +21,7 @@ import SubagentRuntime, {
   type SubagentRun,
   type SubagentRunEndInfo,
   type SubagentStartRequest,
-} from '@deepseek-ai/dsh-subagent'
+} from '@berry-ai/harness-subagent'
 import { Session, SessionId, type SessionEvent } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 

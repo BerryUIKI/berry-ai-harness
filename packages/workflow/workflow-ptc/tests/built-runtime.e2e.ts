@@ -37,7 +37,7 @@ try {
   }
   await ctx.plugin((await import('@berry-ai/harness-sandbox-policy')).default, { mode: 'read-only', workspaceRoot: process.argv[2] })
   await ctx.plugin((await import('@berry-ai/harness-ptc-runtime-node')).default, {})
-  await ctx.plugin((await import('@deepseek-ai/dsh-subagent')).default, {})
+  await ctx.plugin((await import('@berry-ai/harness-subagent')).default, {})
   let selectedStarts = 0
   ctx.subagents.registerProvider({
     name: 'built-selected',

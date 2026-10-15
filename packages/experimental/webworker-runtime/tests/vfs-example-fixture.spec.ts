@@ -8,7 +8,7 @@ import {
   generationLogFilename,
   scanLog,
 } from '@deepseek-ai/dsh-session-persistence-jsonl/src/format.ts'
-import { foldSubagentDescriptor } from '@deepseek-ai/dsh-subagent'
+import { foldSubagentDescriptor } from '@berry-ai/harness-subagent'
 import { projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
 import {
   buildVfsExampleFiles,

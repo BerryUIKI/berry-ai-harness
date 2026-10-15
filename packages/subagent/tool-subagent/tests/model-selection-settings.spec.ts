@@ -11,8 +11,8 @@ import { liveConfig } from '../../../settings/settings/tests/live-config.ts'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
-import * as SubagentSpawn from '@deepseek-ai/dsh-subagent-spawn-in-process'
+import SubagentRuntime from '@berry-ai/harness-subagent'
+import * as SubagentSpawn from '@berry-ai/harness-subagent-spawn-in-process'
 import * as tool from '../src/index.ts'
 import SubagentModelSelectionConfig from '../src/model-selection-settings.ts'
 import {
@@ -374,7 +374,7 @@ describe('SubagentModelSelectionConfig', () => {
         modelSelectionSettings: true,
         maxDepth: 'provider-managed',
       })
-    }).toThrow('requires @deepseek-ai/dsh-tool-subagent/model-selection-settings')
+    }).toThrow('requires @berry-ai/harness-tool-subagent/model-selection-settings')
     await withoutSettings.fiber.dispose()
 
     const withoutAgent = await boot(false)

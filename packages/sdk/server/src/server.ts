@@ -14,8 +14,8 @@ import { createUserMessage, ReasoningEffortId, type ContentBlock, type LlmRuntim
 import { carrierKeyOf, type Scoped } from '@berry-ai/harness-scope'
 import type { SessionId, SessionLogOffset } from '@berry-ai/harness-session'
 import type {} from '@deepseek-ai/dsh-working-directory'
-import type SubagentRuntime from '@deepseek-ai/dsh-subagent'
-import type { SubagentRunEndInfo } from '@deepseek-ai/dsh-subagent'
+import type SubagentRuntime from '@berry-ai/harness-subagent'
+import type { SubagentRunEndInfo } from '@berry-ai/harness-subagent'
 import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 import type {
   InitializeParams,

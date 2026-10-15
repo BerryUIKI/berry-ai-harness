@@ -24,7 +24,7 @@ import { createPluginProfile } from '../../desktop/src/project-manager.ts'
 /** Profile entry ids whose volatile fields these scenarios edit through Settings. */
 const SETTINGS_NAMESPACE = 'agent-preset-registry'
 const SUBAGENT_MODEL_SELECTION_SETTINGS_NAMESPACE = 'subagent-model-selection-settings'
-import { applyChildComposition, childSessionMeta } from '@deepseek-ai/dsh-subagent'
+import { applyChildComposition, childSessionMeta } from '@berry-ai/harness-subagent'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import type {} from '@berry-ai/harness-compaction-basic'
 import type {} from '@berry-ai/harness-skill'

@@ -82,7 +82,7 @@
     "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-stats": "workspace:*",
     "@deepseek-ai/dsh-session-turn-outline": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-token-meter": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",

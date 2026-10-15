@@ -3,7 +3,7 @@ description: "The out-of-process SDK subagent backend for users and maintainers 
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-subagent-dsh-sdk
+# @berry-ai/harness-subagent-dsh-sdk
 
 English | [中文](README.zh.md)
 
@@ -56,7 +56,7 @@ Request `agentOptions` override `provider`, `model`, and `maxTokens` independent
 
 ```yaml
 - id: subagent-dsh-sdk
-  name: '@deepseek-ai/dsh-subagent-dsh-sdk'
+  name: '@berry-ai/harness-subagent-dsh-sdk'
   config:
     providerName: dsh-sdk
     profile: sdk
@@ -66,7 +66,7 @@ Request `agentOptions` override `provider`, `model`, and `maxTokens` independent
     env:
       DEEPSEEK_API_KEY: !!js process.env.DEEPSEEK_API_KEY
 - id: tool-subagent
-  name: '@deepseek-ai/dsh-tool-subagent'
+  name: '@berry-ai/harness-tool-subagent'
   config: { provider: dsh-sdk, toolName: subagent, maxDepth: 'provider-managed' }
 ```
 

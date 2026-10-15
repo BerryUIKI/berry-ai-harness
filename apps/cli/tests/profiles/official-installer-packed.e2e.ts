@@ -26,7 +26,7 @@ import {
 import { assertInstalledTree, createPackedInstallation } from './packed-installation.ts'
 
 const root = fileURLToPath(new URL('../../../..', import.meta.url))
-const packages = ['@deepseek-ai/dsh-subagent-claude-code', '@deepseek-ai/dsh-subagent-codex']
+const packages = ['@berry-ai/harness-subagent-claude-code', '@berry-ai/harness-subagent-codex']
 const built = existsSync(join(root, 'apps/cli/lib/bin.js'))
   && packages.every(name => existsSync(join(root, 'packages/subagent', name.slice('@deepseek-ai/dsh-'.length), 'lib/index.js')))
 
@@ -126,8 +126,8 @@ it.skipIf(!built)('installs the exported registry\'s local closure and switches 
       localDependency: '@berry-ai/harness-brand',
       nativePackages: {
         // The Agent SDK publishes a musl variant of its Linux artifact, which is what pnpm installs there.
-        '@deepseek-ai/dsh-subagent-claude-code': `@anthropic-ai/claude-agent-sdk-${process.platform}-${process.arch}${hostPlatform().libc?.[0] === 'musl' ? '-musl' : ''}`,
-        '@deepseek-ai/dsh-subagent-codex': `@openai/codex-${process.platform}-${process.arch}`,
+        '@berry-ai/harness-subagent-claude-code': `@anthropic-ai/claude-agent-sdk-${process.platform}-${process.arch}${hostPlatform().libc?.[0] === 'musl' ? '-musl' : ''}`,
+        '@berry-ai/harness-subagent-codex': `@openai/codex-${process.platform}-${process.arch}`,
       },
     },
   }] }]))

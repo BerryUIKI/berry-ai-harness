@@ -10,7 +10,7 @@
 
 import type { ContentBlock, ReasoningEffortId } from '@berry-ai/harness-llm'
 import type { SessionEvent } from '@berry-ai/harness-session'
-import type { SubagentStopReason } from '@deepseek-ai/dsh-subagent'
+import type { SubagentStopReason } from '@berry-ai/harness-subagent'
 
 /** Parameters for the process-wide SDK handshake. */
 export interface InitializeParams {

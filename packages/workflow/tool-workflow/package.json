@@ -53,7 +53,7 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-tool-jobs": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",

@@ -5,7 +5,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-agent-loop'
-import type {} from '@deepseek-ai/dsh-subagent'
+import type {} from '@berry-ai/harness-subagent'
 
 /** Fixture plugin name. */
 export const name = 'subagent-settlement-fence'

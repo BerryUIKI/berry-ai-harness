@@ -52,7 +52,7 @@ The generated [configuration catalog](../../../docs/config-catalog.md#deepseek-a
 
 ### Start a server
 
-`pnpm dsh --profile acp` starts the shipped stdio server. The `acp` profile mounts session persistence, so clients can list, resume, and close persistent sessions. [`@deepseek-ai/dsh-subagent-acp`](../../subagent/subagent-acp/README.md) starts the same profile for out-of-process delegation.
+`pnpm dsh --profile acp` starts the shipped stdio server. The `acp` profile mounts session persistence, so clients can list, resume, and close persistent sessions. [`@berry-ai/harness-subagent-acp`](../../subagent/subagent-acp/README.md) starts the same profile for out-of-process delegation.
 
 <a id="protocol-contract"></a><a id="standard-acp-v1-surface"></a>
 ### Protocol contract

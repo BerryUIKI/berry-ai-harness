@@ -31,10 +31,10 @@ import SubagentRuntime, {
   NO_START_CAPABILITIES,
   SUBAGENT_DESCRIPTOR_VERSION,
   type SubagentStartRequest,
-} from '@deepseek-ai/dsh-subagent'
+} from '@berry-ai/harness-subagent'
 import type {} from '@berry-ai/harness-shell'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
-import * as ToolSubagent from '@deepseek-ai/dsh-tool-subagent'
+import * as ToolSubagent from '@berry-ai/harness-tool-subagent'
 import ToolRuntime, {
   defineContentToolFixture,
   RUN_CODE_NAME,

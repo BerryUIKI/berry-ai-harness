@@ -3,7 +3,7 @@
  * children. Kept apart from the service so composition helpers can read it
  * without importing the registry.
  *
- * @module @deepseek-ai/dsh-subagent/depth
+ * @module @berry-ai/harness-subagent/depth
  */
 
 import type { Agent } from '@berry-ai/harness-agent'

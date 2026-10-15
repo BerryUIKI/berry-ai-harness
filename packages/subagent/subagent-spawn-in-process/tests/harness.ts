@@ -10,9 +10,9 @@ import * as BashEnvPlugin from '@berry-ai/harness-shell-env'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import * as ToolBash from '@berry-ai/harness-tool-bash'
 import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@berry-ai/harness-subagent'
 import * as Spawn from '../src/index.ts'
-import * as ToolSubagent from '@deepseek-ai/dsh-tool-subagent'
+import * as ToolSubagent from '@berry-ai/harness-tool-subagent'
 
 /**
  * Shared harness for the spawn-backend e2e: the full real stack (DeepSeek

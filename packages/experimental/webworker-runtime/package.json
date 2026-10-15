@@ -59,7 +59,7 @@
     "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@deepseek-ai/node-addon-system": "workspace:~",
     "@types/picomatch": "^4.0.3",

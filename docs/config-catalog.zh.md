@@ -4035,10 +4035,10 @@ export interface Config extends SessionTitleLlmConfig {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-title-first-prompt-llm -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-subagent -->
 <a id="deepseek-aidsh-subagent"></a>
 
-## `@deepseek-ai/dsh-subagent`
+## `@berry-ai/harness-subagent`
 
 - `inject`: `workingDirectory`
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
@@ -4053,12 +4053,12 @@ export interface Config {
   maxDepth: Volatile<number>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-subagent -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-acp -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-subagent-acp -->
 <a id="deepseek-aidsh-subagent-acp"></a>
 
-## `@deepseek-ai/dsh-subagent-acp`
+## `@berry-ai/harness-subagent-acp`
 
 - `inject`: `subagents` · `subprocess`
 - `source`: [`packages/subagent/subagent-acp/src/index.ts:25`](../packages/subagent/subagent-acp/src/index.ts)
@@ -4099,12 +4099,12 @@ export interface Config {
 /** Fixed response to child permission requests: reject by default, or select the first allow option. */
 export type PermissionPolicy = 'allow' | 'reject'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-acp -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-subagent-acp -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-claude-code -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-subagent-claude-code -->
 <a id="deepseek-aidsh-subagent-claude-code"></a>
 
-## `@deepseek-ai/dsh-subagent-claude-code`
+## `@berry-ai/harness-subagent-claude-code`
 
 - `inject`: `subagents` · `subprocess`
 - `source`: [`packages/subagent/subagent-claude-code/src/index.ts:38`](../packages/subagent/subagent-claude-code/src/index.ts)
@@ -4135,12 +4135,12 @@ export interface Config {
 /** Profile-selectable non-interactive Claude Code permission mode. */
 export type ClaudeCodePermissionMode = typeof CLAUDE_CODE_PERMISSION_MODES[number]
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-claude-code -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-subagent-claude-code -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-codex -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-subagent-codex -->
 <a id="deepseek-aidsh-subagent-codex"></a>
 
-## `@deepseek-ai/dsh-subagent-codex`
+## `@berry-ai/harness-subagent-codex`
 
 - `inject`: `subagents` · `subprocess`
 - `source`: [`packages/subagent/subagent-codex/src/index.ts:36`](../packages/subagent/subagent-codex/src/index.ts)
@@ -4169,12 +4169,12 @@ export type CodexPermissionMode =
   | 'approve-for-me'
   | 'dangerously-bypass-approvals-and-sandbox'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-codex -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-subagent-codex -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-dsh-sdk -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-subagent-dsh-sdk -->
 <a id="deepseek-aidsh-subagent-dsh-sdk"></a>
 
-## `@deepseek-ai/dsh-subagent-dsh-sdk`
+## `@berry-ai/harness-subagent-dsh-sdk`
 
 - `inject`: `subagents`
 - `source`: [`packages/subagent/subagent-dsh-sdk/src/index.ts:34`](../packages/subagent/subagent-dsh-sdk/src/index.ts)
@@ -4217,12 +4217,12 @@ export interface Config {
   disposeGraceMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-dsh-sdk -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-subagent-dsh-sdk -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-fork-in-process -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-subagent-fork-in-process -->
 <a id="deepseek-aidsh-subagent-fork-in-process"></a>
 
-## `@deepseek-ai/dsh-subagent-fork-in-process`
+## `@berry-ai/harness-subagent-fork-in-process`
 
 - `inject`: `subagents`
 - `source`: [`packages/subagent/subagent-fork-in-process/src/index.ts:29`](../packages/subagent/subagent-fork-in-process/src/index.ts)
@@ -4234,12 +4234,12 @@ export interface Config {
   providerName: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-fork-in-process -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-subagent-fork-in-process -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-spawn-in-process -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-subagent-spawn-in-process -->
 <a id="deepseek-aidsh-subagent-spawn-in-process"></a>
 
-## `@deepseek-ai/dsh-subagent-spawn-in-process`
+## `@berry-ai/harness-subagent-spawn-in-process`
 
 - `inject`: `subagents`
 - `source`: [`packages/subagent/subagent-spawn-in-process/src/index.ts:23`](../packages/subagent/subagent-spawn-in-process/src/index.ts)
@@ -4251,7 +4251,7 @@ export interface Config {
   providerName: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-spawn-in-process -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-subagent-spawn-in-process -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-system-prompt -->
 <a id="deepseek-aidsh-system-prompt"></a>
@@ -4343,10 +4343,10 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-session-query -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-subagent -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tool-subagent -->
 <a id="deepseek-aidsh-tool-subagent"></a>
 
-## `@deepseek-ai/dsh-tool-subagent`
+## `@berry-ai/harness-tool-subagent`
 
 - `inject`: `tools` · `subagents` · `systemPrompt` · `sessionProjections`
 - `refs`: [`AgentOptions`](subsystems/core.zh.md)
@@ -4400,7 +4400,7 @@ export interface Config {
   maxDepth?: number | 'provider-managed'
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-subagent -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-tool-subagent -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-terminal -->
 <a id="deepseek-aidsh-tool-terminal"></a>
@@ -4599,7 +4599,7 @@ export interface Config {
 | `@deepseek-ai/dsh-session-turn-outline` | `sessionProjections` | [`packages/session/session-turn-outline/src/index.ts`](../packages/session/session-turn-outline/src/index.ts) |
 | `@deepseek-ai/dsh-skill-badge` | `skills` | [`packages/experimental/skill-badge/src/index.ts`](../packages/experimental/skill-badge/src/index.ts) |
 | `@berry-ai/harness-tool-cordis` | `tools` · `cordisInspect` | [`packages/extensions/tool-cordis/src/index.ts`](../packages/extensions/tool-cordis/src/index.ts) |
-| `@deepseek-ai/dsh-tool-subagent-control` | `tools` · `subagents` | [`packages/subagent/tool-subagent-control/src/index.ts`](../packages/subagent/tool-subagent-control/src/index.ts) |
+| `@berry-ai/harness-tool-subagent-control` | `tools` · `subagents` | [`packages/subagent/tool-subagent-control/src/index.ts`](../packages/subagent/tool-subagent-control/src/index.ts) |
 | `@deepseek-ai/dsh-tool-working-directory` | `tools` · `workingDirectory` | [`packages/session/tool-working-directory/src/index.ts`](../packages/session/tool-working-directory/src/index.ts) |
 <!-- END GENERATED config-catalog:no-config -->
 

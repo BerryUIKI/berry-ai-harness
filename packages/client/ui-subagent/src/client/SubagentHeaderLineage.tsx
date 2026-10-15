@@ -4,7 +4,7 @@ import {
   type SessionProjectionMap, type SessionSummary,
   type SessionProjectionSnapshot,
 } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
+import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import {
   IconChevronDownOutlineRegular, IconChevronRightOutlineRegular, IconRefreshOutlineRegular, StateDot, Tooltip,

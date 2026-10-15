@@ -8,7 +8,7 @@
  * while starting in the directory selected by the subagent service. This plugin uses named
  * exports only; a default would hide its loader metadata (see
  * `docs/postmortem/0001-acp-default-export-drops-inject.md`).
- * @module @deepseek-ai/dsh-subagent-dsh-sdk
+ * @module @berry-ai/harness-subagent-dsh-sdk
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -16,8 +16,8 @@ import { statSync } from 'node:fs'
 import { isAbsolute, resolve } from 'node:path'
 import z from '@deepseek-ai/schemastery'
 import type { AgentOptions } from '@berry-ai/harness-agent'
-import type { SubagentCapabilities, SubagentProvider, ResolvedSubagentStartRequest } from '@deepseek-ai/dsh-subagent'
-import { assertPositiveFinite, NO_START_CAPABILITIES, assertUsableCwd } from '@deepseek-ai/dsh-subagent'
+import type { SubagentCapabilities, SubagentProvider, ResolvedSubagentStartRequest } from '@berry-ai/harness-subagent'
+import { assertPositiveFinite, NO_START_CAPABILITIES, assertUsableCwd } from '@berry-ai/harness-subagent'
 import {
   DEFAULT_DISPOSE_EOF_GRACE_MS,
   DEFAULT_DISPOSE_GRACE_MS,

@@ -3,7 +3,7 @@
  * subagent descendants of a Session are still inside a turn, and how they
  * stop when the Session is archived with its work.
  *
- * @module @deepseek-ai/dsh-subagent
+ * @module @berry-ai/harness-subagent
  */
 
 import type { Context } from '@deepseek-ai/cordis'

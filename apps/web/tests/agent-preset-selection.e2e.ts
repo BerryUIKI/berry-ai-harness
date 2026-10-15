@@ -18,7 +18,7 @@ import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
 import {
   SESSION_FORMAT_VERSION, SessionId as sessionId, type SessionEvent, type SessionHeader, type SessionId,
 } from '@berry-ai/harness-session'
-import { SUBAGENT_DESCRIPTOR_VERSION } from '@deepseek-ai/dsh-subagent'
+import { SUBAGENT_DESCRIPTOR_VERSION } from '@berry-ai/harness-subagent'
 import { createSystemMessage, createUserMessage } from '@berry-ai/harness-llm'
 import {
   captureStableAria, compareOrRefreshGolden, launchWebScaffold, seedSession, watchConsole,

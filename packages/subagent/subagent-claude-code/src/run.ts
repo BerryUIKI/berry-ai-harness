@@ -3,7 +3,7 @@
  * real CLI process under the shared subprocess owner, map only strict SDK
  * success to completion, and dispose to whole-range quiescence.
  *
- * @module @deepseek-ai/dsh-subagent-claude-code/run
+ * @module @berry-ai/harness-subagent-claude-code/run
  */
 
 import { randomUUID } from 'node:crypto'
@@ -25,7 +25,7 @@ import {
   type SubagentRun,
   type SubagentStartRequest,
   type SubagentStopReason,
-} from '@deepseek-ai/dsh-subagent'
+} from '@berry-ai/harness-subagent'
 import {
   scrubbedParentEnv,
   type SubprocessHandle,

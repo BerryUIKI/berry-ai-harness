@@ -2,7 +2,7 @@
 /** Inspect the public Claude Code provider composition without invoking the product. */
 
 import { resolveConfigPath } from '@berry-ai/harness-app-boot'
-import type {} from '@deepseek-ai/dsh-subagent'
+import type {} from '@berry-ai/harness-subagent'
 import type {} from '@berry-ai/harness-tools'
 import { bootProductionProfile } from '../../../../../test-support/loader-smoke/tests/fixtures/production-profile.ts'
 

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-subagent-spawn-in-process",
+  "name": "@berry-ai/harness-subagent-spawn-in-process",
   "description": "In-process spawn subagent backend: runs a fresh child agent on ctx.agents",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -27,7 +27,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
@@ -44,9 +44,9 @@
     "@berry-ai/harness-llm-deepseek": "workspace:*",
     "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-tool-bash": "workspace:*",
-    "@deepseek-ai/dsh-tool-subagent": "workspace:*",
+    "@berry-ai/harness-tool-subagent": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*"
