@@ -11,7 +11,8 @@ export const DESKTOP_PACKAGE_SET_FILE = 'desktop-packages.json'
 export const DESKTOP_PACKAGES_DIR = 'desktop-packages'
 
 /** Private package installed beside dsh to boot the Desktop Host process. */
-export const DESKTOP_HOST_PACKAGE = '@deepseek-ai/dsh-desktop-host'
+export const DESKTOP_HOST_PACKAGE = '@berry-ai/harness-desktop-host'
+export const LEGACY_DESKTOP_HOST_PACKAGE = '@deepseek-ai/dsh-desktop-host'
 
 /** Package-relative Desktop Host files required before a profile can boot. */
 export const DESKTOP_HOST_RUNTIME_FILES = [
@@ -88,10 +89,10 @@ export function parseDesktopCorePackageSet(
   if (expectedReleaseVersion !== undefined && releaseCliPackage.version !== expectedReleaseVersion) {
     throw new Error(`desktop package set: ${releaseCliPackage.name}@${releaseCliPackage.version} does not match Desktop ${expectedReleaseVersion}`)
   }
-  const hostEntry = packages.find(candidate => candidate.name === DESKTOP_HOST_PACKAGE)
+  const hostEntry = packages.find(candidate => candidate.name === DESKTOP_HOST_PACKAGE || candidate.name === LEGACY_DESKTOP_HOST_PACKAGE)
   if (hostEntry === undefined) throw new Error(`desktop package set: missing ${DESKTOP_HOST_PACKAGE}`)
   if (expectedReleaseVersion !== undefined && hostEntry.version !== expectedReleaseVersion) {
-    throw new Error(`desktop package set: ${DESKTOP_HOST_PACKAGE}@${hostEntry.version} does not match Desktop ${expectedReleaseVersion}`)
+    throw new Error(`desktop package set: ${hostEntry.name}@${hostEntry.version} does not match Desktop ${expectedReleaseVersion}`)
   }
   return { schemaVersion: 1, packages }
 }

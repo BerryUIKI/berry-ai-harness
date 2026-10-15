@@ -41,13 +41,13 @@ function packageSetProject(): {
   const hostBody = Buffer.from('host')
   const dsh = record('@deepseek-ai/dsh', 'dsh.tgz', dshBody)
   const base = record('@berry-ai/harness-base', 'dsh-base.tgz', baseBody)
-  const host = record('@deepseek-ai/dsh-desktop-host', 'dsh-desktop-host.tgz', hostBody)
+  const host = record('@berry-ai/harness-desktop-host', 'dsh-desktop-host.tgz', hostBody)
   writeFileSync(join(packageDir, dsh.file), dshBody)
   writeFileSync(join(packageDir, base.file), baseBody)
   writeFileSync(join(packageDir, host.file), hostBody)
   writeFileSync(join(root, DESKTOP_PACKAGE_SET_FILE), `${JSON.stringify({
     schemaVersion: 1,
-    packages: [dsh, base, host],
+    packages: [base, host, dsh],
   })}\n`)
   return { root, dsh, base, host }
 }
@@ -64,7 +64,7 @@ describe('desktop core package set', () => {
     expect(desktopCorePackageOverrides(packageSet)).toEqual({
       '@deepseek-ai/dsh': 'file:./desktop-packages/dsh.tgz',
       '@berry-ai/harness-base': 'file:./desktop-packages/dsh-base.tgz',
-      '@deepseek-ai/dsh-desktop-host': 'file:./desktop-packages/dsh-desktop-host.tgz',
+      '@berry-ai/harness-desktop-host': 'file:./desktop-packages/dsh-desktop-host.tgz',
     })
   })
 
@@ -73,9 +73,9 @@ describe('desktop core package set', () => {
     expect(() => verifyDesktopCorePackageSet(root, '2.0.0')).toThrow(/does not match Desktop/u)
     expect(() => parseDesktopCorePackageSet({
       schemaVersion: 1,
-      packages: [dsh, base, { ...host, version: '2.0.0' }],
-    }, '1.2.3')).toThrow(/dsh-desktop-host@2\.0\.0 does not match Desktop 1\.2\.3/u)
-    expect(() => parseDesktopCorePackageSet({ schemaVersion: 1, packages: [base, dsh, host] }))
+      packages: [base, { ...host, version: '2.0.0' }, dsh],
+    }, '1.2.3')).toThrow(/harness-desktop-host@2\.0\.0 does not match Desktop 1\.2\.3/u)
+    expect(() => parseDesktopCorePackageSet({ schemaVersion: 1, packages: [dsh, base, host] }))
       .toThrow(/sorted by name/u)
     writeFileSync(join(root, DESKTOP_PACKAGES_DIR, dsh.file), 'changed')
     expect(() => verifyDesktopCorePackageSet(root, '1.2.3')).toThrow(/integrity check failed/u)
@@ -85,8 +85,8 @@ describe('desktop core package set', () => {
 
   it('rejects registry resolutions for names supplied by the local package set', () => {
     const dsh = record('@deepseek-ai/dsh', 'dsh.tgz', Buffer.from('dsh'))
-    const host = record('@deepseek-ai/dsh-desktop-host', 'host.tgz', Buffer.from('host'))
-    const packageSet = parseDesktopCorePackageSet({ schemaVersion: 1, packages: [dsh, host] })
+    const host = record('@berry-ai/harness-desktop-host', 'host.tgz', Buffer.from('host'))
+    const packageSet = parseDesktopCorePackageSet({ schemaVersion: 1, packages: [host, dsh] })
     expect(() => {
       verifyDesktopCoreLockfile(
         "packages:\n  '@deepseek-ai/dsh@file:desktop-packages/dsh.tgz':\n    resolution: {}\n",

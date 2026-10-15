@@ -58,7 +58,9 @@ export function apply(ctx) {
 `)
     writeFileSync(join(installedPlugin, 'bundle.yml'), `- insert:\n    - id: ${installedName}\n      name: ${installedName}\n      inject: [webServer]\n`)
     appendFileSync(join(profile, 'pnpm-workspace.yaml'), 'offline: true\nupdateNotifier: false\n')
-    const cli = join(root, 'node_modules', '@deepseek-ai', 'dsh-desktop-host', 'lib', 'cli.js')
+    const berryCli = join(root, 'node_modules', '@berry-ai', 'harness-desktop-host', 'lib', 'cli.js')
+    const dshCli = join(root, 'node_modules', '@deepseek-ai', 'dsh-desktop-host', 'lib', 'cli.js')
+    const cli = existsSync(berryCli) ? berryCli : dshCli
     const runCli = (args: string[]) => promisify(execFile)(node,
       ['--expose-internals', cli, 'plugin', '--profile', 'desktop', ...args],
       { cwd: home, env: { ...hostEnvironment, ELECTRON_RUN_AS_NODE: '1' }, timeout: 120_000, windowsHide: true })

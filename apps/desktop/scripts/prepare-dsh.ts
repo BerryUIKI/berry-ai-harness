@@ -148,8 +148,11 @@ async function main(): Promise<void> {
       name: '@deepseek-ai/dsh-desktop-runtime', private: true, version: release.version, type: 'module',
       dependencies: Object.fromEntries(packageSet.packages.map(entry => [entry.name, entry.version])),
     }, undefined, 2)}\n`)
+    const hostPackageDir = existsSync(join(DSH_OUTPUT_ROOT, 'node_modules', DESKTOP_HOST_PACKAGE))
+      ? join(DSH_OUTPUT_ROOT, 'node_modules', DESKTOP_HOST_PACKAGE)
+      : join(DSH_OUTPUT_ROOT, 'node_modules', '@deepseek-ai/dsh-desktop-host')
     for (const file of DESKTOP_HOST_RUNTIME_FILES) {
-      if (!existsSync(join(DSH_OUTPUT_ROOT, 'node_modules', DESKTOP_HOST_PACKAGE, file))) {
+      if (!existsSync(join(hostPackageDir, file))) {
         throw new Error(`desktop runtime: missing private Host file ${file}`)
       }
     }

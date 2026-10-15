@@ -30,7 +30,7 @@ export function writePackage(modules: string, name: string, fields: Record<strin
  * @returns Sealed runtime metadata.
  */
 export function runtimeFixture(root: string, version = '1.0.0', nodeVersion = '24.17.0'): DesktopRuntimeDescriptor {
-  const names = ['@deepseek-ai/dsh', '@deepseek-ai/dsh-desktop-host', '@berry-ai/harness-base', '@berry-ai/harness-web-app', '@deepseek-ai/cordis']
+  const names = ['@deepseek-ai/dsh', '@berry-ai/harness-desktop-host', '@berry-ai/harness-base', '@berry-ai/harness-web-app', '@deepseek-ai/cordis']
   for (const name of names) {
     const bundle = name === '@berry-ai/harness-base' || name === '@berry-ai/harness-web-app'
     const path = writePackage(join(root, 'node_modules'), name, {
@@ -41,7 +41,7 @@ export function runtimeFixture(root: string, version = '1.0.0', nodeVersion = '2
     if (bundle) writeFileSync(join(path, 'bundle.yml'), '[]\n')
   }
   for (const file of DESKTOP_HOST_RUNTIME_FILES) {
-    const path = join(root, 'node_modules', '@deepseek-ai/dsh-desktop-host', file)
+    const path = join(root, 'node_modules', '@berry-ai/harness-desktop-host', file)
     mkdirSync(join(path, '..'), { recursive: true })
     writeFileSync(path, '')
   }

@@ -27,7 +27,7 @@ describe('desktop package-set selection', () => {
         dependencies: { '@berry-ai/harness-base': '^1.0.0', external: '^2.0.0' },
         optionalDependencies: { '@deepseek-ai/platform-package': '1.0.0', '@deepseek-ai/missing-platform': '1.0.0' },
       })],
-      ['@deepseek-ai/dsh-desktop-host', packed('@deepseek-ai/dsh-desktop-host', {
+      ['@berry-ai/harness-desktop-host', packed('@berry-ai/harness-desktop-host', {
         dependencies: { '@deepseek-ai/dsh': '^1.0.0' },
       })],
       ['@berry-ai/harness-base', packed('@berry-ai/harness-base', {
@@ -38,10 +38,10 @@ describe('desktop package-set selection', () => {
       ['@deepseek-ai/unused', packed('@deepseek-ai/unused')],
     ])
     expect(selectDesktopPackageClosure(available).map(entry => entry.manifest.name)).toEqual([
+      '@berry-ai/harness-base',
+      '@berry-ai/harness-desktop-host',
       '@deepseek-ai/cordis',
       '@deepseek-ai/dsh',
-      '@berry-ai/harness-base',
-      '@deepseek-ai/dsh-desktop-host',
       '@deepseek-ai/platform-package',
     ])
   })
@@ -53,14 +53,14 @@ describe('desktop package-set selection', () => {
       ['@deepseek-ai/dsh', packed('@deepseek-ai/dsh', {
         dependencies: { [dependency]: '^1.0.0' },
       })],
-      ['@deepseek-ai/dsh-desktop-host', packed('@deepseek-ai/dsh-desktop-host', {
+      ['@berry-ai/harness-desktop-host', packed('@berry-ai/harness-desktop-host', {
         dependencies: { '@deepseek-ai/dsh': '^1.0.0' },
       })],
     ])
     expect(() => selectDesktopPackageClosure(available)).toThrow(/unpacked package/u)
     expect(() => selectDesktopPackageClosure(new Map([
       ['@deepseek-ai/dsh', packed('@deepseek-ai/dsh')],
-    ]))).toThrow(/omit @deepseek-ai\/dsh-desktop-host/u)
+    ]))).toThrow(/omit @(?:deepseek-ai\/dsh|berry-ai\/harness)-desktop-host/u)
   })
 
   it('leaves independently published Office packages to npm resolution', () => {
@@ -71,10 +71,10 @@ describe('desktop package-set selection', () => {
           '@deepseek-ai/libreoffice-kit-wasm': '0.0.1',
         },
       })],
-      ['@deepseek-ai/dsh-desktop-host', packed('@deepseek-ai/dsh-desktop-host')],
+      ['@berry-ai/harness-desktop-host', packed('@berry-ai/harness-desktop-host')],
     ])
     expect(selectDesktopPackageClosure(available).map(entry => entry.manifest.name)).toEqual([
-      '@deepseek-ai/dsh', '@deepseek-ai/dsh-desktop-host',
+      '@berry-ai/harness-desktop-host', '@deepseek-ai/dsh',
     ])
   })
 

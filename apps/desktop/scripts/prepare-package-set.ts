@@ -80,9 +80,12 @@ export function selectDesktopPackageClosure(
       if (available.has(dependency)) visit(dependency)
     }
   }
+  const hostPackage = available.has(DESKTOP_HOST_PACKAGE)
+    ? DESKTOP_HOST_PACKAGE
+    : (available.has('@deepseek-ai/dsh-desktop-host') ? '@deepseek-ai/dsh-desktop-host' : DESKTOP_HOST_PACKAGE)
   const rootPackages = [
     available.has(BERRY_PACKAGE) ? BERRY_PACKAGE : DSH_PACKAGE,
-    DESKTOP_HOST_PACKAGE,
+    hostPackage,
   ]
   for (const name of rootPackages) {
     if (!available.has(name)) throw new Error(`desktop package set: packed inputs omit ${name}`)
