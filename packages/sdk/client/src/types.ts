@@ -2,11 +2,11 @@
  * Types for the TypeScript SDK client: launch options, notification shapes,
  * and owned activity results.
  *
- * @module @deepseek-ai/dsh-sdk-client/types
+ * @module @berry-ai/harness-sdk-client/types
  */
 
 import type { ContentBlock, ReasoningEffortId } from '@berry-ai/harness-llm'
-import type { SdkPromptContentBlock } from '@deepseek-ai/dsh-sdk-protocol'
+import type { SdkPromptContentBlock } from '@berry-ai/harness-sdk-protocol'
 import type { SessionEvent } from '@berry-ai/harness-session'
 
 /** One server-to-client notification as received off the wire. */

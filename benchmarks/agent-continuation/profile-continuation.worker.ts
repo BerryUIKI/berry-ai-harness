@@ -3,7 +3,7 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { performance } from 'node:perf_hooks'
-import { DeepSeekHarness } from '@deepseek-ai/dsh-sdk-client'
+import { DeepSeekHarness } from '@berry-ai/harness-sdk-client'
 import { assertBuiltBenchmarkRuntime } from '../support/built-worker.ts'
 import { PARENT_ID, resultText, WORKLOAD } from './workload.ts'
 
@@ -82,7 +82,7 @@ async function run(root: string): Promise<ProfileReport> {
   }
 }
 
-assertBuiltBenchmarkRuntime(import.meta.url, { '@deepseek-ai/dsh-sdk-client': import.meta.resolve('@deepseek-ai/dsh-sdk-client') })
+assertBuiltBenchmarkRuntime(import.meta.url, { '@berry-ai/harness-sdk-client': import.meta.resolve('@berry-ai/harness-sdk-client') })
 const [root] = process.argv.slice(2)
 if (root === undefined) throw new Error('usage: profile-continuation.worker.js <root>')
 process.stdout.write(JSON.stringify(await run(root)) + '\n')

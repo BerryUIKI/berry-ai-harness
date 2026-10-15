@@ -21,10 +21,10 @@ import {
   DeepSeekHarness,
   HarnessClient,
   SdkProtocolError,
-} from '@deepseek-ai/dsh-sdk-client'
+} from '@berry-ai/harness-sdk-client'
 import { createProcessDeepSeekHarness } from '../../../sdk/client/src/api.ts'
 import type { RuntimeProcessOptions } from '../../../sdk/client/src/launch.ts'
-import type { DeepSeekHarnessOptions } from '@deepseek-ai/dsh-sdk-client'
+import type { DeepSeekHarnessOptions } from '@berry-ai/harness-sdk-client'
 import { ReasoningEffortId } from '@berry-ai/harness-llm'
 import * as sdk from '../src/index.ts'
 import {
@@ -157,7 +157,7 @@ describe('sdkChildOutcome', () => {
 describe('dsh-subagent-dsh-sdk provider', () => {
   it('constructs the production dsh-backed harness lazily', async () => {
     const harness = defaultCreateHarness({})
-    expect(harness).toBeInstanceOf((await import('@deepseek-ai/dsh-sdk-client')).DeepSeekHarness)
+    expect(harness).toBeInstanceOf((await import('@berry-ai/harness-sdk-client')).DeepSeekHarness)
     await harness.close()
   })
 

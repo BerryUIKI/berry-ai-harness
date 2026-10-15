@@ -15,7 +15,7 @@ describe('dsh-sdk-app bundle', () => {
       dsh?: { bundle?: { patch?: string } }
     }
     expect(manifest.dsh?.bundle?.patch).toBe('./cordis.patch.yml')
-    expect(manifest.dependencies).toHaveProperty('@deepseek-ai/dsh-sdk-jsonrpc-server')
+    expect(manifest.dependencies).toHaveProperty('@berry-ai/harness-sdk-jsonrpc-server')
     const patches = yaml.load(
       readFileSync(resolve(root, manifest.dsh!.bundle!.patch!), 'utf8'),
       { schema: entryListSchema },

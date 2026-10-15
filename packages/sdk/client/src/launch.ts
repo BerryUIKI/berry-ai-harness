@@ -1,6 +1,6 @@
 /**
  * Resolve the public SDK launch configuration to one dsh subprocess.
- * @module @deepseek-ai/dsh-sdk-client/launch
+ * @module @berry-ai/harness-sdk-client/launch
  */
 
 import { existsSync, readFileSync } from 'node:fs'

@@ -141,7 +141,7 @@
     "@berry-ai/harness-plugin-package-inventory-deepseek": "workspace:*",
     "@berry-ai/harness-sandbox-local": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-sdk-client": "workspace:*",
+    "@berry-ai/harness-sdk-client": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-checkpoint-policy": "workspace:*",
     "@berry-ai/harness-session-log-deepseek": "workspace:*",

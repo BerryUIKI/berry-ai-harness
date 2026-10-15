@@ -10,7 +10,7 @@
   disabled: true
 
 - id: sdk-jsonrpc-server
-  name: '@deepseek-ai/dsh-sdk-jsonrpc-server'
+  name: '@berry-ai/harness-sdk-jsonrpc-server'
   disabled: true
 
 - id: session-persistence-jsonl
@@ -53,7 +53,7 @@
         maxDepth: 'provider-managed'
 
     - id: sdk-jsonrpc-server-dynamic-live
-      name: '@deepseek-ai/dsh-sdk-jsonrpc-server'
+      name: '@berry-ai/harness-sdk-jsonrpc-server'
       inject: [sdkAppStartup, loader]
       disabled: !!js process.env.DSH_SNAPSHOT !== 'record'
       config:

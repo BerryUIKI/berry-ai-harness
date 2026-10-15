@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@berry-ai/harness-cmdline": "workspace:*",
-    "@deepseek-ai/dsh-sdk-jsonrpc-server": "workspace:*",
+    "@berry-ai/harness-sdk-jsonrpc-server": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "commander": "^15.0.0",
     "@berry-ai/harness-skill-office": "workspace:*",
