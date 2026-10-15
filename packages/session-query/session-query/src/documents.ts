@@ -1,6 +1,6 @@
 /** Shared event metadata and semantic-document projection. */
 
-import { currentSessionMessageProjections } from '@deepseek-ai/dsh-session-format-catalog/message-projections'
+import { currentSessionMessageProjections } from '@berry-ai/harness-session-format-catalog/message-projections'
 import { foldSurface } from '@berry-ai/harness-session'
 import type { SessionEvent, SessionId, SessionSeq } from '@berry-ai/harness-session'
 import type { SessionEventRecord, SessionEventSearchDocument, SessionEventSurface } from './types.ts'

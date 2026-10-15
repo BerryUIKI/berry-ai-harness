@@ -10,7 +10,7 @@ import SubagentRuntime from '@berry-ai/harness-subagent'
 import * as spawn from '@berry-ai/harness-subagent-spawn-in-process'
 import { MockAdapter, textResponse } from '../packages/core/agent-loop/tests/mock-adapter.ts'
 import type {} from '@berry-ai/harness-tool-workflow/types'
-import type {} from '@deepseek-ai/dsh-session-log-deepseek'
+import type {} from '@berry-ai/harness-session-log-deepseek'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 // @ts-expect-error Scenario plugins are runtime JavaScript without declaration artifacts.
 import * as fixtureModule from './fixtures/python-snapshot-workflow-order.mjs'

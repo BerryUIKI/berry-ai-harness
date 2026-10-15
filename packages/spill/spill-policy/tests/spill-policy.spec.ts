@@ -29,7 +29,7 @@ import FileSystem from '@berry-ai/harness-fs-local'
 import Subprocess from '@berry-ai/harness-subprocess-local'
 import Sandbox from '@berry-ai/harness-sandbox-local'
 import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
-import SessionProjections from '@deepseek-ai/dsh-session-projection'
+import SessionProjections from '@berry-ai/harness-session-projection'
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

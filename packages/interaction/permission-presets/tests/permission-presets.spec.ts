@@ -4,7 +4,7 @@ import SessionStore, {
   Session,
   SessionId,
 } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { SandboxMode } from '@berry-ai/harness-sandbox'
 import type { ApprovalPolicy } from '@berry-ai/harness-user-approval'
 import PermissionPresetService, {

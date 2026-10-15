@@ -31,7 +31,7 @@ import type { Volatile } from '@deepseek-ai/cordis'
 
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import type {} from '@berry-ai/harness-attachment'
 import { scopeTarget } from '@berry-ai/harness-scope'
 import type { Scoped } from '@berry-ai/harness-scope'

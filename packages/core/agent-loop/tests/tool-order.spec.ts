@@ -17,7 +17,7 @@ import ToolRuntime, { defineContentToolFixture } from '@berry-ai/harness-tools'
 import AgentRegistry, { type Agent } from '@berry-ai/harness-agent'
 
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { MockAdapter, textResponse } from './mock-adapter.ts'
 
 async function harness(adapter: MockAdapter, toolOrder?: SystemPromptConfig['toolOrder']) {

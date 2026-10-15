@@ -4,7 +4,7 @@
  * @module @berry-ai/harness-session-query
  */
 
-import { currentSessionMessageProjections } from '@deepseek-ai/dsh-session-format-catalog/message-projections'
+import { currentSessionMessageProjections } from '@berry-ai/harness-session-format-catalog/message-projections'
 import { Context, Service } from '@deepseek-ai/cordis'
 import {
   Session,
@@ -13,8 +13,8 @@ import {
   type SessionId,
   type SessionSeq as SessionSeqType,
 } from '@berry-ai/harness-session'
-import { foldSessionTitle } from '@deepseek-ai/dsh-session-title'
-import type { SessionTitleSnapshot } from '@deepseek-ai/dsh-session-title'
+import { foldSessionTitle } from '@berry-ai/harness-session-title'
+import type { SessionTitleSnapshot } from '@berry-ai/harness-session-title'
 import type {
   SessionEventResultFilter,
   SessionEventSearchPage,

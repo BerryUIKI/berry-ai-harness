@@ -5,12 +5,12 @@ import { setImmediate } from 'node:timers/promises'
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
-import WorkingDirectory, { type Config as WorkingDirectoryConfig } from '@deepseek-ai/dsh-working-directory'
+import WorkingDirectory, { type Config as WorkingDirectoryConfig } from '@berry-ai/harness-working-directory'
 import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { SessionId } from '@berry-ai/harness-session'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import { renderContextSnapshot, renderPrompt } from '@berry-ai/harness-system-prompt'
-import * as WorkingDirectoryTool from '@deepseek-ai/dsh-tool-working-directory'
+import * as WorkingDirectoryTool from '@berry-ai/harness-tool-working-directory'
 
 async function fixture(config?: (root: string) => WorkingDirectoryConfig) {
   const root = await realpath(await mkdtemp(join(tmpdir(), 'dsh-working-directory-')))

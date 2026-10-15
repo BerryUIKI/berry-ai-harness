@@ -2,8 +2,8 @@
 
 import { interruptedTurnClosers } from '@berry-ai/harness-session'
 import type { SessionEvent, SessionHeader, SessionId, SessionLogOffset, SessionSeedEventState } from '@berry-ai/harness-session'
-import type SessionPersistence from '@deepseek-ai/dsh-session-persistence'
-import type { SessionHandleReadResult } from '@deepseek-ai/dsh-session-persistence'
+import type SessionPersistence from '@berry-ai/harness-session-persistence'
+import type { SessionHandleReadResult } from '@berry-ai/harness-session-persistence'
 
 /** A stored session log balanced for read-only viewing. */
 export interface ColdSessionLog {

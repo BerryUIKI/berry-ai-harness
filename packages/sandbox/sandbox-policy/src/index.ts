@@ -27,7 +27,7 @@ import z from '@deepseek-ai/schemastery'
 import type {} from '@berry-ai/harness-agent'
 import type { SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import type { Session } from '@berry-ai/harness-session'
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import type {} from '@berry-ai/harness-system-prompt'
 
 export { SANDBOX_MODES, setSandboxMode } from './session-mode.ts'
@@ -94,7 +94,7 @@ const sandboxModeStateSchema = zod.union([
 ]).nullable()
 
 type SandboxModeState = zod.infer<typeof sandboxModeStateSchema>
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     /** Last logged sandbox-mode override, or null before one (deployment default applies at resolve time). */
     sandboxMode: SandboxModeState

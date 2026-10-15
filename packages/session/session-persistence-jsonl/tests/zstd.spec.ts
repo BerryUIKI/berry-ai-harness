@@ -7,8 +7,8 @@ import { join } from 'node:path'
 import { performance } from 'node:perf_hooks'
 import { SessionSeq, SessionId } from '@berry-ai/harness-session'
 import type { SessionEvent, SessionHeader } from '@berry-ai/harness-session'
-import type { SessionPersistence } from '@deepseek-ai/dsh-session-persistence'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import type { SessionPersistence } from '@berry-ai/harness-session-persistence'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import {
   generationLogPath, logPath, scanLog, sessionDir, toHeaderLine, type JsonlCompression,
 } from '../src/format.ts'

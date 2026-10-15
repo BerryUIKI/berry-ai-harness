@@ -3,7 +3,7 @@
  * including the format refusals shared by every backend: a stored log this
  * build cannot faithfully interpret is refused, never misread, and the
  * refusal points at the raw artifact when the backend keeps one per session.
- * @module @deepseek-ai/dsh-session-persistence/errors
+ * @module @berry-ai/harness-session-persistence/errors
  */
 
 import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'

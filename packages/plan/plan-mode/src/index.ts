@@ -32,8 +32,8 @@ import type { Session, UserMessage } from '@berry-ai/harness-session'
 import { defineTool } from '@berry-ai/harness-tools'
 import { UserQuestionError, type AskUserQuestionAnswer } from '@berry-ai/harness-user-questions'
 import type { CommandDefinitionId, CommandId } from '@berry-ai/harness-commands'
-import type {} from '@deepseek-ai/dsh-session-projection'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
+import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
 import type { PlanProjection, PlanUnitState } from './types.ts'
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

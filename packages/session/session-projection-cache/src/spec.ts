@@ -7,7 +7,7 @@
  * backend stores the domain `per-record`: one document per session under
  * `<root>/session_projcache/sessions/`, so a checkpoint write rewrites one
  * session's document instead of the whole unit).
- * @module @deepseek-ai/dsh-session-projection-cache/src/spec
+ * @module @berry-ai/harness-session-projection-cache/src/spec
  */
 
 import { z } from 'zod'

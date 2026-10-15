@@ -47,7 +47,7 @@ describe('gen-tool-catalog collectToolCatalog', () => {
         expect((schema.parameters as unknown as JsonSchema).type).toBe('object')
       }
     }
-    const directory = catalog.find(entry => entry.pkg === '@deepseek-ai/dsh-tool-working-directory')
+    const directory = catalog.find(entry => entry.pkg === '@berry-ai/harness-tool-working-directory')
     expect(directory?.sources.working_directory).toBe('packages/session/tool-working-directory/src/index.ts')
     const parameters = directory?.schemas[0]?.parameters
     expect(parameters).toHaveProperty('properties.cd.type', 'string')

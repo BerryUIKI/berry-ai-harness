@@ -17,7 +17,7 @@ import AgentRegistry, {
 } from '@berry-ai/harness-agent'
 
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { MockAdapter, textResponse, toolCallResponse } from './mock-adapter.ts'
 
 declare module '@berry-ai/harness-llm' {

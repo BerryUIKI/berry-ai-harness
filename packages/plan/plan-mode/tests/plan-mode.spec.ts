@@ -12,7 +12,7 @@ import UserQuestionService, {
 } from '@berry-ai/harness-user-questions'
 import CommandRuntime from '@berry-ai/harness-commands'
 import { PtcRuntime, type PtcRunRequest, type PtcRunResult } from '@berry-ai/harness-ptc-runtime'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
 import PlanModeController, { EXIT_PLAN_MODE, planProjectionDefinition, resolveConfig } from '../src/index.ts'
 import type { PlanModeConfig } from '../src/index.ts'

@@ -16,7 +16,7 @@ import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import AgentRegistry from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import LocalAttachmentStore from '@berry-ai/harness-attachment-local'
 import * as Provider from '../src/index.ts'
 
@@ -67,7 +67,7 @@ async function load(mode?: string): Promise<{ ctx: Context; root: string; model:
     ['@berry-ai/harness-session', SessionStore],
     ['@berry-ai/harness-agent', AgentRegistry],
     ['@berry-ai/harness-agent-loop', AgentLoop],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+    ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-attachment-local', LocalAttachmentStore],
     ['@fixture/model', { inject: ['llm'], apply(ctx: Context) { ctx.effect(() => ctx.llm.registerAdapter(['fixture'], model)) } }],
     ['@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp', Provider],

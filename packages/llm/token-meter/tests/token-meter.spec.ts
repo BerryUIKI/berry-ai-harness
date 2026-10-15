@@ -5,7 +5,7 @@ import type { ContentBlock, Message, TokenUsage } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import SessionStore, { Session, SessionId, SessionSeq, canonicalHeader } from '@berry-ai/harness-session'
 import type { EpochHeader, SessionEvent, SessionSeq as SessionSeqType } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import TokenMeter from '@berry-ai/harness-token-meter'
 import type { TokenMeasurement, TokenMeterConfig } from '@berry-ai/harness-token-meter'
 

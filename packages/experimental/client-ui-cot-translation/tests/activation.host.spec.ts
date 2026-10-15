@@ -9,7 +9,7 @@ import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deep
 import SessionController from '@deepseek-ai/dsh-api-session-controller'
 import Translator from '@deepseek-ai/dsh-experimental-translator'
 import { SESSION_FORMAT_VERSION, SessionId, SessionSeq } from '@berry-ai/harness-session'
-import JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import SessionQuery from '@berry-ai/harness-session-query'
 import TypertRegistry from '@berry-ai/harness-typert-registry'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'

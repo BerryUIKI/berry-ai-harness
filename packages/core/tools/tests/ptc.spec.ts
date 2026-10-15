@@ -17,7 +17,7 @@ import ApprovalService, { type ApprovalOutcome, type ApprovalRequest } from '@be
 import type { SessionEventMap } from '@berry-ai/harness-session'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
-import SessionProjections from '@deepseek-ai/dsh-session-projection'
+import SessionProjections from '@berry-ai/harness-session-projection'
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

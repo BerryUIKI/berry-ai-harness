@@ -5,7 +5,7 @@
  * Session-log reporter. This plugin owns resource identity and an outer
  * shutdown deadline; the reporter owns byte-bounded SDK delivery.
  *
- * @module @deepseek-ai/dsh-session-telemetry-otel
+ * @module @berry-ai/harness-session-telemetry-otel
  */
 
 import { createRequire } from 'node:module'
@@ -21,7 +21,7 @@ import {
   type SessionTelemetryRecord,
   type SessionTelemetrySeverity,
   type SessionTelemetrySharingStatus,
-} from '@deepseek-ai/dsh-session-telemetry'
+} from '@berry-ai/harness-session-telemetry'
 import { APP_IDENTITY } from '@berry-ai/harness-llm'
 import { getOrCreateAnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import type { LogExporterOptions, SessionLogProcessorOptions, SessionLogReporter } from '@berry-ai/harness-otel'
@@ -188,7 +188,7 @@ export class OpenTelemetrySessionBackend extends SessionTelemetryBackend {
     this.shutdownTimeoutMillis = shutdownTimeoutMillis
     const { version } = createRequire(import.meta.url)('../package.json') as { version: string }
     const reporter = ctx.otel.createSessionLogReporter({
-      scope: { name: '@deepseek-ai/dsh-session-telemetry-otel', version },
+      scope: { name: '@berry-ai/harness-session-telemetry-otel', version },
       exporter: { ...config.exporter, url },
       ...(config.processor === undefined ? {} : { processor: config.processor }),
       ...(config.maxRequestBytes === undefined ? {} : { maxRequestBytes: config.maxRequestBytes }),

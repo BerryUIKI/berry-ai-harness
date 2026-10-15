@@ -4,10 +4,10 @@
  * Format packages transform parsed JSON values. This module owns the physical
  * encoding, exact source identity, immutable generation files, and exclusive
  * current-generation publication for both configured JSONL suffixes.
- * @module @deepseek-ai/dsh-session-persistence-jsonl/generation
+ * @module @berry-ai/harness-session-persistence-jsonl/generation
  */
 
-import { currentSessionMessageProjections } from '@deepseek-ai/dsh-session-format-catalog/message-projections'
+import { currentSessionMessageProjections } from '@berry-ai/harness-session-format-catalog/message-projections'
 import { createHash, randomBytes } from 'node:crypto'
 import {
   link as fsLink,
@@ -28,13 +28,13 @@ import { constants, createZstdCompress } from 'node:zlib'
 import { Session } from '@berry-ai/harness-session'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import { BlockAssembler, expandAssistantStream } from '@berry-ai/harness-llm'
-import { SessionFormatError } from '@deepseek-ai/dsh-session-format'
+import { SessionFormatError } from '@berry-ai/harness-session-format'
 import type {
   SessionFormatArtifact,
   SessionFormatJsonValue,
   SessionFormatRestore,
-} from '@deepseek-ai/dsh-session-format'
-import { validateStoredEvents } from '@deepseek-ai/dsh-session-persistence'
+} from '@berry-ai/harness-session-format'
+import { validateStoredEvents } from '@berry-ai/harness-session-persistence'
 import type { JsonlCompression } from './format.ts'
 import { generationLogFilename, logSuffix, SessionLogScanner } from './format.ts'
 import { publishNewFileWin32 } from './win32.ts'

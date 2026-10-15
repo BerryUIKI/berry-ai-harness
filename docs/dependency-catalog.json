@@ -2665,11 +2665,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-checkpoint-policy",
+      "name": "@berry-ai/harness-session-checkpoint-policy",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-checkpoint-policy",
+          "location": "node_modules/@berry-ai/harness-session-checkpoint-policy",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2677,11 +2677,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-format",
+      "name": "@berry-ai/harness-session-format",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-format",
+          "location": "node_modules/@berry-ai/harness-session-format",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2689,11 +2689,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-format-catalog",
+      "name": "@berry-ai/harness-session-format-catalog",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-format-catalog",
+          "location": "node_modules/@berry-ai/harness-session-format-catalog",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2701,11 +2701,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-format-v0-to-v1",
+      "name": "@berry-ai/harness-session-format-v0-to-v1",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-format-v0-to-v1",
+          "location": "node_modules/@berry-ai/harness-session-format-v0-to-v1",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2713,11 +2713,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-format-v1-to-v2",
+      "name": "@berry-ai/harness-session-format-v1-to-v2",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-format-v1-to-v2",
+          "location": "node_modules/@berry-ai/harness-session-format-v1-to-v2",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2725,11 +2725,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-format-v2-to-v3",
+      "name": "@berry-ai/harness-session-format-v2-to-v3",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-format-v2-to-v3",
+          "location": "node_modules/@berry-ai/harness-session-format-v2-to-v3",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2737,11 +2737,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-log-deepseek",
+      "name": "@berry-ai/harness-session-log-deepseek",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-log-deepseek",
+          "location": "node_modules/@berry-ai/harness-session-log-deepseek",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2761,11 +2761,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-persistence",
+      "name": "@berry-ai/harness-session-persistence",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-persistence",
+          "location": "node_modules/@berry-ai/harness-session-persistence",
           "direct": false,
           "optional": false,
           "peer": true
@@ -2773,11 +2773,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-persistence-jsonl",
+      "name": "@berry-ai/harness-session-persistence-jsonl",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-persistence-jsonl",
+          "location": "node_modules/@berry-ai/harness-session-persistence-jsonl",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2785,11 +2785,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-projection",
+      "name": "@berry-ai/harness-session-projection",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-projection",
+          "location": "node_modules/@berry-ai/harness-session-projection",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2797,11 +2797,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-projection-cache",
+      "name": "@berry-ai/harness-session-projection-cache",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-projection-cache",
+          "location": "node_modules/@berry-ai/harness-session-projection-cache",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2833,11 +2833,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-stats",
+      "name": "@berry-ai/harness-session-stats",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-stats",
+          "location": "node_modules/@berry-ai/harness-session-stats",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2845,11 +2845,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-telemetry",
+      "name": "@berry-ai/harness-session-telemetry",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-telemetry",
+          "location": "node_modules/@berry-ai/harness-session-telemetry",
           "direct": false,
           "optional": false,
           "peer": true
@@ -2857,11 +2857,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-telemetry-otel",
+      "name": "@berry-ai/harness-session-telemetry-otel",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-telemetry-otel",
+          "location": "node_modules/@berry-ai/harness-session-telemetry-otel",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2869,11 +2869,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-title",
+      "name": "@berry-ai/harness-session-title",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-title",
+          "location": "node_modules/@berry-ai/harness-session-title",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2881,11 +2881,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-title-first-prompt-llm",
+      "name": "@berry-ai/harness-session-title-first-prompt-llm",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-title-first-prompt-llm",
+          "location": "node_modules/@berry-ai/harness-session-title-first-prompt-llm",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2893,11 +2893,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-title-llm",
+      "name": "@berry-ai/harness-session-title-llm",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-title-llm",
+          "location": "node_modules/@berry-ai/harness-session-title-llm",
           "direct": false,
           "optional": false,
           "peer": true
@@ -2905,11 +2905,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-session-turn-outline",
+      "name": "@berry-ai/harness-session-turn-outline",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-session-turn-outline",
+          "location": "node_modules/@berry-ai/harness-session-turn-outline",
           "direct": false,
           "optional": false,
           "peer": false

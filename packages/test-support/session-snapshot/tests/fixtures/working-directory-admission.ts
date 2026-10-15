@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict'
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-agent'
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 
 /** Loader identity for the admission timing scene. */
 export const name = 'working-directory-admission'

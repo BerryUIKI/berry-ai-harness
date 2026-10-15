@@ -76,7 +76,7 @@ it('loads both tarballs through plain Node and mounts their base image and overl
     import * as packer from '@deepseek-ai/dsh-experimental-webworker-packer'
     import * as runtime from '@deepseek-ai/dsh-experimental-webworker-runtime'
     import * as client from '@deepseek-ai/dsh-experimental-webworker-runtime/client'
-    import { sessionFormatCatalog } from '@deepseek-ai/dsh-session-format-catalog'
+    import { sessionFormatCatalog } from '@berry-ai/harness-session-format-catalog'
     for (const name of ['webworker-packer', 'webworker-runtime']) {
       assert.equal(import.meta.resolve('@deepseek-ai/dsh-experimental-' + name),
         new URL('./node_modules/@deepseek-ai/dsh-experimental-' + name + '/lib/index.js', import.meta.url).href)

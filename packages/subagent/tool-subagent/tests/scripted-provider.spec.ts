@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { type Agent } from '@berry-ai/harness-agent'
 import SubagentRuntime, { type ResolvedSubagentStartRequest } from '@berry-ai/harness-subagent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { SessionId } from '@berry-ai/harness-session'
 import * as scripted from './scripted-provider.ts'
 

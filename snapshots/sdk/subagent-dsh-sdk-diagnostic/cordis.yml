@@ -12,13 +12,13 @@
     reasoningEffort: max
 
 - id: session-persistence-jsonl
-  name: '@deepseek-ai/dsh-session-persistence-jsonl'
+  name: '@berry-ai/harness-session-persistence-jsonl'
   config:
     root: !!js dshHomePath('sessions')
     compression: !!js "process.env.DSH_SNAPSHOT === undefined ? 'zstd' : 'none'"
 
 - id: session-log-deepseek
-  name: '@deepseek-ai/dsh-session-log-deepseek'
+  name: '@berry-ai/harness-session-log-deepseek'
   config:
     enabled: true
 

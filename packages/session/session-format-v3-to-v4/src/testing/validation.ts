@@ -1,5 +1,5 @@
-import { SessionFormatEventCollector } from '@deepseek-ai/dsh-session-format'
-import type { SessionFormatArtifact } from '@deepseek-ai/dsh-session-format'
+import { SessionFormatEventCollector } from '@berry-ai/harness-session-format'
+import type { SessionFormatArtifact } from '@berry-ai/harness-session-format'
 import { releasedV4SessionFormatCodec } from '../codec.ts'
 
 /**

@@ -8,7 +8,7 @@
  * @module @deepseek-ai/dsh-experimental-auto-review
  */
 
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-agent-instructions'

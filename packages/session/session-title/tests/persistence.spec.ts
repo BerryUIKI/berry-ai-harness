@@ -5,9 +5,9 @@ import { mkdtemp, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import SessionTitleService, { foldSessionTitle } from '@deepseek-ai/dsh-session-title'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import SessionTitleService, { foldSessionTitle } from '@berry-ai/harness-session-title'
 
 const CONFIG = {
   fallbackMaxWords: 5,

@@ -9,16 +9,16 @@ import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { agentPresetProjectionDefinition } from '@berry-ai/harness-agent-preset-registry'
 import SessionController from '@deepseek-ai/dsh-api-session-controller'
-import { currentSessionMessageProjections } from '@deepseek-ai/dsh-session-format-catalog/message-projections'
+import { currentSessionMessageProjections } from '@berry-ai/harness-session-format-catalog/message-projections'
 import { Session, SessionLogOffset } from '@berry-ai/harness-session'
 import type { SessionId } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import SessionProjectionCache, { checkpointRecord, projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
-import type { CheckpointRecord } from '@deepseek-ai/dsh-session-projection-cache'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import SessionProjectionCache, { checkpointRecord, projectionCacheDomainSpec } from '@berry-ai/harness-session-projection-cache'
+import type { CheckpointRecord } from '@berry-ai/harness-session-projection-cache'
 import SqliteSessionQueryEngine from '@berry-ai/harness-session-query-sqlite'
-import * as SessionStatsPlugin from '@deepseek-ai/dsh-session-stats'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
-import * as SessionTurnOutlinePlugin from '@deepseek-ai/dsh-session-turn-outline'
+import * as SessionStatsPlugin from '@berry-ai/harness-session-stats'
+import SessionTitleService from '@berry-ai/harness-session-title'
+import * as SessionTurnOutlinePlugin from '@berry-ai/harness-session-turn-outline'
 import Storage from '@berry-ai/harness-storage'
 import * as StorageDomain from '@berry-ai/harness-storage-domain'
 import type { KvTable } from '@berry-ai/harness-storage-domain'
@@ -354,9 +354,9 @@ async function measureFork(root: string, ranks: readonly number[]): Promise<Fork
 
 assertBuiltBenchmarkRuntime(import.meta.url, Object.fromEntries([
   '@deepseek-ai/dsh-api-session-controller',
-  '@deepseek-ai/dsh-session-persistence-jsonl',
+  '@berry-ai/harness-session-persistence-jsonl',
   '@berry-ai/harness-session-query-sqlite',
-  '@deepseek-ai/dsh-session-projection-cache',
+  '@berry-ai/harness-session-projection-cache',
 ].map(name => [name, import.meta.resolve(name)])))
 
 const USAGE = 'usage: session-corpus.worker.js <root> <anchors anchors...|seed name count|list count|search|fork ranks...>'

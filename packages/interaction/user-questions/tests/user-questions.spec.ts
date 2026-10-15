@@ -9,7 +9,7 @@ import UserQuestionService, {
 } from '@berry-ai/harness-user-questions'
 import { createToolResultMessage, createUserMessage, ToolCallId, type ToolSchema, type UserMessage } from '@berry-ai/harness-llm'
 import { Session, SessionId, TOOL_OUTCOME_UNKNOWN } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 
 interface QuestionAnswerer {
   ask(request: AskUserQuestionRequest): Promise<AskUserQuestionAnswer>

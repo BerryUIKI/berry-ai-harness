@@ -22,8 +22,8 @@ import {
   type SessionPersistenceOpenOptions,
   type SessionPersistenceSnapshot,
   type SessionPersistenceStatOptions,
-} from '@deepseek-ai/dsh-session-persistence'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+} from '@berry-ai/harness-session-persistence'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SessionQueryEngine from '@berry-ai/harness-session-query'
 import { vi } from 'vitest'
 import {

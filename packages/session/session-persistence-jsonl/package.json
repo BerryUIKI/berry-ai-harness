@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-session-persistence-jsonl",
+  "name": "@berry-ai/harness-session-persistence-jsonl",
   "description": "JSONL durable session persistence backend for the DeepSeek Harness",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -29,22 +29,22 @@
   "license": "MIT",
   "peerDependencies": {
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
+    "@berry-ai/harness-session-persistence": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session-format": "workspace:*",
-    "@deepseek-ai/dsh-session-format-catalog": "workspace:*",
-    "@deepseek-ai/dsh-session-format-v3-to-v4": "workspace:*",
+    "@berry-ai/harness-session-format": "workspace:*",
+    "@berry-ai/harness-session-format-catalog": "workspace:*",
+    "@berry-ai/harness-session-format-v3-to-v4": "workspace:*",
     "@deepseek-ai/node-addon-system": "workspace:~",
     "@deepseek-ai/schemastery": "workspace:~",
     "koffi": "3.1.1"
   },
   "devDependencies": {
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-format-v0-to-v1": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
+    "@berry-ai/harness-session-format-v0-to-v1": "workspace:*",
+    "@berry-ai/harness-session-persistence": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

@@ -12,10 +12,10 @@ import AgentRegistry from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import CommandRuntime from '@berry-ai/harness-commands'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
-import WorkingDirectory from '@deepseek-ai/dsh-working-directory'
+import WorkingDirectory from '@berry-ai/harness-working-directory'
 import LlmRuntime, { createUserMessage } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime, { defineContentToolFixture } from '@berry-ai/harness-tools'
 import * as ClaudeCodeMods from '../src/index.ts'
@@ -39,10 +39,10 @@ it('loads from cordis.yml, counts the model\'s tool calls, and answers /tally th
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-llm', LlmRuntime],
     ['@berry-ai/harness-session', SessionStore],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+    ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-system-prompt', SystemPrompt],
     ['@berry-ai/harness-fs-local', LocalFileSystem],
-    ['@deepseek-ai/dsh-working-directory', WorkingDirectory],
+    ['@berry-ai/harness-working-directory', WorkingDirectory],
     ['@berry-ai/harness-tools', ToolRuntime],
     ['@berry-ai/harness-agent', AgentRegistry],
     ['@berry-ai/harness-agent-loop', AgentLoop],

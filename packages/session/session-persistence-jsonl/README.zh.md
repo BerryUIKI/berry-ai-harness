@@ -3,7 +3,7 @@ description: "面向部署方与维护者的随产品交付 JSONL 会话持久�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-persistence-jsonl
+# @berry-ai/harness-session-persistence-jsonl
 
 [English](README.md) | 中文
 
@@ -35,7 +35,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-session'
-- name: '@deepseek-ai/dsh-session-persistence-jsonl'
+- name: '@berry-ai/harness-session-persistence-jsonl'
   config:
     root: /absolute/path/to/session-logs
 ```

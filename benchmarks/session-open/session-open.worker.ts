@@ -13,8 +13,8 @@ import SessionStore, {
   SessionPreparation,
 } from '@berry-ai/harness-session'
 import type { AgentHandle } from '@berry-ai/harness-agent'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SessionQueryEngine from '@berry-ai/harness-session-query'
 import type {
   SessionEventSearchPage,
@@ -24,9 +24,9 @@ import type {
   SessionSearchPage,
   SessionSearchRequest,
 } from '@berry-ai/harness-session-query'
-import * as SessionStatsPlugin from '@deepseek-ai/dsh-session-stats'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
-import * as SessionTurnOutlinePlugin from '@deepseek-ai/dsh-session-turn-outline'
+import * as SessionStatsPlugin from '@berry-ai/harness-session-stats'
+import SessionTitleService from '@berry-ai/harness-session-title'
+import * as SessionTurnOutlinePlugin from '@berry-ai/harness-session-turn-outline'
 import TokenMeter from '@berry-ai/harness-token-meter'
 // These Host-only adapters have no public Node export and are compiled into the benchmark worker.
 import { SessionHistoryController } from '../../packages/api/session-controller/src/history.ts'
@@ -291,7 +291,7 @@ class SessionBenchmarkHost {
 }
 
 assertBuiltBenchmarkRuntime(import.meta.url, {
-  '@deepseek-ai/dsh-session-persistence-jsonl': import.meta.resolve('@deepseek-ai/dsh-session-persistence-jsonl'),
+  '@berry-ai/harness-session-persistence-jsonl': import.meta.resolve('@berry-ai/harness-session-persistence-jsonl'),
 })
 
 const [root, scenarioValue] = process.argv.slice(2)

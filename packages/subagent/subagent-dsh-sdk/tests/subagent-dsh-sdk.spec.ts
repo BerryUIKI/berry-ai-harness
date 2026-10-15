@@ -15,7 +15,7 @@ import { tmpdir } from 'node:os'
 import { join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import SubagentRuntime from '@berry-ai/harness-subagent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { Agent, AgentOptions } from '@berry-ai/harness-agent'
 import {
   DeepSeekHarness,

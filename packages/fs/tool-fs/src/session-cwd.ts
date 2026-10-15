@@ -6,7 +6,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { ToolExecution } from '@berry-ai/harness-tools'
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 
 /**
  * Resolve the current directory and cancellation for a filesystem call.

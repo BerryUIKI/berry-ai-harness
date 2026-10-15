@@ -9,7 +9,7 @@ import { AttachmentId } from '@berry-ai/harness-attachment'
 import type { FileAttachmentRef, ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import { Session, SessionId, canonicalHeader } from '@berry-ai/harness-session'
 import type { EpochHeader } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import TokenMeter from '@berry-ai/harness-token-meter'
 import { estimateContent, estimateMessage } from '../src/estimate.ts'
 

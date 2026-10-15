@@ -50,7 +50,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*"
+    "@berry-ai/harness-session-projection": "workspace:*"
   },
   "devDependencies": {
     "@berry-ai/harness-agent": "workspace:*",
@@ -59,8 +59,8 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*"
   },
   "dependencies": {

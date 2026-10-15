@@ -1,6 +1,6 @@
 /** One-shot session-lineage and event-relationship tracing helpers. */
 
-import { currentSessionMessageProjections } from '@deepseek-ai/dsh-session-format-catalog/message-projections'
+import { currentSessionMessageProjections } from '@berry-ai/harness-session-format-catalog/message-projections'
 import { foldSurface, isSurfaceEvent, snapshotSessionEvent } from '@berry-ai/harness-session'
 import type {
   SessionEvent,

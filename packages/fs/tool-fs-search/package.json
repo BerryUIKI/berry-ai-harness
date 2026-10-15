@@ -40,7 +40,7 @@
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   },
   "devDependencies": {
     "@berry-ai/harness-agent": "workspace:*",
@@ -55,7 +55,7 @@
     "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-scope": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*",
+    "@berry-ai/harness-working-directory": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*"
   }
 }

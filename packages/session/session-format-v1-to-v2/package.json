@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-session-format-v1-to-v2",
+  "name": "@berry-ai/harness-session-format-v1-to-v2",
   "description": "Frozen released-v1 Session codec and assistant-stream migration to v2",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -40,8 +40,8 @@
   },
   "dependencies": {
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session-format": "workspace:*",
-    "@deepseek-ai/dsh-session-format-v0-to-v1": "workspace:*",
+    "@berry-ai/harness-session-format": "workspace:*",
+    "@berry-ai/harness-session-format-v0-to-v1": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*"
   },
   "peerDependencies": {

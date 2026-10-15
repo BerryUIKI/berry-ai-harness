@@ -9,7 +9,7 @@ import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-test
 import { createUserMessage, LlmAdapter } from '@berry-ai/harness-llm'
 import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-ai/harness-llm'
 import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import { defineContentToolFixture } from '@berry-ai/harness-tools'
 import { assertBuiltBenchmarkRuntime } from '../support/built-worker.ts'
 import { PARENT_ID, response, resultText, syntheticHistory, TIME_ZERO, WORKLOAD } from './workload.ts'
@@ -128,7 +128,7 @@ async function measure(root: string, scenario: string): Promise<ContinuationRepo
 
 assertBuiltBenchmarkRuntime(import.meta.url, Object.fromEntries([
   '@berry-ai/harness-agent-loop', '@berry-ai/harness-session', '@berry-ai/harness-llm',
-  '@berry-ai/harness-tools', '@deepseek-ai/dsh-session-persistence-jsonl',
+  '@berry-ai/harness-tools', '@berry-ai/harness-session-persistence-jsonl',
 ].map(name => [name, import.meta.resolve(name)])))
 const [root, scenario] = process.argv.slice(2)
 if (root === undefined || scenario === undefined || !['seed', 'request-history', 'tool-continuation'].includes(scenario)) {

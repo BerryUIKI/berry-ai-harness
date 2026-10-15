@@ -10,11 +10,11 @@ import {
   type SessionEvent,
 } from '@berry-ai/harness-session'
 import type { SessionLogOffset as SessionLogOffsetType } from '@berry-ai/harness-session'
-import { sessionFormatCatalog } from '@deepseek-ai/dsh-session-format-catalog'
-import { SessionFormatEventCollector, type SessionFormatArtifactDecoder, type SessionFormatCodec } from '@deepseek-ai/dsh-session-format'
-import { releasedV0SessionFormatCodec, releasedV1SessionFormatCodec } from '@deepseek-ai/dsh-session-format-v0-to-v1'
-import { releasedV2SessionFormatCodec } from '@deepseek-ai/dsh-session-format-v1-to-v2'
-import { releasedV3SessionFormatCodec } from '@deepseek-ai/dsh-session-format-v2-to-v3'
+import { sessionFormatCatalog } from '@berry-ai/harness-session-format-catalog'
+import { SessionFormatEventCollector, type SessionFormatArtifactDecoder, type SessionFormatCodec } from '@berry-ai/harness-session-format'
+import { releasedV0SessionFormatCodec, releasedV1SessionFormatCodec } from '@berry-ai/harness-session-format-v0-to-v1'
+import { releasedV2SessionFormatCodec } from '@berry-ai/harness-session-format-v1-to-v2'
+import { releasedV3SessionFormatCodec } from '@berry-ai/harness-session-format-v2-to-v3'
 
 const historicalCodecs: readonly SessionFormatCodec[] = [
   releasedV0SessionFormatCodec, releasedV1SessionFormatCodec, releasedV2SessionFormatCodec,

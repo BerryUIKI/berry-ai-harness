@@ -46,13 +46,13 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
+    "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
     "@berry-ai/harness-subagent-spawn-in-process": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-workflow": "workspace:*",
     "@berry-ai/harness-workflow-ptc": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-session-projection": "workspace:*"
+    "@berry-ai/harness-session-projection": "workspace:*"
   }
 }

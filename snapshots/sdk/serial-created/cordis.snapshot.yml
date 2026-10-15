@@ -15,6 +15,6 @@
               - id: deepseek-v4-flash
 
 - id: session-log-deepseek
-  name: '@deepseek-ai/dsh-session-log-deepseek'
+  name: '@berry-ai/harness-session-log-deepseek'
   config:
     enabled: true

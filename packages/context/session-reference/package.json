@@ -56,10 +56,10 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-output-retention": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-session-projection-cache": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-session-projection-cache": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
-    "@deepseek-ai/dsh-session-title": "workspace:*",
+    "@berry-ai/harness-session-title": "workspace:*",
     "@berry-ai/harness-spill": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
@@ -69,7 +69,7 @@
     "@berry-ai/harness-spill": {
       "optional": true
     },
-    "@deepseek-ai/dsh-session-projection-cache": {
+    "@berry-ai/harness-session-projection-cache": {
       "optional": true
     }
   },
@@ -83,11 +83,11 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-output-retention": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-session-projection-cache": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-session-projection-cache": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
     "@berry-ai/harness-session-query-sqlite": "workspace:*",
-    "@deepseek-ai/dsh-session-title": "workspace:*",
+    "@berry-ai/harness-session-title": "workspace:*",
     "@berry-ai/harness-spill": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-spill-local": "workspace:*",
@@ -95,6 +95,6 @@
     "@berry-ai/harness-tool-fs": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   }
 }

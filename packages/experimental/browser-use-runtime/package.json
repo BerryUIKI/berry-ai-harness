@@ -39,7 +39,7 @@
     "@berry-ai/harness-scope": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"
@@ -54,7 +54,7 @@
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-mcp-resources": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
@@ -62,8 +62,8 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@berry-ai/harness-attachment-local": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*",
+    "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
+    "@berry-ai/harness-working-directory": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*"
   }
 }

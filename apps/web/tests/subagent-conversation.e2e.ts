@@ -13,7 +13,7 @@ import {
 } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-agent'
 import { snapshotSubagentDescriptor, SUBAGENT_DESCRIPTOR_VERSION } from '@berry-ai/harness-subagent'
-import { checkpointRecord, projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
+import { checkpointRecord, projectionCacheDomainSpec } from '@berry-ai/harness-session-projection-cache'
 import {
   acknowledgeReloadConnectionLoss, captureExpandedTurnProcessAria, captureStableAria,
   compareOrRefreshGolden,

@@ -14,9 +14,9 @@ import type { ContentBlock, LlmResolvedModelInfo, UserMessage } from '@berry-ai/
 import type { SessionId } from '@berry-ai/harness-session'
 // Type-only: the `title` projection key plus the live registry and durable
 // cache Context merges — the two projection faces discovery labels from.
-import type { ProjectionSnapshot } from '@deepseek-ai/dsh-session-projection'
-import type {} from '@deepseek-ai/dsh-session-projection-cache'
-import type {} from '@deepseek-ai/dsh-session-title'
+import type { ProjectionSnapshot } from '@berry-ai/harness-session-projection'
+import type {} from '@berry-ai/harness-session-projection-cache'
+import type {} from '@berry-ai/harness-session-title'
 import type {} from '@berry-ai/harness-subagent'
 import type {} from '@berry-ai/harness-system-prompt'
 import type { SessionRecord, SessionSurfaceSnapshot } from '@berry-ai/harness-session-query'

@@ -8,8 +8,8 @@ import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import { SessionId } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import WorkingDirectory from '@deepseek-ai/dsh-working-directory'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import WorkingDirectory from '@berry-ai/harness-working-directory'
 import ClaudeCodeMods, { defineMod } from '../src/index.ts'
 
 it('reports the final committed cwd when a persisted Session resumes, retaining its original project', async () => {

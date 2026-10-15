@@ -33,7 +33,7 @@
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-util-values": "workspace:*",
@@ -52,7 +52,7 @@
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-tool-call-timeout-policy": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*",
+    "@berry-ai/harness-working-directory": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*"
   }
 }

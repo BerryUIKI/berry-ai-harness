@@ -9,13 +9,13 @@
  * @module @berry-ai/harness-agent-instructions
  */
 
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
 import { isDeepStrictEqual } from 'node:util'
 import type { Agent, PreStepDecision } from '@berry-ai/harness-agent'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { Session, UserMessage } from '@berry-ai/harness-session'
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import type { ToolExecution, ToolExecutionResult, ToolExecutionToken } from '@berry-ai/harness-tools'
 import { Config, resolveConfig, workspaceBaselineIdentity, type ResolvedConfig } from './config.ts'
 import { findProjectRoot, loadBaselineInstructionSet } from './files.ts'

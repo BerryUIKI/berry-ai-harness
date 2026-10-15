@@ -30,7 +30,7 @@ import type {} from '@berry-ai/harness-compaction-basic'
 import type {} from '@berry-ai/harness-skill'
 import type {} from '@berry-ai/harness-tools'
 // Type-only: resolves `ctx.get('sessionProjections')` and `ctx.get('tokenMeter')`.
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import type {} from '@berry-ai/harness-token-meter'
 
 const REPO_ROOT = fileURLToPath(new URL('../../..', import.meta.url))

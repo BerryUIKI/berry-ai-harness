@@ -29,7 +29,7 @@ import type {} from '@berry-ai/harness-shell'
 import type { ApprovalPolicy } from '@berry-ai/harness-user-approval'
 import { APPROVAL_POLICIES, setApprovalPolicy } from '@berry-ai/harness-user-approval'
 // Type-only: resolves the required projection service and optional settings/command children.
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import type {} from '@berry-ai/harness-commands'
 import type { PermissionCatalog, PermissionSelection, PresetOption } from './types.ts'
 
@@ -41,7 +41,7 @@ declare module '@deepseek-ai/cordis' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     /** Latest logged permission overrides and constructor-seed status. */
     permissions: PermissionProjectionState

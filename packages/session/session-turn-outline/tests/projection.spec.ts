@@ -15,10 +15,10 @@ import { createAssistantMessage, createUserMessage } from '@berry-ai/harness-llm
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import type { Session, SessionEvent } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import * as SessionTurnOutlinePlugin from '@deepseek-ai/dsh-session-turn-outline'
-import { turnOutlineProjectionDefinition } from '@deepseek-ai/dsh-session-turn-outline/src/projection.ts'
-import type { TurnOutlineEntry, TurnOutlineState } from '@deepseek-ai/dsh-session-turn-outline/types'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import * as SessionTurnOutlinePlugin from '@berry-ai/harness-session-turn-outline'
+import { turnOutlineProjectionDefinition } from '@berry-ai/harness-session-turn-outline/src/projection.ts'
+import type { TurnOutlineEntry, TurnOutlineState } from '@berry-ai/harness-session-turn-outline/types'
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

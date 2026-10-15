@@ -24,7 +24,7 @@ import {
   SessionSeq,
 } from '@berry-ai/harness-session'
 // Type-only: activates the `ctx.sessionProjections` Context declaration.
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import type {
   TokenMeasurement,
   TokenMeasurementBaseline,

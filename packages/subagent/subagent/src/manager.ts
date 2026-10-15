@@ -8,7 +8,7 @@
 
 import { randomUUID } from 'node:crypto'
 import { isAbsolute, resolve } from 'node:path'
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent, AgentOptions, CreateAgentOptions } from '@berry-ai/harness-agent'
 import { brandString } from '@berry-ai/harness-brand'
@@ -16,7 +16,7 @@ import { ReasoningEffortId, contentHasImage, createUserMessage, errorChain } fro
 import type { ContentBlock, MessageId, MessageSource } from '@berry-ai/harness-llm'
 import { SessionLogOffset } from '@berry-ai/harness-session'
 import type { SessionId, SessionEvent, UserMessage } from '@berry-ai/harness-session'
-import type { SessionPersistence } from '@deepseek-ai/dsh-session-persistence'
+import type { SessionPersistence } from '@berry-ai/harness-session-persistence'
 import type { SessionObservation, SessionQueryEngine } from '@berry-ai/harness-session-query'
 import type { ToolRestriction, ObjectJsonSchema } from '@berry-ai/harness-tools'
 import {

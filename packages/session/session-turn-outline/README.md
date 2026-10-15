@@ -3,7 +3,7 @@ description: "Whole-log turn outline for clients and maintainers composing or de
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-turn-outline
+# @berry-ai/harness-session-turn-outline
 
 English | [中文](README.zh.md)
 
@@ -31,8 +31,8 @@ Mount the plugin beside the session store and the projection registry when clien
 
 ```yaml
 - name: '@berry-ai/harness-session'
-- name: '@deepseek-ai/dsh-session-projection'
-- name: '@deepseek-ai/dsh-session-turn-outline'
+- name: '@berry-ai/harness-session-projection'
+- name: '@berry-ai/harness-session-turn-outline'
 ```
 
 ### What an entry means

@@ -5,8 +5,8 @@
  */
 
 import type { MessageId } from '@berry-ai/harness-llm'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
-import type SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
+import type SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { Session, SessionEventMap, UserMessage } from '@berry-ai/harness-session'
 import type {
   AgentEventDispatch,

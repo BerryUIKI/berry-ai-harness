@@ -5,7 +5,7 @@ import type { Agent } from '@berry-ai/harness-agent'
 import { createUserMessage, HarnessError } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import SessionStore, { Session, SessionId, type UserMessage } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import GoalService, {
   GoalError,
   GoalId,

@@ -18,7 +18,7 @@
       name: '@berry-ai/harness-deepseek-llm-api-extensions'
 
     - id: session-log-deepseek
-      name: '@deepseek-ai/dsh-session-log-deepseek'
+      name: '@berry-ai/harness-session-log-deepseek'
 
     - id: plugin-package-inventory-deepseek
       name: '@berry-ai/harness-plugin-package-inventory-deepseek'
@@ -39,13 +39,13 @@
       name: '@berry-ai/harness-fs-local'
 
     - id: working-directory
-      name: '@deepseek-ai/dsh-working-directory'
+      name: '@berry-ai/harness-working-directory'
 
     - id: tool-working-directory
-      name: '@deepseek-ai/dsh-tool-working-directory'
+      name: '@berry-ai/harness-tool-working-directory'
 
     - id: session-projection
-      name: '@deepseek-ai/dsh-session-projection'
+      name: '@berry-ai/harness-session-projection'
 
     - id: sandbox-policy
       name: '@berry-ai/harness-sandbox-policy'
@@ -84,7 +84,7 @@
       name: '@berry-ai/harness-session'
 
     - id: session-title
-      name: '@deepseek-ai/dsh-session-title'
+      name: '@berry-ai/harness-session-title'
       config:
         fallbackMaxWords: 5
         fallbackMaxBytes: 40
@@ -146,7 +146,7 @@
           * Please run long lived commands in the background, e.g. 'Start-Job' or start a server with Start-Process.
 
     - id: sessions
-      name: '@deepseek-ai/dsh-session-persistence-jsonl'
+      name: '@berry-ai/harness-session-persistence-jsonl'
       config:
         root: !!js dshHomePath('sessions')
         compression: none

@@ -37,7 +37,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-session'
-- name: '@deepseek-ai/dsh-session-persistence-jsonl'
+- name: '@berry-ai/harness-session-persistence-jsonl'
 - name: '@berry-ai/harness-storage'
 - name: '@berry-ai/harness-storage-json'
 - name: '@berry-ai/harness-storage-domain'

@@ -14,7 +14,7 @@
  * @module @berry-ai/harness-agent-preset-registry/session
  */
 
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
 import { z } from 'zod'
 
 declare module '@berry-ai/harness-session/types' {

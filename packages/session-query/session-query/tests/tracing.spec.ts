@@ -3,19 +3,19 @@ import type { ContextFormed } from '@berry-ai/harness-llm'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import SessionStore, { SessionLogOffset, SessionSeq, SESSION_FORMAT_VERSION, SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { Session, SessionEvent, SessionHeader, SessionId as SessionIdType } from '@berry-ai/harness-session'
 import SessionPersistence, {
   SessionPersistenceNotFoundError,
   SessionPersistenceRevision,
   SessionReadOnlyError,
-} from '@deepseek-ai/dsh-session-persistence'
+} from '@berry-ai/harness-session-persistence'
 import type {
   SessionAccess,
   SessionHandle,
   SessionHandleReadResult,
   SessionPersistenceSnapshot,
-} from '@deepseek-ai/dsh-session-persistence'
+} from '@berry-ai/harness-session-persistence'
 import { type SessionQueryErrorCode } from '@berry-ai/harness-session-query'
 import { TestSessionQueryEngine } from './test-service.ts'
 

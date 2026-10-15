@@ -11,11 +11,11 @@ import type { SessionEvent } from '@berry-ai/harness-session'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import AgentRegistry, { type Agent } from '@berry-ai/harness-agent'
-import type { SessionHandle } from '@deepseek-ai/dsh-session-persistence'
+import type { SessionHandle } from '@berry-ai/harness-session-persistence'
 
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import AgentLoop, { CONFIGURED_AGENT_IDENTITIES_KEY } from '@berry-ai/harness-agent-loop'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { MockAdapter, textResponse } from './mock-adapter.ts'
 
 declare module '@berry-ai/harness-llm' {

@@ -1,6 +1,6 @@
 import { deepEqualJson } from '@berry-ai/harness-util-values'
-import { SessionFormatError } from '@deepseek-ai/dsh-session-format'
-import type { SessionFormatArtifact, SessionFormatEvent, SessionFormatJsonValue } from '@deepseek-ai/dsh-session-format'
+import { SessionFormatError } from '@berry-ai/harness-session-format'
+import type { SessionFormatArtifact, SessionFormatEvent, SessionFormatJsonValue } from '@berry-ai/harness-session-format'
 import { releasedV0Record } from './validation-helpers.ts'
 import { RELEASED_V0_EVENT_DISPOSITIONS } from './dispositions.ts'
 

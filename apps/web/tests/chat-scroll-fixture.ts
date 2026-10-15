@@ -15,7 +15,7 @@ import {
   SessionId,
 } from '@berry-ai/harness-session'
 // Carries the session/title event declaration into this fixture builder.
-import type {} from '@deepseek-ai/dsh-session-title'
+import type {} from '@berry-ai/harness-session-title'
 
 /** Options for one deterministic long-chat fixture. */
 export interface ChatScrollFixtureOptions {

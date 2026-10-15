@@ -9,9 +9,9 @@ import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
 import SessionController from '@deepseek-ai/dsh-api-session-controller'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, type SessionHeader } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SessionProjectionCache, { projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import SessionProjectionCache, { projectionCacheDomainSpec } from '@berry-ai/harness-session-projection-cache'
 import SqliteSessionQueryEngine from '@berry-ai/harness-session-query-sqlite'
 import Storage from '@berry-ai/harness-storage'
 import * as StorageDomain from '@berry-ai/harness-storage-domain'
@@ -51,7 +51,7 @@ const stateSchema = z.object({
 const viewSchema = z.object({ sessionOrdinal: z.number().int(), rows: z.number().int(), requests: z.number().int(), tokens: z.number().int() })
 type ProjectionState = z.infer<typeof stateSchema>
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap { syntheticProjectionList: ProjectionState }
   interface SessionProjectionMap { syntheticProjectionList: z.infer<typeof viewSchema> }
 }
@@ -284,9 +284,9 @@ async function measure(controller: SessionController, observation: ViewObservati
 
 assertBuiltBenchmarkRuntime(import.meta.url, {
   controller: import.meta.resolve('@deepseek-ai/dsh-api-session-controller'),
-  registry: import.meta.resolve('@deepseek-ai/dsh-session-projection'),
-  cache: import.meta.resolve('@deepseek-ai/dsh-session-projection-cache'),
-  persistence: import.meta.resolve('@deepseek-ai/dsh-session-persistence-jsonl'),
+  registry: import.meta.resolve('@berry-ai/harness-session-projection'),
+  cache: import.meta.resolve('@berry-ai/harness-session-projection-cache'),
+  persistence: import.meta.resolve('@berry-ai/harness-session-persistence-jsonl'),
 })
 const [root, workload, sliceArgument] = process.argv.slice(2)
 if (root === undefined || (workload !== 'modest' && workload !== 'tail' && workload !== 'cheap')) throw new Error('usage: projection-list.worker.js <private-root> <modest|tail|cheap> [work-slice-ms]')

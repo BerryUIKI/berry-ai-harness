@@ -6,7 +6,7 @@ import type { Agent, AgentCancelCause, AgentStatus, CancelOptions } from '@berry
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import type { Session } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { SessionActivity } from '@berry-ai/harness-workspace'
 import SubagentRuntime, { SUBAGENT_DESCRIPTOR_VERSION } from '../src/index.ts'
 import { TestSessionQuery } from './test-session-query.ts'

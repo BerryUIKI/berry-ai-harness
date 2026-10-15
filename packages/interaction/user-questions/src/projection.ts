@@ -2,7 +2,7 @@
 import { z } from 'zod'
 import { SessionLogOffset, TOOL_OUTCOME_UNKNOWN } from '@berry-ai/harness-session'
 import type { SessionEvent, SessionLogOffset as SessionLogOffsetType } from '@berry-ai/harness-session'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
 import type {} from '@berry-ai/harness-agent/types'
 import type {} from '@berry-ai/harness-tools/types'
 import { ToolCallId } from '@berry-ai/harness-llm'
@@ -330,7 +330,7 @@ export const userQuestionProjectionDefinition = {
   stateVersion: 2,
 } satisfies ProjectionDefinition<'userQuestions', UserQuestionProjectionState>
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     userQuestions: UserQuestionProjectionState
   }

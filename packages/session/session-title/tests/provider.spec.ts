@@ -3,7 +3,7 @@ import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import LlmRuntime, { createUserMessage, markAgentLoopRequest } from '@berry-ai/harness-llm'
 import { deepFreeze } from '@berry-ai/harness-util-values'
 import SessionStore, { SessionId, SessionSeq } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
 import SessionTitleService, {
   SessionTitleProviderId,
@@ -11,7 +11,7 @@ import SessionTitleService, {
   type SessionTitleProviderRequest,
   type SessionTitleProviderResult,
   type SessionTitleSnapshot,
-} from '@deepseek-ai/dsh-session-title'
+} from '@berry-ai/harness-session-title'
 
 const CONFIG = {
   fallbackMaxWords: 5,

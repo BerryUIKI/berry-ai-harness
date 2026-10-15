@@ -11,7 +11,7 @@ import AgentLoop from '@berry-ai/harness-agent-loop'
 import LlmRuntime, { createUserMessage, LlmAdapter, LlmError, resolveRetryPolicy  } from '@berry-ai/harness-llm'
 import type { GenerateOptions, ResolvedRetryPolicy, StreamChunk } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import * as retry from '../src/index.ts'
@@ -61,7 +61,7 @@ async function loadYaml(lines: readonly string[]): Promise<Context> {
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-llm', LlmRuntime],
     ['@berry-ai/harness-session', SessionStore],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+    ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-system-prompt', SystemPrompt],
     ['@berry-ai/harness-tools', ToolRuntime],
     ['@berry-ai/harness-agent', AgentRegistry],
@@ -91,7 +91,7 @@ describe('real Loader composition', () => {
     const loaded = await loadYaml([
       "- name: '@berry-ai/harness-llm'",
       "- name: '@berry-ai/harness-session'",
-      "- name: '@deepseek-ai/dsh-session-projection'",
+      "- name: '@berry-ai/harness-session-projection'",
       "- name: '@berry-ai/harness-system-prompt'",
       "- name: '@berry-ai/harness-tools'",
       "- name: '@berry-ai/harness-agent'",

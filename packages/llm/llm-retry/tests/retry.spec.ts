@@ -12,7 +12,7 @@ import type {
   StreamChunk,
 } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { SessionEvent, SessionEventMap } from '@berry-ai/harness-session'
 import type { LlmRetryEventData } from '@berry-ai/harness-llm-retry/types'
 import SystemPrompt from '@berry-ai/harness-system-prompt'

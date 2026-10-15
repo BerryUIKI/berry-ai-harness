@@ -22,7 +22,7 @@ flowchart LR
   cfg --> plugin_dsh_base_deepseek_llm_api_extensions
   plugin_dsh_base_session["session<br/>@berry-ai/harness-session"]
   cfg --> plugin_dsh_base_session
-  plugin_dsh_base_session_log_deepseek["session-log-deepseek<br/>@deepseek-ai/dsh-session-log-deepseek"]
+  plugin_dsh_base_session_log_deepseek["session-log-deepseek<br/>@berry-ai/harness-session-log-deepseek"]
   cfg --> plugin_dsh_base_session_log_deepseek
   plugin_dsh_base_typert["typert<br/>@berry-ai/harness-typert-registry"]
   cfg --> plugin_dsh_base_typert
@@ -30,9 +30,9 @@ flowchart LR
   cfg --> plugin_dsh_base_typert_loader
   plugin_dsh_base_typert_gateway["typert-gateway<br/>@deepseek-ai/dsh-api-gateway"]
   cfg --> plugin_dsh_base_typert_gateway
-  plugin_dsh_base_session_title["session-title<br/>@deepseek-ai/dsh-session-title"]
+  plugin_dsh_base_session_title["session-title<br/>@berry-ai/harness-session-title"]
   cfg --> plugin_dsh_base_session_title
-  plugin_dsh_base_session_title_llm["session-title-llm<br/>@deepseek-ai/dsh-session-title-first-prompt-llm"]
+  plugin_dsh_base_session_title_llm["session-title-llm<br/>@berry-ai/harness-session-title-first-prompt-llm"]
   cfg --> plugin_dsh_base_session_title_llm
   plugin_dsh_base_user_questions["user-questions<br/>@berry-ai/harness-user-questions"]
   cfg --> plugin_dsh_base_user_questions
@@ -58,17 +58,17 @@ flowchart LR
   cfg --> plugin_dsh_base_credentials
   plugin_dsh_base_llm_pi_ai["llm-pi-ai<br/>@berry-ai/harness-llm-pi-ai"]
   cfg --> plugin_dsh_base_llm_pi_ai
-  plugin_dsh_base_session_persistence_jsonl["session-persistence-jsonl<br/>@deepseek-ai/dsh-session-persistence-jsonl"]
+  plugin_dsh_base_session_persistence_jsonl["session-persistence-jsonl<br/>@berry-ai/harness-session-persistence-jsonl"]
   cfg --> plugin_dsh_base_session_persistence_jsonl
   plugin_dsh_base_attachment_local["attachment-local<br/>@berry-ai/harness-attachment-local"]
   cfg --> plugin_dsh_base_attachment_local
   plugin_dsh_base_session_query_sqlite["session-query-sqlite<br/>@berry-ai/harness-session-query-sqlite"]
   cfg --> plugin_dsh_base_session_query_sqlite
-  plugin_dsh_base_working_directory["working-directory<br/>@deepseek-ai/dsh-working-directory"]
+  plugin_dsh_base_working_directory["working-directory<br/>@berry-ai/harness-working-directory"]
   cfg --> plugin_dsh_base_working_directory
-  plugin_dsh_base_tool_working_directory["tool-working-directory<br/>@deepseek-ai/dsh-tool-working-directory"]
+  plugin_dsh_base_tool_working_directory["tool-working-directory<br/>@berry-ai/harness-tool-working-directory"]
   cfg --> plugin_dsh_base_tool_working_directory
-  plugin_dsh_base_session_projection["session-projection<br/>@deepseek-ai/dsh-session-projection"]
+  plugin_dsh_base_session_projection["session-projection<br/>@berry-ai/harness-session-projection"]
   cfg --> plugin_dsh_base_session_projection
   plugin_dsh_base_storage["storage<br/>@berry-ai/harness-storage"]
   cfg --> plugin_dsh_base_storage
@@ -76,11 +76,11 @@ flowchart LR
   cfg --> plugin_dsh_base_storage_json
   plugin_dsh_base_storage_domain["storage-domain<br/>@berry-ai/harness-storage-domain"]
   cfg --> plugin_dsh_base_storage_domain
-  plugin_dsh_base_session_projection_cache["session-projection-cache<br/>@deepseek-ai/dsh-session-projection-cache"]
+  plugin_dsh_base_session_projection_cache["session-projection-cache<br/>@berry-ai/harness-session-projection-cache"]
   cfg --> plugin_dsh_base_session_projection_cache
   plugin_dsh_base_otel["otel<br/>@berry-ai/harness-otel"]
   cfg --> plugin_dsh_base_otel
-  plugin_dsh_base_session_telemetry_otel["session-telemetry-otel<br/>@deepseek-ai/dsh-session-telemetry-otel"]
+  plugin_dsh_base_session_telemetry_otel["session-telemetry-otel<br/>@berry-ai/harness-session-telemetry-otel"]
   cfg --> plugin_dsh_base_session_telemetry_otel
   plugin_dsh_base_subprocess["subprocess<br/>@berry-ai/harness-subprocess-local"]
   cfg --> plugin_dsh_base_subprocess
@@ -162,7 +162,7 @@ flowchart LR
   cfg --> plugin_dsh_base_spill_local
   plugin_dsh_base_spill_policy["spill-policy<br/>@berry-ai/harness-spill-policy"]
   cfg --> plugin_dsh_base_spill_policy
-  plugin_dsh_base_session_checkpoint_policy["session-checkpoint-policy<br/>@deepseek-ai/dsh-session-checkpoint-policy"]
+  plugin_dsh_base_session_checkpoint_policy["session-checkpoint-policy<br/>@berry-ai/harness-session-checkpoint-policy"]
   cfg --> plugin_dsh_base_session_checkpoint_policy
   plugin_dsh_base_tool_result_pruner["tool-result-pruner<br/>@berry-ai/harness-compaction-tool-result-pruner"]
   cfg --> plugin_dsh_base_tool_result_pruner
@@ -207,12 +207,12 @@ flowchart LR
 | `llm` | `@berry-ai/harness-llm` |
 | `deepseek-llm-api-extensions` | `@berry-ai/harness-deepseek-llm-api-extensions` |
 | `session` | `@berry-ai/harness-session` |
-| `session-log-deepseek` | `@deepseek-ai/dsh-session-log-deepseek` |
+| `session-log-deepseek` | `@berry-ai/harness-session-log-deepseek` |
 | `typert` | `@berry-ai/harness-typert-registry` |
 | `typert-loader` | `@berry-ai/harness-typert-loader` |
 | `typert-gateway` | `@deepseek-ai/dsh-api-gateway` |
-| `session-title` | `@deepseek-ai/dsh-session-title` |
-| `session-title-llm` | `@deepseek-ai/dsh-session-title-first-prompt-llm` |
+| `session-title` | `@berry-ai/harness-session-title` |
+| `session-title-llm` | `@berry-ai/harness-session-title-first-prompt-llm` |
 | `user-questions` | `@berry-ai/harness-user-questions` |
 | `agent` | `@berry-ai/harness-agent` |
 | `plugin-package-inventory-deepseek` | `@berry-ai/harness-plugin-package-inventory-deepseek` |
@@ -225,18 +225,18 @@ flowchart LR
 | `deepseek-account` | `@berry-ai/harness-deepseek-account-platform` |
 | `credentials` | `@berry-ai/harness-credentials-local` |
 | `llm-pi-ai` | `@berry-ai/harness-llm-pi-ai` |
-| `session-persistence-jsonl` | `@deepseek-ai/dsh-session-persistence-jsonl` |
+| `session-persistence-jsonl` | `@berry-ai/harness-session-persistence-jsonl` |
 | `attachment-local` | `@berry-ai/harness-attachment-local` |
 | `session-query-sqlite` | `@berry-ai/harness-session-query-sqlite` |
-| `working-directory` | `@deepseek-ai/dsh-working-directory` |
-| `tool-working-directory` | `@deepseek-ai/dsh-tool-working-directory` |
-| `session-projection` | `@deepseek-ai/dsh-session-projection` |
+| `working-directory` | `@berry-ai/harness-working-directory` |
+| `tool-working-directory` | `@berry-ai/harness-tool-working-directory` |
+| `session-projection` | `@berry-ai/harness-session-projection` |
 | `storage` | `@berry-ai/harness-storage` |
 | `storage-json` | `@berry-ai/harness-storage-json` |
 | `storage-domain` | `@berry-ai/harness-storage-domain` |
-| `session-projection-cache` | `@deepseek-ai/dsh-session-projection-cache` |
+| `session-projection-cache` | `@berry-ai/harness-session-projection-cache` |
 | `otel` | `@berry-ai/harness-otel` |
-| `session-telemetry-otel` | `@deepseek-ai/dsh-session-telemetry-otel` |
+| `session-telemetry-otel` | `@berry-ai/harness-session-telemetry-otel` |
 | `subprocess` | `@berry-ai/harness-subprocess-local` |
 | `sandbox` | `@berry-ai/harness-sandbox-local` |
 | `sandbox-policy` | `@berry-ai/harness-sandbox-policy` |
@@ -277,7 +277,7 @@ flowchart LR
 | `timeout-policy` | `@berry-ai/harness-tool-call-timeout-policy` |
 | `spill-local` | `@berry-ai/harness-spill-local` |
 | `spill-policy` | `@berry-ai/harness-spill-policy` |
-| `session-checkpoint-policy` | `@deepseek-ai/dsh-session-checkpoint-policy` |
+| `session-checkpoint-policy` | `@berry-ai/harness-session-checkpoint-policy` |
 | `tool-result-pruner` | `@berry-ai/harness-compaction-tool-result-pruner` |
 | `image-offload` | `@berry-ai/harness-compaction-image-offload` |
 | `tool-todo` | `@berry-ai/harness-tool-todo` |

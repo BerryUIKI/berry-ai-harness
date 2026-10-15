@@ -4,7 +4,7 @@
  * @module @berry-ai/harness-terminal-bash
  */
 
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@berry-ai/harness-agent'
 import type { Session, SessionEvent } from '@berry-ai/harness-session'
@@ -13,7 +13,7 @@ import type { TerminalBackend, TerminalBackendSpawnSpec, TerminalSendOperation }
 import type { SubprocessTerminalHandle, SubprocessTerminalSpawnSpec } from '@berry-ai/harness-subprocess'
 import type { SandboxExecutionPolicy } from '@berry-ai/harness-sandbox'
 import type {} from '@berry-ai/harness-sandbox-policy'
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import { ENCODING_PREAMBLE } from '@berry-ai/harness-pwsh-local'
 import { type Config, type ResolvedConfig, resolveConfig, type ShellDialect, validateConfig } from './config.ts'
 import { LocalPtySession } from './session.ts'

@@ -11,7 +11,7 @@ import type { WorkflowMeta, WorkflowResult, WorkflowResultInfo, WorkflowRun, Wor
 import * as ptcEngineModule from '../src/index.ts'
 import PtcWorkflowEngine, { type Config } from '../src/index.ts'
 import { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 
 import { fakeParent, mountPtcRuntime } from './setup.ts'
 

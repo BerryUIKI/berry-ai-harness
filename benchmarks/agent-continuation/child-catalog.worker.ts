@@ -5,8 +5,8 @@ import { Context } from '@deepseek-ai/cordis'
 import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import type { SessionEvent } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SessionQueryEngine from '@berry-ai/harness-session-query'
 import SubagentRuntime, { SUBAGENT_DESCRIPTOR_VERSION } from '@berry-ai/harness-subagent'
 import { assertBuiltBenchmarkRuntime } from '../support/built-worker.ts'
@@ -102,7 +102,7 @@ async function run(root: string, mode: string): Promise<CatalogReport | { seeded
 
 assertBuiltBenchmarkRuntime(import.meta.url, Object.fromEntries([
   '@berry-ai/harness-subagent', '@berry-ai/harness-session-query',
-  '@deepseek-ai/dsh-session-persistence-jsonl',
+  '@berry-ai/harness-session-persistence-jsonl',
 ].map(name => [name, import.meta.resolve(name)])))
 const [root, mode] = process.argv.slice(2)
 if (root === undefined || (mode !== 'seed' && mode !== 'catalog')) {

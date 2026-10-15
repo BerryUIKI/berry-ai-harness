@@ -8,15 +8,15 @@ import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import type { SessionHeader } from '@berry-ai/harness-session'
-import type { SessionPersistenceSnapshot } from '@deepseek-ai/dsh-session-persistence'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import type { SessionPersistenceSnapshot } from '@berry-ai/harness-session-persistence'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SessionProjectionCache, {
   checkpointRecord,
   projectionCacheDomainSpec,
   type CheckpointRecord,
-} from '@deepseek-ai/dsh-session-projection-cache'
-import { titleProjectionDefinition } from '@deepseek-ai/dsh-session-title'
+} from '@berry-ai/harness-session-projection-cache'
+import { titleProjectionDefinition } from '@berry-ai/harness-session-title'
 import Storage from '@berry-ai/harness-storage'
 import * as StorageDomain from '@berry-ai/harness-storage-domain'
 import * as StorageJson from '@berry-ai/harness-storage-json'

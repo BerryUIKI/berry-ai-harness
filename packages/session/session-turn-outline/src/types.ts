@@ -4,7 +4,7 @@
  * (zod, the projection definition). Host consumers import `./types`; client
  * aggregates import `./client`, which re-exports this module.
  *
- * @module @deepseek-ai/dsh-session-turn-outline/types
+ * @module @berry-ai/harness-session-turn-outline/types
  */
 
 import type { SessionSeq } from '@berry-ai/harness-session/types'
@@ -37,7 +37,7 @@ export interface TurnOutlineState {
   readonly draft: string
 }
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     /** Whole-log turn outline fold state (entries plus the open turn's response draft). */
     turnOutline: TurnOutlineState

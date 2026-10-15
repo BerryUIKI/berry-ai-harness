@@ -4,7 +4,7 @@ import type { Scoped } from '@berry-ai/harness-scope'
 import type { Agent } from '@berry-ai/harness-agent/types'
 import type { ToolCallId } from '@berry-ai/harness-llm/brand'
 import type {} from '@berry-ai/harness-session/types'
-import type {} from '@deepseek-ai/dsh-session-projection/types'
+import type {} from '@berry-ai/harness-session-projection/types'
 
 /** One selectable answer offered to the user. */
 export interface AskUserQuestionOption {
@@ -118,7 +118,7 @@ declare module '@berry-ai/harness-llm' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionMap {
     /** Timed questions that remain answerable in this Session, and the ones a late reply settled. */
     userQuestions: UserQuestionProjectionView

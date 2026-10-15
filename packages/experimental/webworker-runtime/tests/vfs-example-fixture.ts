@@ -13,8 +13,8 @@ import {
 } from '@berry-ai/harness-session'
 import {
   eventLines, generationLogFilename, projectKey, toHeaderLine,
-} from '@deepseek-ai/dsh-session-persistence-jsonl/src/format.ts'
-import { projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
+} from '@berry-ai/harness-session-persistence-jsonl/src/format.ts'
+import { projectionCacheDomainSpec } from '@berry-ai/harness-session-projection-cache'
 import { scheduleDomain } from '@berry-ai/harness-schedule'
 import { snapshotSubagentDescriptor, SUBAGENT_DESCRIPTOR_VERSION } from '@berry-ai/harness-subagent'
 

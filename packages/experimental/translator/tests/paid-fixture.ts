@@ -3,13 +3,13 @@ import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
 import { boot } from '@berry-ai/harness-app-boot'
 import LlmRuntime from '@berry-ai/harness-llm'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionSeq, type Session, type SessionEvent, type SessionHeader } from '@berry-ai/harness-session'
-import JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import SqliteSessionQuery from '@berry-ai/harness-session-query-sqlite'
 import * as Official from '@berry-ai/harness-llm-deepseek-api-key'
 import * as Account from '@berry-ai/harness-llm-deepseek-account'
 import type { DeepSeekAccount } from '@berry-ai/harness-deepseek-account'
 import DeepSeekLlmApiExtensionRegistry from '@berry-ai/harness-deepseek-llm-api-extensions'
-import * as SessionLogDeepSeek from '@deepseek-ai/dsh-session-log-deepseek'
+import * as SessionLogDeepSeek from '@berry-ai/harness-session-log-deepseek'
 import { createLaunchEnvironmentSnapshot } from '@berry-ai/harness-launch-environment'
 import { once } from 'node:events'
 import { createServer, type ServerResponse } from 'node:http'
@@ -121,7 +121,7 @@ export async function paidFixture(cleanups: Array<() => Promise<void>>, options:
   const rows = () => [
     { id: 'llm', name: '@berry-ai/harness-llm' },
     { id: 'session', name: '@berry-ai/harness-session' },
-    { id: 'storage', name: '@deepseek-ai/dsh-session-persistence-jsonl', config: { root: storedRoot, compression: 'none' } },
+    { id: 'storage', name: '@berry-ai/harness-session-persistence-jsonl', config: { root: storedRoot, compression: 'none' } },
     { id: 'official-custom-id', name: options.officialName ?? '@berry-ai/harness-llm-deepseek-api-key', disabled: !withNativeOwners, config: {
       baseURL, apiKeyEnv: 'PAID_TRANSLATION_FIXTURE_KEY', models: options.officialModels ?? [{ id: 'deepseek-flash', name: 'Flash version-independent name' }],
     } },
@@ -134,17 +134,17 @@ export async function paidFixture(cleanups: Array<() => Promise<void>>, options:
     ] : [],
     ...options.withSessionLog === true ? [
       { id: 'deepseek-llm-api-extensions', name: '@berry-ai/harness-deepseek-llm-api-extensions' },
-      { id: 'session-log-deepseek', name: '@deepseek-ai/dsh-session-log-deepseek' },
+      { id: 'session-log-deepseek', name: '@berry-ai/harness-session-log-deepseek' },
     ] : [],
   ]
   await writeFile(configPath, JSON.stringify(rows()))
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-llm', LlmRuntime], ['@berry-ai/harness-session', SessionStore],
-    ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlPersistence], ['@berry-ai/harness-session-query-sqlite', SqliteSessionQuery],
+    ['@berry-ai/harness-session-persistence-jsonl', JsonlPersistence], ['@berry-ai/harness-session-query-sqlite', SqliteSessionQuery],
     [options.officialName ?? '@berry-ai/harness-llm-deepseek-api-key', Official],
     ['@berry-ai/harness-llm-deepseek-account', Account], ['@deepseek-ai/dsh-experimental-translator', Translator],
     ['@berry-ai/harness-deepseek-llm-api-extensions', DeepSeekLlmApiExtensionRegistry],
-    ['@deepseek-ai/dsh-session-log-deepseek', SessionLogDeepSeek],
+    ['@berry-ai/harness-session-log-deepseek', SessionLogDeepSeek],
   ])
   const start = () => boot('paid-translator-composition', configPath, [], (host) => {
     const sourceModules: ModuleLoaderV2 = {

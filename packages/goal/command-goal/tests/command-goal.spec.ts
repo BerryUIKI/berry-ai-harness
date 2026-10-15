@@ -7,7 +7,7 @@ import CommandRuntime from '@berry-ai/harness-commands'
 import GoalService from '@berry-ai/harness-goal'
 import type { GoalRef } from '@berry-ai/harness-goal'
 import SessionStore, { Session, SessionId, type SessionEvent } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import * as commandGoal from '@berry-ai/harness-command-goal'
 import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
 

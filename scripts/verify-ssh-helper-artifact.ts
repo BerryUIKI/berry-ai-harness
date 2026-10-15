@@ -83,7 +83,7 @@ export async function runArtifactDriver(config: string, report: string, sandbox:
  */
 export function artifactComposition(connection: { id: string; name: string; config: object }, workspace: string): string {
   const rows = [
-    { id: 'projections', name: '@deepseek-ai/dsh-session-projection' },
+    { id: 'projections', name: '@berry-ai/harness-session-projection' },
     { id: 'policy', name: '@berry-ai/harness-sandbox-policy', config: { mode: 'workspace-write', workspaceRoot: workspace } },
     connection,
     { id: 'fs', name: '@berry-ai/harness-fs-ssh' },

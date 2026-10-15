@@ -10,7 +10,7 @@ import AgentRegistry from '@berry-ai/harness-agent'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionSeq } from '@berry-ai/harness-session'
 import type { SessionHeader, SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import {
   SessionQueryEngine,
   SessionQueryError,

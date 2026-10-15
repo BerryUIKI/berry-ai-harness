@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-session-title-llm",
+  "name": "@berry-ai/harness-session-title-llm",
   "description": "Shared LLM generation policy for DeepSeek Harness session-title providers",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -30,7 +30,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-title": "workspace:*",
+    "@berry-ai/harness-session-title": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*"
   },
   "dependencies": {
@@ -41,7 +41,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-title": "workspace:*",
+    "@berry-ai/harness-session-title": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*"
   }
 }

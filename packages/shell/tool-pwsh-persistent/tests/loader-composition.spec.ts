@@ -11,7 +11,7 @@ import Include from '@deepseek-ai/cordis-plugin-include'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import { SESSION_FORMAT_VERSION, Session, SessionId } from '@berry-ai/harness-session'
 import AgentRegistry from '@berry-ai/harness-agent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { Agent } from '@berry-ai/harness-agent'
 import TerminalSessionService from '@berry-ai/harness-terminal'
 import type { TerminalWaitReason } from '@berry-ai/harness-terminal'
@@ -112,7 +112,7 @@ describe.skipIf(!hasPwsh)('persistent pwsh through a real cordis.yml Loader comp
       "- name: '@berry-ai/harness-tools'",
       "- name: '@berry-ai/harness-terminal'",
       "- name: '@deepseek-ai/dsh-test-sandbox'",
-      "- name: '@deepseek-ai/dsh-session-projection'",
+      "- name: '@berry-ai/harness-session-projection'",
       "- name: '@berry-ai/harness-sandbox-policy'",
       '  config:',
       '    mode: danger-full-access',
@@ -159,7 +159,7 @@ describe.skipIf(!hasPwsh)('persistent pwsh through a real cordis.yml Loader comp
       ['@berry-ai/harness-tools', ToolRegistry],
       ['@berry-ai/harness-terminal', TerminalSessionService],
       ['@deepseek-ai/dsh-test-sandbox', PassthroughSandbox],
-      ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+      ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
       ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
       ['@berry-ai/harness-subprocess-local', LocalSubprocessService],
       ['@berry-ai/harness-terminal-bash', TerminalBash],

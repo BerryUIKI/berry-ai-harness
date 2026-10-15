@@ -69,8 +69,8 @@ import {
   parseSessionLog,
   prepareSessionSnapshotFixtureForComparison,
 } from '@deepseek-ai/dsh-llm-replay'
-import type { SessionFormatEvent } from '@deepseek-ai/dsh-session-format'
-import { sessionFormatCatalog } from '@deepseek-ai/dsh-session-format-catalog'
+import type { SessionFormatEvent } from '@berry-ai/harness-session-format'
+import { sessionFormatCatalog } from '@berry-ai/harness-session-format-catalog'
 import {
   SESSION_FORMAT_VERSION,
   SessionId,
@@ -78,7 +78,7 @@ import {
   type SessionEvent,
   type SessionHeader,
 } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 // Empty type imports carry the webServer/agents/sessionPersistence Context merges.
 import type {} from '@deepseek-ai/dsh-host-webserver'
 import type {} from '@berry-ai/harness-agent'

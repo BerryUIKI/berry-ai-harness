@@ -15,8 +15,8 @@ import * as toolsPlugin from '@berry-ai/harness-tools'
 import * as fsPlugin from '@berry-ai/harness-fs-local'
 import * as toolFsPlugin from '@berry-ai/harness-tool-fs'
 import * as sessionPlugin from '@berry-ai/harness-session'
-import * as sessionProjectionPlugin from '@deepseek-ai/dsh-session-projection'
-import * as workingDirectoryPlugin from '@deepseek-ai/dsh-working-directory'
+import * as sessionProjectionPlugin from '@berry-ai/harness-session-projection'
+import * as workingDirectoryPlugin from '@berry-ai/harness-working-directory'
 import { Session, SessionId } from '@berry-ai/harness-session'
 import * as queryPlugin from '@berry-ai/harness-session-query-sqlite'
 import * as referencePlugin from '@berry-ai/harness-session-reference'
@@ -47,8 +47,8 @@ describe('session-reference real Loader composition', () => {
     ctx.loader.builtins.include = Include
     const modules = new Map<string, unknown>([
       ['@berry-ai/harness-session', sessionPlugin],
-      ['@deepseek-ai/dsh-session-projection', sessionProjectionPlugin],
-      ['@deepseek-ai/dsh-working-directory', workingDirectoryPlugin],
+      ['@berry-ai/harness-session-projection', sessionProjectionPlugin],
+      ['@berry-ai/harness-working-directory', workingDirectoryPlugin],
       ['@berry-ai/harness-system-prompt', systemPromptPlugin],
       ['@berry-ai/harness-tools', toolsPlugin],
       ['@berry-ai/harness-fs-local', fsPlugin],

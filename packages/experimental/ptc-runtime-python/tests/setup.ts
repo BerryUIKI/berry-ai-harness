@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import Sandbox from '@berry-ai/harness-sandbox-local'
 import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
-import SessionProjections from '@deepseek-ai/dsh-session-projection'
+import SessionProjections from '@berry-ai/harness-session-projection'
 import { onTestFinished } from 'vitest'
 import type { SandboxMode } from '@berry-ai/harness-sandbox'
 

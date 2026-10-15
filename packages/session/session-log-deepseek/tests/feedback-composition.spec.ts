@@ -7,7 +7,7 @@ import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import MessageFeedback from '@berry-ai/harness-message-feedback'
 import { recordFeedback } from '@berry-ai/harness-command-feedback'
 import LlmRuntime, { createAssistantMessage, createUserMessage } from '@berry-ai/harness-llm'
@@ -41,23 +41,23 @@ async function boot(
   server = await startMockLlmServer(mock)
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-session', SessionStore],
-    ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlSessionPersistence],
+    ['@berry-ai/harness-session-persistence-jsonl', JsonlSessionPersistence],
     ['@berry-ai/harness-message-feedback', MessageFeedback],
     ['@berry-ai/harness-llm', LlmRuntime],
     ['@berry-ai/harness-llm-deepseek-api-key', LlmDeepSeek],
     ['@berry-ai/harness-deepseek-llm-api-extensions', DeepSeekLlmApiExtensions],
-    ['@deepseek-ai/dsh-session-log-deepseek', SessionLogDeepSeek],
+    ['@berry-ai/harness-session-log-deepseek', SessionLogDeepSeek],
   ])
   const config = join(root, 'cordis.yml')
   await writeFile(config, JSON.stringify([...modules.keys()].map(name => ({
     name,
-    ...name === '@deepseek-ai/dsh-session-persistence-jsonl'
+    ...name === '@berry-ai/harness-session-persistence-jsonl'
       ? { config: { root: join(root!, 'sessions'), compression: 'none' } }
       : name === '@berry-ai/harness-message-feedback'
         ? { config: { maxNoteBytes: 1024 } }
         : name === '@berry-ai/harness-llm-deepseek-api-key'
           ? { config: { baseURL: server!.baseURL } }
-          : name === '@deepseek-ai/dsh-session-log-deepseek'
+          : name === '@berry-ai/harness-session-log-deepseek'
             ? { config: sessionLog }
             : {},
   }))))
@@ -182,7 +182,7 @@ it('changes API log upload on the next request without replacing the plugin fibe
   const { ctx, server } = await boot({ enabled: true }, { sequence: ['success'], repeatLast: true })
   const session = ctx.sessions.create(SessionId('live-upload-setting'))
   session.append('user/message', createUserMessage({ content: [{ type: 'text', text: 'Hello' }], source: { kind: 'user' } }), { surfaceOp: 'append' })
-  const entry = [...ctx.loader.entries()].find(entry => entry.options.name === '@deepseek-ai/dsh-session-log-deepseek')!
+  const entry = [...ctx.loader.entries()].find(entry => entry.options.name === '@berry-ai/harness-session-log-deepseek')!
   const fiber = entry.fiber
   const request = async () => {
     const chunks = []

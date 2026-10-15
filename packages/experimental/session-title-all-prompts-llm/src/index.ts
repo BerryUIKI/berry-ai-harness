@@ -9,7 +9,7 @@ import {
   normalizeSessionTitle,
   SessionTitleProviderId,
   type SessionTitleUserMessage,
-} from '@deepseek-ai/dsh-session-title'
+} from '@berry-ai/harness-session-title'
 import {
   executeSessionTitleLlm,
   resolveSessionTitleLlmConfig,
@@ -17,7 +17,7 @@ import {
   type ResolvedSessionTitleLlmConfig,
   type SessionTitleLlmConfig,
   type SessionTitleLlmResponse,
-} from '@deepseek-ai/dsh-session-title-llm'
+} from '@berry-ai/harness-session-title-llm'
 /* jscpd:ignore-end */
 
 export const name = 'session-title-all-prompts-llm'

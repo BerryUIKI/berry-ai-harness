@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import type { SessionFormatEvent, SessionFormatHeader, SessionFormatJsonObject } from '@deepseek-ai/dsh-session-format'
-import { SessionFormatEventCollector, SessionFormatUnsupportedMigrationError } from '@deepseek-ai/dsh-session-format'
+import type { SessionFormatEvent, SessionFormatHeader, SessionFormatJsonObject } from '@berry-ai/harness-session-format'
+import { SessionFormatEventCollector, SessionFormatUnsupportedMigrationError } from '@berry-ai/harness-session-format'
 import { createToolResultMessage, ToolCallId } from '@berry-ai/harness-llm'
 import { createSessionFormatV3ToV4, releasedV4SessionFormatCodec, restoreReleasedV4Artifact, sessionFormatV3ToV4 } from '../src/index.ts'
 import { assertV4ToolResultMessage, liftToolResult } from '../src/tool-role.ts'

@@ -9,7 +9,7 @@ import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-test
 import { ToolCallId, createUserMessage } from '@berry-ai/harness-llm'
 import { scopeOf } from '@berry-ai/harness-scope'
 import { SessionId, SessionLogOffset } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import SessionQueryEngine from '@berry-ai/harness-session-query'
 import SubagentService from '@berry-ai/harness-subagent'
 import * as SubagentFork from '@berry-ai/harness-subagent-fork-in-process'

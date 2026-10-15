@@ -1,6 +1,6 @@
 /**
  * Log-backed session title service, deterministic fallback, and provider contract.
- * @module @deepseek-ai/dsh-session-title
+ * @module @berry-ai/harness-session-title
  */
 
 import { Context, FiberState, Service, type Fiber } from '@deepseek-ai/cordis'
@@ -16,8 +16,8 @@ import type {
   SessionEvent,
 } from '@berry-ai/harness-session'
 import { SessionSeq } from '@berry-ai/harness-session'
-import type {} from '@deepseek-ai/dsh-session-projection'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
+import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
 import type {} from '@berry-ai/harness-agent'
 export type {
   SessionTitleEventData,

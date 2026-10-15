@@ -3,7 +3,7 @@
  * preparation, input/token/time bounds, cancellation, exact auxiliary request
  * logging, and stream assembly. Title wording, length targets, reasoning
  * selection, and output interpretation belong to each provider.
- * @module @deepseek-ai/dsh-session-title-llm
+ * @module @berry-ai/harness-session-title-llm
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -27,11 +27,11 @@ import type {
 import { deadline, MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import { assertNever, deepFreeze } from '@berry-ai/harness-util-values'
 import type { SessionSeq } from '@berry-ai/harness-session'
-import { SessionTitleProviderId } from '@deepseek-ai/dsh-session-title'
+import { SessionTitleProviderId } from '@berry-ai/harness-session-title'
 import type {
   SessionTitleModelIdentity,
   SessionTitleProviderRequest,
-} from '@deepseek-ai/dsh-session-title'
+} from '@berry-ai/harness-session-title'
 
 /** Exact model-visible request recorded before one auxiliary title dispatch. */
 export interface SessionTitleLlmRequestEventData {

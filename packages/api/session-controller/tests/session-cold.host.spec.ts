@@ -23,7 +23,7 @@ import {
   SessionPersistenceRevision,
   type SessionPersistenceSnapshot,
   type SessionHandle, SessionAccess,
-} from '@deepseek-ai/dsh-session-persistence'
+} from '@berry-ai/harness-session-persistence'
 import {
   createSessionTestRemote,
   testSessionPersistence,

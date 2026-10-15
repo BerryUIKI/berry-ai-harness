@@ -10,7 +10,7 @@
  * @module @berry-ai/harness-tool-lsp
  */
 
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { defineTool } from '@berry-ai/harness-tools'

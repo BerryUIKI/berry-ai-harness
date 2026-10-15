@@ -3,7 +3,7 @@ description: "Whole-log conversation counts and wall times for clients and maint
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-stats
+# @berry-ai/harness-session-stats
 
 English | [中文](README.zh.md)
 
@@ -31,8 +31,8 @@ Mount the plugin beside the session store and the projection registry when clien
 
 ```yaml
 - name: '@berry-ai/harness-session'
-- name: '@deepseek-ai/dsh-session-projection'
-- name: '@deepseek-ai/dsh-session-stats'
+- name: '@berry-ai/harness-session-projection'
+- name: '@berry-ai/harness-session-stats'
 ```
 
 ### What the figures mean
