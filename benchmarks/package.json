@@ -22,7 +22,7 @@
     "@berry-ai/harness-deque": "workspace:*",
     "@berry-ai/harness-lazy-require": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-sdk-client": "workspace:*",
+    "@berry-ai/harness-sdk-client": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-format": "workspace:*",
     "@berry-ai/harness-session-format-catalog": "workspace:*",

@@ -1242,7 +1242,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       const rows = yaml.load(stdout, { schema: entryListSchema }) as Array<{ id?: string; name?: string }>
       expect(rows.map(row => [row.id, row.name])).toEqual([
         ['sdk-app-startup', '@deepseek-ai/dsh-sdk-app'],
-        ['sdk-jsonrpc-server', '@deepseek-ai/dsh-sdk-jsonrpc-server'],
+        ['sdk-jsonrpc-server', '@berry-ai/harness-sdk-jsonrpc-server'],
         ['deepseek-llm-api-extensions', '@berry-ai/harness-deepseek-llm-api-extensions'],
         ['session-log-deepseek', '@berry-ai/harness-session-log-deepseek'],
         ['plugin-package-inventory-deepseek', '@berry-ai/harness-plugin-package-inventory-deepseek'],

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-sdk-jsonrpc-server",
+  "name": "@berry-ai/harness-sdk-jsonrpc-server",
   "description": "Stdio JSON-RPC server plugin for out-of-process DeepSeek Harness SDK clients",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -37,7 +37,7 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
-    "@deepseek-ai/dsh-sdk-protocol": "workspace:*",
+    "@berry-ai/harness-sdk-protocol": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-working-directory": "workspace:*"
@@ -52,7 +52,7 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
-    "@deepseek-ai/dsh-sdk-protocol": "workspace:*",
+    "@berry-ai/harness-sdk-protocol": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
     "@berry-ai/harness-session-projection": "workspace:*",

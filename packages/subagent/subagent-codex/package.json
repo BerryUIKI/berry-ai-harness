@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-sdk-protocol": "workspace:*",
+    "@berry-ai/harness-sdk-protocol": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "@openai/codex": "0.153.4",
     "@berry-ai/harness-tool-subagent": "workspace:*"

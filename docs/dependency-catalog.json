@@ -2617,11 +2617,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-sdk-jsonrpc-server",
+      "name": "@berry-ai/harness-sdk-jsonrpc-server",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-sdk-jsonrpc-server",
+          "location": "node_modules/@berry-ai/harness-sdk-jsonrpc-server",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2641,11 +2641,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-sdk-protocol",
+      "name": "@berry-ai/harness-sdk-protocol",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-sdk-protocol",
+          "location": "node_modules/@berry-ai/harness-sdk-protocol",
           "direct": false,
           "optional": false,
           "peer": true

@@ -10,7 +10,7 @@
 import type { Readable, Writable } from 'node:stream'
 import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { SubagentResult } from '@berry-ai/harness-subagent'
-import { JsonRpcLineTransport } from '@deepseek-ai/dsh-sdk-protocol'
+import { JsonRpcLineTransport } from '@berry-ai/harness-sdk-protocol'
 import type { CodexPermissionMode } from './run.ts'
 
 type JsonObject = Record<string, unknown>

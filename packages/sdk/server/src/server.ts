@@ -2,7 +2,7 @@
  * JSON-RPC methods and notifications for out-of-process harness SDKs.
  * The surrounding context owns plugins, persistence, and configured adapters.
  *
- * @module @deepseek-ai/dsh-sdk-jsonrpc-server/server
+ * @module @berry-ai/harness-sdk-jsonrpc-server/server
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -31,7 +31,7 @@ import type {
   SdkEncodedImageBlock,
   SubagentFinishedNotification,
   SubagentStartedNotification,
-} from '@deepseek-ai/dsh-sdk-protocol'
+} from '@berry-ai/harness-sdk-protocol'
 
 interface SessionRecord {
   handle: AgentHandle

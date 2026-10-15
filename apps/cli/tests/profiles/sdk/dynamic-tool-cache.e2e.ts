@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { TokenUsage } from '@berry-ai/harness-llm'
-import { DeepSeekHarness } from '@deepseek-ai/dsh-sdk-client'
+import { DeepSeekHarness } from '@berry-ai/harness-sdk-client'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import { describe, expect, it, onTestFinished } from 'vitest'
 

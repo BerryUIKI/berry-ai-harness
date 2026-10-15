@@ -3,7 +3,7 @@
  * runtime subprocess across many sessions; `HarnessSession.run` sends a
  * prompt and settles when the whole agent next becomes idle.
  *
- * @module @deepseek-ai/dsh-sdk-client/api
+ * @module @berry-ai/harness-sdk-client/api
  */
 
 import { randomUUID } from 'node:crypto'

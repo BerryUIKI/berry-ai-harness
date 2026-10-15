@@ -20,7 +20,7 @@ import SessionStore, { SessionId, type SessionEvent } from '@berry-ai/harness-se
 import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 import SubagentRuntime, { SubagentRunId, type SubagentStartRequest, type SubagentRun, type SubagentResult, type SubagentRunEndInfo } from '@berry-ai/harness-subagent'
-import type { JsonRpcTransportPeer } from '@deepseek-ai/dsh-sdk-protocol'
+import type { JsonRpcTransportPeer } from '@berry-ai/harness-sdk-protocol'
 import { HarnessSdkJsonRpcServer } from '../src/index.ts'
 
 class FakeTransport implements JsonRpcTransportPeer {
