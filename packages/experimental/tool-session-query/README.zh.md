@@ -3,7 +3,7 @@ description: "面向 agent（智能体）开发者与维护者、经工作区授
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-session-query
+# @berry-ai/harness-tool-session-query
 
 [English](README.md) | 中文
 

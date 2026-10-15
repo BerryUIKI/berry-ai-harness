@@ -7,7 +7,7 @@
  * `turn.complete` on `turn/end`, `session.end` on `agent/disposed`, and
  * `command.run` from the commands a mod registers. The `$` a hook receives is
  * served by {@link createHostOps} over the composed harness services.
- * @module @deepseek-ai/dsh-experimental-claude-code-mods
+ * @module @berry-ai/harness-experimental-claude-code-mods
  */
 
 import type { Context } from '@deepseek-ai/cordis'

@@ -31,11 +31,11 @@ function bundle(name: string): { dir: string; patches: ReturnType<typeof loadOve
 }
 
 const lightweight = [
-  '@deepseek-ai/dsh-experimental-session-search',
-  '@deepseek-ai/dsh-experimental-ralph-bundle',
-  '@deepseek-ai/dsh-experimental-terminal-bundle',
-  '@deepseek-ai/dsh-experimental-badge-skill-bundle',
-  '@deepseek-ai/dsh-experimental-session-titles-bundle',
+  '@berry-ai/harness-experimental-session-search',
+  '@berry-ai/harness-experimental-ralph-bundle',
+  '@berry-ai/harness-experimental-terminal-bundle',
+  '@berry-ai/harness-experimental-badge-skill-bundle',
+  '@berry-ai/harness-experimental-session-titles-bundle',
 ]
 
 function presetRows(entries: EntryOptions[], id: string): EntryOptions[] {
@@ -59,7 +59,7 @@ function profileLayers(surface: 'web' | 'desktop'): ReturnType<typeof loadOverla
 }
 
 describe.each(['web', 'desktop'] as const)('%s optional bundle overrides', (surface) => {
-  const selectedNames = ['@deepseek-ai/dsh-experimental-badge-skill-bundle', '@deepseek-ai/dsh-experimental-ralph-bundle']
+  const selectedNames = ['@berry-ai/harness-experimental-badge-skill-bundle', '@berry-ai/harness-experimental-ralph-bundle']
 
   it('keeps established selectors for later configuration and disabled overrides', () => {
     const shipped = profileLayers(surface)
@@ -70,9 +70,9 @@ describe.each(['web', 'desktop'] as const)('%s optional bundle overrides', (surf
       { id: 'tool-ralph', config, disabled: true },
     ]], warning => warnings.push(warning))
     expect(warnings).toEqual([])
-    expect(entries.find(row => row.id === 'skill-badge')).toMatchObject({ name: '@deepseek-ai/dsh-skill-badge', disabled: true })
+    expect(entries.find(row => row.id === 'skill-badge')).toMatchObject({ name: '@berry-ai/harness-skill-badge', disabled: true })
     expect(flattenRows(entries).find(row => row.id === 'tool-ralph'))
-      .toMatchObject({ name: '@deepseek-ai/dsh-tool-ralph', config, disabled: true })
+      .toMatchObject({ name: '@berry-ai/harness-tool-ralph', config, disabled: true })
     expect(entries.find(row => row.id === 'optional-ralph')?.isolate).toEqual({ workflowEngine: true })
   })
 
@@ -98,7 +98,7 @@ describe('optional bundles', () => {
   })
 
   it('keeps the Inspector out of the default plugin list', () => {
-    expect(OPTIONAL_BUNDLES).not.toContain('@deepseek-ai/dsh-experimental-inspector')
+    expect(OPTIONAL_BUNDLES).not.toContain('@berry-ai/harness-experimental-inspector')
   })
 
   it.each(OPTIONAL_BUNDLES)('%s composes over the Web profile without a skipped patch', (name) => {
@@ -130,11 +130,11 @@ describe('optional bundles', () => {
   })
 
   it('offers Git Worktrees as one disabled bundle with its runtime and tool', () => {
-    const name = '@deepseek-ai/dsh-experimental-tool-worktree'
+    const name = '@berry-ai/harness-experimental-tool-worktree'
     expect(OPTIONAL_BUNDLES).toContain(name)
     for (const template of Object.values(PROFILE_TEMPLATES)) expect(template.bundles).not.toContain(name)
     const rows = composeEntries([...shipped, bundle(name).patches])
-    for (const moduleName of [name, '@deepseek-ai/dsh-experimental-worktree']) {
+    for (const moduleName of [name, '@berry-ai/harness-experimental-worktree']) {
       expect(composeEntries(shipped).some(row => row.name === moduleName)).toBe(false)
       expect(rows.filter(row => row.name === moduleName && row.disabled !== true)).toHaveLength(1)
     }
@@ -168,8 +168,8 @@ describe('optional bundles', () => {
     const composed = composeEntries([...shipped, ...lightweight.map(name => bundle(name).patches)])
     const names = flattenRows(composed).map(row => row.name)
     for (const name of [
-      '@deepseek-ai/dsh-tool-session-query',
-      '@deepseek-ai/dsh-tool-ralph', '@deepseek-ai/dsh-tool-terminal',
+      '@berry-ai/harness-tool-session-query',
+      '@berry-ai/harness-tool-ralph', '@berry-ai/harness-tool-terminal',
     ]) expect(names).toContain(name)
     expect(composed.find(row => row.id === 'optional-ralph')?.isolate).toEqual({ workflowEngine: true })
     expect(composed.find(row => row.id === 'optional-persistent-terminals')?.isolate).toEqual({ terminals: true })
@@ -177,12 +177,12 @@ describe('optional bundles', () => {
     expect(search?.isolate).toEqual({ sessionQuery: true })
     expect(search?.config).toEqual([
       { id: 'optional-session-query-sqlite', name: '@berry-ai/harness-session-query-sqlite', config: { path: ':memory:', openAt: 'first-search' } },
-      { id: 'optional-tool-session-query', name: '@deepseek-ai/dsh-tool-session-query' },
+      { id: 'optional-tool-session-query', name: '@berry-ai/harness-tool-session-query' },
     ])
     expect(composed.find(row => row.id === 'session-query-sqlite')?.config).toEqual({ path: ':memory:', openAt: 'never' })
     expect(composed.find(row => row.id === 'session-title-llm')?.disabled).toBe(true)
     expect(composed.find(row => row.id === 'optional-session-title-all-prompts')?.name)
-      .toBe('@deepseek-ai/dsh-session-title-all-prompts-llm')
+      .toBe('@berry-ai/harness-session-title-all-prompts-llm')
   })
 
   it('delivers the Schedule service and task page without a Host clock row', () => {

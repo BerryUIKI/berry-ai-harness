@@ -5,7 +5,7 @@
  * or command substitution, and no pre-tool approval or rewrite path; only
  * blocking decisions are honored. Shared execution and parsing live in
  * `dsh-hook-protocol`.
- * @module @deepseek-ai/dsh-hooks-codex
+ * @module @berry-ai/harness-hooks-codex
  */
 
 // Each dialect bridge keeps its complete dependency list visible at the entry
@@ -39,7 +39,7 @@ import {
   selectHookGroups,
   type HookOutput,
   type MergedHookOutcome,
-} from '@deepseek-ai/dsh-hook-protocol'
+} from '@berry-ai/harness-hook-protocol'
 import { parseCodexConfig, type CodexHookConfig } from './config.ts'
 /* jscpd:ignore-end */
 

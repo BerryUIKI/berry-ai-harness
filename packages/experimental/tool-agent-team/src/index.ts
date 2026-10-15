@@ -3,8 +3,8 @@
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import type { Agent } from '@berry-ai/harness-agent'
-import { TeamTaskId } from '@deepseek-ai/dsh-experimental-agent-team'
-import type { TeamMemberView } from '@deepseek-ai/dsh-experimental-agent-team'
+import { TeamTaskId } from '@berry-ai/harness-experimental-agent-team'
+import type { TeamMemberView } from '@berry-ai/harness-experimental-agent-team'
 import { defineTool } from '@berry-ai/harness-tools'
 import type { InferValue, ValueSchemaSpec } from '@berry-ai/harness-tools'
 

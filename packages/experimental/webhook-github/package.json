@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-webhook-github",
+  "name": "@berry-ai/harness-webhook-github",
   "description": "Signed GitHub HTTP webhook adapter for the DeepSeek Harness webhook runtime",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -39,7 +39,7 @@
     "@berry-ai/harness-credentials": "workspace:*",
     "@berry-ai/harness-host-webserver": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-webhook": "workspace:*"
+    "@berry-ai/harness-webhook": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-util-values": "workspace:*",
@@ -53,6 +53,6 @@
     "@berry-ai/harness-credentials": "workspace:*",
     "@berry-ai/harness-host-webserver": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-webhook": "workspace:*"
+    "@berry-ai/harness-webhook": "workspace:*"
   }
 }

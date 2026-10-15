@@ -47,7 +47,7 @@ it('loads from cordis.yml, counts the model\'s tool calls, and answers /tally th
     ['@berry-ai/harness-agent', AgentRegistry],
     ['@berry-ai/harness-agent-loop', AgentLoop],
     ['@berry-ai/harness-commands', CommandRuntime],
-    ['@deepseek-ai/dsh-experimental-claude-code-mods', ClaudeCodeMods],
+    ['@berry-ai/harness-experimental-claude-code-mods', ClaudeCodeMods],
   ])
   // A mod is a plugin like any other: here the tutorial mod's `defineMod` wrapper, mounted by file URL after the bridge.
   const firstMod = pathToFileURL(resolve(FIXTURES, 'first-mod.ts')).href

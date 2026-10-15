@@ -119,7 +119,7 @@ export function packageText(
   return {
     title: pkg.meta?.title === undefined ? pkg.name : resolveText(pkg.meta.title),
     description: pkg.meta?.description === undefined ? undefined : resolveText(pkg.meta.description) || undefined,
-    beta: pkg.name.startsWith('@deepseek-ai/dsh-experimental-'),
+    beta: pkg.name.startsWith('@berry-ai/harness-experimental-') || pkg.name.startsWith('@deepseek-ai/dsh-experimental-'),
   }
 }
 

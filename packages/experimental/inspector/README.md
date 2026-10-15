@@ -3,7 +3,7 @@ description: "Experimental Chrome DevTools inspection for Host and browser Clien
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-inspector
+# @berry-ai/harness-experimental-inspector
 
 English | [中文](README.zh.md)
 
@@ -105,7 +105,7 @@ Both plugin faces provide the same service:
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type { InspectorJsonValue } from '@deepseek-ai/dsh-experimental-inspector'
+import type { InspectorJsonValue } from '@berry-ai/harness-experimental-inspector'
 
 declare const ctx: Context
 declare const topic: string

@@ -3,7 +3,7 @@ description: "面向构建或排查实验性 Web 预览运行时的维护者，�
 kind: "package-library"
 ---
 
-# `@deepseek-ai/dsh-experimental-webworker-runtime`
+# `@berry-ai/harness-experimental-webworker-runtime`
 
 [English](README.md) | 中文
 

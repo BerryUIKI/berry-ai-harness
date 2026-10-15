@@ -7,7 +7,7 @@ import { modulePackage } from './runtime-roster.ts'
 import { experimentalRuntimeReferences } from './runtime-roster-isolation.ts'
 import { withDefaultWeb, webGet } from './default-web-process.ts'
 
-const experimentalName = '@deepseek-ai/dsh-experimental-client-ui-agent-team'
+const experimentalName = '@berry-ai/harness-experimental-client-ui-agent-team'
 
 it('boots default Web with the shipped Schedule rows, without experimental modules, time context, or an active built-in Browser', async (test) => {
   await withDefaultWeb(test, async ({ url, request }) => {

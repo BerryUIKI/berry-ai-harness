@@ -1,7 +1,7 @@
 /**
  * Bundled `dsh-badge` skill provider.
  *
- * @module @deepseek-ai/dsh-skill-badge
+ * @module @berry-ai/harness-skill-badge
  */
 
 import { readFile } from 'node:fs/promises'

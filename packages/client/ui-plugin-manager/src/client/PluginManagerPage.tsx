@@ -105,19 +105,19 @@ const BUILTIN_PROFILE_BUNDLES = new Set([
 
 /** Display order on the main and full optional plugin lists; new bundles join the main list. */
 const EXTENSION_BUNDLES = [
-  '@deepseek-ai/dsh-experimental-agent-team-profile',
-  '@deepseek-ai/dsh-experimental-voice-input-bundle',
-  '@deepseek-ai/dsh-experimental-auto-review',
-  '@deepseek-ai/dsh-experimental-inspector-profile',
+  '@berry-ai/harness-experimental-agent-team-profile',
+  '@berry-ai/harness-experimental-voice-input-bundle',
+  '@berry-ai/harness-experimental-auto-review',
+  '@berry-ai/harness-experimental-inspector-profile',
 ]
 const MORE_BUNDLES = [
-  '@deepseek-ai/dsh-experimental-tool-worktree',
-  '@deepseek-ai/dsh-experimental-cot-translation-bundle',
-  '@deepseek-ai/dsh-experimental-terminal-bundle',
-  '@deepseek-ai/dsh-experimental-session-search',
-  '@deepseek-ai/dsh-experimental-session-titles-bundle',
-  '@deepseek-ai/dsh-experimental-badge-skill-bundle',
-  '@deepseek-ai/dsh-experimental-ralph-bundle',
+  '@berry-ai/harness-experimental-tool-worktree',
+  '@berry-ai/harness-experimental-cot-translation-bundle',
+  '@berry-ai/harness-experimental-terminal-bundle',
+  '@berry-ai/harness-experimental-session-search',
+  '@berry-ai/harness-experimental-session-titles-bundle',
+  '@berry-ai/harness-experimental-badge-skill-bundle',
+  '@berry-ai/harness-experimental-ralph-bundle',
   '@berry-ai/harness-subagent-codex',
   '@berry-ai/harness-subagent-claude-code',
 ]

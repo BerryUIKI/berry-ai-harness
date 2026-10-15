@@ -11,7 +11,7 @@ import type {
 import { inspectorId } from '../../shared/identity.ts'
 import type { RuntimeScriptKey } from '../../shared/cdp/ids.ts'
 
-const PACKAGE_ID = '@deepseek-ai/dsh-experimental-inspector'
+const PACKAGE_ID = '@berry-ai/harness-experimental-inspector'
 const CLIENT_SCRIPT_KEY = inspectorId<'RuntimeScriptKey'>('client-bundle', 'scriptKey')
 
 /**

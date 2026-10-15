@@ -1141,11 +1141,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-webhook",
+      "name": "@berry-ai/harness-webhook",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-webhook",
+          "location": "node_modules/@berry-ai/harness-webhook",
           "direct": true,
           "optional": false,
           "peer": false
@@ -1153,11 +1153,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-webhook-github",
+      "name": "@berry-ai/harness-webhook-github",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-webhook-github",
+          "location": "node_modules/@berry-ai/harness-webhook-github",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2257,11 +2257,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-hook-protocol",
+      "name": "@berry-ai/harness-hook-protocol",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-hook-protocol",
+          "location": "node_modules/@berry-ai/harness-hook-protocol",
           "direct": false,
           "optional": false,
           "peer": true
@@ -2269,11 +2269,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-hooks-claude-code",
+      "name": "@berry-ai/harness-hooks-claude-code",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-hooks-claude-code",
+          "location": "node_modules/@berry-ai/harness-hooks-claude-code",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2281,11 +2281,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-hooks-codex",
+      "name": "@berry-ai/harness-hooks-codex",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-hooks-codex",
+          "location": "node_modules/@berry-ai/harness-hooks-codex",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2917,11 +2917,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-skill-badge",
+      "name": "@berry-ai/harness-skill-badge",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-skill-badge",
+          "location": "node_modules/@berry-ai/harness-skill-badge",
           "direct": false,
           "optional": false,
           "peer": false
@@ -3073,11 +3073,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-tool-ralph",
+      "name": "@berry-ai/harness-tool-ralph",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-tool-ralph",
+          "location": "node_modules/@berry-ai/harness-tool-ralph",
           "direct": true,
           "optional": false,
           "peer": false

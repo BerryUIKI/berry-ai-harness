@@ -1,7 +1,7 @@
 /**
  * Tool operation orchestration over session-query service capabilities.
  *
- * @module @deepseek-ai/dsh-tool-session-query/operations
+ * @module @berry-ai/harness-tool-session-query/operations
  */
 
 import type { Context } from '@deepseek-ai/cordis'

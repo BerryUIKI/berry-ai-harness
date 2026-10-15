@@ -24,7 +24,7 @@ export function registerInspectorTab(ctx: Context): void {
   let disposed = false
   ctx.effect(() => () => { disposed = true; activePicker?.dispose() }, 'session-inspector: chat picker')
   const t = ctx.locale.bind(NS)
-  const id = '@deepseek-ai/dsh-experimental-session-inspector'
+  const id = '@berry-ai/harness-experimental-session-inspector'
   ctx.effect(() => ctx.sidebarRightTabs.register({
     id, kind: 'session-inspector-log', title: () => t('tab.title'),
     guide: [{ id: 'open', order: 60, title: () => t('tab.title'), description: () => t('tab.description') }],

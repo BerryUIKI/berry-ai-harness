@@ -13,7 +13,7 @@ export interface GitHubWebhookEvent {
   readonly payload: GitHubJsonObject
 }
 
-declare module '@deepseek-ai/dsh-webhook' {
+declare module '@berry-ai/harness-webhook' {
   interface WebhookEventMap {
     github: GitHubWebhookEvent
   }

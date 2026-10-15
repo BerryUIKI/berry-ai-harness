@@ -3,7 +3,7 @@ description: "通过 Playwright MCP 操作 Chromium，为每个活动 Session �
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-browser-use-playwright-mcp
+# @berry-ai/harness-experimental-browser-use-playwright-mcp
 
 [English](README.md) | 中文
 
@@ -29,7 +29,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-browser-use'
-- name: '@deepseek-ai/dsh-experimental-browser-use-playwright-mcp'
+- name: '@berry-ai/harness-experimental-browser-use-playwright-mcp'
   config:
     mode: launch
     headless: true

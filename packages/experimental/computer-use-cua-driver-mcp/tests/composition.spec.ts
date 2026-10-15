@@ -70,13 +70,13 @@ async function load(mode?: string): Promise<{ ctx: Context; root: string; model:
     ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-attachment-local', LocalAttachmentStore],
     ['@fixture/model', { inject: ['llm'], apply(ctx: Context) { ctx.effect(() => ctx.llm.registerAdapter(['fixture'], model)) } }],
-    ['@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp', Provider],
+    ['@berry-ai/harness-experimental-computer-use-cua-driver-mcp', Provider],
   ])
   const configPath = join(root, 'cordis.yml')
   await writeFile(configPath, JSON.stringify([...modules.keys()].map(name => ({
-    id: name === '@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp' ? 'computer-use-driver' : undefined,
+    id: name === '@berry-ai/harness-experimental-computer-use-cua-driver-mcp' ? 'computer-use-driver' : undefined,
     name,
-    config: name === '@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp'
+    config: name === '@berry-ai/harness-experimental-computer-use-cua-driver-mcp'
       ? {
         command: process.execPath,
         args: [fixture, root, ...(mode === undefined ? [] : [mode])],

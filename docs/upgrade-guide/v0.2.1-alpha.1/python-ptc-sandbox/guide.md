@@ -9,7 +9,7 @@ English | [中文](guide.zh.md)
 
 ## Change
 
-`@deepseek-ai/dsh-experimental-ptc-runtime-python` requires `sandbox` and `sandboxPolicy`. Previously, direct Python file operations ran without confinement and the provider rejected explicit `sandboxPolicy` inputs. It now applies the shared policy to each program and reports confinement in `PtcRunResult.sandbox`. A restricted run fails with `sandbox-unavailable` when confinement cannot be established.
+`@berry-ai/harness-experimental-ptc-runtime-python` requires `sandbox` and `sandboxPolicy`. Previously, direct Python file operations ran without confinement and the provider rejected explicit `sandboxPolicy` inputs. It now applies the shared policy to each program and reports confinement in `PtcRunResult.sandbox`. A restricted run fails with `sandbox-unavailable` when confinement cannot be established.
 
 This affects custom compositions that select the Python runtime. Shipped profiles continue to use the Node runtime. Python remains local to macOS or Linux; its configured resource budgets and unsupported per-call timeout overrides remain unchanged.
 

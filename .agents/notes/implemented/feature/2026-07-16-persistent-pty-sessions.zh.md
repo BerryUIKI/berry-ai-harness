@@ -122,7 +122,7 @@ plugins:
       handoffGraceMs: 500
       timeoutMs: 30000
       disposeGraceMs: 3000
-  '@deepseek-ai/dsh-tool-terminal':
+  '@berry-ai/harness-tool-terminal':
     config:
       enableRunInBackground: true
       maxResultBytes: 262144

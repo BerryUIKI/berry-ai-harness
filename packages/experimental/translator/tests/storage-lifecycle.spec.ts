@@ -27,7 +27,7 @@ describe('translation storage lifecycle', () => {
     expect(b.requests.map(request => request.text)).toEqual(['first'])
     release.resolve(undefined)
     await expect(first).resolves.toBe('Stored translation')
-    await [...b.ctx.loader.entries()].find(entry => entry.options.name === '@deepseek-ai/dsh-experimental-translator')?.fiber?.dispose()
+    await [...b.ctx.loader.entries()].find(entry => entry.options.name === '@berry-ai/harness-experimental-translator')?.fiber?.dispose()
     expect(b.requests.map(request => request.text)).toEqual(['first'])
   })
 
@@ -42,7 +42,7 @@ describe('translation storage lifecycle', () => {
     const translating = b.ctx.translator.translate(b.ctx.translator.resolve({ text: 'source', targetLanguage: 'zh', sessionId: original.id }))
     const rejected = expect(translating).rejects.toThrow('Translator service disposed')
     await entered.promise
-    const fiber = [...b.ctx.loader.entries()].find(entry => entry.options.name === '@deepseek-ai/dsh-experimental-translator')?.fiber
+    const fiber = [...b.ctx.loader.entries()].find(entry => entry.options.name === '@berry-ai/harness-experimental-translator')?.fiber
     if (fiber === undefined) throw new Error('Translator was not mounted')
     let disposed = false
     const disposing = fiber.dispose().then(() => { disposed = true })

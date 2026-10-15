@@ -3,7 +3,7 @@ description: "通过 Stagehand 原生浏览器操作与显式配置的模型推�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-browser-use-stagehand-native
+# @berry-ai/harness-experimental-browser-use-stagehand-native
 
 [English](README.md) | 中文
 
@@ -31,7 +31,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-browser-use'
-- name: '@deepseek-ai/dsh-experimental-browser-use-stagehand-native'
+- name: '@berry-ai/harness-experimental-browser-use-stagehand-native'
   config:
     mode: launch
     headless: true

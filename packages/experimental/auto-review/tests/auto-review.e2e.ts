@@ -26,7 +26,7 @@ import * as ToolFs from '@berry-ai/harness-tool-fs'
 import { RUN_CODE_NAME } from '@berry-ai/harness-tools'
 import ApprovalService, { setApprovalPolicy } from '@berry-ai/harness-user-approval'
 import { expect, it, vi } from 'vitest'
-import * as AutoReview from '@deepseek-ai/dsh-experimental-auto-review'
+import * as AutoReview from '@berry-ai/harness-experimental-auto-review'
 
 const PROVIDER = 'deepseek-official'
 const FLASH = 'deepseek-v4-flash'

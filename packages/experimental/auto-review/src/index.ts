@@ -5,7 +5,7 @@
  * Under the `ask` approval policy a reviewer denial asks the user; under
  * `never` it is final.
  *
- * @module @deepseek-ai/dsh-experimental-auto-review
+ * @module @berry-ai/harness-experimental-auto-review
  */
 
 import type {} from '@berry-ai/harness-working-directory'

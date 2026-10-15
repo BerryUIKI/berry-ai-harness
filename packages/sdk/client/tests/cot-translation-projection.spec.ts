@@ -5,7 +5,7 @@ import { expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import SessionStore, { appendPluginRecord, SessionId, type SessionEvent } from '@berry-ai/harness-session'
 import { ReasoningEffortId, createUserMessage } from '@berry-ai/harness-llm'
-import type {} from '@deepseek-ai/dsh-experimental-translator/types'
+import type {} from '@berry-ai/harness-experimental-translator/types'
 import { createProcessDeepSeekHarness } from '../src/api.ts'
 
 const expectedPath = fileURLToPath(new URL('./expected/cot-translation-projection.json', import.meta.url))

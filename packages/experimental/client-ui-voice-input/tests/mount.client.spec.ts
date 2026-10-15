@@ -4,7 +4,7 @@ import { Recording } from '../src/client/audio.ts'
 import { Context, Service } from '@deepseek-ai/cordis'
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { SpeechProviderId } from '@deepseek-ai/dsh-experimental-speech-to-text/types'
+import type { SpeechProviderId } from '@berry-ai/harness-experimental-speech-to-text/types'
 import { RemoteError, type TypertRemoteContribution } from '@berry-ai/harness-typert-protocol'
 import { expect, it, vi } from 'vitest'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
@@ -14,7 +14,7 @@ import { VoiceInput, type VoiceInputInjected } from '../src/client/VoiceInput.ts
 import { captureFixture } from './audio-fixture.client.ts'
 
 const REMOTE: TypertRemoteContribution = {
-  package: '@deepseek-ai/dsh-experimental-api-speech-to-text',
+  package: '@berry-ai/harness-experimental-api-speech-to-text',
   descriptors: [],
 }
 
@@ -74,7 +74,7 @@ it('withdraws its Remote, localized slot and microphone captures on disposal', a
     const actions = entry!.inject!()
     assertVoiceActions(actions)
     actions.openSettings()
-    expect(b.openBundle).toHaveBeenCalledWith('@deepseek-ai/dsh-experimental-voice-input-bundle')
+    expect(b.openBundle).toHaveBeenCalledWith('@berry-ai/harness-experimental-voice-input-bundle')
     const finished = actions.createRecording()
     assert(finished instanceof Recording)
     await finished.dispose()

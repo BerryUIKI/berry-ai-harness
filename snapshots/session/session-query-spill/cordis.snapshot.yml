@@ -54,7 +54,7 @@
 # supplies replay plus deterministic private spill storage and its byte limit.
 - insert:
     - id: tool-session-query
-      name: '@deepseek-ai/dsh-tool-session-query'
+      name: '@berry-ai/harness-tool-session-query'
 
 - id: timeout-policy
   name: '@berry-ai/harness-tool-call-timeout-policy'

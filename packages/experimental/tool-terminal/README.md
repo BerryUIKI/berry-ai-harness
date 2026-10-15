@@ -3,7 +3,7 @@ description: "Six model-facing persistent terminal tools with owner isolation, b
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-terminal
+# @berry-ai/harness-tool-terminal
 
 English | [中文](README.zh.md)
 
@@ -45,7 +45,7 @@ Enable these tools when the composition mounts a terminal backend and the model 
 ```yaml
 - name: '@berry-ai/harness-terminal'
 - name: '@berry-ai/harness-terminal-bash'
-- name: '@deepseek-ai/dsh-tool-terminal'
+- name: '@berry-ai/harness-tool-terminal'
 ```
 
 The tools need `ctx.terminals` — a backend must be mounted — and the system-prompt service for the guidance section. Background sends additionally require the jobs service and its model-facing controller (`@berry-ai/harness-tool-jobs`).

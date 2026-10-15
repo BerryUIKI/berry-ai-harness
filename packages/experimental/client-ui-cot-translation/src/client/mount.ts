@@ -7,7 +7,7 @@ import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
 import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
 import type {} from '@deepseek-ai/dsh-client-ui-plugin-manager/client'
-import type {} from '@deepseek-ai/dsh-experimental-client-ui-cot-translation/remote'
+import type {} from '@berry-ai/harness-experimental-client-ui-cot-translation/remote'
 import type { RemoteResult, TypertRemoteContribution } from '@berry-ai/harness-typert-protocol'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { CotTranslationPreferences, CotTranslationSnapshot } from '../preferences.ts'
@@ -103,7 +103,7 @@ async function registerUi(ctx: Context, lifetime: AbortController): Promise<void
     inject: injected,
   }, TranslationBody))
   ctx.slots.inject('plugins.bundle.config', () => ctx.slots.register({
-    name: 'plugins.bundle.config', key: '@deepseek-ai/dsh-experimental-cot-translation-bundle', locale: NS,
+    name: 'plugins.bundle.config', key: '@berry-ai/harness-experimental-cot-translation-bundle', locale: NS,
     inject: () => {
       const face = form.inject()
       return { ...face, hooks: { ...face.hooks, availableProviders }, refreshProviders: invalidate }

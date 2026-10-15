@@ -1,7 +1,7 @@
 /**
  * Model-facing, workspace-authorized session-history search and read tools.
  *
- * @module @deepseek-ai/dsh-tool-session-query
+ * @module @berry-ai/harness-tool-session-query
  */
 
 import type { Context } from '@deepseek-ai/cordis'

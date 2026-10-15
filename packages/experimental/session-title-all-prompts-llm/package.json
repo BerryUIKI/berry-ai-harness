@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-session-title-all-prompts-llm",
+  "name": "@berry-ai/harness-session-title-all-prompts-llm",
   "description": "All-user-messages LLM provider plugin for DeepSeek Harness session titles",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

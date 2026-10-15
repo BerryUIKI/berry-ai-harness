@@ -25,12 +25,12 @@ it.skipIf(!enabled)('translates a small independent billed query with exact Flas
       { id: 'sessions', name: '@berry-ai/harness-session' },
       { id: 'storage', name: '@berry-ai/harness-session-persistence-jsonl', config: { root: join(root, 'sessions'), compression: 'none' } },
       { id: 'official-live-owner', name: '@berry-ai/harness-llm-deepseek-api-key' },
-      { id: 'translator', name: '@deepseek-ai/dsh-experimental-translator', config: { deepseekMaxOutputTokens: 128 } },
+      { id: 'translator', name: '@berry-ai/harness-experimental-translator', config: { deepseekMaxOutputTokens: 128 } },
     ]))
     const modules = new Map<string, unknown>([
       ['@berry-ai/harness-llm', LlmRuntime], ['@berry-ai/harness-session', SessionStore],
       ['@berry-ai/harness-session-persistence-jsonl', JsonlPersistence],
-      ['@berry-ai/harness-llm-deepseek-api-key', Official], ['@deepseek-ai/dsh-experimental-translator', Translator],
+      ['@berry-ai/harness-llm-deepseek-api-key', Official], ['@berry-ai/harness-experimental-translator', Translator],
     ])
     const ctx = await boot('paid-translation-live', configPath, [], (host) => {
       const source: ModuleLoaderV2 = {

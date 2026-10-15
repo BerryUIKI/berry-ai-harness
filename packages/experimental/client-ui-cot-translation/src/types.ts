@@ -1,6 +1,6 @@
 /** Browser-safe translation preferences and Remote metadata. */
 import type {} from '@berry-ai/harness-typert-protocol'
-import type { TranslationProvider } from '@deepseek-ai/dsh-experimental-translator/types'
+import type { TranslationProvider } from '@berry-ai/harness-experimental-translator/types'
 
 /** Translation choices; auto targets the active browser UI language. */
 export interface CotTranslationPreferences {

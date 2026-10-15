@@ -58,7 +58,7 @@ describe('experimental Inspector through a real Loader composition', () => {
     const modules = new Map<string, unknown>([
       ['@berry-ai/harness-host-webserver', WebServer],
       ['fixture:connection', (ctx: Context) => { new HostConnectionService(ctx, [], {} as BrowserAuth) }],
-      ['@deepseek-ai/dsh-experimental-inspector', Inspector],
+      ['@berry-ai/harness-experimental-inspector', Inspector],
     ])
     context.loader.internal = {
       version: 'v2',
@@ -80,7 +80,7 @@ describe('experimental Inspector through a real Loader composition', () => {
       .filter(entry => entry.fiber === undefined && !entry.disabled))
       .toEqual([])
     const inspectorEntry = [...context.loader.entries()]
-      .find(entry => entry.options.name === '@deepseek-ai/dsh-experimental-inspector')
+      .find(entry => entry.options.name === '@berry-ai/harness-experimental-inspector')
     expect(inspectorEntry?.disabled).toBe(false)
     expect(open).toHaveBeenCalledTimes(flag ? 1 : 0)
     const api = (context.connection as HostConnectionService).createSharedFetchHandler('/api')

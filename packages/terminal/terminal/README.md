@@ -25,7 +25,7 @@ English | [中文](README.zh.md)
 <a id="use-this-package"></a>
 ## Use this package
 
-Mount `@berry-ai/harness-terminal` whenever a composition needs terminal sessions whose state survives across tool calls. The service alone does nothing useful: pair it with a backend such as `@berry-ai/harness-terminal-bash` and a tool package such as `@deepseek-ai/dsh-tool-terminal`, and load all three in one composition.
+Mount `@berry-ai/harness-terminal` whenever a composition needs terminal sessions whose state survives across tool calls. The service alone does nothing useful: pair it with a backend such as `@berry-ai/harness-terminal-bash` and a tool package such as `@berry-ai/harness-tool-terminal`, and load all three in one composition.
 
 ### When to choose it
 
@@ -38,7 +38,7 @@ Load the session service together with a backend and a tool package:
 ```yaml
 - name: '@berry-ai/harness-terminal'
 - name: '@berry-ai/harness-terminal-bash'
-- name: '@deepseek-ai/dsh-tool-terminal'
+- name: '@berry-ai/harness-tool-terminal'
 ```
 
 A backend provides one stable type — the shipped shell backend provides `shell` — and the tools open sessions by that type. The shell backend additionally requires the sandbox, sandbox-policy, and subprocess providers; see its [README](../terminal-bash/README.md) for the full composition.
@@ -114,7 +114,7 @@ Read these pages when the package-level contract is not enough. They move from t
 
 #### What the model sees
 
-Nothing directly. This package registers no prompt or tool; `@deepseek-ai/dsh-tool-terminal` owns visible schemas and result text.
+Nothing directly. This package registers no prompt or tool; `@berry-ai/harness-tool-terminal` owns visible schemas and result text.
 
 #### Token effect
 
@@ -122,7 +122,7 @@ None directly. Live session state stays process-local until a consumer returns a
 
 #### KV Cache effect
 
-No direct invalidation; `@deepseek-ai/dsh-tool-terminal` owns request-prefix changes.
+No direct invalidation; `@berry-ai/harness-tool-terminal` owns request-prefix changes.
 
 ## Known Limitations and Deferred Work
 

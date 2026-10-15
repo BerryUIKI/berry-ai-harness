@@ -99,12 +99,12 @@ export async function storageFixture(cleanups: Array<() => Promise<void>>, optio
     ...options.withPersistence === false ? [] : [
       { id: 'storage', name: '@berry-ai/harness-session-persistence-jsonl', config: { root: storedRoot, compression: 'none' } },
     ],
-    { id: 'translator', name: '@deepseek-ai/dsh-experimental-translator', config },
+    { id: 'translator', name: '@berry-ai/harness-experimental-translator', config },
   ]))
   const start = () => boot('translator-storage', path, [], (host) => {
     const modules = new Map<string, unknown>([
       ['@berry-ai/harness-session', SessionStore], ['@berry-ai/harness-session-persistence-jsonl', JsonlPersistence],
-      ['@deepseek-ai/dsh-experimental-translator', Translator],
+      ['@berry-ai/harness-experimental-translator', Translator],
     ])
     const loader: ModuleLoaderV2 = {
       version: 'v2', loadCache: new Map(),

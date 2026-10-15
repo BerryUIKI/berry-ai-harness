@@ -2,7 +2,7 @@
 
 import { fileURLToPath } from 'node:url'
 import type { Context } from '@deepseek-ai/cordis'
-import { BrowserMcpConfig, mountSessionMcp, validateBrowserMcpConfig } from '@deepseek-ai/dsh-experimental-browser-use-runtime/mcp'
+import { BrowserMcpConfig, mountSessionMcp, validateBrowserMcpConfig } from '@berry-ai/harness-experimental-browser-use-runtime/mcp'
 import type {} from '@berry-ai/harness-working-directory'
 
 /** Cordis identity for the Chrome DevTools MCP browser provider. */

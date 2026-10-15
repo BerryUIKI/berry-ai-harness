@@ -10,8 +10,8 @@ import { expect, it } from 'vitest'
 import { assertInstalledTree, createPackedInstallation } from './packed-installation.ts'
 
 const root = fileURLToPath(new URL('../../../..', import.meta.url))
-const adapter = '@deepseek-ai/dsh-webhook-github'
-const runtime = '@deepseek-ai/dsh-webhook'
+const adapter = '@berry-ai/harness-webhook-github'
+const runtime = '@berry-ai/harness-webhook'
 const built = existsSync(join(root, 'apps/cli/lib/bin.js'))
   && existsSync(join(root, 'packages/experimental/webhook-github/lib/index.js'))
 const secret = 'packed-webhook-test-secret'

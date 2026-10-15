@@ -20,7 +20,7 @@ import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import WorkingDirectoryService from '@berry-ai/harness-working-directory'
-import WorktreeService from '@deepseek-ai/dsh-experimental-worktree'
+import WorktreeService from '@berry-ai/harness-experimental-worktree'
 import * as ToolWorktree from '../src/index.ts'
 
 const exec = promisify(execFile)
@@ -62,8 +62,8 @@ describe('worktree tool through real Loader composition', () => {
       ['@berry-ai/harness-sandbox-local', LocalSandbox],
       ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
       ['@berry-ai/harness-working-directory', WorkingDirectoryService],
-      ['@deepseek-ai/dsh-experimental-worktree', WorktreeService],
-      ['@deepseek-ai/dsh-experimental-tool-worktree', ToolWorktree],
+      ['@berry-ai/harness-experimental-worktree', WorktreeService],
+      ['@berry-ai/harness-experimental-tool-worktree', ToolWorktree],
       ['@berry-ai/harness-agent-loop', AgentLoop],
     ])
     const config = [...modules.keys()].flatMap(name => [
@@ -99,7 +99,7 @@ describe('worktree tool through real Loader composition', () => {
     expect(failure.isError).toBe(true)
     expect(failure.content.flatMap(block => block.type === 'text' ? [block.text] : []).join('\n')).toContain('requires a calling agent')
     expect(context.tools.get('create_worktree')!.presentCall!({ name: 'named' })).toEqual({ card: 'generic', title: 'create_worktree', rawInput: { name: 'named' } })
-    const entry = [...context.loader.entries()].find(candidate => candidate.options.name === 'cordis:@deepseek-ai/dsh-experimental-tool-worktree')
+    const entry = [...context.loader.entries()].find(candidate => candidate.options.name === 'cordis:@berry-ai/harness-experimental-tool-worktree')
     await entry!.fiber!.dispose()
     expect(context.tools.schemas().some(tool => tool.name === 'create_worktree')).toBe(false)
   })

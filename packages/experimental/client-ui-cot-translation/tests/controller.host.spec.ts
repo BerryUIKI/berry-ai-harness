@@ -2,9 +2,9 @@
 import { Context } from '@deepseek-ai/cordis'
 import { SessionId } from '@berry-ai/harness-session/types'
 import { afterEach, expect, it, vi } from 'vitest'
-import { TranslationError } from '@deepseek-ai/dsh-experimental-translator'
+import { TranslationError } from '@berry-ai/harness-experimental-translator'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
-import type { TranslationProvider, TranslationRequest } from '@deepseek-ai/dsh-experimental-translator/types'
+import type { TranslationProvider, TranslationRequest } from '@berry-ai/harness-experimental-translator/types'
 import type { CotTranslationPreferences } from '../src/preferences.ts'
 import CotTranslationController from '../src/index.ts'
 

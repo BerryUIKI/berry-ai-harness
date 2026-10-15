@@ -13,7 +13,7 @@ import type { Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { LocalBashExecutor } from '@berry-ai/harness-bash-local'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import * as HooksCodex from '@deepseek-ai/dsh-hooks-codex'
+import * as HooksCodex from '@berry-ai/harness-hooks-codex'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 
 declare module '@berry-ai/harness-llm' {

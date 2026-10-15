@@ -294,7 +294,7 @@ function browserFixture(bootstrap: InspectorHandle['endpoint']['client']): strin
   const boot = {
     rev: 'browser-test',
     entries: [{
-      id: '@deepseek-ai/dsh-experimental-inspector',
+      id: '@berry-ai/harness-experimental-inspector',
       url: '/client.js?rev=browser-test',
       rev: 'browser-test',
     }],

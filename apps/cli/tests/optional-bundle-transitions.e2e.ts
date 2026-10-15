@@ -25,11 +25,11 @@ import { textResponse, toolCallResponse } from '../../../packages/core/agent-loo
 const root = fileURLToPath(new URL('../../..', import.meta.url))
 const installAnchor = join(root, 'apps/cli/package.json')
 const bundles = {
-  search: '@deepseek-ai/dsh-experimental-session-search',
-  ralph: '@deepseek-ai/dsh-experimental-ralph-bundle',
-  terminal: '@deepseek-ai/dsh-experimental-terminal-bundle',
-  badge: '@deepseek-ai/dsh-experimental-badge-skill-bundle',
-  titles: '@deepseek-ai/dsh-experimental-session-titles-bundle',
+  search: '@berry-ai/harness-experimental-session-search',
+  ralph: '@berry-ai/harness-experimental-ralph-bundle',
+  terminal: '@berry-ai/harness-experimental-terminal-bundle',
+  badge: '@berry-ai/harness-experimental-badge-skill-bundle',
+  titles: '@berry-ai/harness-experimental-session-titles-bundle',
 } as const
 type Response = StreamChunk[] | ((request: GenerateOptions) => StreamChunk[])
 

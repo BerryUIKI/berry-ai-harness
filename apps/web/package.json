@@ -25,7 +25,7 @@
     "build": "vite build",
     "dev": "vite",
     "watch": "vite build --watch --no-emptyOutDir",
-    "build:preview": "pnpm --filter @deepseek-ai/dsh-experimental-webworker-runtime exec tsdown && pnpm --filter @deepseek-ai/dsh-experimental-webworker-packer exec tsdown && vite build && dsh-pack-vfs-image --out dist/preview/vfs-image.tar.gz",
+    "build:preview": "pnpm --filter @berry-ai/harness-experimental-webworker-runtime exec tsdown && pnpm --filter @berry-ai/harness-experimental-webworker-packer exec tsdown && vite build && dsh-pack-vfs-image --out dist/preview/vfs-image.tar.gz",
     "serve:preview": "http-server dist -a 0.0.0.0 -p 4173 -c-1"
   },
   "license": "MIT",
@@ -42,9 +42,9 @@
     "@deepseek-ai/dsh-client-web": "workspace:*",
     "@berry-ai/harness-cmdline": "workspace:*",
     "@berry-ai/harness-pwsh-local": "workspace:*",
-    "@deepseek-ai/dsh-experimental-agent-team": "workspace:*",
-    "@deepseek-ai/dsh-experimental-webworker-packer": "workspace:*",
-    "@deepseek-ai/dsh-experimental-webworker-runtime": "workspace:*",
+    "@berry-ai/harness-experimental-agent-team": "workspace:*",
+    "@berry-ai/harness-experimental-webworker-packer": "workspace:*",
+    "@berry-ai/harness-experimental-webworker-runtime": "workspace:*",
     "@berry-ai/harness-remote-mock": "workspace:*",
     "@berry-ai/harness-session-projection-cache": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
@@ -66,10 +66,10 @@
     "@berry-ai/harness-launch-environment": "workspace:*",
     "@berry-ai/harness-workspace-changes": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
-    "@deepseek-ai/dsh-experimental-auto-review": "workspace:*",
-    "@deepseek-ai/dsh-experimental-speech-to-text": "workspace:*",
-    "@deepseek-ai/dsh-experimental-voice-input-bundle": "workspace:*",
-    "@deepseek-ai/dsh-experimental-cot-translation-bundle": "workspace:*",
-    "@deepseek-ai/dsh-experimental-worktree": "workspace:*"
+    "@berry-ai/harness-experimental-auto-review": "workspace:*",
+    "@berry-ai/harness-experimental-speech-to-text": "workspace:*",
+    "@berry-ai/harness-experimental-voice-input-bundle": "workspace:*",
+    "@berry-ai/harness-experimental-cot-translation-bundle": "workspace:*",
+    "@berry-ai/harness-experimental-worktree": "workspace:*"
   }
 }

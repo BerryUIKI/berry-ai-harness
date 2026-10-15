@@ -39,6 +39,6 @@
     "@berry-ai/harness-sdk-protocol": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-experimental-translator": "workspace:*"
+    "@berry-ai/harness-experimental-translator": "workspace:*"
   }
 }

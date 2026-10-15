@@ -12,7 +12,7 @@ import TerminalSessionService, { TerminalSessionId } from '@berry-ai/harness-ter
 import type { TerminalBackend, TerminalBackendSession, TerminalSendOperation, TerminalSendRead, TerminalSendRequest, TerminalSessionStatus, TerminalSignal } from '@berry-ai/harness-terminal'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import * as ToolJobs from '@berry-ai/harness-tool-jobs'
-import * as ToolPty from '@deepseek-ai/dsh-tool-terminal'
+import * as ToolPty from '@berry-ai/harness-tool-terminal'
 import { sendSource } from '../src/background.ts'
 
 async function fakeAgent(ctx: Context, rawId: string): Promise<Agent> {

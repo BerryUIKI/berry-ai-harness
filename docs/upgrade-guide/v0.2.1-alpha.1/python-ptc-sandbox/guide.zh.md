@@ -9,7 +9,7 @@ description: "Python PTC 组合需要沙箱服务，且直接 Python 文件操�
 
 ## 变更
 
-`@deepseek-ai/dsh-experimental-ptc-runtime-python` 需要 `sandbox` 和 `sandboxPolicy`。此前，直接 Python 文件操作不受约束，提供方拒绝显式 `sandboxPolicy` 输入。现在，它为每个程序应用共享策略，并通过 `PtcRunResult.sandbox` 报告约束情况。无法建立约束时，受限运行以 `sandbox-unavailable` 失败。
+`@berry-ai/harness-experimental-ptc-runtime-python` 需要 `sandbox` 和 `sandboxPolicy`。此前，直接 Python 文件操作不受约束，提供方拒绝显式 `sandboxPolicy` 输入。现在，它为每个程序应用共享策略，并通过 `PtcRunResult.sandbox` 报告约束情况。无法建立约束时，受限运行以 `sandbox-unavailable` 失败。
 
 这影响选择 Python 运行时的自定义组合。已发布 profile 继续使用 Node 运行时。Python 仍限于本地 macOS 或 Linux；其配置的资源预算保持不变，仍不支持单次 timeout 覆盖。
 

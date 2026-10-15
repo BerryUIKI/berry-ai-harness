@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-speech-to-text-sensevoice",
+  "name": "@berry-ai/harness-experimental-speech-to-text-sensevoice",
   "description": "Local SenseVoice ONNX transcription with a managed sherpa-onnx process",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -42,12 +42,12 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-experimental-speech-to-text": "workspace:*",
+    "@berry-ai/harness-experimental-speech-to-text": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-experimental-speech-to-text": "workspace:*",
+    "@berry-ai/harness-experimental-speech-to-text": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "tsx": "^4.23.13"
