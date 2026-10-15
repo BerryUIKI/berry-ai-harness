@@ -3,7 +3,7 @@
  * One child lock orders input acceptance and closure; one activation map owns
  * capacity, parent relationships, and resource release across all providers.
  *
- * @module @deepseek-ai/dsh-subagent/manager
+ * @module @berry-ai/harness-subagent/manager
  */
 
 import { randomUUID } from 'node:crypto'

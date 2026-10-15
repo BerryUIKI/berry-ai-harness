@@ -11,7 +11,7 @@ import * as yaml from 'js-yaml'
 import { describe, expect, it, vi } from 'vitest'
 import type { Agent } from '@berry-ai/harness-agent'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@berry-ai/harness-subagent'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import type {
@@ -373,7 +373,7 @@ describe('task admission and package contracts', () => {
       'workspace:*',
     )
     expect(manifest.dependencies).toHaveProperty('@openai/codex', CODEX_VERSION)
-    expect(manifest.dependencies).not.toHaveProperty('@deepseek-ai/dsh-subagent-claude-code')
+    expect(manifest.dependencies).not.toHaveProperty('@berry-ai/harness-subagent-claude-code')
 
     const codexPackageJson = fileURLToPath(import.meta.resolve('@openai/codex/package.json'))
     const codexManifest = JSON.parse(readFileSync(codexPackageJson, 'utf8')) as {
@@ -407,12 +407,12 @@ describe('task admission and package contracts', () => {
 
     const parsed = yaml.load(readFileSync(resolve(root, manifest.dsh!.bundle!.patch!), 'utf8'))
     expect(parsed).toEqual([{ insert: [
-      { id: 'subagent-codex', name: '@deepseek-ai/dsh-subagent-codex' },
-      { id: 'tool-subagent-codex', name: '@deepseek-ai/dsh-tool-subagent', config: {
+      { id: 'subagent-codex', name: '@berry-ai/harness-subagent-codex' },
+      { id: 'tool-subagent-codex', name: '@berry-ai/harness-tool-subagent', config: {
         provider: 'codex', toolName: 'subagent_codex', maxDepth: 'provider-managed',
       } },
     ] }])
-    expect(manifest.dependencies).toHaveProperty('@deepseek-ai/dsh-tool-subagent', 'workspace:*')
+    expect(manifest.dependencies).toHaveProperty('@berry-ai/harness-tool-subagent', 'workspace:*')
   })
 
   it('accepts one or more text blocks and rejects empty or non-text tasks', () => {

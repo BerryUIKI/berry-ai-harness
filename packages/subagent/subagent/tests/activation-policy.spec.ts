@@ -19,7 +19,7 @@ import { Session, SessionId, type SessionEvent } from '@berry-ai/harness-session
 import * as ToolFs from '@berry-ai/harness-tool-fs'
 import ApprovalService from '@berry-ai/harness-user-approval'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@berry-ai/harness-subagent'
 import { mountLocalActivations, startPreparedActivation } from './local-activation.ts'
 
 type Script = ConstructorParameters<typeof MockAdapter>[0]

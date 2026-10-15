@@ -4,7 +4,7 @@
  * `descendants` scope, `ctx.subagents.listDescendants()`. It stays separately
  * loadable from the root `send_message` plugin so a deployment can register
  * continuation delivery without exposing discovery.
- * @module @deepseek-ai/dsh-tool-subagent-control/list-agents
+ * @module @berry-ai/harness-tool-subagent-control/list-agents
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -13,7 +13,7 @@ import type { Agent } from '@berry-ai/harness-agent'
 import type { SessionId } from '@berry-ai/harness-session'
 import type {
   SubagentCatalogEntry, SubagentDescendantListEntry, SubagentListEntry,
-} from '@deepseek-ai/dsh-subagent'
+} from '@berry-ai/harness-subagent'
 import { assertNever } from '@berry-ai/harness-util-values'
 
 export const name = 'tool-subagent-list-agents'

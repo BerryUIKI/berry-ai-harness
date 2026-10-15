@@ -3,7 +3,7 @@ description: "面向用户与维护者的进程外 SDK subagent 后端，用于�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-subagent-dsh-sdk
+# @berry-ai/harness-subagent-dsh-sdk
 
 [English](README.md) | 中文
 
@@ -56,7 +56,7 @@ kind: "package-reference"
 
 ```yaml
 - id: subagent-dsh-sdk
-  name: '@deepseek-ai/dsh-subagent-dsh-sdk'
+  name: '@berry-ai/harness-subagent-dsh-sdk'
   config:
     providerName: dsh-sdk
     profile: sdk
@@ -66,7 +66,7 @@ kind: "package-reference"
     env:
       DEEPSEEK_API_KEY: !!js process.env.DEEPSEEK_API_KEY
 - id: tool-subagent
-  name: '@deepseek-ai/dsh-tool-subagent'
+  name: '@berry-ai/harness-tool-subagent'
   config: { provider: dsh-sdk, toolName: subagent, maxDepth: 'provider-managed' }
 ```
 

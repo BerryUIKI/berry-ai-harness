@@ -24,7 +24,7 @@
 
 - insert:
     - id: subagent-dsh-sdk-diagnostic
-      name: '@deepseek-ai/dsh-subagent-dsh-sdk'
+      name: '@berry-ai/harness-subagent-dsh-sdk'
       config:
         providerName: dsh-sdk-diagnostic
         profile: sdk
@@ -37,13 +37,13 @@
           DSH_TELEMETRY_DISABLED: '1'
           DSH_TEST_CHILD_FAILURE: '1'
     - id: tool-subagent-dsh-sdk-diagnostic
-      name: '@deepseek-ai/dsh-tool-subagent'
+      name: '@berry-ai/harness-tool-subagent'
       config:
         provider: dsh-sdk-diagnostic
         toolName: subagent_dsh_sdk
         maxDepth: provider-managed
     - id: subagent-dsh-sdk-diagnostic-second
-      name: '@deepseek-ai/dsh-subagent-dsh-sdk'
+      name: '@berry-ai/harness-subagent-dsh-sdk'
       config:
         providerName: dsh-sdk-diagnostic-second
         profile: sdk
@@ -56,7 +56,7 @@
           DSH_TELEMETRY_DISABLED: '1'
           DSH_TEST_CHILD_FAILURE: '1'
     - id: tool-subagent-dsh-sdk-diagnostic-second
-      name: '@deepseek-ai/dsh-tool-subagent'
+      name: '@berry-ai/harness-tool-subagent'
       config:
         provider: dsh-sdk-diagnostic-second
         toolName: subagent_dsh_sdk_second

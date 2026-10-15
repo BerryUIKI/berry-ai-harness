@@ -3,7 +3,7 @@
  * Provider lifecycle controls tool registration and context-sensitive schema
  * wording. Every delegation starts a managed activation and returns its child
  * id; the subagent runtime owns result delivery and resource cleanup.
- * @module @deepseek-ai/dsh-tool-subagent
+ * @module @berry-ai/harness-tool-subagent
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -19,8 +19,8 @@ import type { Session } from '@berry-ai/harness-session'
 import {
   assertSubagentMaxDepth,
   parentAgentOptionsForDelegation,
-} from '@deepseek-ai/dsh-subagent'
-import type { SubagentProvider } from '@deepseek-ai/dsh-subagent'
+} from '@berry-ai/harness-subagent'
+import type { SubagentProvider } from '@berry-ai/harness-subagent'
 import {
   assertAllowedModelSelection,
   hasConfiguredLlmSelection,
@@ -394,7 +394,7 @@ export function apply(ctx: Context, config: Config, session?: Session): void {
   if (settings === undefined) {
     throw new Error(
       'tool-subagent: `modelSelectionSettings` requires '
-      + '@deepseek-ai/dsh-tool-subagent/model-selection-settings in the Host scope',
+      + '@berry-ai/harness-tool-subagent/model-selection-settings in the Host scope',
     )
   }
   const selectForSession = (target: Session): ModelSelectionPolicy | undefined => {

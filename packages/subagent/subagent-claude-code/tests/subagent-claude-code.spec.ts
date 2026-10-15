@@ -27,7 +27,7 @@ import {
 } from 'vitest'
 import type { Agent } from '@berry-ai/harness-agent'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@berry-ai/harness-subagent'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import type {
   SubprocessHandle,
@@ -361,7 +361,7 @@ describe('task admission and package contracts', () => {
       '^1.31.0',
     )
     expect(manifest.dependencies).toHaveProperty('zod', '^4.4.3')
-    expect(manifest.dependencies).not.toHaveProperty('@deepseek-ai/dsh-subagent-codex')
+    expect(manifest.dependencies).not.toHaveProperty('@berry-ai/harness-subagent-codex')
 
     const sdkRoot = dirname(fileURLToPath(
       import.meta.resolve('@anthropic-ai/claude-agent-sdk'),
@@ -394,12 +394,12 @@ describe('task admission and package contracts', () => {
 
     const parsed = yaml.load(readFileSync(resolve(root, manifest.dsh!.bundle!.patch!), 'utf8'))
     expect(parsed).toEqual([{ insert: [
-      { id: 'subagent-claude-code', name: '@deepseek-ai/dsh-subagent-claude-code' },
-      { id: 'tool-subagent-claude-code', name: '@deepseek-ai/dsh-tool-subagent', config: {
+      { id: 'subagent-claude-code', name: '@berry-ai/harness-subagent-claude-code' },
+      { id: 'tool-subagent-claude-code', name: '@berry-ai/harness-tool-subagent', config: {
         provider: 'claude-code', toolName: 'subagent_claude_code', maxDepth: 'provider-managed',
       } },
     ] }])
-    expect(manifest.dependencies).toHaveProperty('@deepseek-ai/dsh-tool-subagent', 'workspace:*')
+    expect(manifest.dependencies).toHaveProperty('@berry-ai/harness-tool-subagent', 'workspace:*')
   })
 
   it('preserves text sequences and rejects empty, blank, and non-text tasks', () => {

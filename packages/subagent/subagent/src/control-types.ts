@@ -2,7 +2,7 @@
  * Client-safe recursive catalog rows and browser continuation requests,
  * receipts, and failures.
  *
- * @module @deepseek-ai/dsh-subagent/control-types
+ * @module @berry-ai/harness-subagent/control-types
  */
 
 import type { PromptContentPart } from '@berry-ai/harness-attachment/types'

@@ -109,7 +109,7 @@ const presetToggle = (): HTMLElement => screen.getByRole('button', { name: en.pr
 describe('PluginInventorySettingsTab', () => {
   it.each(['global', 'preset'])('shortens package and module name fallbacks in the %s inventory', async (scope) => {
     const names = [
-      ['@deepseek-ai/dsh-tool-subagent', 'tool-subagent'],
+      ['@berry-ai/harness-tool-subagent', 'tool-subagent'],
       ['@deepseek-ai/dsh-host-web', 'web'],
       ['@deepseek-ai/dsh-client-tabs', 'tabs'],
       ['@deepseek-ai/cordis-plugin-hmr', 'hmr'],
@@ -143,7 +143,7 @@ describe('PluginInventorySettingsTab', () => {
       }
     }
     fireEvent.change(screen.getByRole('searchbox', { name: en.search }), {
-      target: { value: '@deepseek-ai/dsh-tool-subagent' },
+      target: { value: '@berry-ai/harness-tool-subagent' },
     })
     expect(screen.getAllByRole('listitem')).toHaveLength(2)
     expect(screen.getAllByRole('button', { name: /^tool-subagent, include:short-0-/ })).toHaveLength(2)
@@ -398,8 +398,8 @@ describe('PluginInventorySettingsTab', () => {
         id: 'same-module',
         isDefault: true,
         rows: [
-          { entryId: 'tool-subagent-primary', moduleName: '@deepseek-ai/dsh-tool-subagent', enabled: true, fiberPhase: null },
-          { entryId: longId, moduleName: '@deepseek-ai/dsh-tool-subagent', enabled: false, fiberPhase: null },
+          { entryId: 'tool-subagent-primary', moduleName: '@berry-ai/harness-tool-subagent', enabled: true, fiberPhase: null },
+          { entryId: longId, moduleName: '@berry-ai/harness-tool-subagent', enabled: false, fiberPhase: null },
         ],
       }],
     })

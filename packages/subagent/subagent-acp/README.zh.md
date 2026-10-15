@@ -3,7 +3,7 @@ description: "面向用户与维护者的进程外 ACP（Agent Client Protocol�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-subagent-acp
+# @berry-ai/harness-subagent-acp
 
 [English](README.md) | 中文
 
@@ -49,7 +49,7 @@ DeepSeek Harness 子进程使用产品启动器和一个显式的绝对路径 `D
 
 ```yaml
 - id: subagent-acp
-  name: '@deepseek-ai/dsh-subagent-acp'
+  name: '@berry-ai/harness-subagent-acp'
   config:
     providerName: acp
     command: dsh

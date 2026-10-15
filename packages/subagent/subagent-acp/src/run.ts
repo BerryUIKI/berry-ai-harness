@@ -2,7 +2,7 @@
  * Fresh-process ACP subagent client. Drives one child session and owns cancellation and
  * quiescent disposal.
  *
- * @module @deepseek-ai/dsh-subagent-acp/run
+ * @module @berry-ai/harness-subagent-acp/run
  */
 
 import { randomUUID } from 'node:crypto'
@@ -19,8 +19,8 @@ import {
 import type { ContentBlock } from '@berry-ai/harness-llm'
 import { brandString } from '@berry-ai/harness-brand'
 import type { SessionId } from '@berry-ai/harness-session'
-import { AssistantOutputFold, settleRunResult, subprocessRunHandle } from '@deepseek-ai/dsh-subagent'
-import type { SubagentResult, SubagentRun, SubagentStartRequest, SubagentStopReason } from '@deepseek-ai/dsh-subagent'
+import { AssistantOutputFold, settleRunResult, subprocessRunHandle } from '@berry-ai/harness-subagent'
+import type { SubagentResult, SubagentRun, SubagentStartRequest, SubagentStopReason } from '@berry-ai/harness-subagent'
 import type { SubprocessHandle, SubprocessOutcome, SubprocessSpawnSpec } from '@berry-ai/harness-subprocess'
 
 /** Fixed response to child permission requests: reject by default, or select the first allow option. */

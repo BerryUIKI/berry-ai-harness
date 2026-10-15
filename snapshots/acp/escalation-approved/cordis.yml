@@ -50,7 +50,7 @@
     maxBytes: 65536
 
 - id: tool-subagent
-  name: '@deepseek-ai/dsh-tool-subagent'
+  name: '@berry-ai/harness-tool-subagent'
   config:
     provider: spawn
     toolName: subagent
@@ -58,7 +58,7 @@
 
 # Fork preserves the parent model route and inherited conversation.
 - id: tool-subagent-fork
-  name: '@deepseek-ai/dsh-tool-subagent'
+  name: '@berry-ai/harness-tool-subagent'
   config:
     provider: fork
     toolName: subagent_fork

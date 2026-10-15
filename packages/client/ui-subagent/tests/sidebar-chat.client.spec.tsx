@@ -11,7 +11,7 @@ import { sessionSnapshot } from '@deepseek-ai/dsh-client-test-runtime'
 import type { ConversationViewsProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { SidebarRightTabDefinition } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
+import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import {
   ConversationSlotPanel, FixedChatConversationView, parseSubagentChatAddress,
   registerSidebarChat, subagentChatAddress, SUBAGENT_CHAT_ID, type SidebarChatTabProps,

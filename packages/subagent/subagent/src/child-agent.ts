@@ -3,7 +3,7 @@
  * durable session metadata, the resolved child `AgentOptions`, the delegated
  * policy seed, and the scoped setup used by local activations.
  *
- * @module @deepseek-ai/dsh-subagent/child-agent
+ * @module @berry-ai/harness-subagent/child-agent
  */
 
 import type { Context } from '@deepseek-ai/cordis'

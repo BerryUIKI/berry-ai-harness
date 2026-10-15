@@ -49,7 +49,7 @@
     "@deepseek-ai/dsh-client-web": "workspace:*",
     "@deepseek-ai/dsh-remote-mock": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -80,7 +80,7 @@
     "@deepseek-ai/dsh-remote-mock": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-web-app": "workspace:*",
     "@types/js-yaml": "^4.0.9",

@@ -12,7 +12,7 @@ import {
   type SessionEvent, type SessionHeader, type SessionId,
 } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-agent'
-import { snapshotSubagentDescriptor, SUBAGENT_DESCRIPTOR_VERSION } from '@deepseek-ai/dsh-subagent'
+import { snapshotSubagentDescriptor, SUBAGENT_DESCRIPTOR_VERSION } from '@berry-ai/harness-subagent'
 import { checkpointRecord, projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
 import {
   acknowledgeReloadConnectionLoss, captureExpandedTurnProcessAria, captureStableAria,

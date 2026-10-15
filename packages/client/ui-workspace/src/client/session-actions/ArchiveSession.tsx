@@ -12,7 +12,7 @@ import type { SessionActivity } from '@deepseek-ai/dsh-api-workspace-controller/
 import type {} from '@berry-ai/harness-agent/types'
 import type {} from '@berry-ai/harness-jobs/view'
 import type {} from '@berry-ai/harness-schedule/client'
-import type {} from '@deepseek-ai/dsh-subagent/client'
+import type {} from '@berry-ai/harness-subagent/client'
 import {
   Button, IconArchiveOutlineRegular, IconUnarchiveOutlineRegular, MenuItemButton, Modal, Tooltip,
 } from '@deepseek-ai/dsh-client-ui-primitives'

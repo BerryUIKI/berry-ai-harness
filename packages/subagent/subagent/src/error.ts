@@ -1,7 +1,7 @@
 /**
  * Typed failures shared by subagent service and provider operations.
  *
- * @module @deepseek-ai/dsh-subagent
+ * @module @berry-ai/harness-subagent
  */
 
 import { HarnessError } from '@berry-ai/harness-llm'

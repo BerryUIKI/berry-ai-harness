@@ -1,7 +1,7 @@
 /**
  * Direct-child and recursive descendant discovery from parent-owned catalogs.
  * Each catalog read releases its Session observation before the next branch.
- * @module @deepseek-ai/dsh-subagent
+ * @module @berry-ai/harness-subagent
  */
 
 import type { Context } from '@deepseek-ai/cordis'

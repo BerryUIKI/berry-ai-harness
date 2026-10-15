@@ -7,7 +7,7 @@
  * `ctx.subprocess` — the subprocess seam's documented exception for
  * SDK-managed transports — so this driver applies the seam's shared env scrub.
  *
- * @module @deepseek-ai/dsh-subagent-dsh-sdk/run
+ * @module @berry-ai/harness-subagent-dsh-sdk/run
  */
 
 import { randomUUID } from 'node:crypto'
@@ -22,8 +22,8 @@ import {
 } from '@deepseek-ai/dsh-sdk-client'
 import type { ContentBlock, ReasoningEffortId } from '@berry-ai/harness-llm'
 import type { SessionId, TurnEndReason } from '@berry-ai/harness-session'
-import type { SubagentResult, SubagentRun, SubagentStartRequest, SubagentStopReason } from '@deepseek-ai/dsh-subagent'
-import { AssistantOutputFold, settleRunResult, subprocessRunHandle } from '@deepseek-ai/dsh-subagent'
+import type { SubagentResult, SubagentRun, SubagentStartRequest, SubagentStopReason } from '@berry-ai/harness-subagent'
+import { AssistantOutputFold, settleRunResult, subprocessRunHandle } from '@berry-ai/harness-subagent'
 import { scrubbedParentEnv } from '@berry-ai/harness-subprocess'
 
 /** Resolved spawn spec for an SDK runtime child process (no defaults — see Config). */

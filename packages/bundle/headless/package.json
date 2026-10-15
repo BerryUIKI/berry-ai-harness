@@ -55,7 +55,7 @@
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*"
+    "@berry-ai/harness-subagent": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -68,10 +68,10 @@
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*"
+    "@berry-ai/harness-subagent": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-subagent": {
+    "@berry-ai/harness-subagent": {
       "optional": true
     }
   }

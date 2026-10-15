@@ -14,7 +14,7 @@ import type {
 } from '@berry-ai/harness-llm'
 import ToolRuntime from '@berry-ai/harness-tools'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@berry-ai/harness-subagent'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import * as tool from '../src/index.ts'
 import { registerListSubagentModels } from '../src/list-models.ts'

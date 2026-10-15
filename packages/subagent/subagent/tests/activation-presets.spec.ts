@@ -19,7 +19,7 @@ import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-test
 import AgentPresets from '@berry-ai/harness-agent-preset-registry'
 import { SessionId } from '@berry-ai/harness-session'
 import { MockAdapter, textResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@berry-ai/harness-subagent'
 import { mountLocalActivations, startPreparedActivation } from './local-activation.ts'
 
 const FIXTURES = join(dirname(fileURLToPath(import.meta.url)), 'fixtures', 'activation-presets')

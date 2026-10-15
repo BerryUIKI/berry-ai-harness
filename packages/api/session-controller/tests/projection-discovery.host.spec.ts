@@ -20,7 +20,7 @@ import { titleProjectionDefinition } from '@deepseek-ai/dsh-session-title'
 import Storage from '@berry-ai/harness-storage'
 import * as StorageDomain from '@berry-ai/harness-storage-domain'
 import * as StorageJson from '@berry-ai/harness-storage-json'
-import { subagentCatalogProjectionDefinition } from '@deepseek-ai/dsh-subagent/src/catalog.ts'
+import { subagentCatalogProjectionDefinition } from '@berry-ai/harness-subagent/src/catalog.ts'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { createSessionTestController } from './test-remote.ts'
 

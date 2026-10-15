@@ -2,7 +2,7 @@
  * Browser-facing subagent prompt and interrupt request validation plus the
  * stable prompt failure codes returned by the Remote surface.
  *
- * @module @deepseek-ai/dsh-subagent
+ * @module @berry-ai/harness-subagent
  */
 
 import { AttachmentError } from '@berry-ai/harness-attachment'

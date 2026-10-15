@@ -10,10 +10,10 @@ import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-test
 import { SessionId } from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import { createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@berry-ai/harness-subagent'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
-import * as SubagentSpawn from '@deepseek-ai/dsh-subagent-spawn-in-process'
-import * as ToolSubagent from '@deepseek-ai/dsh-tool-subagent'
+import * as SubagentSpawn from '@berry-ai/harness-subagent-spawn-in-process'
+import * as ToolSubagent from '@berry-ai/harness-tool-subagent'
 import { MockAdapter, textResponse } from './mock-adapter.ts'
 
 it.each([0, 1, 2])('retains Agent resources until all work exits with %i failed teardowns', async (failures) => {

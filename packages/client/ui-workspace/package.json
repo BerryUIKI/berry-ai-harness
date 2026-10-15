@@ -71,7 +71,7 @@
     "@berry-ai/harness-jobs": "workspace:*",
     "@berry-ai/harness-schedule": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",

@@ -1,7 +1,7 @@
 /**
  * Model-visible messages owned by continuable-subagent orchestration.
  *
- * @module @deepseek-ai/dsh-subagent/continuation-messages
+ * @module @berry-ai/harness-subagent/continuation-messages
  */
 
 import type { Agent } from '@berry-ai/harness-agent'

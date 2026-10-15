@@ -20,7 +20,7 @@ import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
 import type { SessionEvent, SessionId } from '@berry-ai/harness-session'
 import type { Agent } from '@berry-ai/harness-agent'
-import type { SubagentPromptRequestId } from '@deepseek-ai/dsh-subagent'
+import type { SubagentPromptRequestId } from '@berry-ai/harness-subagent'
 import {
   acknowledgeReloadConnectionLoss, assertFixtureInventory, captureStableAria, compareOrRefreshGolden,
   launchWebScaffold, readPersistedEvents, watchConsole, webSnapshotMode, type WebScaffold,

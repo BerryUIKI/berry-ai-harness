@@ -1804,9 +1804,9 @@ it('reports a successful install with only documented result fields', async () =
 
 
 const CATALOG: BundleInfo = {
-  name: '@deepseek-ai/dsh-subagent-codex', official: true, availability: 'missing', installed: false, optional: false,
+  name: '@berry-ai/harness-subagent-codex', official: true, availability: 'missing', installed: false, optional: false,
   enabled: false, removable: false, rows: [], overrides: [],
-  installTarget: { spec: '@deepseek-ai/dsh-subagent-codex@2.0.0', version: '2.0.0' },
+  installTarget: { spec: '@berry-ai/harness-subagent-codex@2.0.0', version: '2.0.0' },
 }
 
 it('installs an absent Official entry directly at the host target and enables it through the normal installer', async () => {

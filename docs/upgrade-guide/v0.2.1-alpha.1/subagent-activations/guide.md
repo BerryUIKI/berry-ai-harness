@@ -9,7 +9,7 @@ English | [中文](guide.zh.md)
 
 ## Change
 
-`@deepseek-ai/dsh-tool-subagent` removes `backgroundMode`, `enableRunInBackground`, and the model argument `run_in_background`. Every delegation now returns `{ kind: 'activation', subagentId }` after accepting the child, and the runtime delivers its final answer in a parent completion notice. Foreground results and `{ kind: 'background', jobId }` results are removed; subagents are no longer collected or stopped through `job_output` or `job_kill`.
+`@berry-ai/harness-tool-subagent` removes `backgroundMode`, `enableRunInBackground`, and the model argument `run_in_background`. Every delegation now returns `{ kind: 'activation', subagentId }` after accepting the child, and the runtime delivers its final answer in a parent completion notice. Foreground results and `{ kind: 'background', jobId }` results are removed; subagents are no longer collected or stopped through `job_output` or `job_kill`.
 
 The published `@deepseek-ai/dsh-subagent-in-process-driver` package is removed. Local providers contribute creation inputs through `prepareContinuable()`; the subagent service owns execution. Spawn and Fork children can receive later messages, including after settlement when persistence and Session query are available. External providers execute once and do not accept follow-up messages.
 
@@ -18,7 +18,7 @@ The published `@deepseek-ai/dsh-subagent-in-process-driver` package is removed. 
 1. Remove `backgroundMode` and `enableRunInBackground` from `tool-subagent` rows in `cordis.yml`, profile patches, and overlays. Keep the provider and remaining configuration. For example:
 
    ```yaml
-   - name: '@deepseek-ai/dsh-tool-subagent'
+   - name: '@berry-ai/harness-tool-subagent'
      config:
        provider: spawn
        toolName: subagent
@@ -32,7 +32,7 @@ The published `@deepseek-ai/dsh-subagent-in-process-driver` package is removed. 
 
    ```ts
    import type { Agent } from '@berry-ai/harness-agent'
-   import type SubagentRuntime from '@deepseek-ai/dsh-subagent'
+   import type SubagentRuntime from '@berry-ai/harness-subagent'
 
    async function collect(subagents: SubagentRuntime, parent: Agent, signal: AbortSignal) {
      const activation = await subagents.startActivation({

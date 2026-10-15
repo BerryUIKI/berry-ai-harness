@@ -9,7 +9,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@berry-ai/harness-agent'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import { delegationDepthOf } from '@deepseek-ai/dsh-subagent'
+import { delegationDepthOf } from '@berry-ai/harness-subagent'
 import { defineTool } from '@berry-ai/harness-tools'
 import type { GenericCallView } from '@berry-ai/harness-tools'
 import {

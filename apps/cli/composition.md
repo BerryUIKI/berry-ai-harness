@@ -136,19 +136,19 @@ flowchart LR
   cfg --> plugin_dsh_base_compaction_basic
   plugin_dsh_base_command_compact["command-compact<br/>@berry-ai/harness-command-compact"]
   cfg --> plugin_dsh_base_command_compact
-  plugin_dsh_base_subagent["subagent<br/>@deepseek-ai/dsh-subagent"]
+  plugin_dsh_base_subagent["subagent<br/>@berry-ai/harness-subagent"]
   cfg --> plugin_dsh_base_subagent
-  plugin_dsh_base_subagent_spawn_in_process["subagent-spawn-in-process<br/>@deepseek-ai/dsh-subagent-spawn-in-process"]
+  plugin_dsh_base_subagent_spawn_in_process["subagent-spawn-in-process<br/>@berry-ai/harness-subagent-spawn-in-process"]
   cfg --> plugin_dsh_base_subagent_spawn_in_process
-  plugin_dsh_base_subagent_fork_in_process["subagent-fork-in-process<br/>@deepseek-ai/dsh-subagent-fork-in-process"]
+  plugin_dsh_base_subagent_fork_in_process["subagent-fork-in-process<br/>@berry-ai/harness-subagent-fork-in-process"]
   cfg --> plugin_dsh_base_subagent_fork_in_process
-  plugin_dsh_base_tool_subagent_control["tool-subagent-control<br/>@deepseek-ai/dsh-tool-subagent-control"]
+  plugin_dsh_base_tool_subagent_control["tool-subagent-control<br/>@berry-ai/harness-tool-subagent-control"]
   cfg --> plugin_dsh_base_tool_subagent_control
-  plugin_dsh_base_tool_subagent_list_agents["tool-subagent-list-agents<br/>@deepseek-ai/dsh-tool-subagent-control/list-agents"]
+  plugin_dsh_base_tool_subagent_list_agents["tool-subagent-list-agents<br/>@berry-ai/harness-tool-subagent-control/list-agents"]
   cfg --> plugin_dsh_base_tool_subagent_list_agents
-  plugin_dsh_base_tool_subagent["tool-subagent<br/>@deepseek-ai/dsh-tool-subagent"]
+  plugin_dsh_base_tool_subagent["tool-subagent<br/>@berry-ai/harness-tool-subagent"]
   cfg --> plugin_dsh_base_tool_subagent
-  plugin_dsh_base_tool_subagent_fork["tool-subagent-fork<br/>@deepseek-ai/dsh-tool-subagent"]
+  plugin_dsh_base_tool_subagent_fork["tool-subagent-fork<br/>@berry-ai/harness-tool-subagent"]
   cfg --> plugin_dsh_base_tool_subagent_fork
   plugin_dsh_base_ptc_runtime["ptc-runtime<br/>@berry-ai/harness-ptc-runtime-node"]
   cfg --> plugin_dsh_base_ptc_runtime
@@ -264,13 +264,13 @@ flowchart LR
 | `token-meter` | `@berry-ai/harness-token-meter` |
 | `compaction-basic` | `@berry-ai/harness-compaction-basic` |
 | `command-compact` | `@berry-ai/harness-command-compact` |
-| `subagent` | `@deepseek-ai/dsh-subagent` |
-| `subagent-spawn-in-process` | `@deepseek-ai/dsh-subagent-spawn-in-process` |
-| `subagent-fork-in-process` | `@deepseek-ai/dsh-subagent-fork-in-process` |
-| `tool-subagent-control` | `@deepseek-ai/dsh-tool-subagent-control` |
-| `tool-subagent-list-agents` | `@deepseek-ai/dsh-tool-subagent-control/list-agents` |
-| `tool-subagent` | `@deepseek-ai/dsh-tool-subagent` |
-| `tool-subagent-fork` | `@deepseek-ai/dsh-tool-subagent` |
+| `subagent` | `@berry-ai/harness-subagent` |
+| `subagent-spawn-in-process` | `@berry-ai/harness-subagent-spawn-in-process` |
+| `subagent-fork-in-process` | `@berry-ai/harness-subagent-fork-in-process` |
+| `tool-subagent-control` | `@berry-ai/harness-tool-subagent-control` |
+| `tool-subagent-list-agents` | `@berry-ai/harness-tool-subagent-control/list-agents` |
+| `tool-subagent` | `@berry-ai/harness-tool-subagent` |
+| `tool-subagent-fork` | `@berry-ai/harness-tool-subagent` |
 | `ptc-runtime` | `@berry-ai/harness-ptc-runtime-node` |
 | `workflow-ptc` | `@berry-ai/harness-workflow-ptc` |
 | `tool-workflow` | `@berry-ai/harness-tool-workflow` |

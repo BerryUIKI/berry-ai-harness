@@ -1,7 +1,7 @@
 /**
  * Parent-owned durable subagent catalog events and their chunked projection.
  *
- * @module @deepseek-ai/dsh-subagent/catalog
+ * @module @berry-ai/harness-subagent/catalog
  */
 
 import { z } from 'zod'

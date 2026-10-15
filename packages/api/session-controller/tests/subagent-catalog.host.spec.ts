@@ -4,7 +4,7 @@ import AgentRegistry from '@berry-ai/harness-agent'
 import type { Agent } from '@berry-ai/harness-agent'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionSeq, SessionId } from '@berry-ai/harness-session'
 import type { SessionEvent, SessionHeader } from '@berry-ai/harness-session'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@berry-ai/harness-subagent'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   createSessionTestController,

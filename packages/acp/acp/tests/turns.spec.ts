@@ -5,7 +5,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { PROTOCOL_VERSION } from '@agentclientprotocol/sdk'
 import { SessionId } from '@berry-ai/harness-session'
 import { setImmediate } from 'node:timers/promises'
-import SubagentRuntime, { NO_START_CAPABILITIES } from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime, { NO_START_CAPABILITIES } from '@berry-ai/harness-subagent'
 import { defineContentToolFixture } from '@berry-ai/harness-tools'
 import { toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 import {

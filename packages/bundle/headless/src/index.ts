@@ -29,7 +29,7 @@ import { SessionQueryError } from '@berry-ai/harness-session-query'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
 import type {} from '@berry-ai/harness-cmdline'
 import type {} from '@berry-ai/harness-session-query'
-import type {} from '@deepseek-ai/dsh-subagent'
+import type {} from '@berry-ai/harness-subagent'
 import { internals } from './runner-internals.ts'
 import { projectJsonRun, boundJsonLine } from './json-stream.ts'
 

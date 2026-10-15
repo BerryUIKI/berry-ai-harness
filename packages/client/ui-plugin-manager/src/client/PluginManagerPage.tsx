@@ -118,8 +118,8 @@ const MORE_BUNDLES = [
   '@deepseek-ai/dsh-experimental-session-titles-bundle',
   '@deepseek-ai/dsh-experimental-badge-skill-bundle',
   '@deepseek-ai/dsh-experimental-ralph-bundle',
-  '@deepseek-ai/dsh-subagent-codex',
-  '@deepseek-ai/dsh-subagent-claude-code',
+  '@berry-ai/harness-subagent-codex',
+  '@berry-ai/harness-subagent-claude-code',
 ]
 
 function orderPackages(packages: readonly PackageView[], order: readonly string[]): PackageView[] {

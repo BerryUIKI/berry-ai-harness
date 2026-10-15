@@ -10,7 +10,7 @@ import type {
   PropsRenderFactories, PropsRenderSlots, PropsRuntime, TranslateNS,
 } from '@deepseek-ai/dsh-client-ui-slots'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
+import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import type { NS } from '../locales.ts'
 import css from './SidebarChat.module.css'
 

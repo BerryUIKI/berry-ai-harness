@@ -2,8 +2,8 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@berry-ai/harness-agent'
-import * as ToolSubagent from '@deepseek-ai/dsh-tool-subagent'
-import type { Config } from '@deepseek-ai/dsh-tool-subagent'
+import * as ToolSubagent from '@berry-ai/harness-tool-subagent'
+import type { Config } from '@berry-ai/harness-tool-subagent'
 
 export const name = 'scoped-tool-subagent'
 export const inject = ['agents', 'subagentModelSelection']
