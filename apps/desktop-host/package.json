@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-desktop-host",
+  "name": "@berry-ai/harness-desktop-host",
   "description": "Private Node-mode host process for the Electron desktop application",
   "version": "0.2.1-alpha.2",
   "private": true,

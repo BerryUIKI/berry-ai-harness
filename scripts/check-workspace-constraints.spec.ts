@@ -24,7 +24,7 @@ import {
 const experimental = {
   dir: 'packages/experimental/prototype',
   manifest: {
-    name: '@deepseek-ai/dsh-experimental-prototype',
+    name: '@berry-ai/harness-experimental-prototype',
     publishConfig: { access: 'public' },
   },
 } satisfies WorkspaceManifest
@@ -120,9 +120,9 @@ describe('experimental workspace constraints', () => {
   it('requires the experimental package-name prefix', () => {
     expect(checkExperimentalManifest({
       ...experimental,
-      manifest: { ...experimental.manifest, name: '@deepseek-ai/dsh-prototype' },
+      manifest: { ...experimental.manifest, name: '@berry-ai/harness-prototype' },
     })).toEqual([
-      '@deepseek-ai/dsh-prototype: experimental package name must start with "@deepseek-ai/dsh-experimental-" or match its declared directory exception',
+      '@berry-ai/harness-prototype: experimental package name must start with "@berry-ai/harness-experimental-" or match its declared directory exception',
     ])
   })
 
@@ -143,7 +143,7 @@ describe('experimental workspace constraints', () => {
     const [first, ...rest] = manifests
     for (const invalid of [
       rest,
-      [{ ...first!, manifest: { name: '@deepseek-ai/dsh-experimental-replacement' } }, ...rest],
+      [{ ...first!, manifest: { name: '@berry-ai/harness-experimental-replacement' } }, ...rest],
       [{ ...first!, dir: 'packages/core/replacement' }, ...rest],
       [...manifests, { ...first!, dir: 'packages/experimental/duplicate' }],
     ]) expect(checkExperimentalNameExceptions(invalid)).toEqual([expect.stringContaining(first!.manifest.name)])
@@ -163,8 +163,8 @@ describe('experimental workspace constraints', () => {
       ...experimental,
       manifest: { name: experimental.manifest.name, private: true },
     })).toEqual([
-      '@deepseek-ai/dsh-experimental-prototype: public experimental package must not set "private": true',
-      '@deepseek-ai/dsh-experimental-prototype: public experimental package must set publishConfig.access to "public"',
+      '@berry-ai/harness-experimental-prototype: public experimental package must not set "private": true',
+      '@berry-ai/harness-experimental-prototype: public experimental package must set publishConfig.access to "public"',
     ])
   })
 
@@ -204,27 +204,27 @@ describe('experimental workspace constraints', () => {
         dir: 'packages/core/consumer',
         manifest: {
           name: '@deepseek-ai/dsh-consumer',
-          [section]: { '@deepseek-ai/dsh-experimental-prototype': 'workspace:^' },
+          [section]: { [experimental.manifest.name]: 'workspace:^' },
         },
       }])).toEqual([
-        `@deepseek-ai/dsh-consumer: ${section}.@deepseek-ai/dsh-experimental-prototype must not reference an experimental package`,
+        `@deepseek-ai/dsh-consumer: ${section}.${experimental.manifest.name} must not reference an experimental package`,
       ])
     },
   )
 
   it('allows the dsh installation to ship the optional bundles the launcher names, and nothing else experimental', () => {
-    const listed = { '@deepseek-ai/dsh-experimental-prototype': 'workspace:^' }
+    const listed = { [experimental.manifest.name]: 'workspace:^' }
     const installation = { dir: 'apps/cli', manifest: { name: '@deepseek-ai/dsh', dependencies: listed } } satisfies WorkspaceManifest
-    expect(checkExperimentalDependencyIsolation([experimental, installation], ['@deepseek-ai/dsh-experimental-prototype'])).toEqual([])
+    expect(checkExperimentalDependencyIsolation([experimental, installation], [experimental.manifest.name])).toEqual([])
     expect(checkExperimentalDependencyIsolation([experimental, installation], [])).toEqual([
-      '@deepseek-ai/dsh: dependencies.@deepseek-ai/dsh-experimental-prototype must not reference an experimental package',
+      `@deepseek-ai/dsh: dependencies.${experimental.manifest.name} must not reference an experimental package`,
     ])
     // Only a plain dependency edge is offered; a peer would make the bundle a requirement of every consumer.
     expect(checkExperimentalDependencyIsolation([experimental, {
       dir: 'apps/cli',
       manifest: { name: '@deepseek-ai/dsh', peerDependencies: listed },
-    }], ['@deepseek-ai/dsh-experimental-prototype'])).toEqual([
-      '@deepseek-ai/dsh: peerDependencies.@deepseek-ai/dsh-experimental-prototype must not reference an experimental package',
+    }], [experimental.manifest.name])).toEqual([
+      `@deepseek-ai/dsh: peerDependencies.${experimental.manifest.name} must not reference an experimental package`,
     ])
   })
 
@@ -233,24 +233,24 @@ describe('experimental workspace constraints', () => {
       dir: 'packages/core/test-only',
       manifest: {
         name: '@deepseek-ai/dsh-test-only',
-        devDependencies: { '@deepseek-ai/dsh-experimental-prototype': 'workspace:^' },
+        devDependencies: { [experimental.manifest.name]: 'workspace:^' },
       },
     }, {
       dir: 'packages/experimental/consumer',
       manifest: {
         name: '@deepseek-ai/dsh-experimental-consumer',
-        dependencies: { '@deepseek-ai/dsh-experimental-prototype': 'workspace:^' },
+        dependencies: { [experimental.manifest.name]: 'workspace:^' },
       },
     }, {
       dir: 'python/sdk-runtime',
       manifest: {
         name: '@deepseek-ai/dsh-python-runtime',
-        dependencies: { '@deepseek-ai/dsh-experimental-prototype': 'workspace:^' },
+        dependencies: { [experimental.manifest.name]: 'workspace:^' },
       },
     }]
 
     expect(checkExperimentalDependencyIsolation(manifests)).toEqual([
-      '@deepseek-ai/dsh-python-runtime: dependencies.@deepseek-ai/dsh-experimental-prototype must not reference an experimental package',
+      `@deepseek-ai/dsh-python-runtime: dependencies.${experimental.manifest.name} must not reference an experimental package`,
     ])
   })
 })

@@ -33,7 +33,7 @@ describe('installed-update runtime preparation', () => {
         const metadata = JSON.parse(await readFile(join(runtime, 'node_modules/@deepseek-ai/dsh/package.json'), 'utf8')) as {
           dependencies: Record<string, string>
         }
-        expect(metadata.dependencies['@deepseek-ai/dsh-desktop-host']).toBe(version)
+        expect(metadata.dependencies['@berry-ai/harness-desktop-host']).toBe(version)
         expect(metadata.dependencies['@deepseek-ai/cordis']).toBe(source.version)
       }
       expect(await readFile(join(original, 'desktop-runtime.json'))).toEqual(before)

@@ -169,10 +169,13 @@ export function readDesktopRuntime(root: string): DesktopRuntimeDescriptor {
     throw new Error('desktop runtime: duplicate shared package')
   }
   const files = value.files as DesktopRuntimeFile[]
-  for (const name of ['@deepseek-ai/dsh', DESKTOP_HOST_PACKAGE]) {
-    if (sharedPackages.find(entry => entry.name === name)?.version !== release.version) {
-      throw new Error(`desktop runtime: missing or mismatched ${name}`)
-    }
+  const cliPackage = sharedPackages.find(entry => entry.name === '@berry-ai/harness' || entry.name === '@deepseek-ai/dsh')
+  if (cliPackage?.version !== release.version) {
+    throw new Error('desktop runtime: missing or mismatched @berry-ai/harness')
+  }
+  const hostPackage = sharedPackages.find(entry => entry.name === DESKTOP_HOST_PACKAGE || entry.name === '@deepseek-ai/dsh-desktop-host')
+  if (hostPackage?.version !== release.version) {
+    throw new Error(`desktop runtime: missing or mismatched ${DESKTOP_HOST_PACKAGE}`)
   }
   return { schemaVersion: value.schemaVersion as 1, release, platform: value.platform as NodeJS.Platform,
     arch: value.arch, sharedPackages, files }
