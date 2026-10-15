@@ -242,7 +242,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Install benchmark browser and hosted dependencies
-        run: pnpm --filter @deepseek-ai/dsh-benchmarks exec playwright install --with-deps chromium
+        run: pnpm --filter @berry-ai/harness-benchmarks exec playwright install --with-deps chromium
 
       - name: Run performance benchmarks
         env:
