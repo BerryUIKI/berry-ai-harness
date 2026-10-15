@@ -33,8 +33,8 @@ describe('dsh run with Agent Teams enabled', () => {
         dsh: {
           profile: {
             bundles: [
-              '@deepseek-ai/dsh-base',
-              '@deepseek-ai/dsh-headless',
+              '@berry-ai/harness-base',
+              '@berry-ai/harness-headless',
               '@deepseek-ai/dsh-experimental-agent-team-profile',
             ],
           },

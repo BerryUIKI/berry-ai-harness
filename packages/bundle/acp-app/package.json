@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-acp-app",
+  "name": "@berry-ai/harness-acp-app",
   "description": "The dsh ACP profile bundle: automation-only JSON-RPC stdio and process lifecycle over dsh-base",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

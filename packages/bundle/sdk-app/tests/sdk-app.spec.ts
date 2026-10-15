@@ -23,7 +23,7 @@ describe('dsh-sdk-app bundle', () => {
     expect(patches.find(patch => patch.id === 'hmr')).toMatchObject({ disabled: true })
     expect(patches.find(patch => patch.id === 'session-title-llm')).toMatchObject({ disabled: true })
     const rows = patches.flatMap(patch => patch.insert ?? [])
-    expect(rows.find(row => row.id === 'sdk-app-startup')?.name).toBe('@deepseek-ai/dsh-sdk-app')
+    expect(rows.find(row => row.id === 'sdk-app-startup')?.name).toBe('@berry-ai/harness-sdk-app')
     expect(rows.find(row => row.id === 'sdk-jsonrpc-server')?.inject).toEqual(['sdkAppStartup', 'loader'])
   })
 })

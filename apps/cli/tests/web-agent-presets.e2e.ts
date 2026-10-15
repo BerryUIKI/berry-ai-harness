@@ -125,7 +125,7 @@ async function bootWeb(
   const profileDir = join(home, 'profiles', surface)
   await mkdir(profileDir, { recursive: true })
   if (surface === 'desktop') createPluginProfile(profileDir)
-  else if (profileBundles === undefined) initProfile(profileDir, ['@deepseek-ai/dsh-base', '@berry-ai/harness-web-app'])
+  else if (profileBundles === undefined) initProfile(profileDir, ['@berry-ai/harness-base', '@berry-ai/harness-web-app'])
   // Product Bundles are installed into the Profile, not the dsh app. Model
   // pnpm's package link for only the selected products; their own production
   // dependencies resolve from the linked workspace packages, while shared
@@ -171,7 +171,7 @@ async function bootWeb(
   return await boot('dsh-test', rootConfig, [...bundlePatches, ...overrides], async (bootCtx) => {
     bootCtx.provide('profileContext', { name: surface, dir: profileDir, patchPath: profile.patchPath,
       installAnchor: INSTALL_ANCHOR, home, cwd: home,
-      startedBundles: profileBundles ?? ['@deepseek-ai/dsh-base', '@berry-ai/harness-web-app'],
+      startedBundles: profileBundles ?? ['@berry-ai/harness-base', '@berry-ai/harness-web-app'],
       overlays: [], telemetryDisabledEnv: '1' })
     await bootCtx.plugin(PluginPackages, { resolution })
     bootCtx.provide('connection', {
@@ -539,7 +539,7 @@ describe.each(['web', 'desktop'] as const)('%s native subagent bundles', (surfac
     const root = await mkdtemp(join(tmpdir(), `dsh-${surface}-native-bundles-`))
     onTestFinished(async () => { await rm(root, { recursive: true, force: true }) })
     return await bootWeb(root, extra, installed.map(packageDir), [
-      '@deepseek-ai/dsh-base', '@berry-ai/harness-web-app', ...installed.map(product => `@deepseek-ai/dsh-subagent-${product}`),
+      '@berry-ai/harness-base', '@berry-ai/harness-web-app', ...installed.map(product => `@deepseek-ai/dsh-subagent-${product}`),
     ], surface)
   }
 

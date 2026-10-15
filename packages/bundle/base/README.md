@@ -3,7 +3,7 @@ description: "The shared dsh core: model access, tools, durable sessions, and sa
 kind: "package-bundle"
 ---
 
-# @deepseek-ai/dsh-base
+# @berry-ai/harness-base
 
 English | [中文](README.zh.md)
 
@@ -29,7 +29,7 @@ You get the dsh core automatically: the shipped `web`, `headless`, `sdk`, and `a
 
 ### A minimal custom profile
 
-To build a profile on the shared core, create a profile with a `package.json` that names `@deepseek-ai/dsh-base` first:
+To build a profile on the shared core, create a profile with a `package.json` that names `@berry-ai/harness-base` first:
 
 ```json
 {
@@ -37,7 +37,7 @@ To build a profile on the shared core, create a profile with a `package.json` th
   "private": true,
   "dsh": {
     "profile": {
-      "bundles": ["@deepseek-ai/dsh-base"]
+      "bundles": ["@berry-ai/harness-base"]
     }
   }
 }

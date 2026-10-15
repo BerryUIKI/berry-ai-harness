@@ -26,7 +26,7 @@ describe('dsh-sdk-minimal bundle', () => {
     expect(patches).toHaveLength(1)
     const rows = patches[0]?.insert ?? []
     expect(rows.map(row => [row.id, row.name])).toEqual([
-      ['sdk-app-startup', '@deepseek-ai/dsh-sdk-app'],
+      ['sdk-app-startup', '@berry-ai/harness-sdk-app'],
       ['sdk-jsonrpc-server', '@berry-ai/harness-sdk-jsonrpc-server'],
       ['deepseek-llm-api-extensions', '@berry-ai/harness-deepseek-llm-api-extensions'],
       ['session-log-deepseek', '@berry-ai/harness-session-log-deepseek'],

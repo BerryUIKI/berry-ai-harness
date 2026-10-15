@@ -1,5 +1,5 @@
 /**
- * @deepseek-ai/dsh-headless — one-shot direct Agent driver. The bundle patch
+ * @berry-ai/harness-headless — one-shot direct Agent driver. The bundle patch
  * rides over dsh-base without Host, HTTP, or browser plugins; this runner
  * creates one Agent through the core registry (or adopts the exact Session a
  * `--session-id` names), drives the task to quiescence, streams provider
@@ -7,7 +7,7 @@
  * stdout, and exits. With `--json` it projects the run as newline-delimited
  * events instead of the final text.
  *
- * @module @deepseek-ai/dsh-headless
+ * @module @berry-ai/harness-headless
  */
 
 import { randomUUID } from 'node:crypto'

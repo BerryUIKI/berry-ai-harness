@@ -382,13 +382,13 @@ importers:
       '@deepseek-ai/cordis-plugin-timer':
         specifier: workspace:~
         version: link:../../vendor/timer
-      '@deepseek-ai/dsh-acp-app':
+      '@berry-ai/harness-acp-app':
         specifier: workspace:*
         version: link:../../packages/bundle/acp-app
       '@berry-ai/harness-agent-tool-presentation':
         specifier: workspace:*
         version: link:../../packages/core/agent-tool-presentation
-      '@deepseek-ai/dsh-base':
+      '@berry-ai/harness-base':
         specifier: workspace:*
         version: link:../../packages/bundle/base
       '@deepseek-ai/dsh-client-ui-agent-preset':
@@ -442,13 +442,13 @@ importers:
       '@deepseek-ai/dsh-experimental-voice-input-bundle':
         specifier: workspace:*
         version: link:../../packages/experimental/voice-input-bundle
-      '@deepseek-ai/dsh-headless':
+      '@berry-ai/harness-headless':
         specifier: workspace:*
         version: link:../../packages/bundle/headless
-      '@deepseek-ai/dsh-sdk-app':
+      '@berry-ai/harness-sdk-app':
         specifier: workspace:*
         version: link:../../packages/bundle/sdk-app
-      '@deepseek-ai/dsh-sdk-minimal':
+      '@berry-ai/harness-sdk-minimal':
         specifier: workspace:*
         version: link:../../packages/bundle/sdk-minimal
       '@berry-ai/harness-session-projection':
@@ -2458,7 +2458,7 @@ importers:
       '@berry-ai/harness-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../llm/plugin-package-inventory-deepseek
-      '@deepseek-ai/dsh-sdk-app':
+      '@berry-ai/harness-sdk-app':
         specifier: workspace:*
         version: link:../sdk-app
       '@berry-ai/harness-sdk-jsonrpc-server':
@@ -14217,7 +14217,7 @@ importers:
       '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
-      '@deepseek-ai/dsh-base':
+      '@berry-ai/harness-base':
         specifier: workspace:*
         version: link:../../bundle/base
       '@deepseek-ai/dsh-client-connection':
@@ -15317,7 +15317,7 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../packages/api/session-controller
-      '@deepseek-ai/dsh-base':
+      '@berry-ai/harness-base':
         specifier: workspace:*
         version: link:../../packages/bundle/base
       '@deepseek-ai/dsh-client-connection':

@@ -91,7 +91,7 @@ describe.each(['web', 'desktop'] as const)('%s optional bundle overrides', (surf
 })
 
 describe('optional bundles', () => {
-  const shipped = ['@deepseek-ai/dsh-base', '@berry-ai/harness-web-app'].map(name => bundle(name).patches)
+  const shipped = ['@berry-ai/harness-base', '@berry-ai/harness-web-app'].map(name => bundle(name).patches)
 
   it('ships at least one bundle switched off', () => {
     expect(OPTIONAL_BUNDLES.length).toBeGreaterThan(0)

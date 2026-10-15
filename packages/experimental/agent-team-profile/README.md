@@ -34,7 +34,7 @@ dsh plugin --profile headless add @deepseek-ai/dsh-experimental-agent-team-profi
 dsh --profile headless "Use Agent Teams to split this task between two teammates, wait, and summarize."
 ```
 
-The profile must already contain `@deepseek-ai/dsh-base`, whose Subagent services and provider rows this layer consumes. Removing the package with `dsh plugin --profile <name> remove @deepseek-ai/dsh-experimental-agent-team-profile` removes the bundle from the profile's ordered layer list.
+The profile must already contain `@berry-ai/harness-base`, whose Subagent services and provider rows this layer consumes. Removing the package with `dsh plugin --profile <name> remove @deepseek-ai/dsh-experimental-agent-team-profile` removes the bundle from the profile's ordered layer list.
 
 Enable Agent Teams on the Web or Desktop Plugins page to activate both tools and UI. For a CLI Web profile, use:
 

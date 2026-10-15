@@ -30,9 +30,9 @@ export function writePackage(modules: string, name: string, fields: Record<strin
  * @returns Sealed runtime metadata.
  */
 export function runtimeFixture(root: string, version = '1.0.0', nodeVersion = '24.17.0'): DesktopRuntimeDescriptor {
-  const names = ['@deepseek-ai/dsh', '@deepseek-ai/dsh-desktop-host', '@deepseek-ai/dsh-base', '@berry-ai/harness-web-app', '@deepseek-ai/cordis']
+  const names = ['@deepseek-ai/dsh', '@deepseek-ai/dsh-desktop-host', '@berry-ai/harness-base', '@berry-ai/harness-web-app', '@deepseek-ai/cordis']
   for (const name of names) {
-    const bundle = name === '@deepseek-ai/dsh-base' || name === '@berry-ai/harness-web-app'
+    const bundle = name === '@berry-ai/harness-base' || name === '@berry-ai/harness-web-app'
     const path = writePackage(join(root, 'node_modules'), name, {
       version,
       ...(name === '@deepseek-ai/dsh' ? { dependencies: Object.fromEntries(names.slice(1).map(dependency => [dependency, version])) } : {}),

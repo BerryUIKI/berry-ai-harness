@@ -3,7 +3,7 @@ description: "共享的 dsh 核心：为每个 dsh --profile 表层提供模型�
 kind: "package-bundle"
 ---
 
-# @deepseek-ai/dsh-base
+# @berry-ai/harness-base
 
 [English](README.md) | 中文
 
@@ -29,7 +29,7 @@ kind: "package-bundle"
 
 ### 最小自定义 profile
 
-要在共享核心之上构建 profile，请创建一个 profile，其 `package.json` 把 `@deepseek-ai/dsh-base` 列在首位：
+要在共享核心之上构建 profile，请创建一个 profile，其 `package.json` 把 `@berry-ai/harness-base` 列在首位：
 
 ```json
 {
@@ -37,7 +37,7 @@ kind: "package-bundle"
   "private": true,
   "dsh": {
     "profile": {
-      "bundles": ["@deepseek-ai/dsh-base"]
+      "bundles": ["@berry-ai/harness-base"]
     }
   }
 }

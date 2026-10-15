@@ -10,7 +10,7 @@
 
 - insert:
     - id: acp-app-startup
-      name: '@deepseek-ai/dsh-acp-app'
+      name: '@berry-ai/harness-acp-app'
 
     - id: acp
       name: '@berry-ai/harness-acp'

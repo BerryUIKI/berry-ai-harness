@@ -4,7 +4,7 @@
  * text and reasoning come from committed `assistant/message` content, never
  * from a live attempt that may still be retried or discarded, so the stream
  * never carries content the durable log does not contain.
- * @module @deepseek-ai/dsh-headless/json-stream
+ * @module @berry-ai/harness-headless/json-stream
  */
 
 import type { Context } from '@deepseek-ai/cordis'

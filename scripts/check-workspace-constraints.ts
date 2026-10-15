@@ -234,7 +234,7 @@ const packageFileExtras: Readonly<Record<string, readonly string[]>> = {
   '@berry-ai/harness-web-app': ['lib/public-url-*.js'],
   // The headless entry and its startup row share the JSON projection code
   // through a hashed tsdown chunk; both import it by relative path.
-  '@deepseek-ai/dsh-headless': ['lib/json-stream-*.js'],
+  '@berry-ai/harness-headless': ['lib/json-stream-*.js'],
 }
 
 function sameStringList(actual: readonly string[] | undefined, expected: readonly string[]): boolean {

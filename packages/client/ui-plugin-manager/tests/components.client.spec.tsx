@@ -528,12 +528,12 @@ describe('PluginManagerPage', () => {
     renderTab({
       packages: [
         ...[
-          '@deepseek-ai/dsh-base',
+          '@berry-ai/harness-base',
           '@berry-ai/harness-web-app',
-          '@deepseek-ai/dsh-headless',
-          '@deepseek-ai/dsh-sdk-app',
-          '@deepseek-ai/dsh-acp-app',
-          '@deepseek-ai/dsh-sdk-minimal',
+          '@berry-ai/harness-headless',
+          '@berry-ai/harness-sdk-app',
+          '@berry-ai/harness-acp-app',
+          '@berry-ai/harness-sdk-minimal',
         ].map(name => pkg({ name })),
         pkg({ name: '@acme/dsh-base', readOnlyReason: 'management-required' }),
         pkg({ name: 'dsh-better-sidebar' }),
@@ -548,7 +548,7 @@ describe('PluginManagerPage', () => {
 
   it.each([false, true])('shows an empty list for built-in bundles with errors and installed=%s', (installed) => {
     renderTab({
-      packages: ['@deepseek-ai/dsh-base', '@berry-ai/harness-web-app'].map(name => pkg({
+      packages: ['@berry-ai/harness-base', '@berry-ai/harness-web-app'].map(name => pkg({
         name, installed, error: { code: 'operation-error', diagnostic: 'Unreadable bundle' },
       })),
     })

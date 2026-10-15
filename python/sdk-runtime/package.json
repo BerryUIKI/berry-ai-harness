@@ -26,7 +26,7 @@
     "@berry-ai/harness-atomic-write": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-authorization": "workspace:*",
-    "@deepseek-ai/dsh-base": "workspace:*",
+    "@berry-ai/harness-base": "workspace:*",
     "@berry-ai/harness-bash-local": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",

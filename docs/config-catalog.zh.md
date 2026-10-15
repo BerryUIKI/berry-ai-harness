@@ -3079,10 +3079,10 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-worktree -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-headless -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-headless -->
 <a id="deepseek-aidsh-headless"></a>
 
-## `@deepseek-ai/dsh-headless`
+## `@berry-ai/harness-headless`
 
 - `inject`: `agentDefaultModel` · `agents` · `sessions`
 - `source`: [`packages/bundle/headless/src/index.ts:43`](../packages/bundle/headless/src/index.ts)
@@ -3098,7 +3098,7 @@ export interface Config {
   json?: boolean
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-headless -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-headless -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-hooks-claude-code -->
 <a id="deepseek-aidsh-hooks-claude-code"></a>
@@ -3742,10 +3742,10 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-plugin-package-inventory-deepseek -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sdk-app -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-sdk-app -->
 <a id="deepseek-aidsh-sdk-app"></a>
 
-## `@deepseek-ai/dsh-sdk-app`
+## `@berry-ai/harness-sdk-app`
 
 - `inject`: `cmdlineArgs`
 - `source`: [`packages/bundle/sdk-app/src/index.ts:23`](../packages/bundle/sdk-app/src/index.ts)
@@ -3757,7 +3757,7 @@ export interface Config {
   profile?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-sdk-app -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-sdk-app -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-sdk-jsonrpc-server -->
 <a id="deepseek-aidsh-sdk-jsonrpc-server"></a>
@@ -4523,7 +4523,7 @@ export interface Config {
 | `@berry-ai/harness-user-questions` | — | [`packages/interaction/user-questions/src/index.ts`](../packages/interaction/user-questions/src/index.ts) |
 | `@deepseek-ai/dsh-webhook` | `agents` · `agentDefaultModel` · `agentPresets` · `permissionPresets` · `sessionTitle` · `workspaceRegistry` | [`packages/experimental/webhook/src/index.ts`](../packages/experimental/webhook/src/index.ts) |
 | `@berry-ai/harness-workspace` | `storageDomain` · `sessionPersistence` | [`packages/workspace/workspace/src/index.ts`](../packages/workspace/workspace/src/index.ts) |
-| `@deepseek-ai/dsh-acp-app` | `cmdlineArgs` | [`packages/bundle/acp-app/src/index.ts`](../packages/bundle/acp-app/src/index.ts) |
+| `@berry-ai/harness-acp-app` | `cmdlineArgs` | [`packages/bundle/acp-app/src/index.ts`](../packages/bundle/acp-app/src/index.ts) |
 | `@berry-ai/harness-agent` | — | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
 | `@berry-ai/harness-api-account-controller` | `deepseekAccount` · `agents` | [`packages/api/account-controller/src/index.ts`](../packages/api/account-controller/src/index.ts) |
 | `@berry-ai/harness-api-remotes` | `typertGateway` | [`packages/api/remotes/src/index.ts`](../packages/api/remotes/src/index.ts) |
@@ -4659,7 +4659,7 @@ export interface Config {
 | `@berry-ai/harness-util-workspace-path` | — | [`packages/util/workspace-path/src/index.ts`](../packages/util/workspace-path/src/index.ts) |
 | `@berry-ai/harness-win32-process` | — | [`packages/subprocess/win32-process/src/index.ts`](../packages/subprocess/win32-process/src/index.ts) |
 | `@deepseek-ai/dsh-agent-loop-testkit` | — | [`packages/test-support/agent-loop-testkit/src/index.ts`](../packages/test-support/agent-loop-testkit/src/index.ts) |
-| `@deepseek-ai/dsh-base` | — | [`packages/bundle/base/src/index.ts`](../packages/bundle/base/src/index.ts) |
+| `@berry-ai/harness-base` | — | [`packages/bundle/base/src/index.ts`](../packages/bundle/base/src/index.ts) |
 | `@deepseek-ai/dsh-client-store` | — | [`packages/client/store/src/index.ts`](../packages/client/store/src/index.ts) |
 | `@deepseek-ai/dsh-client-test-runtime` | — | [`packages/test-support/client-runtime/src/index.ts`](../packages/test-support/client-runtime/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-dockkit` | — | [`packages/client/ui-dockkit/src/index.ts`](../packages/client/ui-dockkit/src/index.ts) |
@@ -4685,7 +4685,7 @@ export interface Config {
 | `@deepseek-ai/dsh-remote-mock` | — | [`packages/test-support/remote-mock/src/index.ts`](../packages/test-support/remote-mock/src/index.ts) |
 | `@berry-ai/harness-scope` | — | [`packages/core/scope/src/index.ts`](../packages/core/scope/src/index.ts) |
 | `@berry-ai/harness-sdk-client` | — | [`packages/sdk/client/src/index.ts`](../packages/sdk/client/src/index.ts) |
-| `@deepseek-ai/dsh-sdk-minimal` | — | [`packages/bundle/sdk-minimal/src/index.ts`](../packages/bundle/sdk-minimal/src/index.ts) |
+| `@berry-ai/harness-sdk-minimal` | — | [`packages/bundle/sdk-minimal/src/index.ts`](../packages/bundle/sdk-minimal/src/index.ts) |
 | `@berry-ai/harness-sdk-protocol` | — | [`packages/sdk/protocol/src/index.ts`](../packages/sdk/protocol/src/index.ts) |
 | `@berry-ai/harness-session-format` | — | [`packages/session/session-format/src/index.ts`](../packages/session/session-format/src/index.ts) |
 | `@berry-ai/harness-session-format-catalog` | — | [`packages/session/session-format-catalog/src/index.ts`](../packages/session/session-format-catalog/src/index.ts) |

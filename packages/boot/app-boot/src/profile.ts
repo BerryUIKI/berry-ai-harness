@@ -178,25 +178,25 @@ export function resolveProfileDir(name: string, home: string = resolveDshHome())
 /** The shipped profile templates auto-initialized on first use, by name. */
 export const PROFILE_TEMPLATES: Record<string, ProfileTemplate> = {
   acp: {
-    bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-acp-app'],
+    bundles: ['@berry-ai/harness-base', '@berry-ai/harness-acp-app'],
   },
   web: {
-    bundles: ['@deepseek-ai/dsh-base', '@berry-ai/harness-web-app'],
+    bundles: ['@berry-ai/harness-base', '@berry-ai/harness-web-app'],
   },
   headless: {
-    bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-headless'],
+    bundles: ['@berry-ai/harness-base', '@berry-ai/harness-headless'],
   },
   sdk: {
-    bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-sdk-app'],
+    bundles: ['@berry-ai/harness-base', '@berry-ai/harness-sdk-app'],
   },
   'sdk-minimal': {
-    bundles: ['@deepseek-ai/dsh-sdk-minimal'],
+    bundles: ['@berry-ai/harness-sdk-minimal'],
   },
 }
 
 /** Installation-owned bundle tuples normalized to the shipped template. */
 const INSTALLATION_OWNED_PROFILE_TUPLES: Record<string, readonly string[]> = {
-  headless: ['@deepseek-ai/dsh-base', '@berry-ai/harness-web-app', '@deepseek-ai/dsh-headless'],
+  headless: ['@berry-ai/harness-base', '@berry-ai/harness-web-app', '@berry-ai/harness-headless'],
 }
 
 /**
@@ -210,7 +210,7 @@ const RETIRED_BUNDLES: ReadonlySet<string> = new Set([
 ])
 
 /** The bundle list a `dsh plugin` init uses for a name with no shipped template. */
-export const DEFAULT_PROFILE_BUNDLES: readonly string[] = ['@deepseek-ai/dsh-base']
+export const DEFAULT_PROFILE_BUNDLES: readonly string[] = ['@berry-ai/harness-base']
 
 /**
  * The bundles the dsh installation ships for a person to switch on: each a
@@ -709,7 +709,7 @@ function packageDirFromAnchor(anchor: string, packageName: string): string | und
 /**
  * Resolve one bundle package's directory: installation anchor first, then the
  * profile directory. The installation-first order is the contract that
- * `@deepseek-ai/dsh-base` (and every other in-box bundle) always comes from
+ * `@berry-ai/harness-base` (and every other in-box bundle) always comes from
  * the same installation as the running dsh, never from a profile-local copy.
  * Resolution does not require the package to export `./package.json`.
  * @param binName - the diagnostic prefix on the thrown error.

@@ -24,13 +24,13 @@ describe('desktop package-set selection', () => {
   it('includes only the available internal production closure', () => {
     const available = new Map<string, PackedDesktopPackage>([
       ['@deepseek-ai/dsh', packed('@deepseek-ai/dsh', {
-        dependencies: { '@deepseek-ai/dsh-base': '^1.0.0', external: '^2.0.0' },
+        dependencies: { '@berry-ai/harness-base': '^1.0.0', external: '^2.0.0' },
         optionalDependencies: { '@deepseek-ai/platform-package': '1.0.0', '@deepseek-ai/missing-platform': '1.0.0' },
       })],
       ['@deepseek-ai/dsh-desktop-host', packed('@deepseek-ai/dsh-desktop-host', {
         dependencies: { '@deepseek-ai/dsh': '^1.0.0' },
       })],
-      ['@deepseek-ai/dsh-base', packed('@deepseek-ai/dsh-base', {
+      ['@berry-ai/harness-base', packed('@berry-ai/harness-base', {
         peerDependencies: { '@deepseek-ai/cordis': '^1.0.0' },
       })],
       ['@deepseek-ai/cordis', packed('@deepseek-ai/cordis')],
@@ -40,14 +40,14 @@ describe('desktop package-set selection', () => {
     expect(selectDesktopPackageClosure(available).map(entry => entry.manifest.name)).toEqual([
       '@deepseek-ai/cordis',
       '@deepseek-ai/dsh',
-      '@deepseek-ai/dsh-base',
+      '@berry-ai/harness-base',
       '@deepseek-ai/dsh-desktop-host',
       '@deepseek-ai/platform-package',
     ])
   })
 
   it.each([
-    '@deepseek-ai/dsh-base', '@deepseek-ai/cordis', '@deepseek-ai/node-addon-system',
+    '@berry-ai/harness-base', '@deepseek-ai/cordis', '@deepseek-ai/node-addon-system',
   ])('rejects required prepared package %s absent from the packed release inputs', (dependency) => {
     const available = new Map<string, PackedDesktopPackage>([
       ['@deepseek-ai/dsh', packed('@deepseek-ai/dsh', {
