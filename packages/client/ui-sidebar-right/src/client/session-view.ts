@@ -1,9 +1,9 @@
 /** One Sidebar view's Session reference, retained bodies and committed mount lifetime. */
-import type { ISessions, SessionReference } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { ISessions, SessionReference } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
 
-declare module '@deepseek-ai/dsh-api-session-controller/client' {
+declare module '@berry-ai/harness-api-session-controller/client' {
   interface SessionReferenceSourceMap {
     sidebarView: unknown
   }

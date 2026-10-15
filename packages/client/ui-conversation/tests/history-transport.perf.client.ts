@@ -18,9 +18,9 @@ import type {
   SessionEventEntry,
   SessionHistoryRecord,
   SessionWireEvent,
-} from '@deepseek-ai/dsh-api-session-controller/types'
-import { historyEntries } from '@deepseek-ai/dsh-api-session-controller/src/client/sessions/history-records.ts'
-import type { SessionEventLikeEntry } from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/types'
+import { historyEntries } from '@berry-ai/harness-api-session-controller/src/client/sessions/history-records.ts'
+import type { SessionEventLikeEntry } from '@berry-ai/harness-api-session-controller/client'
 import { ConversationNodeAssembler } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type {
   ConversationNodeDefinition,

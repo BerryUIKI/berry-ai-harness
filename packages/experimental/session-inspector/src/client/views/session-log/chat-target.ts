@@ -1,6 +1,6 @@
 /** Original log coordinates submitted for target-owned Chat reveal. */
 
-import type { SessionEventLike } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionEventLike } from '@berry-ai/harness-api-session-controller/client'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import type { InspectorChatTarget } from '../objects.ts'
 

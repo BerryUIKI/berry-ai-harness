@@ -9,7 +9,7 @@
  * rows' title projection).
  */
 import { describe, expect } from 'vitest'
-import type { SessionId } from '@deepseek-ai/dsh-api-remotes/client'
+import type { SessionId } from '@berry-ai/harness-api-remotes/client'
 import { SessionSeq } from '@berry-ai/harness-session/types'
 import { ok, type RemoteMock } from '@deepseek-ai/dsh-remote-mock'
 import {
@@ -32,7 +32,7 @@ declare module '@berry-ai/harness-session-projection/types' {
 
 const SID = 'fk-s1' as SessionId
 /** A Session talks through the Gateway client; its dependency cone is the Typert registry and the Connection. */
-const API_ROSTER = webApp.closure(['@deepseek-ai/dsh-api-gateway'])
+const API_ROSTER = webApp.closure(['@berry-ai/harness-api-gateway'])
 const it = createClientTest({ roster: API_ROSTER })
 /** The first client boot pays the cold module transform of the api cone. */
 const COLD_BOOT_TIMEOUT_MS = 60_000

@@ -4,7 +4,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {
   CordisInspectProviderManifest, CordisInspectQueryRequest, CordisInspectQueryResolution,
   CordisInspectRequestId, SessionId,
-} from '@deepseek-ai/dsh-api-remotes/client'
+} from '@berry-ai/harness-api-remotes/client'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 
 /** Context supplied to a Client inspect provider query. */

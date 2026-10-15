@@ -2,7 +2,7 @@
 /** InputHub restores drafts before views and follows Session-owned lexicon subscriptions. */
 import { randomUUID } from 'node:crypto'
 import { Context, Service } from '@deepseek-ai/cordis'
-import type { SessionReference } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionReference } from '@berry-ai/harness-api-session-controller/client'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { makeTranslate, TestSessions } from '@deepseek-ai/dsh-client-test-runtime'
 import { SessionId } from '@berry-ai/harness-session/types'

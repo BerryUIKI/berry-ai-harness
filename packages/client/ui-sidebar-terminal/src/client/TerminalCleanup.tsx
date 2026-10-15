@@ -1,7 +1,7 @@
 /** Failed background cleanup remains actionable after the originating tab disappears. */
 import type { ReactNode } from 'react'
-import type { TerminalCloseFailure } from '@deepseek-ai/dsh-api-terminal-controller/client'
-import type { WebTerminalId } from '@deepseek-ai/dsh-api-terminal-controller/types'
+import type { TerminalCloseFailure } from '@berry-ai/harness-api-terminal-controller/client'
+import type { WebTerminalId } from '@berry-ai/harness-api-terminal-controller/types'
 import type { HostObservable, InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
 import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
 import type {} from './locales.ts'

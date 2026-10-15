@@ -50,7 +50,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
-    "@deepseek-ai/dsh-api-workspace-files": "workspace:*",
+    "@berry-ai/harness-api-workspace-files": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-session": "workspace:*"
   },

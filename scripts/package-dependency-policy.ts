@@ -5,8 +5,8 @@ const CLIENT_FACE_INCLUDE: readonly string[] = []
 
 /** Packages exempted from automatic Client/Host treatment despite declaring `dsh.client`. */
 const CLIENT_FACE_EXCLUDE: readonly string[] = [
-  '@deepseek-ai/dsh-api-session-controller',
-  '@deepseek-ai/dsh-api-workspace-controller',
+  '@berry-ai/harness-api-session-controller',
+  '@berry-ai/harness-api-workspace-controller',
 ]
 
 /** Host-only packages whose peer relays are deliberately flattened. */
@@ -17,21 +17,21 @@ const HOST_DEPENDENCY_PACKAGES: readonly string[] = [
 
 /** Required Cordis services whose Host imports are type-only. */
 const REQUIRED_SERVICE_PEERS = {
-  '@deepseek-ai/dsh-api-terminal-controller': ['@berry-ai/harness-subprocess'],
+  '@berry-ai/harness-api-terminal-controller': ['@berry-ai/harness-subprocess'],
 } as const satisfies Readonly<Record<string, readonly string[]>>
 
 /** Development-only package relationships not represented by source imports. */
 const CONFIGURATION_ONLY_DEV_DEPENDENCIES = {
-  '@deepseek-ai/dsh-client-locale': ['@deepseek-ai/dsh-api-remotes'],
+  '@deepseek-ai/dsh-client-locale': ['@berry-ai/harness-api-remotes'],
   '@deepseek-ai/dsh-client-ui-conversation': [
-    '@deepseek-ai/dsh-api-remotes',
+    '@berry-ai/harness-api-remotes',
     '@deepseek-ai/dsh-client-ui-workspace',
   ],
   '@deepseek-ai/dsh-client-ui-model-selection': ['@deepseek-ai/dsh-client-ui-input-trigger'],
   '@deepseek-ai/dsh-client-ui-sidebar': ['@deepseek-ai/dsh-client-ui-workspace'],
   '@deepseek-ai/dsh-client-ui-subagent': ['@deepseek-ai/dsh-client-ui-input-trigger'],
-  '@deepseek-ai/dsh-client-ui-theme': ['@deepseek-ai/dsh-api-remotes'],
-  '@deepseek-ai/dsh-client-ui-tool': ['@deepseek-ai/dsh-api-remotes'],
+  '@deepseek-ai/dsh-client-ui-theme': ['@berry-ai/harness-api-remotes'],
+  '@deepseek-ai/dsh-client-ui-tool': ['@berry-ai/harness-api-remotes'],
 } as const satisfies Readonly<Record<string, readonly string[]>>
 
 /** Workspace packages whose complete runtime surface is safe across duplicate installations. */

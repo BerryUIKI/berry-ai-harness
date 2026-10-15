@@ -7,7 +7,7 @@ import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include, { applyEntryPatches } from '@deepseek-ai/cordis-plugin-include'
 import { loadOverlayPatches } from '@berry-ai/harness-app-boot'
-import WorkspaceFiles, { type WorkspaceFileScope } from '@deepseek-ai/dsh-api-workspace-files'
+import WorkspaceFiles, { type WorkspaceFileScope } from '@berry-ai/harness-api-workspace-files'
 import OfficeToPdf from '@berry-ai/harness-office-to-pdf'
 import * as DocumentPreview from '@deepseek-ai/dsh-client-ui-sidebar-documentpreview'
 import type { IndexInjection } from '@deepseek-ai/dsh-host-webserver'
@@ -51,7 +51,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
     { name: '@berry-ai/harness-sandbox-policy', config: { workspaceRoot: directory } },
     { name: '@berry-ai/harness-fs-local', config: { cwd: directory } },
     { name: '@berry-ai/harness-typert-registry' },
-    { name: '@deepseek-ai/dsh-api-workspace-files', config: { maxFileBytes: 1 } },
+    { name: '@berry-ai/harness-api-workspace-files', config: { maxFileBytes: 1 } },
     ...configured,
   ]))
   const pdf = Buffer.from('%PDF-1.7\nLoader preview\n%%EOF\n')
@@ -76,7 +76,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
     ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
     ['@berry-ai/harness-fs-local', LocalFileSystem],
     ['@berry-ai/harness-typert-registry', TypertRegistry],
-    ['@deepseek-ai/dsh-api-workspace-files', WorkspaceFiles],
+    ['@berry-ai/harness-api-workspace-files', WorkspaceFiles],
     ['@berry-ai/harness-office-to-pdf', OfficeToPdf],
     ['@deepseek-ai/dsh-client-ui-sidebar-documentpreview', DocumentPreview],
   ])

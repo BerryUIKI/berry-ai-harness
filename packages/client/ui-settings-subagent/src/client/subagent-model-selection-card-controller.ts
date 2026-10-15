@@ -1,7 +1,7 @@
 /** Staged editor for the Host-owned subagent model allowlist. */
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { ModelProviderGroup } from '@deepseek-ai/dsh-api-remotes/client'
+import type { ModelProviderGroup } from '@berry-ai/harness-api-remotes/client'
 import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { SettingsFormScope, SettingsFormShell } from '@deepseek-ai/dsh-client-ui-primitives'
 

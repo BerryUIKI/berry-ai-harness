@@ -7,7 +7,7 @@
  * activation hook source.
  */
 
-import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
+import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
 import type { GoalActivation, GoalId } from '@berry-ai/harness-goal/client'
 

@@ -3,7 +3,7 @@
  * by `job.list` frames, and per-job accumulated output views fed by
  * `job.follow` frames. Pure data plus subscriptions — transport wiring stays
  * in the client service, UI stays in slot components.
- * @module @deepseek-ai/dsh-api-job-controller/client/model
+ * @module @berry-ai/harness-api-job-controller/client/model
  */
 
 import { notifySubscribers } from '@deepseek-ai/dsh-client-store'

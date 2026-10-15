@@ -22,7 +22,7 @@ import {
   type TypertLookupProvider,
 } from '@berry-ai/harness-typert-protocol'
 import TypertRegistry, { type TypertContribution } from '@berry-ai/harness-typert-registry'
-import TypertGatewayService, { TypertGatewayError } from '@deepseek-ai/dsh-api-gateway'
+import TypertGatewayService, { TypertGatewayError } from '@berry-ai/harness-api-gateway'
 import { provideBrowserCredentials } from './browser-credentials.ts'
 
 interface FixtureAgent {

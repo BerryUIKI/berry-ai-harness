@@ -35,7 +35,7 @@ import TypertGatewayService, {
   type TypertRemoteEventDispatch,
   type TypertRemoteEventInvocation,
   type TypertRemoteEventOutcome,
-} from '@deepseek-ai/dsh-api-gateway'
+} from '@berry-ai/harness-api-gateway'
 import { z } from 'zod'
 import type {
   RemoteEventClientId,

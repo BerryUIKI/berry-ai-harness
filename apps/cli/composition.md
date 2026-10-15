@@ -28,7 +28,7 @@ flowchart LR
   cfg --> plugin_dsh_base_typert
   plugin_dsh_base_typert_loader["typert-loader<br/>@berry-ai/harness-typert-loader"]
   cfg --> plugin_dsh_base_typert_loader
-  plugin_dsh_base_typert_gateway["typert-gateway<br/>@deepseek-ai/dsh-api-gateway"]
+  plugin_dsh_base_typert_gateway["typert-gateway<br/>@berry-ai/harness-api-gateway"]
   cfg --> plugin_dsh_base_typert_gateway
   plugin_dsh_base_session_title["session-title<br/>@berry-ai/harness-session-title"]
   cfg --> plugin_dsh_base_session_title
@@ -210,7 +210,7 @@ flowchart LR
 | `session-log-deepseek` | `@berry-ai/harness-session-log-deepseek` |
 | `typert` | `@berry-ai/harness-typert-registry` |
 | `typert-loader` | `@berry-ai/harness-typert-loader` |
-| `typert-gateway` | `@deepseek-ai/dsh-api-gateway` |
+| `typert-gateway` | `@berry-ai/harness-api-gateway` |
 | `session-title` | `@berry-ai/harness-session-title` |
 | `session-title-llm` | `@berry-ai/harness-session-title-first-prompt-llm` |
 | `user-questions` | `@berry-ai/harness-user-questions` |

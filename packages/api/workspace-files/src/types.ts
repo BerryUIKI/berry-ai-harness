@@ -11,7 +11,7 @@
  * - `list` speaks workspace paths — the same syntax its `path` argument accepts —
  *   because its consumer is a tree rooted at the workspace root.
  *
- * @module @deepseek-ai/dsh-api-workspace-files/types
+ * @module @berry-ai/harness-api-workspace-files/types
  */
 
 // Import the protocol module so the declaration at the end of this file

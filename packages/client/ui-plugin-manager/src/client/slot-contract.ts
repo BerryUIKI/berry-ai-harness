@@ -17,7 +17,7 @@
  */
 
 import type {} from '@deepseek-ai/dsh-client-ui-slots'
-import type { BundleInfo } from '@deepseek-ai/dsh-api-remotes/client'
+import type { BundleInfo } from '@berry-ai/harness-api-remotes/client'
 import type { ConfigForm, ConfigFormSnapshot } from '@deepseek-ai/dsh-client-ui-settings/client'
 
 /** The view the page asks a configuration entry for. */

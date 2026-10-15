@@ -4,7 +4,7 @@
  * `@berry-ai/harness-settings/types`, whose Cordis event declarations already
  * register that file for the Client compilation face.
  *
- * @module @deepseek-ai/dsh-api-settings-controller/types
+ * @module @berry-ai/harness-api-settings-controller/types
  */
 
 declare module '@berry-ai/harness-typert-protocol' {

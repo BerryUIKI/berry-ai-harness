@@ -5,7 +5,7 @@
  * projections of `ctx.jobs`; the model's consuming cursor and notice state
  * never observe them, and a human kill is not the model's own, so the
  * completion notice still reaches the owning agent.
- * @module @deepseek-ai/dsh-api-job-controller
+ * @module @berry-ai/harness-api-job-controller
  */
 
 import { Context } from '@deepseek-ai/cordis'

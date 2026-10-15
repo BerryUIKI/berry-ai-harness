@@ -4,7 +4,7 @@ import { ok } from '@deepseek-ai/dsh-remote-mock'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { createClientTest, webApp, type TestClient } from '../src/assembly/index.ts'
 
-const test = createClientTest({ roster: webApp.closure(['@deepseek-ai/dsh-api-gateway']) })
+const test = createClientTest({ roster: webApp.closure(['@berry-ai/harness-api-gateway']) })
 const clients: TestClient[] = []
 const expired: (() => Promise<TestClient>)[] = []
 

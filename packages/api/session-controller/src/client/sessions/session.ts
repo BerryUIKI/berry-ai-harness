@@ -29,7 +29,7 @@ import type {
   SessionEventLike, SessionEventLikeEntry, SessionLiveEventEntry,
 } from '../contract/events.ts'
 import { Notifier } from './notifier.ts'
-import { isRemoteFailure } from '@deepseek-ai/dsh-api-gateway/client'
+import { isRemoteFailure } from '@berry-ai/harness-api-gateway/client'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import type { RemoteFailure, RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { SessionRemotes } from './remotes.ts'

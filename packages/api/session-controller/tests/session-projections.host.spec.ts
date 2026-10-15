@@ -26,7 +26,7 @@ import { titleProjectionDefinition } from '@berry-ai/harness-session-title'
 import Storage from '@berry-ai/harness-storage'
 import * as StorageDomain from '@berry-ai/harness-storage-domain'
 import * as StorageJson from '@berry-ai/harness-storage-json'
-import type { SessionControlFrame, SessionFollowFrame } from '@deepseek-ai/dsh-api-session-controller/types'
+import type { SessionControlFrame, SessionFollowFrame } from '@berry-ai/harness-api-session-controller/types'
 import {
   mountAgentLoopTestDependencies,
   mountAgentLoopTestHarness,

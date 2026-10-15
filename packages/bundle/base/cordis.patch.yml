@@ -50,7 +50,7 @@
       name: '@berry-ai/harness-typert-loader'
 
     - id: typert-gateway
-      name: '@deepseek-ai/dsh-api-gateway'
+      name: '@berry-ai/harness-api-gateway'
 
     - id: session-title
       name: '@berry-ai/harness-session-title'

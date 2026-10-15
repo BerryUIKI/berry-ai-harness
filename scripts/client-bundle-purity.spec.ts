@@ -173,9 +173,9 @@ describe('client bundle purity gate', () => {
   })
 
   it('admits package-specific requests only for the declaring bundle', () => {
-    const requesting = purityResolveId('@deepseek-ai/dsh-api-session-controller')
-    expect(requesting('@deepseek-ai/dsh-api-gateway/client')).toBeNull()
-    expect(() => resolveId('@deepseek-ai/dsh-api-gateway/client')).toThrow(/purity/)
+    const requesting = purityResolveId('@berry-ai/harness-api-session-controller')
+    expect(requesting('@berry-ai/harness-api-gateway/client')).toBeNull()
+    expect(() => resolveId('@berry-ai/harness-api-gateway/client')).toThrow(/purity/)
   })
 
   it('externalizes the baseline independently of each package manifest', () => {

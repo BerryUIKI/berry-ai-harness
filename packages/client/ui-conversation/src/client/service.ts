@@ -15,7 +15,7 @@ import { randomUUID } from '@berry-ai/harness-util-crypto'
 // method) instead of the standalone helper.
 import type {
   ISessions, PendingSubmissionRetirement, SessionFace,
-} from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
 import type {} from '@deepseek-ai/dsh-client-file-upload/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { ImageMediaType } from '@berry-ai/harness-attachment'
@@ -24,7 +24,7 @@ import type { SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type {
   ComposerAttachment, ComposerFileAttachment, ComposerImageAttachment, DraftFileUpload,
 } from './contract/slots.ts'
-import type { QueueAction } from '@deepseek-ai/dsh-api-session-controller/types'
+import type { QueueAction } from '@berry-ai/harness-api-session-controller/types'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { ComposerBlocks } from './contract/composer-blocks.ts'
 import type {

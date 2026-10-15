@@ -7,7 +7,7 @@
  */
 
 import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { MessageId } from '@deepseek-ai/dsh-api-remotes/client'
+import type { MessageId } from '@berry-ai/harness-api-remotes/client'
 import type { FeedbackCategory, FeedbackRecord } from '@berry-ai/harness-command-feedback/types'
 import type { MessageFeedbackRating } from '@berry-ai/harness-message-feedback/types'
 import type { MessageFeedbackActionResult } from './controller.ts'

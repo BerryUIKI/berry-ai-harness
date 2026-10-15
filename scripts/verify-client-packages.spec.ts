@@ -202,43 +202,43 @@ describe('module requests', () => {
 
   it('rejects stale externals and accepts a runtime import outside client feature packages', () => {
     const gateway = {
-      ...declaration('@deepseek-ai/dsh-api-gateway'), manifest: 'packages/api/gateway/package.json',
+      ...declaration('@berry-ai/harness-api-gateway'), manifest: 'packages/api/gateway/package.json',
     }
     const stale = { ...declaration('@deepseek-ai/dsh-api-stale', {
-      external: ['@deepseek-ai/dsh-api-gateway/client'],
+      external: ['@berry-ai/harness-api-gateway/client'],
     }), manifest: 'packages/api/stale/package.json' }
     const live = { ...declaration('@deepseek-ai/dsh-api-live', {
-      external: ['@deepseek-ai/dsh-api-gateway/client'],
+      external: ['@berry-ai/harness-api-gateway/client'],
       runtimeSourceUses: {
-        '@deepseek-ai/dsh-api-gateway': ['packages/api/live/src/client/index.ts'],
+        '@berry-ai/harness-api-gateway': ['packages/api/live/src/client/index.ts'],
       },
       runtimeSourceSpecifiers: {
-        '@deepseek-ai/dsh-api-gateway/client': ['packages/api/live/src/client/index.ts'],
+        '@berry-ai/harness-api-gateway/client': ['packages/api/live/src/client/index.ts'],
       },
     }), manifest: 'packages/api/live/package.json' }
     expect(collectClientPackageViolations(facts([], {
       declarations: [gateway, stale, live],
     }))).toEqual([
-      stale.manifest + ': dsh.client.external "@deepseek-ai/dsh-api-gateway/client"'
+      stale.manifest + ': dsh.client.external "@berry-ai/harness-api-gateway/client"'
       + ' has no runtime import or re-export in production source; remove the stale declaration',
     ])
   })
 
   it('requires the exact external subpath to be imported at runtime', () => {
     const gateway = {
-      ...declaration('@deepseek-ai/dsh-api-gateway'), manifest: 'packages/api/gateway/package.json',
+      ...declaration('@berry-ai/harness-api-gateway'), manifest: 'packages/api/gateway/package.json',
     }
-    const subject = { ...declaration('@deepseek-ai/dsh-api-session-controller', {
-      external: ['@deepseek-ai/dsh-api-gateway/client'],
+    const subject = { ...declaration('@berry-ai/harness-api-session-controller', {
+      external: ['@berry-ai/harness-api-gateway/client'],
       runtimeSourceUses: {
-        '@deepseek-ai/dsh-api-gateway': ['packages/api/session-controller/src/client/index.ts'],
+        '@berry-ai/harness-api-gateway': ['packages/api/session-controller/src/client/index.ts'],
       },
       runtimeSourceSpecifiers: {
-        '@deepseek-ai/dsh-api-gateway/remote': ['packages/api/session-controller/src/client/index.ts'],
+        '@berry-ai/harness-api-gateway/remote': ['packages/api/session-controller/src/client/index.ts'],
       },
     }), manifest: 'packages/api/session-controller/package.json' }
     expect(collectClientPackageViolations(facts([], { declarations: [gateway, subject] }))).toEqual([
-      subject.manifest + ': dsh.client.external "@deepseek-ai/dsh-api-gateway/client"'
+      subject.manifest + ': dsh.client.external "@berry-ai/harness-api-gateway/client"'
       + ' has no runtime import or re-export in production source; remove the stale declaration',
     ])
   })

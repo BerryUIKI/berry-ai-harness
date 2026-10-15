@@ -171,8 +171,8 @@ describe.skipIf(!requiredArtifacts)('Goal Remote built LIB chain', () => {
         for (const id of [
           '@berry-ai/harness-typert-registry',
           '@deepseek-ai/dsh-client-connection',
-          '@deepseek-ai/dsh-api-gateway',
-          '@deepseek-ai/dsh-api-remotes',
+          '@berry-ai/harness-api-gateway',
+          '@berry-ai/harness-api-remotes',
         ]) {
           const plugin = instantiate(id)
           await client.plugin({ inject: plugin.inject, apply: plugin.apply })

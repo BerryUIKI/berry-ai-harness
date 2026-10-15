@@ -89,7 +89,7 @@ export async function rename(noteId: string, title: string): Promise<void> {
 
 ## 3. 在包上注册
 
-`@Remote` 必须落在一个 Loader entry 插件包里；owner 是抽象 seam 时把控制器放进 `packages/api/` 下的对应包。包清单要补两个生成入口与 protocol 的 peer 依赖，Client 侧则由 `@deepseek-ai/dsh-api-remotes` 的 assembly 挂载该贡献并按需转口类型词汇。两个入口分别指向哪个生成产物、生成管线如何排序，见 [API Gateway 参考](../api-gateway.zh.md)。
+`@Remote` 必须落在一个 Loader entry 插件包里；owner 是抽象 seam 时把控制器放进 `packages/api/` 下的对应包。包清单要补两个生成入口与 protocol 的 peer 依赖，Client 侧则由 `@berry-ai/harness-api-remotes` 的 assembly 挂载该贡献并按需转口类型词汇。两个入口分别指向哪个生成产物、生成管线如何排序，见 [API Gateway 参考](../api-gateway.zh.md)。
 
 ```json
 {
@@ -112,8 +112,8 @@ Host 的固定事实读 `ctx.remote.$host`：`home` 与 `isLoopback` 是普通�
 
 ```ts ignore-check
 import type { Context } from '@deepseek-ai/cordis'
-import { isRemoteFailure } from '@deepseek-ai/dsh-api-gateway/client'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import { isRemoteFailure } from '@berry-ai/harness-api-gateway/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 
 export const inject = ['remote', 'remote.notes']
 

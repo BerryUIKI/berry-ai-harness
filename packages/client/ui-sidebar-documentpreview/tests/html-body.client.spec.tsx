@@ -7,7 +7,7 @@ import { bindSnapshotSelector, stubConfigForm } from '@deepseek-ai/dsh-client-te
 import { DeveloperToolsPreference } from '@deepseek-ai/dsh-client-ui-settings/src/client/developer-tools.ts'
 import type { DeveloperToolsSettings } from '@deepseek-ai/dsh-client-ui-settings/src/developer-tools-settings.ts'
 import type { Resources, ResourceSnapshot } from '@deepseek-ai/dsh-client-resources/client'
-import type { WorkspaceFileStat } from '@deepseek-ai/dsh-api-workspace-files/types'
+import type { WorkspaceFileStat } from '@berry-ai/harness-api-workspace-files/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { TextPreview } from '../src/client/TextPreview.tsx'
 import type { DocumentBodyOwner } from '../src/client/document/contract.ts'

@@ -6,7 +6,7 @@ import { DeveloperToolsPreference } from '@deepseek-ai/dsh-client-ui-settings/sr
 import { SettingsSchemaService } from '@deepseek-ai/dsh-client-ui-settings/src/client/schema.ts'
 import { SettingsDescribeMirror } from '@deepseek-ai/dsh-client-ui-settings/src/client/settings-mirror.ts'
 import { ConfigFormController } from '@deepseek-ai/dsh-client-ui-settings/src/client/config-form.ts'
-import type { SettingsPathOpView } from '@deepseek-ai/dsh-api-remotes/client'
+import type { SettingsPathOpView } from '@berry-ai/harness-api-remotes/client'
 import type { AccountSnapshot } from '../src/client/AccountSection.tsx'
 import { DesktopOnboardingController } from '../src/client/onboarding-state.ts'
 import { DESKTOP_ONBOARDING_NAMESPACE, OnboardingSettingsSchema, type OnboardingProgress, type OnboardingSettings } from '../src/onboarding-settings.ts'

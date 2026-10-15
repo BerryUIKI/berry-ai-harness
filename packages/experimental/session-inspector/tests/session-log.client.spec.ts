@@ -1,7 +1,7 @@
 /** Raw log pagination and settlement preserve original delta boundaries. */
 
-import { MutableSessionEventSource } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SessionEventLikeEntry } from '@deepseek-ai/dsh-api-session-controller/client'
+import { MutableSessionEventSource } from '@berry-ai/harness-api-session-controller/client'
+import type { SessionEventLikeEntry } from '@berry-ai/harness-api-session-controller/client'
 import { SessionSeq } from '@berry-ai/harness-session/types'
 import type { LlmAttemptId, StreamChunk, ToolCallId } from '@berry-ai/harness-llm'
 import { expect, it, onTestFinished, vi } from 'vitest'

@@ -6,7 +6,7 @@
  * type-only.
  */
 
-import type {} from '@deepseek-ai/dsh-api-session-controller/remote-events'
+import type {} from '@berry-ai/harness-api-session-controller/remote-events'
 import type {} from '@berry-ai/harness-deepseek-account/types'
 import type {} from '@berry-ai/harness-permission-presets/types'
 import type {} from '@berry-ai/harness-plugin-manager/types'

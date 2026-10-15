@@ -4,7 +4,7 @@ import type {
   RemoteEventHostInfo,
   TypertRemoteEventInvocation,
   TypertRemoteEventSource,
-} from '@deepseek-ai/dsh-api-gateway'
+} from '@berry-ai/harness-api-gateway'
 import { scopeTarget } from '@berry-ai/harness-scope'
 import { describe, expect, it } from 'vitest'
 import { apply, inject } from '../src/index.ts'

@@ -1,7 +1,7 @@
 /** Native account commands and Gateway state stream; no renderer receives credentials. */
 import { randomUUID } from 'node:crypto'
 import WebSocket from 'ws'
-import { parseRemoteStreamServerMessage, REMOTE_STREAM_MUX_PATH } from '@deepseek-ai/dsh-api-gateway/stream-protocol'
+import { parseRemoteStreamServerMessage, REMOTE_STREAM_MUX_PATH } from '@berry-ai/harness-api-gateway/stream-protocol'
 import type { AccountClientMetadata, AccountView, SignInAttemptId } from '@berry-ai/harness-deepseek-account/types'
 
 /** Authenticated unary caller shared with native onboarding. */

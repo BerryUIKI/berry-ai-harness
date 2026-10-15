@@ -1,5 +1,5 @@
 /** Plan-mode control, persistent Chat cards, and Session-backed sidebar previews. */
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { SessionId } from '@berry-ai/harness-session/types'
 // Type-only: pulls the ui-conversation SlotMap merge (the input.plan seat).
@@ -10,7 +10,7 @@ import type {} from '@deepseek-ai/dsh-client-locale/client'
 import type {} from '@berry-ai/harness-plan-mode/client'
 import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type {} from '@deepseek-ai/dsh-api-session-controller/remote'
+import type {} from '@berry-ai/harness-api-session-controller/remote'
 import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
 import type {} from '@deepseek-ai/dsh-client-ui-user-questions/client'
 import type {} from '@deepseek-ai/dsh-client-ui-sidebar-right/client'

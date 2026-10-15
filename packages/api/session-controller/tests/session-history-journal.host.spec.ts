@@ -7,8 +7,8 @@ import SessionStore from '@berry-ai/harness-session'
 import { LlmAttemptId, ToolCallId, createMessage, createToolResultMessage, createUserMessage } from '@berry-ai/harness-llm'
 import type { MessageSource } from '@berry-ai/harness-llm'
 import type { Session, SessionEvent, SessionId } from '@berry-ai/harness-session'
-import { SessionHistoryController } from '@deepseek-ai/dsh-api-session-controller/src/history.ts'
-import type { SessionFollowFrame, SessionPage, SessionWireEvent } from '@deepseek-ai/dsh-api-session-controller/types'
+import { SessionHistoryController } from '@berry-ai/harness-api-session-controller/src/history.ts'
+import type { SessionFollowFrame, SessionPage, SessionWireEvent } from '@berry-ai/harness-api-session-controller/types'
 import { createSessionTestRemote, installSessionReadTestServices } from './test-remote.ts'
 
 type CheckpointSource = Extract<MessageSource, { readonly kind: 'compact-checkpoint' }>

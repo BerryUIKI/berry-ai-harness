@@ -2,7 +2,7 @@
 import type { RefObject } from 'react'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { SessionId, SessionSeq } from '@berry-ai/harness-session/types'
-import type { PendingSubmission } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { PendingSubmission } from '@berry-ai/harness-api-session-controller/client'
 import type { InboxState } from '@berry-ai/harness-agent/types'
 import type {
   CommandNode, CompactionSummaryNode, ConversationLocationDataStore, ConversationTurnDataMap,

@@ -6,9 +6,9 @@
  * session and a workspace path while a tab carries a `dsh-resource://file/`
  * session address, so this module also owns that translation.
  */
-import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
+import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { WorkspaceFileBytes, WorkspaceFileRange, WorkspaceFileText } from '@deepseek-ai/dsh-api-workspace-files/types'
+import type { WorkspaceFileBytes, WorkspaceFileRange, WorkspaceFileText } from '@berry-ai/harness-api-workspace-files/types'
 import { parseFileAddress } from '@berry-ai/harness-util-workspace-path'
 
 /** The slice of the Client Remote this package calls. */

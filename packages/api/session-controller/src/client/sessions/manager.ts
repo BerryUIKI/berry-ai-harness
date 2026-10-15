@@ -12,7 +12,7 @@ import type {
   SessionSummary,
 } from '../../types.ts'
 import { mergeOrderedBaseline } from '../ordered-baseline.ts'
-import { isRemoteFailure } from '@deepseek-ai/dsh-api-gateway/client'
+import { isRemoteFailure } from '@berry-ai/harness-api-gateway/client'
 import { assertNever } from '@berry-ai/harness-util-values'
 import type { RemoteFailure, RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { SessionListEntry, TitledSessionSummary } from './lineage.ts'

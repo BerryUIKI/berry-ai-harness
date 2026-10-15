@@ -9,7 +9,7 @@ import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react
 import { useSyncExternalStore } from 'react'
 import type {
   SessionListState, SessionSnapshot, UseProjection,
-} from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
 import type { InboxState } from '@berry-ai/harness-agent/types'
 import type { UserMessage } from '@berry-ai/harness-llm/types'
 import type { MessageId } from '@berry-ai/harness-llm/brand'

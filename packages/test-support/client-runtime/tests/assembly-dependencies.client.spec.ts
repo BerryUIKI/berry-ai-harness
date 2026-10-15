@@ -5,7 +5,7 @@ import { createClientTest, webApp } from '../src/assembly/index.ts'
 
 const HMR = '@deepseek-ai/dsh-client-hmr'
 const MODULES = '@deepseek-ai/dsh-client-modules'
-const SESSIONS = '@deepseek-ai/dsh-api-session-controller'
+const SESSIONS = '@berry-ai/harness-api-session-controller'
 const FILE_UPLOAD = '@deepseek-ai/dsh-client-file-upload'
 const hmrRoster = webApp.closure([HMR])
 const sessionRoster = webApp.closure([SESSIONS])

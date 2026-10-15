@@ -7,7 +7,7 @@
  * and face — and that every registration is gone after dispose, which is what
  * makes a reload safe.
  */
-import type { ClientRemote } from '@deepseek-ai/dsh-api-remotes/client'
+import type { ClientRemote } from '@berry-ai/harness-api-remotes/client'
 import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'

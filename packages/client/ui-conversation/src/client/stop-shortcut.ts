@@ -1,5 +1,5 @@
 /** Fixed Escape routing into the current Conversation turn's scoped cancellation. */
-import type { ISessions, SessionBinding } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { ISessions, SessionBinding } from '@berry-ai/harness-api-session-controller/client'
 import type { Shortcuts } from '@deepseek-ai/dsh-client-shortcuts/client'
 import type { UiSession } from '@deepseek-ai/dsh-client-ui-session/client'
 import type { SessionId } from '@berry-ai/harness-session/types'

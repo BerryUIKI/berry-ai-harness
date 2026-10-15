@@ -5,7 +5,7 @@
  * merge lives here.
  */
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
-import type { ModelSelection } from '@deepseek-ai/dsh-api-remotes/client'
+import type { ModelSelection } from '@berry-ai/harness-api-remotes/client'
 import type { SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { ModelDirectoryState } from './directory.ts'
 

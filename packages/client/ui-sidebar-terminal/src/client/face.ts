@@ -1,6 +1,6 @@
 /** Injected terminal commands and keyed observable state. */
-import type { WebTerminalId } from '@deepseek-ai/dsh-api-terminal-controller/types'
-import type { TerminalView, TerminalViewState } from '@deepseek-ai/dsh-api-terminal-controller/client'
+import type { WebTerminalId } from '@berry-ai/harness-api-terminal-controller/types'
+import type { TerminalView, TerminalViewState } from '@berry-ai/harness-api-terminal-controller/client'
 import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
 import type { ThemeSnapshot } from '@deepseek-ai/dsh-client-ui-theme/client'
 

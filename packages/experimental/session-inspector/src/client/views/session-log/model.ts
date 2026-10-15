@@ -1,6 +1,6 @@
 /** Incremental raw Session rows with lossless Assistant stream children. */
 
-import type { SessionEventSource, SessionEventWindow, SessionEventLikeEntry } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionEventSource, SessionEventWindow, SessionEventLikeEntry } from '@berry-ai/harness-api-session-controller/client'
 import { createSnapshotStore, type ObservableSnapshot, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { expandAssistantStream, type AssistantStreamRecord, type TimedStreamChunk } from '@berry-ai/harness-llm/assistant-stream'
 import type { StreamChunk } from '@berry-ai/harness-llm'

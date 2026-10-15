@@ -1,7 +1,7 @@
 /** Client scope generations route local events independently of Host Agent residency. */
 import { Context as CordisContext } from '@deepseek-ai/cordis'
 import type { Context, Fiber } from '@deepseek-ai/cordis'
-import type { ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
+import type { ClientRemote } from '@berry-ai/harness-api-gateway/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { TypertRemoteScopeApi } from '@berry-ai/harness-typert-protocol'
 

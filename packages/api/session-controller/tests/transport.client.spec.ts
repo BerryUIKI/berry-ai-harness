@@ -3,7 +3,7 @@ import {
   RemoteStream,
   RemoteStreamCarrierError,
   type RemoteStreamOptions,
-} from '@deepseek-ai/dsh-api-gateway/client'
+} from '@berry-ai/harness-api-gateway/client'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { streamHandle } from '@deepseek-ai/dsh-remote-mock'
 import { LlmAttemptId } from '@berry-ai/harness-llm'

@@ -12,7 +12,7 @@
  */
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { InboxWireState } from '@berry-ai/harness-agent/types'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
 import type { ComposerChainProps } from '@deepseek-ai/dsh-client-ui-conversation/client'

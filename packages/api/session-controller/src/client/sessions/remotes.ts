@@ -2,10 +2,10 @@
  * Remote namespaces the Session cluster calls. One parameter for one concept:
  * the generated surface a Session and its manager reach the Host through.
  *
- * @module @deepseek-ai/dsh-api-session-controller/client/sessions/remotes
+ * @module @berry-ai/harness-api-session-controller/client/sessions/remotes
  */
 
-import type { ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
+import type { ClientRemote } from '@berry-ai/harness-api-gateway/client'
 import type { CommandSubmitAttachment } from '@berry-ai/harness-commands/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {

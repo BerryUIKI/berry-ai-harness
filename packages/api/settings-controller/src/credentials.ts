@@ -2,7 +2,7 @@
  * Host owner of the `credentials` Remote namespace: the reference half of
  * `ctx.credentials` as a browser configuration page reads and writes it.
  *
- * @module @deepseek-ai/dsh-api-settings-controller/src/credentials.ts
+ * @module @berry-ai/harness-api-settings-controller/src/credentials.ts
  */
 
 import { Context } from '@deepseek-ai/cordis'

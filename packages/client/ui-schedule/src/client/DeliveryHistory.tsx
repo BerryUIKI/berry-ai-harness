@@ -1,6 +1,6 @@
 /** Lazy saved delivery pages owned by the selected task's mounted records view. */
 import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
-import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
+import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
 import {
   Button, IconChevronDownOutlineRegular, IconChevronUpOutlineRegular, IconClockOutlineRegular, IconInfoOutlineRegular,

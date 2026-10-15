@@ -3,8 +3,8 @@
 import { afterEach, expect, it, vi } from 'vitest'
 import { cleanup, fireEvent, render, within } from '@testing-library/react'
 import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
-import type { TerminalCloseFailure } from '@deepseek-ai/dsh-api-terminal-controller/client'
-import type { WebTerminalId } from '@deepseek-ai/dsh-api-terminal-controller/types'
+import type { TerminalCloseFailure } from '@berry-ai/harness-api-terminal-controller/client'
+import type { WebTerminalId } from '@berry-ai/harness-api-terminal-controller/types'
 import { TerminalCleanup } from '../src/client/TerminalCleanup.tsx'
 import { en } from '../src/client/locales.ts'
 

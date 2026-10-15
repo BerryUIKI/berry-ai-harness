@@ -5,7 +5,7 @@ import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { TestClient, remoteDefaultResponses, webApp } from '../src/assembly/index.ts'
 
 /** The Gateway client and what it injects: the Typert registry and the Connection. */
-const API_ROSTER = webApp.closure(['@deepseek-ai/dsh-api-gateway'])
+const API_ROSTER = webApp.closure(['@berry-ai/harness-api-gateway'])
 const TYPERT_ONLY = webApp.pick(['@berry-ai/harness-typert-registry'])
 const globals = globalThis as { __DSH_TRANSPORT__?: ClientTransportHooks }
 
@@ -49,9 +49,9 @@ describe('TestClient (node environment)', () => {
   })
 
   it('refuses a provide entry for the api-remotes row, whose services are the proxies', async () => {
-    const roster = webApp.closure(['@deepseek-ai/dsh-api-remotes'])
-    await expect(TestClient.start({ roster, provide: { '@deepseek-ai/dsh-api-remotes': { apply() {} } } }, RemoteMock.create()))
-      .rejects.toThrow('@deepseek-ai/dsh-api-remotes cannot be provided; its remote.<ns> services are the tier\'s proxies')
+    const roster = webApp.closure(['@berry-ai/harness-api-remotes'])
+    await expect(TestClient.start({ roster, provide: { '@berry-ai/harness-api-remotes': { apply() {} } } }, RemoteMock.create()))
+      .rejects.toThrow('@berry-ai/harness-api-remotes cannot be provided; its remote.<ns> services are the tier\'s proxies')
   })
 
   it('reports unmatched requests alongside a failed teardown instead of hiding them', async () => {

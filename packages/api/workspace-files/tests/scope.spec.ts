@@ -52,7 +52,7 @@ describe('Workspace Files Session scope lookup', () => {
       expect(lookup).toMatchObject({
         parameter: 'workspaceFileScope',
         wire: 'workspaceFileScopeId',
-        hostTypeSymbol: '@deepseek-ai/dsh-api-workspace-files#WorkspaceFileScope',
+        hostTypeSymbol: '@berry-ai/harness-api-workspace-files#WorkspaceFileScope',
         wireTypeSymbol: '@berry-ai/harness-session/types#SessionId',
       })
       if (lookup === undefined) throw new Error('workspaceFileScope lookup did not register')

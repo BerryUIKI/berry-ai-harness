@@ -1,7 +1,7 @@
 /** File association adapter for the shared file/directory opening control. */
 import { useEffect } from 'react'
 import type { ReactNode } from 'react'
-import type { SessionWorkspacePathApplication } from '@deepseek-ai/dsh-api-session-controller/types'
+import type { SessionWorkspacePathApplication } from '@berry-ai/harness-api-session-controller/types'
 import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
 import type { InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
 import type {} from '@deepseek-ai/dsh-client-ui-sidebar-documentpreview/client'

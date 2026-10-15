@@ -89,7 +89,7 @@ export async function rename(noteId: string, title: string): Promise<void> {
 
 ## 3. Register it on the package
 
-`@Remote` must live in a Loader entry plugin package; when the owner is an abstract seam, the controller goes in the matching package under `packages/api/`. The manifest gains the two generated entries and the protocol peer dependency, while on the Client side the `@deepseek-ai/dsh-api-remotes` assembly mounts the contribution and re-exports the type vocabulary that consumers need. Which generated artifact each entry points at, and how the generation pipeline is ordered, are in the [API Gateway reference](../api-gateway.md).
+`@Remote` must live in a Loader entry plugin package; when the owner is an abstract seam, the controller goes in the matching package under `packages/api/`. The manifest gains the two generated entries and the protocol peer dependency, while on the Client side the `@berry-ai/harness-api-remotes` assembly mounts the contribution and re-exports the type vocabulary that consumers need. Which generated artifact each entry points at, and how the generation pipeline is ordered, are in the [API Gateway reference](../api-gateway.md).
 
 ```json
 {
@@ -112,8 +112,8 @@ Fixed Host facts come from `ctx.remote.$host`: `home` and `isLoopback` are plain
 
 ```ts ignore-check
 import type { Context } from '@deepseek-ai/cordis'
-import { isRemoteFailure } from '@deepseek-ai/dsh-api-gateway/client'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import { isRemoteFailure } from '@berry-ai/harness-api-gateway/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 
 export const inject = ['remote', 'remote.notes']
 

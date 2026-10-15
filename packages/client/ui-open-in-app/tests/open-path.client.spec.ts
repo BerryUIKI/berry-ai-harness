@@ -2,7 +2,7 @@
 
 import { describe, expect, it, vi } from 'vitest'
 import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
-import type { SessionOpenWorkspacePathRequest } from '@deepseek-ai/dsh-api-session-controller/types'
+import type { SessionOpenWorkspacePathRequest } from '@berry-ai/harness-api-session-controller/types'
 import { OpenInAppPathController, type OpenInAppPathRemote } from '../src/client/open-path.ts'
 
 type SessionRemote = OpenInAppPathRemote['session']

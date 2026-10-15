@@ -3,7 +3,7 @@
  * arriving as emit frames on the `$events` stream, the control stream over
  * the real Connection, and Agent Context identity through the Typert registry.
  */
-import { RemoteStreamCarrierError } from '@deepseek-ai/dsh-api-gateway/client'
+import { RemoteStreamCarrierError } from '@berry-ai/harness-api-gateway/client'
 import { ok, type RemoteMock } from '@deepseek-ai/dsh-remote-mock'
 import { createClientTest, type TestClient, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
 import type { SessionId } from '@berry-ai/harness-session/types'
@@ -13,7 +13,7 @@ import { afterEach, describe, expect, vi, type MockInstance } from 'vitest'
 import { ClientSessions } from '../src/client/sessions/service.ts'
 import type { SessionListValue } from '../src/types.ts'
 
-const SELF = '@deepseek-ai/dsh-api-session-controller'
+const SELF = '@berry-ai/harness-api-session-controller'
 const ROSTER = webApp.closure([SELF])
 const it = createClientTest({ roster: ROSTER })
 const EVENTS = '$events'

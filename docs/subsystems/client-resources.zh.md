@@ -63,7 +63,7 @@ export function apply(ctx: Context): void {
 
 ```tsx ignore-check
 import type { PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-api-workspace-files/client'
+import type {} from '@berry-ai/harness-api-workspace-files/client'
 
 type Props = PropsRuntime<'sidebar.right.pane.tab'>
 

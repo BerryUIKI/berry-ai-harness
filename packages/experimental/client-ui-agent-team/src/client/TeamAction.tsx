@@ -5,7 +5,7 @@ import type {
   TeamMemberProjection,
   TeamTaskView as TeamTask,
 } from '@deepseek-ai/dsh-experimental-agent-team/client'
-import type {} from '@deepseek-ai/dsh-api-session-controller/client'
+import type {} from '@berry-ai/harness-api-session-controller/client'
 import {
   IconChevronDownOutlineRegular,
   IconUserOutlineRegular, IconUsersOutlineRegular, StateDot, Tag, Tooltip,

@@ -40,7 +40,7 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-remotes"
+        "@berry-ai/harness-api-remotes"
       ],
       "platform": "web",
       "immediately": true
@@ -75,7 +75,7 @@
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-util-crypto": "workspace:*",
-    "@deepseek-ai/dsh-api-remotes": "workspace:*",
+    "@berry-ai/harness-api-remotes": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*"
   }

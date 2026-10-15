@@ -12,9 +12,9 @@ import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
 // Type-only: pulls the generated Remote API and ctx.remote merge through the Client assembly boundary.
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 // Type-only: pulls the Session Controller service used for projected goal state.
-import type {} from '@deepseek-ai/dsh-api-session-controller/client'
+import type {} from '@berry-ai/harness-api-session-controller/client'
 // Type-only: pulls the Chat node slot and its keyed data map.
 import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
 // Type-only: pulls the Conversation service and input-dock slot.
@@ -40,7 +40,7 @@ export type {
 } from './slots.ts'
 export type { GoalKey } from './locales.ts'
 
-declare module '@deepseek-ai/dsh-api-session-controller/client' {
+declare module '@berry-ai/harness-api-session-controller/client' {
   interface SessionReferenceSourceMap {
     /** A live goal read waiting for initial history and its RPC result. */
     goalActivation: unknown

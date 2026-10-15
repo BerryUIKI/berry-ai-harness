@@ -21,7 +21,7 @@ import type { ContentBlock, ContextFormed, Message, MessageSource } from '@berry
 import { deriveEventMessage, SessionId } from '@berry-ai/harness-session'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import type { TokenMeter } from '@berry-ai/harness-token-meter'
-import type {} from '@deepseek-ai/dsh-api-terminal-controller'
+import type {} from '@berry-ai/harness-api-terminal-controller'
 import { join } from 'node:path'
 import {
   acknowledgeReloadConnectionLoss, assertFixtureInventory, captureExpandedTurnProcessAria, captureStableAria,
