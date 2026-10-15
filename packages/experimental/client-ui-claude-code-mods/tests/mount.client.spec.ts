@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { Context, Service } from '@deepseek-ai/cordis'
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { SurfaceSnapshot } from '@deepseek-ai/dsh-experimental-claude-code-mods/types'
+import type { SurfaceSnapshot } from '@berry-ai/harness-experimental-claude-code-mods/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { RemoteError, type TypertRemoteContribution } from '@berry-ai/harness-typert-protocol'
 import { expect, it, vi } from 'vitest'
@@ -11,7 +11,7 @@ import { apply as hostApply } from '../src/index.ts'
 import { Band, type BandInjected } from '../src/client/Band.tsx'
 import { inject, mountModsBand } from '../src/client/mount.ts'
 
-const REMOTE: TypertRemoteContribution = { package: '@deepseek-ai/dsh-experimental-claude-code-mods', descriptors: [] }
+const REMOTE: TypertRemoteContribution = { package: '@berry-ai/harness-experimental-claude-code-mods', descriptors: [] }
 
 /** Narrow the erased registry payload before exercising the band's injected face. */
 function assertBandInjected(value: Record<string, unknown>): asserts value is Record<string, unknown> & BandInjected {

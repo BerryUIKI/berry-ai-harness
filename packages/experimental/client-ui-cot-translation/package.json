@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-client-ui-cot-translation",
+  "name": "@berry-ai/harness-experimental-client-ui-cot-translation",
   "description": "Optional machine translation of expanded reasoning, preserving original Session text",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -58,7 +58,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
-    "@deepseek-ai/dsh-experimental-translator": "workspace:*",
+    "@berry-ai/harness-experimental-translator": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-api-session-controller": "workspace:*"
   },
@@ -70,7 +70,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
-    "@deepseek-ai/dsh-experimental-translator": "workspace:*",
+    "@berry-ai/harness-experimental-translator": "workspace:*",
     "@berry-ai/harness-api-remotes": "workspace:*",
     "@deepseek-ai/dsh-client-locale": "workspace:*",
     "@deepseek-ai/dsh-client-store": "workspace:*",

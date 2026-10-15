@@ -3,7 +3,7 @@ description: "通过已安装的 Cua Driver MCP 可执行程序和独占提供�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp
+# @berry-ai/harness-experimental-computer-use-cua-driver-mcp
 
 [English](README.md) | 中文
 
@@ -33,7 +33,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-computer-use'
-- name: '@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp'
+- name: '@berry-ai/harness-experimental-computer-use-cua-driver-mcp'
   config:
     command: cua-driver
     args: [mcp]

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-translator",
+  "name": "@berry-ai/harness-experimental-translator",
   "description": "Machine translation with reusable Session results",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

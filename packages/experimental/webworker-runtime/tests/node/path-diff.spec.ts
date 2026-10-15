@@ -14,7 +14,7 @@
  */
 import { expect, test } from 'vitest'
 import { posix as nodePosix } from 'node:path'
-import * as shim from '@deepseek-ai/dsh-experimental-webworker-runtime/src/node/builtin_modules/implemented/path.ts'
+import * as shim from '@berry-ai/harness-experimental-webworker-runtime/src/node/builtin_modules/implemented/path.ts'
 
 const CASES = [
   '', '.', '..', '/', '//', '///', 'a', '/a', 'a/', '/a/', 'a/b', '/a/b/c', 'a//b', '/a//b/',

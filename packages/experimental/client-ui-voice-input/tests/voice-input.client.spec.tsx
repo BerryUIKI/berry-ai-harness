@@ -6,7 +6,7 @@ import { bindSnapshotSelector, makeTranslate, RemoteError } from '@berry-ai/harn
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { SpeechPreparationState, SpeechProviderId, Transcript } from '@deepseek-ai/dsh-experimental-speech-to-text/types'
+import type { SpeechPreparationState, SpeechProviderId, Transcript } from '@berry-ai/harness-experimental-speech-to-text/types'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import { VoiceInput, type VoiceInputProps } from '../src/client/VoiceInput.tsx'
 import { RecordingError, Recording } from '../src/client/audio.ts'

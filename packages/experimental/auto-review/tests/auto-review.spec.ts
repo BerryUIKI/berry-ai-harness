@@ -43,7 +43,7 @@ import ToolRuntime, {
   type ToolExecutionToken,
 } from '@berry-ai/harness-tools'
 import ApprovalService, { setApprovalPolicy, type ApprovalOutcome } from '@berry-ai/harness-user-approval'
-import * as AutoReview from '@deepseek-ai/dsh-experimental-auto-review'
+import * as AutoReview from '@berry-ai/harness-experimental-auto-review'
 
 const EXPECTED_REVIEW_POLICY = `REVIEW_POLICY
 You are the final authorization reviewer for exactly one pending tool call. Your decision replaces human approval for this call. If you allow it, the call executes immediately with full host access and no later confirmation.

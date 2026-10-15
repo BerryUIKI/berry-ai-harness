@@ -2,7 +2,7 @@
  * Generic-job adaptation for background terminal sends: the registry pull
  * source over the backend's consuming send reader.
  *
- * @module @deepseek-ai/dsh-tool-terminal/background
+ * @module @berry-ai/harness-tool-terminal/background
  */
 
 import type { JobOutputSource } from '@berry-ai/harness-jobs'

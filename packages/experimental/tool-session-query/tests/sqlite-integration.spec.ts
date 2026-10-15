@@ -17,7 +17,7 @@ import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl
 import SqliteSessionQueryEngine from '@berry-ai/harness-session-query-sqlite'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
-import * as ToolSessionQuery from '@deepseek-ai/dsh-tool-session-query'
+import * as ToolSessionQuery from '@berry-ai/harness-tool-session-query'
 
 const temporaryDirectories: string[] = []
 const contexts: Context[] = []

@@ -16,4 +16,4 @@
           config:
             shellDialect: pwsh
         - id: optional-tool-terminal
-          name: '@deepseek-ai/dsh-tool-terminal'
+          name: '@berry-ai/harness-tool-terminal'

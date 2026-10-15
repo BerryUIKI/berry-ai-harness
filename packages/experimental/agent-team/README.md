@@ -3,7 +3,7 @@ description: "Run named teammates with direct inbox messages and a durable share
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-agent-team
+# @berry-ai/harness-experimental-agent-team
 
 English | [中文](README.zh.md)
 
@@ -25,7 +25,7 @@ English | [中文](README.zh.md)
 <a id="use-this-package"></a>
 ## Use this package
 
-Add this package when one agent needs named helpers in a shared working directory, direct peer messages, and durable roster and task state. Mount it with `@deepseek-ai/dsh-experimental-tool-agent-team` to expose the model tools.
+Add this package when one agent needs named helpers in a shared working directory, direct peer messages, and durable roster and task state. Mount it with `@berry-ai/harness-experimental-tool-agent-team` to expose the model tools.
 
 ### When to choose it
 
@@ -40,8 +40,8 @@ The smallest addition to an existing composition is durable session storage plus
 ```yaml
 # smallest team setup — durable storage plus both Team packages
 - name: '@berry-ai/harness-session-persistence-jsonl'
-- name: '@deepseek-ai/dsh-experimental-agent-team'
-- name: '@deepseek-ai/dsh-experimental-tool-agent-team'
+- name: '@berry-ai/harness-experimental-agent-team'
+- name: '@berry-ai/harness-experimental-tool-agent-team'
 ```
 
 With the tools installed, the model does the rest on request — for example, "create a teammate named reviewer to check the diff", then "send reviewer the change summary". All limits are optional and validated at startup:
@@ -185,7 +185,7 @@ Each peer message is a user-role message prefixed with its sender name, followed
 
 #### Token effect
 
-Each peer delivery adds the sender prefix plus message content to the target history. Task and roster mutations add no model tokens; their model-facing representation belongs to `@deepseek-ai/dsh-experimental-tool-agent-team` results.
+Each peer delivery adds the sender prefix plus message content to the target history. Task and roster mutations add no model tokens; their model-facing representation belongs to `@berry-ai/harness-experimental-tool-agent-team` results.
 
 #### KV Cache effect
 

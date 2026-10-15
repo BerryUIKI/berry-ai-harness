@@ -128,7 +128,7 @@ export async function paidFixture(cleanups: Array<() => Promise<void>>, options:
     { id: 'account-custom-id', name: '@berry-ai/harness-llm-deepseek-account', disabled: !withNativeOwners, config: {
       baseURL, models: options.accountModels ?? [{ id: 'deepseek-flash', name: 'Another arbitrary Flash version' }],
     } },
-    { id: 'translator', name: '@deepseek-ai/dsh-experimental-translator', config: translator },
+    { id: 'translator', name: '@berry-ai/harness-experimental-translator', config: translator },
     ...options.withSessionQuery === true ? [
       { id: 'query', name: '@berry-ai/harness-session-query-sqlite', config: { path: join(root, 'query.sqlite'), openAt: 'never' } },
     ] : [],
@@ -142,7 +142,7 @@ export async function paidFixture(cleanups: Array<() => Promise<void>>, options:
     ['@berry-ai/harness-llm', LlmRuntime], ['@berry-ai/harness-session', SessionStore],
     ['@berry-ai/harness-session-persistence-jsonl', JsonlPersistence], ['@berry-ai/harness-session-query-sqlite', SqliteSessionQuery],
     [options.officialName ?? '@berry-ai/harness-llm-deepseek-api-key', Official],
-    ['@berry-ai/harness-llm-deepseek-account', Account], ['@deepseek-ai/dsh-experimental-translator', Translator],
+    ['@berry-ai/harness-llm-deepseek-account', Account], ['@berry-ai/harness-experimental-translator', Translator],
     ['@berry-ai/harness-deepseek-llm-api-extensions', DeepSeekLlmApiExtensionRegistry],
     ['@berry-ai/harness-session-log-deepseek', SessionLogDeepSeek],
   ])

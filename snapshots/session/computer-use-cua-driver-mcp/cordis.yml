@@ -30,7 +30,7 @@
     - id: computer-use
       name: '@berry-ai/harness-computer-use'
     - id: computer-use-cua-driver-mcp
-      name: '@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp'
+      name: '@berry-ai/harness-experimental-computer-use-cua-driver-mcp'
       config:
         command: !!js process.execPath
         args: [driver.mjs, .dsh/computer-use-fixture]

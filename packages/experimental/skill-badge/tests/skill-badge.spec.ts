@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it } from 'vitest'
 import SkillRegistry from '@berry-ai/harness-skill'
-import * as SkillBadge from '@deepseek-ai/dsh-skill-badge'
+import * as SkillBadge from '@berry-ai/harness-skill-badge'
 
 describe('dsh-skill-badge', () => {
   it('registers and disposes the bundled badge skill', async () => {

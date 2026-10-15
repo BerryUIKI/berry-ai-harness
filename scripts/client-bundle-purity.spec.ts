@@ -192,7 +192,7 @@ describe('client bundle purity gate', () => {
 })
 
 describe('client bundle experimental input isolation', () => {
-  const experimental = '@deepseek-ai/dsh-experimental-client-ui-agent-team'
+  const experimental = '@berry-ai/harness-experimental-client-ui-agent-team'
 
   function fixture() {
     const root = mkdtempSync(join(tmpdir(), 'dsh-client-inputs-'))
@@ -271,7 +271,7 @@ describe('client bundle experimental input isolation', () => {
 
   it.each(['static', 'dynamic'] as const)('keeps retained-name experimental %s inputs outside ordinary artifacts', async (kind) => {
     const { root, owner, entry, prototype } = fixture()
-    const name = '@deepseek-ai/dsh-tool-terminal'
+    const name = '@berry-ai/harness-tool-terminal'
     writeFileSync(join(root, 'prototype/package.json'), JSON.stringify({ name, type: 'module' }))
     writeFileSync(entry, `export { marker } from ${JSON.stringify(importPath(entry, prototype))}\n`)
     await expect(bundle(owner, config(kind))).rejects.toThrow(/client bundle isolation.*experimental/)

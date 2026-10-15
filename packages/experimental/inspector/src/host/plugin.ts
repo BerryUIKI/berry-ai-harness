@@ -68,7 +68,7 @@ export async function apply(ctx: Context, config: HostPluginConfig): Promise<voi
         })),
       }))
       const assets = serveStatic(fileURLToPath(new URL('./lib/devtools/',
-        import.meta.resolve('@deepseek-ai/dsh-experimental-inspector/package.json'))), {
+        import.meta.resolve('@berry-ai/harness-experimental-inspector/package.json'))), {
         index: false, redirect: false, fallthrough: true,
         setHeaders: (res) => { res.setHeader('X-Content-Type-Options', 'nosniff') },
       })

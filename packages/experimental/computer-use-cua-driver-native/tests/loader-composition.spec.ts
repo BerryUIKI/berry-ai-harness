@@ -69,7 +69,7 @@ it('loads from cordis.yml and logs the native screenshot before the next model r
     ['@berry-ai/harness-agent-loop', AgentLoop],
     ['@berry-ai/harness-attachment-local', LocalAttachmentStore],
     ['@berry-ai/harness-computer-use', ComputerUseRegistry],
-    ['@deepseek-ai/dsh-experimental-computer-use-cua-driver-native', NativeProvider],
+    ['@berry-ai/harness-experimental-computer-use-cua-driver-native', NativeProvider],
   ])
   await writeFile(configPath, [...modules.keys()].flatMap(name => [
     `- name: '${name}'`,

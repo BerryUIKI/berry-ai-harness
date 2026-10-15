@@ -2,8 +2,8 @@
 import { Context } from '@deepseek-ai/cordis'
 import type { RemoteStreamOptions } from '@berry-ai/harness-api-gateway/client'
 import { RemoteStreamCarrierError } from '@berry-ai/harness-api-gateway/client'
-import type { SpeechProviderId } from '@deepseek-ai/dsh-experimental-speech-to-text/types'
-import type { SpeechCatalog } from '@deepseek-ai/dsh-experimental-api-speech-to-text/types'
+import type { SpeechProviderId } from '@berry-ai/harness-experimental-speech-to-text/types'
+import type { SpeechCatalog } from '@berry-ai/harness-experimental-api-speech-to-text/types'
 import { expect, it, vi, onTestFinished } from 'vitest'
 import { observeReadiness } from '../src/client/readiness.ts'
 

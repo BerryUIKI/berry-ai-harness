@@ -27,7 +27,7 @@ import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import WorkingDirectory from '@berry-ai/harness-working-directory'
 import * as ToolWorkingDirectory from '@berry-ai/harness-tool-working-directory'
-import * as ToolWorktree from '@deepseek-ai/dsh-experimental-tool-worktree'
+import * as ToolWorktree from '@berry-ai/harness-experimental-tool-worktree'
 import { AttachmentStore } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentLimits, ImageAttachmentRef, SaveImageAttachment, StoredImageAttachment } from '@berry-ai/harness-attachment'
 import UserQuestionService from '@berry-ai/harness-user-questions'
@@ -54,19 +54,19 @@ import * as ToolFs from '@berry-ai/harness-tool-fs'
 import * as ToolFsSearch from '@berry-ai/harness-tool-fs-search'
 import * as ToolStrReplaceEditor from '@berry-ai/harness-tool-str-replace-editor'
 import TerminalSessionService from '@berry-ai/harness-terminal'
-import * as ToolPty from '@deepseek-ai/dsh-tool-terminal'
+import * as ToolPty from '@berry-ai/harness-tool-terminal'
 import * as ToolGoal from '@berry-ai/harness-tool-goal'
 import * as ToolSchedule from '@berry-ai/harness-tool-schedule'
 import type ScheduleService from '@berry-ai/harness-schedule'
 import Lsp from '@berry-ai/harness-lsp'
 import * as ToolLsp from '@berry-ai/harness-tool-lsp'
 import * as ToolSkill from '@berry-ai/harness-tool-skill'
-import * as ToolSessionQuery from '@deepseek-ai/dsh-tool-session-query'
+import * as ToolSessionQuery from '@berry-ai/harness-tool-session-query'
 import * as ToolJobs from '@berry-ai/harness-tool-jobs'
 import BrowserUseRegistry from '@berry-ai/harness-browser-use'
-import * as StagehandBrowserTools from '@deepseek-ai/dsh-experimental-browser-use-stagehand-native'
-import type TeamService from '@deepseek-ai/dsh-experimental-agent-team'
-import * as ToolTeam from '@deepseek-ai/dsh-experimental-tool-agent-team'
+import * as StagehandBrowserTools from '@berry-ai/harness-experimental-browser-use-stagehand-native'
+import type TeamService from '@berry-ai/harness-experimental-agent-team'
+import * as ToolTeam from '@berry-ai/harness-experimental-tool-agent-team'
 import * as ToolTodo from '@berry-ai/harness-tool-todo'
 import type PluginManager from '@berry-ai/harness-plugin-manager'
 import * as PluginManagerTools from '@berry-ai/harness-plugin-manager/tools'
@@ -77,7 +77,7 @@ import { registerListSubagentModels } from '../packages/subagent/tool-subagent/s
 import * as ToolWeb from '@berry-ai/harness-tool-web'
 import WorkflowEngine from '@berry-ai/harness-workflow'
 import type { WorkflowRun, WorkflowStartRequest } from '@berry-ai/harness-workflow'
-import * as ToolRalph from '@deepseek-ai/dsh-tool-ralph'
+import * as ToolRalph from '@berry-ai/harness-tool-ralph'
 import * as ToolWorkflow from '@berry-ai/harness-tool-workflow'
 import * as ToolWorkspaceDependencies from '@berry-ai/harness-tool-workspace-dependencies'
 import { githubSlug } from './verify-md-links.ts'
@@ -214,7 +214,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
     },
   },
   {
-    pkg: '@deepseek-ai/dsh-experimental-browser-use-stagehand-native',
+    pkg: '@berry-ai/harness-experimental-browser-use-stagehand-native',
     dir: 'browser-use-stagehand-native',
     source: 'packages/experimental/browser-use-stagehand-native/src/index.ts',
     requires: ['ctx.browserUse', 'ctx.agents', 'ctx.tools', 'ctx.systemPrompt'],
@@ -400,7 +400,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'glob and grep are unconditional discovery tools that spawn the packaged ripgrep binary (`@vscode/ripgrep`) through ctx.subprocess as ordinary foreground calls (never background jobs) — no host `rg` install and no shell layer. The catalog uses `sampleOverCapGlobResults: true`; deployments must choose that behavior explicitly. Capped results save the complete formatted list through the optional ctx.spillStore backend; returned locators are follow-up-readable/searchable when the backend exposes local paths in co-located deployments.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-terminal',
+    pkg: '@berry-ai/harness-tool-terminal',
     dir: 'tool-terminal',
     source: 'packages/experimental/tool-terminal/src/index.ts',
     requires: ['ctx.workingDirectory', 'ctx.tools', 'ctx.terminals', 'ctx.systemPrompt', 'ctx.jobs at call time for run_in_background'],
@@ -460,7 +460,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'The lsp tool keeps provider selection and language-server subprocesses behind ctx.lsp, so its model-visible schema stays stable across providers. Requires a registered provider (e.g. `@berry-ai/harness-lsp-stdio`) at runtime; without one, a query returns the structured `LSP_UNAVAILABLE` error rather than changing the schema.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-ralph',
+    pkg: '@berry-ai/harness-tool-ralph',
     dir: 'tool-ralph',
     source: 'packages/experimental/tool-ralph/src/index.ts',
     requires: ['ctx.tools', 'ctx.workflowEngine', 'ctx.subagents', 'ctx.systemPrompt', 'a calling Agent (exec.agent parents every fresh round)'],
@@ -491,7 +491,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
     },
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-session-query',
+    pkg: '@berry-ai/harness-tool-session-query',
     dir: 'tool-session-query',
     source: 'packages/experimental/tool-session-query/src/index.ts',
     requires: ['ctx.tools', 'ctx.systemPrompt', 'ctx.sessionQuery', 'a calling Agent for workspace authority'],
@@ -559,7 +559,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'The kind-agnostic background-job controller: background bash commands and PTY sends are read, listed, and killed through the same three tools. Loading the plugin attaches the controller that arms producers\' `ctx.jobs.start()`.',
   },
   {
-    pkg: '@deepseek-ai/dsh-experimental-tool-agent-team',
+    pkg: '@berry-ai/harness-experimental-tool-agent-team',
     dir: 'tool-agent-team',
     source: 'packages/experimental/tool-agent-team/src/index.ts',
     requires: ['ctx.tools', 'ctx.systemPrompt', 'ctx.agentTeams', 'an exact live Team member Agent'],
@@ -620,7 +620,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
     note: 'Reads or changes the calling Session directory. Existing shells and processes retain their own directories; origin metadata and permission roots stay fixed.',
   },
   {
-    pkg: '@deepseek-ai/dsh-experimental-tool-worktree',
+    pkg: '@berry-ai/harness-experimental-tool-worktree',
     dir: 'tool-worktree',
     source: 'packages/experimental/tool-worktree/src/index.ts',
     requires: ['ctx.tools', 'ctx.worktrees', 'a calling Agent'],

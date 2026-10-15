@@ -1,5 +1,5 @@
 /** JSON-safe inputs and results of the experimental speech Remote namespace. */
-import type { SpeechProviderId, SpeechSnapshot } from '@deepseek-ai/dsh-experimental-speech-to-text/types'
+import type { SpeechProviderId, SpeechSnapshot } from '@berry-ai/harness-experimental-speech-to-text/types'
 import type {} from '@berry-ai/harness-typert-protocol'
 
 declare module '@berry-ai/harness-typert-protocol' {

@@ -4,7 +4,7 @@ import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   TeamMemberProjection,
   TeamTaskView as TeamTask,
-} from '@deepseek-ai/dsh-experimental-agent-team/client'
+} from '@berry-ai/harness-experimental-agent-team/client'
 import type {} from '@berry-ai/harness-api-session-controller/client'
 import {
   IconChevronDownOutlineRegular,

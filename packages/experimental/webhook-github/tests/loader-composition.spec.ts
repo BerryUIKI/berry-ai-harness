@@ -30,7 +30,7 @@ describe('real Loader composition', () => {
       '  config:',
       "    host: '127.0.0.1'",
       '    port: 0',
-      "- name: '@deepseek-ai/dsh-webhook-github'",
+      "- name: '@berry-ai/harness-webhook-github'",
       '  config:',
       '    source: loader',
       '    path: /github',
@@ -56,7 +56,7 @@ describe('real Loader composition', () => {
     const modules = new Map<string, unknown>([
       ['fixture-dependencies', dependencies],
       ['@berry-ai/harness-host-webserver', WebServer],
-      ['@deepseek-ai/dsh-webhook-github', GitHubAdapter],
+      ['@berry-ai/harness-webhook-github', GitHubAdapter],
     ])
     context.loader.internal = {
       version: 'v2',

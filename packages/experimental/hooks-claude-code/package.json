@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-hooks-claude-code",
+  "name": "@berry-ai/harness-hooks-claude-code",
   "description": "Bridge plugin: run a Claude Code hooks.json / settings hook config on the DeepSeek Harness interception seams",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -31,7 +31,7 @@
   },
   "peerDependencies": {
     "@berry-ai/harness-agent": "workspace:*",
-    "@deepseek-ai/dsh-hook-protocol": "workspace:*",
+    "@berry-ai/harness-hook-protocol": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*",
@@ -47,7 +47,7 @@
     "@berry-ai/harness-shell": "workspace:*",
     "@berry-ai/harness-bash-local": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
-    "@deepseek-ai/dsh-hook-protocol": "workspace:*",
+    "@berry-ai/harness-hook-protocol": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-persistence-jsonl": "workspace:*",

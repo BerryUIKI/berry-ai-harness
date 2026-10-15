@@ -73,16 +73,16 @@ it('loads both tarballs through plain Node and mounts their base image and overl
     import assert from 'node:assert/strict'
     import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
     import { fileURLToPath } from 'node:url'
-    import * as packer from '@deepseek-ai/dsh-experimental-webworker-packer'
-    import * as runtime from '@deepseek-ai/dsh-experimental-webworker-runtime'
-    import * as client from '@deepseek-ai/dsh-experimental-webworker-runtime/client'
+    import * as packer from '@berry-ai/harness-experimental-webworker-packer'
+    import * as runtime from '@berry-ai/harness-experimental-webworker-runtime'
+    import * as client from '@berry-ai/harness-experimental-webworker-runtime/client'
     import { sessionFormatCatalog } from '@berry-ai/harness-session-format-catalog'
     for (const name of ['webworker-packer', 'webworker-runtime']) {
       assert.equal(import.meta.resolve('@deepseek-ai/dsh-experimental-' + name),
         new URL('./node_modules/@deepseek-ai/dsh-experimental-' + name + '/lib/index.js', import.meta.url).href)
     }
     assert.equal(typeof client.connectWorkerHost, 'function')
-    const worker = fileURLToPath(import.meta.resolve('@deepseek-ai/dsh-experimental-webworker-runtime/worker'))
+    const worker = fileURLToPath(import.meta.resolve('@berry-ai/harness-experimental-webworker-runtime/worker'))
     assert.ok(existsSync(worker))
     assert.equal(readFileSync(worker, 'utf8').match(/^import[ \\t]/m), null)
     const base = packer.packVfsImage({ config: '[]\\n', profile: 'packed-consumer', workspaces: new Map(), resolveFrom: process.cwd(), entries: [] })

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-tool-worktree",
+  "name": "@berry-ai/harness-experimental-tool-worktree",
   "description": "Model tool that creates and enters a new Git worktree",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -34,7 +34,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-tools": "workspace:*",
-    "@deepseek-ai/dsh-experimental-worktree": "workspace:*"
+    "@berry-ai/harness-experimental-worktree": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -53,7 +53,7 @@
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-working-directory": "workspace:*",
-    "@deepseek-ai/dsh-experimental-worktree": "workspace:*",
+    "@berry-ai/harness-experimental-worktree": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*"
   },
   "icon": "./icon.svg",
@@ -63,6 +63,6 @@
     }
   },
   "dependencies": {
-    "@deepseek-ai/dsh-experimental-worktree": "workspace:*"
+    "@berry-ai/harness-experimental-worktree": "workspace:*"
   }
 }

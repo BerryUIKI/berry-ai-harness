@@ -1,7 +1,7 @@
 /**
  * Six model-facing persistent terminal tools. Owner identity comes from the exact
  * tool execution Agent; generic `ctx.jobs` owns background ids and collection.
- * @module @deepseek-ai/dsh-tool-terminal
+ * @module @berry-ai/harness-tool-terminal
  */
 
 import type {} from '@berry-ai/harness-working-directory'

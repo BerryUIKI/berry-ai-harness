@@ -3,7 +3,7 @@ description: "Operate Chromium through Chrome DevTools MCP with separate browser
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp
+# @berry-ai/harness-experimental-browser-use-chrome-devtools-mcp
 
 English | [中文](README.zh.md)
 
@@ -29,7 +29,7 @@ Mount both entries before creating or resuming a Session, in a profile compositi
 
 ```yaml
 - name: '@berry-ai/harness-browser-use'
-- name: '@deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp'
+- name: '@berry-ai/harness-experimental-browser-use-chrome-devtools-mcp'
   config:
     mode: launch
     headless: true

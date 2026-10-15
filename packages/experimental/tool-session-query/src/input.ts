@@ -1,7 +1,7 @@
 /**
  * Model argument schemas, normalization, and filter construction.
  *
- * @module @deepseek-ai/dsh-tool-session-query/input
+ * @module @berry-ai/harness-tool-session-query/input
  */
 
 import {

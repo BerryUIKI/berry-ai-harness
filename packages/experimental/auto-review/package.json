@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-auto-review",
+  "name": "@berry-ai/harness-experimental-auto-review",
   "description": "Per-tool LLM authorization review for the DeepSeek Harness Auto permission preset",
   "version": "0.2.1-alpha.2",
   "icon": "./icon.svg",

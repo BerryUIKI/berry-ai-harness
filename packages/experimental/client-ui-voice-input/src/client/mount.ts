@@ -1,7 +1,7 @@
 /** Source-safe lifecycle for the optional speech Remote and browser UI. */
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-api-remotes/client'
-import type {} from '@deepseek-ai/dsh-experimental-api-speech-to-text/remote'
+import type {} from '@berry-ai/harness-experimental-api-speech-to-text/remote'
 import type {} from '@deepseek-ai/dsh-client-locale/client'
 import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
@@ -25,7 +25,7 @@ function registerUi(ctx: Context): void {
   ctx.effect(() => readiness.dispose)
   ctx.effect(() => async () => { await Promise.all([...recordings].map(recording => recording.dispose())) })
   const actions: VoiceInputInjected = {
-    openSettings: () => { ctx.pluginNavigation.openBundle('@deepseek-ai/dsh-experimental-voice-input-bundle') },
+    openSettings: () => { ctx.pluginNavigation.openBundle('@berry-ai/harness-experimental-voice-input-bundle') },
     hooks: { speechReadiness: readiness.state, microphoneDevice: microphone },
     selectMicrophone: (device) => { microphone.set(device) },
     createRecording: () => {
@@ -46,10 +46,10 @@ function registerUi(ctx: Context): void {
     name: 'conversation.input.activity', locale: NS, inject: () => actions,
   }, VoiceInput))
   ctx.slots.inject('plugins.bundle.config', () => ctx.slots.register({ name: 'plugins.bundle.config',
-    key: '@deepseek-ai/dsh-experimental-voice-input-bundle', locale: NS, inject: () => actions,
+    key: '@berry-ai/harness-experimental-voice-input-bundle', locale: NS, inject: () => actions,
   }, VoicePreparation))
   ctx.slots.inject('plugins.bundle.activation', () => ctx.slots.register({ name: 'plugins.bundle.activation',
-    key: '@deepseek-ai/dsh-experimental-voice-input-bundle', locale: NS, inject: () => actions,
+    key: '@berry-ai/harness-experimental-voice-input-bundle', locale: NS, inject: () => actions,
   }, VoiceSetupPrompt))
 
 }

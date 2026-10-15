@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-tool-agent-team",
+  "name": "@berry-ai/harness-experimental-tool-agent-team",
   "description": "Scoped model-facing Agent Teams tools over ctx.agentTeams",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -35,7 +35,7 @@
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-experimental-agent-team": "workspace:*",
+    "@berry-ai/harness-experimental-agent-team": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
@@ -53,7 +53,7 @@
     "@berry-ai/harness-subagent-spawn-in-process": "workspace:*",
     "@berry-ai/harness-tool-subagent-control": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-experimental-agent-team": "workspace:*",
+    "@berry-ai/harness-experimental-agent-team": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",

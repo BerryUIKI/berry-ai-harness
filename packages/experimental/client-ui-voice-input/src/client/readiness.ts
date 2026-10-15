@@ -2,8 +2,8 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { RemoteStreamCarrierError } from '@berry-ai/harness-api-gateway/client'
 import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { SpeechCatalog } from '@deepseek-ai/dsh-experimental-api-speech-to-text/types'
-import type {} from '@deepseek-ai/dsh-experimental-api-speech-to-text/remote'
+import type { SpeechCatalog } from '@berry-ai/harness-experimental-api-speech-to-text/types'
+import type {} from '@berry-ai/harness-experimental-api-speech-to-text/remote'
 
 /** Complete provider state, with a separate transport failure that never rewrites Host readiness. */
 export interface SpeechReadiness {

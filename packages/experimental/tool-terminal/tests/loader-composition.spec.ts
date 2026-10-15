@@ -20,7 +20,7 @@ import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import * as TerminalLocal from '@berry-ai/harness-terminal-bash'
-import * as ToolPty from '@deepseek-ai/dsh-tool-terminal'
+import * as ToolPty from '@berry-ai/harness-tool-terminal'
 
 let root: string | undefined
 let context: Context | undefined
@@ -85,7 +85,7 @@ suite('terminal real Loader composition through cordis.yml', () => {
       '    handoffGraceMs: 250',
       '    timeoutMs: 2000',
       '    disposeGraceMs: 500',
-      "- name: '@deepseek-ai/dsh-tool-terminal'",
+      "- name: '@berry-ai/harness-tool-terminal'",
       '',
     ].join('\n'))
 
@@ -105,7 +105,7 @@ suite('terminal real Loader composition through cordis.yml', () => {
       ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
       ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],
       ['@berry-ai/harness-terminal-bash', TerminalLocal],
-      ['@deepseek-ai/dsh-tool-terminal', ToolPty],
+      ['@berry-ai/harness-tool-terminal', ToolPty],
     ])
     context.loader.internal = {
       version: 'v2',

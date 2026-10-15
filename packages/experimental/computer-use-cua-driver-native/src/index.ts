@@ -1,6 +1,6 @@
 /**
  * Computer use through the in-process Cua Driver native SDK and its own tools.
- * @module @deepseek-ai/dsh-experimental-computer-use-cua-driver-native
+ * @module @berry-ai/harness-experimental-computer-use-cua-driver-native
  */
 
 import type { Context } from '@deepseek-ai/cordis'

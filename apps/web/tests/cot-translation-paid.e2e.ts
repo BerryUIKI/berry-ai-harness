@@ -6,7 +6,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type {} from '@berry-ai/harness-deepseek-account'
-import type {} from '@deepseek-ai/dsh-experimental-translator/types'
+import type {} from '@berry-ai/harness-experimental-translator/types'
 import { pluginRecordOf } from '@berry-ai/harness-session'
 import type { SessionEvent, SessionId } from '@berry-ai/harness-session/types'
 import { chromium, type Browser } from 'playwright'
@@ -19,7 +19,7 @@ import {
   connectFreshWorkspaceZh, expandOwningTurnProcess, PLUGIN_TOGGLE_SETTLE_MS, saveFailureShot, ZH_BROWSER_LOCALE,
 } from './support.ts'
 
-const BUNDLE_NAME = '@deepseek-ai/dsh-experimental-cot-translation-bundle'
+const BUNDLE_NAME = '@berry-ai/harness-experimental-cot-translation-bundle'
 const BUNDLE = fileURLToPath(new URL('../../../packages/experimental/cot-translation-bundle', import.meta.url))
 const FIXTURE = fileURLToPath(new URL('../../../snapshots/web/lifecycle-chrome/session.v4.jsonl', import.meta.url))
 const EXPECTED = fileURLToPath(new URL('./expected/cot-translation-paid', import.meta.url))

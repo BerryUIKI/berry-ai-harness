@@ -9,7 +9,7 @@ import SessionTitleService, {
   SessionTitleProviderId,
   type SessionTitleUserMessage,
 } from '@berry-ai/harness-session-title'
-import * as providerPlugin from '@deepseek-ai/dsh-session-title-all-prompts-llm'
+import * as providerPlugin from '@berry-ai/harness-session-title-all-prompts-llm'
 
 class RecordingAdapter extends LlmAdapter {
   readonly requests: GenerateOptions[] = []

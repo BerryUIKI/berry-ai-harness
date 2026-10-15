@@ -3,7 +3,7 @@ description: "通过 Chrome DevTools MCP 操作 Chromium，为每个活动 Sessi
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp
+# @berry-ai/harness-experimental-browser-use-chrome-devtools-mcp
 
 [English](README.md) | 中文
 
@@ -29,7 +29,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-browser-use'
-- name: '@deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp'
+- name: '@berry-ai/harness-experimental-browser-use-chrome-devtools-mcp'
   config:
     mode: launch
     headless: true

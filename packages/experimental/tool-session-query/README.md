@@ -3,7 +3,7 @@ description: "Workspace-authorized model-facing session history tools for agent 
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-session-query
+# @berry-ai/harness-tool-session-query
 
 English | [中文](README.zh.md)
 

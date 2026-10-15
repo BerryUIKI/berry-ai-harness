@@ -3,7 +3,7 @@ description: "Keep shell processes alive across tool calls."
 kind: "package-bundle"
 ---
 
-# @deepseek-ai/dsh-experimental-terminal-bundle
+# @berry-ai/harness-experimental-terminal-bundle
 
 English | [中文](README.zh.md)
 

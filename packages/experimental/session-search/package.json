@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-session-search",
+  "name": "@berry-ai/harness-experimental-session-search",
   "description": "Give Agents tools to search and read earlier sessions from the current workspace.",
   "version": "0.2.1-alpha.2",
   "icon": "./icon.svg",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@berry-ai/harness-session-query-sqlite": "workspace:*",
-    "@deepseek-ai/dsh-tool-session-query": "workspace:*"
+    "@berry-ai/harness-tool-session-query": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"

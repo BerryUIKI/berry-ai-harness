@@ -6,13 +6,13 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { promisify } from 'node:util'
 import { FiberState } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-experimental-worktree'
+import type {} from '@berry-ai/harness-experimental-worktree'
 import { chromium } from 'playwright'
 import { expect, it, onTestFailed, onTestFinished } from 'vitest'
 import { launchWebScaffold, watchConsole } from './scaffold.ts'
 import { connectFreshWorkspace, newEnglishPage, PLUGIN_TOGGLE_SETTLE_MS, saveFailureShot } from './support.ts'
 
-const BUNDLE = '@deepseek-ai/dsh-experimental-tool-worktree'
+const BUNDLE = '@berry-ai/harness-experimental-tool-worktree'
 const exec = promisify(execFile)
 
 it('persists the Git Worktrees switch and removes its capability while retaining checkouts', async () => {

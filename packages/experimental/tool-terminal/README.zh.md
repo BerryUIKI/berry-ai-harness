@@ -3,7 +3,7 @@ description: "面向需要跨调用终端状态的 agent（智能体）的 6 个
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-terminal
+# @berry-ai/harness-tool-terminal
 
 [English](README.md) | 中文
 
@@ -45,7 +45,7 @@ kind: "package-reference"
 ```yaml
 - name: '@berry-ai/harness-terminal'
 - name: '@berry-ai/harness-terminal-bash'
-- name: '@deepseek-ai/dsh-tool-terminal'
+- name: '@berry-ai/harness-tool-terminal'
 ```
 
 工具需要 `ctx.terminals`——必须挂载一个后端——以及用于指引章节的系统提示词服务。后台发送还额外要求任务服务及其面向模型的控制器（`@berry-ai/harness-tool-jobs`）。

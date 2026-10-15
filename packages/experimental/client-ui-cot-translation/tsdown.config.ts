@@ -1,3 +1,3 @@
 import { clientBundle } from '../../client/tsdown.client.ts'
 
-export default clientBundle('@deepseek-ai/dsh-experimental-client-ui-cot-translation', ['lib/types/index.js'], { hostPhase: true })
+export default clientBundle('@berry-ai/harness-experimental-client-ui-cot-translation', ['lib/types/index.js'], { hostPhase: true })

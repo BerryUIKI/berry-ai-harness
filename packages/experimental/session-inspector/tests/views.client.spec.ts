@@ -44,7 +44,7 @@ async function fixture(services?: { sessions: object; uiConversation: object; ui
   return { ctx, tabs, declare }
 }
 
-const ID = '@deepseek-ai/dsh-experimental-session-inspector'
+const ID = '@berry-ai/harness-experimental-session-inspector'
 const KIND = 'session-inspector-log'
 
 function inspectorInjector(ctx: Context) {

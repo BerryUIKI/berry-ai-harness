@@ -1,12 +1,12 @@
 /**
  * Stagehand browser tools with one native browser runtime per live Session.
- * @module @deepseek-ai/dsh-experimental-browser-use-stagehand-native
+ * @module @berry-ai/harness-experimental-browser-use-stagehand-native
  */
 
 import type { Context } from '@deepseek-ai/cordis'
 import Schema from '@deepseek-ai/schemastery'
 import { BrowserUseProviderName } from '@berry-ai/harness-browser-use/brand'
-import { SessionResources } from '@deepseek-ai/dsh-experimental-browser-use-runtime'
+import { SessionResources } from '@berry-ai/harness-experimental-browser-use-runtime'
 import { createMcpToolDefinition } from '@berry-ai/harness-mcp-client'
 import { z } from 'zod'
 import { browserInputs, stagehandModelSchema, StagehandDrainError } from './native.ts'

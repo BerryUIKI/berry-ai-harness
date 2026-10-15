@@ -1,7 +1,7 @@
 /** Model tool for creating and entering a new Git worktree through the shared runtime. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-experimental-worktree'
+import type {} from '@berry-ai/harness-experimental-worktree'
 import { defineTool } from '@berry-ai/harness-tools'
 
 /** Cordis plugin name. */

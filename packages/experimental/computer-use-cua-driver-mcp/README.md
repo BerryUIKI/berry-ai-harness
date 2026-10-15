@@ -3,7 +3,7 @@ description: "Configure experimental local computer use with an installed Cua Dr
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp
+# @berry-ai/harness-experimental-computer-use-cua-driver-mcp
 
 English | [中文](README.zh.md)
 
@@ -33,7 +33,7 @@ Add these rows to a composition that already provides tools and system-prompt se
 
 ```yaml
 - name: '@berry-ai/harness-computer-use'
-- name: '@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp'
+- name: '@berry-ai/harness-experimental-computer-use-cua-driver-mcp'
   config:
     command: cua-driver
     args: [mcp]

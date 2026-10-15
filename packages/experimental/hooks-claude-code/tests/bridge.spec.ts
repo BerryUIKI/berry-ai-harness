@@ -14,7 +14,7 @@ import { LocalBashExecutor } from '@berry-ai/harness-bash-local'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import { scopeTarget } from '@berry-ai/harness-scope'
 import SubagentRuntime, { SubagentRunId } from '@berry-ai/harness-subagent'
-import * as HooksClaude from '@deepseek-ai/dsh-hooks-claude-code'
+import * as HooksClaude from '@berry-ai/harness-hooks-claude-code'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 
 /**

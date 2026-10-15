@@ -1,5 +1,5 @@
 /** Download failures retain their cause locally and expose only safe, structured diagnostics to clients. */
-import type { SpeechDownloadFailure } from '@deepseek-ai/dsh-experimental-speech-to-text/types'
+import type { SpeechDownloadFailure } from '@berry-ai/harness-experimental-speech-to-text/types'
 import { TimeoutReason } from '@berry-ai/harness-timeout'
 
 type FailureKind = Pick<SpeechDownloadFailure, 'reason' | 'code'>

@@ -1,6 +1,6 @@
 /** Browser entry for optional translation of expanded reasoning. */
 import type { Context } from '@deepseek-ai/cordis'
-import remote from '@deepseek-ai/dsh-experimental-client-ui-cot-translation/remote'
+import remote from '@berry-ai/harness-experimental-client-ui-cot-translation/remote'
 import { mountTranslation } from './mount.ts'
 
 export { inject } from './mount.ts'
