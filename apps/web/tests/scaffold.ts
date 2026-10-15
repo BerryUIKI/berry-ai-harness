@@ -751,7 +751,7 @@ export async function launchWebScaffold(options: LaunchOptions = {}): Promise<We
       // A real profile: the shipped web bundles plus each fixture package,
       // installed the way `dsh plugin add` leaves them.
       const dependencies: Record<string, string> = {}
-      const bundles = ['@deepseek-ai/dsh-base', '@berry-ai/harness-web-app', ...options.profile?.bundles ?? []]
+      const bundles = ['@berry-ai/harness-base', '@berry-ai/harness-web-app', ...options.profile?.bundles ?? []]
       for (const entry of options.profile?.packages ?? []) {
         const manifest = JSON.parse(await readFile(join(entry.dir, 'package.json'), 'utf8')) as { name: string }
         dependencies[manifest.name] = `file:${entry.dir}`

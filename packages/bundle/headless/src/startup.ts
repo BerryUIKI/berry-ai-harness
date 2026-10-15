@@ -3,7 +3,7 @@
  * `--session-id`, `--json`, and `--help`, then publishes
  * {@link HEADLESS_STARTUP_SERVICE}. The runner is an ordinary consumer whose
  * lazy config waits for that service.
- * @module @deepseek-ai/dsh-headless/startup
+ * @module @berry-ai/harness-headless/startup
  */
 
 import { Command, CommanderError } from 'commander'

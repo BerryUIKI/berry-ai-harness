@@ -40,7 +40,7 @@ function packageSetProject(): {
   const baseBody = Buffer.from('base')
   const hostBody = Buffer.from('host')
   const dsh = record('@deepseek-ai/dsh', 'dsh.tgz', dshBody)
-  const base = record('@deepseek-ai/dsh-base', 'dsh-base.tgz', baseBody)
+  const base = record('@berry-ai/harness-base', 'dsh-base.tgz', baseBody)
   const host = record('@deepseek-ai/dsh-desktop-host', 'dsh-desktop-host.tgz', hostBody)
   writeFileSync(join(packageDir, dsh.file), dshBody)
   writeFileSync(join(packageDir, base.file), baseBody)
@@ -63,7 +63,7 @@ describe('desktop core package set', () => {
     expect(desktopDshPackageSpec(packageSet)).toBe('file:./desktop-packages/dsh.tgz')
     expect(desktopCorePackageOverrides(packageSet)).toEqual({
       '@deepseek-ai/dsh': 'file:./desktop-packages/dsh.tgz',
-      '@deepseek-ai/dsh-base': 'file:./desktop-packages/dsh-base.tgz',
+      '@berry-ai/harness-base': 'file:./desktop-packages/dsh-base.tgz',
       '@deepseek-ai/dsh-desktop-host': 'file:./desktop-packages/dsh-desktop-host.tgz',
     })
   })

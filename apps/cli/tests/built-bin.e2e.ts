@@ -212,7 +212,7 @@ function createEnvironmentProbeProfile(home: string, project: string): void {
     name: 'dsh-profile-environment-probe',
     private: true,
     dependencies: {},
-    dsh: { profile: { bundles: ['@deepseek-ai/dsh-base'] } },
+    dsh: { profile: { bundles: ['@berry-ai/harness-base'] } },
   }, undefined, 2))
   writeFileSync(join(profileDir, 'cordis.patch.yml'), [
     '- insert:',
@@ -684,7 +684,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       }
       expect(manifest.dependencies).toEqual({})
       expect(manifest.dsh.profile).toEqual({
-        bundles: ['@deepseek-ai/dsh-base', '@berry-ai/harness-web-app'],
+        bundles: ['@berry-ai/harness-base', '@berry-ai/harness-web-app'],
       })
       expect(readFileSync(join(dir, 'cordis.patch.yml'), 'utf8')).toContain('[]')
       expect(readFileSync(join(dir, 'pnpm-workspace.yaml'), 'utf8')).toContain('nodeLinker: hoisted')
@@ -1126,14 +1126,14 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
         dsh: { profile: { bundles: string[] } }
       }
       expect(Object.keys(installed.dependencies).sort()).toEqual(['bundle-alias', 'ordinary-library'])
-      expect(installed.dsh.profile.bundles).toEqual(['@deepseek-ai/dsh-base', 'bundle-alias'])
-      installed.dsh.profile.bundles = ['@deepseek-ai/dsh-base']
+      expect(installed.dsh.profile.bundles).toEqual(['@berry-ai/harness-base', 'bundle-alias'])
+      installed.dsh.profile.bundles = ['@berry-ai/harness-base']
       writeFileSync(manifestPath, JSON.stringify(installed))
       const refreshed = await runBuiltBin(['plugin', '--profile', 'alias', 'root'], { DSH_HOME: home }, home)
       expect(refreshed.code).toBe(0)
       expect(refreshed.stderr).not.toContain('declares no dsh.bundle')
       const active = JSON.parse(readFileSync(manifestPath, 'utf8')) as { dsh: { profile: { bundles: string[] } } }
-      expect(active.dsh.profile.bundles).toEqual(['@deepseek-ai/dsh-base'])
+      expect(active.dsh.profile.bundles).toEqual(['@berry-ai/harness-base'])
       const removed = await runBuiltBin(['plugin', '--profile', 'alias', 'remove', 'bundle-alias'], { DSH_HOME: home }, home)
       expect(removed.code).toBe(0)
       const remaining = JSON.parse(readFileSync(manifestPath, 'utf8')) as {
@@ -1141,7 +1141,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
         dsh: { profile: { bundles: string[] } }
       }
       expect(Object.keys(remaining.dependencies)).toEqual(['ordinary-library'])
-      expect(remaining.dsh.profile.bundles).toEqual(['@deepseek-ai/dsh-base'])
+      expect(remaining.dsh.profile.bundles).toEqual(['@berry-ai/harness-base'])
     } finally {
       rmSync(home, { recursive: true, force: true })
     }
@@ -1157,7 +1157,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
         name: 'dsh-profile-up',
         private: true,
         dependencies: { 'late-bundle': 'file:./late-bundle' },
-        dsh: { profile: { bundles: ['@deepseek-ai/dsh-base'] } },
+        dsh: { profile: { bundles: ['@berry-ai/harness-base'] } },
       }))
       writeFileSync(join(profileDir, 'cordis.patch.yml'), '[]\n')
       // v1: no dsh manifest — a plain dependency.
@@ -1165,7 +1165,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       const first = await runBuiltBin(['plugin', '--profile', 'up', 'root'], { DSH_HOME: home })
       expect(first.code).toBe(0)
       let manifest = JSON.parse(readFileSync(join(profileDir, 'package.json'), 'utf8')) as { dsh: { profile: { bundles: string[] } } }
-      expect(manifest.dsh.profile.bundles).toEqual(['@deepseek-ai/dsh-base'])
+      expect(manifest.dsh.profile.bundles).toEqual(['@berry-ai/harness-base'])
       // v2: the installed package now declares dsh.bundle (an update landed).
       writeFileSync(join(installed, 'package.json'), JSON.stringify({
         name: 'late-bundle', version: '2.0.0', dsh: { bundle: { patch: './cordis.patch.yml' } },
@@ -1174,7 +1174,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       const second = await runBuiltBin(['plugin', '--profile', 'up', 'root'], { DSH_HOME: home })
       expect(second.code).toBe(0)
       manifest = JSON.parse(readFileSync(join(profileDir, 'package.json'), 'utf8')) as { dsh: { profile: { bundles: string[] } } }
-      expect(manifest.dsh.profile.bundles).toEqual(['@deepseek-ai/dsh-base'])
+      expect(manifest.dsh.profile.bundles).toEqual(['@berry-ai/harness-base'])
     } finally {
       rmSync(home, { recursive: true, force: true })
     }
@@ -1191,7 +1191,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       expect(stderr).toBe('')
       expect(stdout).toContain("name: '@berry-ai/harness-agent-loop'")
       expect(stdout).toContain('agents: []')
-      expect(stdout).toContain('# == @deepseek-ai/dsh-base')
+      expect(stdout).toContain('# == @berry-ai/harness-base')
       expect(stdout).toContain("name: '@berry-ai/harness-host-webserver'")
       expect(existsSync(join(home, 'profiles', 'node_modules'))).toBe(false)
     }, SPAWN_TIMEOUT_MS + 30_000)
@@ -1226,7 +1226,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       )
       expect(code).toBe(0)
       expect(stderr).toBe('')
-      expect(stdout).toContain("name: '@deepseek-ai/dsh-headless'")
+      expect(stdout).toContain("name: '@berry-ai/harness-headless'")
       expect(stdout).not.toMatch(/name: '@deepseek-ai\/dsh-host-/)
       expect(stdout).not.toContain("name: '@berry-ai/harness-web-app'")
       expect(stdout).not.toMatch(/name: '@deepseek-ai\/dsh-client-/)
@@ -1241,7 +1241,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       expect(stderr).toBe('')
       const rows = yaml.load(stdout, { schema: entryListSchema }) as Array<{ id?: string; name?: string }>
       expect(rows.map(row => [row.id, row.name])).toEqual([
-        ['sdk-app-startup', '@deepseek-ai/dsh-sdk-app'],
+        ['sdk-app-startup', '@berry-ai/harness-sdk-app'],
         ['sdk-jsonrpc-server', '@berry-ai/harness-sdk-jsonrpc-server'],
         ['deepseek-llm-api-extensions', '@berry-ai/harness-deepseek-llm-api-extensions'],
         ['session-log-deepseek', '@berry-ai/harness-session-log-deepseek'],
@@ -1272,8 +1272,8 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
         ['persistent-pwsh', '@berry-ai/harness-tool-pwsh-persistent'],
         ['sessions', '@berry-ai/harness-session-persistence-jsonl'],
       ])
-      expect(stdout).toContain('# == @deepseek-ai/dsh-sdk-minimal')
-      expect(stdout).not.toContain('@deepseek-ai/dsh-base')
+      expect(stdout).toContain('# == @berry-ai/harness-sdk-minimal')
+      expect(stdout).not.toContain('@berry-ai/harness-base')
       expect(stdout).not.toContain('@berry-ai/harness-web-app')
     }, SPAWN_TIMEOUT_MS * 2 + 30_000)
 

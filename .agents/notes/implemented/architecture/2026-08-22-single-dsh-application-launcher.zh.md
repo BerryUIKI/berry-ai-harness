@@ -20,7 +20,7 @@ Vendor CLI、仅用于构建和测试的可执行文件、进程内直接挂载�
 
 ### Profile 应用
 
-`@deepseek-ai/dsh-sdk-app` 与 `@deepseek-ai/dsh-acp-app` 在 `@deepseek-ai/dsh-base` 之上组合完整协议应用。SDK 组合包增加 JSON-RPC 服务器、应用自有帮助和 stdio 生命周期；ACP 组合包增加仅用于自动化的 ACP 服务器与相同的应用职责。两者都采用 base 层的模型、工具、持久化、settings、credentials、策略和环境行为。[独立 sdk-minimal profile](../../archived/architecture/2026-08-24-standalone-sdk-minimal-profile.md)复用 SDK 启动与 JSON-RPC 服务，但刻意拥有不含 `dsh-base` 的完整显式配置树。
+`@berry-ai/harness-sdk-app` 与 `@berry-ai/harness-acp-app` 在 `@berry-ai/harness-base` 之上组合完整协议应用。SDK 组合包增加 JSON-RPC 服务器、应用自有帮助和 stdio 生命周期；ACP 组合包增加仅用于自动化的 ACP 服务器与相同的应用职责。两者都采用 base 层的模型、工具、持久化、settings、credentials、策略和环境行为。[独立 sdk-minimal profile](../../archived/architecture/2026-08-24-standalone-sdk-minimal-profile.md)复用 SDK 启动与 JSON-RPC 服务，但刻意拥有不含 `dsh-base` 的完整显式配置树。
 
 Profile manifest 负责 patch 重载：
 
@@ -40,7 +40,7 @@ Profile manifest 负责 patch 重载：
 
 `@berry-ai/harness-sdk-client` 依赖同版本的 `@deepseek-ai/dsh` 包，解析其已安装 CLI 模块，通过当前 Node 可执行文件运行该模块，并默认选择 `sdk`。两层客户端都暴露 `dshBin`、`profile`、有序 `patches`、`dshHome`、进程 cwd、环境和超时；任意 command/argv 启动只保留为 fake-runtime 测试的内部适配器。
 
-SDK 用户通过 profile 自定义插件。`dsh plugin --profile <name> ...` 管理持久依赖与组合包顺序，profile 的 `cordis.patch.yml` 负责持久配置项变更，启动时 `patches` 提供有序临时覆盖。自定义 profile 必须保留 `@deepseek-ai/dsh-sdk-app` 或另一个 SDK 服务器配置项。相对 CLI 模块、patch、显式 home 与进程 cwd 路径会在 spawn 前变为绝对路径；初始化具有有限时限，诊断会写明所选 profile。
+SDK 用户通过 profile 自定义插件。`dsh plugin --profile <name> ...` 管理持久依赖与组合包顺序，profile 的 `cordis.patch.yml` 负责持久配置项变更，启动时 `patches` 提供有序临时覆盖。自定义 profile 必须保留 `@berry-ai/harness-sdk-app` 或另一个 SDK 服务器配置项。相对 CLI 模块、patch、显式 home 与进程 cwd 路径会在 spawn 前变为绝对路径；初始化具有有限时限，诊断会写明所选 profile。
 
 直接使用 SDK 时遵循普通 Harness home 解析：显式 `dshHome`、继承的 `DSH_HOME`，最后是 `~/.dsh`。`subagent-dsh-sdk` 则要求显式绝对 home，因此嵌套运行时不会通过操作系统 home 发现个人 profile、已安装插件、凭据或会话。DSH 专用 ACP 子进程示例同样传入隔离 home；ACP 后端自身继续适用于非 DSH agent。
 

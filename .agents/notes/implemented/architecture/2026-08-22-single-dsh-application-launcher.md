@@ -20,7 +20,7 @@ Vendor CLIs, build-only and test-only executables, direct in-process plugin moun
 
 ### Profile applications
 
-`@deepseek-ai/dsh-sdk-app` and `@deepseek-ai/dsh-acp-app` compose the full protocol applications over `@deepseek-ai/dsh-base`. The SDK bundle adds the JSON-RPC server plus app-owned help and stdio lifetime; the ACP bundle adds the automation-only ACP server plus the same application responsibilities. Both adopt the base model, tools, persistence, settings, credentials, policy, and environment behavior. The [standalone sdk-minimal profile](../../archived/architecture/2026-08-24-standalone-sdk-minimal-profile.md) reuses SDK startup and JSON-RPC serving but deliberately owns a complete explicit tree without `dsh-base`.
+`@berry-ai/harness-sdk-app` and `@berry-ai/harness-acp-app` compose the full protocol applications over `@berry-ai/harness-base`. The SDK bundle adds the JSON-RPC server plus app-owned help and stdio lifetime; the ACP bundle adds the automation-only ACP server plus the same application responsibilities. Both adopt the base model, tools, persistence, settings, credentials, policy, and environment behavior. The [standalone sdk-minimal profile](../../archived/architecture/2026-08-24-standalone-sdk-minimal-profile.md) reuses SDK startup and JSON-RPC serving but deliberately owns a complete explicit tree without `dsh-base`.
 
 Profile manifests own patch reload:
 
@@ -40,7 +40,7 @@ The shipped protocol profiles reserve stdout for protocol frames, expose help wi
 
 `@berry-ai/harness-sdk-client` depends on the same-version `@deepseek-ai/dsh` package, resolves its installed CLI module, runs it through the current Node executable, and selects `sdk` by default. Both client layers expose `dshBin`, `profile`, ordered `patches`, `dshHome`, process cwd, environment, and timeouts; arbitrary command/argv launch remains an internal fake-runtime adapter.
 
-SDK users customize plugins through profiles. `dsh plugin --profile <name> ...` manages persistent dependencies and bundle order, the profile's `cordis.patch.yml` owns persistent row changes, and launch `patches` supply ordered ephemeral overrides. A custom profile must retain `@deepseek-ai/dsh-sdk-app` or another SDK server row. Relative CLI-module, patch, explicit home, and process-cwd paths become absolute before spawn, and initialization has a finite bound whose diagnostic names the selected profile.
+SDK users customize plugins through profiles. `dsh plugin --profile <name> ...` manages persistent dependencies and bundle order, the profile's `cordis.patch.yml` owns persistent row changes, and launch `patches` supply ordered ephemeral overrides. A custom profile must retain `@berry-ai/harness-sdk-app` or another SDK server row. Relative CLI-module, patch, explicit home, and process-cwd paths become absolute before spawn, and initialization has a finite bound whose diagnostic names the selected profile.
 
 Direct SDK use follows normal Harness-home resolution: explicit `dshHome`, inherited `DSH_HOME`, then `~/.dsh`. `subagent-dsh-sdk` instead requires an explicit absolute home, so a nested runtime cannot discover a person's profiles, installed plugins, credentials, or sessions through the operating-system home. DSH-specific ACP child examples also pass an isolated home; the ACP backend itself remains generic for non-DSH agents.
 

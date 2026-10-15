@@ -95,12 +95,12 @@ const HIGHLIGHT_MS = 2_400
 
 /** Built-in profile bundles stay out of this page even when the profile declares them as dependencies. */
 const BUILTIN_PROFILE_BUNDLES = new Set([
-  '@deepseek-ai/dsh-base',
+  '@berry-ai/harness-base',
   '@berry-ai/harness-web-app',
-  '@deepseek-ai/dsh-headless',
-  '@deepseek-ai/dsh-sdk-app',
-  '@deepseek-ai/dsh-acp-app',
-  '@deepseek-ai/dsh-sdk-minimal',
+  '@berry-ai/harness-headless',
+  '@berry-ai/harness-sdk-app',
+  '@berry-ai/harness-acp-app',
+  '@berry-ai/harness-sdk-minimal',
 ])
 
 /** Display order on the main and full optional plugin lists; new bundles join the main list. */

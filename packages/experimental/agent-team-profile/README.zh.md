@@ -34,7 +34,7 @@ dsh plugin --profile headless add @deepseek-ai/dsh-experimental-agent-team-profi
 dsh --profile headless "Use Agent Teams to split this task between two teammates, wait, and summarize."
 ```
 
-profile 必须已经包含 `@deepseek-ai/dsh-base`，本层会使用其中的 Subagent 服务与提供方配置行。执行 `dsh plugin --profile <name> remove @deepseek-ai/dsh-experimental-agent-team-profile` 移除本包时，bundle 也会从 profile 的有序层列表中移除。
+profile 必须已经包含 `@berry-ai/harness-base`，本层会使用其中的 Subagent 服务与提供方配置行。执行 `dsh plugin --profile <name> remove @deepseek-ai/dsh-experimental-agent-team-profile` 移除本包时，bundle 也会从 profile 的有序层列表中移除。
 
 在 Web 或 Desktop 的插件页开启「智能体团队」，即可同时启用工具与界面。CLI 的 Web profile 也可使用以下命令：
 

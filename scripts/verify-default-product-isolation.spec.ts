@@ -12,7 +12,7 @@ import { writeFixtureFile as write } from './fixture-file.ts'
 const roots: string[] = []
 const experimental = '@deepseek-ai/dsh-experimental-prototype'
 const core = '@deepseek-ai/dsh-core'
-const base = '@deepseek-ai/dsh-base'
+const base = '@berry-ai/harness-base'
 const profile = 'packages/boot/app-boot/src/profile.ts'
 const preset = 'packages/bundle/web-app/presets/standard.patch.yml'
 const patch = 'packages/bundle/base/cordis.patch.yml'

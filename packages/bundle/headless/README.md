@@ -3,7 +3,7 @@ description: "One-shot task mode for dsh: run a single task from the command lin
 kind: "package-bundle"
 ---
 
-# @deepseek-ai/dsh-headless
+# @berry-ai/harness-headless
 
 English | [中文](README.zh.md)
 

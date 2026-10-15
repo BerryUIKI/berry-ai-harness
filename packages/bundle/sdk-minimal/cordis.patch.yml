@@ -4,7 +4,7 @@
 
 - insert:
     - id: sdk-app-startup
-      name: '@deepseek-ai/dsh-sdk-app'
+      name: '@berry-ai/harness-sdk-app'
       config:
         profile: sdk-minimal
 

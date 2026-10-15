@@ -178,7 +178,7 @@ export function testProfileResolution(mode: ExampleMode): void {
       // The probe imports from the profile, where the bundle's transitive dependencies need fallback.
       await writePackage(profileDir, {
         name: 'resolution-profile', private: true, dependencies: { [bundleName]: '*', [pluginName]: '*' },
-        dsh: { profile: { bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-headless', bundleName] } },
+        dsh: { profile: { bundles: ['@berry-ai/harness-base', '@berry-ai/harness-headless', bundleName] } },
       }, {
         'probe.mjs': [
           "import { createRequire } from 'node:module'",

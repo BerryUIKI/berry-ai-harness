@@ -9,7 +9,7 @@ import { verifyProductUse } from './verify-product-use.ts'
 import { writeFixtureFile as write } from './fixture-file.ts'
 
 const roots: string[] = []
-const base = '@deepseek-ai/dsh-base'
+const base = '@berry-ai/harness-base'
 const core = '@deepseek-ai/dsh-core'
 const candidate = '@deepseek-ai/dsh-candidate'
 const candidateDir = 'packages/core/candidate'

@@ -332,10 +332,10 @@ describe('release families', () => {
   it('honours an install edge even when a peer cycle surrounds it', () => {
     const dsh = releaseFamily('dsh')
     const members = [
-      member('packages/a/base', '@deepseek-ai/dsh-base', { peerDependencies: { '@deepseek-ai/dsh-consumer': 'workspace:^' } }),
+      member('packages/a/base', '@berry-ai/harness-base', { peerDependencies: { '@deepseek-ai/dsh-consumer': 'workspace:^' } }),
       member('packages/a/consumer', '@deepseek-ai/dsh-consumer', {
-        dependencies: { '@deepseek-ai/dsh-base': 'workspace:^' },
-        peerDependencies: { '@deepseek-ai/dsh-base': 'workspace:^' },
+        dependencies: { '@berry-ai/harness-base': 'workspace:^' },
+        peerDependencies: { '@berry-ai/harness-base': 'workspace:^' },
       }),
     ]
 
@@ -343,11 +343,11 @@ describe('release families', () => {
     // would reverse it is the one dropped.
     const plan = dsh.publishOrder(members)
     expect(plan.order.map(entry => entry.name)).toEqual([
-      '@deepseek-ai/dsh-base',
+      '@berry-ai/harness-base',
       '@deepseek-ai/dsh-consumer',
     ])
     expect(plan.droppedPeerEdges).toEqual([
-      { consumer: '@deepseek-ai/dsh-base', peer: '@deepseek-ai/dsh-consumer' },
+      { consumer: '@berry-ai/harness-base', peer: '@deepseek-ai/dsh-consumer' },
     ])
   })
 

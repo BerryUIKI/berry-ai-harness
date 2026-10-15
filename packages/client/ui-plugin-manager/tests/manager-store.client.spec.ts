@@ -30,7 +30,7 @@ const BUNDLE: BundleInfo = {
 
 const PLUGINS: PluginInfo[] = [
   { entryId: ROW_ENTRY, moduleName: 'dsh-better-sidebar', enabled: true, fiberPhase: 'active', patchId: 'sidebar' },
-  { entryId: 'include:core' as PluginEntryId, moduleName: '@deepseek-ai/dsh-base', enabled: true, fiberPhase: 'active', readOnlyReason: 'management-required' },
+  { entryId: 'include:core' as PluginEntryId, moduleName: '@berry-ai/harness-base', enabled: true, fiberPhase: 'active', readOnlyReason: 'management-required' },
 ]
 
 const MIRROR = 'https://registry.npmmirror.com/'
@@ -127,16 +127,16 @@ describe('packageView', () => {
     })
     // A row the inventory no longer lists, a protected row, and a bundle the Host cannot read.
     const protectedBundle: BundleInfo = {
-      name: '@deepseek-ai/dsh-base', enabled: true, installed: false, official: false, availability: 'installation', optional: false, removable: false, readOnlyReason: 'management-required',
+      name: '@berry-ai/harness-base', enabled: true, installed: false, official: false, availability: 'installation', optional: false, removable: false, readOnlyReason: 'management-required',
       error: { code: 'operation-error', diagnostic: 'broken' },
-      rows: [{ rowId: 'core', moduleName: '@deepseek-ai/dsh-base', entryId: 'include:core' as PluginEntryId }, { rowId: 'gone', moduleName: 'x', entryId: 'include:gone' as PluginEntryId }],
+      rows: [{ rowId: 'core', moduleName: '@berry-ai/harness-base', entryId: 'include:core' as PluginEntryId }, { rowId: 'gone', moduleName: 'x', entryId: 'include:gone' as PluginEntryId }],
       overrides: [],
     }
     expect(packageView(protectedBundle, PLUGINS)).toEqual({
-      name: '@deepseek-ai/dsh-base', installed: false, official: false, availability: 'installation', optional: false, removable: false, enabled: true, readOnlyReason: 'management-required',
+      name: '@berry-ai/harness-base', installed: false, official: false, availability: 'installation', optional: false, removable: false, enabled: true, readOnlyReason: 'management-required',
       error: { code: 'operation-error', diagnostic: 'broken' },
       rows: [
-        { rowId: 'core', moduleName: '@deepseek-ai/dsh-base', entryId: 'include:core', enabled: true, phase: 'active', readOnlyReason: 'management-required' },
+        { rowId: 'core', moduleName: '@berry-ai/harness-base', entryId: 'include:core', enabled: true, phase: 'active', readOnlyReason: 'management-required' },
         { rowId: 'gone', moduleName: 'x', entryId: 'include:gone', enabled: false, phase: null },
       ],
     })

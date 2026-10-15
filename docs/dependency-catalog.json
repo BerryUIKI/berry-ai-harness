@@ -1309,11 +1309,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-acp-app",
+      "name": "@berry-ai/harness-acp-app",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-acp-app",
+          "location": "node_modules/@berry-ai/harness-acp-app",
           "direct": true,
           "optional": false,
           "peer": false
@@ -1489,11 +1489,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-base",
+      "name": "@berry-ai/harness-base",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-base",
+          "location": "node_modules/@berry-ai/harness-base",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2233,11 +2233,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-headless",
+      "name": "@berry-ai/harness-headless",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-headless",
+          "location": "node_modules/@berry-ai/harness-headless",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2605,11 +2605,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-sdk-app",
+      "name": "@berry-ai/harness-sdk-app",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-sdk-app",
+          "location": "node_modules/@berry-ai/harness-sdk-app",
           "direct": true,
           "optional": false,
           "peer": false
@@ -2629,11 +2629,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-sdk-minimal",
+      "name": "@berry-ai/harness-sdk-minimal",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-sdk-minimal",
+          "location": "node_modules/@berry-ai/harness-sdk-minimal",
           "direct": true,
           "optional": false,
           "peer": false
