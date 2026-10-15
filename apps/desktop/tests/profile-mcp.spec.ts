@@ -25,7 +25,7 @@ it('retains one shared resource consumer in the Desktop Web profile', () => {
       { id: 'mcp-resources', name: '@berry-ai/harness-mcp-resources' },
     ])
     expect(rows.filter(row => row.name === '@berry-ai/harness-mcp-client')).toEqual([])
-    expect(rows.find(row => row.id === 'webserver')).toMatchObject({ name: '@deepseek-ai/dsh-host-webserver' })
+    expect(rows.find(row => row.id === 'webserver')).toMatchObject({ name: '@berry-ai/harness-host-webserver' })
     expect(rows.find(row => row.id === 'webserver')?.disabled).not.toBe(true)
     expect(warnings).toEqual([])
   } finally {

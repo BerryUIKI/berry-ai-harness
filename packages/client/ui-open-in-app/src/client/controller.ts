@@ -4,7 +4,7 @@ import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client
 import {
   OPEN_IN_APP_APPS_ROUTE, OPEN_IN_APP_OPEN_ROUTE,
   type OpenInAppAppsPayload, type OpenInAppOpenPayload,
-} from '@deepseek-ai/dsh-host-open-in-app/shared'
+} from '@berry-ai/harness-host-open-in-app/shared'
 
 import { APP_LABEL_KEY } from './applications.ts'
 

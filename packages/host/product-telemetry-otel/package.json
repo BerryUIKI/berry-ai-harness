@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-host-product-telemetry-otel",
+  "name": "@berry-ai/harness-host-product-telemetry-otel",
   "description": "Explicit product usage events exported through OpenTelemetry HTTP logs",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

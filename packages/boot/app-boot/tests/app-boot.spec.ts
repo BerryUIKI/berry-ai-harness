@@ -792,7 +792,7 @@ describe('auditStartupEntries', () => {
     const warn = vi.fn()
     const error = await auditStartupEntries(ctxWith([
       { fiber: fiber(0, undefined, { webServer: {} }), options: { id: 'web-runtime', name: './web.mjs' } },
-      { fiber: fiber(3, original), options: { id: 'webserver', name: '@deepseek-ai/dsh-host-webserver' } },
+      { fiber: fiber(3, original), options: { id: 'webserver', name: '@berry-ai/harness-host-webserver' } },
       { fiber: fiber(0, undefined, { webStartup: {} }), options: { id: 'connection', name: './connection.mjs' } },
       { fiber: fiber(0), options: { id: 'unknown', name: './unknown.mjs' } },
     ]), NAME, warn).catch((error: unknown) => error)
@@ -802,7 +802,7 @@ describe('auditStartupEntries', () => {
 
       Failed plugins (1):
         webserver (required)
-          Package: @deepseek-ai/dsh-host-webserver
+          Package: @berry-ai/harness-host-webserver
           Error: listen EADDRINUSE: address already in use 127.0.0.1:3080
               at Server.listen (node:net:1:2)
 

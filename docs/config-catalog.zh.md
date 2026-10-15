@@ -3167,10 +3167,10 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-hooks-codex -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-host-directory-picker-browse -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-host-directory-picker-browse -->
 <a id="deepseek-aidsh-host-directory-picker-browse"></a>
 
-## `@deepseek-ai/dsh-host-directory-picker-browse`
+## `@berry-ai/harness-host-directory-picker-browse`
 
 - `source`: [`packages/host/directory-picker-browse/src/index.ts:181`](../packages/host/directory-picker-browse/src/index.ts)
 
@@ -3181,12 +3181,12 @@ export interface Config {
   maxEntries: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-directory-picker-browse -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-host-directory-picker-browse -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-host-frontend-static -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-host-frontend-static -->
 <a id="deepseek-aidsh-host-frontend-static"></a>
 
-## `@deepseek-ai/dsh-host-frontend-static`
+## `@berry-ai/harness-host-frontend-static`
 
 - `inject`: `webServer` · `connection`
 - `source`: [`packages/host/frontend-static/src/index.ts:30`](../packages/host/frontend-static/src/index.ts)
@@ -3198,12 +3198,12 @@ export interface Config {
   distIndex: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-frontend-static -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-host-frontend-static -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-host-open-in-app -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-host-open-in-app -->
 <a id="deepseek-aidsh-host-open-in-app"></a>
 
-## `@deepseek-ai/dsh-host-open-in-app`
+## `@berry-ai/harness-host-open-in-app`
 
 - `inject`: `webServer` · `connection` · `subprocess`
 - `source`: [`packages/host/open-in-app/src/index.ts:50`](../packages/host/open-in-app/src/index.ts)
@@ -3230,12 +3230,12 @@ export interface Config {
   readonly launchWatchMs: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-open-in-app -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-host-open-in-app -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-host-product-telemetry-otel -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-host-product-telemetry-otel -->
 <a id="deepseek-aidsh-host-product-telemetry-otel"></a>
 
-## `@deepseek-ai/dsh-host-product-telemetry-otel`
+## `@berry-ai/harness-host-product-telemetry-otel`
 
 - `inject`: `otel`
 - `source`: [`packages/host/product-telemetry-otel/src/index.ts:18`](../packages/host/product-telemetry-otel/src/index.ts)
@@ -3267,12 +3267,12 @@ export interface Config {
   shutdownTimeoutMillis: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-product-telemetry-otel -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-host-product-telemetry-otel -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-host-webserver -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-host-webserver -->
 <a id="deepseek-aidsh-host-webserver"></a>
 
-## `@deepseek-ai/dsh-host-webserver`
+## `@berry-ai/harness-host-webserver`
 
 - `source`: [`packages/host/webserver/src/index.ts:76`](../packages/host/webserver/src/index.ts)
 
@@ -3320,7 +3320,7 @@ export interface TlsConfig {
   keyFile: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-webserver -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-host-webserver -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-llm-deepseek-account -->
 <a id="deepseek-aidsh-llm-deepseek-account"></a>
@@ -4588,9 +4588,9 @@ export interface Config {
 | `@deepseek-ai/dsh-experimental-computer-use-cua-driver-native` | `computerUse` · `tools` · `systemPrompt` | [`packages/experimental/computer-use-cua-driver-native/src/index.ts`](../packages/experimental/computer-use-cua-driver-native/src/index.ts) |
 | `@deepseek-ai/dsh-experimental-session-inspector` | — | [`packages/experimental/session-inspector/src/index.ts`](../packages/experimental/session-inspector/src/index.ts) |
 | `@deepseek-ai/dsh-experimental-tool-worktree` | `tools` · `worktrees` | [`packages/experimental/tool-worktree/src/index.ts`](../packages/experimental/tool-worktree/src/index.ts) |
-| `@deepseek-ai/dsh-host-directory-picker-auto` | `webServer` · `connection` · `loader` | [`packages/host/directory-picker-auto/src/index.ts`](../packages/host/directory-picker-auto/src/index.ts) |
-| `@deepseek-ai/dsh-host-directory-picker-native` | — | [`packages/host/directory-picker-native/src/index.ts`](../packages/host/directory-picker-native/src/index.ts) |
-| `@deepseek-ai/dsh-host-plugin-inventory` | `loader` | [`packages/host/plugin-inventory/src/index.ts`](../packages/host/plugin-inventory/src/index.ts) |
+| `@berry-ai/harness-host-directory-picker-auto` | `webServer` · `connection` · `loader` | [`packages/host/directory-picker-auto/src/index.ts`](../packages/host/directory-picker-auto/src/index.ts) |
+| `@berry-ai/harness-host-directory-picker-native` | — | [`packages/host/directory-picker-native/src/index.ts`](../packages/host/directory-picker-native/src/index.ts) |
+| `@berry-ai/harness-host-plugin-inventory` | `loader` | [`packages/host/plugin-inventory/src/index.ts`](../packages/host/plugin-inventory/src/index.ts) |
 | `@berry-ai/harness-llm` | — | [`packages/llm/llm/src/index.ts`](../packages/llm/llm/src/index.ts) |
 | `@berry-ai/harness-session` | — | [`packages/core/session/src/index.ts`](../packages/core/session/src/index.ts) |
 | `@berry-ai/harness-session-checkpoint-policy` | `llm` · `sessionPersistence` · `sessions` · `tools` | [`packages/session/session-checkpoint-policy/src/index.ts`](../packages/session/session-checkpoint-policy/src/index.ts) |
@@ -4623,7 +4623,7 @@ export interface Config {
 | `@berry-ai/harness-subprocess` | `SubprocessRuntime` | — | [`packages/subprocess/subprocess/src/index.ts`](../packages/subprocess/subprocess/src/index.ts) |
 | `@berry-ai/harness-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
 | `@berry-ai/harness-compaction` | `CompactionEngine` | — | [`packages/compaction/compaction/src/index.ts`](../packages/compaction/compaction/src/index.ts) |
-| `@deepseek-ai/dsh-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
+| `@berry-ai/harness-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
 | `@berry-ai/harness-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |
 | `@berry-ai/harness-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |
 <!-- END GENERATED config-catalog:seam -->

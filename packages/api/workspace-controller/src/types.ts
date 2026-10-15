@@ -12,7 +12,7 @@ export type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 export type {
   SessionActivity, SessionActivityItem, SessionActivityKind, SessionActivityKindMap,
 } from '@berry-ai/harness-workspace/types'
-export type { DirectoryEntry, DirectoryListing } from '@deepseek-ai/dsh-host-directory-picker/types'
+export type { DirectoryEntry, DirectoryListing } from '@berry-ai/harness-host-directory-picker/types'
 
 /** One durable Workspace projected for browser consumers. */
 export interface WorkspaceView {

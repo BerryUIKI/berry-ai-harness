@@ -3,7 +3,7 @@ description: "open-in-app 的主机半边：在 macOS、Windows、Linux 上把�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-host-open-in-app
+# @berry-ai/harness-host-open-in-app
 
 [English](README.md) | 中文
 
@@ -34,7 +34,7 @@ kind: "package-reference"
 ### 最小配置
 
 ```yaml
-- name: '@deepseek-ai/dsh-host-open-in-app'
+- name: '@berry-ai/harness-host-open-in-app'
   config:
     probeTimeoutMs: 10000
     iconTimeoutMs: 10000

@@ -728,7 +728,7 @@ it('refuses management bundle disablement and permits repeated bundle selections
 })
 
 it.each([
-  '@deepseek-ai/dsh-host-plugin-inventory',
+  '@berry-ai/harness-host-plugin-inventory',
   '@berry-ai/harness-typert-registry',
   '@berry-ai/harness-api-remotes',
 ])('protects the management dependency %s and its containing bundle', async (name) => {

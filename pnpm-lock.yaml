@@ -551,10 +551,10 @@ importers:
       '@deepseek-ai/dsh-hooks-codex':
         specifier: workspace:*
         version: link:../../packages/experimental/hooks-codex
-      '@deepseek-ai/dsh-host-frontend-static':
+      '@berry-ai/harness-host-frontend-static':
         specifier: workspace:*
         version: link:../../packages/host/frontend-static
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../packages/host/webserver
       '@berry-ai/harness-llm':
@@ -798,7 +798,7 @@ importers:
       '@deepseek-ai/dsh-client-connection':
         specifier: workspace:*
         version: link:../../packages/client/connection
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../packages/host/webserver
       '@deepseek-ai/libreoffice-kit':
@@ -1215,7 +1215,7 @@ importers:
       '@deepseek-ai/dsh-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@deepseek-ai/dsh-remote-mock':
@@ -1373,7 +1373,7 @@ importers:
       '@berry-ai/harness-cordis-host-runner':
         specifier: workspace:*
         version: link:../../extensions/cordis-host-runner
-      '@deepseek-ai/dsh-host-plugin-inventory':
+      '@berry-ai/harness-host-plugin-inventory':
         specifier: workspace:*
         version: link:../../host/plugin-inventory
       '@berry-ai/harness-llm':
@@ -1680,7 +1680,7 @@ importers:
       '@deepseek-ai/dsh-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-host-directory-picker':
+      '@berry-ai/harness-host-directory-picker':
         specifier: workspace:*
         version: link:../../host/directory-picker
       '@deepseek-ai/dsh-remote-mock':
@@ -1986,7 +1986,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-host-plugin-inventory':
+      '@berry-ai/harness-host-plugin-inventory':
         specifier: workspace:*
         version: link:../../host/plugin-inventory
       '@berry-ai/harness-session':
@@ -2831,28 +2831,28 @@ importers:
       '@berry-ai/harness-cordis-host-runner':
         specifier: workspace:*
         version: link:../../extensions/cordis-host-runner
-      '@deepseek-ai/dsh-host-directory-picker-auto':
+      '@berry-ai/harness-host-directory-picker-auto':
         specifier: workspace:*
         version: link:../../host/directory-picker-auto
-      '@deepseek-ai/dsh-host-directory-picker-browse':
+      '@berry-ai/harness-host-directory-picker-browse':
         specifier: workspace:*
         version: link:../../host/directory-picker-browse
-      '@deepseek-ai/dsh-host-directory-picker-native':
+      '@berry-ai/harness-host-directory-picker-native':
         specifier: workspace:*
         version: link:../../host/directory-picker-native
-      '@deepseek-ai/dsh-host-frontend-static':
+      '@berry-ai/harness-host-frontend-static':
         specifier: workspace:*
         version: link:../../host/frontend-static
-      '@deepseek-ai/dsh-host-open-in-app':
+      '@berry-ai/harness-host-open-in-app':
         specifier: workspace:*
         version: link:../../host/open-in-app
-      '@deepseek-ai/dsh-host-plugin-inventory':
+      '@berry-ai/harness-host-plugin-inventory':
         specifier: workspace:*
         version: link:../../host/plugin-inventory
-      '@deepseek-ai/dsh-host-product-telemetry-otel':
+      '@berry-ai/harness-host-product-telemetry-otel':
         specifier: workspace:*
         version: link:../../host/product-telemetry-otel
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@berry-ai/harness-session-log-export':
@@ -2950,7 +2950,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@berry-ai/harness-llm':
@@ -3018,7 +3018,7 @@ importers:
       '@deepseek-ai/dsh-client-modules':
         specifier: workspace:*
         version: link:../modules
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
 
@@ -3082,7 +3082,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
 
@@ -3119,10 +3119,10 @@ importers:
       '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
-      '@deepseek-ai/dsh-host-product-telemetry-otel':
+      '@berry-ai/harness-host-product-telemetry-otel':
         specifier: workspace:*
         version: link:../../host/product-telemetry-otel
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@berry-ai/harness-llm':
@@ -3183,7 +3183,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
 
@@ -4311,7 +4311,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-host-open-in-app':
+      '@berry-ai/harness-host-open-in-app':
         specifier: workspace:*
         version: link:../../host/open-in-app
       '@berry-ai/harness-session':
@@ -4908,7 +4908,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-theme':
         specifier: workspace:*
         version: link:../ui-theme
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@testing-library/react':
@@ -5078,7 +5078,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@deepseek-ai/dsh-remote-mock':
@@ -5547,7 +5547,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@berry-ai/harness-session':
@@ -6013,7 +6013,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@types/react':
@@ -6445,7 +6445,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@types/react':
@@ -7251,7 +7251,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
 
@@ -8486,7 +8486,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@testing-library/react':
@@ -9224,7 +9224,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@berry-ai/harness-session':
@@ -9331,7 +9331,7 @@ importers:
       '@deepseek-ai/dsh-client-modules':
         specifier: workspace:*
         version: link:../../client/modules
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
       '@berry-ai/harness-session':
@@ -10126,22 +10126,22 @@ importers:
       '@deepseek-ai/dsh-client-ui-directory-picker-native':
         specifier: workspace:*
         version: link:../../client/ui-directory-picker-native
-      '@deepseek-ai/dsh-host-directory-picker':
+      '@berry-ai/harness-host-directory-picker':
         specifier: workspace:*
         version: link:../directory-picker
-      '@deepseek-ai/dsh-host-directory-picker-browse':
+      '@berry-ai/harness-host-directory-picker-browse':
         specifier: workspace:*
         version: link:../directory-picker-browse
-      '@deepseek-ai/dsh-host-directory-picker-native':
+      '@berry-ai/harness-host-directory-picker-native':
         specifier: workspace:*
         version: link:../directory-picker-native
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../webserver
 
   packages/host/directory-picker-browse:
     dependencies:
-      '@deepseek-ai/dsh-host-directory-picker':
+      '@berry-ai/harness-host-directory-picker':
         specifier: workspace:*
         version: link:../directory-picker
       '@deepseek-ai/schemastery':
@@ -10157,7 +10157,7 @@ importers:
       '@berry-ai/harness-native-command':
         specifier: workspace:*
         version: link:../../util/native-command
-      '@deepseek-ai/dsh-host-directory-picker':
+      '@berry-ai/harness-host-directory-picker':
         specifier: workspace:*
         version: link:../directory-picker
       koffi:
@@ -10189,7 +10189,7 @@ importers:
       '@deepseek-ai/dsh-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../webserver
 
@@ -10214,7 +10214,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../webserver
 
@@ -15347,10 +15347,10 @@ importers:
       '@berry-ai/harness-deepseek-llm-api-extensions':
         specifier: workspace:*
         version: link:../../packages/llm/deepseek-llm-api-extensions
-      '@deepseek-ai/dsh-host-plugin-inventory':
+      '@berry-ai/harness-host-plugin-inventory':
         specifier: workspace:*
         version: link:../../packages/host/plugin-inventory
-      '@deepseek-ai/dsh-host-webserver':
+      '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../packages/host/webserver
       '@berry-ai/harness-llm':

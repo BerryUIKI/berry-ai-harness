@@ -7,7 +7,7 @@ import { describe, expect, it } from 'vitest'
 import type { AddressInfo } from 'node:net'
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import type { AttachmentStore } from '@berry-ai/harness-attachment'
-import type { IndexInjection, WebServer, WebRoute, WebUpgradeRoute } from '@deepseek-ai/dsh-host-webserver'
+import type { IndexInjection, WebServer, WebRoute, WebUpgradeRoute } from '@berry-ai/harness-host-webserver'
 import {
   API_PATH,
   RpcId,

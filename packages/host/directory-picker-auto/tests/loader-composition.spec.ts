@@ -17,10 +17,10 @@ import { afterEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import HttpServer from '@deepseek-ai/dsh-host-webserver'
-import type { DirectoryPicker } from '@deepseek-ai/dsh-host-directory-picker'
-import BrowseDirectoryPicker from '@deepseek-ai/dsh-host-directory-picker-browse'
-import NativeDirectoryPicker from '@deepseek-ai/dsh-host-directory-picker-native'
+import HttpServer from '@berry-ai/harness-host-webserver'
+import type { DirectoryPicker } from '@berry-ai/harness-host-directory-picker'
+import BrowseDirectoryPicker from '@berry-ai/harness-host-directory-picker-browse'
+import NativeDirectoryPicker from '@berry-ai/harness-host-directory-picker-native'
 import {
   createLaunchEnvironmentSnapshot, DSH_LAUNCH_ENVIRONMENT_KEY, type LaunchEnvironmentSnapshot,
 } from '@berry-ai/harness-launch-environment'
@@ -50,9 +50,9 @@ vi.mock('node:fs/promises', async (importOriginal) => {
   }
 })
 
-const AUTO = '@deepseek-ai/dsh-host-directory-picker-auto'
-const NATIVE = '@deepseek-ai/dsh-host-directory-picker-native'
-const BROWSE = '@deepseek-ai/dsh-host-directory-picker-browse'
+const AUTO = '@berry-ai/harness-host-directory-picker-auto'
+const NATIVE = '@berry-ai/harness-host-directory-picker-native'
+const BROWSE = '@berry-ai/harness-host-directory-picker-browse'
 const NATIVE_SURFACE = '@deepseek-ai/dsh-client-ui-directory-picker-native'
 const BROWSE_SURFACE = '@deepseek-ai/dsh-client-ui-directory-picker-browse'
 
@@ -112,7 +112,7 @@ async function loadComposition(
   root = await mkdtemp(join(tmpdir(), 'dsh-directory-picker-auto-'))
   const configPath = join(root, 'cordis.yml')
   await writeFile(configPath, [
-    "- name: '@deepseek-ai/dsh-host-webserver'",
+    "- name: '@berry-ai/harness-host-webserver'",
     '  config:',
     `    host: '${bindHost}'`,
     '    port: 0',
@@ -127,7 +127,7 @@ async function loadComposition(
   await context.plugin(Loader)
   context.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-host-webserver', HttpServer],
+    ['@berry-ai/harness-host-webserver', HttpServer],
     [AUTO, DirectoryPickerAuto],
     [NATIVE, NativeDirectoryPicker],
     [BROWSE, BrowseDirectoryPicker],

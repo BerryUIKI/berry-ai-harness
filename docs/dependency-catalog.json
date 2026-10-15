@@ -2293,11 +2293,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-host-directory-picker",
+      "name": "@berry-ai/harness-host-directory-picker",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-host-directory-picker",
+          "location": "node_modules/@berry-ai/harness-host-directory-picker",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2305,11 +2305,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-host-directory-picker-auto",
+      "name": "@berry-ai/harness-host-directory-picker-auto",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-host-directory-picker-auto",
+          "location": "node_modules/@berry-ai/harness-host-directory-picker-auto",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2317,11 +2317,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-host-directory-picker-browse",
+      "name": "@berry-ai/harness-host-directory-picker-browse",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-host-directory-picker-browse",
+          "location": "node_modules/@berry-ai/harness-host-directory-picker-browse",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2329,11 +2329,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-host-directory-picker-native",
+      "name": "@berry-ai/harness-host-directory-picker-native",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-host-directory-picker-native",
+          "location": "node_modules/@berry-ai/harness-host-directory-picker-native",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2341,11 +2341,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-host-frontend-static",
+      "name": "@berry-ai/harness-host-frontend-static",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-host-frontend-static",
+          "location": "node_modules/@berry-ai/harness-host-frontend-static",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2353,11 +2353,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-host-open-in-app",
+      "name": "@berry-ai/harness-host-open-in-app",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-host-open-in-app",
+          "location": "node_modules/@berry-ai/harness-host-open-in-app",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2365,11 +2365,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-host-plugin-inventory",
+      "name": "@berry-ai/harness-host-plugin-inventory",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-host-plugin-inventory",
+          "location": "node_modules/@berry-ai/harness-host-plugin-inventory",
           "direct": false,
           "optional": false,
           "peer": false
@@ -2377,11 +2377,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-host-webserver",
+      "name": "@berry-ai/harness-host-webserver",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-host-webserver",
+          "location": "node_modules/@berry-ai/harness-host-webserver",
           "direct": false,
           "optional": false,
           "peer": false

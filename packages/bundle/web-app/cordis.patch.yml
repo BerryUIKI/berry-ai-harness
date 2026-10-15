@@ -43,7 +43,7 @@
 # window.__DSH_BOOT__; the modules row is simultaneously a host row.
 - insert:
     - id: desktop-product-telemetry
-      name: '@deepseek-ai/dsh-host-product-telemetry-otel'
+      name: '@berry-ai/harness-host-product-telemetry-otel'
       disabled: !!js "ctx.get('profileContext')?.name !== 'desktop'"
       config:
         scheduledDelayMillis: 30000
@@ -79,7 +79,7 @@
     # resolution (macOS/Windows/Linux; a host with no resolved application
     # renders no button). Two halves: the host routes and the browser surface.
     - id: open-in-app
-      name: '@deepseek-ai/dsh-host-open-in-app'
+      name: '@berry-ai/harness-host-open-in-app'
       config:
         probeTimeoutMs: 10000
         iconTimeoutMs: 10000
@@ -111,11 +111,11 @@
     # matching dual-face directory picker. Mount -native or -browse directly in
     # an overlay to pin the interaction.
     - id: directory-picker
-      name: '@deepseek-ai/dsh-host-directory-picker-auto'
+      name: '@berry-ai/harness-host-directory-picker-auto'
 
     # Read-only projection of current Loader entries for trusted client RPCs.
     - id: plugin-inventory
-      name: '@deepseek-ai/dsh-host-plugin-inventory'
+      name: '@berry-ai/harness-host-plugin-inventory'
 
     # Session commands, cold reads, and live control over Typert Remote.
     - id: session-controller
@@ -177,7 +177,7 @@
     # web-runtime row owns; Connection reads trust authorities from webStartup.
     # This row rejects wildcard binds.
     - id: webserver
-      name: '@deepseek-ai/dsh-host-webserver'
+      name: '@berry-ai/harness-host-webserver'
       inject: [webStartup]
       config:
         host: !!js ctx.webStartup.host ?? '127.0.0.1'

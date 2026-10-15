@@ -69,7 +69,7 @@
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-cmdline": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-host-webserver": "workspace:*",
+    "@berry-ai/harness-host-webserver": "workspace:*",
     "@deepseek-ai/dsh-remote-mock": "workspace:*",
     "@berry-ai/harness-typert-registry": "workspace:*",
     "@berry-ai/harness-util-crypto": "workspace:*",

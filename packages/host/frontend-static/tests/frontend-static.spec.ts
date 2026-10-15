@@ -16,7 +16,7 @@ import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import * as Connection from '@deepseek-ai/dsh-client-connection'
 import LocalCredentials from '@berry-ai/harness-credentials-local'
-import HttpServer from '@deepseek-ai/dsh-host-webserver'
+import HttpServer from '@berry-ai/harness-host-webserver'
 import * as FrontendStatic from '../src/index.ts'
 
 let root: string | undefined
@@ -46,13 +46,13 @@ async function loadComposition(): Promise<Context> {
     '  config:',
     `    path: '${join(root, '.credentials.yaml')}'`,
     '    watch: false',
-    "- name: '@deepseek-ai/dsh-host-webserver'",
+    "- name: '@berry-ai/harness-host-webserver'",
     '  config:',
     "    host: '127.0.0.1'",
     '    port: 0',
     "- name: '@deepseek-ai/dsh-client-connection'",
     '- id: frontend',
-    "  name: '@deepseek-ai/dsh-host-frontend-static'",
+    "  name: '@berry-ai/harness-host-frontend-static'",
     '  config:',
     `    distIndex: '${distIndex}'`,
     '',
@@ -64,9 +64,9 @@ async function loadComposition(): Promise<Context> {
   context.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-credentials-local', LocalCredentials],
-    ['@deepseek-ai/dsh-host-webserver', HttpServer],
+    ['@berry-ai/harness-host-webserver', HttpServer],
     ['@deepseek-ai/dsh-client-connection', Connection],
-    ['@deepseek-ai/dsh-host-frontend-static', FrontendStatic],
+    ['@berry-ai/harness-host-frontend-static', FrontendStatic],
   ])
   context.loader.internal = {
     version: 'v2',

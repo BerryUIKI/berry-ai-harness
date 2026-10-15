@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import { credentialRef } from '@berry-ai/harness-credentials'
-import type {} from '@deepseek-ai/dsh-host-webserver'
+import type {} from '@berry-ai/harness-host-webserver'
 import z from '@deepseek-ai/schemastery'
 import { createGitHubWebhookHandler } from './handler.ts'
 

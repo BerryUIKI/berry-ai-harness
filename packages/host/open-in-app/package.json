@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-host-open-in-app",
+  "name": "@berry-ai/harness-host-open-in-app",
   "description": "Host half of open-in-app: resolved application catalog, icons, and the launch endpoint as three webServer routes",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -47,6 +47,6 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-host-webserver": "workspace:*"
+    "@berry-ai/harness-host-webserver": "workspace:*"
   }
 }

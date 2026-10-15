@@ -88,7 +88,7 @@ export default class ProductTelemetry extends Service {
         ...(config.compression === undefined ? {} : { compression: config.compression === 'gzip' ? CompressionAlgorithm.GZIP : CompressionAlgorithm.NONE }),
       },
       resourceAttributes: { 'service.name': config.serviceName, 'service.version': config.serviceVersion },
-      scope: { name: '@deepseek-ai/dsh-host-product-telemetry-otel' },
+      scope: { name: '@berry-ai/harness-host-product-telemetry-otel' },
       processor: {
         maxExportBatchSize: config.maxExportBatchSize, maxQueueSize: config.maxQueueSize,
         scheduledDelayMillis: config.scheduledDelayMillis, exportTimeoutMillis: config.exportTimeoutMillis,

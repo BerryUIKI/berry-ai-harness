@@ -1,7 +1,7 @@
 /** Platform PKCE account provider; browser approval never bypasses local cancellation. */
 import { randomBytes, randomUUID, createHash, timingSafeEqual } from 'node:crypto'
 import type { ServerResponse } from 'node:http'
-import type {} from '@deepseek-ai/dsh-host-webserver'
+import type {} from '@berry-ai/harness-host-webserver'
 import { arch, platform, release } from 'node:os'
 import { promises as streamPromises } from 'node:stream'
 import { Context, Service } from '@deepseek-ai/cordis'

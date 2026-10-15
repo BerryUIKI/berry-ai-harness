@@ -138,10 +138,10 @@ describe('client bundle purity gate', () => {
     expect(resolveId('@berry-ai/harness-token-meter/client')).toBeNull()
     expect(() => resolveId('@berry-ai/harness-token-meter')).toThrow(/purity/)
     expect(() => resolveId('@berry-ai/harness-token-meter/client/internal')).toThrow(/purity/)
-    expect(resolveId('@deepseek-ai/dsh-host-open-in-app/shared')).toBeNull()
+    expect(resolveId('@berry-ai/harness-host-open-in-app/shared')).toBeNull()
     expect(resolveId('@berry-ai/harness-native-command/types')).toBeNull()
     expect(() => resolveId('@berry-ai/harness-native-command')).toThrow('client bundle purity')
-    expect(() => resolveId('@deepseek-ai/dsh-host-open-in-app')).toThrow(/purity/)
+    expect(() => resolveId('@berry-ai/harness-host-open-in-app')).toThrow(/purity/)
     expect(resolveId('@berry-ai/harness-plugin-manager/registry')).toBeNull()
     expect(() => resolveId('@berry-ai/harness-plugin-manager')).toThrow(/purity/)
     expect(() => resolveId('@berry-ai/harness-plugin-manager/registry/internal')).toThrow(/purity/)
@@ -432,7 +432,7 @@ describe('client bundle debug artifacts', () => {
   })
 
   it('maps dual-face host sources to the host package group', () => {
-    const configs = clientConfigs('@deepseek-ai/dsh-host-directory-picker-native')
+    const configs = clientConfigs('@berry-ai/harness-host-directory-picker-native')
     const outputOptions = configs[0]?.outputOptions
     if (typeof outputOptions !== 'object' || outputOptions === null) throw new Error('client output options missing')
     const transform = outputOptions.sourcemapPathTransform
