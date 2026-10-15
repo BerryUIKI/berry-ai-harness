@@ -37,7 +37,7 @@
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-util-values": "workspace:*"
@@ -60,7 +60,7 @@
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-shell": "workspace:*",
     "@berry-ai/harness-shell-env": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*",
@@ -72,7 +72,7 @@
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

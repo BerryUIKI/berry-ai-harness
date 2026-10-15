@@ -34,7 +34,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
+    "@berry-ai/harness-session-persistence": "workspace:*",
     "@berry-ai/harness-storage": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*"
@@ -46,7 +46,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
+    "@berry-ai/harness-session-persistence": "workspace:*",
     "@berry-ai/harness-storage": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*"

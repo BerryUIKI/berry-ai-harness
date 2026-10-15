@@ -33,7 +33,7 @@ import ApprovalService from '@berry-ai/harness-user-approval'
 import type { SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import { SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 
 const testToolSignal = new AbortController().signal
 

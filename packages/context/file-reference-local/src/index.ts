@@ -4,7 +4,7 @@
  * @module @berry-ai/harness-file-reference-local
  */
 
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import type { Agent } from '@berry-ai/harness-agent'

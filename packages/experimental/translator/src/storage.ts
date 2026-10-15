@@ -1,7 +1,7 @@
 /** Durable provider-independent translations through an existing Session writer. */
 import type { Context } from '@deepseek-ai/cordis'
 import { appendPluginRecord, pluginRecordOf, SessionSeq, type SessionId } from '@berry-ai/harness-session'
-import { SessionPersistenceNotFoundError, type SessionPersistence } from '@deepseek-ai/dsh-session-persistence'
+import { SessionPersistenceNotFoundError, type SessionPersistence } from '@berry-ai/harness-session-persistence'
 import { deepEqualJson, deepFreeze } from '@berry-ai/harness-util-values'
 import type { TranslationIdentity, TranslationRequestRecord } from './types.ts'
 import { TranslationError } from './error.ts'

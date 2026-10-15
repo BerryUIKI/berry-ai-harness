@@ -57,7 +57,7 @@
     "@berry-ai/harness-fs-local": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*",
+    "@berry-ai/harness-working-directory": "workspace:*",
     "@berry-ai/harness-tool-fs": "workspace:*",
     "@berry-ai/harness-tool-str-replace-editor": "workspace:*"
   }

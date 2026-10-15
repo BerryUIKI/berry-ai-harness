@@ -8,11 +8,11 @@ import type { Branded } from '@berry-ai/harness-brand'
 import type { LlmAttemptId, MessageId } from '@berry-ai/harness-llm/brand'
 import type { TextBlock } from '@berry-ai/harness-llm'
 import type { SessionId, SessionSeqCursor } from '@berry-ai/harness-session/types'
-import type { SessionProjectionMap } from '@deepseek-ai/dsh-session-projection/types'
+import type { SessionProjectionMap } from '@berry-ai/harness-session-projection/types'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     /** Host state persisted for cold Session list summaries. */
     sessionListMetadata: SessionListMetadata

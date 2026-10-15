@@ -42,7 +42,7 @@
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   },
   "devDependencies": {
     "@berry-ai/harness-agent": "workspace:*",
@@ -62,9 +62,9 @@
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   }
 }

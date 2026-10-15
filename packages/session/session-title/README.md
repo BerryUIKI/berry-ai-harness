@@ -3,7 +3,7 @@ description: "Log-backed session titles for users and maintainers choosing a tit
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-title
+# @berry-ai/harness-session-title
 
 English | [中文](README.zh.md)
 
@@ -37,7 +37,7 @@ All limits are required; the library supplies no defaults. Mount the service wit
 
 ```yaml
 - name: '@berry-ai/harness-session'
-- name: '@deepseek-ai/dsh-session-title'
+- name: '@berry-ai/harness-session-title'
   config:
     fallbackMaxWords: 8
     fallbackMaxBytes: 96

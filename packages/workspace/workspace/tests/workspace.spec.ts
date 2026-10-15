@@ -10,8 +10,8 @@ import { DomainFacility } from '@berry-ai/harness-storage-domain'
 import type { DomainChanged } from '@berry-ai/harness-storage-domain'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId } from '@berry-ai/harness-session'
 import type { SessionHeader } from '@berry-ai/harness-session'
-import { SessionPersistenceRevision } from '@deepseek-ai/dsh-session-persistence'
-import type { SessionPersistenceSnapshot } from '@deepseek-ai/dsh-session-persistence'
+import { SessionPersistenceRevision } from '@berry-ai/harness-session-persistence'
+import type { SessionPersistenceSnapshot } from '@berry-ai/harness-session-persistence'
 import { MemoryMediaPool, MemoryStorageBackend } from '../../../storage/storage-domain/tests/helpers/memory-backend.ts'
 import WorkspaceRegistry, {
   WorkspaceId,

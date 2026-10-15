@@ -31,7 +31,7 @@ import type { EpochHeader, RequestContext, Session, SessionId, SessionSeq, TurnE
 import { canonicalHeader, headerEquals, ToolCallRecovery } from '@berry-ai/harness-session'
 import { joinContextSections, renderContextSections, renderPrompt } from '@berry-ai/harness-system-prompt'
 import type { PromptAssembly } from '@berry-ai/harness-system-prompt'
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import type { Context } from '@deepseek-ai/cordis'
 import { ReactLoopInbox } from './inbox.ts'
 import { RuntimeContextProjection } from './runtime-context.ts'

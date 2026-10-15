@@ -21,7 +21,7 @@ import type {
   TokenUsage,
 } from '@berry-ai/harness-llm'
 import SessionStore, { buildForkSeed, Session, SessionId, type SessionEvent } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import LlmRuntime from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import TokenMeter from '@berry-ai/harness-token-meter'

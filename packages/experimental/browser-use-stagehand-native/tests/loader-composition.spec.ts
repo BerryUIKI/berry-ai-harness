@@ -15,7 +15,7 @@ import LocalAttachmentStore from '@berry-ai/harness-attachment-local'
 import LlmRuntime, { LlmAdapter, ToolCallId, createUserMessage } from '@berry-ai/harness-llm'
 import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import * as Provider from '../src/index.ts'
@@ -77,7 +77,7 @@ it('loads browser tools from cordis.yml, logs browser results, and admits the sc
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-llm', LlmRuntime],
     ['@berry-ai/harness-session', SessionStore],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+    ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-system-prompt', SystemPrompt],
     ['@berry-ai/harness-tools', ToolRuntime],
     ['@berry-ai/harness-agent', AgentRegistry],

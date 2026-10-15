@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-working-directory",
+  "name": "@berry-ai/harness-working-directory",
   "description": "Session working directories with durable changes and model context",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -32,7 +32,7 @@
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*"
   },
   "devDependencies": {
@@ -43,11 +43,11 @@
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
-    "@deepseek-ai/dsh-tool-working-directory": "workspace:*",
+    "@berry-ai/harness-tool-working-directory": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*"
   },
   "dependencies": {

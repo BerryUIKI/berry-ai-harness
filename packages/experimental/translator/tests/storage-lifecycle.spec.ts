@@ -65,7 +65,7 @@ describe('translation storage lifecycle', () => {
     const translating = b.ctx.translator.translate(b.ctx.translator.resolve({ text: 'source', targetLanguage: 'zh', sessionId: original.id }))
     const rejected = expect(translating).rejects.toMatchObject({ code: 'TRANSLATION_SESSION_REQUIRED' })
     await entered.promise
-    await [...b.ctx.loader.entries()].find(entry => entry.options.name === '@deepseek-ai/dsh-session-persistence-jsonl')?.fiber?.dispose()
+    await [...b.ctx.loader.entries()].find(entry => entry.options.name === '@berry-ai/harness-session-persistence-jsonl')?.fiber?.dispose()
     release.resolve(undefined)
     await rejected
     expect(b.requests).toEqual([])

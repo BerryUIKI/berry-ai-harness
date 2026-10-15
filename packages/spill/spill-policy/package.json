@@ -58,7 +58,7 @@
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-sandbox-local": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-token-meter": "workspace:*",

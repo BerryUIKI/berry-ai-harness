@@ -19,10 +19,10 @@ import { agentPresetProjectionDefinition } from '@berry-ai/harness-agent-preset-
 import { createUserMessage } from '@berry-ai/harness-llm'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import type { Session, SessionEvent, SessionHeader, UserMessage } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
-import SessionProjectionCache, { projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
-import { titleProjectionDefinition } from '@deepseek-ai/dsh-session-title'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
+import SessionProjectionCache, { projectionCacheDomainSpec } from '@berry-ai/harness-session-projection-cache'
+import { titleProjectionDefinition } from '@berry-ai/harness-session-title'
 import Storage from '@berry-ai/harness-storage'
 import * as StorageDomain from '@berry-ai/harness-storage-domain'
 import * as StorageJson from '@berry-ai/harness-storage-json'
@@ -40,7 +40,7 @@ afterEach(async () => {
 })
 let nextHarnessSession = 1
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     'test/last-user': LastUserState
     'test/internal-count': number

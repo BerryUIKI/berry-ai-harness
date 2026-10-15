@@ -10,11 +10,11 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import SessionStore from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import AgentRegistry from '@berry-ai/harness-agent'
 import type { Agent, AgentHandle, CreateAgentOptions } from '@berry-ai/harness-agent'
 import { createUserMessage } from '@berry-ai/harness-llm'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
+import SessionTitleService from '@berry-ai/harness-session-title'
 import type { Session, SessionId } from '@berry-ai/harness-session'
 import { createSessionTestRemote } from './test-remote.ts'
 

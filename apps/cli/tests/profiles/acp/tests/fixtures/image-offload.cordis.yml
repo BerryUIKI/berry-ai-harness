@@ -22,7 +22,7 @@
     model: deepseek-v4-flash-vision-exp
 
 - id: session-persistence-jsonl
-  name: '@deepseek-ai/dsh-session-persistence-jsonl'
+  name: '@berry-ai/harness-session-persistence-jsonl'
   config:
     root: !!js process.env.DSH_SNAPSHOT_SESSIONS_ROOT ?? './.sessions'
     compression: none

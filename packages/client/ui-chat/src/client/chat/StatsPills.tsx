@@ -10,7 +10,7 @@ import { IconDatabaseOutlineRegular, IconGaugeOutlineRegular } from '@deepseek-a
 import type { UseProjection } from '@deepseek-ai/dsh-api-session-controller/client'
 import type { InjectFace, SnapshotSelectorHook } from '@deepseek-ai/dsh-client-ui-slots'
 // Type-only: merges the sessionStats key into SessionProjectionMap for useProjection.
-import type {} from '@deepseek-ai/dsh-session-stats/client'
+import type {} from '@berry-ai/harness-session-stats/client'
 import type { TokenUsageProjection } from '@berry-ai/harness-token-meter/client'
 import type { ChatViewSlotProps, PerformanceUsageInjected } from '../contract/slots.ts'
 import type { ChatSnapshot } from '../contract/snapshot.ts'

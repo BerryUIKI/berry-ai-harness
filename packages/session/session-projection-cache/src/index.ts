@@ -13,7 +13,7 @@
  * next cold read) and a `ver` mismatch discards the row instead of migrating
  * it. Design authority: the session-projection RFC
  * (.agents/notes/proposed/architecture/2026-07-27-session-projection-and-command-log.md).
- * @module @deepseek-ai/dsh-session-projection-cache
+ * @module @berry-ai/harness-session-projection-cache
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
@@ -30,7 +30,7 @@ import type {
   ProjectionCheckpoint,
   ProjectionSnapshot,
   SessionProjectionMap,
-} from '@deepseek-ai/dsh-session-projection'
+} from '@berry-ai/harness-session-projection'
 import type { KvTable } from '@berry-ai/harness-storage-domain'
 import { projectionCacheDomainSpec } from './spec.ts'
 import type { CheckpointIdentity, CheckpointRecord } from './spec.ts'

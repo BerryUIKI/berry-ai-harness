@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { SessionFormatEvent, SessionFormatJsonValue } from '@deepseek-ai/dsh-session-format'
+import type { SessionFormatEvent, SessionFormatJsonValue } from '@berry-ai/harness-session-format'
 import { KNOWN_SESSION_EVENT_TYPES } from '@berry-ai/harness-session'
 import {
   RELEASED_V0_EVENT_TYPES,

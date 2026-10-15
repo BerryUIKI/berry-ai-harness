@@ -3,7 +3,7 @@ import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
 import { boot } from '@berry-ai/harness-app-boot'
 import LlmRuntime from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import * as Official from '@berry-ai/harness-llm-deepseek-api-key'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
@@ -23,13 +23,13 @@ it.skipIf(!enabled)('translates a small independent billed query with exact Flas
     await writeFile(configPath, JSON.stringify([
       { id: 'llm', name: '@berry-ai/harness-llm' },
       { id: 'sessions', name: '@berry-ai/harness-session' },
-      { id: 'storage', name: '@deepseek-ai/dsh-session-persistence-jsonl', config: { root: join(root, 'sessions'), compression: 'none' } },
+      { id: 'storage', name: '@berry-ai/harness-session-persistence-jsonl', config: { root: join(root, 'sessions'), compression: 'none' } },
       { id: 'official-live-owner', name: '@berry-ai/harness-llm-deepseek-api-key' },
       { id: 'translator', name: '@deepseek-ai/dsh-experimental-translator', config: { deepseekMaxOutputTokens: 128 } },
     ]))
     const modules = new Map<string, unknown>([
       ['@berry-ai/harness-llm', LlmRuntime], ['@berry-ai/harness-session', SessionStore],
-      ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlPersistence],
+      ['@berry-ai/harness-session-persistence-jsonl', JsonlPersistence],
       ['@berry-ai/harness-llm-deepseek-api-key', Official], ['@deepseek-ai/dsh-experimental-translator', Translator],
     ])
     const ctx = await boot('paid-translation-live', configPath, [], (host) => {

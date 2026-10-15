@@ -4,7 +4,7 @@
  * @module @deepseek-ai/dsh-tool-terminal
  */
 
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import { resolve } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'

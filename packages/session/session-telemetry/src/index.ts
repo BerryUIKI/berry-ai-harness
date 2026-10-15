@@ -11,7 +11,7 @@
  * backend responsibilities are documented in the
  * [Session telemetry reference](../README.md#understand-the-implementation).
  *
- * @module @deepseek-ai/dsh-session-telemetry
+ * @module @berry-ai/harness-session-telemetry
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'

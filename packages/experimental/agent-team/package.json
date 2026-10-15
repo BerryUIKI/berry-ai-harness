@@ -47,8 +47,8 @@
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
+    "@berry-ai/harness-session-persistence": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*"
   },
   "devDependencies": {
@@ -58,9 +58,9 @@
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
+    "@berry-ai/harness-session-persistence": "workspace:*",
+    "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-subagent-fork-in-process": "workspace:*",

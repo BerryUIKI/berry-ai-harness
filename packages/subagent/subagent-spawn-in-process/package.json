@@ -48,7 +48,7 @@
     "@berry-ai/harness-tool-bash": "workspace:*",
     "@berry-ai/harness-tool-subagent": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*"
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-session-persistence-jsonl": "workspace:*"
   }
 }

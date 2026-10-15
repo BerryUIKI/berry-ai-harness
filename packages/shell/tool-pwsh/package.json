@@ -38,7 +38,7 @@
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"
@@ -56,7 +56,7 @@
     "@berry-ai/harness-pwsh-local": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-shell": "workspace:*",
     "@berry-ai/harness-shell-env": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
@@ -64,7 +64,7 @@
     "@berry-ai/harness-tool-jobs": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*",
+    "@berry-ai/harness-working-directory": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*"
   }
 }

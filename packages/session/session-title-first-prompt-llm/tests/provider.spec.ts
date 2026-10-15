@@ -3,10 +3,10 @@ import { describe, expect, it, onTestFinished } from 'vitest'
 import LlmRuntime, { createUserMessage, LlmAdapter, ReasoningEffortId, ToolCallId } from '@berry-ai/harness-llm'
 import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-ai/harness-llm'
 import SessionStore, { Session, SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
-import SessionTitleService, { type SessionTitleProvider } from '@deepseek-ai/dsh-session-title'
-import * as providerPlugin from '@deepseek-ai/dsh-session-title-first-prompt-llm'
+import SessionTitleService, { type SessionTitleProvider } from '@berry-ai/harness-session-title'
+import * as providerPlugin from '@berry-ai/harness-session-title-first-prompt-llm'
 
 class RecordingAdapter extends LlmAdapter {
   readonly requests: GenerateOptions[] = []

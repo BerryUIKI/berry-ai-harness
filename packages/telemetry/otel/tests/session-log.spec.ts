@@ -99,7 +99,7 @@ function parseContent(content: string): unknown {
 function reporter(endpoint: string, overrides: Partial<SessionLogOptions> = {}) {
   const onFailure = vi.fn()
   const sender = ctx.otel.createSessionLogReporter({
-    scope: { name: '@deepseek-ai/dsh-session-telemetry-otel', version: (createRequire(import.meta.url)('../package.json') as { version: string }).version },
+    scope: { name: '@berry-ai/harness-session-telemetry-otel', version: (createRequire(import.meta.url)('../package.json') as { version: string }).version },
     exporter: { url: endpoint, timeoutMillis: 1000 }, resourceAttributes: { 'service.name': 'session-test' },
     processor: { scheduledDelayMillis: 60000 }, onFailure, ...overrides,
   })
@@ -120,7 +120,7 @@ it('preserves full nested events without truncation or ambient headers and retai
   expect(target.captures[0]!.headers).not.toHaveProperty('authorization')
   expect(target.captures[0]!.headers).not.toHaveProperty('x-channel')
   expect(target.captures[0]!.body.resourceLogs[0]!.scopeLogs[0]).toMatchObject({
-    scope: { name: '@deepseek-ai/dsh-session-telemetry-otel', version: (createRequire(import.meta.url)('../package.json') as { version: string }).version },
+    scope: { name: '@berry-ai/harness-session-telemetry-otel', version: (createRequire(import.meta.url)('../package.json') as { version: string }).version },
   })
 })
 

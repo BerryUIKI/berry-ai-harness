@@ -23,7 +23,7 @@ import SubagentRuntime, {
   type SubagentStartRequest,
 } from '@berry-ai/harness-subagent'
 import { Session, SessionId, type SessionEvent } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 
 function fakeParent(id = 'parent-1'): Agent {
   return { id: SessionId(id) } as unknown as Agent

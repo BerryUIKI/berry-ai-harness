@@ -3,7 +3,7 @@ import { agentEvents, type Agent } from '@berry-ai/harness-agent'
 import { createUserMessage, freezeMessage } from '@berry-ai/harness-llm'
 import SessionStore, { Session, SessionId } from '@berry-ai/harness-session'
 import type { UserMessage } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { describe, expect, it, onTestFinished } from 'vitest'
 import { inboxProjectionDefinition, ReactLoopInbox } from '../src/inbox.ts'
 

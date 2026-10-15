@@ -11,9 +11,9 @@ import type { GenerateOptions, LlmCallConfig, StreamChunk } from '@berry-ai/harn
 import * as LlmPiAi from '@berry-ai/harness-llm-pi-ai'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import type { Session, SessionSeq } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
-import * as providerPlugin from '@deepseek-ai/dsh-session-title-first-prompt-llm'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import SessionTitleService from '@berry-ai/harness-session-title'
+import * as providerPlugin from '@berry-ai/harness-session-title-first-prompt-llm'
 import { anthropicTextEvents, closeMockServers, mockServer } from '../../../llm/llm-pi-ai/tests/mock-server.ts'
 
 let root: string | undefined
@@ -55,13 +55,13 @@ async function loadComposition(
   await writeFile(configPath, [
     "- name: '@berry-ai/harness-llm'",
     "- name: '@berry-ai/harness-session'",
-    "- name: '@deepseek-ai/dsh-session-projection'",
-    "- name: '@deepseek-ai/dsh-session-title'",
+    "- name: '@berry-ai/harness-session-projection'",
+    "- name: '@berry-ai/harness-session-title'",
     '  config:',
     '    fallbackMaxWords: 5',
     '    fallbackMaxBytes: 40',
     '    maxTitleBytes: 80',
-    "- name: '@deepseek-ai/dsh-session-title-first-prompt-llm'",
+    "- name: '@berry-ai/harness-session-title-first-prompt-llm'",
     '  config:',
     '    targetWords: 5',
     '    targetCjkCharacters: 10',
@@ -77,9 +77,9 @@ async function loadComposition(
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-llm', LlmRuntime],
     ['@berry-ai/harness-session', SessionStore],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
-    ['@deepseek-ai/dsh-session-title', SessionTitleService],
-    ['@deepseek-ai/dsh-session-title-first-prompt-llm', providerPlugin],
+    ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
+    ['@berry-ai/harness-session-title', SessionTitleService],
+    ['@berry-ai/harness-session-title-first-prompt-llm', providerPlugin],
     ...entryModules,
   ])
   context.loader.internal = {

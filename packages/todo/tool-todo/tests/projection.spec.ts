@@ -17,7 +17,7 @@ import type { Session } from '@berry-ai/harness-session'
 import type { TodoItem } from '@berry-ai/harness-tool-todo'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import UserQuestionService from '@berry-ai/harness-user-questions'
 import * as ToolTodo from '@berry-ai/harness-tool-todo'
 

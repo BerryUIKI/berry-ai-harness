@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-session-telemetry-otel",
+  "name": "@berry-ai/harness-session-telemetry-otel",
   "description": "Feedback-authorized Session logs over byte-bounded OpenTelemetry HTTP requests",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -35,7 +35,7 @@
     "@berry-ai/harness-message-feedback": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-telemetry": "workspace:*",
+    "@berry-ai/harness-session-telemetry": "workspace:*",
     "@berry-ai/harness-anonymous-user-id": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-otel": "workspace:*"
@@ -50,9 +50,9 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-loader-smoke": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-checkpoint-policy": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
-    "@deepseek-ai/dsh-session-telemetry": "workspace:*",
+    "@berry-ai/harness-session-checkpoint-policy": "workspace:*",
+    "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
+    "@berry-ai/harness-session-telemetry": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-anonymous-user-id": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",

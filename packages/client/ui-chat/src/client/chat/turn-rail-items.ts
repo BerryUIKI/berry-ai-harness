@@ -6,7 +6,7 @@
  * richer previews for the turns it holds.
  */
 
-import type {} from '@deepseek-ai/dsh-session-turn-outline/client'
+import type {} from '@berry-ai/harness-session-turn-outline/client'
 import { SessionSeq } from '@berry-ai/harness-session/types'
 import type { TurnNavigationItem } from '../contract/snapshot.ts'
 

@@ -5,7 +5,7 @@ import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
 import { createMessage, createUserMessage } from '@berry-ai/harness-llm'
 import { SESSION_FORMAT_VERSION, Session, SessionId } from '@berry-ai/harness-session'
-import type {} from '@deepseek-ai/dsh-session-title'
+import type {} from '@berry-ai/harness-session-title'
 import {
   assertFixtureInventory,
   captureStableAria,

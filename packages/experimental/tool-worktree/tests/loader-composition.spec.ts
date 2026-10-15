@@ -15,11 +15,11 @@ import LlmRuntime, { ToolCallId } from '@berry-ai/harness-llm'
 import LocalSandbox from '@berry-ai/harness-sandbox-local'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
-import WorkingDirectoryService from '@deepseek-ai/dsh-working-directory'
+import WorkingDirectoryService from '@berry-ai/harness-working-directory'
 import WorktreeService from '@deepseek-ai/dsh-experimental-worktree'
 import * as ToolWorktree from '../src/index.ts'
 
@@ -53,7 +53,7 @@ describe('worktree tool through real Loader composition', () => {
     const modules = new Map<string, unknown>([
       ['@berry-ai/harness-agent', AgentRegistry],
       ['@berry-ai/harness-session', SessionStore],
-      ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+      ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
       ['@berry-ai/harness-system-prompt', SystemPrompt],
       ['@berry-ai/harness-llm', LlmRuntime],
       ['@berry-ai/harness-tools', ToolRuntime],
@@ -61,7 +61,7 @@ describe('worktree tool through real Loader composition', () => {
       ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],
       ['@berry-ai/harness-sandbox-local', LocalSandbox],
       ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
-      ['@deepseek-ai/dsh-working-directory', WorkingDirectoryService],
+      ['@berry-ai/harness-working-directory', WorkingDirectoryService],
       ['@deepseek-ai/dsh-experimental-worktree', WorktreeService],
       ['@deepseek-ai/dsh-experimental-tool-worktree', ToolWorktree],
       ['@berry-ai/harness-agent-loop', AgentLoop],

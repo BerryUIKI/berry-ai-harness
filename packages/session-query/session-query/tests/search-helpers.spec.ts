@@ -7,7 +7,7 @@ import SessionStore, {
   SessionId,
   SessionSeq,
 } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { SessionEvent, SessionHeader } from '@berry-ai/harness-session'
 import {
   buildSessionEventRecords,

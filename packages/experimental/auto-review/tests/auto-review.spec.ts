@@ -26,7 +26,7 @@ import SessionStore, {
   SessionLogOffset,
   type Session,
 } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SubagentRuntime, {
   NO_START_CAPABILITIES,
   SUBAGENT_DESCRIPTOR_VERSION,

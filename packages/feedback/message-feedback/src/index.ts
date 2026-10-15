@@ -14,7 +14,7 @@ import { SessionSeq } from '@berry-ai/harness-session/types'
 import { deriveEventMessage, isAppendSurfaceEvent } from '@berry-ai/harness-session/surface'
 import type { SessionEvent, SessionId } from '@berry-ai/harness-session/types'
 import type {} from '@berry-ai/harness-session'
-import type { SessionInspection } from '@deepseek-ai/dsh-session-persistence'
+import type { SessionInspection } from '@berry-ai/harness-session-persistence'
 import { TypertRemoteService, Remote } from '@berry-ai/harness-typert-protocol'
 import type {
   MessageFeedbackDeleteRequest,

@@ -7,7 +7,7 @@ import SessionStore from '@berry-ai/harness-session'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import AgentRegistry from '@berry-ai/harness-agent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { liveConfig } from '../../../settings/settings/tests/live-config.ts'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 

@@ -2,7 +2,7 @@
 
 import { Context } from '@deepseek-ai/cordis'
 import { SessionId } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import { spawnSync } from 'node:child_process'
 import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'

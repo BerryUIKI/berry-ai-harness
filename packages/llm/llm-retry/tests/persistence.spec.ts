@@ -4,7 +4,7 @@ import { join } from 'node:path'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import { RetryId } from '@berry-ai/harness-llm-retry'
 import type {} from '../src/index.ts'
 

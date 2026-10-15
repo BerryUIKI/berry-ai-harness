@@ -6,7 +6,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { SandboxedFileSystem } from '@berry-ai/harness-fs-sandbox'
 import { canonicalPath } from '@berry-ai/harness-sandbox'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { describe, expect, it } from 'vitest'
 import { assertWorkspaceOutsideTemp, outsideTempWorkspaceParent } from './snapshot-workspace-parent.ts'
 

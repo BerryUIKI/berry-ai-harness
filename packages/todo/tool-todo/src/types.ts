@@ -32,7 +32,7 @@ declare module '@berry-ai/harness-session/types' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     todos: TodoItem[] | null
   }

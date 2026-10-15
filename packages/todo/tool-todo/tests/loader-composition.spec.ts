@@ -15,7 +15,7 @@ import AgentRegistry from '@berry-ai/harness-agent'
 import type { Agent } from '@berry-ai/harness-agent'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import * as ToolTodo from '@berry-ai/harness-tool-todo'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 
@@ -60,7 +60,7 @@ async function boot(configLines: readonly string[]): Promise<Context> {
     "- name: '@berry-ai/harness-agent'",
     "- name: '@berry-ai/harness-system-prompt'",
     "- name: '@berry-ai/harness-tools'",
-    "- name: '@deepseek-ai/dsh-session-projection'",
+    "- name: '@berry-ai/harness-session-projection'",
     "- name: '@berry-ai/harness-tool-todo'",
     ...configLines.length > 0 ? ['  config:', ...configLines] : [],
     '',
@@ -75,7 +75,7 @@ async function boot(configLines: readonly string[]): Promise<Context> {
     ['@berry-ai/harness-agent', AgentRegistry],
     ['@berry-ai/harness-system-prompt', SystemPrompt],
     ['@berry-ai/harness-tools', ToolRuntime],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+    ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-tool-todo', ToolTodo],
   ])
   ctx.loader.internal = {

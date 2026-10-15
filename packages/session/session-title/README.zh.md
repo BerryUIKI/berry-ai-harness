@@ -3,7 +3,7 @@ description: "面向用户与维护者的日志支持型会话标题说明，用
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-title
+# @berry-ai/harness-session-title
 
 [English](README.md) | 中文
 
@@ -37,7 +37,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-session'
-- name: '@deepseek-ai/dsh-session-title'
+- name: '@berry-ai/harness-session-title'
   config:
     fallbackMaxWords: 8
     fallbackMaxBytes: 96

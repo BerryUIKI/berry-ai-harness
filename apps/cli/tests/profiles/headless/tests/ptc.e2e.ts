@@ -12,7 +12,7 @@ import type { Agent } from '@berry-ai/harness-agent'
 
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { LocalBashExecutor } from '@berry-ai/harness-bash-local'
 import * as BashEnvPlugin from '@berry-ai/harness-shell-env'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'

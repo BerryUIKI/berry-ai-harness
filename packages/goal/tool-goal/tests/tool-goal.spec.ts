@@ -15,7 +15,7 @@ import SessionStore, {
   SessionId,
   SessionLogOffset,
 } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import type { ToolExecutionResult } from '@berry-ai/harness-tools'

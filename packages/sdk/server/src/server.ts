@@ -13,7 +13,7 @@ import { admitEncodedImages, type EncodedImageAttachment, type ImageAttachmentRe
 import { createUserMessage, ReasoningEffortId, type ContentBlock, type LlmRuntime } from '@berry-ai/harness-llm'
 import { carrierKeyOf, type Scoped } from '@berry-ai/harness-scope'
 import type { SessionId, SessionLogOffset } from '@berry-ai/harness-session'
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import type SubagentRuntime from '@berry-ai/harness-subagent'
 import type { SubagentRunEndInfo } from '@berry-ai/harness-subagent'
 import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'

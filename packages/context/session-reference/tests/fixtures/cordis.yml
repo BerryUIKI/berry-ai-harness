@@ -2,8 +2,8 @@
 - name: '@berry-ai/harness-system-prompt'
 - name: '@berry-ai/harness-tools'
 - name: '@berry-ai/harness-fs-local'
-- name: '@deepseek-ai/dsh-session-projection'
-- name: '@deepseek-ai/dsh-working-directory'
+- name: '@berry-ai/harness-session-projection'
+- name: '@berry-ai/harness-working-directory'
 - name: '@berry-ai/harness-tool-fs'
 - name: '@berry-ai/harness-session-query-sqlite'
   config:

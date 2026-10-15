@@ -4,8 +4,8 @@ import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
 import { boot } from '@berry-ai/harness-app-boot'
 import { createAssistantMessage, createUserMessage } from '@berry-ai/harness-llm'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionSeq, type Session, type SessionEvent, type SessionHeader } from '@berry-ai/harness-session'
-import type { SessionHandle } from '@deepseek-ai/dsh-session-persistence'
-import JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import type { SessionHandle } from '@berry-ai/harness-session-persistence'
+import JsonlPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import { once } from 'node:events'
 import { mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http'
@@ -97,13 +97,13 @@ export async function storageFixture(cleanups: Array<() => Promise<void>>, optio
   await writeFile(path, JSON.stringify([
     ...options.withSessions === false ? [] : [{ id: 'sessions', name: '@berry-ai/harness-session' }],
     ...options.withPersistence === false ? [] : [
-      { id: 'storage', name: '@deepseek-ai/dsh-session-persistence-jsonl', config: { root: storedRoot, compression: 'none' } },
+      { id: 'storage', name: '@berry-ai/harness-session-persistence-jsonl', config: { root: storedRoot, compression: 'none' } },
     ],
     { id: 'translator', name: '@deepseek-ai/dsh-experimental-translator', config },
   ]))
   const start = () => boot('translator-storage', path, [], (host) => {
     const modules = new Map<string, unknown>([
-      ['@berry-ai/harness-session', SessionStore], ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlPersistence],
+      ['@berry-ai/harness-session', SessionStore], ['@berry-ai/harness-session-persistence-jsonl', JsonlPersistence],
       ['@deepseek-ai/dsh-experimental-translator', Translator],
     ])
     const loader: ModuleLoaderV2 = {

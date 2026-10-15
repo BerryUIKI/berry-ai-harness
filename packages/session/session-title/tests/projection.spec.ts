@@ -3,8 +3,8 @@ import { Context } from '@deepseek-ai/cordis'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import type { Session, SessionSeq as SessionSeqType } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import SessionTitleService from '@berry-ai/harness-session-title'
 
 const CONFIG = { fallbackMaxWords: 8, fallbackMaxBytes: 64, maxTitleBytes: 256 }
 

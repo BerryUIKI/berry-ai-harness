@@ -16,7 +16,7 @@ import * as TerminalLocal from '@berry-ai/harness-terminal-bash'
 import SandboxProvider from '@berry-ai/harness-sandbox'
 import type { ConfinedArgv, SandboxPolicy } from '@berry-ai/harness-sandbox'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
@@ -79,7 +79,7 @@ suite('persistent Bash through a real cordis.yml Loader composition', () => {
       "- name: '@berry-ai/harness-tools'",
       "- name: '@berry-ai/harness-terminal'",
       "- name: '@deepseek-ai/dsh-test-sandbox'",
-      "- name: '@deepseek-ai/dsh-session-projection'",
+      "- name: '@berry-ai/harness-session-projection'",
       "- name: '@berry-ai/harness-sandbox-policy'",
       '  config:',
       '    mode: danger-full-access',
@@ -115,7 +115,7 @@ suite('persistent Bash through a real cordis.yml Loader composition', () => {
       ['@berry-ai/harness-tools', ToolRuntime],
       ['@berry-ai/harness-terminal', TerminalSessionService],
       ['@deepseek-ai/dsh-test-sandbox', PassthroughSandbox],
-      ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+      ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
       ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
       ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],
       ['@berry-ai/harness-terminal-bash', TerminalLocal],

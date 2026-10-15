@@ -19,7 +19,7 @@ declare module '@berry-ai/harness-llm' {
 
 import type { UserMessage } from '@berry-ai/harness-llm'
 import { SessionSeq } from '@berry-ai/harness-session'
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import {
   deriveBrowserTimeZoneContext,
   renderBrowserTimeZoneContext,
@@ -30,7 +30,7 @@ import { createTimestampFormatter, formatTimestamp } from './timestamp.ts'
 /** Cordis plugin name used by loader diagnostics. */
 export const name = 'time-context'
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     /** Latest time-context readings. */
     timeContext: TimeContextProjection

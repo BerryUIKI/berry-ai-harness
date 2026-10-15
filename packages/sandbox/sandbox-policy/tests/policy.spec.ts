@@ -12,7 +12,7 @@ import { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@berry-ai/harness-agent'
 import { SESSION_FORMAT_VERSION, Session, SessionId } from '@berry-ai/harness-session'
 import SandboxPolicyService, { SANDBOX_MODES, setSandboxMode } from '@berry-ai/harness-sandbox-policy'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SystemPrompt, { renderContextSnapshot, renderPrompt } from '@berry-ai/harness-system-prompt'
 
 async function mounted(config: { mode?: 'read-only' | 'workspace-write' | 'danger-full-access'; workspaceRoot?: string } = {}) {

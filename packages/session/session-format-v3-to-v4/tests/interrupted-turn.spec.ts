@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { SessionFormatEventCollector, type SessionFormatEvent, type SessionFormatJsonObject } from '@deepseek-ai/dsh-session-format'
-import { createSessionFormatCatalogWithChildren, sessionFormatCatalog } from '@deepseek-ai/dsh-session-format-catalog'
+import { SessionFormatEventCollector, type SessionFormatEvent, type SessionFormatJsonObject } from '@berry-ai/harness-session-format'
+import { createSessionFormatCatalogWithChildren, sessionFormatCatalog } from '@berry-ai/harness-session-format-catalog'
 import { Session, SessionId, SessionLogOffset, type SessionEvent, type SessionHeader } from '@berry-ai/harness-session'
 import { imageOffloadProjection } from '@berry-ai/harness-compaction-image-offload/projection'
 import { createSessionFormatV3ToV4 } from '../src/index.ts'

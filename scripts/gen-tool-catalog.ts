@@ -15,7 +15,7 @@ import AgentRegistry from '@berry-ai/harness-agent'
 import type { Agent } from '@berry-ai/harness-agent'
 import { createScope } from '@berry-ai/harness-scope'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SqliteSessionQueryEngine from '@berry-ai/harness-session-query-sqlite'
 import GoalService from '@berry-ai/harness-goal'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
@@ -25,8 +25,8 @@ import * as BashEnvPlugin from '@berry-ai/harness-shell-env'
 import { PwshLocalExecutor } from '@berry-ai/harness-pwsh-local'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
-import WorkingDirectory from '@deepseek-ai/dsh-working-directory'
-import * as ToolWorkingDirectory from '@deepseek-ai/dsh-tool-working-directory'
+import WorkingDirectory from '@berry-ai/harness-working-directory'
+import * as ToolWorkingDirectory from '@berry-ai/harness-tool-working-directory'
 import * as ToolWorktree from '@deepseek-ai/dsh-experimental-tool-worktree'
 import { AttachmentStore } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentLimits, ImageAttachmentRef, SaveImageAttachment, StoredImageAttachment } from '@berry-ai/harness-attachment'
@@ -609,7 +609,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'todo_write is session-owned state; UIs render the latest todo/write event as a checklist. `allowParallelInProgress` is required with no default, so the catalog states its choice: `true`, whose description invites several `in_progress` items. A deployment choosing `false` receives the same tool with a description asking for exactly one active task.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tool-working-directory',
+    pkg: '@berry-ai/harness-tool-working-directory',
     dir: 'tool-working-directory',
     source: 'packages/session/tool-working-directory/src/index.ts',
     requires: ['ctx.tools', 'ctx.workingDirectory'],

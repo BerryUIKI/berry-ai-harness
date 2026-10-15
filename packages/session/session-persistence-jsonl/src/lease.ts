@@ -25,14 +25,14 @@
  * lockers verify against. The browser worker stubs the native flock entry to
  * immediate success: it is single-process, so the in-process write claim
  * already excludes every writer.
- * @module @deepseek-ai/dsh-session-persistence-jsonl/lease
+ * @module @berry-ai/harness-session-persistence-jsonl/lease
  */
 
 import { mkdir, open, stat } from 'node:fs/promises'
 import type { FileHandle } from 'node:fs/promises'
 import { join } from 'node:path'
 import { tryLockExclusive } from '@deepseek-ai/node-addon-system/flock'
-import { SessionAlreadyOwnedError } from '@deepseek-ai/dsh-session-persistence'
+import { SessionAlreadyOwnedError } from '@berry-ai/harness-session-persistence'
 import type { SessionId } from '@berry-ai/harness-session'
 import { acquireLockHandleWin32, releaseLockHandleWin32 } from './win32.ts'
 

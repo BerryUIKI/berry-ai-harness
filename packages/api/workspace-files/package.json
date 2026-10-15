@@ -70,7 +70,7 @@
     "@deepseek-ai/dsh-remote-mock": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
+    "@berry-ai/harness-session-persistence": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*"
   },
   "files": [

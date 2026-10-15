@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { SessionEvent } from '@berry-ai/harness-session'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
 import { z } from 'zod'
 import type {
   ModelSelection,

@@ -39,7 +39,7 @@ kind: "package-reference"
 
 ```yaml
 # smallest team setup — durable storage plus both Team packages
-- name: '@deepseek-ai/dsh-session-persistence-jsonl'
+- name: '@berry-ai/harness-session-persistence-jsonl'
 - name: '@deepseek-ai/dsh-experimental-agent-team'
 - name: '@deepseek-ai/dsh-experimental-tool-agent-team'
 ```

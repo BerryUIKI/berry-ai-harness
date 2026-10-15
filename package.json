@@ -279,8 +279,8 @@
     "vitest": "^4.1.11",
     "@berry-ai/harness-skill-office": "workspace:*",
     "@berry-ai/harness-tool-workspace-dependencies": "workspace:*",
-    "@deepseek-ai/dsh-tool-working-directory": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*",
+    "@berry-ai/harness-tool-working-directory": "workspace:*",
+    "@berry-ai/harness-working-directory": "workspace:*",
     "@deepseek-ai/dsh-experimental-worktree": "workspace:*",
     "@deepseek-ai/dsh-experimental-tool-worktree": "workspace:*"
   }

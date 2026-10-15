@@ -3,7 +3,7 @@ description: "面向客户端与维护者的全日志会话计数与墙钟时间
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-stats
+# @berry-ai/harness-session-stats
 
 [English](README.md) | 中文
 
@@ -31,8 +31,8 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-session'
-- name: '@deepseek-ai/dsh-session-projection'
-- name: '@deepseek-ai/dsh-session-stats'
+- name: '@berry-ai/harness-session-projection'
+- name: '@berry-ai/harness-session-stats'
 ```
 
 ### 各字段含义

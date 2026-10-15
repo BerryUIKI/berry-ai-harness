@@ -22,7 +22,7 @@ import type { Context, LoggerService } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { z as zod } from 'zod'
 import type { PreStepDecision } from '@berry-ai/harness-agent'
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import type { ShellExecutor, ShellRunResult } from '@berry-ai/harness-shell'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
@@ -216,7 +216,7 @@ type TmuxContextState = zod.infer<typeof tmuxContextStateSchema>
  * @param config - durable refresh scheduling configuration.
  * @throws when the refresh interval is invalid.
  */
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     /** The stable state block of this plugin's latest durable injection, or null. */
     tmuxContext: TmuxContextState

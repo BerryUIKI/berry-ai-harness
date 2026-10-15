@@ -26,7 +26,7 @@
  * @module @berry-ai/harness-tool-fs-search
  */
 
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'

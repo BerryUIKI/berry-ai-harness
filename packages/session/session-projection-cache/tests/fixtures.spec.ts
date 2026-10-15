@@ -22,8 +22,8 @@ import { Context } from '@deepseek-ai/cordis'
 import { z } from 'zod'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId } from '@berry-ai/harness-session'
 import type { SessionHeader } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
 import Storage from '@berry-ai/harness-storage'
 import {
   apply as storageJsonApply, Config as storageJsonConfig, inject as storageJsonInject, name as storageJsonName,
@@ -36,7 +36,7 @@ import { checkpointRow, projectionCacheDomainSpec } from '../src/spec.ts'
 
 // Declarations must match the shipped title unit's exactly (the repo-wide
 // compile face sees both).
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     title: string | null
   }

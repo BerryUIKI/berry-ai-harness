@@ -13,10 +13,10 @@ import type { ConfinedArgv, SandboxMode, SandboxPolicy } from '@berry-ai/harness
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import LocalSandbox from '@berry-ai/harness-sandbox-local'
 import { Session, SessionId, SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
-import WorkingDirectoryService from '@deepseek-ai/dsh-working-directory'
+import WorkingDirectoryService from '@berry-ai/harness-working-directory'
 import WorktreeService from '../src/index.ts'
 import type { Config } from '../src/index.ts'
 

@@ -4,9 +4,9 @@ import { Context } from '@deepseek-ai/cordis'
 import LlmRuntime from '@berry-ai/harness-llm'
 import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import * as FirstMessageTitleProvider from '@deepseek-ai/dsh-session-title-first-prompt-llm'
+import SessionTitleService from '@berry-ai/harness-session-title'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import * as FirstMessageTitleProvider from '@berry-ai/harness-session-title-first-prompt-llm'
 
 const contexts: Context[] = []
 

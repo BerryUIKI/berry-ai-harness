@@ -85,13 +85,13 @@ importers:
       '@deepseek-ai/dsh-tool-terminal':
         specifier: workspace:*
         version: link:packages/experimental/tool-terminal
-      '@deepseek-ai/dsh-tool-working-directory':
+      '@berry-ai/harness-tool-working-directory':
         specifier: workspace:*
         version: link:packages/session/tool-working-directory
       '@berry-ai/harness-web-fetch-http':
         specifier: workspace:*
         version: link:packages/web/web-fetch-http
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:packages/session/working-directory
       '@stylistic/eslint-plugin':
@@ -451,7 +451,7 @@ importers:
       '@deepseek-ai/dsh-sdk-minimal':
         specifier: workspace:*
         version: link:../../packages/bundle/sdk-minimal
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../packages/session/session-projection
       '@berry-ai/harness-token-meter':
@@ -590,13 +590,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../packages/core/session
-      '@deepseek-ai/dsh-session-checkpoint-policy':
+      '@berry-ai/harness-session-checkpoint-policy':
         specifier: workspace:*
         version: link:../../packages/session/session-checkpoint-policy
-      '@deepseek-ai/dsh-session-log-deepseek':
+      '@berry-ai/harness-session-log-deepseek':
         specifier: workspace:*
         version: link:../../packages/session/session-log-deepseek
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../packages/session/session-persistence-jsonl
       '@berry-ai/harness-session-query':
@@ -898,7 +898,7 @@ importers:
       '@deepseek-ai/dsh-remote-mock':
         specifier: workspace:*
         version: link:../../packages/test-support/remote-mock
-      '@deepseek-ai/dsh-session-projection-cache':
+      '@berry-ai/harness-session-projection-cache':
         specifier: workspace:*
         version: link:../../packages/session/session-projection-cache
       '@types/node':
@@ -1009,25 +1009,25 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../packages/core/session
-      '@deepseek-ai/dsh-session-format':
+      '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../packages/session/session-format
-      '@deepseek-ai/dsh-session-format-catalog':
+      '@berry-ai/harness-session-format-catalog':
         specifier: workspace:*
         version: link:../packages/session/session-format-catalog
-      '@deepseek-ai/dsh-session-format-v3-to-v4':
+      '@berry-ai/harness-session-format-v3-to-v4':
         specifier: workspace:*
         version: link:../packages/session/session-format-v3-to-v4
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../packages/session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../packages/session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../packages/session/session-projection
-      '@deepseek-ai/dsh-session-projection-cache':
+      '@berry-ai/harness-session-projection-cache':
         specifier: workspace:*
         version: link:../packages/session/session-projection-cache
       '@berry-ai/harness-session-query':
@@ -1036,13 +1036,13 @@ importers:
       '@berry-ai/harness-session-query-sqlite':
         specifier: workspace:*
         version: link:../packages/session-query/session-query-sqlite
-      '@deepseek-ai/dsh-session-stats':
+      '@berry-ai/harness-session-stats':
         specifier: workspace:*
         version: link:../packages/session/session-stats
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../packages/session/session-title
-      '@deepseek-ai/dsh-session-turn-outline':
+      '@berry-ai/harness-session-turn-outline':
         specifier: workspace:*
         version: link:../packages/session/session-turn-outline
       '@berry-ai/harness-subagent':
@@ -1144,13 +1144,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -1509,22 +1509,22 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-session-projection-cache':
+      '@berry-ai/harness-session-projection-cache':
         specifier: workspace:*
         version: link:../../session/session-projection-cache
       '@berry-ai/harness-session-query':
         specifier: workspace:*
         version: link:../../session-query/session-query
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
       '@berry-ai/harness-subagent':
@@ -1536,7 +1536,7 @@ importers:
       '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
       '@types/mime-types':
@@ -1637,10 +1637,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -1738,7 +1738,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
 
@@ -1992,7 +1992,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -2242,31 +2242,31 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-checkpoint-policy':
+      '@berry-ai/harness-session-checkpoint-policy':
         specifier: workspace:*
         version: link:../../session/session-checkpoint-policy
-      '@deepseek-ai/dsh-session-log-deepseek':
+      '@berry-ai/harness-session-log-deepseek':
         specifier: workspace:*
         version: link:../../session/session-log-deepseek
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-session-projection-cache':
+      '@berry-ai/harness-session-projection-cache':
         specifier: workspace:*
         version: link:../../session/session-projection-cache
       '@berry-ai/harness-session-query-sqlite':
         specifier: workspace:*
         version: link:../../session-query/session-query-sqlite
-      '@deepseek-ai/dsh-session-telemetry-otel':
+      '@berry-ai/harness-session-telemetry-otel':
         specifier: workspace:*
         version: link:../../session/session-telemetry-otel
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
-      '@deepseek-ai/dsh-session-title-first-prompt-llm':
+      '@berry-ai/harness-session-title-first-prompt-llm':
         specifier: workspace:*
         version: link:../../session/session-title-first-prompt-llm
       '@berry-ai/harness-subagent':
@@ -2293,7 +2293,7 @@ importers:
       '@berry-ai/harness-tool-web':
         specifier: workspace:*
         version: link:../../web/tool-web
-      '@deepseek-ai/dsh-tool-working-directory':
+      '@berry-ai/harness-tool-working-directory':
         specifier: workspace:*
         version: link:../../session/tool-working-directory
       '@berry-ai/harness-tools':
@@ -2314,7 +2314,7 @@ importers:
       '@berry-ai/harness-web-search-deepseek':
         specifier: workspace:*
         version: link:../../web/web-search-deepseek
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
     devDependencies:
@@ -2467,28 +2467,28 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-log-deepseek':
+      '@berry-ai/harness-session-log-deepseek':
         specifier: workspace:*
         version: link:../../session/session-log-deepseek
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
       '@berry-ai/harness-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-working-directory':
+      '@berry-ai/harness-tool-working-directory':
         specifier: workspace:*
         version: link:../../session/tool-working-directory
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
     devDependencies:
@@ -2858,10 +2858,10 @@ importers:
       '@berry-ai/harness-session-log-export':
         specifier: workspace:*
         version: link:../../session-query/session-log-export
-      '@deepseek-ai/dsh-session-stats':
+      '@berry-ai/harness-session-stats':
         specifier: workspace:*
         version: link:../../session/session-stats
-      '@deepseek-ai/dsh-session-turn-outline':
+      '@berry-ai/harness-session-turn-outline':
         specifier: workspace:*
         version: link:../../session/session-turn-outline
       '@berry-ai/harness-tool-cordis':
@@ -2916,7 +2916,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -3484,10 +3484,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-stats':
+      '@berry-ai/harness-session-stats':
         specifier: workspace:*
         version: link:../../session/session-stats
-      '@deepseek-ai/dsh-session-turn-outline':
+      '@berry-ai/harness-session-turn-outline':
         specifier: workspace:*
         version: link:../../session/session-turn-outline
       '@berry-ai/harness-subagent':
@@ -6557,7 +6557,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-token-meter':
@@ -6603,7 +6603,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-token-meter':
@@ -6640,7 +6640,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-token-meter':
@@ -6704,7 +6704,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -6713,7 +6713,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -6744,7 +6744,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -6753,7 +6753,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -6808,10 +6808,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-session-projection-cache':
+      '@berry-ai/harness-session-projection-cache':
         specifier: workspace:*
         version: link:../../session/session-projection-cache
       '@berry-ai/harness-session-query':
@@ -6820,7 +6820,7 @@ importers:
       '@berry-ai/harness-session-query-sqlite':
         specifier: workspace:*
         version: link:../../session-query/session-query-sqlite
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
       '@berry-ai/harness-subagent':
@@ -6835,7 +6835,7 @@ importers:
       '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -6881,13 +6881,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-checkpoint-policy':
+      '@berry-ai/harness-session-checkpoint-policy':
         specifier: workspace:*
         version: link:../../session/session-checkpoint-policy
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -6924,7 +6924,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -6951,7 +6951,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -7022,13 +7022,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -7155,13 +7155,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
         specifier: workspace:*
         version: link:../system-prompt
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -7288,7 +7288,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -7297,7 +7297,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -7355,7 +7355,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -7426,13 +7426,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-session-query':
@@ -7567,7 +7567,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -7582,7 +7582,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -7629,7 +7629,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -7638,7 +7638,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -7675,7 +7675,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -7684,7 +7684,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -7739,10 +7739,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -7751,7 +7751,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -7815,7 +7815,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -7900,10 +7900,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -7918,7 +7918,7 @@ importers:
       '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -8090,7 +8090,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
       '@berry-ai/harness-session-query':
@@ -8217,7 +8217,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -8275,7 +8275,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -8355,10 +8355,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -8367,7 +8367,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -8407,16 +8407,16 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -8563,7 +8563,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
 
@@ -8677,13 +8677,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
-      '@deepseek-ai/dsh-session-title-llm':
+      '@berry-ai/harness-session-title-llm':
         specifier: workspace:*
         version: link:../../session/session-title-llm
 
@@ -8811,10 +8811,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-session-query':
@@ -8872,10 +8872,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -8921,13 +8921,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-session-query':
@@ -8936,7 +8936,7 @@ importers:
       '@berry-ai/harness-session-query-sqlite':
         specifier: workspace:*
         version: link:../../session-query/session-query-sqlite
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
       '@berry-ai/harness-system-prompt':
@@ -9000,7 +9000,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -9009,7 +9009,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -9058,7 +9058,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -9067,7 +9067,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -9119,13 +9119,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-log-deepseek':
+      '@berry-ai/harness-session-log-deepseek':
         specifier: workspace:*
         version: link:../../session/session-log-deepseek
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
       '@berry-ai/harness-session-query-sqlite':
@@ -9196,7 +9196,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
 
@@ -9245,13 +9245,13 @@ importers:
       '@deepseek-ai/dsh-experimental-webworker-runtime':
         specifier: workspace:*
         version: link:../webworker-runtime
-      '@deepseek-ai/dsh-session-format':
+      '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../../session/session-format
-      '@deepseek-ai/dsh-session-format-catalog':
+      '@berry-ai/harness-session-format-catalog':
         specifier: workspace:*
         version: link:../../session/session-format-catalog
-      '@deepseek-ai/dsh-session-format-v3-to-v4':
+      '@berry-ai/harness-session-format-v3-to-v4':
         specifier: workspace:*
         version: link:../../session/session-format-v3-to-v4
       js-yaml:
@@ -9337,10 +9337,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -9401,13 +9401,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -9629,10 +9629,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
       '@berry-ai/harness-typert-protocol':
@@ -9705,7 +9705,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
 
@@ -9772,7 +9772,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -9781,7 +9781,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -9833,7 +9833,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -9879,7 +9879,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -9918,7 +9918,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
 
@@ -9964,13 +9964,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-checkpoint-policy':
+      '@berry-ai/harness-session-checkpoint-policy':
         specifier: workspace:*
         version: link:../../session/session-checkpoint-policy
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-typert-protocol':
@@ -10000,7 +10000,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -10040,7 +10040,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -10074,7 +10074,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-tools':
@@ -10384,7 +10384,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-typert-protocol':
@@ -10468,10 +10468,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-tools':
@@ -10697,10 +10697,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-log-deepseek':
+      '@berry-ai/harness-session-log-deepseek':
         specifier: workspace:*
         version: link:../../session/session-log-deepseek
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -10862,10 +10862,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -10911,7 +10911,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
 
@@ -10945,7 +10945,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
 
@@ -11052,7 +11052,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -11181,7 +11181,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -11288,7 +11288,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -11371,7 +11371,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
 
@@ -11440,7 +11440,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -11538,13 +11538,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -11666,16 +11666,16 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
         specifier: workspace:*
         version: link:../../subagent/subagent
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -11684,7 +11684,7 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
-      '@deepseek-ai/dsh-session-format':
+      '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../../session/session-format
       '@deepseek-ai/schemastery':
@@ -11742,7 +11742,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
       '@berry-ai/harness-session-query':
@@ -11757,7 +11757,7 @@ importers:
 
   packages/session-query/session-query:
     dependencies:
-      '@deepseek-ai/dsh-session-format-catalog':
+      '@berry-ai/harness-session-format-catalog':
         specifier: workspace:*
         version: link:../../session/session-format-catalog
     devDependencies:
@@ -11776,16 +11776,16 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
-      '@deepseek-ai/dsh-session-projection-cache':
+      '@berry-ai/harness-session-projection-cache':
         specifier: workspace:*
         version: link:../../session/session-projection-cache
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../../session/session-title
 
@@ -11804,13 +11804,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-session-query':
@@ -11840,13 +11840,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../session-projection
       '@berry-ai/harness-system-prompt':
@@ -11871,19 +11871,19 @@ importers:
       '@berry-ai/harness-compaction-image-offload':
         specifier: workspace:*
         version: link:../../compaction/compaction-image-offload
-      '@deepseek-ai/dsh-session-format':
+      '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../session-format
-      '@deepseek-ai/dsh-session-format-v0-to-v1':
+      '@berry-ai/harness-session-format-v0-to-v1':
         specifier: workspace:*
         version: link:../session-format-v0-to-v1
-      '@deepseek-ai/dsh-session-format-v1-to-v2':
+      '@berry-ai/harness-session-format-v1-to-v2':
         specifier: workspace:*
         version: link:../session-format-v1-to-v2
-      '@deepseek-ai/dsh-session-format-v2-to-v3':
+      '@berry-ai/harness-session-format-v2-to-v3':
         specifier: workspace:*
         version: link:../session-format-v2-to-v3
-      '@deepseek-ai/dsh-session-format-v3-to-v4':
+      '@berry-ai/harness-session-format-v3-to-v4':
         specifier: workspace:*
         version: link:../session-format-v3-to-v4
     devDependencies:
@@ -11899,7 +11899,7 @@ importers:
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
-      '@deepseek-ai/dsh-session-format':
+      '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../session-format
     devDependencies:
@@ -11918,10 +11918,10 @@ importers:
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-session-format':
+      '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../session-format
-      '@deepseek-ai/dsh-session-format-v0-to-v1':
+      '@berry-ai/harness-session-format-v0-to-v1':
         specifier: workspace:*
         version: link:../session-format-v0-to-v1
     devDependencies:
@@ -11934,13 +11934,13 @@ importers:
 
   packages/session/session-format-v2-to-v3:
     dependencies:
-      '@deepseek-ai/dsh-session-format':
+      '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../session-format
-      '@deepseek-ai/dsh-session-format-v0-to-v1':
+      '@berry-ai/harness-session-format-v0-to-v1':
         specifier: workspace:*
         version: link:../session-format-v0-to-v1
-      '@deepseek-ai/dsh-session-format-v1-to-v2':
+      '@berry-ai/harness-session-format-v1-to-v2':
         specifier: workspace:*
         version: link:../session-format-v1-to-v2
     devDependencies:
@@ -11950,10 +11950,10 @@ importers:
 
   packages/session/session-format-v3-to-v4:
     dependencies:
-      '@deepseek-ai/dsh-session-format':
+      '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../session-format
-      '@deepseek-ai/dsh-session-format-v2-to-v3':
+      '@berry-ai/harness-session-format-v2-to-v3':
         specifier: workspace:*
         version: link:../session-format-v2-to-v3
     devDependencies:
@@ -12006,7 +12006,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../session-persistence-jsonl
 
@@ -12037,13 +12037,13 @@ importers:
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-session-format':
+      '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../session-format
-      '@deepseek-ai/dsh-session-format-catalog':
+      '@berry-ai/harness-session-format-catalog':
         specifier: workspace:*
         version: link:../session-format-catalog
-      '@deepseek-ai/dsh-session-format-v3-to-v4':
+      '@berry-ai/harness-session-format-v3-to-v4':
         specifier: workspace:*
         version: link:../session-format-v3-to-v4
       '@deepseek-ai/node-addon-system':
@@ -12062,10 +12062,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-format-v0-to-v1':
+      '@berry-ai/harness-session-format-v0-to-v1':
         specifier: workspace:*
         version: link:../session-format-v0-to-v1
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../session-persistence
 
@@ -12109,7 +12109,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../session-projection
 
@@ -12134,7 +12134,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../session-projection
 
@@ -12201,13 +12201,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-checkpoint-policy':
+      '@berry-ai/harness-session-checkpoint-policy':
         specifier: workspace:*
         version: link:../session-checkpoint-policy
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../session-persistence-jsonl
-      '@deepseek-ai/dsh-session-telemetry':
+      '@berry-ai/harness-session-telemetry':
         specifier: workspace:*
         version: link:../session-telemetry
 
@@ -12241,10 +12241,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../session-projection
 
@@ -12284,13 +12284,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../session-projection
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../session-title
-      '@deepseek-ai/dsh-session-title-llm':
+      '@berry-ai/harness-session-title-llm':
         specifier: workspace:*
         version: link:../session-title-llm
 
@@ -12315,7 +12315,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../session-title
 
@@ -12340,7 +12340,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../session-projection
 
@@ -12364,7 +12364,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../session-projection
       '@berry-ai/harness-system-prompt':
@@ -12373,7 +12373,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../working-directory
 
@@ -12413,13 +12413,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../session-projection
       '@berry-ai/harness-system-prompt':
         specifier: workspace:*
         version: link:../../core/system-prompt
-      '@deepseek-ai/dsh-tool-working-directory':
+      '@berry-ai/harness-tool-working-directory':
         specifier: workspace:*
         version: link:../tool-working-directory
       '@berry-ai/harness-tools':
@@ -12514,7 +12514,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@deepseek-ai/node-addon-system':
@@ -12566,7 +12566,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
 
@@ -12667,10 +12667,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -12679,7 +12679,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -12731,7 +12731,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -12740,7 +12740,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -12804,7 +12804,7 @@ importers:
       '@deepseek-ai/dsh-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -12813,7 +12813,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -12868,7 +12868,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -12877,7 +12877,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -12983,7 +12983,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -13124,7 +13124,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-token-meter':
@@ -13241,7 +13241,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
 
@@ -13325,7 +13325,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -13499,13 +13499,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-session-query':
@@ -13520,7 +13520,7 @@ importers:
       '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -13566,13 +13566,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-checkpoint-policy':
+      '@berry-ai/harness-session-checkpoint-policy':
         specifier: workspace:*
         version: link:../../session/session-checkpoint-policy
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -13639,13 +13639,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-checkpoint-policy':
+      '@berry-ai/harness-session-checkpoint-policy':
         specifier: workspace:*
         version: link:../../session/session-checkpoint-policy
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -13709,13 +13709,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-checkpoint-policy':
+      '@berry-ai/harness-session-checkpoint-policy':
         specifier: workspace:*
         version: link:../../session/session-checkpoint-policy
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -13776,13 +13776,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-checkpoint-policy':
+      '@berry-ai/harness-session-checkpoint-policy':
         specifier: workspace:*
         version: link:../../session/session-checkpoint-policy
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -13822,7 +13822,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -13874,10 +13874,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -13914,13 +13914,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -13963,13 +13963,13 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-session-query':
@@ -14101,7 +14101,7 @@ importers:
       '@berry-ai/harness-pwsh-local':
         specifier: workspace:*
         version: link:../../shell/pwsh-local
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@deepseek-ai/schemastery':
@@ -14138,7 +14138,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -14162,7 +14162,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -14171,7 +14171,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -14301,7 +14301,7 @@ importers:
       '@berry-ai/harness-util-values':
         specifier: workspace:*
         version: link:../../util/values
-      '@deepseek-ai/dsh-session-format-catalog':
+      '@berry-ai/harness-session-format-catalog':
         specifier: workspace:*
         version: link:../../session/session-format-catalog
     devDependencies:
@@ -14385,7 +14385,7 @@ importers:
       '@deepseek-ai/dsh-loader-smoke':
         specifier: workspace:*
         version: link:../loader-smoke
-      '@deepseek-ai/dsh-session-format':
+      '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../../session/session-format
       js-yaml:
@@ -14474,7 +14474,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-system-prompt':
@@ -14868,7 +14868,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -14965,10 +14965,10 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../session/session-projection
       '@berry-ai/harness-subagent':
@@ -14983,7 +14983,7 @@ importers:
       '@berry-ai/harness-tools':
         specifier: workspace:*
         version: link:../../core/tools
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
 
@@ -15008,7 +15008,7 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../session/session-persistence
       '@berry-ai/harness-typert-protocol':
@@ -15386,19 +15386,19 @@ importers:
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../packages/core/session
-      '@deepseek-ai/dsh-session-checkpoint-policy':
+      '@berry-ai/harness-session-checkpoint-policy':
         specifier: workspace:*
         version: link:../../packages/session/session-checkpoint-policy
-      '@deepseek-ai/dsh-session-log-deepseek':
+      '@berry-ai/harness-session-log-deepseek':
         specifier: workspace:*
         version: link:../../packages/session/session-log-deepseek
-      '@deepseek-ai/dsh-session-persistence':
+      '@berry-ai/harness-session-persistence':
         specifier: workspace:*
         version: link:../../packages/session/session-persistence
-      '@deepseek-ai/dsh-session-persistence-jsonl':
+      '@berry-ai/harness-session-persistence-jsonl':
         specifier: workspace:*
         version: link:../../packages/session/session-persistence-jsonl
-      '@deepseek-ai/dsh-session-projection':
+      '@berry-ai/harness-session-projection':
         specifier: workspace:*
         version: link:../../packages/session/session-projection
       '@berry-ai/harness-session-query':
@@ -15407,13 +15407,13 @@ importers:
       '@berry-ai/harness-session-query-sqlite':
         specifier: workspace:*
         version: link:../../packages/session-query/session-query-sqlite
-      '@deepseek-ai/dsh-session-telemetry':
+      '@berry-ai/harness-session-telemetry':
         specifier: workspace:*
         version: link:../../packages/session/session-telemetry
-      '@deepseek-ai/dsh-session-title':
+      '@berry-ai/harness-session-title':
         specifier: workspace:*
         version: link:../../packages/session/session-title
-      '@deepseek-ai/dsh-session-title-llm':
+      '@berry-ai/harness-session-title-llm':
         specifier: workspace:*
         version: link:../../packages/session/session-title-llm
       '@berry-ai/harness-subagent':
@@ -15446,7 +15446,7 @@ importers:
       '@berry-ai/harness-tool-web':
         specifier: workspace:*
         version: link:../../packages/web/tool-web
-      '@deepseek-ai/dsh-tool-working-directory':
+      '@berry-ai/harness-tool-working-directory':
         specifier: workspace:*
         version: link:../../packages/session/tool-working-directory
       '@berry-ai/harness-tools':
@@ -15473,7 +15473,7 @@ importers:
       '@berry-ai/harness-web-search-perplexity':
         specifier: workspace:*
         version: link:../../packages/web/web-search-perplexity
-      '@deepseek-ai/dsh-working-directory':
+      '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../packages/session/working-directory
       '@deepseek-ai/schemastery':

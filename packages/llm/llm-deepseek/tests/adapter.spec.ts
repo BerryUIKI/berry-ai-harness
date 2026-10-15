@@ -13,7 +13,7 @@ import type { Agent, ModelSelectionRef } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { AttachmentId } from '@berry-ai/harness-attachment'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
@@ -313,7 +313,7 @@ describe('Cordis provider composition', () => {
       ['@berry-ai/harness-llm', LlmRuntime], ['@berry-ai/harness-llm-deepseek-api-key', Messages], ['@berry-ai/harness-llm-deepseek-account', AccountProvider],
       ['@berry-ai/harness-credentials-local', LocalCredentials],
       ['@berry-ai/harness-agent', AgentRegistry], ['@berry-ai/harness-agent-loop', AgentLoop],
-      ['@berry-ai/harness-session', SessionStore], ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+      ['@berry-ai/harness-session', SessionStore], ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
       ['@berry-ai/harness-system-prompt', SystemPrompt], ['@berry-ai/harness-tools', ToolRuntime],
     ])
     // The importer supplies source modules while Loader still owns configuration and effects.

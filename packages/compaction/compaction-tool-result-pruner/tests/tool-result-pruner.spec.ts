@@ -9,7 +9,7 @@ import {
   SessionSeq,
 } from '@berry-ai/harness-session'
 import type { SurfaceEvent } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import TokenMeter from '@berry-ai/harness-token-meter'
 import ToolResultPruner, {
   codePointLength,

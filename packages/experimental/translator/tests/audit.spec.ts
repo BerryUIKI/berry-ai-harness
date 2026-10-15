@@ -1,7 +1,7 @@
 /** Common paid requests and results survive Host restart without altering main conversation input. */
 import { createAssistantMessage, createUserMessage } from '@berry-ai/harness-llm'
 import { pluginRecordOf, SessionId, SessionSeq, type SessionEvent } from '@berry-ai/harness-session'
-import JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import { readFile } from 'node:fs/promises'
 import { setImmediate } from 'node:timers/promises'
 import { afterEach, describe, expect, it, vi } from 'vitest'

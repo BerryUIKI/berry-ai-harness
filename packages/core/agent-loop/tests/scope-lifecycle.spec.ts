@@ -10,7 +10,7 @@ import AgentRegistry, { agentEvents, assembleContextFor } from '@berry-ai/harnes
 import type { Agent } from '@berry-ai/harness-agent'
 import { scopeOf } from '@berry-ai/harness-scope'
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { ContentBlock } from '@berry-ai/harness-llm'
 import { MockAdapter, textResponse } from './mock-adapter.ts'
 

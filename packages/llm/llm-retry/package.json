@@ -37,7 +37,7 @@
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-session-projection": "workspace:*"
+    "@berry-ai/harness-session-projection": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
@@ -55,8 +55,8 @@
     "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
     "@deepseek-ai/dsh-llm-mock-server": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",

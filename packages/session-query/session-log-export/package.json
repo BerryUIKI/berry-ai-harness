@@ -36,7 +36,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-session-format": "workspace:*",
+    "@berry-ai/harness-session-format": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "fflate": "^0.8.2",
     "@berry-ai/harness-brand": "workspace:*"
@@ -44,7 +44,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*"
+    "@berry-ai/harness-session-persistence": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -63,7 +63,7 @@
     "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
+    "@berry-ai/harness-session-persistence": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
     "@types/react": "~18.3.1",
     "react": "^18.2.0"

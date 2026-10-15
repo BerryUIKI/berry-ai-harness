@@ -20,16 +20,16 @@ import type {
   SessionId,
   SessionLogOffset as SessionLogOffsetType,
 } from '@berry-ai/harness-session'
-import { parseSessionFormatLogFilename, sessionFormatLogFilename, SessionFormatUnsupportedMigrationError } from '@deepseek-ai/dsh-session-format'
-import type { SessionFormatEvent } from '@deepseek-ai/dsh-session-format'
-import type { SessionFormatRecovery, SessionFormatRestore } from '@deepseek-ai/dsh-session-format'
-import { sessionFormatCatalog } from '@deepseek-ai/dsh-session-format-catalog'
-import { assertV4RowAdmission, assertReleasedV4Relationships } from '@deepseek-ai/dsh-session-format-v3-to-v4'
+import { parseSessionFormatLogFilename, sessionFormatLogFilename, SessionFormatUnsupportedMigrationError } from '@berry-ai/harness-session-format'
+import type { SessionFormatEvent } from '@berry-ai/harness-session-format'
+import type { SessionFormatRecovery, SessionFormatRestore } from '@berry-ai/harness-session-format'
+import { sessionFormatCatalog } from '@berry-ai/harness-session-format-catalog'
+import { assertV4RowAdmission, assertReleasedV4Relationships } from '@berry-ai/harness-session-format-v3-to-v4'
 import {
   SessionFormatUnsupportedError,
   sessionFormatVersionRefusal,
   type SessionStorageMetadata,
-} from '@deepseek-ai/dsh-session-persistence'
+} from '@berry-ai/harness-session-persistence'
 
 /** Physical encoding selected for JSONL session artifacts. */
 export type JsonlCompression = 'zstd' | 'none'

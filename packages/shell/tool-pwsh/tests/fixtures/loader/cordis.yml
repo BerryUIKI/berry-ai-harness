@@ -7,10 +7,10 @@
   name: '@berry-ai/harness-fs-local'
 
 - id: session-projections
-  name: '@deepseek-ai/dsh-session-projection'
+  name: '@berry-ai/harness-session-projection'
 
 - id: working-directory
-  name: '@deepseek-ai/dsh-working-directory'
+  name: '@berry-ai/harness-working-directory'
 
 - id: tools
   name: '@berry-ai/harness-tools'

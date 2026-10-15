@@ -41,7 +41,7 @@
       name: '@berry-ai/harness-session'
 
     - id: session-log-deepseek
-      name: '@deepseek-ai/dsh-session-log-deepseek'
+      name: '@berry-ai/harness-session-log-deepseek'
 
     - id: typert
       name: '@berry-ai/harness-typert-registry'
@@ -53,14 +53,14 @@
       name: '@deepseek-ai/dsh-api-gateway'
 
     - id: session-title
-      name: '@deepseek-ai/dsh-session-title'
+      name: '@berry-ai/harness-session-title'
       config:
         fallbackMaxWords: 5
         fallbackMaxBytes: 40
         maxTitleBytes: 80
 
     - id: session-title-llm
-      name: '@deepseek-ai/dsh-session-title-first-prompt-llm'
+      name: '@berry-ai/harness-session-title-first-prompt-llm'
       config:
         targetWords: 5
         targetCjkCharacters: 10
@@ -131,7 +131,7 @@
       name: '@berry-ai/harness-llm-pi-ai'
 
     - id: session-persistence-jsonl
-      name: '@deepseek-ai/dsh-session-persistence-jsonl'
+      name: '@berry-ai/harness-session-persistence-jsonl'
       config:
         root: !!js dshHomePath('sessions')
 
@@ -159,13 +159,13 @@
     # through its registered units, so the `list_agents` surface below fails
     # loud without it; web layers reuse this same mount for list rows.
     - id: working-directory
-      name: '@deepseek-ai/dsh-working-directory'
+      name: '@berry-ai/harness-working-directory'
 
     - id: tool-working-directory
-      name: '@deepseek-ai/dsh-tool-working-directory'
+      name: '@berry-ai/harness-tool-working-directory'
 
     - id: session-projection
-      name: '@deepseek-ai/dsh-session-projection'
+      name: '@berry-ai/harness-session-projection'
 
     # Durable KV storage: the storage hub, the json backend, and the
     # schema-validated domain form over them. Session-layer persistence (the
@@ -189,7 +189,7 @@
     # checkpoint document per session), serving the session listing's
     # projection column.
     - id: session-projection-cache
-      name: '@deepseek-ai/dsh-session-projection-cache'
+      name: '@berry-ai/harness-session-projection-cache'
       config:
         writeEveryEvents: 200
         writeIntervalMs: 5000
@@ -211,7 +211,7 @@
     # large prefixes or an unsettled transport may leave records unsent.
     # Every CLI exit path drains by disposing the root on SIGINT/SIGTERM.
     - id: session-telemetry-otel
-      name: '@deepseek-ai/dsh-session-telemetry-otel'
+      name: '@berry-ai/harness-session-telemetry-otel'
       config:
         mode: !!js process.env.DSH_TELEMETRY_MODE || 'FEEDBACK_ONLY'
         shutdownTimeoutMillis: 3000
@@ -413,7 +413,7 @@
 
     # Durability checkpoints before each model request and top-level dispatch.
     - id: session-checkpoint-policy
-      name: '@deepseek-ai/dsh-session-checkpoint-policy'
+      name: '@berry-ai/harness-session-checkpoint-policy'
 
     # Compacts oversized tool results before the broader conversation compactor
     # runs, preserving the model-visible result within the configured budget.

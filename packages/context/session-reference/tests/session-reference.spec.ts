@@ -5,9 +5,9 @@ import { CompactionId, compactCheckpointSource } from '@berry-ai/harness-compact
 import LlmRuntime, { createDeveloperMessage, createMessage, createSystemMessage, createToolResultMessage, createUserMessage, LlmError, ToolCallId } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import SessionStore, { Session, SessionId, SessionSeq } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SessionQueryEngine from '@berry-ai/harness-session-query'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
+import SessionTitleService from '@berry-ai/harness-session-title'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import SessionReferenceResolver, {
   decodeSessionReferenceUri,

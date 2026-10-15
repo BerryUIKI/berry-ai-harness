@@ -42,6 +42,6 @@
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/node-addon-system": "workspace:~",
-    "@deepseek-ai/dsh-session-projection": "workspace:*"
+    "@berry-ai/harness-session-projection": "workspace:*"
   }
 }

@@ -15,7 +15,7 @@ import type {
 import AgentDefaultModelConfig from '@berry-ai/harness-agent-default-model'
 import { LlmAttemptId, ToolCallId, createAssistantMessage, createToolResultMessage, createUserMessage, type MessageId, type StreamChunk } from '@berry-ai/harness-llm'
 import SessionStore from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { Session, SessionId, UserMessage } from '@berry-ai/harness-session'
 import { SessionQueryError } from '@berry-ai/harness-session-query'
 import { createInboxStub, provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'

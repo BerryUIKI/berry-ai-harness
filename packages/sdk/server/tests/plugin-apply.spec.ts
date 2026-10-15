@@ -13,7 +13,7 @@ import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { LlmAdapter } from '@berry-ai/harness-llm'
 import type { GenerateOptions, StreamChunk } from '@berry-ai/harness-llm'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import * as jsonrpc from '../src/index.ts'
 
 /**

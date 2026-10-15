@@ -5,10 +5,10 @@ import type { ToolAdditionBlock, ToolSchema } from '@berry-ai/harness-llm'
 import { Session, SessionId, SessionLogOffset } from '@berry-ai/harness-session'
 import type { SessionEvent, SessionHeader } from '@berry-ai/harness-session'
 import { buildForkSeed } from '@berry-ai/harness-session/fork'
-import { createSessionFormatCatalog } from '@deepseek-ai/dsh-session-format'
-import { restoreReleasedV4Artifact } from '@deepseek-ai/dsh-session-format-v3-to-v4'
+import { createSessionFormatCatalog } from '@berry-ai/harness-session-format'
+import { restoreReleasedV4Artifact } from '@berry-ai/harness-session-format-v3-to-v4'
 import { sessionFormatCatalogOptions } from '../src/generated.ts'
-import type { SessionFormatEvent } from '@deepseek-ai/dsh-session-format'
+import type { SessionFormatEvent } from '@berry-ai/harness-session-format'
 import { sessionFormatCatalog } from '../src/index.ts'
 
 function restore(session: Session): Session {

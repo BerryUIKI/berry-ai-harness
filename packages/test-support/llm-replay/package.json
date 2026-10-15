@@ -46,7 +46,7 @@
     "@berry-ai/harness-session": "workspace:*"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-session-format-catalog": "workspace:*",
+    "@berry-ai/harness-session-format-catalog": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*"
   }
 }

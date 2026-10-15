@@ -2,7 +2,7 @@
  * Incremental session-log contribution for official DeepSeek LLM API requests.
  * Accepted sequence watermarks live in the canonical log, so restart recovery
  * can conservatively resend uncertain tails without maintaining another store.
- * @module @deepseek-ai/dsh-session-log-deepseek
+ * @module @berry-ai/harness-session-log-deepseek
  */
 
 import { Buffer } from 'node:buffer'

@@ -21,7 +21,7 @@
  */
 
 import { isAbsolute, resolve as resolvePath } from 'node:path'
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import { FiberState } from '@deepseek-ai/cordis'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'

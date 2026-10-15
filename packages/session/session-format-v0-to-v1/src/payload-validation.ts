@@ -1,9 +1,9 @@
-import { SessionFormatError, sessionFormatCount, sessionFormatSafeInteger } from '@deepseek-ai/dsh-session-format'
+import { SessionFormatError, sessionFormatCount, sessionFormatSafeInteger } from '@berry-ai/harness-session-format'
 import { deepEqualJson } from '@berry-ai/harness-util-values'
 import type {
   SessionFormatEvent,
   SessionFormatJsonValue,
-} from '@deepseek-ai/dsh-session-format'
+} from '@berry-ai/harness-session-format'
 import { assertReleasedV0Keys, releasedV0Record } from './validation-helpers.ts'
 
 type JsonRecord = Record<string, SessionFormatJsonValue>

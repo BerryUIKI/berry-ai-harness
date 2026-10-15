@@ -10,7 +10,7 @@ import { bindScopeParent, createScope, scopeOf, scopeTarget } from '@berry-ai/ha
 import { liveConfig } from '../../../settings/settings/tests/live-config.ts'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SubagentRuntime from '@berry-ai/harness-subagent'
 import * as SubagentSpawn from '@berry-ai/harness-subagent-spawn-in-process'
 import * as tool from '../src/index.ts'

@@ -11,9 +11,9 @@ import SessionStore, {
   SessionSeq,
   type Session,
 } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
-import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import SqliteSessionQueryEngine from '@berry-ai/harness-session-query-sqlite'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'

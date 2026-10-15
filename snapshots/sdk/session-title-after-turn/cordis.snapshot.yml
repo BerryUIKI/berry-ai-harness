@@ -12,7 +12,7 @@
     model: deepseek-v4-flash
 
 - id: session-persistence-jsonl
-  name: '@deepseek-ai/dsh-session-persistence-jsonl'
+  name: '@berry-ai/harness-session-persistence-jsonl'
   config:
     root: !!js dshHomePath('sessions')
     compression: none
@@ -52,7 +52,7 @@
                 reasoningEfforts: [low, high]
                 defaultReasoningEffort: high
     - id: session-title-provider
-      name: '@deepseek-ai/dsh-session-title-first-prompt-llm'
+      name: '@berry-ai/harness-session-title-first-prompt-llm'
       config:
         targetWords: 5
         targetCjkCharacters: 10

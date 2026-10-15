@@ -15,8 +15,8 @@ import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import { createAssistantMessage, createUserMessage } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import * as SessionTurnOutlinePlugin from '@deepseek-ai/dsh-session-turn-outline'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import * as SessionTurnOutlinePlugin from '@berry-ai/harness-session-turn-outline'
 
 let root: string | undefined
 let context: Context | undefined
@@ -39,8 +39,8 @@ async function loadYaml(lines: readonly string[]): Promise<Context> {
   context.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-session', SessionStore],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
-    ['@deepseek-ai/dsh-session-turn-outline', SessionTurnOutlinePlugin],
+    ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
+    ['@berry-ai/harness-session-turn-outline', SessionTurnOutlinePlugin],
   ])
   context.loader.internal = {
     version: 'v2',
@@ -61,8 +61,8 @@ describe('real Loader composition', () => {
   it('loads the shipped session-turn-outline YAML shape and serves the outline', async () => {
     const loaded = await loadYaml([
       "- name: '@berry-ai/harness-session'",
-      "- name: '@deepseek-ai/dsh-session-projection'",
-      "- name: '@deepseek-ai/dsh-session-turn-outline'",
+      "- name: '@berry-ai/harness-session-projection'",
+      "- name: '@berry-ai/harness-session-turn-outline'",
     ])
 
     const unloaded = [...loaded.loader.entries()]

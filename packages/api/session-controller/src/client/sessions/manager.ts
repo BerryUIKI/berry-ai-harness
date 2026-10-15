@@ -2,7 +2,7 @@
 
 import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import { SessionSeq, type SessionId, type SessionSeqCursor } from '@berry-ai/harness-session/types'
-import type { SessionProjectionMap } from '@deepseek-ai/dsh-session-projection/types'
+import type { SessionProjectionMap } from '@berry-ai/harness-session-projection/types'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import type {
   SessionControlBaseline,
@@ -20,7 +20,7 @@ import { flattenLineage } from './lineage.ts'
 // Type-only merge edge: the title domain's client-namespace outlet declares
 // the 'title' projection key this manager projects into list rows (and any
 // useProjection('title') consumer reads). Zero value imports by construction.
-import type {} from '@deepseek-ai/dsh-session-title/client'
+import type {} from '@berry-ai/harness-session-title/client'
 import { Notifier } from './notifier.ts'
 import { ProjectionValueStore } from './projection-store.ts'
 import { Session } from './session.ts'

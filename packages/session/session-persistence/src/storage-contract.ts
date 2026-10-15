@@ -2,7 +2,7 @@
  * Backend-shared storage validation: the version gate, the fail-closed event
  * vocabulary, append-batch materialization, and contiguity — one place so
  * every backend refuses the same inputs identically.
- * @module @deepseek-ai/dsh-session-persistence/storage-contract
+ * @module @berry-ai/harness-session-persistence/storage-contract
  */
 
 import {

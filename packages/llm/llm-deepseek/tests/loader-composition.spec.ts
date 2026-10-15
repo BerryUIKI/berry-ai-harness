@@ -16,7 +16,7 @@ import LocalCredentialProvider from '@berry-ai/harness-credentials-local'
 import { profileComposition } from '../../../settings/settings/tests/profile-composition.ts'
 import { getOrCreateAnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import DeepSeekLlmApiExtensionRegistry from '@berry-ai/harness-deepseek-llm-api-extensions'
-import * as SessionLogDeepSeek from '@deepseek-ai/dsh-session-log-deepseek'
+import * as SessionLogDeepSeek from '@berry-ai/harness-session-log-deepseek'
 import * as DeepSeekPluginPackageInventory from '@berry-ai/harness-plugin-package-inventory-deepseek'
 import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 import { assemble } from './assemble.ts'
@@ -63,7 +63,7 @@ async function loadComposition(
     '- id: deepseek-llm-api-extensions',
     "  name: '@berry-ai/harness-deepseek-llm-api-extensions'",
     '- id: session-log-deepseek',
-    "  name: '@deepseek-ai/dsh-session-log-deepseek'",
+    "  name: '@berry-ai/harness-session-log-deepseek'",
     ...options.enableSessionLog !== undefined
       ? ['  config:', `    enabled: ${String(options.enableSessionLog)}`]
       : [],
@@ -95,7 +95,7 @@ async function loadComposition(
     ['@berry-ai/harness-session', SessionStore],
     ['@berry-ai/harness-agent', AgentRegistry],
     ['@berry-ai/harness-deepseek-llm-api-extensions', DeepSeekLlmApiExtensionRegistry],
-    ['@deepseek-ai/dsh-session-log-deepseek', SessionLogDeepSeek],
+    ['@berry-ai/harness-session-log-deepseek', SessionLogDeepSeek],
     ['@berry-ai/harness-plugin-package-inventory-deepseek', DeepSeekPluginPackageInventory],
     ['@berry-ai/harness-credentials-local', LocalCredentialProvider],
     ['@berry-ai/harness-llm-deepseek-api-key', LlmDeepSeek],
@@ -159,7 +159,7 @@ describe('llm-deepseek real dynamic composition', () => {
     expect(request.dsh_plugin_packages.packages).toEqual(expect.arrayContaining([
       { name: '@berry-ai/harness-deepseek-llm-api-extensions', version: '0.1.0-rc.8' },
       { name: '@berry-ai/harness-llm-deepseek-api-key', version: '0.1.0-rc.8' },
-      { name: '@deepseek-ai/dsh-session-log-deepseek', version: '0.1.0-rc.8' },
+      { name: '@berry-ai/harness-session-log-deepseek', version: '0.1.0-rc.8' },
     ]))
     expect(request.dsh_plugin_packages.version).toBe(1)
     expect(SessionLogDeepSeek.acceptedThrough(session)).toBe(-1)

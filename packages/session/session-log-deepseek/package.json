@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-session-log-deepseek",
+  "name": "@berry-ai/harness-session-log-deepseek",
   "description": "Incremental lossless session-log request extension for the official DeepSeek LLM API",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -53,6 +53,6 @@
     "@deepseek-ai/dsh-llm-mock-server": "workspace:*",
     "@berry-ai/harness-message-feedback": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*"
+    "@berry-ai/harness-session-persistence-jsonl": "workspace:*"
   }
 }

@@ -16,10 +16,10 @@ import { createMessage, ToolCallId } from '@berry-ai/harness-llm'
 import type { StreamChunk, TokenUsage } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import type { Session, SessionEvent } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import * as SessionStatsPlugin from '@deepseek-ai/dsh-session-stats'
-import { sessionStatsProjectionDefinition } from '@deepseek-ai/dsh-session-stats/src/projection.ts'
-import type { SessionStatsProjection } from '@deepseek-ai/dsh-session-stats/types'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import * as SessionStatsPlugin from '@berry-ai/harness-session-stats'
+import { sessionStatsProjectionDefinition } from '@berry-ai/harness-session-stats/src/projection.ts'
+import type { SessionStatsProjection } from '@berry-ai/harness-session-stats/types'
 
 async function harness(withStatsPlugin: boolean): Promise<{ ctx: Context; session: Session }> {
   const ctx = new Context()

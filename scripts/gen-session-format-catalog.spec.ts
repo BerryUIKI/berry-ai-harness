@@ -36,9 +36,9 @@ function fixture(edges: Array<[number, number]>): string {
         targetRestorer: `restoreReleasedV${to}Artifact`,
       } },
       dependencies: from === 0
-        ? { '@deepseek-ai/dsh-session-format': 'workspace:^' }
+        ? { '@berry-ai/harness-session-format': 'workspace:^' }
         : {
-          '@deepseek-ai/dsh-session-format': 'workspace:^',
+          '@berry-ai/harness-session-format': 'workspace:^',
           [`@deepseek-ai/dsh-session-format-v${from - 1}-to-v${from}`]: 'workspace:^',
         },
     }))
@@ -101,7 +101,7 @@ describe('session format catalog generator', () => {
     const output = renderSessionFormatCatalog(declarations, version)
 
     expect(declarations.map(item => [item.from, item.to])).toEqual([[0, 1], [1, 2]])
-    expect(output).toContain("from '@deepseek-ai/dsh-session-format-v0-to-v1'")
+    expect(output).toContain("from '@berry-ai/harness-session-format-v0-to-v1'")
     expect(output).toContain('currentVersion: 2')
     expect(output).toContain('currentEncoder: releasedV2SessionFormatCodec')
     expect(output).toContain('restoreReleasedV2Artifact(artifact, KNOWN_SESSION_EVENT_TYPES)')
@@ -132,7 +132,7 @@ describe('session format catalog generator', () => {
   it('requires every later edge to depend on the package that owns its source codec', () => {
     const root = fixture([[0, 1], [1, 2]])
     const manifest = edgeManifest(root, 1, 2)
-    delete manifest.value.dependencies['@deepseek-ai/dsh-session-format-v0-to-v1']
+    delete manifest.value.dependencies['@berry-ai/harness-session-format-v0-to-v1']
     writeFileSync(manifest.path, JSON.stringify(manifest.value))
 
     expect(() => collectSessionFormatMigrations(root, 2))

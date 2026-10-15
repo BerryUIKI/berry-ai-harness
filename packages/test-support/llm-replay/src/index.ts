@@ -18,7 +18,7 @@ import {
   createSessionFormatCatalogWithChildren,
   SessionFormatUnsupportedMigrationError,
   sessionFormatCatalog,
-} from '@deepseek-ai/dsh-session-format-catalog'
+} from '@berry-ai/harness-session-format-catalog'
 import type {
   ContentBlock,
   GenerateOptions,

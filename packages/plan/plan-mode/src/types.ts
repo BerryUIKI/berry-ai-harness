@@ -35,7 +35,7 @@ export interface PlanUnitState {
   activeAtLastHeader: boolean | null
 }
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     /** Host plan-mode fold state. */
     plan: PlanUnitState

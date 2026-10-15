@@ -3,7 +3,7 @@ import { HostConnectionService } from '@deepseek-ai/dsh-client-connection'
 import type { BrowserAuth } from '@deepseek-ai/dsh-client-connection/src/browser-auth.ts'
 import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 import type { SessionHeader, SessionId } from '@berry-ai/harness-session'
-import type { SessionHandle } from '@deepseek-ai/dsh-session-persistence'
+import type { SessionHandle } from '@berry-ai/harness-session-persistence'
 import { strFromU8, unzipSync } from 'fflate'
 import { describe, expect, it } from 'vitest'
 import {

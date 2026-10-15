@@ -355,18 +355,18 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-session-checkpoint-policy` | no | Semantic session durability checkpoints before model requests and tool side effects |
-| `@deepseek-ai/dsh-session-log-deepseek` | yes | Incremental lossless session-log request extension for the official DeepSeek LLM API |
-| `@deepseek-ai/dsh-session-persistence-jsonl` | yes | JSONL durable session persistence backend for the DeepSeek Harness |
-| `@deepseek-ai/dsh-session-projection` | no | Session-projection seam: the merge-extensible projection type table, the provider contract, and the ctx.sessionProjections registry serving whole current values of log-derived per-session state |
-| `@deepseek-ai/dsh-session-projection-cache` | yes | Persisted projection cache (ctx.sessionProjectionCache): durable per-session checkpoint records on the session_projcache storage domain (per-record layout), throttled write-behind, and the cached listing read |
-| `@deepseek-ai/dsh-session-stats` | no | Whole-log conversation counts and wall times projection (sessionStats) for the DeepSeek Harness |
-| `@deepseek-ai/dsh-session-telemetry-otel` | yes | Feedback-authorized Session logs over byte-bounded OpenTelemetry HTTP requests |
-| `@deepseek-ai/dsh-session-title` | yes | Log-backed session title service and provider registry for the DeepSeek Harness |
-| `@deepseek-ai/dsh-session-title-first-prompt-llm` | yes | First-message LLM provider plugin for DeepSeek Harness session titles |
-| `@deepseek-ai/dsh-session-turn-outline` | no | Whole-log turn outline projection (turnOutline) for the DeepSeek Harness |
-| `@deepseek-ai/dsh-tool-working-directory` | no | Read and change the active Session working directory |
-| `@deepseek-ai/dsh-working-directory` | yes | Session working directories with durable changes and model context |
+| `@berry-ai/harness-session-checkpoint-policy` | no | Semantic session durability checkpoints before model requests and tool side effects |
+| `@berry-ai/harness-session-log-deepseek` | yes | Incremental lossless session-log request extension for the official DeepSeek LLM API |
+| `@berry-ai/harness-session-persistence-jsonl` | yes | JSONL durable session persistence backend for the DeepSeek Harness |
+| `@berry-ai/harness-session-projection` | no | Session-projection seam: the merge-extensible projection type table, the provider contract, and the ctx.sessionProjections registry serving whole current values of log-derived per-session state |
+| `@berry-ai/harness-session-projection-cache` | yes | Persisted projection cache (ctx.sessionProjectionCache): durable per-session checkpoint records on the session_projcache storage domain (per-record layout), throttled write-behind, and the cached listing read |
+| `@berry-ai/harness-session-stats` | no | Whole-log conversation counts and wall times projection (sessionStats) for the DeepSeek Harness |
+| `@berry-ai/harness-session-telemetry-otel` | yes | Feedback-authorized Session logs over byte-bounded OpenTelemetry HTTP requests |
+| `@berry-ai/harness-session-title` | yes | Log-backed session title service and provider registry for the DeepSeek Harness |
+| `@berry-ai/harness-session-title-first-prompt-llm` | yes | First-message LLM provider plugin for DeepSeek Harness session titles |
+| `@berry-ai/harness-session-turn-outline` | no | Whole-log turn outline projection (turnOutline) for the DeepSeek Harness |
+| `@berry-ai/harness-tool-working-directory` | no | Read and change the active Session working directory |
+| `@berry-ai/harness-working-directory` | yes | Session working directories with durable changes and model context |
 
 ## session-query
 

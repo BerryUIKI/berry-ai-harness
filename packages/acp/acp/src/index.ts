@@ -47,7 +47,7 @@ import {
 } from '@agentclientprotocol/sdk'
 import type { ModelSelection } from '@berry-ai/harness-agent'
 import type { SessionId } from '@berry-ai/harness-session'
-import type {} from '@deepseek-ai/dsh-session-persistence'
+import type {} from '@berry-ai/harness-session-persistence'
 // Side-effect type import: declaration-merges the approval waterfall answered below.
 import type {} from '@berry-ai/harness-user-approval'
 import { supportsAcpImagePrompts } from './content.ts'

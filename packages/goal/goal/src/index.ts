@@ -14,8 +14,8 @@ import type { Agent } from '@berry-ai/harness-agent'
 import { SessionSeq } from '@berry-ai/harness-session'
 import type { Session, SessionEvent, SessionLogOffset } from '@berry-ai/harness-session'
 import { TypertRemoteService, Remote } from '@berry-ai/harness-typert-protocol'
-import type {} from '@deepseek-ai/dsh-session-projection'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
+import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
 import {
   applyGoalEvent,
   goalChangeRef,

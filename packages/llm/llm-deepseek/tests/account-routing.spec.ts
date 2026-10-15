@@ -6,7 +6,7 @@ import LlmRuntime, { createUserMessage, LlmAdapter, type GenerateOptions, type S
 import AgentRegistry, { type Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime, { defineContentToolFixture } from '@berry-ai/harness-tools'
 import * as DeepSeek from '@berry-ai/harness-llm-deepseek-api-key'

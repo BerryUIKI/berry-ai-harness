@@ -1,6 +1,6 @@
 - name: '@berry-ai/harness-llm'
 - name: '@berry-ai/harness-session'
-- name: '@deepseek-ai/dsh-session-projection'
+- name: '@berry-ai/harness-session-projection'
 - name: '@berry-ai/harness-system-prompt'
 - name: '@berry-ai/harness-tools'
 - name: '@berry-ai/harness-agent'

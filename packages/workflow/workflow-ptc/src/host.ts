@@ -1,7 +1,7 @@
 /** Workflow child ownership and progress over the shared sandboxed PTC executor. */
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@berry-ai/harness-agent'
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import type { PtcBindingFunction, PtcJsonValue, PtcRuntime } from '@berry-ai/harness-ptc-runtime'
 import type { SandboxExecutionPolicy } from '@berry-ai/harness-sandbox'
 import { SessionId } from '@berry-ai/harness-session'

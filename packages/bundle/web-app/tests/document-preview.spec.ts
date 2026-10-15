@@ -12,7 +12,7 @@ import OfficeToPdf from '@berry-ai/harness-office-to-pdf'
 import * as DocumentPreview from '@deepseek-ai/dsh-client-ui-sidebar-documentpreview'
 import type { IndexInjection } from '@deepseek-ai/dsh-host-webserver'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import { FsError } from '@berry-ai/harness-fs'
@@ -47,7 +47,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
   expect(configured.find(row => row.id === 'ui-sidebar-documentpreview')!.config).toEqual(clientConfig)
   await writeFile(configPath, JSON.stringify([
     { name: '@berry-ai/harness-session' },
-    { name: '@deepseek-ai/dsh-session-projection' },
+    { name: '@berry-ai/harness-session-projection' },
     { name: '@berry-ai/harness-sandbox-policy', config: { workspaceRoot: directory } },
     { name: '@berry-ai/harness-fs-local', config: { cwd: directory } },
     { name: '@berry-ai/harness-typert-registry' },
@@ -72,7 +72,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
   // Loader's native imports must share the test's source-plane Service classes.
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-session', SessionStore],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+    ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
     ['@berry-ai/harness-fs-local', LocalFileSystem],
     ['@berry-ai/harness-typert-registry', TypertRegistry],

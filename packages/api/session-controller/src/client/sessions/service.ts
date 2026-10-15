@@ -5,7 +5,7 @@ import { SessionSeq, type SessionId } from '@berry-ai/harness-session/types'
 import { workspaceTitleOf } from '@berry-ai/harness-util-workspace-path'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import { SESSION_SEARCH_RESULT_LIMIT } from '../../types.ts'
-import type { SessionProjectionMap } from '@deepseek-ai/dsh-session-projection/types'
+import type { SessionProjectionMap } from '@berry-ai/harness-session-projection/types'
 import {
   createSnapshotStore, notifySubscribers, type ObservableSnapshot, type SnapshotStore,
 } from '@deepseek-ai/dsh-client-store'

@@ -47,7 +47,7 @@ declare module '@berry-ai/harness-typert-protocol' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     agentPreset: string | null
   }

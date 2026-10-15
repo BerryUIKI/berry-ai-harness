@@ -18,7 +18,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import type { Agent } from '@berry-ai/harness-agent'
 import SubagentRuntime from '@berry-ai/harness-subagent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type {
   SubprocessHandle,
   SubprocessOutcome,

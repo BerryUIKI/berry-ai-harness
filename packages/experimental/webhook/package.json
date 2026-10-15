@@ -39,7 +39,7 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-permission-presets": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-title": "workspace:*",
+    "@berry-ai/harness-session-title": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-permission-presets": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-session-title": "workspace:*",
+    "@berry-ai/harness-session-title": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*"
   },
   "dependencies": {

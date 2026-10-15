@@ -1,6 +1,6 @@
 /**
  * Session working directories, durable changes, and model context.
- * @module @deepseek-ai/dsh-working-directory
+ * @module @berry-ai/harness-working-directory
  */
 
 import { isAbsolute } from 'node:path'
@@ -11,7 +11,7 @@ import type { Agent } from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-fs'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { Session } from '@berry-ai/harness-session'
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import type {} from '@berry-ai/harness-system-prompt'
 
 declare module '@deepseek-ai/cordis' {
@@ -40,7 +40,7 @@ declare module '@berry-ai/harness-session/types' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionMap {
     /** Recorded current directory for Session observations, or null when none is recorded. */
     workingDirectory: string | null

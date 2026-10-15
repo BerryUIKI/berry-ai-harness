@@ -19,7 +19,7 @@ import LlmRuntime, { BlockAssembler, createAssistantMessage, createSystemMessage
 import type { Message } from '@berry-ai/harness-llm'
 import * as PluginPackageInventoryDeepSeek from '@berry-ai/harness-plugin-package-inventory-deepseek'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import * as SessionLogDeepSeek from '@deepseek-ai/dsh-session-log-deepseek'
+import * as SessionLogDeepSeek from '@berry-ai/harness-session-log-deepseek'
 import * as Messages from '@berry-ai/harness-llm-deepseek-api-key'
 import { DeepSeekFilesClient } from '../src/files-api.ts'
 import { MESSAGES_FILES_BETA } from '../src/messages-api.ts'

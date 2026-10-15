@@ -12,7 +12,7 @@ import type { ZodType } from 'zod'
 import { defineTool } from '@berry-ai/harness-tools'
 import type { TodoItem } from './types.ts'
 // Type-only: resolves the required ctx.sessionProjections service declaration.
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 // The `todos` projection-key declaration lives in src/types.ts (its one home);
 // this re-export projects the type face onto the package root AND keeps the
 // module edge in the emitted index.d.ts, so aggregate programs consuming the

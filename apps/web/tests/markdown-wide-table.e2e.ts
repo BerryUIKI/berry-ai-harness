@@ -28,7 +28,7 @@ import {
   Session,
   SessionId,
 } from '@berry-ai/harness-session'
-import type {} from '@deepseek-ai/dsh-session-title'
+import type {} from '@berry-ai/harness-session-title'
 import {
   assertFixtureInventory,
   compareOrRefreshGolden,

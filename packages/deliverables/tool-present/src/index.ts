@@ -1,11 +1,11 @@
 /** Scoped tool that declares filesystem deliveries in their owning Session. */
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@berry-ai/harness-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { FsError } from '@berry-ai/harness-fs'
 import { defineTool, type ToolExecution } from '@berry-ai/harness-tools'
 import type {} from '@berry-ai/harness-agent'
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 import type { Session } from '@berry-ai/harness-session'
 import type { PresentedFile } from './types.ts'
 

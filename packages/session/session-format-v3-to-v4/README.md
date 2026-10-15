@@ -3,7 +3,7 @@ description: "Complete V3-to-V4 Session conversion and native admission: tool-ro
 kind: "package-library"
 ---
 
-# @deepseek-ai/dsh-session-format-v3-to-v4
+# @berry-ai/harness-session-format-v3-to-v4
 
 English | [中文](README.zh.md)
 

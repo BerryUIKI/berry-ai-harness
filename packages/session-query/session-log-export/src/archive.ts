@@ -28,10 +28,10 @@ import type {
 } from '@berry-ai/harness-attachment'
 import type { SessionLineageNode, SessionQueryEngine } from '@berry-ai/harness-session-query'
 import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
-import { sessionFormatLogFilename } from '@deepseek-ai/dsh-session-format'
+import { sessionFormatLogFilename } from '@berry-ai/harness-session-format'
 import type { SessionEvent, SessionHeader, SessionId, SessionStore } from '@berry-ai/harness-session'
-import type { SessionHandle, SessionPersistence } from '@deepseek-ai/dsh-session-persistence'
-import { SessionPersistenceNotFoundError } from '@deepseek-ai/dsh-session-persistence'
+import type { SessionHandle, SessionPersistence } from '@berry-ai/harness-session-persistence'
+import { SessionPersistenceNotFoundError } from '@berry-ai/harness-session-persistence'
 
 /** Valid fflate DEFLATE levels accepted by session-log export. */
 export type SessionLogCompressionLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9

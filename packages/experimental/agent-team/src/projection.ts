@@ -4,7 +4,7 @@ import { z } from 'zod'
 import { brandString } from '@berry-ai/harness-brand'
 import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { SessionEvent, SessionEventMap, SessionId } from '@berry-ai/harness-session'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
 import type {
   TeamId,
   TeamMemberProjection,
@@ -158,7 +158,7 @@ export interface TeamProjectionState extends TeamState {
   readonly failure?: string
 }
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionStateMap {
     agentTeam: TeamProjectionState
   }

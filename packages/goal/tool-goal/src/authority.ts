@@ -6,7 +6,7 @@ import type { GoalView } from '@berry-ai/harness-goal'
 import { HarnessError } from '@berry-ai/harness-llm'
 import type { SessionEvent, SessionSeq } from '@berry-ai/harness-session'
 import type { ToolRunContext } from '@berry-ai/harness-tools'
-import type {} from '@deepseek-ai/dsh-session-projection'
+import type {} from '@berry-ai/harness-session-projection'
 
 /** The calling agent plus the immutable event cut and open-turn start seq used for authority checks. */
 export interface GoalToolExecution {

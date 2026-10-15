@@ -14,7 +14,7 @@ import SessionStore, {
   type SessionHeader,
   type SessionId as SessionIdValue,
 } from '@berry-ai/harness-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
 import SessionQueryEngine, {
   SessionQueryError,

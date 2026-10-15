@@ -28,7 +28,7 @@ import {
 import type { Agent } from '@berry-ai/harness-agent'
 import type { ContentBlock } from '@berry-ai/harness-llm'
 import SubagentRuntime from '@berry-ai/harness-subagent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type {
   SubprocessHandle,
   SubprocessOutcome,

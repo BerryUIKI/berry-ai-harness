@@ -55,7 +55,7 @@ const SAFE_HOST_DEPENDENCY_EXPORTS = {
   '@berry-ai/harness-timeout': ['MAX_TIMER_DELAY_MS'],
   '@berry-ai/harness-credentials': ['credentialKey'],
   '@berry-ai/harness-llm': ['callConfigEquals'],
-  '@deepseek-ai/dsh-session-format': ['sessionFormatLogFilename'],
+  '@berry-ai/harness-session-format': ['sessionFormatLogFilename'],
   '@deepseek-ai/schemastery': ['default'],
 } as const satisfies HostDependencyExports
 
@@ -64,7 +64,7 @@ const PEER_REQUIRED_HOST_EXPORTS = {
   '@deepseek-ai/dsh-client-connection': ['OperatorPeer'],
   '@berry-ai/harness-scope': ['carrierKeyOf', 'createScope', 'scopeOf', 'scopeTarget'],
   '@berry-ai/harness-session': ['SESSION_FORMAT_VERSION'],
-  '@deepseek-ai/dsh-session-persistence': ['SessionPersistenceNotFoundError'],
+  '@berry-ai/harness-session-persistence': ['SessionPersistenceNotFoundError'],
 } as const satisfies HostDependencyExports
 
 /** Exact import specifier to reviewed runtime exports. */

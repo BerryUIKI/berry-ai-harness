@@ -11,7 +11,7 @@ import { ToolCallId, createMessage, createUserMessage, ReasoningEffortId } from 
 import type { LlmCallConfig } from '@berry-ai/harness-llm'
 import SessionStore, { TOOL_OUTCOME_UNKNOWN, SESSION_FORMAT_VERSION, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import type { Session, SessionEvent, SessionHeader, SessionId } from '@berry-ai/harness-session'
-import { SessionPersistenceRevision, type SessionPersistenceSnapshot } from '@deepseek-ai/dsh-session-persistence'
+import { SessionPersistenceRevision, type SessionPersistenceSnapshot } from '@berry-ai/harness-session-persistence'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import TokenMeter from '@berry-ai/harness-token-meter'
 import type { Workspace } from '@berry-ai/harness-workspace'
