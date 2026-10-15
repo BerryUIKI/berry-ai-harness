@@ -53,6 +53,6 @@
     "@berry-ai/harness-tool-call-timeout-policy": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-working-directory": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*"
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*"
   }
 }

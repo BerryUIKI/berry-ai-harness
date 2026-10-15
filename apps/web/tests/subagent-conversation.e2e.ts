@@ -6,7 +6,7 @@ import { zstdCompressSync } from 'node:zlib'
 import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed, vi } from 'vitest'
-import { prepareSessionSnapshotFixtureForComparison } from '@deepseek-ai/dsh-llm-replay'
+import { prepareSessionSnapshotFixtureForComparison } from '@berry-ai/harness-llm-replay'
 import {
   SESSION_FORMAT_VERSION, SessionId as sessionId, SessionLogOffset, SessionSeq,
   type SessionEvent, type SessionHeader, type SessionId,

@@ -5,7 +5,7 @@ import { mkdir, mkdtemp, readFile, readdir, readlink, rm, symlink, unlink, write
 import { tmpdir } from 'node:os'
 import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
-import { resolveExampleLaunch, type ExampleMode } from '@deepseek-ai/dsh-loader-smoke'
+import { resolveExampleLaunch, type ExampleMode } from '@berry-ai/harness-loader-smoke'
 import { execa } from 'execa'
 import { expect, it } from 'vitest'
 

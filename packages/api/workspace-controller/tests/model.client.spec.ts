@@ -23,7 +23,7 @@ import type {
   WorkspaceView,
 } from '../src/types.ts'
 import { RemoteError, type RemoteFailure, type RemoteResult, type RemoteStreamHandle } from '@berry-ai/harness-typert-protocol'
-import { streamHandle } from '@deepseek-ai/dsh-remote-mock'
+import { streamHandle } from '@berry-ai/harness-remote-mock'
 import type { SessionId } from '@berry-ai/harness-session/types'
 
 const sid = (id: string): SessionId => id as SessionId

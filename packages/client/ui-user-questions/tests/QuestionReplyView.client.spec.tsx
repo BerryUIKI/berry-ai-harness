@@ -2,7 +2,7 @@
 import type { ComponentProps } from 'react'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { useDisclosure } from '@deepseek-ai/dsh-client-ui-chat/src/client/chat/use-disclosure.ts'
 import { zh } from '../src/client/locales.ts'
 import { QuestionReplyBubble, QuestionReplyView } from '../src/client/QuestionReplyView.tsx'

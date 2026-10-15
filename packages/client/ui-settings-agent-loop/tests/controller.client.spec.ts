@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import type { SettingsPathOpView } from '@berry-ai/harness-api-remotes/client'
-import { stubConfigForm, type StubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
+import { stubConfigForm, type StubConfigForm } from '@berry-ai/harness-client-test-runtime'
 import { AgentLoopCardController, type AgentLoopSettings } from '../src/client/agent-loop-card-controller.ts'
 
 /** Make the stub behave like a Host that accepts every write. */

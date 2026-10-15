@@ -2,7 +2,7 @@
 
 import { performance } from 'node:perf_hooks'
 import { Context } from '@deepseek-ai/cordis'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'

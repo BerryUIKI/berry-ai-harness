@@ -7,8 +7,8 @@ import {
   normalizeSessionSnapshot,
   normalizeSessionSnapshots,
   type NormalizeContext,
-} from '@deepseek-ai/dsh-session-snapshot'
-import { LOADER_SMOKE_TEST_TIMEOUT_MS, runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
+} from '@berry-ai/harness-session-snapshot'
+import { LOADER_SMOKE_TEST_TIMEOUT_MS, runLoaderSmoke } from '@berry-ai/harness-loader-smoke'
 import { createUserMessage, ToolCallId, createMessage } from '@berry-ai/harness-llm'
 import { SessionSeq, SESSION_FORMAT_VERSION, SessionId, type SessionEvent, type SessionHeader } from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'

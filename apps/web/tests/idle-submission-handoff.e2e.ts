@@ -7,7 +7,7 @@ import { chromium, type Page } from 'playwright'
 import { expect, it, onTestFinished } from 'vitest'
 import type { InboxState } from '@berry-ai/harness-agent/types'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
-import { deriveReplayScript, parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
+import { deriveReplayScript, parseSessionLog } from '@berry-ai/harness-llm-replay'
 import {
   parseRemoteStreamClientMessage, parseRemoteStreamServerMessage,
 } from '@berry-ai/harness-api-gateway/stream-protocol'

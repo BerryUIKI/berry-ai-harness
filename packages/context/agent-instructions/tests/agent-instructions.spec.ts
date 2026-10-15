@@ -1,5 +1,5 @@
 import { chmod, mkdtemp, mkdir, rm, stat, symlink, utimes, writeFile } from 'node:fs/promises'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import { dirname, isAbsolute, join, relative, resolve, sep } from 'node:path'
 import { tmpdir } from 'node:os'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
@@ -48,7 +48,7 @@ import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent
 import {
   mountAgentLoopTestDependencies,
   mountAgentLoopTestHarness,
-} from '@deepseek-ai/dsh-agent-loop-testkit'
+} from '@berry-ai/harness-agent-loop-testkit'
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

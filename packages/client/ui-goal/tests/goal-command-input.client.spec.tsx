@@ -9,7 +9,7 @@ import { ConversationNodeAssembler } from '@deepseek-ai/dsh-client-ui-conversati
 import type {
   ChatConversationViewNode, ChatSnapshot,
 } from '@deepseek-ai/dsh-client-ui-chat/client'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
 import { commandDefinition } from '@deepseek-ai/dsh-client-ui-chat/src/client/conversation-nodes/command.ts'

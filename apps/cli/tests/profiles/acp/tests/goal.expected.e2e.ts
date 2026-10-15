@@ -10,7 +10,7 @@ import {
   type AgentUnderTest,
   type InputScript,
   type NormalizeContext,
-} from '@deepseek-ai/dsh-session-snapshot'
+} from '@berry-ai/harness-session-snapshot'
 import { foldGoal } from '@berry-ai/harness-goal'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import { describe, expect, it } from 'vitest'

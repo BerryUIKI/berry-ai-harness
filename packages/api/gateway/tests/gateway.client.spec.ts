@@ -4,7 +4,7 @@ import { Context, Service } from '@deepseek-ai/cordis'
 import type { Fiber } from '@deepseek-ai/cordis'
 import { describe, expect, expectTypeOf, it, vi } from 'vitest'
 import { z } from 'zod'
-import { RemoteMock } from '@deepseek-ai/dsh-remote-mock'
+import { RemoteMock } from '@berry-ai/harness-remote-mock'
 import {
   apply as applyConnection,
   type ClientTransportHooks,

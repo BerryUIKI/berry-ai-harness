@@ -3,7 +3,7 @@
 
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { bindSnapshotSelector } from '@deepseek-ai/dsh-client-test-runtime'
+import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { SubagentCard, type SubagentCardProps } from '../src/client/SubagentCard.tsx'
 import type { SubagentLimitsCardState } from '../src/client/subagent-limits-card-controller.ts'

@@ -11,7 +11,7 @@
  */
 import { act, cleanup, fireEvent, render, screen, within } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { SessionListState } from '@berry-ai/harness-api-session-controller/client'
 import type { WorkspaceSnapshot } from '@berry-ai/harness-api-workspace-controller/client'

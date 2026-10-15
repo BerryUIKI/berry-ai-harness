@@ -11,8 +11,8 @@ import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
 import {
   SlotTestRuntime, stubConfigForm, usePinnedBrowserLanguages,
-} from '@deepseek-ai/dsh-client-test-runtime'
-import type { SessionBehaviorOverrides } from '@deepseek-ai/dsh-client-test-runtime'
+} from '@berry-ai/harness-client-test-runtime'
+import type { SessionBehaviorOverrides } from '@berry-ai/harness-client-test-runtime'
 import {
   apply, inject, type ComposerBarInjected, type ConversationInjected,
   type ConversationSessionHeaderInjected, type ConversationSessionInjected, type ViewTab,
@@ -21,7 +21,7 @@ import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import { createConversationStore } from '../src/client/stores.ts'
 import type { SessionInputShell } from '../src/client/input/facade.ts'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 
 usePinnedBrowserLanguages('zh-CN')
 

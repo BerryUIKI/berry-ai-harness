@@ -3,7 +3,7 @@
  * the plan that annotates one with the rows the test provides itself. `webApp`
  * and `bundleRoster` (`./bundle-roster.ts`) read rosters from the bundle patch
  * files; a spec may also build one inline with {@link ClientRoster.of}.
- * @module @deepseek-ai/dsh-client-test-runtime/src/assembly/roster
+ * @module @berry-ai/harness-client-test-runtime/src/assembly/roster
  */
 import type { Context } from '@deepseek-ai/cordis'
 import type { WebBootEntry, WebBootGraph } from '@deepseek-ai/dsh-client-modules/client'

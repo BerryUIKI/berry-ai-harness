@@ -10,7 +10,7 @@ import { join } from 'node:path'
 import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterEach, describe, expect, it, onTestFailed, vi } from 'vitest'
-import { deriveReplayScript, parseSessionLog, type ReplayEntry } from '@deepseek-ai/dsh-llm-replay'
+import { deriveReplayScript, parseSessionLog, type ReplayEntry } from '@berry-ai/harness-llm-replay'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import {
   assertFixtureInventory, captureExpandedTurnProcessAria, captureStableAria, compareOrRefreshGolden,

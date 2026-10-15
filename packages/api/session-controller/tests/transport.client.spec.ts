@@ -5,7 +5,7 @@ import {
   type RemoteStreamOptions,
 } from '@berry-ai/harness-api-gateway/client'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
-import { streamHandle } from '@deepseek-ai/dsh-remote-mock'
+import { streamHandle } from '@berry-ai/harness-remote-mock'
 import { LlmAttemptId } from '@berry-ai/harness-llm'
 import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session/types'
 import type { RemoteResult, RemoteStreamHandle } from '@berry-ai/harness-typert-protocol'

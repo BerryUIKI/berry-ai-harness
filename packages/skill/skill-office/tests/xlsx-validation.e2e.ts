@@ -4,9 +4,9 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { execa } from 'execa'
 import { describe, expect, it } from 'vitest'
-import { runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
+import { runLoaderSmoke } from '@berry-ai/harness-loader-smoke'
 import { readImageFile } from '@berry-ai/harness-attachment-local'
-import { parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
+import { parseSessionLog } from '@berry-ai/harness-llm-replay'
 import type { SessionEvent } from '@berry-ai/harness-session'
 
 const repo = fileURLToPath(new URL('../../../../', import.meta.url))

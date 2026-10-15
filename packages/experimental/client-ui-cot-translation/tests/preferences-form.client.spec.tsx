@@ -4,7 +4,7 @@ import type { TranslationProvider } from '@deepseek-ai/dsh-experimental-translat
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { afterEach, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
-import { bindSnapshotSelector, makeTranslate, stubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
+import { bindSnapshotSelector, makeTranslate, stubConfigForm } from '@berry-ai/harness-client-test-runtime'
 import { TranslationPreferencesForm } from '../src/client/preferences-form.ts'
 import { TranslationSettings, type TranslationSettingsProps } from '../src/client/TranslationSettings.tsx'
 import type { CotTranslationPreferences } from '../src/preferences.ts'

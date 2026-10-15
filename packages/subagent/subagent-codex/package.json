@@ -57,7 +57,7 @@
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-loader-smoke": "workspace:*",
+    "@berry-ai/harness-loader-smoke": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-checkpoint-policy": "workspace:*",
     "@berry-ai/harness-session-persistence-jsonl": "workspace:*",

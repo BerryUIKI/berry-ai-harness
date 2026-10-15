@@ -2,7 +2,7 @@
 /** Code renderer registration lifetimes through the production document and Slot registries. */
 import { afterEach, describe, expect, it } from 'vitest'
 import { act } from '@testing-library/react'
-import { SlotTestRuntime } from '@deepseek-ai/dsh-client-test-runtime'
+import { SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import { CODE_HIGHLIGHT_EXTENSIONS } from '@deepseek-ai/dsh-client-ui-primitives'
 import { apply } from '../src/client/code/index.ts'

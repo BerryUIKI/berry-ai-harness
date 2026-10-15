@@ -5,7 +5,7 @@
 
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import type { BundleInfo, ChangeResult, ManagementError, PluginEntryId, PluginInfo, PluginInstallRequestId } from '@berry-ai/harness-api-remotes/client'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
 import type { ConfigLedger } from '../src/client/config-ledger.ts'
 import { offeredRegistries, packageView, PluginManagerController, rowKey, sortPackages } from '../src/client/manager-store.ts'

@@ -13,7 +13,7 @@ import { recordFeedback } from '@berry-ai/harness-command-feedback'
 import LlmRuntime, { createAssistantMessage, createUserMessage } from '@berry-ai/harness-llm'
 import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 import DeepSeekLlmApiExtensions from '@berry-ai/harness-deepseek-llm-api-extensions'
-import { startMockLlmServer, type MockLlmServer, type MockLlmServerOptions } from '@deepseek-ai/dsh-llm-mock-server'
+import { startMockLlmServer, type MockLlmServer, type MockLlmServerOptions } from '@berry-ai/harness-llm-mock-server'
 import * as SessionLogDeepSeek from '../src/index.ts'
 import type { DeepSeekSessionLogExtension } from '../src/types.ts'
 

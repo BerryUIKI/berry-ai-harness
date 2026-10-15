@@ -73,7 +73,7 @@
     "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-client-store": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
-    "@deepseek-ai/dsh-remote-mock": "workspace:*",
+    "@berry-ai/harness-remote-mock": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",

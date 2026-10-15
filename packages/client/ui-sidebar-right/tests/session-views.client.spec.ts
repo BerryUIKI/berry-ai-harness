@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { afterEach, expect, it, vi } from 'vitest'
-import { SlotTestRuntime } from '@deepseek-ai/dsh-client-test-runtime'
+import { SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
 import { SidebarSessionView } from '../src/client/session-view.ts'

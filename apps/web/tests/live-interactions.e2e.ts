@@ -19,8 +19,8 @@ import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterEach, describe, expect, it, onTestFailed } from 'vitest'
 import type { RetryPolicyConfig } from '@berry-ai/harness-llm'
-import { deriveReplayScript, parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
-import type { ReplayEntry, ReplayOverrideDoc } from '@deepseek-ai/dsh-llm-replay'
+import { deriveReplayScript, parseSessionLog } from '@berry-ai/harness-llm-replay'
+import type { ReplayEntry, ReplayOverrideDoc } from '@berry-ai/harness-llm-replay'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import {
   assertFixtureInventory, captureExpandedTurnProcessAria, captureStableAria,

@@ -13,7 +13,7 @@ import GoalService, {
   foldGoal,
 } from '@berry-ai/harness-goal'
 import type { GoalChangeMeta, GoalRef, GoalSnapshotChangeMeta } from '@berry-ai/harness-goal'
-import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { createInboxStub } from '@berry-ai/harness-agent-loop-testkit'
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

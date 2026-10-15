@@ -6,7 +6,7 @@
  */
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act } from '@testing-library/react'
-import { SlotTestRuntime } from '@deepseek-ai/dsh-client-test-runtime'
+import { SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
 import type { PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import { apply, inject, type ResourceSnapshot, type UseResource } from '../src/client/index.ts'

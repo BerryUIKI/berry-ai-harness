@@ -51,7 +51,7 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-compaction-tool-result-pruner": "workspace:*",

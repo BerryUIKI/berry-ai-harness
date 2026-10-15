@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import type { Agent } from '@berry-ai/harness-agent'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset } from '@berry-ai/harness-session'
 import { SessionQueryError, type SessionObservation } from '@berry-ai/harness-session-query'

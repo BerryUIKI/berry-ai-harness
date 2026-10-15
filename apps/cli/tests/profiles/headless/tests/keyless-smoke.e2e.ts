@@ -3,7 +3,7 @@ import { zstdDecompressSync } from 'node:zlib'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
-import { runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
+import { runLoaderSmoke } from '@berry-ai/harness-loader-smoke'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import { scanZstdFrames } from '@berry-ai/harness-session-persistence-jsonl/src/zstd.js'
 

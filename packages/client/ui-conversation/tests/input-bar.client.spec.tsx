@@ -18,7 +18,7 @@ import { $getRoot, $isTextNode } from 'lexical'
 import {
   bindSnapshotSelector, conversationSnapshot as conversationFixture, makeTranslate, RemoteError,
   sessionSnapshot as sessionFixture,
-} from '@deepseek-ai/dsh-client-test-runtime'
+} from '@berry-ai/harness-client-test-runtime'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { SessionListState, SessionSnapshot } from '@berry-ai/harness-api-session-controller/client'
 import type { ContextPressureProjection } from '@berry-ai/harness-token-meter/client'

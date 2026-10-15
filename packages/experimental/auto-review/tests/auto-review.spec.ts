@@ -1,6 +1,6 @@
 import { externalTestParent } from '../../../subagent/subagent/tests/external-activation-helpers.ts'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-agent-instructions'

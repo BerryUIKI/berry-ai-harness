@@ -36,7 +36,7 @@
   "devDependencies": {
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-goal": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",

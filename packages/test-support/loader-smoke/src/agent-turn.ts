@@ -1,6 +1,6 @@
 /**
  * Test-only direct-agent turn driver shared by assembled Loader fixtures.
- * @module @deepseek-ai/dsh-loader-smoke/agent-turn
+ * @module @berry-ai/harness-loader-smoke/agent-turn
  */
 
 import type { Context } from '@deepseek-ai/cordis'

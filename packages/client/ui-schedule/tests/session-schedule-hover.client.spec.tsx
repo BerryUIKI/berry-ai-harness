@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { act, cleanup, render, within } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { makeTranslate, RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate, RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { ScheduleCatalogEntry, ScheduleDeleteResult } from '@berry-ai/harness-schedule/client'
 import { ScheduleId } from '@berry-ai/harness-schedule'

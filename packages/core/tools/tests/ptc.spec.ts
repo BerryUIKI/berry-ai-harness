@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
 import { createUserMessage, ToolCallId  } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'

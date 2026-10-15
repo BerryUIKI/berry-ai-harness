@@ -8,7 +8,7 @@
  * Not part of the product plugin graph (no `dsh.client`); feature packages
  * depend on it in devDependencies only. It copies no SlotCore/renderer/store
  * machinery — everything mounts the production implementations.
- * @module @deepseek-ai/dsh-client-test-runtime
+ * @module @berry-ai/harness-client-test-runtime
  */
 /* oxlint-disable typescript/no-redundant-type-constituents --
  * `keyof SlotMap & string` is the declare-merge key pattern (see ui-slots):

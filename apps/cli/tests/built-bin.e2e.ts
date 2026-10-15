@@ -12,7 +12,7 @@ import {
   type SessionNotification,
 } from '@agentclientprotocol/sdk'
 import { withFileLock, writeFileAtomic } from '@berry-ai/harness-atomic-write'
-import { startMockLlmServer } from '@deepseek-ai/dsh-llm-mock-server'
+import { startMockLlmServer } from '@berry-ai/harness-llm-mock-server'
 import { entryListSchema } from '@deepseek-ai/cordis-plugin-include'
 import { execa } from 'execa'
 import * as yaml from 'js-yaml'

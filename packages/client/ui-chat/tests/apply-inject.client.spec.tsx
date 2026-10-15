@@ -8,8 +8,8 @@ import type { ISession, SessionReference } from '@berry-ai/harness-api-session-c
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import {
   SlotTestRuntime, stubConfigForm, usePinnedBrowserLanguages,
-} from '@deepseek-ai/dsh-client-test-runtime'
-import type { SessionBehaviorOverrides } from '@deepseek-ai/dsh-client-test-runtime'
+} from '@berry-ai/harness-client-test-runtime'
+import type { SessionBehaviorOverrides } from '@berry-ai/harness-client-test-runtime'
 import type { ClientRemote } from '@berry-ai/harness-api-remotes/client'
 import {
   apply as applyConversation, inject as injectConversation,

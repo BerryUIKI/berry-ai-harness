@@ -16,7 +16,7 @@ import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import * as ToolStrReplaceEditor from '@berry-ai/harness-tool-str-replace-editor'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 
 const contexts: Context[] = []
 const roots: string[] = []

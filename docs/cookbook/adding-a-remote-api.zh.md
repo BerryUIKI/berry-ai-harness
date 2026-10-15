@@ -166,11 +166,11 @@ it('refuses an unknown note before writing', async () => {
 })
 ```
 
-Client 侧的替身返回真实例：`RemoteError` 与 `TestRemote` 的值 import 一律取自 `@deepseek-ai/dsh-client-test-runtime`，因为从 `api-remotes` facade 值 import 会拉起尚未构建的装配链。`TestRemote.$host` 是普通字段，spec 直接赋值即可。
+Client 侧的替身返回真实例：`RemoteError` 与 `TestRemote` 的值 import 一律取自 `@berry-ai/harness-client-test-runtime`，因为从 `api-remotes` facade 值 import 会拉起尚未构建的装配链。`TestRemote.$host` 是普通字段，spec 直接赋值即可。
 
 ```ts ignore-check
 import { Context } from '@deepseek-ai/cordis'
-import { RemoteError, TestRemote } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError, TestRemote } from '@berry-ai/harness-client-test-runtime'
 import { expect, it } from 'vitest'
 
 it('renders the failure code the Host reported', async () => {

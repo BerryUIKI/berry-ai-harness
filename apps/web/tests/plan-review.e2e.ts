@@ -14,7 +14,7 @@ import { join } from 'node:path'
 import type { Browser, ConsoleMessage, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import { deriveReplayScript, parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
+import { deriveReplayScript, parseSessionLog } from '@berry-ai/harness-llm-replay'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import {

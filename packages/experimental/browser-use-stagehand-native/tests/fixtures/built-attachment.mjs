@@ -1,6 +1,6 @@
 /** Plain-Node smoke of the published provider and its independently configured attachment Worker. */
 import { Context } from '@deepseek-ai/cordis'
-import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@berry-ai/harness-agent-loop-testkit'
 import BrowserUseRegistry from '@berry-ai/harness-browser-use'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import { SessionId } from '@berry-ai/harness-session'

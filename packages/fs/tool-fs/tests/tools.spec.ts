@@ -3,7 +3,7 @@
  * validation, formatting, typed errors, intent dispatch, and observation-driven authorization.
  */
 
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { PtcRuntime } from '@berry-ai/harness-ptc-runtime'

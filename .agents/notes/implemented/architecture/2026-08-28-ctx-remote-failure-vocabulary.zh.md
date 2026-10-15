@@ -49,7 +49,7 @@ export type RemoteResult<T> = { ok: true; value: T } | { ok: false; error: Remot
 
 业务代码通常连这两个函数都不需要：`RemoteResult` 的 `ok: false` 分支已经是类型化的 `RemoteFailure`，`if (result.error.code === 'session/not-found')` 就把 `details` 窄化到该码的形状，无需 cast。需要向上抛的站点直接 `throw result.error`——它是真 `Error`，栈与 `message` 都成立。
 
-client 面不构造 `RemoteError`：唯一例外是 Gateway 的 client face 本身，它在 `invoke()` 里按 wire 数据重建实例、在流边界把载体 throw 折进同一词汇。测试替身要构造失败值时从 `@deepseek-ai/dsh-client-test-runtime` 取 `RemoteError`，而不是让 client 包值引入 protocol。断言用 `toMatchObject` 判 code（必要时加 details 字段）：`RemoteError` 是 `Error`，own key 集合与旧字面量不同，`toEqual` 会失败。
+client 面不构造 `RemoteError`：唯一例外是 Gateway 的 client face 本身，它在 `invoke()` 里按 wire 数据重建实例、在流边界把载体 throw 折进同一词汇。测试替身要构造失败值时从 `@berry-ai/harness-client-test-runtime` 取 `RemoteError`，而不是让 client 包值引入 protocol。断言用 `toMatchObject` 判 code（必要时加 details 字段）：`RemoteError` 是 `Error`，own key 集合与旧字面量不同，`toEqual` 会失败。
 
 ## Fixed Host facts
 

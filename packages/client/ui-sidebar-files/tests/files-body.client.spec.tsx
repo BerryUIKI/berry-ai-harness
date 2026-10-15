@@ -2,7 +2,7 @@
 /** File-tree presentation over controlled directory watches and deferred listings. */
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent } from '@testing-library/react'
-import { makeTranslate, RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate, RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { RemoteFailure } from '@berry-ai/harness-api-remotes/client'
 import { fileAddressFor } from '@berry-ai/harness-util-workspace-path'
 import { failureLine, orderEntries } from '../src/client/FilesBody.tsx'

@@ -18,7 +18,7 @@ import type { SnapshotSelectorHook } from '@deepseek-ai/dsh-client-ui-slots'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import {
   bindSnapshotSelector, conversationSnapshot, makeTranslate,
-} from '@deepseek-ai/dsh-client-test-runtime'
+} from '@berry-ai/harness-client-test-runtime'
 import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
 import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
 import type { InputState } from '../src/client/contract/input.ts'

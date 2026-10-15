@@ -52,7 +52,7 @@
     "@berry-ai/harness-api-session-controller": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@deepseek-ai/dsh-client-locale": "workspace:*",
-    "@deepseek-ai/dsh-client-test-runtime": "workspace:*",
+    "@berry-ai/harness-client-test-runtime": "workspace:*",
     "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
     "@deepseek-ai/dsh-client-ui-input-trigger": "workspace:*",
     "@deepseek-ai/dsh-client-ui-renderer": "workspace:*",

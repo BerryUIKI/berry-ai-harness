@@ -1,4 +1,4 @@
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
 import { PtcRuntime } from '@berry-ai/harness-ptc-runtime'

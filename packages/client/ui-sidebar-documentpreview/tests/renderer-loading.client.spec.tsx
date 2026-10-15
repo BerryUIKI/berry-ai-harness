@@ -3,7 +3,7 @@
 import { useEffect, useState, useSyncExternalStore } from 'react'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, beforeEach, expect, it, onTestFinished, vi } from 'vitest'
-import { makeTranslate, RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate, RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { OwnerOf } from '@deepseek-ai/dsh-client-ui-slots'
 import type { OfficeToPdfGeneration } from '@berry-ai/harness-office-to-pdf/types'
 import type { DocumentPreviewDefinition } from '../src/client/document/registry.ts'

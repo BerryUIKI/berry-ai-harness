@@ -5,7 +5,7 @@ import { useDisclosure } from '@deepseek-ai/dsh-client-ui-chat/src/client/chat/u
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import type { TodoItem } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
 import { TodoRow, todoToolview } from '../src/client/tool/toolviews/todo-row.tsx'
 import { planSummary } from '../src/client/tool/toolviews/plan-summary.ts'

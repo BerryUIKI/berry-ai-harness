@@ -1,5 +1,5 @@
 /** Explicit deliveries commit only after a successful final tool result. */
-import { provideWorkingDirectoryFixture, unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import { mkdtemp, rm, writeFile, symlink, realpath } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join, relative } from 'node:path'

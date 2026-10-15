@@ -15,7 +15,7 @@
  * header and system prompt is checked against the composed pin, so
  * session-dependent composition must declare a separate class instead of
  * escaping coverage.
- * @module @deepseek-ai/dsh-session-snapshot/suite
+ * @module @berry-ai/harness-session-snapshot/suite
  */
 
 import { readFile, readdir, writeFile } from 'node:fs/promises'

@@ -2,7 +2,7 @@
 import { useState, type ComponentProps } from 'react'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { bindSnapshotSelector } from '@deepseek-ai/dsh-client-test-runtime'
+import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { Menu, MenuItemButton } from '@deepseek-ai/dsh-client-ui-primitives'
 import { CreatePluginMenuItem } from '../src/client/CreatePluginMenuItem.tsx'

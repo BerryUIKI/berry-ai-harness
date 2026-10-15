@@ -10,12 +10,12 @@
  * throw (`gateway/internal`, or `gateway/cancelled` once the caller's signal
  * aborted), so product code that never awaits a rejection sees none; stream
  * items and failures pass through as the stream yields them.
- * @module @deepseek-ai/dsh-client-test-runtime/src/assembly/remote-proxies
+ * @module @berry-ai/harness-client-test-runtime/src/assembly/remote-proxies
  */
 import type { Context } from '@deepseek-ai/cordis'
 import { cancelledFailure, carrierFailure } from '@berry-ai/harness-api-gateway/client'
 import type { ConnectionHandle } from '@deepseek-ai/dsh-client-connection/client'
-import type { RemoteMock } from '@deepseek-ai/dsh-remote-mock'
+import type { RemoteMock } from '@berry-ai/harness-remote-mock'
 import type { ClientPluginModule } from './roster.ts'
 
 /** The assembly row the proxies stand in for; its generated clients exist only in built `lib/`. */

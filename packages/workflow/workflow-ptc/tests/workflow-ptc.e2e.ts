@@ -3,7 +3,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { SessionId } from '@berry-ai/harness-session'
 
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 import SubagentRuntime from '@berry-ai/harness-subagent'
 import * as Spawn from '@berry-ai/harness-subagent-spawn-in-process'

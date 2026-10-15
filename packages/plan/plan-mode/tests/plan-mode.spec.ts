@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import { createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime, { RUN_CODE_NAME, defineContentToolFixture } from '@berry-ai/harness-tools'

@@ -10,7 +10,7 @@
  * Real-`rg` behavior is pinned separately in integration.spec.ts.
  */
 
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { createScope, type Scope } from '@berry-ai/harness-scope'

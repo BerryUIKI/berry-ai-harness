@@ -3,7 +3,7 @@ import { describe, expect, it, vi } from 'vitest'
 import type {
   ConnectionGeneration, ConnectionHandle,
 } from '@deepseek-ai/dsh-client-connection/client'
-import { TestRemote } from '@deepseek-ai/dsh-client-test-runtime'
+import { TestRemote } from '@berry-ai/harness-client-test-runtime'
 import type { PermissionCatalog } from '@berry-ai/harness-permission-presets/client'
 import { PermissionCatalogDirectory } from '../src/client/catalog.ts'
 

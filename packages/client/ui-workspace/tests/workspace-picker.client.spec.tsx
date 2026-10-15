@@ -7,7 +7,7 @@ import type {
   WorkspaceId, WorkspaceSnapshot, WorkspaceView,
 } from '@berry-ai/harness-api-workspace-controller/client'
 import type {} from '@deepseek-ai/dsh-client-locale/client'
-import { bindSnapshotSelector, makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
 import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
 import type { DirectoryFlowOwnerProps, WorkspacePickerProps } from '../src/client/contract/slots.ts'

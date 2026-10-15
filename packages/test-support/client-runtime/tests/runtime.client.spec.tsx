@@ -18,7 +18,7 @@ import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   PropsRenderSlots, SessionStandardProps, SlotRendererHost,
 } from '@deepseek-ai/dsh-client-ui-slots'
-import { SlotTestRuntime } from '@deepseek-ai/dsh-client-test-runtime'
+import { SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
 
 declare module '@deepseek-ai/dsh-client-ui-slots' {
   interface SlotMap {

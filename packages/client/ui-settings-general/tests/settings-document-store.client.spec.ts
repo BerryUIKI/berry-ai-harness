@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import { SettingsDescribeMirror } from '@deepseek-ai/dsh-client-ui-settings/src/client/settings-mirror.ts'
 import { SettingsDocumentStore } from '../src/client/settings-document-store.ts'

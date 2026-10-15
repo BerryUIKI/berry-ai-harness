@@ -8,7 +8,7 @@ import SessionStore, { foldSurface, Session, SessionId } from '@berry-ai/harness
 import * as commandFeedback from '@berry-ai/harness-command-feedback'
 import type { FeedbackRecord } from '@berry-ai/harness-command-feedback/types'
 import { remoteMethods } from '@berry-ai/harness-typert-protocol'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 
 const { USER_ID, getOrCreateAnonymousUserId } = vi.hoisted(() => {
   const USER_ID = '01234567-89ab-4cde-8f01-23456789abcd'

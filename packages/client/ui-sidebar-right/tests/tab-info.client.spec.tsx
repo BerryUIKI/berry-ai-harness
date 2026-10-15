@@ -2,7 +2,7 @@
 /** Tab information refuses readers whose committed record and navigation binding disagree. */
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, renderHook } from '@testing-library/react'
-import { bindSnapshotSelector } from '@deepseek-ai/dsh-client-test-runtime'
+import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
 import { keyedObservableHook } from '@deepseek-ai/dsh-client-ui-renderer/src/client/bindings.tsx'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'

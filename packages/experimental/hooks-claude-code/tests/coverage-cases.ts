@@ -1,6 +1,6 @@
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
-import { provideWorkingDirectoryFixture, mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture, mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { mkdtempSync, rmSync, writeFileSync, chmodSync, existsSync, mkdirSync, readFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'

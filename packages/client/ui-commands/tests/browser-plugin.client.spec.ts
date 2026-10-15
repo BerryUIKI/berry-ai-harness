@@ -8,7 +8,7 @@
  */
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished } from 'vitest'
-import { TestSessions } from '@deepseek-ai/dsh-client-test-runtime'
+import { TestSessions } from '@berry-ai/harness-client-test-runtime'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { InputTriggerSource } from '@deepseek-ai/dsh-client-ui-input-trigger/client'

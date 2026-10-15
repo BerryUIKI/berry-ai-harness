@@ -10,7 +10,7 @@
 import { useSyncExternalStore } from 'react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
 import { FEEDBACK_CATEGORIES } from '@berry-ai/harness-command-feedback'
 import { FeedbackDialog } from '../src/client/FeedbackDialog.tsx'

@@ -40,7 +40,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-loader-smoke": "workspace:*",
+    "@berry-ai/harness-loader-smoke": "workspace:*",
     "@berry-ai/harness-otel": "workspace:*"
   }
 }

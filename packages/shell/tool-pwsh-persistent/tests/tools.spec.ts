@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { provideWorkingDirectoryFixture, unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import { SESSION_FORMAT_VERSION, Session, SessionId } from '@berry-ai/harness-session'

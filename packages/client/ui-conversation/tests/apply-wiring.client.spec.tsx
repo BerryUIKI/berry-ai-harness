@@ -2,7 +2,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import {
   SlotTestRuntime, stubConfigForm, usePinnedBrowserLanguages,
-} from '@deepseek-ai/dsh-client-test-runtime'
+} from '@berry-ai/harness-client-test-runtime'
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import { createSnapshotStore, type ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'

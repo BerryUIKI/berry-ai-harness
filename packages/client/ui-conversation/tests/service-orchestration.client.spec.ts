@@ -7,7 +7,7 @@ import type { UserMessage } from '@berry-ai/harness-llm/types'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
-import { makeTranslate, RemoteError, SlotTestRuntime } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate, RemoteError, SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
 import type {
   BeginSubmissionInput, PendingSubmissionRetirement,
 } from '@berry-ai/harness-api-session-controller/client'

@@ -4,7 +4,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { SessionId, type SessionEvent } from '@berry-ai/harness-session'
 import type { Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import * as ToolTodo from '@berry-ai/harness-tool-todo'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 

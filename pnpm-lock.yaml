@@ -73,7 +73,7 @@ importers:
       '@deepseek-ai/dsh-hooks-codex':
         specifier: workspace:*
         version: link:packages/experimental/hooks-codex
-      '@deepseek-ai/dsh-llm-replay':
+      '@berry-ai/harness-llm-replay':
         specifier: workspace:*
         version: link:packages/test-support/llm-replay
       '@deepseek-ai/dsh-tool-ralph':
@@ -530,7 +530,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../packages/core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../packages/test-support/agent-loop-testkit
       '@berry-ai/harness-deepseek-llm-api-extensions':
@@ -569,16 +569,16 @@ importers:
       '@berry-ai/harness-llm-deepseek-api-key':
         specifier: workspace:*
         version: link:../../packages/llm/llm-deepseek-api-key
-      '@deepseek-ai/dsh-llm-mock-server':
+      '@berry-ai/harness-llm-mock-server':
         specifier: workspace:*
         version: link:../../packages/test-support/llm-mock-server
       '@berry-ai/harness-llm-pi-ai':
         specifier: workspace:*
         version: link:../../packages/llm/llm-pi-ai
-      '@deepseek-ai/dsh-llm-replay':
+      '@berry-ai/harness-llm-replay':
         specifier: workspace:*
         version: link:../../packages/test-support/llm-replay
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../packages/test-support/loader-smoke
       '@berry-ai/harness-plugin-package-inventory-deepseek':
@@ -847,7 +847,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../packages/client/store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../packages/test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-deliverables':
@@ -892,10 +892,10 @@ importers:
       '@deepseek-ai/dsh-experimental-worktree':
         specifier: workspace:*
         version: link:../../packages/experimental/worktree
-      '@deepseek-ai/dsh-llm-mock-server':
+      '@berry-ai/harness-llm-mock-server':
         specifier: workspace:*
         version: link:../../packages/test-support/llm-mock-server
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../packages/test-support/remote-mock
       '@berry-ai/harness-session-projection-cache':
@@ -985,7 +985,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../packages/core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../packages/test-support/agent-loop-testkit
       '@berry-ai/harness-api-session-controller':
@@ -1000,7 +1000,7 @@ importers:
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../packages/llm/llm
-      '@deepseek-ai/dsh-llm-replay':
+      '@berry-ai/harness-llm-replay':
         specifier: workspace:*
         version: link:../packages/test-support/llm-replay
       '@berry-ai/harness-sdk-client':
@@ -1135,7 +1135,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -1218,7 +1218,7 @@ importers:
       '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
       '@berry-ai/harness-typert-registry':
@@ -1479,7 +1479,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-api-gateway':
@@ -1494,13 +1494,13 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
       '@berry-ai/harness-scope':
@@ -1631,7 +1631,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
       '@berry-ai/harness-session':
@@ -1677,13 +1677,13 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@berry-ai/harness-host-directory-picker':
         specifier: workspace:*
         version: link:../../host/directory-picker
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
       '@berry-ai/harness-session':
@@ -1732,7 +1732,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
       '@berry-ai/harness-session':
@@ -2358,7 +2358,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -3046,7 +3046,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-primitives':
@@ -3140,7 +3140,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-renderer':
@@ -3177,7 +3177,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-primitives':
@@ -3225,7 +3225,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -3541,7 +3541,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -3647,7 +3647,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-layout':
@@ -3771,7 +3771,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -3831,7 +3831,7 @@ importers:
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-primitives':
@@ -3867,7 +3867,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-renderer':
@@ -3939,7 +3939,7 @@ importers:
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -3999,7 +3999,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -4044,7 +4044,7 @@ importers:
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -4137,7 +4137,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -4161,7 +4161,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
       '@berry-ai/harness-session':
@@ -4209,7 +4209,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-commands':
@@ -4281,7 +4281,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -4347,7 +4347,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-commands':
@@ -4374,7 +4374,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
       '@types/react':
@@ -4413,7 +4413,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -4498,7 +4498,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-layout':
@@ -4651,7 +4651,7 @@ importers:
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-input-trigger':
@@ -4675,7 +4675,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-slots':
@@ -4726,7 +4726,7 @@ importers:
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -4798,7 +4798,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-renderer':
@@ -4807,7 +4807,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
       '@berry-ai/harness-session':
@@ -4841,7 +4841,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-slots':
@@ -4881,7 +4881,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -4947,7 +4947,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-plugin-manager':
@@ -4999,7 +4999,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-primitives':
@@ -5020,7 +5020,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
       '@types/react':
@@ -5063,7 +5063,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-primitives':
@@ -5081,7 +5081,7 @@ importers:
       '@berry-ai/harness-host-webserver':
         specifier: workspace:*
         version: link:../../host/webserver
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../../test-support/remote-mock
       '@types/react':
@@ -5114,7 +5114,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-agent-preset':
@@ -5156,7 +5156,7 @@ importers:
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-renderer':
@@ -5189,7 +5189,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-layout':
@@ -5234,7 +5234,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-plugin-manager':
@@ -5273,7 +5273,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-plugin-manager':
@@ -5312,7 +5312,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-plugin-manager':
@@ -5354,7 +5354,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-layout':
@@ -5402,7 +5402,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-layout':
@@ -5523,7 +5523,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-dockkit':
@@ -5628,7 +5628,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-dockkit':
@@ -5700,7 +5700,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -5775,7 +5775,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -5856,7 +5856,7 @@ importers:
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-input-trigger':
@@ -5922,7 +5922,7 @@ importers:
       '@deepseek-ai/dsh-client-resources':
         specifier: workspace:*
         version: link:../resources
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -5998,7 +5998,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-primitives':
@@ -6070,7 +6070,7 @@ importers:
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -6151,7 +6151,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -6298,7 +6298,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -6376,7 +6376,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -6536,7 +6536,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-compaction':
@@ -6585,7 +6585,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-compaction':
@@ -6689,7 +6689,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -6869,13 +6869,13 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
       '@berry-ai/harness-session':
@@ -6915,7 +6915,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -7143,7 +7143,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -7276,7 +7276,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -7343,7 +7343,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -7417,7 +7417,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -7549,7 +7549,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-compaction':
@@ -7727,7 +7727,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -7806,7 +7806,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -7888,7 +7888,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -7936,7 +7936,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -7993,7 +7993,7 @@ importers:
       '@deepseek-ai/dsh-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -8048,7 +8048,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-api-remotes':
@@ -8063,7 +8063,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -8135,7 +8135,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-conversation':
@@ -8266,7 +8266,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -8343,7 +8343,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@deepseek-ai/dsh-hook-protocol':
@@ -8395,7 +8395,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@deepseek-ai/dsh-hook-protocol':
@@ -8471,7 +8471,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-layout':
@@ -8594,7 +8594,7 @@ importers:
       '@deepseek-ai/dsh-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-client-test-runtime':
+      '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
       '@deepseek-ai/dsh-client-ui-chat':
@@ -8793,7 +8793,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@deepseek-ai/dsh-experimental-agent-team':
@@ -8863,7 +8863,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -8991,7 +8991,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -9049,7 +9049,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -9395,7 +9395,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-session':
@@ -9586,7 +9586,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -9754,7 +9754,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -9815,7 +9815,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -9870,7 +9870,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -9909,7 +9909,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -9949,13 +9949,13 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
       '@berry-ai/harness-scope':
@@ -9991,7 +9991,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -10031,7 +10031,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -10065,7 +10065,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -10273,7 +10273,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
 
@@ -10526,7 +10526,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-scope':
@@ -10844,7 +10844,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -10856,7 +10856,7 @@ importers:
       '@berry-ai/harness-llm-deepseek-api-key':
         specifier: workspace:*
         version: link:../llm-deepseek-api-key
-      '@deepseek-ai/dsh-llm-mock-server':
+      '@berry-ai/harness-llm-mock-server':
         specifier: workspace:*
         version: link:../../test-support/llm-mock-server
       '@berry-ai/harness-session':
@@ -11037,7 +11037,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -11172,7 +11172,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -11526,7 +11526,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-api-session-controller':
@@ -11648,7 +11648,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -11831,7 +11831,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -12000,7 +12000,7 @@ importers:
       '@berry-ai/harness-llm-deepseek-api-key':
         specifier: workspace:*
         version: link:../../llm/llm-deepseek-api-key
-      '@deepseek-ai/dsh-llm-mock-server':
+      '@berry-ai/harness-llm-mock-server':
         specifier: workspace:*
         version: link:../../test-support/llm-mock-server
       '@berry-ai/harness-session':
@@ -12195,7 +12195,7 @@ importers:
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
       '@berry-ai/harness-session':
@@ -12355,7 +12355,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -12404,7 +12404,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -12658,7 +12658,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -12722,7 +12722,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -12795,13 +12795,13 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
       '@berry-ai/harness-session-projection':
@@ -12859,7 +12859,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -12968,7 +12968,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -13112,7 +13112,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -13487,7 +13487,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -13560,7 +13560,7 @@ importers:
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
       '@berry-ai/harness-session':
@@ -13627,13 +13627,13 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
       '@berry-ai/harness-session':
@@ -13703,7 +13703,7 @@ importers:
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
       '@berry-ai/harness-session':
@@ -13764,7 +13764,7 @@ importers:
       '@berry-ai/harness-llm-deepseek-api-key':
         specifier: workspace:*
         version: link:../../llm/llm-deepseek-api-key
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
       '@berry-ai/harness-sdk-client':
@@ -13813,7 +13813,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -13859,7 +13859,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -13954,7 +13954,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -14024,7 +14024,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../../test-support/loader-smoke
 
@@ -14086,7 +14086,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-session':
@@ -14132,7 +14132,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-session':
@@ -14259,7 +14259,7 @@ importers:
       '@deepseek-ai/dsh-client-web':
         specifier: workspace:*
         version: link:../../client/web
-      '@deepseek-ai/dsh-remote-mock':
+      '@berry-ai/harness-remote-mock':
         specifier: workspace:*
         version: link:../remote-mock
       '@berry-ai/harness-session':
@@ -14379,10 +14379,10 @@ importers:
       '@deepseek-ai/cordis-plugin-include':
         specifier: workspace:~
         version: link:../../../vendor/include
-      '@deepseek-ai/dsh-llm-replay':
+      '@berry-ai/harness-llm-replay':
         specifier: workspace:*
         version: link:../llm-replay
-      '@deepseek-ai/dsh-loader-smoke':
+      '@berry-ai/harness-loader-smoke':
         specifier: workspace:*
         version: link:../loader-smoke
       '@berry-ai/harness-session-format':
@@ -14465,7 +14465,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -14859,7 +14859,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':
@@ -14953,7 +14953,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-agent-loop-testkit':
+      '@berry-ai/harness-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
       '@berry-ai/harness-llm':

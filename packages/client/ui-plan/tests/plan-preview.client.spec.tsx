@@ -7,7 +7,7 @@ import type { ChatNode, ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/cli
 import { keyedObservableHook } from '../../ui-renderer/src/client/bindings.tsx'
 import { ChatSnapshotBuilder, chatViewDefinition } from '../../ui-chat/src/client/conversation-nodes/chat-snapshot-builder.ts'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
 import { en, zh } from '../src/client/locales.ts'

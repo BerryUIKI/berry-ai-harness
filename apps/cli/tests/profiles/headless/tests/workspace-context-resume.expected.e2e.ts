@@ -13,8 +13,8 @@ import {
   normalizeSessionSnapshot,
   normalizeSessionSnapshots,
   type NormalizeContext,
-} from '@deepseek-ai/dsh-session-snapshot'
-import { LOADER_SMOKE_TEST_TIMEOUT_MS, runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
+} from '@berry-ai/harness-session-snapshot'
+import { LOADER_SMOKE_TEST_TIMEOUT_MS, runLoaderSmoke } from '@berry-ai/harness-loader-smoke'
 import { createMessage, createUserMessage } from '@berry-ai/harness-llm'
 import {
   SESSION_FORMAT_VERSION,

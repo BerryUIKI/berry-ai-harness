@@ -17,7 +17,7 @@ import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import * as ToolTodo from '@berry-ai/harness-tool-todo'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 
 let root: string | undefined
 let context: Context | undefined

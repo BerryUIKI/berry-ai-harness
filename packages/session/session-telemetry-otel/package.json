@@ -48,7 +48,7 @@
     "@berry-ai/harness-command-feedback": "workspace:*",
     "@berry-ai/harness-message-feedback": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-loader-smoke": "workspace:*",
+    "@berry-ai/harness-loader-smoke": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-checkpoint-policy": "workspace:*",
     "@berry-ai/harness-session-persistence-jsonl": "workspace:*",

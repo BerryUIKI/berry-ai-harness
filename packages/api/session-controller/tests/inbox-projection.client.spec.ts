@@ -6,8 +6,8 @@ import type { InboxState } from '@berry-ai/harness-agent/types'
 import type { SessionControlFrame } from '@berry-ai/harness-api-session-controller/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { SessionManager } from '../src/client/sessions/manager.ts'
-import { ok } from '@deepseek-ai/dsh-remote-mock'
-import { createClientTest, type ClientTestFixtures, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
+import { ok } from '@berry-ai/harness-remote-mock'
+import { createClientTest, type ClientTestFixtures, webApp } from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
 import type { SessionRemotes } from '../src/client/sessions/remotes.ts'
 
 const it = createClientTest({ roster: webApp.closure(['@berry-ai/harness-api-gateway']) })

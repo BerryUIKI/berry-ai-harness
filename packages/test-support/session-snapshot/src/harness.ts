@@ -13,7 +13,7 @@
  *
  * See packages/test-support/session-snapshot/README.md.
  *
- * @module @deepseek-ai/dsh-session-snapshot/harness
+ * @module @berry-ai/harness-session-snapshot/harness
  */
 
 import { cp, mkdtemp, readFile, readdir, rm } from 'node:fs/promises'

@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
 import type { Agent } from '@berry-ai/harness-agent'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import type { Session } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-workspace'

@@ -41,7 +41,7 @@
     - id: tool-cordis
       name: '@berry-ai/harness-tool-cordis'
     - id: llm-replay
-      name: '@deepseek-ai/dsh-llm-replay'
+      name: '@berry-ai/harness-llm-replay'
       config:
         providers:
           - id: deepseek-official

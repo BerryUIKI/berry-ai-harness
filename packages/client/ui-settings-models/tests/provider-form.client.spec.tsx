@@ -4,7 +4,7 @@ import { within, cleanup, fireEvent, render, screen, waitFor } from '@testing-li
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import Schema from '@deepseek-ai/schemastery'
 import { Context } from '@deepseek-ai/cordis'
-import { bindSnapshotSelector, RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { bindSnapshotSelector, RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { SettingsNamespaceView } from '@berry-ai/harness-api-remotes/client'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import { ModelsSection, providerCopy } from '../src/client/ModelsSection.tsx'

@@ -8,7 +8,7 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { createElement } from 'react'
 import { cleanup, render } from '@testing-library/react'
 import { Context } from '@deepseek-ai/cordis'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { SidebarRightTabRegistry } from '@deepseek-ai/dsh-client-ui-sidebar-right/src/client/tab-registry.ts'
 import { sessionFileAddress } from '@berry-ai/harness-util-workspace-path'
 import {

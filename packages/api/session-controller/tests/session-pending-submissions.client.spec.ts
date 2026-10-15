@@ -10,7 +10,7 @@ import type { FileAttachmentRef, ImageAttachmentRef } from '@berry-ai/harness-at
 import { SessionSeq, type SessionEvent } from '@berry-ai/harness-session/types'
 import type { SessionId } from '@berry-ai/harness-api-remotes/client'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
-import { createClientTest, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
+import { createClientTest, webApp } from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
 import type { PendingSubmissionRetirement } from '../src/client/contract/session.ts'
 import type { SessionRequestId } from '../src/types.ts'
 import { ev, historyValue } from './event-script.client.ts'

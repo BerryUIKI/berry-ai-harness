@@ -4,7 +4,7 @@
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { afterEach, expect, it, vi } from 'vitest'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { SessionSeq, type SessionId } from '@berry-ai/harness-session/types'
 import { ConversationLocationIndex } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import { InspectorJsonTree, InspectorObjectTree } from '../src/client/views/InspectorObjectTree.tsx'

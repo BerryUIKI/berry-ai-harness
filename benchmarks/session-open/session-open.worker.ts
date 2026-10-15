@@ -4,7 +4,7 @@ import { performance } from 'node:perf_hooks'
 import { scheduler } from 'node:timers/promises'
 import { Context } from '@deepseek-ai/cordis'
 import AgentLoop, { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import { agentPresetProjectionDefinition } from '@berry-ai/harness-agent-preset-registry'
 import SessionStore, {
   interruptedTurnClosers,

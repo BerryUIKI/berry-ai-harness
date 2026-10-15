@@ -10,7 +10,7 @@ import type { ISession } from '@berry-ai/harness-api-session-controller/client'
 import type { PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
 import {
   RemoteError, SlotTestRuntime, usePinnedBrowserLanguages, stubConfigForm,
-} from '@deepseek-ai/dsh-client-test-runtime'
+} from '@berry-ai/harness-client-test-runtime'
 import { InputHub } from '../src/client/input/hub.ts'
 import { apply, inject, type EmptyWorkspaceOwnerProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { SessionId } from '@berry-ai/harness-session/types'

@@ -64,7 +64,7 @@
   "devDependencies": {
     "chrome-devtools-frontend": "1.0.1638082",
     "@types/serve-static": "^2.2.0",
-    "@deepseek-ai/dsh-client-test-runtime": "workspace:*",
+    "@berry-ai/harness-client-test-runtime": "workspace:*",
     "@testing-library/react": "^16.3.3",
     "@deepseek-ai/dsh-client-ui-renderer": "workspace:*",
     "@types/react": "~18.3.1",

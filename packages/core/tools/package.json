@@ -66,6 +66,6 @@
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-working-directory": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*"
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*"
   }
 }

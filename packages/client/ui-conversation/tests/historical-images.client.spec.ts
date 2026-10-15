@@ -2,7 +2,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { AttachmentId } from '@berry-ai/harness-attachment'
 import type { SessionFace } from '@berry-ai/harness-api-session-controller/client'
-import { RemoteError, SlotTestRuntime } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError, SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
 import { HistoricalImageCache } from '../src/client/conversation/historical-images.ts'
 
 describe('HistoricalImageCache', () => {

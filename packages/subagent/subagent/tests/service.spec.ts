@@ -3,7 +3,7 @@ import { describe, expect, expectTypeOf, it, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { type Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 
 import { HarnessError, ReasoningEffortId } from '@berry-ai/harness-llm'
 import { carrierKeyOf } from '@berry-ai/harness-scope'

@@ -6,7 +6,7 @@ import { afterEach, expect, vi } from 'vitest'
 import { cleanup, render, waitFor } from '@testing-library/react'
 import type { ComponentType } from 'react'
 import type { DirectoryFlowOwnerProps } from '@deepseek-ai/dsh-client-ui-workspace/client'
-import { ClientRoster, createClientTest, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
+import { ClientRoster, createClientTest, webApp } from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
 
 const manifest = JSON.parse(readFileSync(resolve(import.meta.dirname, '../package.json'), 'utf8')) as {
   name: string

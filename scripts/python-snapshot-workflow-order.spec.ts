@@ -5,7 +5,7 @@ import { createToolResultMessage, createUserMessage, ToolCallId } from '@berry-a
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import { WorkflowRunId } from '@berry-ai/harness-workflow'
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import SubagentRuntime from '@berry-ai/harness-subagent'
 import * as spawn from '@berry-ai/harness-subagent-spawn-in-process'
 import { MockAdapter, textResponse } from '../packages/core/agent-loop/tests/mock-adapter.ts'

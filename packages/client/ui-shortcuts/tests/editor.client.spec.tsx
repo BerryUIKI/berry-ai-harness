@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { afterEach, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
-import { bindSnapshotSelector, makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { ShortcutRegistry } from '../../shortcuts/src/client/registry.ts'
 import { bindingIssue, initialShortcutConfig, normalizeBinding, overlappingBindings, presentBinding, ShortcutPersistence } from '@deepseek-ai/dsh-client-shortcuts/protocol'
 import type { ShortcutCommandId, ShortcutSaveResult } from '@deepseek-ai/dsh-client-shortcuts/protocol'

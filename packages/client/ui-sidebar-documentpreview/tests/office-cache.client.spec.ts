@@ -1,6 +1,6 @@
 /** Controlled conversion completions pin shared cancellation, freshness, and bounded binary reuse. */
 import type { OfficeToPdfGeneration } from '@berry-ai/harness-office-to-pdf/types'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import { expect, it, vi } from 'vitest'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SessionFile } from '../src/client/rpc.ts'

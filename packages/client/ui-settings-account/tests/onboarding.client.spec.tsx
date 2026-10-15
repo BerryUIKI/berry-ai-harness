@@ -6,7 +6,7 @@ import type { GlobalStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
 import type { ThemeSnapshot } from '@deepseek-ai/dsh-client-ui-theme/client'
 import { AccountOnboarding } from '../src/client/AccountOnboarding.tsx'
 import type { AccountSnapshot } from '../src/client/AccountSection.tsx'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { en } from '../src/client/locales.ts'
 
 afterEach(cleanup)

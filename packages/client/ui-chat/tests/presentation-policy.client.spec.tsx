@@ -2,7 +2,7 @@
 import { act, cleanup, render } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import { bindSnapshotSelector } from '@deepseek-ai/dsh-client-test-runtime'
+import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
 import type { TranscriptViewMode } from '../src/chat-settings.ts'
 import { COLLAPSE_TIMINGS, derivePresentationPolicy, presentationPolicyFor, type ChatPresentationPolicy, type CollapseTiming } from '../src/client/presentation-policy.ts'
 

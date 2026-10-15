@@ -58,7 +58,7 @@
     "@types/react": "~18.3.1",
     "clsx": "^2.1.1",
     "react": "^18.2.0",
-    "@deepseek-ai/dsh-client-test-runtime": "workspace:*"
+    "@berry-ai/harness-client-test-runtime": "workspace:*"
   },
   "files": [
     "lib/index.js",

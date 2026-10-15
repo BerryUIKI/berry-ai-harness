@@ -11,10 +11,10 @@
 import { describe, expect } from 'vitest'
 import type { SessionId } from '@berry-ai/harness-api-remotes/client'
 import { SessionSeq } from '@berry-ai/harness-session/types'
-import { ok, type RemoteMock } from '@deepseek-ai/dsh-remote-mock'
+import { ok, type RemoteMock } from '@berry-ai/harness-remote-mock'
 import {
   createClientTest, type ClientTestFixtures, webApp,
-} from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
+} from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
 import { ProjectionValueStore } from '../src/client/sessions/projection-store.ts'
 import { SessionManager } from '../src/client/sessions/manager.ts'
 import type { SessionRemotes } from '../src/client/sessions/remotes.ts'

@@ -4,7 +4,7 @@ import { describe, expect, it, vi } from 'vitest'
 import type {
   SettingsNamespaceView, SettingsPathOpView,
 } from '@berry-ai/harness-api-remotes/client'
-import { RemoteError, TestRemote } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError, TestRemote } from '@berry-ai/harness-client-test-runtime'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type { ConfigForm } from '@deepseek-ai/dsh-client-ui-settings/client'
 import { SettingsSchemaService } from '../src/client/schema.ts'

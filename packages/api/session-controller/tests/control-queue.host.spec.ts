@@ -9,7 +9,7 @@ import type { SessionControlFrame } from '../src/types.ts'
 import {
   mountAgentLoopTestDependencies,
   mountAgentLoopTestHarness,
-} from '@deepseek-ai/dsh-agent-loop-testkit'
+} from '@berry-ai/harness-agent-loop-testkit'
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

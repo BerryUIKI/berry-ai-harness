@@ -12,7 +12,7 @@ import {
   launchAcpTestAgent,
   type AgentUnderTest,
   type LaunchedAcpTestAgent,
-} from '@deepseek-ai/dsh-session-snapshot'
+} from '@berry-ai/harness-session-snapshot'
 import { bwrapProfileArgs } from '@berry-ai/harness-sandbox-local/src/profiles.ts'
 import { cleanupAcpExampleTest } from './cleanup.ts'
 

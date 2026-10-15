@@ -166,11 +166,11 @@ it('refuses an unknown note before writing', async () => {
 })
 ```
 
-A Client-side double returns real instances: take the `RemoteError` and `TestRemote` value imports from `@deepseek-ai/dsh-client-test-runtime`, because a value import from the `api-remotes` facade would load the unbuilt assembly chain. `TestRemote.$host` is a plain field a spec assigns directly.
+A Client-side double returns real instances: take the `RemoteError` and `TestRemote` value imports from `@berry-ai/harness-client-test-runtime`, because a value import from the `api-remotes` facade would load the unbuilt assembly chain. `TestRemote.$host` is a plain field a spec assigns directly.
 
 ```ts ignore-check
 import { Context } from '@deepseek-ai/cordis'
-import { RemoteError, TestRemote } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError, TestRemote } from '@berry-ai/harness-client-test-runtime'
 import { expect, it } from 'vitest'
 
 it('renders the failure code the Host reported', async () => {
