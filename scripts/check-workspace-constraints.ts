@@ -182,14 +182,14 @@ const packageFileExtras: Readonly<Record<string, readonly string[]>> = {
   // them through its own CSS pipeline, so the sheets are published artifacts.
   // The glob covers whichever sheets a package emits; sourcemaps stay
   // unpublished, as everywhere else in the repository.
-  '@deepseek-ai/dsh-client-ui-primitives': ['lib/**/*.css'],
-  '@deepseek-ai/dsh-client-ui-dockkit': ['lib/**/*.css'],
-  '@deepseek-ai/dsh-client-ui-sidebar-documentpreview': ['lib/client.*.js'],
-  '@deepseek-ai/dsh-client-ui-sidebar-terminal': ['lib/client.*.js'],
-  '@deepseek-ai/dsh-client-web': ['lib/**/*.css', 'lib/apply-injections.js'],
-  '@deepseek-ai/dsh-client-ui-theme': ['lib/styles'],
+  '@berry-ai/harness-client-ui-primitives': ['lib/**/*.css'],
+  '@berry-ai/harness-client-ui-dockkit': ['lib/**/*.css'],
+  '@berry-ai/harness-client-ui-sidebar-documentpreview': ['lib/client.*.js'],
+  '@berry-ai/harness-client-ui-sidebar-terminal': ['lib/client.*.js'],
+  '@berry-ai/harness-client-web': ['lib/**/*.css', 'lib/apply-injections.js'],
+  '@berry-ai/harness-client-ui-theme': ['lib/styles'],
   // The physical-key protocol is a public entry usable without the browser service.
-  '@deepseek-ai/dsh-client-shortcuts': ['lib/protocol.js'],
+  '@berry-ai/harness-client-shortcuts': ['lib/protocol.js'],
   // The CPython side ships as source .py files, published as-is rather than built.
   '@berry-ai/harness-experimental-ptc-runtime-python': ['py/**/*.py'],
   '@berry-ai/harness-experimental-speech-to-text-sensevoice': ['runtime/assets.json'],

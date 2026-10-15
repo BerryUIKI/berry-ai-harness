@@ -5,14 +5,14 @@ import type {} from '../index.ts'
 import type { DocumentPreviewDefinition } from '../document/registry.ts'
 import type { PdfBodyInjected } from './pdf.tsx'
 import { LazyPdfBody } from './LazyPdfBody.tsx'
-import type { BoundActions } from '@deepseek-ai/dsh-client-store'
+import type { BoundActions } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { createPdfStore, type PdfStore } from './store.ts'
 import { ZoomViewport, zoomSurfaceClass } from '../zoom/ZoomViewport.tsx'
 import { en, zh } from './locales.ts'
 
 /** PDF metadata and keyed body share this package-local implementation identity. */
-export const PDF_BODY_ID = '@deepseek-ai/dsh-client-ui-sidebar-documentpreview/pdf'
+export const PDF_BODY_ID = '@berry-ai/harness-client-ui-sidebar-documentpreview/pdf'
 
 /**
  * Describe the builtin PDF renderer independently from its keyed body slot.

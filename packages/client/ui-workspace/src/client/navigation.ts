@@ -10,14 +10,14 @@ import type {
   SessionTarget,
   SessionListState,
 } from '@berry-ai/harness-api-session-controller/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import type {
   IWorkspaces, WorkspaceId, WorkspaceSnapshot, WorkspaceView,
 } from '@berry-ai/harness-api-workspace-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
-import type { DraftInitializationOptions } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import type {} from '@berry-ai/harness-client-ui-layout/client'
+import type { DraftInitializationOptions } from '@berry-ai/harness-client-ui-conversation/client'
 import type { RowToast } from './contract/slots.ts'
 import { pinOrderAccounts, pinOrderSource } from './pin-order.ts'
 import type { WorkspaceViewStoreActions } from './stores.ts'

@@ -14,11 +14,11 @@ import clsx from 'clsx'
 import type { RemoteFailure } from '@berry-ai/harness-api-remotes/client'
 import type {
   PropsLocale, PropsRenderSlots, PropsRuntime, PropsStore, TranslateNS,
-} from '@deepseek-ai/dsh-client-ui-slots'
+} from '@berry-ai/harness-client-ui-slots'
 import {
   FileTypeIcon, IconFolderCloseRegular, IconFolderOpenRegular, IconRefreshOutlineRegular, Tooltip, classifyFileType,
   IconPauseOutlineRegular, IconPlayOutlineRegular, PathLabel,
-} from '@deepseek-ai/dsh-client-ui-primitives'
+} from '@berry-ai/harness-client-ui-primitives'
 import { fileAddressFor } from '@berry-ai/harness-util-workspace-path'
 import type { WorkspaceDirectoryEntry } from '@berry-ai/harness-api-workspace-files/types'
 import { childPath } from './face.ts'

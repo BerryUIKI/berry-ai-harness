@@ -1,6 +1,6 @@
 import { setImmediate } from 'node:timers/promises'
 import { Context } from '@deepseek-ai/cordis'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { afterEach, describe, expect, it, vi, type MockInstance } from 'vitest'
 import type {
   ISessions, SessionListState, SessionReference, SessionSummary,
@@ -14,10 +14,10 @@ import type { ClientRemote, DirectoryListing } from '@berry-ai/harness-api-remot
 import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import { SessionId } from '@berry-ai/harness-session/types'
-import { LayoutController } from '@deepseek-ai/dsh-client-ui-layout/client'
-import type { MainPanelId } from '@deepseek-ai/dsh-client-ui-layout/client'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import type { DraftInitializationOptions, SessionInputResolver } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import { LayoutController } from '@berry-ai/harness-client-ui-layout/client'
+import type { MainPanelId } from '@berry-ai/harness-client-ui-layout/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import type { DraftInitializationOptions, SessionInputResolver } from '@berry-ai/harness-client-ui-conversation/client'
 import type { RowToast } from '../src/client/contract/slots.ts'
 import { DirectoryBrowseError, UiWorkspaceService } from '../src/client/navigation.ts'
 import { en, zh } from '../src/client/locales.ts'

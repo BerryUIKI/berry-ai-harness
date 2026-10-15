@@ -4,10 +4,10 @@
  */
 // Bring the base `ResourceProtocolMap` declaration into this program so the
 // augmentation below merges into it instead of declaring a second interface.
-import type {} from '@deepseek-ai/dsh-client-resources/client'
+import type {} from '@berry-ai/harness-client-resources/client'
 import type { WorkspaceFileStat } from '../types.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface ResourceProtocolMap {
     /**
      * One workspace file's metadata, addressed as

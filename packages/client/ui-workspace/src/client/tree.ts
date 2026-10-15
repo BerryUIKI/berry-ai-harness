@@ -9,7 +9,7 @@ import {
 import type { WorkspaceId, WorkspaceView } from '@berry-ai/harness-api-workspace-controller/client'
 import type {
   SessionStatusSnapshot,
-} from '@deepseek-ai/dsh-client-ui-session/client'
+} from '@berry-ai/harness-client-ui-session/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { assertNever } from '@berry-ai/harness-util-values'
 import { workspaceTitleOf } from '@berry-ai/harness-util-workspace-path'

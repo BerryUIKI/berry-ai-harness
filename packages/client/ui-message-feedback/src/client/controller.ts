@@ -4,10 +4,10 @@
  * version this controller last observed, and a `version-conflict` reply carries
  * the authoritative item, so a lost race reconciles from the reply itself
  * instead of refetching the whole Session.
- * @module @deepseek-ai/dsh-client-ui-message-feedback/client/controller
+ * @module @berry-ai/harness-client-ui-message-feedback/client/controller
  */
 
-import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
+import type { HostObservable } from '@berry-ai/harness-client-ui-slots'
 import type { ClientRemote, MessageId } from '@berry-ai/harness-api-remotes/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { FeedbackRecord } from '@berry-ai/harness-command-feedback/types'

@@ -1,5 +1,5 @@
 /** Stable React identities for the two grouping reference kinds. */
-import type { RenderEntry } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import type { RenderEntry } from '@berry-ai/harness-client-ui-conversation/client'
 import { assertNever } from '@berry-ai/harness-util-values'
 
 /**

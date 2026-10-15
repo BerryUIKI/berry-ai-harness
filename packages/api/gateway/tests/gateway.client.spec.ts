@@ -11,7 +11,7 @@ import {
   type ConnectionGeneration,
   type ConnectionGenerationSource,
   type ConnectionHandle,
-} from '@deepseek-ai/dsh-client-connection/client'
+} from '@berry-ai/harness-client-connection/client'
 import type {
   InvocationDescriptor,
   RemoteResult,

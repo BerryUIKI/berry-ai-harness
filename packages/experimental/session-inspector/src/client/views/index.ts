@@ -1,9 +1,9 @@
 /** Session-scoped Sidebar tab backed by the existing Chat and Session-log models. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-sidebar-right/client'
+import type {} from '@berry-ai/harness-client-ui-session/client'
 import type { SessionBinding } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { ChatNodeModel } from './chat-node/model.ts'

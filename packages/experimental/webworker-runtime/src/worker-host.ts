@@ -24,7 +24,7 @@
 import { setActiveModuleLoader, WorkerModuleLoader, type StaticModuleFactory } from './module-system/module-loader.ts'
 import type { ProfileContext } from '@berry-ai/harness-app-boot'
 import type { TypertGateway } from '@berry-ai/harness-api-gateway'
-import type { HostConnectionHandle } from '@deepseek-ai/dsh-client-connection'
+import type { HostConnectionHandle } from '@berry-ai/harness-client-connection'
 import type { AlsCausality } from './polyfill/async-context/als-runtime.ts'
 import { dirname, join } from './module-system/posix-path.ts'
 import { installProcessGlobal } from './node/globals/process.ts'

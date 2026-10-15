@@ -3,7 +3,7 @@ import { act } from '@testing-library/react'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { RemoteMock } from '@berry-ai/harness-remote-mock'
 import { TestClient, remoteDefaultResponses, webApp } from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
+import type {} from '@berry-ai/harness-client-ui-session/client'
 
 describe('assembled renderer connection recovery', () => {
   it('keeps the mounted root across a transport reconnect', async () => {

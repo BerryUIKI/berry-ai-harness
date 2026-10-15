@@ -1,7 +1,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ConversationLocation, ConversationNodeContext, ConversationNodeDefinition, TurnLocation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type {} from '@berry-ai/harness-llm-retry/types'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import type {} from '@berry-ai/harness-tools/types'
@@ -20,7 +20,7 @@ declare module '../contract/chat-nodes.ts' {
   }
 }
 
-declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
+declare module '@berry-ai/harness-client-ui-conversation/client' {
   interface ConversationTurnDataMap {
     /** Process range and finalized answer boundary for this Turn. */
     'turn-process': TurnProcessSpec

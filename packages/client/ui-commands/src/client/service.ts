@@ -22,12 +22,12 @@ import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { ISessions, SessionBinding } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { WeakMapWithValues } from '@berry-ai/harness-util-values'
-import type { TranslateNS } from '@deepseek-ai/dsh-client-locale/client'
-import { rankByName } from '@deepseek-ai/dsh-client-ui-primitives'
+import type { TranslateNS } from '@berry-ai/harness-client-locale/client'
+import { rankByName } from '@berry-ai/harness-client-ui-primitives'
 import type {
   CandidateRequest, ClientSessionContext, CommandClaim, PickOutcome, InputTriggerCandidate, InputTriggerPick,
   SubmitAttachment, SubmitEnvelope, SubmitOutcome,
-} from '@deepseek-ai/dsh-client-ui-input-trigger/client'
+} from '@berry-ai/harness-client-ui-input-trigger/client'
 import type { CommandContribution, CommandDecoration, CommandUiContract } from './contract.ts'
 import type { CommandDescriptor } from './directory.ts'
 import { CommandDirectory } from './directory.ts'

@@ -5,8 +5,8 @@ import type {
 } from '@berry-ai/harness-api-session-controller/client'
 import type {
   ConversationNodeDefinition, ConversationViewDefinition,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { ConversationNodeAssembler, inspectRequestPrompt } from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
+import { ConversationNodeAssembler, inspectRequestPrompt } from '@berry-ai/harness-client-ui-conversation/client'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
 import { inspectSystemPrompt } from '../../ui-conversation/src/client/contract/system-prompt.ts'
 import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'

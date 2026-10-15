@@ -15,8 +15,8 @@ import * as modulesClient from '../src/client/index.ts'
 import { ClientModuleRegistry, bootInjections, orderByModuleGraph } from '../src/index.ts'
 import type { ClientModuleLoaderTarget, WebBootEntry, WebBootGraph } from '../src/client/index.ts'
 
-const MODULES_ID = '@deepseek-ai/dsh-client-modules'
-const UI_RENDERER_ID = '@deepseek-ai/dsh-client-ui-renderer'
+const MODULES_ID = '@berry-ai/harness-client-modules'
+const UI_RENDERER_ID = '@berry-ai/harness-client-ui-renderer'
 
 // Graph rows and batch descriptors carry app-directory-relative references;
 // a host request reaches the backend route once the document's directory

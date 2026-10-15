@@ -16,7 +16,7 @@ import type {
 } from '@berry-ai/harness-api-remotes/client'
 // Type-only: resolves the `ctx.remote.$on` surface.
 import type {} from '@berry-ai/harness-api-gateway/client'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
 import * as NodeHalf from '../src/index.ts'
 import * as ClientHalf from '../src/client/index.ts'
 

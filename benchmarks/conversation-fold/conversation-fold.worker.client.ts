@@ -6,7 +6,7 @@ import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stre
 import { LlmAttemptId, ToolCallId } from '@berry-ai/harness-llm/brand'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
-import type { ChatNode, ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
+import type { ChatNode, ChatSnapshot } from '@berry-ai/harness-client-ui-chat/client'
 import type { SessionEventLikeEntry } from '@berry-ai/harness-api-session-controller/client'
 // These Client-only fold modules have no plain-Node package export and are compiled into this worker.
 import { ConversationNodeAssembler } from '../../packages/client/ui-conversation/src/client/conversation/assembler.ts'
@@ -259,7 +259,7 @@ function preparingTool(tool: 'write' | 'bash', characters: number, definitions: 
 
 assertBuiltBenchmarkRuntime(import.meta.url, {
   '@berry-ai/harness-brand': import.meta.resolve('@berry-ai/harness-brand'),
-  '@deepseek-ai/dsh-client-store': import.meta.resolve('@deepseek-ai/dsh-client-store'),
+  '@berry-ai/harness-client-store': import.meta.resolve('@berry-ai/harness-client-store'),
   '@berry-ai/harness-llm/assistant-stream': import.meta.resolve('@berry-ai/harness-llm/assistant-stream'),
   '@berry-ai/harness-session/surface': import.meta.resolve('@berry-ai/harness-session/surface'),
   '@berry-ai/harness-token-meter/client': import.meta.resolve('@berry-ai/harness-token-meter/client'),

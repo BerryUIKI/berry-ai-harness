@@ -12,9 +12,9 @@ import type {
 } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {} from '@berry-ai/harness-api-remotes/client'
-import { notifySubscribers } from '@deepseek-ai/dsh-client-store'
+import { notifySubscribers } from '@berry-ai/harness-client-store'
 import { WeakMapWithValues } from '@berry-ai/harness-util-values'
-import { standardHookPropName } from '@deepseek-ai/dsh-client-ui-slots'
+import { standardHookPropName } from '@berry-ai/harness-client-ui-slots'
 import type {
   HostObservable,
   KeyedStandardSource,
@@ -24,9 +24,9 @@ import type {
   SlotScopeAdapter,
   SnapshotSelectorHook,
   StandardSourceBinding,
-} from '@deepseek-ai/dsh-client-ui-slots'
+} from '@berry-ai/harness-client-ui-slots'
 // Type-only service merge for ctx.slots.
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
 import { renderSessionArea } from './session-provider.tsx'
 
 /** Selector hook over the Session Controller list and current selection. */
@@ -148,7 +148,7 @@ class PendingInteractionDomain<T extends SessionPendingInteractionBase> {
   }
 }
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface SlotScopeTargetMap {
     session: SessionReference
   }

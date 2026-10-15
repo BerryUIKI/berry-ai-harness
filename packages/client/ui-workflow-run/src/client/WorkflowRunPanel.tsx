@@ -5,12 +5,12 @@ import {
 import {
   DisclosureRow, IconChevronRightOutlineRegular, StateDot,
   type DisclosureRowProps, type StateDotState,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+} from '@berry-ai/harness-client-ui-primitives'
+import type { PropsLocale, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
 import type { SessionListState, SessionTarget } from '@berry-ai/harness-api-session-controller/client'
-import { shallowEqual } from '@deepseek-ai/dsh-client-store'
+import { shallowEqual } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
+import type { SessionStatusSnapshot } from '@berry-ai/harness-client-ui-session/client'
 import type { WorkflowRunKey } from './locales.ts'
 import type {
   WorkflowRunMemberData, WorkflowRunPhaseData, WorkflowRunStatus,

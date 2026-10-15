@@ -3,10 +3,10 @@ import { describe, expect, it, vi } from 'vitest'
 import {
   SlotTestRuntime, stubConfigForm, usePinnedBrowserLanguages,
 } from '@berry-ai/harness-client-test-runtime'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { createSnapshotStore, type ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import { createSnapshotStore, type ObservableSnapshot } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import { apply, inject, type ViewTab } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import { apply, inject, type ViewTab } from '@berry-ai/harness-client-ui-conversation/client'
 
 usePinnedBrowserLanguages('zh-CN')
 

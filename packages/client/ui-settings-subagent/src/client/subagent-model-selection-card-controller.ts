@@ -2,8 +2,8 @@
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { ModelProviderGroup } from '@berry-ai/harness-api-remotes/client'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { SettingsFormScope, SettingsFormShell } from '@deepseek-ai/dsh-client-ui-primitives'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
+import type { SettingsFormScope, SettingsFormShell } from '@berry-ai/harness-client-ui-primitives'
 
 /** Namespace of the Host-owned subagent model-selection preference. */
 export const SUBAGENT_MODEL_SELECTION_NS = 'subagent-model-selection-settings'

@@ -8,7 +8,7 @@
  * returns empty rather than throwing.
  */
 import type { ScheduleId, ScheduleRecord } from '@berry-ai/harness-schedule/client'
-import type { ToolCallViewProps } from '@deepseek-ai/dsh-client-ui-tool/client'
+import type { ToolCallViewProps } from '@berry-ai/harness-client-ui-tool/client'
 import { taskName } from './schedule-format.ts'
 
 /** One Tool call block as the card receives it: a running call or a settled result. */

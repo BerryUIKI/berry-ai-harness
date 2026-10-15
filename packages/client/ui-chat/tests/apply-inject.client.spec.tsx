@@ -1,11 +1,11 @@
 import { MessageId } from '@berry-ai/harness-llm/brand'
 // @vitest-environment jsdom
 /** Chat inject factories exercised over independently mounted Conversation and Chat plugins. */
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { describe, expect, it, vi } from 'vitest'
 import { AttachmentId } from '@berry-ai/harness-attachment'
 import type { ISession, SessionReference } from '@berry-ai/harness-api-session-controller/client'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
 import {
   SlotTestRuntime, stubConfigForm, usePinnedBrowserLanguages,
 } from '@berry-ai/harness-client-test-runtime'
@@ -14,10 +14,10 @@ import type { ClientRemote } from '@berry-ai/harness-api-remotes/client'
 import {
   apply as applyConversation, inject as injectConversation,
   type GroupKey,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import {
   apply as applyChat, inject as injectChat, type ChatFlowDataInjected, type ChatViewInjected,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-chat/client'
 import { SessionSeq, type SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import { createChatStore } from '../src/client/stores.ts'

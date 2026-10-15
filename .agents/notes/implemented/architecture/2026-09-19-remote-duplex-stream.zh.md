@@ -187,7 +187,7 @@ export interface PeerScope {
 }
 ```
 
-本 Host 只有一个 Peer：操作者。`@deepseek-ai/dsh-client-connection` 在服务 apply 时用 `createScope(connectionCtx, peer)` 建它，与 Agent 建自己的 scope 是同一机制：Peer 对象就是 ScopeKey，`peer.ctx` 承接连接期效果，`dispose()` 随 connection 释放让 fiber 静默。它以 `connection.operator` 暴露。
+本 Host 只有一个 Peer：操作者。`@berry-ai/harness-client-connection` 在服务 apply 时用 `createScope(connectionCtx, peer)` 建它，与 Agent 建自己的 scope 是同一机制：Peer 对象就是 ScopeKey，`peer.ctx` 承接连接期效果，`dispose()` 随 connection 释放让 fiber 静默。它以 `connection.operator` 暴露。
 
 | 成员 | 语义 |
 | --- | --- |

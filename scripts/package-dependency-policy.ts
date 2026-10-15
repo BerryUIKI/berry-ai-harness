@@ -22,16 +22,16 @@ const REQUIRED_SERVICE_PEERS = {
 
 /** Development-only package relationships not represented by source imports. */
 const CONFIGURATION_ONLY_DEV_DEPENDENCIES = {
-  '@deepseek-ai/dsh-client-locale': ['@berry-ai/harness-api-remotes'],
-  '@deepseek-ai/dsh-client-ui-conversation': [
+  '@berry-ai/harness-client-locale': ['@berry-ai/harness-api-remotes'],
+  '@berry-ai/harness-client-ui-conversation': [
     '@berry-ai/harness-api-remotes',
-    '@deepseek-ai/dsh-client-ui-workspace',
+    '@berry-ai/harness-client-ui-workspace',
   ],
-  '@deepseek-ai/dsh-client-ui-model-selection': ['@deepseek-ai/dsh-client-ui-input-trigger'],
-  '@deepseek-ai/dsh-client-ui-sidebar': ['@deepseek-ai/dsh-client-ui-workspace'],
-  '@deepseek-ai/dsh-client-ui-subagent': ['@deepseek-ai/dsh-client-ui-input-trigger'],
-  '@deepseek-ai/dsh-client-ui-theme': ['@berry-ai/harness-api-remotes'],
-  '@deepseek-ai/dsh-client-ui-tool': ['@berry-ai/harness-api-remotes'],
+  '@berry-ai/harness-client-ui-model-selection': ['@berry-ai/harness-client-ui-input-trigger'],
+  '@berry-ai/harness-client-ui-sidebar': ['@berry-ai/harness-client-ui-workspace'],
+  '@berry-ai/harness-client-ui-subagent': ['@berry-ai/harness-client-ui-input-trigger'],
+  '@berry-ai/harness-client-ui-theme': ['@berry-ai/harness-api-remotes'],
+  '@berry-ai/harness-client-ui-tool': ['@berry-ai/harness-api-remotes'],
 } as const satisfies Readonly<Record<string, readonly string[]>>
 
 /** Workspace packages whose complete runtime surface is safe across duplicate installations. */
@@ -61,7 +61,7 @@ const SAFE_HOST_DEPENDENCY_EXPORTS = {
 
 /** Runtime exports that require every consumer to resolve the provider's shared peer instance. */
 const PEER_REQUIRED_HOST_EXPORTS = {
-  '@deepseek-ai/dsh-client-connection': ['OperatorPeer'],
+  '@berry-ai/harness-client-connection': ['OperatorPeer'],
   '@berry-ai/harness-scope': ['carrierKeyOf', 'createScope', 'scopeOf', 'scopeTarget'],
   '@berry-ai/harness-session': ['SESSION_FORMAT_VERSION'],
   '@berry-ai/harness-session-persistence': ['SessionPersistenceNotFoundError'],

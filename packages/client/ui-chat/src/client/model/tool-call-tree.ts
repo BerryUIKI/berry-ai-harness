@@ -2,7 +2,7 @@ import type { SessionEvent } from '@berry-ai/harness-session/types'
 import type {} from '@berry-ai/harness-tools/types'
 import type {
   ConversationNode, RunningToolCall, ToolCallBlock, ToolResultNode,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 
 interface ProjectedBlock {

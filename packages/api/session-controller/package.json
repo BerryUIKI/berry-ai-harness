@@ -48,7 +48,7 @@
       ],
       "inject": [
         "@berry-ai/harness-api-gateway",
-        "@deepseek-ai/dsh-client-file-upload"
+        "@berry-ai/harness-client-file-upload"
       ],
       "platform": "web"
     }
@@ -82,8 +82,8 @@
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@berry-ai/harness-api-gateway": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-file-upload": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
+    "@berry-ai/harness-client-file-upload": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-credentials": "workspace:*",
     "@berry-ai/harness-file-reference": "workspace:*",
@@ -128,9 +128,9 @@
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@berry-ai/harness-api-gateway": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-file-upload": "workspace:*",
-    "@deepseek-ai/dsh-client-store": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
+    "@berry-ai/harness-client-file-upload": "workspace:*",
+    "@berry-ai/harness-client-store": "workspace:*",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-credentials": "workspace:*",

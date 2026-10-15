@@ -23,8 +23,8 @@
 
 import { useId, useState } from 'react'
 import type { ReactNode } from 'react'
-import { Button, IconPlusOutlineRegular, Modal, SegmentedControl } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { InjectFace, PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
+import { Button, IconPlusOutlineRegular, Modal, SegmentedControl } from '@berry-ai/harness-client-ui-primitives'
+import type { InjectFace, PropsRenderSlots } from '@berry-ai/harness-client-ui-slots'
 import type { SettingsNamespaceView } from '@berry-ai/harness-api-remotes/client'
 // Type-only: pulls this package's SlotMap merge (the two Models child slots).
 import type {} from './slot-contract.ts'

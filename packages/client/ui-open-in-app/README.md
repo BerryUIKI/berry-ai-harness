@@ -3,7 +3,7 @@ description: "Web \"Open In...\" controls: the Session-header split button launc
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-client-ui-open-in-app
+# @berry-ai/harness-client-ui-open-in-app
 
 English | [中文](README.zh.md)
 

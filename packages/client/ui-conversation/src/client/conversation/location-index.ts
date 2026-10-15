@@ -1,7 +1,7 @@
 import {
   type AssistantLiveChunkEvent, type SessionEventLike, type SessionEventLikeEntry,
 } from '@berry-ai/harness-api-session-controller/client'
-import { notifySubscribers } from '@deepseek-ai/dsh-client-store'
+import { notifySubscribers } from '@berry-ai/harness-client-store'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
 import type {
   ConversationLocation, ConversationLocationData,

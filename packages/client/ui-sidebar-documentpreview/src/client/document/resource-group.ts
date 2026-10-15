@@ -1,5 +1,5 @@
 /** File-resource membership and invalidation for one document preview. */
-import type { Resources, ResourceSnapshot } from '@deepseek-ai/dsh-client-resources/client'
+import type { Resources, ResourceSnapshot } from '@berry-ai/harness-client-resources/client'
 import type { WorkspaceFileStat } from '@berry-ai/harness-api-workspace-files/types'
 
 /** Forwards member metadata changes to one document preview. */

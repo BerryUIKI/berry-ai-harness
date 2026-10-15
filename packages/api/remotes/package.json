@@ -66,8 +66,8 @@
     "@berry-ai/harness-api-settings-controller": "workspace:*",
     "@berry-ai/harness-api-workspace-controller": "workspace:*",
     "@berry-ai/harness-api-workspace-files": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-file-upload": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
+    "@berry-ai/harness-client-file-upload": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-cordis-host-runner": "workspace:*",
     "@berry-ai/harness-credentials": "workspace:*",
@@ -90,10 +90,10 @@
     "@berry-ai/harness-command-feedback": "workspace:*",
     "@berry-ai/harness-api-terminal-controller": "workspace:*",
     "@berry-ai/harness-plugin-manager": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-plugin-manager": "workspace:*",
+    "@berry-ai/harness-client-ui-plugin-manager": "workspace:*",
     "@berry-ai/harness-office-to-pdf": "workspace:*",
     "@berry-ai/harness-api-account-controller": "workspace:*",
     "@berry-ai/harness-deepseek-account": "workspace:*",
-    "@deepseek-ai/dsh-client-product-analytics": "workspace:*"
+    "@berry-ai/harness-client-product-analytics": "workspace:*"
   }
 }

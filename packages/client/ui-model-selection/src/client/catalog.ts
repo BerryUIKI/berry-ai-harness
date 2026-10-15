@@ -2,7 +2,7 @@
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { ModelCatalog, ModelSelection, ModelProviderGroup } from '@berry-ai/harness-api-remotes/client'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 
 /** Observable lifecycle of the shared model catalog. */
 export interface ModelCatalogState {

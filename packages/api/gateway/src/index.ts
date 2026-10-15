@@ -11,7 +11,7 @@ import {
   OperatorPeer,
   type ConnectionRpcAttachment,
   type ConnectionRpcHandler,
-} from '@deepseek-ai/dsh-client-connection'
+} from '@berry-ai/harness-client-connection'
 import { Deque } from '@berry-ai/harness-deque'
 import type { WebUpgradeRoute } from '@berry-ai/harness-host-webserver'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'

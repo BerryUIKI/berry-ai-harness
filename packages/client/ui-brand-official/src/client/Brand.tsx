@@ -1,5 +1,5 @@
-import { BerryMonogram, BrandWordmark } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { SidebarBrandMarkOwnerProps } from '@deepseek-ai/dsh-client-ui-sidebar/client'
+import { BerryMonogram, BrandWordmark } from '@berry-ai/harness-client-ui-primitives'
+import type { SidebarBrandMarkOwnerProps } from '@berry-ai/harness-client-ui-sidebar/client'
 
 /**
  * Render the official mark with the presentation requested by its host surface.

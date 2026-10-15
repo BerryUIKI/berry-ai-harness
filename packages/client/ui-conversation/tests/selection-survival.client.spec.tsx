@@ -3,7 +3,7 @@
 import { beforeEach, describe, expect, it, onTestFinished } from 'vitest'
 import { SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
+import type { PropsRenderSlots } from '@berry-ai/harness-client-ui-slots'
 import { createConversationStore } from '../src/client/stores.ts'
 
 const sid = (value: string): SessionId => value as SessionId

@@ -1,7 +1,7 @@
 /** Authoritative Schedule queries and deletion for Session and Host catalogs. */
 
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
-import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
+import type { HostObservable } from '@berry-ai/harness-client-ui-slots'
 import type { ScheduleDeleteResult, ScheduleId, ScheduleRecord } from '@berry-ai/harness-schedule/client'
 
 /** How one deletion settled; the wiring reports it as a transient notice. */

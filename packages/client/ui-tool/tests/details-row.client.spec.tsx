@@ -2,14 +2,14 @@
 /** Recorded detail cards, conservative fallback, and standard row interactions. */
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
-import { IconUsersOutlineRegular } from '@deepseek-ai/dsh-client-ui-primitives'
+import type { ToolResultNode } from '@berry-ai/harness-client-ui-chat/client'
+import { IconUsersOutlineRegular } from '@berry-ai/harness-client-ui-primitives'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { en } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
-import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
+import { en } from '@berry-ai/harness-client-ui-conversation/src/client/locales.ts'
+import { en as commonEn } from '@berry-ai/harness-client-locale/src/locales/en.ts'
 import { detailsCardModel, todosDetail } from '../src/client/tool/models/details-card-model.ts'
 import { DetailsRow, detailsToolview } from '../src/client/tool/toolviews/details-row.tsx'
-import { useDisclosure } from '@deepseek-ai/dsh-client-ui-chat/src/client/chat/use-disclosure.ts'
+import { useDisclosure } from '@berry-ai/harness-client-ui-chat/src/client/chat/use-disclosure.ts'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 
 const t = makeTranslate(en, commonEn)

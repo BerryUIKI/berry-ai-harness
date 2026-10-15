@@ -901,7 +901,7 @@ describe.skipIf(MODE === 'record')('web e2e: active Schedule catalog', () => {
     // the clock stays preset-level, so no Host row declares it.
     for (const row of [
       { id: 'schedule', name: '@berry-ai/harness-schedule' },
-      { id: 'ui-schedule', name: '@deepseek-ai/dsh-client-ui-schedule' },
+      { id: 'ui-schedule', name: '@berry-ai/harness-client-ui-schedule' },
     ]) {
       expect(shipped.filter(entry => entry.id === row.id && entry.name === row.name && entry.disabled !== true))
         .toHaveLength(1)

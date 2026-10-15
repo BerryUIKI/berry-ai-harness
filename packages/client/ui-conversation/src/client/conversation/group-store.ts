@@ -1,5 +1,5 @@
 /** Keyed group publication and incremental validation of rendering positions. */
-import { createSnapshotStore, type ObservableSnapshot, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type ObservableSnapshot, type SnapshotStore } from '@berry-ai/harness-client-store'
 import { assertNever } from '@berry-ai/harness-util-values'
 import type { ConversationViewNode } from '../contract/conversation.ts'
 import type {

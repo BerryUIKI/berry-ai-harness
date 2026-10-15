@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import type { GlobalStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
+import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, createEvent, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import { bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
@@ -7,11 +7,11 @@ import type { SessionListState, SessionSummary } from '@berry-ai/harness-api-ses
 import type {
   WorkspaceId, WorkspaceSnapshot, WorkspaceView,
 } from '@berry-ai/harness-api-workspace-controller/client'
-import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
+import type { SessionStatusSnapshot } from '@berry-ai/harness-client-ui-session/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { MainPanelId } from '@deepseek-ai/dsh-client-ui-layout/client'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
-import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
+import type { MainPanelId } from '@berry-ai/harness-client-ui-layout/client'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
+import { en as commonEn } from '@berry-ai/harness-client-locale/src/locales/en.ts'
 import type { DirectoryFlowOwnerProps, WorkspaceBrowserProps } from '../src/client/contract/slots.ts'
 import { createWorkspaceShortcutControls } from '../src/client/shortcuts.ts'
 import { createWorkspaceViewStore, FLAT_SESSION_ORDER_KEY } from '../src/client/stores.ts'

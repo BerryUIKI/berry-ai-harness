@@ -3,7 +3,7 @@ import type {} from '@berry-ai/harness-tools/types'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ConversationNodeDefinition, ConversationViewDefinition, ConversationViewNode, TodoItem,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 
 /** The durable list preceding one Tool invocation; absent before the first loaded write. */
 export interface TodoBaseline {
@@ -16,7 +16,7 @@ export interface TodoHistory {
   get(callId: string): TodoBaseline | undefined
 }
 
-declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
+declare module '@berry-ai/harness-client-ui-conversation/client' {
   interface ConversationViewSnapshotMap {
     /** Recorded todo lists preceding each loaded todo call. */
     'tool-todo-history': TodoHistory

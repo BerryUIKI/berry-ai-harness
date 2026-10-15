@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
-import type { ChatSnapshot, UseChat } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+import type { ChatSnapshot, UseChat } from '@berry-ai/harness-client-ui-chat/client'
+import type { PropsRuntime } from '@berry-ai/harness-client-ui-slots'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'

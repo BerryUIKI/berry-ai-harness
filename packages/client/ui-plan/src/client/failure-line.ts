@@ -1,6 +1,6 @@
 /** Localized plan-owned failures and unmodified external diagnostics. */
 import type { RemoteFailure } from '@berry-ai/harness-typert-protocol'
-import type { TranslateNS } from '@deepseek-ai/dsh-client-locale/client'
+import type { TranslateNS } from '@berry-ai/harness-client-locale/client'
 
 /**
  * Explain a failed plan read in the current locale.

@@ -3,9 +3,9 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-api-remotes/client'
 import type {} from '@berry-ai/harness-api-session-controller/client'
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-locale/client'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
 import type {} from '@berry-ai/harness-experimental-claude-code-mods/remote'
 import type { SurfaceSnapshot } from '@berry-ai/harness-experimental-claude-code-mods/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
@@ -13,7 +13,7 @@ import type { TypertRemoteContribution } from '@berry-ai/harness-typert-protocol
 import { Band, type BandInjected } from './Band.tsx'
 import { en, NS, zh, type ModsBandKey } from './locales.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface LocaleNamespaceMap {
     /** Chrome copy around a mod's band. */
     'claude-code-mods': ModsBandKey

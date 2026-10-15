@@ -51,8 +51,8 @@
   },
   "devDependencies": {
     "@berry-ai/harness-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-settings-general": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-sidebar-browser": "workspace:*",
+    "@berry-ai/harness-client-ui-settings-general": "workspace:*",
+    "@berry-ai/harness-client-ui-sidebar-browser": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
     "@deepseek-ai/node-addon-system": "workspace:~",
     "@electron/get": "^5.1.0",
@@ -72,15 +72,15 @@
     "typescript": "^6.0.3",
     "@berry-ai/harness-deepseek-account": "workspace:*",
     "@types/ws": "^8.18.1",
-    "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
+    "@berry-ai/harness-client-ui-primitives": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "@types/react": "~18.3.1",
     "@types/react-dom": "~18.3.0",
     "vite": "^6.4.3",
-    "@deepseek-ai/dsh-client-ui-theme": "workspace:*",
-    "@deepseek-ai/dsh-client-shortcuts": "workspace:*",
+    "@berry-ai/harness-client-ui-theme": "workspace:*",
+    "@berry-ai/harness-client-shortcuts": "workspace:*",
     "@berry-ai/harness-atomic-write": "workspace:*",
-    "@deepseek-ai/dsh-client-product-analytics": "workspace:*"
+    "@berry-ai/harness-client-product-analytics": "workspace:*"
   }
 }

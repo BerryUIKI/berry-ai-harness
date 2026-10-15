@@ -10,13 +10,13 @@
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
 import { createScope, scopeOf } from '@berry-ai/harness-api-session-controller/client'
-import type { LocaleSnapshot } from '@deepseek-ai/dsh-client-locale/client'
+import type { LocaleSnapshot } from '@berry-ai/harness-client-locale/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import { InputTriggerController, InputTriggerService } from '@deepseek-ai/dsh-client-ui-input-trigger/client'
+import { InputTriggerController, InputTriggerService } from '@berry-ai/harness-client-ui-input-trigger/client'
 import type {
   BeginCommandRequest, ClientSessionContext, CommandClaim, InsertReferenceRequest, PickOutcome,
   ReferenceInsert, InputTriggerCandidate, InputTriggerPick, InputTriggerSource, SourceRoster, TriggerChar,
-} from '@deepseek-ai/dsh-client-ui-input-trigger/client'
+} from '@berry-ai/harness-client-ui-input-trigger/client'
 
 const sid = (k: string): SessionId => k as SessionId
 

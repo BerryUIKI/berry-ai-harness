@@ -1,8 +1,8 @@
 /** The band's registration: the Remote mount, one watch per session fed into the dock entry, and the press. */
 import assert from 'node:assert/strict'
 import { Context, Service } from '@deepseek-ai/cordis'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
 import type { SurfaceSnapshot } from '@berry-ai/harness-experimental-claude-code-mods/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { RemoteError, type TypertRemoteContribution } from '@berry-ai/harness-typert-protocol'

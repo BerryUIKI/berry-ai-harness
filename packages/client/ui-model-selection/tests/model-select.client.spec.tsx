@@ -4,12 +4,12 @@ import { afterEach, beforeEach, describe, expect, it, onTestFinished, vi } from 
 import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import { SessionId } from '@berry-ai/harness-session/types'
 import type { ModelSelection } from '@berry-ai/harness-api-remotes/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { ComponentProps } from 'react'
 import type { ModelDirectoryState } from '../src/client/directory.ts'
 import { ModelSelect } from '../src/client/ModelSelect.tsx'
 import { en, zh } from '../src/client/locales.ts'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 
 // The seat's key domain is model ∪ common; the stub mirrors the real lookup
 // chain: package dictionary, then common vocabulary, then the key.

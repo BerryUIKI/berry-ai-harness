@@ -11,7 +11,7 @@ import type { AttachmentIdType, FileAttachmentRef, ImageAttachmentRef } from '@b
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { SessionId, SessionSeq } from '@berry-ai/harness-session/types'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
 import type { PromptContentPart, QueueAction, SessionRequestId } from '../../types.ts'
 import type { PendingSubmissionAttachment, SessionSnapshot } from './snapshot.ts'
 

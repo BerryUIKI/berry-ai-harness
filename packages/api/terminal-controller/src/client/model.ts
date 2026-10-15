@@ -1,7 +1,7 @@
 /** React-free browser terminal state and reconnecting Remote-stream ownership. */
 import { preferredShell, rememberShell } from './shell-preference.ts'
 import { randomUUID } from '@berry-ai/harness-util-crypto'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 import { RemoteStreamCarrierError, type ClientRemote, type RemoteStream } from '@berry-ai/harness-api-gateway/client'
 import { RemoteError, remoteErrorOf, type RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type {} from '@berry-ai/harness-api-terminal-controller/remote'

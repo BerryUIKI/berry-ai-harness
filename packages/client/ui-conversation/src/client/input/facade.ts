@@ -12,7 +12,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import type { InboxState } from '@berry-ai/harness-agent/types'
 import {
   createSnapshotStore, type ObservableSnapshot, type SnapshotStore,
-} from '@deepseek-ai/dsh-client-store'
+} from '@berry-ai/harness-client-store'
 import type { LexicalEditor } from 'lexical'
 import type {
   CommandClaim, ConsumeTokenRequest, DraftAttachmentId, DraftInitializationOptions, DraftInitializationResult,

@@ -7,9 +7,9 @@ import {
   IconTrashOutlineRegular,
   useAnchoredPosition,
   useDismissOnOutsidePointer,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-primitives'
+import type { InjectFace, PropsLocale, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
 import type { ScheduleId } from '@berry-ai/harness-schedule/client'
 import type { CatalogInjected } from './catalog-source.ts'
 import { NS } from './locales.ts'

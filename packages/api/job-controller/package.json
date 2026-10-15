@@ -44,7 +44,7 @@
       ],
       "inject": [
         "@berry-ai/harness-api-gateway",
-        "@deepseek-ai/dsh-client-connection"
+        "@berry-ai/harness-client-connection"
       ],
       "platform": "web"
     }
@@ -76,8 +76,8 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-api-gateway": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-store": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
+    "@berry-ai/harness-client-store": "workspace:*",
     "@berry-ai/harness-jobs": "workspace:*",
     "@berry-ai/harness-jobs-local": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",

@@ -9,7 +9,7 @@
 import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { SessionRetainInfo } from '@berry-ai/harness-api-session-controller/client'
 import { SessionId } from '@berry-ai/harness-session/types'
 import { AgentPresetLabel } from '../src/client/AgentPresetLabel.tsx'

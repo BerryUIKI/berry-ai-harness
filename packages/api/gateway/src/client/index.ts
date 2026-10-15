@@ -10,7 +10,7 @@ export type { TypertGatewayFaultDetails } from '../remote-error-codes.ts'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ConnectionHandle,
-} from '@deepseek-ai/dsh-client-connection/client'
+} from '@berry-ai/harness-client-connection/client'
 import type {
   InvocationDescriptor,
   TypertClientEventListener,

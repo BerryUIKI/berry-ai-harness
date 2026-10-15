@@ -1,6 +1,6 @@
 /** File association reads shared by mounted controls using the same reader and target. */
 import { useCallback, useSyncExternalStore } from 'react'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 import type { SessionWorkspacePathApplication } from '@berry-ai/harness-api-session-controller/types'
 
 type Query = (target: string, signal: AbortSignal) => Promise<readonly SessionWorkspacePathApplication[] | null>

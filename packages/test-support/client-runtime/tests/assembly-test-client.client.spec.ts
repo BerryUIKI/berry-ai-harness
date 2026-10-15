@@ -5,7 +5,7 @@
  * `RemoteMock` bound to that client's Connection instance, mount, HMR-style reload,
  * unload, and fail-loud teardown.
  */
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
 import { RemoteMock, ok, openStream } from '@berry-ai/harness-remote-mock'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import type { AssemblyPlan, ClientPluginModule, TestClientOptions } from '../src/assembly/index.ts'
@@ -13,12 +13,12 @@ import { ClientRoster, TestClient, remoteDefaultResponses, webApp } from '../src
 
 /** The Gateway client and what it injects: the Typert registry and the Connection. */
 const API_ROSTER = webApp.closure(['@berry-ai/harness-api-gateway'])
-const MODULES = '@deepseek-ai/dsh-client-modules'
-const SIDEBAR = '@deepseek-ai/dsh-client-ui-sidebar'
+const MODULES = '@berry-ai/harness-client-modules'
+const SIDEBAR = '@berry-ai/harness-client-ui-sidebar'
 const PARALLEL_PROBE = '@deepseek-ai/dsh-client-test-parallel-probe'
 /** Declared by ui-sidebar, whose SlotMap merge is outside this package's compilation face. */
 const SIDEBAR_SETTINGS = 'sidebar.settings' as never
-const BRAND = '@deepseek-ai/dsh-client-ui-brand-official'
+const BRAND = '@berry-ai/harness-client-ui-brand-official'
 const globals = globalThis as { EventSource?: unknown; ResizeObserver?: unknown }
 /** The whole roster's first boot pays the cold module transform of every plugin package. */
 const COLD_BOOT_TIMEOUT_MS = 60_000
@@ -102,7 +102,7 @@ describe('TestClient (jsdom)', () => {
     await expect(rename(b)).resolves.toEqual({ ok: true, value: { title: 'b', seq: 1 } })
     expect(mockA.log.calls('session/rename')).toHaveLength(1)
     expect(mockB.log.calls('session/rename')).toHaveLength(1)
-    await a.reload('@deepseek-ai/dsh-client-connection')
+    await a.reload('@berry-ai/harness-client-connection')
     await vi.waitFor(() => { expect(a.connection.state.getSnapshot()).toBe('connected') })
     await expect(rename(a)).resolves.toEqual({ ok: true, value: { title: 'a', seq: 1 } })
     expect(mockA.log.calls('session/rename')).toHaveLength(2)

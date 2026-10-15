@@ -3,7 +3,7 @@
 import { randomUUID } from 'node:crypto'
 import { Context, Service } from '@deepseek-ai/cordis'
 import type { SessionReference } from '@berry-ai/harness-api-session-controller/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { makeTranslate, TestSessions } from '@berry-ai/harness-client-test-runtime'
 import { SessionId } from '@berry-ai/harness-session/types'
 import { $nodesOfType } from 'lexical'

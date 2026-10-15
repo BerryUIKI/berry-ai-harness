@@ -6,10 +6,10 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {
   ISessions, SessionListState, SessionReference, SessionSnapshot,
 } from '@berry-ai/harness-api-session-controller/client'
-import type { ResourceProvider } from '@deepseek-ai/dsh-client-resources/client'
+import type { ResourceProvider } from '@berry-ai/harness-client-resources/client'
 import { sessionSnapshot } from '@berry-ai/harness-client-test-runtime'
-import type { ConversationViewsProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { SidebarRightTabDefinition } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
+import type { ConversationViewsProps } from '@berry-ai/harness-client-ui-conversation/client'
+import type { SidebarRightTabDefinition } from '@berry-ai/harness-client-ui-sidebar-right/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import {

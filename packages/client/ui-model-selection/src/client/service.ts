@@ -12,7 +12,7 @@
  * strings, and it models global+shadow named registries — this is a
  * per-session singleton with no global layer to merge.
  */
-import type {} from '@deepseek-ai/dsh-client-product-analytics/client'
+import type {} from '@berry-ai/harness-client-product-analytics/client'
 import { Service } from '@deepseek-ai/cordis'
 import type { Context } from '@deepseek-ai/cordis'
 import type { SessionBinding } from '@berry-ai/harness-api-session-controller/client'

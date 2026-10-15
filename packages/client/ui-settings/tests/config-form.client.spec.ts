@@ -6,7 +6,7 @@ import type {
 } from '@berry-ai/harness-api-remotes/client'
 import { RemoteError, TestRemote } from '@berry-ai/harness-client-test-runtime'
 import type { JsonValue } from '@berry-ai/harness-util-values'
-import type { ConfigForm } from '@deepseek-ai/dsh-client-ui-settings/client'
+import type { ConfigForm } from '@berry-ai/harness-client-ui-settings/client'
 import { SettingsSchemaService } from '../src/client/schema.ts'
 import { ConfigFormController, ConfigForms } from '../src/client/config-form.ts'
 import { SettingsDescribeMirror } from '../src/client/settings-mirror.ts'

@@ -2,7 +2,7 @@
 // call/result slice.
 
 import { describe, expect, it } from 'vitest'
-import type { StartedToolCall, ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
+import type { StartedToolCall, ToolResultNode } from '@berry-ai/harness-client-ui-chat/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import { cordisActionCard, cordisDefineCard } from '../src/client/card-model.ts'
 

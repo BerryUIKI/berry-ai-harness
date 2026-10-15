@@ -3,7 +3,7 @@
 
 import { act, cleanup, fireEvent, render, within } from '@testing-library/react'
 import { afterEach, beforeEach, expect, it, onTestFinished, vi } from 'vitest'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { bindSnapshotSelector, makeTranslate, sessionSnapshot } from '@berry-ai/harness-client-test-runtime'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { SessionInspectorView, type SessionInspectorProps } from '../src/client/views/View.tsx'

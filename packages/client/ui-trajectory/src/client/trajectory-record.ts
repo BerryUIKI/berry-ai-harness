@@ -2,7 +2,7 @@
 
 import type { HTMLAttributes } from 'react'
 import type { FileAttachmentRef, ImageAttachmentRef } from '@berry-ai/harness-attachment'
-import type { ConversationPromptSnapshot } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import type { ConversationPromptSnapshot } from '@berry-ai/harness-client-ui-conversation/client'
 import type { TrajectoryTranslate } from './locales.ts'
 
 /** Closed set of trajectory record kinds. */

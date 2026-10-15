@@ -9,8 +9,8 @@ import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { SettingsNamespaceView } from '@berry-ai/harness-api-remotes/client'
 import {
   createSnapshotStore, type SnapshotStore,
-} from '@deepseek-ai/dsh-client-store'
-import type { SettingsDescribeFace } from '@deepseek-ai/dsh-client-ui-settings/client'
+} from '@berry-ai/harness-client-store'
+import type { SettingsDescribeFace } from '@berry-ai/harness-client-ui-settings/client'
 import type { PermissionCatalog } from '@berry-ai/harness-permission-presets/client'
 import type { PermissionCatalogDirectory } from './catalog.ts'
 import { displayPermissionPreset } from './presentation.ts'

@@ -12,7 +12,7 @@ import type { ServerResponse } from 'node:http'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 // Type imports carry the clientModules/webServer Context merges.
-import type { ClientArtifactBaseline } from '@deepseek-ai/dsh-client-modules'
+import type { ClientArtifactBaseline } from '@berry-ai/harness-client-modules'
 import type {} from '@berry-ai/harness-host-webserver'
 import type { PluginsEventFrame } from './events.ts'
 import { EVENTS_ENDPOINT } from './events.ts'

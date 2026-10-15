@@ -14,15 +14,15 @@ import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { InboxWireState } from '@berry-ai/harness-agent/types'
 import type {} from '@berry-ai/harness-api-remotes/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { ComposerChainProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { PendingInteractionPublisher } from '@deepseek-ai/dsh-client-ui-session/client'
+import type {} from '@berry-ai/harness-client-ui-chat/client'
+import type { ComposerChainProps } from '@berry-ai/harness-client-ui-conversation/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
+import type { PendingInteractionPublisher } from '@berry-ai/harness-client-ui-session/client'
 import type { TypertClientEventListener } from '@berry-ai/harness-typert-protocol'
 import type { AskUserQuestionItem, PendingUserQuestion, UserQuestionProjectionView } from '@berry-ai/harness-user-questions/types'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type { UserQuestionPanels, UserQuestionRecord } from '@deepseek-ai/dsh-client-ui-tool/client'
+import type {} from '@berry-ai/harness-client-locale/client'
+import type { UserQuestionPanels, UserQuestionRecord } from '@berry-ai/harness-client-ui-tool/client'
 import type { ToolCallId } from '@berry-ai/harness-llm'
 import { brandString } from '@berry-ai/harness-brand'
 import { createWaterfallRequest, PendingQuestion, type QuestionRpcChannel } from './contract/slots.ts'
@@ -37,7 +37,7 @@ export type {
 } from './contract/slots.ts'
 export type { QuestionKey } from './locales.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface LocaleNamespaceMap {
     /** The question composer's copy. */
     question: QuestionKey

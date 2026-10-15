@@ -9,11 +9,11 @@
  */
 
 import { useEffect } from 'react'
-import type { SnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
-import { IconAgentPresetOutlineRegular } from '@deepseek-ai/dsh-client-ui-primitives'
+import type { SnapshotStore } from '@berry-ai/harness-client-store'
+import type { InjectFace, PropsLocale, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
+import { IconAgentPresetOutlineRegular } from '@berry-ai/harness-client-ui-primitives'
 // Type-only: pulls the ui-conversation SlotMap merge (the header actions).
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
 import type {} from '@berry-ai/harness-agent-preset-registry/types'
 import type { AgentPresetSettingsState } from './settings-store.ts'
 import { presetDisplayText } from './locales.ts'

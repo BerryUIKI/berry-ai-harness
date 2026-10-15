@@ -8,7 +8,7 @@
  */
 
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
-import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
+import type { HostObservable } from '@berry-ai/harness-client-ui-slots'
 import type { GoalActivation, GoalId } from '@berry-ai/harness-goal/client'
 
 /**

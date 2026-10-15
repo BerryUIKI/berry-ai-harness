@@ -1,6 +1,6 @@
 /** Pure terminal-card derivation from raw Tool call and result fields. @module */
-import type { TerminalBlockLabels, TerminalBlockProps } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { TranslateNS } from '@deepseek-ai/dsh-client-ui-slots'
+import type { TerminalBlockLabels, TerminalBlockProps } from '@berry-ai/harness-client-ui-primitives'
+import type { TranslateNS } from '@berry-ai/harness-client-ui-slots'
 import { isAbsoluteWorkspacePath, resolveWorkspacePath } from '@berry-ai/harness-util-workspace-path'
 import { hasSpillNotice } from '@berry-ai/harness-spill-policy/notice'
 import type { ToolCallBlock } from './tool-call-model.ts'

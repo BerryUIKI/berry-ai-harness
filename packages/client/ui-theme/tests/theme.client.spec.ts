@@ -6,8 +6,8 @@ import type {
   ThemeSettings,
   ThemeSnapshot,
   ThemeTokenOverrides,
-} from '@deepseek-ai/dsh-client-ui-theme/client'
-import { ThemeRuntime } from '@deepseek-ai/dsh-client-ui-theme/client'
+} from '@berry-ai/harness-client-ui-theme/client'
+import { ThemeRuntime } from '@berry-ai/harness-client-ui-theme/client'
 
 const make = (host = stubConfigForm<ThemeSettings>()): {
   ctx: Context

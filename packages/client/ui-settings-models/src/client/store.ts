@@ -11,9 +11,9 @@ import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type {
   CredentialInfo, LlmConfigurableProvider, LlmProviderInfo, SettingsNamespaceView,
 } from '@berry-ai/harness-api-remotes/client'
-import type { SnapshotStore } from '@deepseek-ai/dsh-client-store'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { SettingsDescribeFace } from '@deepseek-ai/dsh-client-ui-settings/client'
+import type { SnapshotStore } from '@berry-ai/harness-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { SettingsDescribeFace } from '@berry-ai/harness-client-ui-settings/client'
 import type { SettingsSchemaOperations } from './schema-operations.ts'
 
 /**

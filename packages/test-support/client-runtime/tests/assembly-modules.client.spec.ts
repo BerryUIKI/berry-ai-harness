@@ -6,18 +6,18 @@
  */
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import * as modulesClient from '@deepseek-ai/dsh-client-modules/client'
-import { parseBootManifest } from '@deepseek-ai/dsh-client-modules/client'
-import type { WebBootGraph } from '@deepseek-ai/dsh-client-modules/client'
-import * as uiRenderer from '@deepseek-ai/dsh-client-ui-renderer/client'
+import * as modulesClient from '@berry-ai/harness-client-modules/client'
+import { parseBootManifest } from '@berry-ai/harness-client-modules/client'
+import type { WebBootGraph } from '@berry-ai/harness-client-modules/client'
+import * as uiRenderer from '@berry-ai/harness-client-ui-renderer/client'
 import * as typertRegistry from '@berry-ai/harness-typert-registry/client'
 import { describe, expect, it, onTestFinished } from 'vitest'
 import { ClientRoster } from '../src/assembly/index.ts'
 import { MODULES_PACKAGE, createInProcessModules, loadPluginModules } from '../src/assembly/modules.ts'
 
-const RENDERER = '@deepseek-ai/dsh-client-ui-renderer'
+const RENDERER = '@berry-ai/harness-client-ui-renderer'
 const TYPERT = '@berry-ai/harness-typert-registry'
-const BRAND = '@deepseek-ai/dsh-client-ui-brand-official'
+const BRAND = '@berry-ai/harness-client-ui-brand-official'
 const MISSING = '@deepseek-ai/dsh-client-does-not-exist'
 
 const row = (name: string, immediately = false) => ({ name, inject: [], immediately })

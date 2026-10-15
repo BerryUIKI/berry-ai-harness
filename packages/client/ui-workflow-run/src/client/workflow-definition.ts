@@ -1,7 +1,7 @@
 import type {
   ConversationLocation, ConversationNodeContext, ConversationNodeDefinition,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { ChatConversationViewNode } from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
+import type { ChatConversationViewNode } from '@berry-ai/harness-client-ui-chat/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   ToolWorkflowAgentEndData, ToolWorkflowAgentStartData,
@@ -34,7 +34,7 @@ export interface WorkflowRunChatData {
   readonly phases: readonly WorkflowRunPhaseData[]
 }
 
-declare module '@deepseek-ai/dsh-client-ui-chat/client' {
+declare module '@berry-ai/harness-client-ui-chat/client' {
   interface ChatNodeDataMap {
     /** Durable top-level workflow run and all members that actually started. */
     'workflow-run': WorkflowRunChatData

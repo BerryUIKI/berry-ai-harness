@@ -1,7 +1,7 @@
 /** Read immutable plan arguments from a Session snapshot and earlier history pages. */
 import type { Context } from '@deepseek-ai/cordis'
 import type { SessionFollowFrame } from '@berry-ai/harness-api-session-controller/types'
-import type { ResourceProvider } from '@deepseek-ai/dsh-client-resources/client'
+import type { ResourceProvider } from '@berry-ai/harness-client-resources/client'
 import { RemoteError, remoteErrorOf } from '@berry-ai/harness-typert-protocol'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import { parsePlanAddress, submittedPlan, type SubmittedPlan } from './plan.ts'
@@ -19,7 +19,7 @@ declare module '@berry-ai/harness-typert-protocol' {
   }
 }
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface ResourceProtocolMap {
     /** Immutable Markdown from a logged exit_plan_mode invocation. */
     plan: SubmittedPlan

@@ -2,7 +2,7 @@
  * The operator Peer: the one party this Host answers to. Connection owns it
  * for its own lifetime, admits every request as it, and hands it to each
  * Remote call as `invocation.peer`.
- * @module @deepseek-ai/dsh-client-connection/src/operator-peer
+ * @module @berry-ai/harness-client-connection/src/operator-peer
  */
 
 import { randomUUID } from 'node:crypto'

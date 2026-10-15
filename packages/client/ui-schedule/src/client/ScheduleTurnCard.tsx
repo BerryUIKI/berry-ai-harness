@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
-import type { ToolResultNode } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+import type { ToolResultNode } from '@berry-ai/harness-client-ui-conversation/client'
+import type { InjectFace, PropsLocale, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
 import type { ScheduleCatalogEntry, ScheduleId } from '@berry-ai/harness-schedule/client'
 import type { CatalogInjected } from './catalog-source.ts'
 import { ScheduleCreateCard, type ScheduleCreateCardInput, type ScheduleCreateCardProps } from './ScheduleCreateCard.tsx'

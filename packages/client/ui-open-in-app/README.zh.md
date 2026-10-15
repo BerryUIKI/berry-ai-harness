@@ -3,7 +3,7 @@ description: "Web \"Open In...\" 控件：会话头部在记住的应用中打�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-client-ui-open-in-app
+# @berry-ai/harness-client-ui-open-in-app
 
 [English](README.md) | 中文
 

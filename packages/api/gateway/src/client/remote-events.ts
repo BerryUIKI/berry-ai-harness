@@ -5,7 +5,7 @@ import type {
   ConnectionGenerationSource,
   ConnectionHostInfo,
   ConnectionHandle,
-} from '@deepseek-ai/dsh-client-connection/client'
+} from '@berry-ai/harness-client-connection/client'
 import type {
   TypertClientEventListener,
   TypertOwnedValue,

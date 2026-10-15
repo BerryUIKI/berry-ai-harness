@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-ui-deliverables",
+  "name": "@berry-ai/harness-client-ui-deliverables",
   "description": "Changed-files card with per-file comparison tabs, delivery cards, and clickable final-response file references for Web",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -29,14 +29,14 @@
     "client": {
       "inject": [
         "@berry-ai/harness-api-remotes",
-        "@deepseek-ai/dsh-client-connection",
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-chat",
-        "@deepseek-ai/dsh-client-ui-conversation",
-        "@deepseek-ai/dsh-client-ui-renderer",
-        "@deepseek-ai/dsh-client-ui-sidebar-right",
-        "@deepseek-ai/dsh-client-ui-tool",
-        "@deepseek-ai/dsh-client-ui-settings"
+        "@berry-ai/harness-client-connection",
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-chat",
+        "@berry-ai/harness-client-ui-conversation",
+        "@berry-ai/harness-client-ui-renderer",
+        "@berry-ai/harness-client-ui-sidebar-right",
+        "@berry-ai/harness-client-ui-tool",
+        "@berry-ai/harness-client-ui-settings"
       ],
       "platform": "web"
     }
@@ -51,25 +51,25 @@
   },
   "devDependencies": {
     "@berry-ai/harness-api-remotes": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-locale": "workspace:*",
-    "@deepseek-ai/dsh-client-store": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
+    "@berry-ai/harness-client-locale": "workspace:*",
+    "@berry-ai/harness-client-store": "workspace:*",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-chat": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-conversation": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-dockkit": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-renderer": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-sidebar-right": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
+    "@berry-ai/harness-client-ui-chat": "workspace:*",
+    "@berry-ai/harness-client-ui-conversation": "workspace:*",
+    "@berry-ai/harness-client-ui-dockkit": "workspace:*",
+    "@berry-ai/harness-client-ui-renderer": "workspace:*",
+    "@berry-ai/harness-client-ui-sidebar-right": "workspace:*",
+    "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@types/react": "~18.3.1",
     "@deepseek-ai/cordis": "workspace:~",
     "react": "^18.2.0",
-    "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
+    "@berry-ai/harness-client-ui-primitives": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-tool": "workspace:*",
+    "@berry-ai/harness-client-ui-tool": "workspace:*",
     "@berry-ai/harness-tool-present": "workspace:*",
     "@berry-ai/harness-workspace-changes": "workspace:*",
     "@berry-ai/harness-api-session-controller": "workspace:*",
@@ -80,7 +80,7 @@
     "@berry-ai/harness-fs-local": "workspace:*",
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-settings": "workspace:*"
+    "@berry-ai/harness-client-ui-settings": "workspace:*"
   },
   "files": [
     "lib/index.js",

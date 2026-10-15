@@ -2,7 +2,7 @@
  * Host desktop availability, file associations, and open/reveal actions over the Session Remote.
  * The desktop answer is read once per page; a failed read renders no control.
  */
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { SessionOpenWorkspacePathRequest, SessionWorkspacePathApplication } from '@berry-ai/harness-api-session-controller/types'
 

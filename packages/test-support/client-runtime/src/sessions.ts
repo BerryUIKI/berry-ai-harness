@@ -13,8 +13,8 @@ import type {
 import { scopeIdentityOf } from '@berry-ai/harness-api-session-controller/src/client/scope.ts'
 import type { SessionRequestId } from '@berry-ai/harness-api-session-controller/types'
 import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { ObservableSnapshot, SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { ObservableSnapshot, SnapshotStore } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { sessionSnapshot } from './fixtures.ts'
 import type {

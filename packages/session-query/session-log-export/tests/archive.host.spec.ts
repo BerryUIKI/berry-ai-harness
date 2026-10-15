@@ -16,8 +16,8 @@ import type { SessionEvent, SessionHeader, SessionId, ToolResultMessage, UserMes
 import type { SessionLineageNode } from '@berry-ai/harness-session-query'
 import { SessionPersistenceNotFoundError } from '@berry-ai/harness-session-persistence'
 import type { SessionAccess, SessionHandle } from '@berry-ai/harness-session-persistence'
-import { HostConnectionService } from '@deepseek-ai/dsh-client-connection'
-import type { BrowserAuth } from '@deepseek-ai/dsh-client-connection/src/browser-auth.ts'
+import { HostConnectionService } from '@berry-ai/harness-client-connection'
+import type { BrowserAuth } from '@berry-ai/harness-client-connection/src/browser-auth.ts'
 import * as SessionLogExport from '../src/index.ts'
 
 declare module '@berry-ai/harness-llm' {

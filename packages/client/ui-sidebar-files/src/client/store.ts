@@ -10,9 +10,9 @@
  * Writers run between `start` and `forget`: the owner's `signal` is what ends a
  * bucket's life, and the face stops dispatching once it aborts.
  */
-import { defineStore, type EngineStoreHandle } from '@deepseek-ai/dsh-client-store'
+import { defineStore, type EngineStoreHandle } from '@berry-ai/harness-client-store'
 import type { RemoteFailure } from '@berry-ai/harness-api-remotes/client'
-import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
+import type { TabId } from '@berry-ai/harness-client-ui-dockkit'
 import type { WorkspaceDirectoryEntry } from '@berry-ai/harness-api-workspace-files/types'
 
 /**

@@ -2,8 +2,8 @@
 /** Page-active capture, selected input routing, and late permissions use real audio ownership. */
 import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
-import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
+import { en as commonEn } from '@berry-ai/harness-client-locale/src/locales/en.ts'
 import { afterEach, beforeEach, expect, it, vi } from 'vitest'
 import { MicrophonePicker } from '../src/client/MicrophonePicker.tsx'
 import { createMicrophoneDeviceStore } from '../src/client/microphone-device.ts'

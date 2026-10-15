@@ -6,7 +6,7 @@ import { sanitizeInstallInput } from './sanitize-install-input.ts'
  * after each action and after every `plugin-manager/changed` event, so a
  * change made on another surface shows here without a manual refresh.
  */
-import type {} from '@deepseek-ai/dsh-client-product-analytics/client'
+import type {} from '@berry-ai/harness-client-product-analytics/client'
 import { randomUUID } from '@berry-ai/harness-util-crypto'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type {
@@ -27,10 +27,10 @@ import type {
   Registry,
 } from '@berry-ai/harness-api-remotes/client'
 import { normalizeRegistry, NPMMIRROR_REGISTRY, OFFICIAL_NPM_REGISTRY, REGISTRY_URL } from '@berry-ai/harness-plugin-manager/registry'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
+import type { HostObservable } from '@berry-ai/harness-client-ui-slots'
 import type { LocalizedText, PluginLocalizedMeta } from '@berry-ai/harness-package-manifest'
-import type { SettingsDescribeFace, ConfigForms } from '@deepseek-ai/dsh-client-ui-settings/client'
+import type { SettingsDescribeFace, ConfigForms } from '@berry-ai/harness-client-ui-settings/client'
 import type { ConfigLedger } from './config-ledger.ts'
 import { shortName } from './presentation.ts'
 

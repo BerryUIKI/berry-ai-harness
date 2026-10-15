@@ -6,7 +6,7 @@ English | [中文](2026-08-28-ctx-remote-failure-vocabulary.zh.md)
 
 ## Problem
 
-Every Remote owner package maintained its own failure surface: an `XxxErrorDetailsMap` interface, an `XxxError` union derived from it, and an exit mapping function that translated domain error classes (`UnknownPresetError`, `PresetMountError`, `SessionTitleInvalidError`, and their peers) into a wire failure value. `@berry-ai/harness-typert-protocol` carried two failure classes at once — `TypertRemoteFailure` for a failure an owner reported and `TypertLookupFailure` for one a lookup resolver produced — while `@deepseek-ai/dsh-client-connection` kept a second typed view, `RpcErrorDetailsMap`, that hardcoded domain codes such as `agent-preset-not-found` and `session-not-found` into the carrier.
+Every Remote owner package maintained its own failure surface: an `XxxErrorDetailsMap` interface, an `XxxError` union derived from it, and an exit mapping function that translated domain error classes (`UnknownPresetError`, `PresetMountError`, `SessionTitleInvalidError`, and their peers) into a wire failure value. `@berry-ai/harness-typert-protocol` carried two failure classes at once — `TypertRemoteFailure` for a failure an owner reported and `TypertLookupFailure` for one a lookup resolver produced — while `@berry-ai/harness-client-connection` kept a second typed view, `RpcErrorDetailsMap`, that hardcoded domain codes such as `agent-preset-not-found` and `session-not-found` into the carrier.
 
 One code therefore existed in three places: the owner's table, the carrier's typed view, and whatever union or cast a consumer wrote to narrow it (`result.error as SessionError`). Adding a domain code meant editing all three, and relaying another domain's code meant copying that code into your own table — `SessionErrorDetailsMap` had absorbed five foreign codes this way, across `agent-preset-*`, `subagent-*`, and `workspace-not-found`.
 
@@ -55,7 +55,7 @@ The client plane does not construct `RemoteError`; the one exception is the Gate
 
 `ctx.remote.$host` exposes two fixed facts: `home: string | undefined` and `isLoopback: boolean`. It is a getter on the Client Remote service reading the connection handle captured at service construction — `home` comes from the ready frame in the generation snapshot (`undefined` before ready), `isLoopback` from the carrier. There is no store, no subscription, and no generation counter.
 
-Refresh after a reconnect rides the existing signal: the Client Remote emits `connection/reset` when it connects, and a consumer that must re-read listens for that or for its own domain's remote event rather than turning `$host` into a subscribable object. Consumers therefore no longer inject `connection`: the `@deepseek-ai/dsh-client-connection` consumer allowlist shrinks to hmr, frontend-static, bundle/web-app, session-log-export, webworker-runtime, and the gateway and api-remotes assemblies.
+Refresh after a reconnect rides the existing signal: the Client Remote emits `connection/reset` when it connects, and a consumer that must re-read listens for that or for its own domain's remote event rather than turning `$host` into a subscribable object. Consumers therefore no longer inject `connection`: the `@berry-ai/harness-client-connection` consumer allowlist shrinks to hmr, frontend-static, bundle/web-app, session-log-export, webworker-runtime, and the gateway and api-remotes assemblies.
 
 ## What the wire carries
 
@@ -63,7 +63,7 @@ The envelope is unchanged: the wire still carries `{ code, message, details }` d
 
 Three wire-visible behaviors follow. The Gateway's 17 assembly codes travel as themselves, so a client can handle "method not mounted" separately from a business refusal. Owners do not pre-fold unrelated exceptions: an unclassified throw reaches the Gateway, which folds it into `gateway/internal` once and keeps the diagnostic chain in `message`. A client unary call aborted by its caller answers `gateway/cancelled`, matching the code the Host would have produced even when the local throw wins the race against the wire round-trip.
 
-The carrier keeps only the open wire shape. `ConnectionRpcFailure` and `ConnectionRpcResult` in `@deepseek-ai/dsh-client-connection` carry no domain-code knowledge, and its `transportError()` produces `gateway/internal`; the only home for the typed view is now the protocol's `RemoteFailure`.
+The carrier keeps only the open wire shape. `ConnectionRpcFailure` and `ConnectionRpcResult` in `@berry-ai/harness-client-connection` carry no domain-code knowledge, and its `transportError()` produces `gateway/internal`; the only home for the typed view is now the protocol's `RemoteFailure`.
 
 ## Alternatives considered
 

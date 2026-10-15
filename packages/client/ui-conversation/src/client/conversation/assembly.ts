@@ -8,7 +8,7 @@ import type { SessionEvent, SessionId } from '@berry-ai/harness-session/types'
 import { WeakMapWithValues } from '@berry-ai/harness-util-values'
 import {
   createSnapshotStore, type ObservableSnapshot, type SnapshotStore,
-} from '@deepseek-ai/dsh-client-store'
+} from '@berry-ai/harness-client-store'
 import type {
   ConversationPublication, ConversationViewSnapshotMap,
   ConversationViewSnapshotStore,

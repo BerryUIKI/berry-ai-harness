@@ -5,13 +5,13 @@
  * only contributes entries, so no SlotMap merge lives here. Live state
  * arrives through the `hooks` compartment (the framework standard kit binds
  * `feedback` into `useFeedback` and `dialog` into `useDialog`).
- * @module @deepseek-ai/dsh-client-ui-message-feedback/client/slots
+ * @module @berry-ai/harness-client-ui-message-feedback/client/slots
  */
 
 import type {
   HostObservable, InjectFace, PropsLocale, PropsRuntime,
-} from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-slots'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
 import type { MessageId } from '@berry-ai/harness-api-remotes/client'
 import type { MessageFeedbackItem, MessageFeedbackRating } from '@berry-ai/harness-message-feedback/types'
 // Type-only: pulls this package's LocaleNamespaceMap merge (the 'feedback' seat).

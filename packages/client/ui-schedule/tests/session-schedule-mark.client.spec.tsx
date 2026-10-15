@@ -5,7 +5,7 @@ import { makeTranslate, RemoteError } from '@berry-ai/harness-client-test-runtim
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { ScheduleCatalogEntry, ScheduleDeleteResult, ScheduleId } from '@berry-ai/harness-schedule/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import { bindSnapshotSelector } from '@deepseek-ai/dsh-client-ui-renderer/src/client/bind.ts'
+import { bindSnapshotSelector } from '@berry-ai/harness-client-ui-renderer/src/client/bind.ts'
 import { createCatalogSource, type CatalogInjected } from '../src/client/catalog-source.ts'
 import { SessionScheduleMark, type SessionScheduleMarkProps } from '../src/client/SessionScheduleMark.tsx'
 import { en } from '../src/client/locales.ts'

@@ -4,10 +4,10 @@ import type { SessionEventLike } from '@berry-ai/harness-api-session-controller/
 import { SessionSeq, type SessionEvent } from '@berry-ai/harness-session/types'
 import {
   ConversationEventRegistry, ConversationNodeAssembler,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type {
   ConversationMatchHandler, ConversationNodeDefinition, ConversationNodeDefinitionInput,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 
 function registry(): ConversationEventRegistry {
   const ctx = new Context()

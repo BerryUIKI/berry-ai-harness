@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-ui-settings-plugin-inventory",
+  "name": "@berry-ai/harness-client-ui-settings-plugin-inventory",
   "description": "Read-only Cordis Loader inventory tab in Web Plugins settings",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -29,10 +29,10 @@
     "client": {
       "inject": [
         "@berry-ai/harness-api-remotes",
-        "@deepseek-ai/dsh-client-ui-settings",
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-agent-preset",
-        "@deepseek-ai/dsh-client-modules"
+        "@berry-ai/harness-client-ui-settings",
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-agent-preset",
+        "@berry-ai/harness-client-modules"
       ],
       "platform": "web"
     }
@@ -47,22 +47,22 @@
   },
   "devDependencies": {
     "@berry-ai/harness-api-remotes": "workspace:*",
-    "@deepseek-ai/dsh-client-locale": "workspace:*",
+    "@berry-ai/harness-client-locale": "workspace:*",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-agent-preset": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-settings": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
+    "@berry-ai/harness-client-ui-agent-preset": "workspace:*",
+    "@berry-ai/harness-client-ui-primitives": "workspace:*",
+    "@berry-ai/harness-client-ui-settings": "workspace:*",
+    "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-package-manifest": "workspace:*",
     "@testing-library/react": "^16.3.3",
     "@types/react": "~18.3.1",
     "@deepseek-ai/cordis": "workspace:~",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@deepseek-ai/dsh-client-ui-renderer": "workspace:*",
+    "@berry-ai/harness-client-ui-renderer": "workspace:*",
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
-    "@deepseek-ai/dsh-client-modules": "workspace:*",
-    "@deepseek-ai/dsh-client-store": "workspace:*"
+    "@berry-ai/harness-client-modules": "workspace:*",
+    "@berry-ai/harness-client-store": "workspace:*"
   },
   "files": [
     "lib/index.js",

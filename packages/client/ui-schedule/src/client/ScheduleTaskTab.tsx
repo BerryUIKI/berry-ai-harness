@@ -17,8 +17,8 @@
  */
 import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
-import { IconClockOutlineRegular } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { HostObservable, InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+import { IconClockOutlineRegular } from '@berry-ai/harness-client-ui-primitives'
+import type { HostObservable, InjectFace, PropsLocale, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
 import type { ScheduleCatalogEntry } from '@berry-ai/harness-schedule/client'
 import type { CatalogSnapshot } from './catalog-source.ts'
 import { CatalogFeedback } from './CatalogFeedback.tsx'

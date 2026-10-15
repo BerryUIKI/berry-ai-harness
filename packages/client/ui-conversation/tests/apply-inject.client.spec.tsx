@@ -1,14 +1,14 @@
 // @vitest-environment jsdom
 import { render, cleanup } from '@testing-library/react'
 import { $getRoot, $isTextNode, PASTE_COMMAND } from 'lexical'
-import { projectUserText } from '@deepseek-ai/dsh-client-ui-primitives'
+import { projectUserText } from '@berry-ai/harness-client-ui-primitives'
 import { registerComposerKeymap } from '../src/client/input/editor/keymap.ts'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import type { CommandContribution, CommandUiContract } from '@deepseek-ai/dsh-client-ui-commands/client'
+import type { CommandContribution, CommandUiContract } from '@berry-ai/harness-client-ui-commands/client'
 import type { ISession, SessionReference } from '@berry-ai/harness-api-session-controller/client'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
 import {
   SlotTestRuntime, stubConfigForm, usePinnedBrowserLanguages,
 } from '@berry-ai/harness-client-test-runtime'
@@ -16,7 +16,7 @@ import type { SessionBehaviorOverrides } from '@berry-ai/harness-client-test-run
 import {
   apply, inject, type ComposerBarInjected, type ConversationInjected,
   type ConversationSessionHeaderInjected, type ConversationSessionInjected, type ViewTab,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import { createConversationStore } from '../src/client/stores.ts'

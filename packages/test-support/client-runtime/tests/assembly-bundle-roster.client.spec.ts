@@ -2,7 +2,7 @@
 import { mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { getStaticModules } from '@deepseek-ai/dsh-client-web/src/seed.ts'
+import { getStaticModules } from '@berry-ai/harness-client-web/src/seed.ts'
 import { afterAll, describe, expect, it, onTestFinished } from 'vitest'
 import { MODULES_PACKAGE } from '../src/assembly/modules.ts'
 import { WEB_PROFILE_BUNDLES, bundleRoster, webApp } from '../src/assembly/bundle-roster.ts'
@@ -21,21 +21,21 @@ describe('webApp (the real web profile)', () => {
     const dangling = webApp.rows.flatMap(row => row.inject.filter(target => !known.has(target)).map(target => `${row.name} -> ${target}`))
     expect(dangling).toEqual([])
     expect(bundleRoster(WEB_PROFILE_BUNDLES, undefined, profileScope('web')).rows).toEqual(webApp.rows)
-    expect(names).not.toContain('@deepseek-ai/dsh-client-ui-sidebar-browser')
+    expect(names).not.toContain('@berry-ai/harness-client-ui-sidebar-browser')
     expect(bundleRoster(WEB_PROFILE_BUNDLES, undefined, profileScope('desktop')).rows.map(row => row.name))
-      .toContain('@deepseek-ai/dsh-client-ui-sidebar-browser')
+      .toContain('@berry-ai/harness-client-ui-sidebar-browser')
   })
 
   it('keeps browser rows with their declarations and drops Host-only, disabled, and subpath rows', () => {
     const immediate = new Set(webApp.rows.filter(row => row.immediately).map(row => row.name))
     expect(immediate.has(MODULES_PACKAGE)).toBe(true)
-    expect(immediate.has('@deepseek-ai/dsh-client-connection')).toBe(true)
+    expect(immediate.has('@berry-ai/harness-client-connection')).toBe(true)
     expect(webApp.rows.find(row => row.name === '@berry-ai/harness-api-gateway')?.inject)
-      .toEqual(['@berry-ai/harness-typert-registry', '@deepseek-ai/dsh-client-connection'])
+      .toEqual(['@berry-ai/harness-typert-registry', '@berry-ai/harness-client-connection'])
     const names = webApp.rows.map(row => row.name)
-    expect(names).toContain('@deepseek-ai/dsh-client-ui-settings-general')
+    expect(names).toContain('@berry-ai/harness-client-ui-settings-general')
     expect(names).not.toContain('@berry-ai/harness-llm') // Host only
-    expect(names).toContain('@deepseek-ai/dsh-client-ui-schedule')
+    expect(names).toContain('@berry-ai/harness-client-ui-schedule')
     expect(names).not.toContain('@berry-ai/harness-web-app') // Host runtime glue, its `/startup` row is a subpath
   })
 })

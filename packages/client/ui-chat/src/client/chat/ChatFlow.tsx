@@ -1,6 +1,6 @@
 /** Ordered Chat rows, local echoes, and running status share the flow slot's parent. */
 import { memo, useCallback } from 'react'
-import type { RenderMessageImages } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import type { RenderMessageImages } from '@berry-ai/harness-client-ui-conversation/client'
 import { assertNever } from '@berry-ai/harness-util-values'
 import type { ChatFlowSlotProps } from '../contract/slots.ts'
 import { ChatNodeSeat } from './ChatNodeSeat.tsx'

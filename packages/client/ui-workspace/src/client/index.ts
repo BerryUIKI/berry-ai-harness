@@ -15,26 +15,26 @@
  * its relative time and its trailing status line. Export discipline:
  * packages/client/AGENTS.md.
  */
-import type {} from '@deepseek-ai/dsh-client-product-analytics/client'
+import type {} from '@berry-ai/harness-client-product-analytics/client'
 import type { Context } from '@deepseek-ai/cordis'
 import type { RemoteHostFacts } from '@berry-ai/harness-api-remotes/client'
 import type { ISessions, SessionForkError } from '@berry-ai/harness-api-session-controller/client'
 import type {
   IWorkspaces, SessionActivity, WorkspaceArchiveError, WorkspaceSnapshot,
 } from '@berry-ai/harness-api-workspace-controller/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { HostObservable, SnapshotSelectorHook } from '@deepseek-ai/dsh-client-ui-slots'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { HostObservable, SnapshotSelectorHook } from '@berry-ai/harness-client-ui-slots'
 import type { SessionId } from '@berry-ai/harness-session/types'
 // Type-only: pulls the Controller service merges.
 import type {} from '@berry-ai/harness-api-session-controller/client'
 import type {} from '@berry-ai/harness-api-workspace-controller/client'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
-import type {} from '@deepseek-ai/dsh-client-locale/client'
+import type {} from '@berry-ai/harness-client-locale/client'
 // Type-only: pulls the SlotRegistry service merge (ctx.slots).
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-layout/client'
 // Type-only: pulls the Session root standard-hook merge.
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
+import type {} from '@berry-ai/harness-client-ui-session/client'
 import {
   type ArchiveSessionInjected, type ForkSessionInjected, menuOpenStateFactory, type PinSessionInjected,
   type SessionArchiveConfirmInjected, type SessionArchiveConfirmRequest,
@@ -64,7 +64,7 @@ export type {
 } from './contract/slots.ts'
 export type { WorkspaceKey } from './locales.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface GlobalStandardProps {
     /** Selector hook over the pure Workspace Controller snapshot. */
     useWorkspaces: SnapshotSelectorHook<WorkspaceSnapshot>

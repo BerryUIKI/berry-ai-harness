@@ -1,11 +1,11 @@
 /** Named references use runtime identity and read the latest materialized values. */
 
 import { expect, it, vi } from 'vitest'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import { ChatSnapshotBuilder } from '@deepseek-ai/dsh-client-ui-chat/src/client/conversation-nodes/chat-snapshot-builder.ts'
-import type { ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
-import { ConversationGroupStore } from '@deepseek-ai/dsh-client-ui-conversation/src/client/conversation/group-store.ts'
-import type { ConversationBinding, ConversationSnapshot, GroupKey, NodeKey } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import { ChatSnapshotBuilder } from '@berry-ai/harness-client-ui-chat/src/client/conversation-nodes/chat-snapshot-builder.ts'
+import type { ChatSnapshot } from '@berry-ai/harness-client-ui-chat/client'
+import { ConversationGroupStore } from '@berry-ai/harness-client-ui-conversation/src/client/conversation/group-store.ts'
+import type { ConversationBinding, ConversationSnapshot, GroupKey, NodeKey } from '@berry-ai/harness-client-ui-conversation/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { ChatNodeModel } from '../src/client/views/chat-node/model.ts'
 import { InspectorObjectValue } from '../src/client/views/object-value.ts'

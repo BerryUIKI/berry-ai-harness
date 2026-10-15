@@ -31,7 +31,7 @@
     "@berry-ai/harness-agent-tool-presentation": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-base": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-agent-preset": "workspace:*",
+    "@berry-ai/harness-client-ui-agent-preset": "workspace:*",
     "@berry-ai/harness-client-ui-cordis": "workspace:*",
     "@berry-ai/harness-cmdline": "workspace:*",
     "@berry-ai/harness-command-compact": "workspace:*",

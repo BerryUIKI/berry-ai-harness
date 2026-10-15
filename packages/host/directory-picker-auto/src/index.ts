@@ -16,7 +16,7 @@ import type { Context } from '@deepseek-ai/cordis'
 // Empty type imports carry the `connection`, `loader`, and `webServer` Context
 // merges for the reads below.
 import type {} from '@deepseek-ai/cordis-plugin-loader'
-import type {} from '@deepseek-ai/dsh-client-connection'
+import type {} from '@berry-ai/harness-client-connection'
 import type {} from '@berry-ai/harness-host-webserver'
 import { launchedThroughSsh, launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
 import { canExecute, hasLinuxChooserBinary } from './probe.ts'
@@ -55,8 +55,8 @@ export const BACKEND_PACKAGES: Record<DirectoryPickerBackendKind, string> = {
  * program, so no import of them exists on this side.
  */
 export const SURFACE_PACKAGES: Record<DirectoryPickerBackendKind, string> = {
-  native: '@deepseek-ai/dsh-client-ui-directory-picker-native',
-  browse: '@deepseek-ai/dsh-client-ui-directory-picker-browse',
+  native: '@berry-ai/harness-client-ui-directory-picker-native',
+  browse: '@berry-ai/harness-client-ui-directory-picker-browse',
 }
 
 /**

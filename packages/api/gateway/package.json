@@ -37,7 +37,7 @@
     "client": {
       "inject": [
         "@berry-ai/harness-typert-registry",
-        "@deepseek-ai/dsh-client-connection"
+        "@berry-ai/harness-client-connection"
       ],
       "platform": "web",
       "immediately": true
@@ -63,12 +63,12 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-client-connection": "workspace:*"
+    "@berry-ai/harness-client-connection": "workspace:*"
   },
   "devDependencies": {
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-cmdline": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
     "@berry-ai/harness-host-webserver": "workspace:*",
     "@berry-ai/harness-remote-mock": "workspace:*",
     "@berry-ai/harness-typert-registry": "workspace:*",

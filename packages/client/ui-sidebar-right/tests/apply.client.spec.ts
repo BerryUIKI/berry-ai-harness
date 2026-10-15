@@ -10,10 +10,10 @@
  */
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { Shortcuts, ShortcutCommand } from '@deepseek-ai/dsh-client-shortcuts/client'
+import type { Shortcuts, ShortcutCommand } from '@berry-ai/harness-client-shortcuts/client'
 import { apply, inject } from '../src/client/index.ts'
 import type { GuideInjected, SidebarRightInjected } from '../src/client/index.ts'
 import { apply as hostApply } from '../src/index.ts'

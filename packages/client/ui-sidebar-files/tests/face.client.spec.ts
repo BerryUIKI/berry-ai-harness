@@ -9,7 +9,7 @@ import { createFilesStore } from '../src/client/store.ts'
 import type { DirLevel } from '../src/client/store.ts'
 import { DirectoryNode } from '../src/client/directory-node.ts'
 import { scriptedList } from './scripted-list.client.ts'
-import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
+import type { TabId } from '@berry-ai/harness-client-ui-dockkit'
 
 const SESSION = 's-1' as SessionId
 const ROOT = '/work/app'

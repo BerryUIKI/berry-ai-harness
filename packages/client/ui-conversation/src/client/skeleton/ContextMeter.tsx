@@ -9,7 +9,7 @@ import { createPortal } from 'react-dom'
 import type { UseProjection } from '@berry-ai/harness-api-session-controller/client'
 // Type-only: the `contextPressure` / `contextBreakdown` projection key merges.
 import type {} from '@berry-ai/harness-token-meter/client'
-import { Tooltip, useAnchoredPosition, useDismissOnOutsidePointer } from '@deepseek-ai/dsh-client-ui-primitives'
+import { Tooltip, useAnchoredPosition, useDismissOnOutsidePointer } from '@berry-ai/harness-client-ui-primitives'
 import type { ComposerBarProps } from '../contract/slots.ts'
 import { contextOccupancy } from '../context-occupancy.ts'
 import css from './ContextMeter.module.css'

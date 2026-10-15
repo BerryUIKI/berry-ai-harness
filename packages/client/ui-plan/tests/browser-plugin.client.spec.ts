@@ -5,14 +5,14 @@
  * outcomes into null (admitted) or a user-visible failure line; teardown
  * empties the seat (HMR safety).
  */
-import { ConversationEventRegistry } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import { ConversationEventRegistry } from '@berry-ai/harness-client-ui-conversation/client'
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { ChatSnapshot } from '@berry-ai/harness-client-ui-chat/client'
 import { EMPTY_CHAT_SNAPSHOT } from '../../ui-chat/src/client/contract/snapshot.ts'
 import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import { PlanChip } from '../src/client/PlanModeControl.tsx'
@@ -22,9 +22,9 @@ import { submittedPlan } from '../src/client/plan.ts'
 import type { PlanChipInjected } from '../src/client/index.ts'
 import { apply, inject } from '../src/client/index.ts'
 import { apply as nodeApply } from '../src/index.ts'
-import { createSidebarRightController } from '@deepseek-ai/dsh-client-ui-sidebar-right/src/client/service.ts'
-import { SidebarRightTabRegistry } from '@deepseek-ai/dsh-client-ui-sidebar-right/src/client/tab-registry.ts'
-import { createSidebarRightStore } from '@deepseek-ai/dsh-client-ui-sidebar-right/src/client/stores.ts'
+import { createSidebarRightController } from '@berry-ai/harness-client-ui-sidebar-right/src/client/service.ts'
+import { SidebarRightTabRegistry } from '@berry-ai/harness-client-ui-sidebar-right/src/client/tab-registry.ts'
+import { createSidebarRightStore } from '@berry-ai/harness-client-ui-sidebar-right/src/client/stores.ts'
 
 function providePreview(ctx: Context) {
   const events = new ConversationEventRegistry(ctx)

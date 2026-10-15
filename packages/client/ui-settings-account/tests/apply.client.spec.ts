@@ -7,9 +7,9 @@ import { createClientTest, type TestClient, webApp } from '@berry-ai/harness-cli
 import type {
   AccountBonusBatch, AccountBonusOrderId, AccountDetails, AccountUserId, AccountView, SignInAttemptId,
 } from '@berry-ai/harness-deepseek-account/types'
-import type { QuotaNoticeOwnerProps } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { ThemeRuntime } from '@deepseek-ai/dsh-client-ui-theme/client'
-import { resolveSlotLabel } from '@deepseek-ai/dsh-client-ui-slots'
+import type { QuotaNoticeOwnerProps } from '@berry-ai/harness-client-ui-chat/client'
+import type { ThemeRuntime } from '@berry-ai/harness-client-ui-theme/client'
+import { resolveSlotLabel } from '@berry-ai/harness-client-ui-slots'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import { Config as OnboardingConfig } from '../src/index.ts'
 import { ChatSettingsSchema as ChatConfig } from '../../ui-chat/src/chat-settings.ts'
@@ -23,7 +23,7 @@ import { AccountQuotaNotice } from '../src/client/AccountQuotaNotice.tsx'
 import type { AccountQuotaNoticeInjected } from '../src/client/AccountQuotaNotice.tsx'
 
 const it = createClientTest({ roster: webApp })
-const SELF = '@deepseek-ai/dsh-client-ui-settings-account'
+const SELF = '@berry-ai/harness-client-ui-settings-account'
 const view: AccountView = {
   status: 'signed-out', attempt: null,
   links: { usageUrl: 'https://platform.deepseek.com/usage', topUpUrl: 'https://platform.deepseek.com/top_up' },

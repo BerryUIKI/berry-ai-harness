@@ -14,7 +14,7 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import * as Connection from '@deepseek-ai/dsh-client-connection'
+import * as Connection from '@berry-ai/harness-client-connection'
 import LocalCredentials from '@berry-ai/harness-credentials-local'
 import HttpServer from '@berry-ai/harness-host-webserver'
 import * as FrontendStatic from '../src/index.ts'
@@ -50,7 +50,7 @@ async function loadComposition(): Promise<Context> {
     '  config:',
     "    host: '127.0.0.1'",
     '    port: 0',
-    "- name: '@deepseek-ai/dsh-client-connection'",
+    "- name: '@berry-ai/harness-client-connection'",
     '- id: frontend',
     "  name: '@berry-ai/harness-host-frontend-static'",
     '  config:',
@@ -65,7 +65,7 @@ async function loadComposition(): Promise<Context> {
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-credentials-local', LocalCredentials],
     ['@berry-ai/harness-host-webserver', HttpServer],
-    ['@deepseek-ai/dsh-client-connection', Connection],
+    ['@berry-ai/harness-client-connection', Connection],
     ['@berry-ai/harness-host-frontend-static', FrontendStatic],
   ])
   context.loader.internal = {

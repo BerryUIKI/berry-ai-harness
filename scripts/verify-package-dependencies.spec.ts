@@ -194,16 +194,16 @@ describe('package dependency scope', () => {
       '@berry-ai/harness-api-terminal-controller': ['@berry-ai/harness-subprocess'],
     })
     expect(PACKAGE_DEPENDENCY_POLICY.configurationOnlyDevDependencies).toEqual({
-      '@deepseek-ai/dsh-client-locale': ['@berry-ai/harness-api-remotes'],
-      '@deepseek-ai/dsh-client-ui-conversation': [
+      '@berry-ai/harness-client-locale': ['@berry-ai/harness-api-remotes'],
+      '@berry-ai/harness-client-ui-conversation': [
         '@berry-ai/harness-api-remotes',
-        '@deepseek-ai/dsh-client-ui-workspace',
+        '@berry-ai/harness-client-ui-workspace',
       ],
-      '@deepseek-ai/dsh-client-ui-model-selection': ['@deepseek-ai/dsh-client-ui-input-trigger'],
-      '@deepseek-ai/dsh-client-ui-sidebar': ['@deepseek-ai/dsh-client-ui-workspace'],
-      '@deepseek-ai/dsh-client-ui-subagent': ['@deepseek-ai/dsh-client-ui-input-trigger'],
-      '@deepseek-ai/dsh-client-ui-theme': ['@berry-ai/harness-api-remotes'],
-      '@deepseek-ai/dsh-client-ui-tool': ['@berry-ai/harness-api-remotes'],
+      '@berry-ai/harness-client-ui-model-selection': ['@berry-ai/harness-client-ui-input-trigger'],
+      '@berry-ai/harness-client-ui-sidebar': ['@berry-ai/harness-client-ui-workspace'],
+      '@berry-ai/harness-client-ui-subagent': ['@berry-ai/harness-client-ui-input-trigger'],
+      '@berry-ai/harness-client-ui-theme': ['@berry-ai/harness-api-remotes'],
+      '@berry-ai/harness-client-ui-tool': ['@berry-ai/harness-api-remotes'],
     })
     expect(PACKAGE_DEPENDENCY_POLICY.duplicateSafePackages).toEqual([
       '@berry-ai/harness-brand',
@@ -786,7 +786,7 @@ describe('dependency sections', () => {
 
   it('does not leak repository configuration into captured dependency facts', () => {
     const manifest: PackageDependencyManifest = {
-      name: '@deepseek-ai/dsh-client-locale',
+      name: '@berry-ai/harness-client-locale',
       dependencies: { '@deepseek-ai/dsh-runtime': 'workspace:*' },
       devDependencies: { [CORDIS]: 'workspace:~', '@deepseek-ai/dsh-types': 'workspace:*' },
       peerDependencies: { [CORDIS]: 'workspace:~' },

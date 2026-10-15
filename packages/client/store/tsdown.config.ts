@@ -1,6 +1,6 @@
 import { staticLinked } from '../tsdown.client.ts'
 
 export default staticLinked(
-  '@deepseek-ai/dsh-client-store',
+  '@berry-ai/harness-client-store',
   ['lib/types/index.js'],
 )

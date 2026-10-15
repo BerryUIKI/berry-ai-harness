@@ -1,7 +1,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   CommandNode, CompactionSummaryNode, ConversationMatch, ConversationNodeContext, ConversationNodeDefinition,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type { CompactionCheckpointSource } from '@berry-ai/harness-compaction/checkpoint'
 import type {} from '@berry-ai/harness-compaction/types'
 import type {} from '@berry-ai/harness-commands/types'

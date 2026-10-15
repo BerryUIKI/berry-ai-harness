@@ -8,10 +8,10 @@ import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import {
   IconChevronDownOutlineRegular, IconChevronRightOutlineRegular, IconRefreshOutlineRegular, StateDot, Tooltip,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { PropsLocale, PropsRuntime, TranslateNS } from '@deepseek-ai/dsh-client-ui-slots'
+} from '@berry-ai/harness-client-ui-primitives'
+import type { PropsLocale, PropsRuntime, TranslateNS } from '@berry-ai/harness-client-ui-slots'
 import { NS } from './locales.ts'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
 import type {} from '@berry-ai/harness-token-meter/client'
 import css from './SubagentHeaderLineage.module.css'
 

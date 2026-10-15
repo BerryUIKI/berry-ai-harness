@@ -3,7 +3,7 @@
 import type { ContentBlock, StreamChunk } from '@berry-ai/harness-llm/types'
 import type {
   AssistantBlock, ContextProducerView, KnownContextForm,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 
 /* jscpd:ignore-start -- Chat and Trajectory own independent event-to-view projections. */
 

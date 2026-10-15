@@ -2,7 +2,7 @@
 import { afterEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { RemoteError } from '@berry-ai/harness-client-test-runtime'
-import type { OwnerOf } from '@deepseek-ai/dsh-client-ui-slots'
+import type { OwnerOf } from '@berry-ai/harness-client-ui-slots'
 import { TextPreview } from '../src/client/TextPreview.tsx'
 import type { TextPreviewProps } from '../src/client/TextPreview.tsx'
 import type { DocumentPreviewDefinition } from '../src/client/document/registry.ts'

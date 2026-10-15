@@ -21,12 +21,12 @@ import type {
 } from '@berry-ai/harness-api-session-controller/types'
 import { historyEntries } from '@berry-ai/harness-api-session-controller/src/client/sessions/history-records.ts'
 import type { SessionEventLikeEntry } from '@berry-ai/harness-api-session-controller/client'
-import { ConversationNodeAssembler } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import { ConversationNodeAssembler } from '@berry-ai/harness-client-ui-conversation/client'
 import type {
   ConversationNodeDefinition,
   ConversationViewDefinition,
   ConversationViewNode,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 
 const LOGICAL_ITEMS = 416_756
 const STREAM_MEMBERS = 416_176

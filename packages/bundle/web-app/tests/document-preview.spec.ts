@@ -9,7 +9,7 @@ import Include, { applyEntryPatches } from '@deepseek-ai/cordis-plugin-include'
 import { loadOverlayPatches } from '@berry-ai/harness-app-boot'
 import WorkspaceFiles, { type WorkspaceFileScope } from '@berry-ai/harness-api-workspace-files'
 import OfficeToPdf from '@berry-ai/harness-office-to-pdf'
-import * as DocumentPreview from '@deepseek-ai/dsh-client-ui-sidebar-documentpreview'
+import * as DocumentPreview from '@berry-ai/harness-client-ui-sidebar-documentpreview'
 import type { IndexInjection } from '@berry-ai/harness-host-webserver'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
@@ -33,7 +33,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
   const configPath = join(directory, 'cordis.yml')
   const expectedRows = {
     'office-to-pdf': '@berry-ai/harness-office-to-pdf',
-    'ui-sidebar-documentpreview': '@deepseek-ai/dsh-client-ui-sidebar-documentpreview',
+    'ui-sidebar-documentpreview': '@berry-ai/harness-client-ui-sidebar-documentpreview',
   }
   const rows = loadOverlayPatches('web-office-test', fileURLToPath(new URL('../cordis.patch.yml', import.meta.url)))
     .flatMap(patch => patch.insert ?? []).filter(row => row.id !== undefined && Object.hasOwn(expectedRows, row.id))
@@ -78,7 +78,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
     ['@berry-ai/harness-typert-registry', TypertRegistry],
     ['@berry-ai/harness-api-workspace-files', WorkspaceFiles],
     ['@berry-ai/harness-office-to-pdf', OfficeToPdf],
-    ['@deepseek-ai/dsh-client-ui-sidebar-documentpreview', DocumentPreview],
+    ['@berry-ai/harness-client-ui-sidebar-documentpreview', DocumentPreview],
   ])
   ctx.loader.internal = {
     version: 'v2',

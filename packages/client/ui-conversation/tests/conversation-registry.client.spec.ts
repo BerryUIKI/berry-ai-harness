@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { SessionSeq } from '@berry-ai/harness-session/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { createAssistantMessage, LlmAttemptId } from '@berry-ai/harness-llm'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import {
   createScope, MutableSessionEventSource,
 } from '@berry-ai/harness-api-session-controller/client'
@@ -12,10 +12,10 @@ import type {
 } from '@berry-ai/harness-api-session-controller/client'
 import {
   ConversationEventRegistry, ConversationNodeAssembler, ConversationViewRegistry, UiConversation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type {
   ConversationNodeDefinition, ConversationViewDefinition, ConversationViewNode,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 
 const SESSION_ID = 'resident' as SessionId
 

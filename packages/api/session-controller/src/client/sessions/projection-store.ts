@@ -14,7 +14,7 @@
  */
 import type { SessionProjectionMap } from '@berry-ai/harness-session-projection/types'
 import type { SessionSeqCursor } from '@berry-ai/harness-session/types'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
 import { Notifier } from './notifier.ts'
 
 // The single projection type table, typed end to end (host unit, wire block,

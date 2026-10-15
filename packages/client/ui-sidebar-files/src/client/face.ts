@@ -19,8 +19,8 @@
  * so no later settlement writes to it.
  */
 import type { ClientRemote, RemoteResult } from '@berry-ai/harness-api-remotes/client'
-import type { BoundActions } from '@deepseek-ai/dsh-client-store'
-import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
+import type { BoundActions } from '@berry-ai/harness-client-store'
+import type { TabId } from '@berry-ai/harness-client-ui-dockkit'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { DirLevel, createFilesStore } from './store.ts'
 import type { WorkspaceFileWatchFrame } from '@berry-ai/harness-api-workspace-files/types'
