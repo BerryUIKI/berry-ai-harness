@@ -170,7 +170,7 @@ describe.skipIf(!requiredArtifacts)('Goal Remote built LIB chain', () => {
         const client = new Context()
         for (const id of [
           '@berry-ai/harness-typert-registry',
-          '@deepseek-ai/dsh-client-connection',
+          '@berry-ai/harness-client-connection',
           '@berry-ai/harness-api-gateway',
           '@berry-ai/harness-api-remotes',
         ]) {

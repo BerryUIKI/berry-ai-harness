@@ -6,7 +6,7 @@
  * @module @berry-ai/harness-api-job-controller/client/model
  */
 
-import { notifySubscribers } from '@deepseek-ai/dsh-client-store'
+import { notifySubscribers } from '@berry-ai/harness-client-store'
 import type { JobId } from '@berry-ai/harness-jobs/brand'
 import type { JobView } from '@berry-ai/harness-jobs/view'
 import type { SessionId } from '@berry-ai/harness-session/types'

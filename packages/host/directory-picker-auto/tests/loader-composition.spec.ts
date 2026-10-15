@@ -53,8 +53,8 @@ vi.mock('node:fs/promises', async (importOriginal) => {
 const AUTO = '@berry-ai/harness-host-directory-picker-auto'
 const NATIVE = '@berry-ai/harness-host-directory-picker-native'
 const BROWSE = '@berry-ai/harness-host-directory-picker-browse'
-const NATIVE_SURFACE = '@deepseek-ai/dsh-client-ui-directory-picker-native'
-const BROWSE_SURFACE = '@deepseek-ai/dsh-client-ui-directory-picker-browse'
+const NATIVE_SURFACE = '@berry-ai/harness-client-ui-directory-picker-native'
+const BROWSE_SURFACE = '@berry-ai/harness-client-ui-directory-picker-browse'
 
 /**
  * This machine's first non-internal IPv4 address that really accepts a listen.

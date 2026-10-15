@@ -1,6 +1,6 @@
 /** Builtin image metadata and keyed document-body registration. */
 import type { Context } from '@deepseek-ai/cordis'
-import type { BoundActions } from '@deepseek-ai/dsh-client-store'
+import type { BoundActions } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {} from '../index.ts'
 import type { DocumentPreviewDefinition } from '../document/registry.ts'
@@ -10,7 +10,7 @@ import { ImageBody } from './ImageBody.tsx'
 import { en, zh } from './locales.ts'
 
 /** Image implementation identity, shared by metadata and the keyed slot. */
-export const IMAGE_BODY_ID = '@deepseek-ai/dsh-client-ui-sidebar-documentpreview/image'
+export const IMAGE_BODY_ID = '@berry-ai/harness-client-ui-sidebar-documentpreview/image'
 
 /** File suffixes rendered by the builtin image body. */
 export const IMAGE_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif', 'webp', 'bmp', 'ico', 'svg'] as const

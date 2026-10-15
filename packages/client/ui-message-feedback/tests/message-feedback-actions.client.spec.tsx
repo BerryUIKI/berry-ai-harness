@@ -10,7 +10,7 @@ import { useSyncExternalStore } from 'react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, fireEvent, render, waitFor } from '@testing-library/react'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import type { MessageId } from '@berry-ai/harness-api-remotes/client'
 import type {
   MessageFeedbackItem, MessageFeedbackRating, MessageFeedbackVersion,

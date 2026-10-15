@@ -28,10 +28,10 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-client-ui-renderer",
+        "@berry-ai/harness-client-ui-renderer",
         "@berry-ai/harness-api-remotes",
-        "@deepseek-ai/dsh-client-modules",
-        "@deepseek-ai/dsh-client-ui-theme"
+        "@berry-ai/harness-client-modules",
+        "@berry-ai/harness-client-ui-theme"
       ],
       "platform": "web"
     }
@@ -47,9 +47,9 @@
   "devDependencies": {
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-api-remotes": "workspace:*",
-    "@deepseek-ai/dsh-client-modules": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-renderer": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-theme": "workspace:*",
+    "@berry-ai/harness-client-modules": "workspace:*",
+    "@berry-ai/harness-client-ui-renderer": "workspace:*",
+    "@berry-ai/harness-client-ui-theme": "workspace:*",
     "@types/react": "~18.3.1",
     "@deepseek-ai/cordis": "workspace:~",
     "react": "^18.2.0",

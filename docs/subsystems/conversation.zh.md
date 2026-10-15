@@ -82,8 +82,8 @@ import type { Branded } from '@berry-ai/harness-brand'
 import type {
   ConversationLocation, ConversationNodeContext,
   ConversationNodeDefinition,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { ChatNodeViewProps } from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
+import type { ChatNodeViewProps } from '@berry-ai/harness-client-ui-chat/client'
 
 type ReviewId = Branded<'ReviewId'>
 
@@ -138,13 +138,13 @@ interface ReviewChatData {
   readonly summary?: string
 }
 
-declare module '@deepseek-ai/dsh-client-ui-chat/client' {
+declare module '@berry-ai/harness-client-ui-chat/client' {
   interface ChatNodeDataMap {
     'review-job': ReviewChatData
   }
 }
 
-declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
+declare module '@berry-ai/harness-client-ui-conversation/client' {
   interface ConversationStepDataMap {
     'review-job': ReviewChatData
   }

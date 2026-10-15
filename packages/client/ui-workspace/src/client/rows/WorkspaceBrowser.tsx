@@ -22,14 +22,14 @@ import {
   IconFlatListOutlineRegular, IconFolderCloseRegular, IconProjectAddOutlineRegular,
   IconQueueOutlineRegular, IconSearchOutlineRegular, IconSlidersTwoOutlineRegular,
   IconWorkspaceTreeOutlineRegular, Menu, Modal, Toast, Tooltip,
-} from '@deepseek-ai/dsh-client-ui-primitives'
+} from '@berry-ai/harness-client-ui-primitives'
 import type {
   SessionListState, SessionSearchResultItem,
 } from '@berry-ai/harness-api-session-controller/client'
 import type { WorkspaceId, WorkspaceView } from '@berry-ai/harness-api-workspace-controller/client'
 import { workspaceDisplayTitle } from '@berry-ai/harness-api-workspace-controller/default-workspace'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
+import type { PropsRenderSlots } from '@berry-ai/harness-client-ui-slots'
 import type { WorkspaceBrowserProps } from '../contract/slots.ts'
 import type { ArchivedFilter, GroupNode, SessionNode, SessionOrderBy, SessionRowState } from '../tree.ts'
 import {
@@ -224,7 +224,7 @@ type SessionTreeProps = Pick<
   | 'sidebar.session.row.leading'
   | 'sidebar.session.row.hover'
 > & {
-  shortcuts: readonly import('@deepseek-ai/dsh-client-shortcuts/client').ShortcutCatalogEntry[]
+  shortcuts: readonly import('@berry-ai/harness-client-shortcuts/client').ShortcutCatalogEntry[]
   /** Always-mounted Session list snapshot. */
   list: SessionListState
   /** Host account home for POSIX hover-path abbreviation. */

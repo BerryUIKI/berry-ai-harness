@@ -1,37 +1,37 @@
 // @vitest-environment jsdom
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { act, fireEvent, render } from '@testing-library/react'
 import { useRef } from 'react'
 import {
   SlotTestRuntime, stubConfigForm, usePinnedBrowserLanguages,
 } from '@berry-ai/harness-client-test-runtime'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { resolveSlotLabel } from '@deepseek-ai/dsh-client-ui-slots'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import { resolveSlotLabel } from '@berry-ai/harness-client-ui-slots'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
 import type { SessionBinding } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import {
   apply as applyConversation, inject as injectConversation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type {
   ConversationLocationDataSource, ConversationLocationDataStore, ConversationTurnDataMap,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import {
   apply as applyChat, EMPTY_CHAT_SNAPSHOT, inject as injectChat,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-chat/client'
 import type {
   ChatFlowInjected, ChatNodeInjected, ChatSnapshot, TranscriptViewRowInjected, UseChatNodeTurnData, UseDisclosure,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { QuotaNoticeInjected } from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-chat/client'
+import type { QuotaNoticeInjected } from '@berry-ai/harness-client-ui-chat/client'
 import type { PerformanceUsageRowInjected } from '../src/client/settings/PerformanceUsageRow.tsx'
 import { CHAT_SETTINGS_NAMESPACE, type ChatSettings } from '../src/chat-settings.ts'
 import { ActivityPill, UsagePill } from '../src/client/chat/StatsPills.tsx'
 import { createFlowMotion } from '../src/client/chat/flow-motion.ts'
 import { CHAT_FLOW_INJECT, CHAT_NODE_INJECT } from '../src/client/apply.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
+declare module '@berry-ai/harness-client-ui-conversation/client' {
   interface ConversationTurnDataMap {
     metric: number
   }

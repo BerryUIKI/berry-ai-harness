@@ -391,7 +391,7 @@ importers:
       '@berry-ai/harness-base':
         specifier: workspace:*
         version: link:../../packages/bundle/base
-      '@deepseek-ai/dsh-client-ui-agent-preset':
+      '@berry-ai/harness-client-ui-agent-preset':
         specifier: workspace:*
         version: link:../../packages/client/ui-agent-preset
       '@berry-ai/harness-client-ui-cordis':
@@ -675,22 +675,22 @@ importers:
       '@berry-ai/harness-home-paths':
         specifier: workspace:*
         version: link:../../packages/util/home-paths
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../../packages/client/product-analytics
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../../packages/client/shortcuts
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../../packages/client/ui-primitives
-      '@deepseek-ai/dsh-client-ui-settings-general':
+      '@berry-ai/harness-client-ui-settings-general':
         specifier: workspace:*
         version: link:../../packages/client/ui-settings-general
-      '@deepseek-ai/dsh-client-ui-sidebar-browser':
+      '@berry-ai/harness-client-ui-sidebar-browser':
         specifier: workspace:*
         version: link:../../packages/client/ui-sidebar-browser
-      '@deepseek-ai/dsh-client-ui-theme':
+      '@berry-ai/harness-client-ui-theme':
         specifier: workspace:*
         version: link:../../packages/client/ui-theme
       '@deepseek-ai/node-addon-system':
@@ -795,7 +795,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../packages/core/agent
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../packages/client/connection
       '@berry-ai/harness-host-webserver':
@@ -841,31 +841,31 @@ importers:
       '@deepseek-ai/cordis-plugin-group':
         specifier: workspace:~
         version: link:../../vendor/group
-      '@deepseek-ai/dsh-client-modules':
+      '@berry-ai/harness-client-modules':
         specifier: workspace:*
         version: link:../../packages/client/modules
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../packages/client/store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../packages/test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-deliverables':
+      '@berry-ai/harness-client-ui-deliverables':
         specifier: workspace:*
         version: link:../../packages/client/ui-deliverables
-      '@deepseek-ai/dsh-client-ui-dockkit':
+      '@berry-ai/harness-client-ui-dockkit':
         specifier: workspace:*
         version: link:../../packages/client/ui-dockkit
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../../packages/client/ui-primitives
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../packages/client/ui-slots
-      '@deepseek-ai/dsh-client-ui-theme':
+      '@berry-ai/harness-client-ui-theme':
         specifier: workspace:*
         version: link:../../packages/client/ui-theme
-      '@deepseek-ai/dsh-client-web':
+      '@berry-ai/harness-client-web':
         specifier: workspace:*
         version: link:../../packages/client/web
       '@berry-ai/harness-experimental-agent-team':
@@ -991,10 +991,10 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../packages/api/session-controller
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../packages/client/store
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../packages/client/ui-chat
       '@berry-ai/harness-llm':
@@ -1212,7 +1212,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
       '@berry-ai/harness-host-webserver':
@@ -1258,10 +1258,10 @@ importers:
       '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
       '@berry-ai/harness-session':
@@ -1358,16 +1358,16 @@ importers:
       '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../workspace-files
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-file-upload':
+      '@berry-ai/harness-client-file-upload':
         specifier: workspace:*
         version: link:../../client/file-upload
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../../client/product-analytics
-      '@deepseek-ai/dsh-client-ui-plugin-manager':
+      '@berry-ai/harness-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../../client/ui-plugin-manager
       '@berry-ai/harness-cordis-host-runner':
@@ -1485,13 +1485,13 @@ importers:
       '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-file-upload':
+      '@berry-ai/harness-client-file-upload':
         specifier: workspace:*
         version: link:../../client/file-upload
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
       '@berry-ai/harness-client-test-runtime':
@@ -1628,7 +1628,7 @@ importers:
       '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
       '@berry-ai/harness-remote-mock':
@@ -1671,10 +1671,10 @@ importers:
       '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
       '@berry-ai/harness-client-test-runtime':
@@ -1723,13 +1723,13 @@ importers:
       '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-resources':
+      '@berry-ai/harness-client-resources':
         specifier: workspace:*
         version: link:../../client/resources
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
       '@berry-ai/harness-remote-mock':
@@ -2639,181 +2639,181 @@ importers:
       '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-file-upload':
+      '@berry-ai/harness-client-file-upload':
         specifier: workspace:*
         version: link:../../client/file-upload
-      '@deepseek-ai/dsh-client-hmr':
+      '@berry-ai/harness-client-hmr':
         specifier: workspace:*
         version: link:../../client/hmr
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
-      '@deepseek-ai/dsh-client-modules':
+      '@berry-ai/harness-client-modules':
         specifier: workspace:*
         version: link:../../client/modules
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../../client/product-analytics
-      '@deepseek-ai/dsh-client-resources':
+      '@berry-ai/harness-client-resources':
         specifier: workspace:*
         version: link:../../client/resources
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../../client/shortcuts
-      '@deepseek-ai/dsh-client-ui-agent-preset':
+      '@berry-ai/harness-client-ui-agent-preset':
         specifier: workspace:*
         version: link:../../client/ui-agent-preset
-      '@deepseek-ai/dsh-client-ui-approval':
+      '@berry-ai/harness-client-ui-approval':
         specifier: workspace:*
         version: link:../../client/ui-approval
-      '@deepseek-ai/dsh-client-ui-attachment':
+      '@berry-ai/harness-client-ui-attachment':
         specifier: workspace:*
         version: link:../../client/ui-attachment
-      '@deepseek-ai/dsh-client-ui-brand-official':
+      '@berry-ai/harness-client-ui-brand-official':
         specifier: workspace:*
         version: link:../../client/ui-brand-official
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../../client/ui-chat
-      '@deepseek-ai/dsh-client-ui-commands':
+      '@berry-ai/harness-client-ui-commands':
         specifier: workspace:*
         version: link:../../client/ui-commands
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../../client/ui-conversation
       '@berry-ai/harness-client-ui-cordis':
         specifier: workspace:*
         version: link:../../extensions/ui-cordis
-      '@deepseek-ai/dsh-client-ui-deliverables':
+      '@berry-ai/harness-client-ui-deliverables':
         specifier: workspace:*
         version: link:../../client/ui-deliverables
-      '@deepseek-ai/dsh-client-ui-directory-picker-browse':
+      '@berry-ai/harness-client-ui-directory-picker-browse':
         specifier: workspace:*
         version: link:../../client/ui-directory-picker-browse
-      '@deepseek-ai/dsh-client-ui-directory-picker-native':
+      '@berry-ai/harness-client-ui-directory-picker-native':
         specifier: workspace:*
         version: link:../../client/ui-directory-picker-native
-      '@deepseek-ai/dsh-client-ui-goal':
+      '@berry-ai/harness-client-ui-goal':
         specifier: workspace:*
         version: link:../../client/ui-goal
-      '@deepseek-ai/dsh-client-ui-input-trigger':
+      '@berry-ai/harness-client-ui-input-trigger':
         specifier: workspace:*
         version: link:../../client/ui-input-trigger
-      '@deepseek-ai/dsh-client-ui-jobs':
+      '@berry-ai/harness-client-ui-jobs':
         specifier: workspace:*
         version: link:../../client/ui-jobs
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../../client/ui-layout
-      '@deepseek-ai/dsh-client-ui-message-feedback':
+      '@berry-ai/harness-client-ui-message-feedback':
         specifier: workspace:*
         version: link:../../client/ui-message-feedback
-      '@deepseek-ai/dsh-client-ui-model-selection':
+      '@berry-ai/harness-client-ui-model-selection':
         specifier: workspace:*
         version: link:../../client/ui-model-selection
-      '@deepseek-ai/dsh-client-ui-open-in-app':
+      '@berry-ai/harness-client-ui-open-in-app':
         specifier: workspace:*
         version: link:../../client/ui-open-in-app
-      '@deepseek-ai/dsh-client-ui-permission-presets':
+      '@berry-ai/harness-client-ui-permission-presets':
         specifier: workspace:*
         version: link:../../client/ui-permission-presets
-      '@deepseek-ai/dsh-client-ui-plan':
+      '@berry-ai/harness-client-ui-plan':
         specifier: workspace:*
         version: link:../../client/ui-plan
-      '@deepseek-ai/dsh-client-ui-plugin-manager':
+      '@berry-ai/harness-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../../client/ui-plugin-manager
-      '@deepseek-ai/dsh-client-ui-reference':
+      '@berry-ai/harness-client-ui-reference':
         specifier: workspace:*
         version: link:../../client/ui-reference
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-schedule':
+      '@berry-ai/harness-client-ui-schedule':
         specifier: workspace:*
         version: link:../../client/ui-schedule
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../../client/ui-session
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../../client/ui-settings
-      '@deepseek-ai/dsh-client-ui-settings-account':
+      '@berry-ai/harness-client-ui-settings-account':
         specifier: workspace:*
         version: link:../../client/ui-settings-account
-      '@deepseek-ai/dsh-client-ui-settings-agent-loop':
+      '@berry-ai/harness-client-ui-settings-agent-loop':
         specifier: workspace:*
         version: link:../../client/ui-settings-agent-loop
-      '@deepseek-ai/dsh-client-ui-settings-general':
+      '@berry-ai/harness-client-ui-settings-general':
         specifier: workspace:*
         version: link:../../client/ui-settings-general
-      '@deepseek-ai/dsh-client-ui-settings-models':
+      '@berry-ai/harness-client-ui-settings-models':
         specifier: workspace:*
         version: link:../../client/ui-settings-models
-      '@deepseek-ai/dsh-client-ui-settings-plugin-inventory':
+      '@berry-ai/harness-client-ui-settings-plugin-inventory':
         specifier: workspace:*
         version: link:../../client/ui-settings-plugin-inventory
-      '@deepseek-ai/dsh-client-ui-settings-plugins':
+      '@berry-ai/harness-client-ui-settings-plugins':
         specifier: workspace:*
         version: link:../../client/ui-settings-plugins
-      '@deepseek-ai/dsh-client-ui-settings-session-log':
+      '@berry-ai/harness-client-ui-settings-session-log':
         specifier: workspace:*
         version: link:../../client/ui-settings-session-log
-      '@deepseek-ai/dsh-client-ui-settings-shell':
+      '@berry-ai/harness-client-ui-settings-shell':
         specifier: workspace:*
         version: link:../../client/ui-settings-shell
-      '@deepseek-ai/dsh-client-ui-settings-subagent':
+      '@berry-ai/harness-client-ui-settings-subagent':
         specifier: workspace:*
         version: link:../../client/ui-settings-subagent
-      '@deepseek-ai/dsh-client-ui-settings-web-search':
+      '@berry-ai/harness-client-ui-settings-web-search':
         specifier: workspace:*
         version: link:../../client/ui-settings-web-search
-      '@deepseek-ai/dsh-client-ui-shortcuts':
+      '@berry-ai/harness-client-ui-shortcuts':
         specifier: workspace:*
         version: link:../../client/ui-shortcuts
-      '@deepseek-ai/dsh-client-ui-sidebar':
+      '@berry-ai/harness-client-ui-sidebar':
         specifier: workspace:*
         version: link:../../client/ui-sidebar
-      '@deepseek-ai/dsh-client-ui-sidebar-browser':
+      '@berry-ai/harness-client-ui-sidebar-browser':
         specifier: workspace:*
         version: link:../../client/ui-sidebar-browser
-      '@deepseek-ai/dsh-client-ui-sidebar-documentpreview':
+      '@berry-ai/harness-client-ui-sidebar-documentpreview':
         specifier: workspace:*
         version: link:../../client/ui-sidebar-documentpreview
-      '@deepseek-ai/dsh-client-ui-sidebar-files':
+      '@berry-ai/harness-client-ui-sidebar-files':
         specifier: workspace:*
         version: link:../../client/ui-sidebar-files
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../../client/ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-sidebar-terminal':
+      '@berry-ai/harness-client-ui-sidebar-terminal':
         specifier: workspace:*
         version: link:../../client/ui-sidebar-terminal
-      '@deepseek-ai/dsh-client-ui-skill':
+      '@berry-ai/harness-client-ui-skill':
         specifier: workspace:*
         version: link:../../client/ui-skill
-      '@deepseek-ai/dsh-client-ui-subagent':
+      '@berry-ai/harness-client-ui-subagent':
         specifier: workspace:*
         version: link:../../client/ui-subagent
-      '@deepseek-ai/dsh-client-ui-theme':
+      '@berry-ai/harness-client-ui-theme':
         specifier: workspace:*
         version: link:../../client/ui-theme
-      '@deepseek-ai/dsh-client-ui-tool':
+      '@berry-ai/harness-client-ui-tool':
         specifier: workspace:*
         version: link:../../client/ui-tool
-      '@deepseek-ai/dsh-client-ui-trajectory':
+      '@berry-ai/harness-client-ui-trajectory':
         specifier: workspace:*
         version: link:../../client/ui-trajectory
-      '@deepseek-ai/dsh-client-ui-user-questions':
+      '@berry-ai/harness-client-ui-user-questions':
         specifier: workspace:*
         version: link:../../client/ui-user-questions
-      '@deepseek-ai/dsh-client-ui-workflow-run':
+      '@berry-ai/harness-client-ui-workflow-run':
         specifier: workspace:*
         version: link:../../client/ui-workflow-run
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../../client/ui-workspace
       '@berry-ai/harness-command-compact':
@@ -2996,7 +2996,7 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
       '@berry-ai/harness-session':
@@ -3015,7 +3015,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-client-modules':
+      '@berry-ai/harness-client-modules':
         specifier: workspace:*
         version: link:../modules
       '@berry-ai/harness-host-webserver':
@@ -3040,25 +3040,25 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@types/react':
@@ -3079,7 +3079,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-host-webserver':
@@ -3137,16 +3137,16 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-typert-protocol':
@@ -3171,16 +3171,16 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
       '@berry-ai/harness-host-webserver':
@@ -3216,40 +3216,40 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-plugin-manager':
+      '@berry-ai/harness-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../ui-plugin-manager
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
       '@berry-ai/harness-session':
@@ -3273,25 +3273,25 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-llm':
@@ -3318,25 +3318,25 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-tool':
+      '@berry-ai/harness-client-ui-tool':
         specifier: workspace:*
         version: link:../ui-tool
-      '@deepseek-ai/dsh-client-ui-trajectory':
+      '@berry-ai/harness-client-ui-trajectory':
         specifier: workspace:*
         version: link:../ui-trajectory
       '@types/react':
@@ -3360,13 +3360,13 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-sidebar':
+      '@berry-ai/harness-client-ui-sidebar':
         specifier: workspace:*
         version: link:../ui-sidebar
       '@testing-library/react':
@@ -3424,52 +3424,52 @@ importers:
       '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../product-analytics
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-ui-approval':
+      '@berry-ai/harness-client-ui-approval':
         specifier: workspace:*
         version: link:../ui-approval
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-input-trigger':
+      '@berry-ai/harness-client-ui-input-trigger':
         specifier: workspace:*
         version: link:../ui-input-trigger
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-sidebar-browser':
+      '@berry-ai/harness-client-ui-sidebar-browser':
         specifier: workspace:*
         version: link:../ui-sidebar-browser
-      '@deepseek-ai/dsh-client-ui-sidebar-documentpreview':
+      '@berry-ai/harness-client-ui-sidebar-documentpreview':
         specifier: workspace:*
         version: link:../ui-sidebar-documentpreview
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
       '@berry-ai/harness-compaction':
@@ -3532,34 +3532,34 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-input-trigger':
+      '@berry-ai/harness-client-ui-input-trigger':
         specifier: workspace:*
         version: link:../ui-input-trigger
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-session':
@@ -3632,43 +3632,43 @@ importers:
       '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
-      '@deepseek-ai/dsh-client-file-upload':
+      '@berry-ai/harness-client-file-upload':
         specifier: workspace:*
         version: link:../file-upload
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../product-analytics
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
       '@berry-ai/harness-llm':
@@ -3762,43 +3762,43 @@ importers:
       '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-dockkit':
+      '@berry-ai/harness-client-ui-dockkit':
         specifier: workspace:*
         version: link:../ui-dockkit
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-tool':
+      '@berry-ai/harness-client-ui-tool':
         specifier: workspace:*
         version: link:../ui-tool
       '@berry-ai/harness-llm':
@@ -3828,22 +3828,22 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
       '@testing-library/react':
@@ -3870,10 +3870,10 @@ importers:
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
       '@testing-library/react':
@@ -3897,7 +3897,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
       '@testing-library/react':
@@ -3936,28 +3936,28 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-session':
@@ -3993,28 +3993,28 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-session':
@@ -4041,25 +4041,25 @@ importers:
       '@berry-ai/harness-api-job-controller':
         specifier: workspace:*
         version: link:../../api/job-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-session':
@@ -4086,25 +4086,25 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-theme':
+      '@berry-ai/harness-client-ui-theme':
         specifier: workspace:*
         version: link:../ui-theme
       '@types/react':
@@ -4128,37 +4128,37 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-commands':
+      '@berry-ai/harness-client-ui-commands':
         specifier: workspace:*
         version: link:../ui-commands
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-remote-mock':
@@ -4200,37 +4200,37 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../product-analytics
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-commands':
+      '@berry-ai/harness-client-ui-commands':
         specifier: workspace:*
         version: link:../ui-commands
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-input-trigger':
+      '@berry-ai/harness-client-ui-input-trigger':
         specifier: workspace:*
         version: link:../ui-input-trigger
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-session':
@@ -4272,43 +4272,43 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-deliverables':
+      '@berry-ai/harness-client-ui-deliverables':
         specifier: workspace:*
         version: link:../ui-deliverables
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-sidebar-documentpreview':
+      '@berry-ai/harness-client-ui-sidebar-documentpreview':
         specifier: workspace:*
         version: link:../ui-sidebar-documentpreview
-      '@deepseek-ai/dsh-client-ui-sidebar-files':
+      '@berry-ai/harness-client-ui-sidebar-files':
         specifier: workspace:*
         version: link:../ui-sidebar-files
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-host-open-in-app':
@@ -4338,40 +4338,40 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-commands':
+      '@berry-ai/harness-client-ui-commands':
         specifier: workspace:*
         version: link:../ui-commands
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-input-trigger':
+      '@berry-ai/harness-client-ui-input-trigger':
         specifier: workspace:*
         version: link:../ui-input-trigger
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-remote-mock':
@@ -4404,40 +4404,40 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-resources':
+      '@berry-ai/harness-client-resources':
         specifier: workspace:*
         version: link:../resources
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-user-questions':
+      '@berry-ai/harness-client-ui-user-questions':
         specifier: workspace:*
         version: link:../ui-user-questions
       '@berry-ai/harness-llm':
@@ -4489,34 +4489,34 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../product-analytics
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-sidebar':
+      '@berry-ai/harness-client-ui-sidebar':
         specifier: workspace:*
         version: link:../ui-sidebar
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@testing-library/react':
@@ -4549,7 +4549,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@shikijs/langs':
@@ -4645,25 +4645,25 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-input-trigger':
+      '@berry-ai/harness-client-ui-input-trigger':
         specifier: workspace:*
         version: link:../ui-input-trigger
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-typert-protocol':
@@ -4678,7 +4678,7 @@ importers:
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@types/react':
@@ -4720,43 +4720,43 @@ importers:
       '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-sidebar':
+      '@berry-ai/harness-client-ui-sidebar':
         specifier: workspace:*
         version: link:../ui-sidebar
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-tool':
+      '@berry-ai/harness-client-ui-tool':
         specifier: workspace:*
         version: link:../ui-tool
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
       '@berry-ai/harness-session':
@@ -4795,16 +4795,16 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-remote-mock':
@@ -4838,13 +4838,13 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@types/react':
@@ -4872,40 +4872,40 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../product-analytics
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-settings-models':
+      '@berry-ai/harness-client-ui-settings-models':
         specifier: workspace:*
         version: link:../ui-settings-models
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-theme':
+      '@berry-ai/harness-client-ui-theme':
         specifier: workspace:*
         version: link:../ui-theme
       '@berry-ai/harness-host-webserver':
@@ -4941,28 +4941,28 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-plugin-manager':
+      '@berry-ai/harness-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../ui-plugin-manager
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@types/react':
@@ -4987,37 +4987,37 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-sidebar':
+      '@berry-ai/harness-client-ui-sidebar':
         specifier: workspace:*
         version: link:../ui-sidebar
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-remote-mock':
@@ -5054,28 +5054,28 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../product-analytics
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-host-webserver':
@@ -5105,31 +5105,31 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-modules':
+      '@berry-ai/harness-client-modules':
         specifier: workspace:*
         version: link:../modules
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-agent-preset':
+      '@berry-ai/harness-client-ui-agent-preset':
         specifier: workspace:*
         version: link:../ui-agent-preset
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@testing-library/react':
@@ -5153,19 +5153,19 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@types/react':
@@ -5183,28 +5183,28 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@types/react':
@@ -5228,28 +5228,28 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-plugin-manager':
+      '@berry-ai/harness-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../ui-plugin-manager
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@types/react':
@@ -5267,28 +5267,28 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-plugin-manager':
+      '@berry-ai/harness-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../ui-plugin-manager
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@types/react':
@@ -5306,28 +5306,28 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-plugin-manager':
+      '@berry-ai/harness-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../ui-plugin-manager
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@types/react':
@@ -5345,31 +5345,31 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@types/react':
@@ -5390,37 +5390,37 @@ importers:
       '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../product-analytics
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
       '@types/react':
@@ -5444,31 +5444,31 @@ importers:
       '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-ui-dockkit':
+      '@berry-ai/harness-client-ui-dockkit':
         specifier: workspace:*
         version: link:../ui-dockkit
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@testing-library/react':
@@ -5511,40 +5511,40 @@ importers:
       '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-resources':
+      '@berry-ai/harness-client-resources':
         specifier: workspace:*
         version: link:../resources
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-dockkit':
+      '@berry-ai/harness-client-ui-dockkit':
         specifier: workspace:*
         version: link:../ui-dockkit
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-host-webserver':
@@ -5619,34 +5619,34 @@ importers:
       '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-dockkit':
+      '@berry-ai/harness-client-ui-dockkit':
         specifier: workspace:*
         version: link:../ui-dockkit
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-session':
@@ -5688,40 +5688,40 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-resources':
+      '@berry-ai/harness-client-resources':
         specifier: workspace:*
         version: link:../resources
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-dockkit':
+      '@berry-ai/harness-client-ui-dockkit':
         specifier: workspace:*
         version: link:../ui-dockkit
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-session':
@@ -5766,43 +5766,43 @@ importers:
       '@berry-ai/harness-api-terminal-controller':
         specifier: workspace:*
         version: link:../../api/terminal-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-dockkit':
+      '@berry-ai/harness-client-ui-dockkit':
         specifier: workspace:*
         version: link:../ui-dockkit
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-theme':
+      '@berry-ai/harness-client-ui-theme':
         specifier: workspace:*
         version: link:../ui-theme
       '@berry-ai/harness-session':
@@ -5850,31 +5850,31 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-input-trigger':
+      '@berry-ai/harness-client-ui-input-trigger':
         specifier: workspace:*
         version: link:../ui-input-trigger
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-tool':
+      '@berry-ai/harness-client-ui-tool':
         specifier: workspace:*
         version: link:../ui-tool
       '@berry-ai/harness-session':
@@ -5898,7 +5898,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@types/react':
@@ -5913,43 +5913,43 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-resources':
+      '@berry-ai/harness-client-resources':
         specifier: workspace:*
         version: link:../resources
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-input-trigger':
+      '@berry-ai/harness-client-ui-input-trigger':
         specifier: workspace:*
         version: link:../ui-input-trigger
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
       '@berry-ai/harness-session':
@@ -5989,28 +5989,28 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-host-webserver':
@@ -6064,31 +6064,31 @@ importers:
       '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-llm':
@@ -6145,31 +6145,31 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-compaction':
@@ -6223,34 +6223,34 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-tool':
+      '@berry-ai/harness-client-ui-tool':
         specifier: workspace:*
         version: link:../ui-tool
       '@berry-ai/harness-llm':
@@ -6292,34 +6292,34 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../ui-workspace
       '@berry-ai/harness-session':
@@ -6361,43 +6361,43 @@ importers:
       '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
-      '@deepseek-ai/dsh-client-product-analytics':
+      '@berry-ai/harness-client-product-analytics':
         specifier: workspace:*
         version: link:../product-analytics
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../ui-conversation
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../ui-session
-      '@deepseek-ai/dsh-client-ui-sidebar':
+      '@berry-ai/harness-client-ui-sidebar':
         specifier: workspace:*
         version: link:../ui-sidebar
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-session':
@@ -6427,22 +6427,22 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-client-modules':
+      '@berry-ai/harness-client-modules':
         specifier: workspace:*
         version: link:../modules
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
-      '@deepseek-ai/dsh-client-ui-dockkit':
+      '@berry-ai/harness-client-ui-dockkit':
         specifier: workspace:*
         version: link:../ui-dockkit
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../ui-renderer
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../ui-slots
       '@berry-ai/harness-host-webserver':
@@ -7930,31 +7930,31 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../../client/ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../../client/ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../../client/ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
-      '@deepseek-ai/dsh-client-ui-workspace':
+      '@berry-ai/harness-client-ui-workspace':
         specifier: workspace:*
         version: link:../../client/ui-workspace
       '@berry-ai/harness-experimental-agent-team':
@@ -7990,25 +7990,25 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../../client/ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../../client/ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../../client/ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
       '@berry-ai/harness-experimental-claude-code-mods':
@@ -8057,31 +8057,31 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../../client/ui-chat
-      '@deepseek-ai/dsh-client-ui-plugin-manager':
+      '@berry-ai/harness-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../../client/ui-plugin-manager
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../../client/ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../../client/ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
       '@berry-ai/harness-experimental-translator':
@@ -8129,31 +8129,31 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../../client/ui-conversation
-      '@deepseek-ai/dsh-client-ui-plugin-manager':
+      '@berry-ai/harness-client-ui-plugin-manager':
         specifier: workspace:*
         version: link:../../client/ui-plugin-manager
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../../client/ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../../client/ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
       '@berry-ai/harness-experimental-api-speech-to-text':
@@ -8431,7 +8431,7 @@ importers:
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
-      '@deepseek-ai/dsh-client-modules':
+      '@berry-ai/harness-client-modules':
         specifier: workspace:*
         version: link:../../client/modules
       '@deepseek-ai/schemastery':
@@ -8459,31 +8459,31 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
-      '@deepseek-ai/dsh-client-shortcuts':
+      '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../../client/shortcuts
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../../client/ui-layout
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../../client/ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
       '@berry-ai/harness-host-webserver':
@@ -8588,34 +8588,34 @@ importers:
       '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../../client/ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../../client/ui-conversation
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../../client/ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../../client/ui-session
-      '@deepseek-ai/dsh-client-ui-sidebar-right':
+      '@berry-ai/harness-client-ui-sidebar-right':
         specifier: workspace:*
         version: link:../../client/ui-sidebar-right
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
       '@berry-ai/harness-llm':
@@ -9276,7 +9276,7 @@ importers:
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
-      '@deepseek-ai/dsh-client-web':
+      '@berry-ai/harness-client-web':
         specifier: workspace:*
         version: link:../../client/web
       '@noble/hashes':
@@ -9322,13 +9322,13 @@ importers:
       '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-file-upload':
+      '@berry-ai/harness-client-file-upload':
         specifier: workspace:*
         version: link:../../client/file-upload
-      '@deepseek-ai/dsh-client-modules':
+      '@berry-ai/harness-client-modules':
         specifier: workspace:*
         version: link:../../client/modules
       '@berry-ai/harness-host-webserver':
@@ -9425,13 +9425,13 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-modules':
+      '@berry-ai/harness-client-modules':
         specifier: workspace:*
         version: link:../../client/modules
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-theme':
+      '@berry-ai/harness-client-ui-theme':
         specifier: workspace:*
         version: link:../../client/ui-theme
       '@types/react':
@@ -9525,28 +9525,28 @@ importers:
       '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../../client/ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../../client/ui-session
-      '@deepseek-ai/dsh-client-ui-sidebar':
+      '@berry-ai/harness-client-ui-sidebar':
         specifier: workspace:*
         version: link:../../client/ui-sidebar
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
-      '@deepseek-ai/dsh-client-ui-tool':
+      '@berry-ai/harness-client-ui-tool':
         specifier: workspace:*
         version: link:../../client/ui-tool
       '@berry-ai/harness-cordis-client-runner':
@@ -10117,13 +10117,13 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-ui-directory-picker-browse':
+      '@berry-ai/harness-client-ui-directory-picker-browse':
         specifier: workspace:*
         version: link:../../client/ui-directory-picker-browse
-      '@deepseek-ai/dsh-client-ui-directory-picker-native':
+      '@berry-ai/harness-client-ui-directory-picker-native':
         specifier: workspace:*
         version: link:../../client/ui-directory-picker-native
       '@berry-ai/harness-host-directory-picker':
@@ -10186,7 +10186,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
       '@berry-ai/harness-host-webserver':
@@ -11709,34 +11709,34 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-client-ui-commands':
+      '@berry-ai/harness-client-ui-commands':
         specifier: workspace:*
         version: link:../../client/ui-commands
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../../client/ui-conversation
-      '@deepseek-ai/dsh-client-ui-message-feedback':
+      '@berry-ai/harness-client-ui-message-feedback':
         specifier: workspace:*
         version: link:../../client/ui-message-feedback
-      '@deepseek-ai/dsh-client-ui-primitives':
+      '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../../client/ui-primitives
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../../client/ui-session
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
       '@berry-ai/harness-session':
@@ -14220,43 +14220,43 @@ importers:
       '@berry-ai/harness-base':
         specifier: workspace:*
         version: link:../../bundle/base
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
-      '@deepseek-ai/dsh-client-hmr':
+      '@berry-ai/harness-client-hmr':
         specifier: workspace:*
         version: link:../../client/hmr
-      '@deepseek-ai/dsh-client-locale':
+      '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
-      '@deepseek-ai/dsh-client-modules':
+      '@berry-ai/harness-client-modules':
         specifier: workspace:*
         version: link:../../client/modules
-      '@deepseek-ai/dsh-client-store':
+      '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
-      '@deepseek-ai/dsh-client-ui-chat':
+      '@berry-ai/harness-client-ui-chat':
         specifier: workspace:*
         version: link:../../client/ui-chat
-      '@deepseek-ai/dsh-client-ui-conversation':
+      '@berry-ai/harness-client-ui-conversation':
         specifier: workspace:*
         version: link:../../client/ui-conversation
-      '@deepseek-ai/dsh-client-ui-layout':
+      '@berry-ai/harness-client-ui-layout':
         specifier: workspace:*
         version: link:../../client/ui-layout
-      '@deepseek-ai/dsh-client-ui-renderer':
+      '@berry-ai/harness-client-ui-renderer':
         specifier: workspace:*
         version: link:../../client/ui-renderer
-      '@deepseek-ai/dsh-client-ui-session':
+      '@berry-ai/harness-client-ui-session':
         specifier: workspace:*
         version: link:../../client/ui-session
-      '@deepseek-ai/dsh-client-ui-settings':
+      '@berry-ai/harness-client-ui-settings':
         specifier: workspace:*
         version: link:../../client/ui-settings
-      '@deepseek-ai/dsh-client-ui-slots':
+      '@berry-ai/harness-client-ui-slots':
         specifier: workspace:*
         version: link:../../client/ui-slots
-      '@deepseek-ai/dsh-client-web':
+      '@berry-ai/harness-client-web':
         specifier: workspace:*
         version: link:../../client/web
       '@berry-ai/harness-remote-mock':
@@ -14361,7 +14361,7 @@ importers:
       '@berry-ai/harness-api-settings-controller':
         specifier: workspace:*
         version: link:../../api/settings-controller
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
       '@berry-ai/harness-typert-protocol':
@@ -15320,10 +15320,10 @@ importers:
       '@berry-ai/harness-base':
         specifier: workspace:*
         version: link:../../packages/bundle/base
-      '@deepseek-ai/dsh-client-connection':
+      '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../packages/client/connection
-      '@deepseek-ai/dsh-client-file-upload':
+      '@berry-ai/harness-client-file-upload':
         specifier: workspace:*
         version: link:../../packages/client/file-upload
       '@berry-ai/harness-command-compact':

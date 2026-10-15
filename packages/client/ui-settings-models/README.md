@@ -3,7 +3,7 @@ description: "Models settings and product-onboarding plugin for the dsh web clie
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-client-ui-settings-models
+# @berry-ai/harness-client-ui-settings-models
 
 English | [中文](README.zh.md)
 

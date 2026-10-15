@@ -1,5 +1,5 @@
 /** Pure read-card derivation from raw result content and metadata. @module */
-import type { ReadBlockLine, ReadBlockProps } from '@deepseek-ai/dsh-client-ui-primitives'
+import type { ReadBlockLine, ReadBlockProps } from '@berry-ai/harness-client-ui-primitives'
 import { abbreviateHomePath, relativizeToCwd } from '@berry-ai/harness-util-workspace-path'
 import type { ToolCallBlock } from './tool-call-model.ts'
 import { parsedToolCall, singleResultText } from './raw-tool-call.ts'

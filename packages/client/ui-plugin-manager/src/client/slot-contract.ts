@@ -16,9 +16,9 @@
  * all. The page draws the title, icon, and crumb itself.
  */
 
-import type {} from '@deepseek-ai/dsh-client-ui-slots'
+import type {} from '@berry-ai/harness-client-ui-slots'
 import type { BundleInfo } from '@berry-ai/harness-api-remotes/client'
-import type { ConfigForm, ConfigFormSnapshot } from '@deepseek-ai/dsh-client-ui-settings/client'
+import type { ConfigForm, ConfigFormSnapshot } from '@berry-ai/harness-client-ui-settings/client'
 
 /** The view the page asks a configuration entry for. */
 export interface PluginConfigViewProps {
@@ -83,7 +83,7 @@ export interface PluginAddActionsProps {
   readonly onDismiss: () => void
 }
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface SlotMap {
     /** Additional MenuItemButton rows after installation: 72px high, with a title and a description capped at two lines. */
     'plugins.add.actions': { kind: 'list'; scope: 'root'; owner: PluginAddActionsProps }

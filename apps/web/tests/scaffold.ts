@@ -108,7 +108,7 @@ function appBoot(): AppBoot {
 // import {
 //   WELCOME_NOTICE_ACK_FIELD, WELCOME_NOTICE_SETTINGS_NAMESPACE,
 //   WELCOME_NOTICE_VERSION, WELCOME_NOTICE_COPY,
-// } from '@deepseek-ai/dsh-client-ui-settings-models'
+// } from '@berry-ai/harness-client-ui-settings-models'
 export const WELCOME_NOTICE_SETTINGS_NAMESPACE = 'ui-settings-general'
 /** The installed bundle carrying the scaffold's deployment defaults; the plugin manager lists it beside fixture bundles. */
 export const SCAFFOLD_DEFAULTS_BUNDLE = 'dsh-web-scaffold-defaults'
@@ -656,7 +656,7 @@ export async function launchWebScaffold(options: LaunchOptions = {}): Promise<We
     { id: 'directory-picker', disabled: true },
     { insert: [
       { id: 'directory-picker-browse', name: '@berry-ai/harness-host-directory-picker-browse' },
-      { id: 'ui-directory-picker-browse', name: '@deepseek-ai/dsh-client-ui-directory-picker-browse' },
+      { id: 'ui-directory-picker-browse', name: '@berry-ai/harness-client-ui-directory-picker-browse' },
     ] },
     // Ordinary scenarios exclude host-dependent application discovery. The
     // Open In scenario supplies launch facts that suppress every native probe.

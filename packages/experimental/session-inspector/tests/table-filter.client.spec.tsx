@@ -2,7 +2,7 @@
 /** Confirmed type filters compose with folding, live rows, raw details, and picked-row navigation. */
 
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { bindSnapshotSelector, makeTranslate, sessionSnapshot } from '@berry-ai/harness-client-test-runtime'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { afterEach, beforeEach, expect, it, onTestFinished, vi } from 'vitest'

@@ -6,7 +6,7 @@ import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { ScheduleCatalogEntry, ScheduleDeleteResult } from '@berry-ai/harness-schedule/client'
 import { ScheduleId } from '@berry-ai/harness-schedule'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import { bindSnapshotSelector } from '@deepseek-ai/dsh-client-ui-renderer/src/client/bind.ts'
+import { bindSnapshotSelector } from '@berry-ai/harness-client-ui-renderer/src/client/bind.ts'
 import { createCatalogSource, type CatalogInjected } from '../src/client/catalog-source.ts'
 import {
   formatScheduleAbsolute, formatScheduleFrequency, formatScheduleRelative,

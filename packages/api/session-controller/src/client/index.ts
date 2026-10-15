@@ -2,8 +2,8 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-agent/types'
-import type { ConnectionHandle } from '@deepseek-ai/dsh-client-connection/client'
-import type {} from '@deepseek-ai/dsh-client-file-upload/client'
+import type { ConnectionHandle } from '@berry-ai/harness-client-connection/client'
+import type {} from '@berry-ai/harness-client-file-upload/client'
 import { typertOwnedValue } from '@berry-ai/harness-typert-protocol'
 import { createSessionControlStream } from './transport.ts'
 import { ClientSessions } from './sessions/service.ts'

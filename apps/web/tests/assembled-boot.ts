@@ -13,10 +13,10 @@ import { dirname, join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { act, cleanup, fireEvent, screen, waitFor } from '@testing-library/react'
 import { afterEach, beforeEach, vi } from 'vitest'
-import { bootInjections, orderByModuleGraph } from '@deepseek-ai/dsh-client-modules'
-import type { ClientModuleLoaderTarget, WebBootEntry, WebBootGraph } from '@deepseek-ai/dsh-client-modules/client'
+import { bootInjections, orderByModuleGraph } from '@berry-ai/harness-client-modules'
+import type { ClientModuleLoaderTarget, WebBootEntry, WebBootGraph } from '@berry-ai/harness-client-modules/client'
 import type { RemoteMock } from '@berry-ai/harness-remote-mock'
-import { AppWebEntry } from '@deepseek-ai/dsh-client-web'
+import { AppWebEntry } from '@berry-ai/harness-client-web'
 import {
   createAssembledRemote, type AssembledRemote, type AssembledRemoteOptions,
 } from './assembled-remote.ts'
@@ -127,7 +127,7 @@ function loadAssembledPlugins(): readonly AssembledPlugin[] {
 
 const PLUGINS = loadAssembledPlugins()
 
-const BOOTSTRAP_IDS = ['@deepseek-ai/dsh-client-modules'] as const
+const BOOTSTRAP_IDS = ['@berry-ai/harness-client-modules'] as const
 
 /** Build the fixture graph after applying per-scenario package exclusions. */
 function bootGraph(plugins: readonly AssembledPlugin[]): WebBootGraph {

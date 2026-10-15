@@ -1,5 +1,5 @@
 /** Observable contiguous Session event window consumed by domain assemblers. */
-import { notifySubscribers, type ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import { notifySubscribers, type ObservableSnapshot } from '@berry-ai/harness-client-store'
 import type { LlmAttemptId, StreamChunk } from '@berry-ai/harness-llm'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
 

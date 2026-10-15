@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { RequestView } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import type { RequestView } from '@berry-ai/harness-client-ui-conversation/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import type {
   TrajectoryContribution, TrajectoryConversationViewNode, TrajectoryRequestHeaderState,

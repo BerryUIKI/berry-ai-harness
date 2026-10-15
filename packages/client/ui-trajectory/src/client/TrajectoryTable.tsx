@@ -21,12 +21,12 @@ import {
   StateDot,
   Tooltip,
   writeClipboard,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { JsonTreeLabels, JsonTreeProps, MarkdownLabels } from '@deepseek-ai/dsh-client-ui-primitives'
+} from '@berry-ai/harness-client-ui-primitives'
+import type { JsonTreeLabels, JsonTreeProps, MarkdownLabels } from '@berry-ai/harness-client-ui-primitives'
 import { structuredPatch } from 'diff'
 import type {
   AssistantRequestConfig, ConversationPromptSnapshot, RenderMessageImages,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type {
   AssistantMetricDetail, TrajectoryCellKind, TrajectoryCellProps, TrajectorySourceBlock,
 } from './trajectory-record.ts'

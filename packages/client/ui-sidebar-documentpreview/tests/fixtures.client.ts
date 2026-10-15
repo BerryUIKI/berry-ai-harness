@@ -10,12 +10,12 @@
 import { onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { ResourceRegistry } from '../../resources/src/client/resources.ts'
-import type { PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
+import type { PropsRenderSlots } from '@berry-ai/harness-client-ui-slots'
 import type { Mock } from 'vitest'
 import { act } from '@testing-library/react'
 import { createElement, useSyncExternalStore } from 'react'
 import type { RemoteFailure, RemoteResult } from '@berry-ai/harness-api-remotes/client'
-import type { ResourceSnapshot } from '@deepseek-ai/dsh-client-resources/client'
+import type { ResourceSnapshot } from '@berry-ai/harness-client-resources/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceFileStat, WorkspaceFileText } from '@berry-ai/harness-api-workspace-files/types'
 import type { TextPreviewProps } from '../src/client/TextPreview.tsx'
@@ -27,7 +27,7 @@ import type { TextStore } from '../src/client/store.ts'
 import type { DocumentPreviewProps } from '../src/client/document/contract.ts'
 import { TextBody } from '../src/client/text/TextBody.tsx'
 import { textBodyDefinition } from '../src/client/text/index.ts'
-import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
+import type { TabId } from '@berry-ai/harness-client-ui-dockkit'
 
 type BodySlot = PropsRenderSlots<'sidebar.right.tab.document'>['renderSlot']
 

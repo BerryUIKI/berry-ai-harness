@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { act, cleanup, render } from '@testing-library/react'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
 import type { SessionListState } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'

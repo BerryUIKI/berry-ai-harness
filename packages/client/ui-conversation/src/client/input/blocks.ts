@@ -12,7 +12,7 @@
  * route regardless of what any client disables.
  */
 
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { ComposerBlock, ComposerBlocks } from '../contract/composer-blocks.ts'
 

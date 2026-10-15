@@ -3,7 +3,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-jobs'
-import type {} from '@deepseek-ai/dsh-client-connection'
+import type {} from '@berry-ai/harness-client-connection'
 
 /**
  * Whether stopping the Host now would interrupt work: a generating or tool-running

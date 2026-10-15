@@ -14,7 +14,7 @@
  */
 import type { Context } from '@deepseek-ai/cordis'
 import { cancelledFailure, carrierFailure } from '@berry-ai/harness-api-gateway/client'
-import type { ConnectionHandle } from '@deepseek-ai/dsh-client-connection/client'
+import type { ConnectionHandle } from '@berry-ai/harness-client-connection/client'
 import type { RemoteMock } from '@berry-ai/harness-remote-mock'
 import type { ClientPluginModule } from './roster.ts'
 

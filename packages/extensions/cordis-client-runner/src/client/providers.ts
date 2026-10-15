@@ -2,8 +2,8 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { JsonValue } from '@berry-ai/harness-util-values'
-import type { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-theme/client'
+import type { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-theme/client'
 import { queryEventApi, queryServiceApi } from './api-catalog.ts'
 import type { ClientCordisInspectProviderRegistration } from './inspect-registry.ts'
 import { CLIENT_SLOT_API } from './slot-catalog.ts'

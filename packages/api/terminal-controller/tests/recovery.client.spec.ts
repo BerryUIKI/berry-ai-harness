@@ -2,7 +2,7 @@
 import { setImmediate } from 'node:timers/promises'
 import { afterEach, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { RemoteError, type RemoteResult } from '@berry-ai/harness-typert-protocol'
 import { streamMethod } from '@berry-ai/harness-remote-mock'
 import { RemoteStream, type ClientRemote } from '@berry-ai/harness-api-gateway/client'

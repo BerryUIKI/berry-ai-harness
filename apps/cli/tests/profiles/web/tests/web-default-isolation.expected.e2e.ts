@@ -1,7 +1,7 @@
 /** Real Web startup, mounted plugin package identities, and delivered Client graph isolation. */
 
 import { FiberState } from '@deepseek-ai/cordis'
-import type { WebBootGraph } from '@deepseek-ai/dsh-client-modules/client'
+import type { WebBootGraph } from '@berry-ai/harness-client-modules/client'
 import { expect, it } from 'vitest'
 import { modulePackage } from './runtime-roster.ts'
 import { experimentalRuntimeReferences } from './runtime-roster-isolation.ts'
@@ -24,23 +24,23 @@ it('boots default Web with the shipped Schedule rows, without experimental modul
     expect(roster.client).toEqual(delivered)
     expect(roster.entries).toEqual(expect.arrayContaining([
       expect.objectContaining({ name: '@berry-ai/harness-host-webserver', state: FiberState.ACTIVE }),
-      expect.objectContaining({ name: '@deepseek-ai/dsh-client-modules', state: FiberState.ACTIVE }),
+      expect.objectContaining({ name: '@berry-ai/harness-client-modules', state: FiberState.ACTIVE }),
     ]))
     expect(roster.entries.some(entry => entry.name.endsWith('/runtime-roster-observer.js') && entry.state === FiberState.ACTIVE)).toBe(true)
     expect(roster.plugins.length).toBeGreaterThan(roster.entries.length)
     expect(roster.modules.some(url => modulePackage(url) === '@deepseek-ai/dsh')).toBe(true)
     expect(roster.client.entries.length).toBeGreaterThan(0)
-    const browser = roster.entries.find(entry => entry.name === '@deepseek-ai/dsh-client-ui-sidebar-browser')
+    const browser = roster.entries.find(entry => entry.name === '@berry-ai/harness-client-ui-sidebar-browser')
     expect(browser).toBeDefined()
     expect(browser!.state).toBeUndefined()
-    expect(delivered.entries.some(entry => entry.id === '@deepseek-ai/dsh-client-ui-sidebar-browser')).toBe(false)
+    expect(delivered.entries.some(entry => entry.id === '@berry-ai/harness-client-ui-sidebar-browser')).toBe(false)
     // The shipped composition mounts the Host Schedule service and its task
     // page; the clock stays preset-level, so neither plane carries a row for it.
     expect(roster.entries).toEqual(expect.arrayContaining([
       expect.objectContaining({ name: '@berry-ai/harness-schedule', state: FiberState.ACTIVE }),
-      expect.objectContaining({ name: '@deepseek-ai/dsh-client-ui-schedule', state: FiberState.ACTIVE }),
+      expect.objectContaining({ name: '@berry-ai/harness-client-ui-schedule', state: FiberState.ACTIVE }),
     ]))
-    expect(delivered.entries.some(entry => entry.id === '@deepseek-ai/dsh-client-ui-schedule')).toBe(true)
+    expect(delivered.entries.some(entry => entry.id === '@berry-ai/harness-client-ui-schedule')).toBe(true)
     expect(roster.entries.some(entry => entry.name === '@berry-ai/harness-time-context')).toBe(false)
     expect(delivered.entries.some(entry => entry.id === '@berry-ai/harness-time-context')).toBe(false)
     expect(experimentalRuntimeReferences(roster)).toEqual([])

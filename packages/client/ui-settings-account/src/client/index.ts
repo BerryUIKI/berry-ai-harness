@@ -1,13 +1,13 @@
 /** Desktop account settings registration and reconnecting Remote subscription. */
-import type {} from '@deepseek-ai/dsh-client-product-analytics/client'
-import type { TranscriptViewMode } from '@deepseek-ai/dsh-client-ui-chat/client'
+import type {} from '@berry-ai/harness-client-product-analytics/client'
+import type { TranscriptViewMode } from '@berry-ai/harness-client-ui-chat/client'
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-theme/client'
-import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
-import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
+import type {} from '@berry-ai/harness-client-locale/client'
+import type {} from '@berry-ai/harness-client-ui-settings/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-theme/client'
+import type {} from '@berry-ai/harness-client-ui-chat/client'
+import type {} from '@berry-ai/harness-client-ui-layout/client'
 import type {} from '@berry-ai/harness-api-remotes/client'
 import type { AccountView, AccountDetails } from '@berry-ai/harness-deepseek-account/types'
 import type { OnboardingChange } from './onboarding-contract.ts'
@@ -33,7 +33,7 @@ export type { AccountMenuProps } from './AccountMenu.tsx'
 export type { AccountSnapshot } from './AccountSection.tsx'
 export type { AccountKey } from './locales.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface LocaleNamespaceMap { 'settings.account': AccountKey }
 }
 

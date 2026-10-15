@@ -3,19 +3,19 @@
  * that outlives the Chat panel, and history scrollback never does.
  */
 // @vitest-environment jsdom
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { afterEach, describe, expect, it } from 'vitest'
 import { act, screen } from '@testing-library/react'
 import { SlotTestRuntime, stubConfigForm, usePinnedBrowserLanguages } from '@berry-ai/harness-client-test-runtime'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
 import type { SessionLiveEventEntry, SessionReference } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId, SessionSeq } from '@berry-ai/harness-session/types'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import {
   apply as applyConversation, inject as injectConversation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { apply as applyChat, inject as injectChat } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { QuotaNoticeInjected } from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
+import { apply as applyChat, inject as injectChat } from '@berry-ai/harness-client-ui-chat/client'
+import type { QuotaNoticeInjected } from '@berry-ai/harness-client-ui-chat/client'
 import { CHAT_SETTINGS_NAMESPACE, type ChatSettings } from '../src/chat-settings.ts'
 
 usePinnedBrowserLanguages('en')

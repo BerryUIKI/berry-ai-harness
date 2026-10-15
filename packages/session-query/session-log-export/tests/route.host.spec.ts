@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
-import { HostConnectionService } from '@deepseek-ai/dsh-client-connection'
-import type { BrowserAuth } from '@deepseek-ai/dsh-client-connection/src/browser-auth.ts'
+import { HostConnectionService } from '@berry-ai/harness-client-connection'
+import type { BrowserAuth } from '@berry-ai/harness-client-connection/src/browser-auth.ts'
 import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 import type { SessionHeader, SessionId } from '@berry-ai/harness-session'
 import type { SessionHandle } from '@berry-ai/harness-session-persistence'

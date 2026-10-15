@@ -68,11 +68,11 @@ const REGISTRY_URL = /^https?:\/\/\S+$/
 const protectedModules = new Set([
   '@berry-ai/harness-plugin-manager', '@deepseek-ai/cordis-plugin-loader',
   '@deepseek-ai/cordis-plugin-include', '@berry-ai/harness-api-gateway',
-  '@berry-ai/harness-host-webserver', '@deepseek-ai/dsh-client-modules',
-  '@deepseek-ai/dsh-client-ui-settings-plugin-inventory', '@deepseek-ai/dsh-client-ui-plugin-manager',
+  '@berry-ai/harness-host-webserver', '@berry-ai/harness-client-modules',
+  '@berry-ai/harness-client-ui-settings-plugin-inventory', '@berry-ai/harness-client-ui-plugin-manager',
   '@berry-ai/harness-host-plugin-inventory', '@berry-ai/harness-typert-registry',
   '@berry-ai/harness-api-remotes',
-  '@deepseek-ai/cordis-plugin-timer', '@deepseek-ai/dsh-client-connection',
+  '@deepseek-ai/cordis-plugin-timer', '@berry-ai/harness-client-connection',
   '@berry-ai/harness-host-frontend-static', '@berry-ai/harness-tools',
   '@berry-ai/harness-hmr',
 ])

@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { AgentPresetSectionController } from '../src/client/section-store.ts'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { ConfigFormSnapshot } from '@deepseek-ai/dsh-client-ui-settings/client'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { ConfigFormSnapshot } from '@berry-ai/harness-client-ui-settings/client'
 import type { AgentPresetRow } from '@berry-ai/harness-agent-preset-registry/types'
 import { en } from '../src/client/locales.ts'
 

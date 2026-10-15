@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { GoalActivationChanged, GoalId, GoalProjection, GoalView } from '@berry-ai/harness-goal/client'
 import { RemoteError } from '@berry-ai/harness-client-test-runtime'

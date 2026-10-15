@@ -1,5 +1,5 @@
 /** ui-subagent browser half: catalog actions and read-only composer routing. */
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { Context } from '@deepseek-ai/cordis'
 import { stubConfigForm } from '@berry-ai/harness-client-test-runtime'
 import { describe, expect, it } from 'vitest'
@@ -7,10 +7,10 @@ import type {
   SessionListState, SessionSnapshot, SessionSummary,
 } from '@berry-ai/harness-api-session-controller/client'
 import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { ComposerChainProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { apply as applyLocale, inject as localeInject } from '@deepseek-ai/dsh-client-locale/client'
+import type { ComposerChainProps } from '@berry-ai/harness-client-ui-conversation/client'
+import { apply as applyLocale, inject as localeInject } from '@berry-ai/harness-client-locale/client'
 import {
   SubagentHeaderLineage, type SubagentCatalogInjected,
 } from '../src/client/SubagentHeaderLineage.tsx'

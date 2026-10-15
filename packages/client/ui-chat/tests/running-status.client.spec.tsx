@@ -3,7 +3,7 @@
 import { act, cleanup, render } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import { RunningStatus } from '../src/client/chat/RunningStatus.tsx'
 import { zh } from '../src/client/locale.ts'
 

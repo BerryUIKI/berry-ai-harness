@@ -3,7 +3,7 @@ import type { SessionListState, SessionSummary } from '@berry-ai/harness-api-ses
 import type { WorkspaceId, WorkspaceView } from '@berry-ai/harness-api-workspace-controller/client'
 import type {
   SessionPendingInteraction, SessionStatus, SessionStatusSnapshot,
-} from '@deepseek-ai/dsh-client-ui-session/client'
+} from '@berry-ai/harness-client-ui-session/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SessionProjectionSnapshot } from '@berry-ai/harness-api-session-controller/client'
 import {

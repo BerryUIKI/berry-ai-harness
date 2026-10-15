@@ -7,7 +7,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {
   SettingsNamespaceView, SettingsPathOpView,
 } from '@berry-ai/harness-api-remotes/client'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 // Type-only, and deliberately NOT `@berry-ai/harness-api-remotes/client`: this
 // package is reachable from the Host build graph through its feature-package

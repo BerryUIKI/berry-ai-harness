@@ -1,7 +1,7 @@
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { describe, expect, it, vi } from 'vitest'
 import type { SettingsNamespaceView } from '@berry-ai/harness-api-remotes/client'
-import { SettingsDescribeMirror } from '@deepseek-ai/dsh-client-ui-settings/src/client/settings-mirror.ts'
+import { SettingsDescribeMirror } from '@berry-ai/harness-client-ui-settings/src/client/settings-mirror.ts'
 import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import {
   PermissionPresetSettingsController, permissionDefaultOf,

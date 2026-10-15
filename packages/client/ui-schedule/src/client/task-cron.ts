@@ -8,7 +8,7 @@
  * common shapes the card's cron builder edits as structured rows.
  */
 import { assertNever } from '@berry-ai/harness-util-values'
-import type { Translate } from '@deepseek-ai/dsh-client-ui-slots'
+import type { Translate } from '@berry-ai/harness-client-ui-slots'
 
 /** ISO weekday dictionary key naming one cron day-of-week value. */
 type CronWeekdayKey = `frequency.weekday.${1 | 2 | 3 | 4 | 5 | 6 | 7}`

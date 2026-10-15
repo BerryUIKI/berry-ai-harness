@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 /**
  * The session-rename assembly chain on SlotTestRuntime (real apply, real
  * WorkspaceBrowser occupying the sidebar hole, the shipped row actions and
@@ -19,11 +19,11 @@ import { act, cleanup, fireEvent, waitFor, within } from '@testing-library/react
 import type { ISession } from '@berry-ai/harness-api-session-controller/client'
 import type { WorkspaceId } from '@berry-ai/harness-api-workspace-controller/client'
 import { SessionSeq, type SessionId } from '@berry-ai/harness-session/types'
-import type { PropsRenderSlots, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+import type { PropsRenderSlots, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
 import { RemoteError, SlotTestRuntime, usePinnedBrowserLanguages } from '@berry-ai/harness-client-test-runtime'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { MenuItemButton } from '@deepseek-ai/dsh-client-ui-primitives'
-import { apply, inject } from '@deepseek-ai/dsh-client-ui-workspace/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import { MenuItemButton } from '@berry-ai/harness-client-ui-primitives'
+import { apply, inject } from '@berry-ai/harness-client-ui-workspace/client'
 
 // The service reads its initial locale from the browser; these specs assert
 // the shipped Chinese copy, so they state the browser they assume.

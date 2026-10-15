@@ -1,16 +1,16 @@
 // @vitest-environment jsdom
 /** todo_write atomic Tool presentation and its plan-summary model. */
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
-import { useDisclosure } from '@deepseek-ai/dsh-client-ui-chat/src/client/chat/use-disclosure.ts'
+import { useDisclosure } from '@berry-ai/harness-client-ui-chat/src/client/chat/use-disclosure.ts'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { TodoItem } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
+import type { TodoItem } from '@berry-ai/harness-client-ui-conversation/client'
+import type { ToolResultNode } from '@berry-ai/harness-client-ui-chat/client'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import { TodoRow, todoToolview } from '../src/client/tool/toolviews/todo-row.tsx'
 import { planSummary } from '../src/client/tool/toolviews/plan-summary.ts'
 import { CONVERSATION_NS as NS } from '../src/client/locale.ts'
-import { zh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
+import { zh } from '@berry-ai/harness-client-ui-conversation/src/client/locales.ts'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 
 type TodoRowProps = Parameters<typeof TodoRow>[0]

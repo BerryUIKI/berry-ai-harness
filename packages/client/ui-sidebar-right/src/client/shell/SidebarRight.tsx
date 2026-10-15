@@ -29,15 +29,15 @@
  */
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef } from 'react'
 import type { CSSProperties, ReactNode, RefObject } from 'react'
-import type { ShortcutCatalogEntry } from '@deepseek-ai/dsh-client-shortcuts/client'
-import { IconPanelLeftOutlineRegular, Tooltip } from '@deepseek-ai/dsh-client-ui-primitives'
+import type { ShortcutCatalogEntry } from '@berry-ai/harness-client-shortcuts/client'
+import { IconPanelLeftOutlineRegular, Tooltip } from '@berry-ai/harness-client-ui-primitives'
 import type {
   HostObservable, InjectFace, PropsLocale, PropsRenderSlots, PropsRuntime, PropsStore,
-} from '@deepseek-ai/dsh-client-ui-slots'
+} from '@berry-ai/harness-client-ui-slots'
 import type {} from '../contract/slots.ts'
-import type { DockIntents, DockMode, FloatRect, TabId, TabRecord, TabRenderer } from '@deepseek-ai/dsh-client-ui-dockkit'
-import { canSplit, dockPaneIds, DockLayout, findPaneContentTab } from '@deepseek-ai/dsh-client-ui-dockkit'
-import type { HalvesFit, LayoutState, PaneId } from '@deepseek-ai/dsh-client-ui-dockkit'
+import type { DockIntents, DockMode, FloatRect, TabId, TabRecord, TabRenderer } from '@berry-ai/harness-client-ui-dockkit'
+import { canSplit, dockPaneIds, DockLayout, findPaneContentTab } from '@berry-ai/harness-client-ui-dockkit'
+import type { HalvesFit, LayoutState, PaneId } from '@berry-ai/harness-client-ui-dockkit'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { GUIDE_KIND, pageAddress } from '../contract/seed.ts'
 import { dockLabels } from '../labels.ts'

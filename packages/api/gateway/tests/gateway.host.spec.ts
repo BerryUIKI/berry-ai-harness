@@ -3,13 +3,13 @@ import type { AddressInfo } from 'node:net'
 import { describe, expect, it } from 'vitest'
 import { Context, Service, symbols } from '@deepseek-ai/cordis'
 import { z } from 'zod'
-import { apply as applyConnection, inject as connectionInject } from '@deepseek-ai/dsh-client-connection'
+import { apply as applyConnection, inject as connectionInject } from '@berry-ai/harness-client-connection'
 import type {
   ConnectionRpcHandler,
   HostConnectionHandle,
   PeerId,
   PeerScope,
-} from '@deepseek-ai/dsh-client-connection'
+} from '@berry-ai/harness-client-connection'
 import type { WebServer, WebRoute } from '@berry-ai/harness-host-webserver'
 import {
   bindTypertRemote,

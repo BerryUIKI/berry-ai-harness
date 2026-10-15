@@ -3,7 +3,7 @@ description: "Target-neutral 对话装配与浏览器 shell：事件和视图注
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-client-ui-conversation
+# @berry-ai/harness-client-ui-conversation
 
 [English](README.md) | 中文
 
@@ -122,8 +122,8 @@ interface ComposerChainProps {
 业务包仅可在一个 Remote waterfall request pending 期间安装 entry：
 
 ```tsx
-import type { ComposerChainProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { ChainSelect, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+import type { ComposerChainProps } from '@berry-ai/harness-client-ui-conversation/client'
+import type { ChainSelect, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
 import type { SessionId } from '@berry-ai/harness-session/types'
 
 interface Request {

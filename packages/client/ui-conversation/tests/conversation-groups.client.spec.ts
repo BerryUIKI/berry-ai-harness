@@ -12,7 +12,7 @@ import { ConversationNodeAssembler } from '../src/client/conversation/assembler.
 import { ConversationGroupRegistry } from '../src/client/conversation/group-registry.ts'
 import { ConversationViewRegistry } from '../src/client/conversation/view-registry.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
+declare module '@berry-ai/harness-client-ui-conversation/client' {
   interface ConversationGroupDataMap {
     'group-test': number
   }

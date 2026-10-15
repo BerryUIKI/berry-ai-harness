@@ -5,15 +5,15 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type { ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import type { SessionBinding } from '@berry-ai/harness-api-session-controller/client'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
-import type {} from '@deepseek-ai/dsh-client-locale/client'
+import type {} from '@berry-ai/harness-client-locale/client'
 // Type-only: the 'conversation.view' SlotMap row (declared by the slot's
 // owning package) must be in the program for the register calls to type.
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-session/client'
 import { createTrajectoryDurationStore } from './duration-store.ts'
 import { createTrajectoryStringWrappingStore } from './string-wrapping-store.ts'
 import { en, NS, zh } from './locales.ts'

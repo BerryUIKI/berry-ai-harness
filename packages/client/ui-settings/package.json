@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-ui-settings",
+  "name": "@berry-ai/harness-client-ui-settings",
   "description": "Settings domain base plugin: shared configuration forms and the canonical settings slot-type contract",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -44,9 +44,9 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-api-remotes": "workspace:*",
-    "@deepseek-ai/dsh-client-store": "workspace:*",
+    "@berry-ai/harness-client-store": "workspace:*",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
+    "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
     "@types/react": "~18.3.1",
     "react": "^18.2.0",

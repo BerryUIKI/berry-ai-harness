@@ -29,17 +29,17 @@
  */
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type {} from '@deepseek-ai/dsh-client-ui-sidebar/client'
-import type {} from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
-import type {} from '@deepseek-ai/dsh-client-ui-tool/client'
-import type {} from '@deepseek-ai/dsh-client-ui-workspace/client'
-import type { MainPanelId } from '@deepseek-ai/dsh-client-ui-layout/client'
+import type {} from '@berry-ai/harness-client-locale/client'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-session/client'
+import type {} from '@berry-ai/harness-client-ui-sidebar/client'
+import type {} from '@berry-ai/harness-client-ui-sidebar-right/client'
+import type {} from '@berry-ai/harness-client-ui-tool/client'
+import type {} from '@berry-ai/harness-client-ui-workspace/client'
+import type { MainPanelId } from '@berry-ai/harness-client-ui-layout/client'
 import type {} from '@berry-ai/harness-api-remotes/client'
-import type {} from '@deepseek-ai/dsh-client-connection/client'
+import type {} from '@berry-ai/harness-client-connection/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { ScheduleCatalogEntry, ScheduleDeliveryHistoryRequest, ScheduleId, ScheduleUpdateRequest } from '@berry-ai/harness-schedule/client'
 import { createCatalogSource, type CatalogDeleteOutcome, type CatalogInjected } from './catalog-source.ts'
@@ -64,7 +64,7 @@ import { en as managerEn, zh as managerZh, type TaskManagerKey } from './task-ma
 const MANAGER_NS = 'schedule.manager'
 const PANEL_ID = 'schedules' as MainPanelId
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface LocaleNamespaceMap {
     /** Active Schedule catalog copy. */
     'schedule.catalog': ScheduleCatalogKey

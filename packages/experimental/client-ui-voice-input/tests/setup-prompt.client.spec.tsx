@@ -2,7 +2,7 @@
 /** Activation guidance waits for cache inspection and leaves installation to the detail page. */
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { SpeechPreparationState, SpeechProviderId } from '@berry-ai/harness-experimental-speech-to-text/types'
 import { afterEach, expect, it, vi } from 'vitest'
 import { VoiceSetupPrompt, type VoiceSetupPromptProps } from '../src/client/VoiceSetupPrompt.tsx'

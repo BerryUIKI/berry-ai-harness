@@ -6,7 +6,7 @@
  */
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { ModelSelection } from '@berry-ai/harness-api-remotes/client'
-import type { SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import type { SnapshotStore } from '@berry-ai/harness-client-store'
 import type { ModelDirectoryState } from './directory.ts'
 
 /** Injected business face of the composer model seat. */

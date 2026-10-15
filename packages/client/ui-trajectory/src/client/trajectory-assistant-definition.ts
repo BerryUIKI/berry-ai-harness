@@ -3,7 +3,7 @@ import type {
   AssistantBlock, AssistantMessageNode, ConversationLocation,
   ConversationMatch, ConversationNodeContext, ConversationNodeDefinition,
   RequestView,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import { assistantStreamFirstTokenTime } from '@berry-ai/harness-llm/assistant-stream'
 import type { SessionEvent } from '@berry-ai/harness-session/types'

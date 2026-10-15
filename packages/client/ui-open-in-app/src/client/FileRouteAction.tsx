@@ -1,6 +1,6 @@
 /** Adapt authorized delivery and changed-file routes to the shared opening control. */
-import type { PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-deliverables/client'
+import type { PropsLocale, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
+import type {} from '@berry-ai/harness-client-ui-deliverables/client'
 import { parseNativeFileApplications } from '@berry-ai/harness-native-command/types'
 import type { SessionWorkspacePathApplication } from '@berry-ai/harness-api-session-controller/types'
 import { useFileApplications } from './file-applications.ts'

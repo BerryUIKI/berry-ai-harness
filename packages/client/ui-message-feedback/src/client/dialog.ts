@@ -3,10 +3,10 @@
  * failure toasts. One form serves two targets: the Session itself (a bare `/feedback`)
  * and one assistant message (Like or Dislike). The overlay view renders from
  * the store and raises the acknowledgement after a successful submission.
- * @module @deepseek-ai/dsh-client-ui-message-feedback/client/dialog
+ * @module @berry-ai/harness-client-ui-message-feedback/client/dialog
  */
 
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 import type { MessageId } from '@berry-ai/harness-api-remotes/client'
 import type { FeedbackCategory, FeedbackRecord } from '@berry-ai/harness-command-feedback/types'
 import type { MessageFeedbackRating } from '@berry-ai/harness-message-feedback/types'

@@ -20,7 +20,7 @@
  * the browser module; distinct active Loader sources for that package are a
  * composition error. Bundle content changes reach the graph only through
  * {@link ClientModuleRegistry.rebuilt}.
- * @module @deepseek-ai/dsh-client-modules
+ * @module @berry-ai/harness-client-modules
  */
 
 import { createHash } from 'node:crypto'
@@ -533,7 +533,7 @@ export function orderByModuleGraph(entries: readonly WebBootEntry[]): WebBootEnt
 }
 
 /** Bootstrap package whose ordinary client bundle supplies the module-system implementation. */
-const CLIENT_MODULES_ID = '@deepseek-ai/dsh-client-modules'
+const CLIENT_MODULES_ID = '@berry-ai/harness-client-modules'
 
 /** Dynamic bundles grouped into the parser bootstrap batch before the Vite shell. */
 const PARSER_PRELOAD_IDS = [CLIENT_MODULES_ID] as const

@@ -53,8 +53,8 @@ const CHOOSER_PACKAGE = '@berry-ai/harness-host-directory-picker-auto'
 const CHOOSER_BACKEND_PACKAGES = [
   '@berry-ai/harness-host-directory-picker-native',
   '@berry-ai/harness-host-directory-picker-browse',
-  '@deepseek-ai/dsh-client-ui-directory-picker-browse',
-  '@deepseek-ai/dsh-client-ui-directory-picker-native',
+  '@berry-ai/harness-client-ui-directory-picker-browse',
+  '@berry-ai/harness-client-ui-directory-picker-native',
 ]
 const errors: string[] = []
 const pluginReferences: PluginReference[] = []

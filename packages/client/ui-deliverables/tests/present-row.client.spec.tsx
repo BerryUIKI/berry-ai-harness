@@ -2,7 +2,7 @@
 /** Present UI derives statuses and details from durable tool records. */
 import { cleanup, fireEvent, render } from '@testing-library/react'
 import { afterEach, expect, it, vi } from 'vitest'
-import type { StartedToolCall, ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
+import type { StartedToolCall, ToolResultNode } from '@berry-ai/harness-client-ui-chat/client'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import { PresentRow } from '../src/client/PresentRow.tsx'

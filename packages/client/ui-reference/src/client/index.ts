@@ -11,19 +11,19 @@
  * workspace is not the current one. A session is dated from the Host session
  * list, so the `@` menu and the session list never disagree about its age.
  *
- * @module @deepseek-ai/dsh-client-ui-reference/client
+ * @module @berry-ai/harness-client-ui-reference/client
  */
 // Type-only: pulls the generated Remote API and ctx.remote merge through the Client assembly boundary.
 import type {} from '@berry-ai/harness-api-remotes/client'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type {} from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
+import type {} from '@berry-ai/harness-client-locale/client'
+import type {} from '@berry-ai/harness-client-ui-sidebar-right/client'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { ISessions } from '@berry-ai/harness-api-session-controller/client'
-import { relativeTime } from '@deepseek-ai/dsh-client-ui-primitives'
+import { relativeTime } from '@berry-ai/harness-client-ui-primitives'
 import type {
   ClientSessionContext, InputTriggerCrumb, InputTriggerServiceContract, InputTriggerSource,
-} from '@deepseek-ai/dsh-client-ui-input-trigger/client'
+} from '@berry-ai/harness-client-ui-input-trigger/client'
 import { formatFileMention } from '@berry-ai/harness-file-reference/grammar'
 import type { FileReferenceCandidate } from '@berry-ai/harness-file-reference/types'
 import type { SessionReferenceMentionCandidate } from '@berry-ai/harness-session-reference/types'

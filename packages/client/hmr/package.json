@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-hmr",
+  "name": "@berry-ai/harness-client-hmr",
   "description": "Web client graph synchronization and rebuilt-bundle reload transport",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -28,7 +28,7 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-client-modules"
+        "@berry-ai/harness-client-modules"
       ],
       "platform": "web",
       "immediately": true
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-client-modules": "workspace:*",
+    "@berry-ai/harness-client-modules": "workspace:*",
     "@berry-ai/harness-host-webserver": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },

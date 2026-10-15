@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import type { GlobalStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
+import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { bindSnapshotSelector, RemoteError } from '@berry-ai/harness-client-test-runtime'
@@ -9,8 +9,8 @@ import { CloseLabel, HeaderContent, TriggerContent } from '../src/client/chrome.
 import type { TriggerContentProps } from '../src/client/chrome.tsx'
 import { SettingsDocumentAction } from '../src/client/SettingsDocumentAction.tsx'
 import { DeveloperToolsRow } from '../src/client/DeveloperToolsRow.tsx'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import { SettingsDescribeMirror } from '@deepseek-ai/dsh-client-ui-settings/src/client/settings-mirror.ts'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import { SettingsDescribeMirror } from '@berry-ai/harness-client-ui-settings/src/client/settings-mirror.ts'
 import { SettingsDocumentStore } from '../src/client/settings-document-store.ts'
 
 // Every fixture carries the resource hook the resources plugin merges into GlobalStandardProps.

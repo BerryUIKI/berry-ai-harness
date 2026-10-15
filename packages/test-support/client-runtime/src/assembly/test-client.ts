@@ -6,13 +6,13 @@
  */
 import { Context, type Plugin } from '@deepseek-ai/cordis'
 import type { Entry } from '@deepseek-ai/cordis-plugin-loader'
-import { tearDownEntryFiber } from '@deepseek-ai/dsh-client-modules/client'
+import { tearDownEntryFiber } from '@berry-ai/harness-client-modules/client'
 import {
   installConnection,
   type ConnectionHandle,
-} from '@deepseek-ai/dsh-client-connection/client'
-import { bootClient } from '@deepseek-ai/dsh-client-web/src/boot-client.ts'
-import { mountClient } from '@deepseek-ai/dsh-client-web/src/mount.ts'
+} from '@berry-ai/harness-client-connection/client'
+import { bootClient } from '@berry-ai/harness-client-web/src/boot-client.ts'
+import { mountClient } from '@berry-ai/harness-client-web/src/mount.ts'
 import type { RemoteMock } from '@berry-ai/harness-remote-mock'
 import { act } from '@testing-library/react'
 import { createInProcessModules, loadPluginModules } from './modules.ts'
@@ -60,7 +60,7 @@ class SharedJsdomShims {
 
 const sharedJsdomShims = new SharedJsdomShims()
 
-const CONNECTION_PACKAGE = '@deepseek-ai/dsh-client-connection'
+const CONNECTION_PACKAGE = '@berry-ai/harness-client-connection'
 
 /** Default readiness budget; the mock answers `$events` immediately, so a miss means a boot-time fixture is absent. */
 const DEFAULT_CONNECT_TIMEOUT_MS = 5_000

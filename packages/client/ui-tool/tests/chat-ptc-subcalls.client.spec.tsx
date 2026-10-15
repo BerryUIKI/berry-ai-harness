@@ -2,19 +2,19 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, fireEvent } from '@testing-library/react'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type {
   ChatSnapshot, StartedToolCall, ToolCallBlock, ToolResultNode,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-chat/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { SlotTestRuntime, stubConfigForm } from '@berry-ai/harness-client-test-runtime'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import type { PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import type { PropsRenderSlots } from '@berry-ai/harness-client-ui-slots'
 import {
   ConversationEventRegistry, ConversationViewRegistry, EMPTY_CONVERSATION_SNAPSHOT, type ConvViewOwnerProps,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { en as conversationEn, NS as CONVERSATION_NS, zh as conversationZh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
-import { apply as applyChat, inject as injectChat } from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
+import { en as conversationEn, NS as CONVERSATION_NS, zh as conversationZh } from '@berry-ai/harness-client-ui-conversation/src/client/locales.ts'
+import { apply as applyChat, inject as injectChat } from '@berry-ai/harness-client-ui-chat/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import { apply as applyTool, inject as injectTool } from '../src/client/apply.ts'
 import { toolChatSnapshot } from './tool-fixtures.client.ts'

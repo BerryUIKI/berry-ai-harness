@@ -6,9 +6,9 @@ import {
   IconCheckOutlineRegular, IconCloseOutlineRegular, IconCordisPluginOutlineRegular, IconPlayOutlineRegular,
   IconStopFillRegular, IconTrashOutlineRegular, StateDot, Tooltip, useDismissOnOutsidePointer,
   type StateDotState,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-sidebar/client'
+} from '@berry-ai/harness-client-ui-primitives'
+import type { InjectFace, PropsLocale, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
+import type {} from '@berry-ai/harness-client-ui-sidebar/client'
 import type { CordisRunActivity } from '@berry-ai/harness-cordis-client-runner/client'
 import type { SessionId } from '@berry-ai/harness-api-remotes/client'
 import type { CordisInventoryRow } from './dynamic-port.ts'

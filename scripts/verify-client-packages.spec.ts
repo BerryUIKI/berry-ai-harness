@@ -97,7 +97,7 @@ describe('source package uses', () => {
   it('counts type imports, module augmentations, dynamic imports, and JSX', () => {
     const uses = collectSourcePackageUses('feature.tsx', [
       "import type { A } from '@deepseek-ai/dsh-a/subpath'",
-      "declare module '@deepseek-ai/dsh-client-ui-slots' {}",
+      "declare module '@berry-ai/harness-client-ui-slots' {}",
       "const load = () => import('@deepseek-ai/dsh-b/remote')",
       'export const view = <div />',
       "export type { Local } from './local.ts'",
@@ -106,12 +106,12 @@ describe('source package uses', () => {
     expect([...uses].sort()).toEqual([
       '@deepseek-ai/dsh-a',
       '@deepseek-ai/dsh-b',
-      '@deepseek-ai/dsh-client-ui-slots',
+      '@berry-ai/harness-client-ui-slots',
       'react',
     ])
     expect([...collectRuntimeSourcePackageUses('feature.tsx', [
       "import type { A } from '@deepseek-ai/dsh-a/subpath'",
-      "declare module '@deepseek-ai/dsh-client-ui-slots' {}",
+      "declare module '@berry-ai/harness-client-ui-slots' {}",
       "const load = () => import('@deepseek-ai/dsh-b')",
       'export const view = <div />',
     ].join('\n'))].sort()).toEqual([
@@ -316,14 +316,14 @@ describe('manifest declarations', () => {
       inject: ['', '@berry-ai/harness-agent', '@berry-ai/harness-agent'],
       sourceUses: {
         '@berry-ai/harness-agent': ['packages/client/feature/src/index.ts'],
-        '@deepseek-ai/dsh-client-ui-slots': ['packages/client/feature/src/view.tsx'],
+        '@berry-ai/harness-client-ui-slots': ['packages/client/feature/src/view.tsx'],
       },
       dependencies: {
         [CORDIS]: 'workspace:^',
         '@berry-ai/harness-agent': 'workspace:*',
       },
       peerDependencies: {
-        '@deepseek-ai/dsh-client-ui-slots': 'workspace:^',
+        '@berry-ai/harness-client-ui-slots': 'workspace:^',
         '@deepseek-ai/cordis-plugin-loader': 'workspace:^',
       },
       devDependencies: {},

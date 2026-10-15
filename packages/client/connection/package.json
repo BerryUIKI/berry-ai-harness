@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-connection",
+  "name": "@berry-ai/harness-client-connection",
   "description": "Authenticated RPC transport and generation lifecycle",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

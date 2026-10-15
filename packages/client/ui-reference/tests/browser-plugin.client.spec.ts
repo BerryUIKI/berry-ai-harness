@@ -5,13 +5,13 @@
  */
 import { Context, Service } from '@deepseek-ai/cordis'
 import { afterEach, beforeEach, describe, expect, it, onTestFinished, vi } from 'vitest'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { RemoteError, TestSessions } from '@berry-ai/harness-client-test-runtime'
 import type { SessionFixture } from '@berry-ai/harness-client-test-runtime'
 import type {
   CandidateRequest, ClientSessionContext, InputTriggerCandidate, InputTriggerSource,
-} from '@deepseek-ai/dsh-client-ui-input-trigger/client'
+} from '@berry-ai/harness-client-ui-input-trigger/client'
 import type { FileReferenceCandidate } from '@berry-ai/harness-file-reference/types'
 import type { SessionReferenceMentionCandidate } from '@berry-ai/harness-session-reference/types'
 import { apply, inject } from '../src/client/index.ts'

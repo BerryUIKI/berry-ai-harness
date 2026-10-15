@@ -2,7 +2,7 @@
 
 import type { ProcessGroupData } from '../src/client/contract/process-groups.ts'
 import type { InboxState } from '@berry-ai/harness-agent/types'
-import type { GlobalStandardProps, PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
+import type { GlobalStandardProps, PropsRenderSlots } from '@berry-ai/harness-client-ui-slots'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import { useEffect, useMemo } from 'react'
@@ -13,7 +13,7 @@ import type {
   LegacyConversationSlice, ModelRetryNode, StartedToolCall, SteeringMessageNode,
   ToolCallBlock, ToolResultNode, TurnErrorNode, TurnMaxTokensNode,
   TranscriptViewMode, UserMessageNode,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-chat/client'
 import type {
   SessionListState, SessionSnapshot,
 } from '@berry-ai/harness-api-session-controller/client'
@@ -21,16 +21,16 @@ import type {
   ConversationGroupedView,
   ConversationSnapshot, ConversationViewSnapshotStore, GroupKey, GroupSnapshot,
   MessageImagesOwnerProps, NodeKey, TurnLocation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type { WorkspaceSnapshot } from '@berry-ai/harness-api-workspace-controller/client'
 import { SessionSeq, type SessionId } from '@berry-ai/harness-session/types'
-import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
-import type { KeyedSnapshotSelectorHook, SnapshotSelectorHook } from '@deepseek-ai/dsh-client-ui-slots'
+import type { SessionStatusSnapshot } from '@berry-ai/harness-client-ui-session/client'
+import type { KeyedSnapshotSelectorHook, SnapshotSelectorHook } from '@berry-ai/harness-client-ui-slots'
 import { bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { createSnapshotStore, type ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import { EMPTY_CONVERSATION_SNAPSHOT } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { createSnapshotStore, type ObservableSnapshot } from '@berry-ai/harness-client-store'
+import { EMPTY_CONVERSATION_SNAPSHOT } from '@berry-ai/harness-client-ui-conversation/client'
+import { en as commonEn } from '@berry-ai/harness-client-locale/src/locales/en.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import { createChatStore } from '../src/client/stores.ts'
 import { derivePresentationPolicy, type CollapseTiming } from '../src/client/presentation-policy.ts'

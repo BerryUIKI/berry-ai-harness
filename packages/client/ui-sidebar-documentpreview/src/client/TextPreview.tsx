@@ -12,12 +12,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import clsx from 'clsx'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import type { InjectFace, PropsLocale, PropsRenderSlots, PropsRuntime, PropsStore } from '@deepseek-ai/dsh-client-ui-slots'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
+import type { InjectFace, PropsLocale, PropsRenderSlots, PropsRuntime, PropsStore } from '@berry-ai/harness-client-ui-slots'
 import {
   FileTypeIcon, IconNowrapFillRegular, IconPauseOutlineRegular, IconPlayOutlineRegular,
   IconRefreshOutlineRegular, IconWrapFillRegular, Menu, PathLabel, Tooltip, classifyFileType,
-} from '@deepseek-ai/dsh-client-ui-primitives'
+} from '@berry-ai/harness-client-ui-primitives'
 import { pathPartsOf } from '@berry-ai/harness-util-workspace-path'
 import type { TextInjected } from './face.ts'
 import { emptyFailureRecourse, failureLine } from './failure-line.ts'

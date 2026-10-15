@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { HostObservable, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+import type { HostObservable, PropsLocale, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
 import type { SerializedElement, SerializedNode, SurfaceSnapshot } from '@berry-ai/harness-experimental-claude-code-mods/types'
 import { NS } from './locales.ts'
 import css from './Band.module.css'

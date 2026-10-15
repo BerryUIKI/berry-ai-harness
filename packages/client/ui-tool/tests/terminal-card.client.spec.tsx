@@ -1,22 +1,22 @@
 // @vitest-environment jsdom
 
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { useDisclosure } from '@deepseek-ai/dsh-client-ui-chat/src/client/chat/use-disclosure.ts'
+import { useDisclosure } from '@berry-ai/harness-client-ui-chat/src/client/chat/use-disclosure.ts'
 import { cleanup, fireEvent, render } from '@testing-library/react'
 import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { StartedToolCall, ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { StartedToolCall, ToolResultNode } from '@berry-ai/harness-client-ui-chat/client'
 import type { SessionListState } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { en as commonEn } from '@berry-ai/harness-client-locale/src/locales/en.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import {
   localizeTerminalCardModel, terminalCardModel, terminalFailed,
 } from '../src/client/tool/models/terminal-card-model.ts'
 import { GenericToolCard, type GenericToolCardProps } from '../src/client/tool/toolviews/GenericToolCard.tsx'
 import { BashRow } from '../src/client/tool/toolviews/bash-sample.tsx'
-import { en, zh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
+import { en, zh } from '@berry-ai/harness-client-ui-conversation/src/client/locales.ts'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 
 type BashRowProps = Parameters<typeof BashRow>[0]
@@ -528,7 +528,7 @@ describe('BashRow terminal card', () => {
   })
 
   it.each([undefined, 'dispatch-parent'])('expands a background launch and its acknowledgement without reporting a job exit (parent: %s)', (parentCallId) => {
-    const command = 'pnpm --filter @deepseek-ai/dsh-client-ui-tool run build --watch --verbose'
+    const command = 'pnpm --filter @berry-ai/harness-client-ui-tool run build --watch --verbose'
     const args = { command, description: 'Wait', run_in_background: true }
     const argsRaw = JSON.stringify(args)
     const inspect = vi.fn()

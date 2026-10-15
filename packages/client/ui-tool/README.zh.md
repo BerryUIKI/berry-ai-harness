@@ -3,7 +3,7 @@ description: "dsh Web 客户端的 Client 工具展示插件：完整调用树�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-client-ui-tool
+# @berry-ai/harness-client-ui-tool
 
 [English](README.md) | 中文
 

@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, fireEvent } from '@testing-library/react'
 import type { ISession } from '@berry-ai/harness-api-session-controller/client'
@@ -8,13 +8,13 @@ import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import {
   apply as applyChat, inject as injectChat, type ToolResultNode,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
+} from '@berry-ai/harness-client-ui-chat/client'
+import type { PropsRenderSlots } from '@berry-ai/harness-client-ui-slots'
 import { SlotTestRuntime, stubConfigForm } from '@berry-ai/harness-client-test-runtime'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { apply as applyConversation, inject as injectConversation } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { apply as applyTool, inject as injectTool } from '@deepseek-ai/dsh-client-ui-tool/client'
-import type { ToolCallViewProps } from '@deepseek-ai/dsh-client-ui-tool/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import { apply as applyConversation, inject as injectConversation } from '@berry-ai/harness-client-ui-conversation/client'
+import { apply as applyTool, inject as injectTool } from '@berry-ai/harness-client-ui-tool/client'
+import type { ToolCallViewProps } from '@berry-ai/harness-client-ui-tool/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import { toolSessionEvents } from './tool-fixtures.client.ts'
 

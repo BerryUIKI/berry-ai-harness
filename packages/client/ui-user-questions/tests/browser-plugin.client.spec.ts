@@ -1,9 +1,9 @@
 /** Scoped Remote Event wiring and projection publishing for the browser question consumer. */
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { InboxWireState } from '@berry-ai/harness-agent/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { ToolCallId } from '@berry-ai/harness-llm'

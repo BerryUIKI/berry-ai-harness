@@ -35,13 +35,13 @@
     "buffer": "^6.0.3",
     "picomatch": "^4.0.7",
     "readable-stream": "^4.7.0",
-    "@deepseek-ai/dsh-client-web": "workspace:*"
+    "@berry-ai/harness-client-web": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-modules": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
+    "@berry-ai/harness-client-modules": "workspace:*",
     "@berry-ai/harness-host-webserver": "workspace:*"
   },
   "devDependencies": {
@@ -50,9 +50,9 @@
     "@berry-ai/harness-api-gateway": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-bash-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-file-upload": "workspace:*",
-    "@deepseek-ai/dsh-client-modules": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
+    "@berry-ai/harness-client-file-upload": "workspace:*",
+    "@berry-ai/harness-client-modules": "workspace:*",
     "@berry-ai/harness-host-webserver": "workspace:*",
     "@berry-ai/harness-sandbox-local": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",

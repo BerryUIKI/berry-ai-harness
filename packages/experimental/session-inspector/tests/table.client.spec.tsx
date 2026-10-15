@@ -2,7 +2,7 @@
 /** Virtual Inspector rows expose raw data and flash on updates. */
 
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { bindSnapshotSelector, makeTranslate, RemoteError, sessionSnapshot } from '@berry-ai/harness-client-test-runtime'
 import { afterEach, beforeEach, expect, it, onTestFinished, vi } from 'vitest'

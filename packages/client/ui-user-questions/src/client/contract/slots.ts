@@ -1,5 +1,5 @@
 /** Question composer props and one pending Remote waterfall response. */
-import type { InjectFace, PropsLocale, PropsRenderSlots, PropsRuntime, PropsStore } from '@deepseek-ai/dsh-client-ui-slots'
+import type { InjectFace, PropsLocale, PropsRenderSlots, PropsRuntime, PropsStore } from '@berry-ai/harness-client-ui-slots'
 // The client module declares the conversation.composer SlotMap entry required by PropsRuntime.
 import type { ToolCallId } from '@berry-ai/harness-llm/brand'
 import type { SessionId } from '@berry-ai/harness-session/types'
@@ -8,14 +8,14 @@ import type {
 } from '@berry-ai/harness-user-questions/types'
 import type { createQuestionDraftStore } from '../draft-store.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-session/client' {
+declare module '@berry-ai/harness-client-ui-session/client' {
   interface SessionPendingInteractionMap {
     /** Pending question or plan-review request. */
     question: PendingQuestion
   }
 }
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface SlotMap {
     /** Actions for the exact plan under review; approval remains with the question composer. */
     'conversation.plan-review.actions': { kind: 'list'; scope: 'session'; owner: { review: PlanReview; requestKey: PendingQuestion['key'] } }

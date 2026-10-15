@@ -10,7 +10,7 @@
 
 import './control-row-dom.ts'
 import type { InboxState } from '@berry-ai/harness-agent/types'
-import type { GlobalStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
+import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { afterEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
 import { createPortal } from 'react-dom'
@@ -19,10 +19,10 @@ import {
   bindSnapshotSelector, conversationSnapshot as conversationFixture, makeTranslate, RemoteError,
   sessionSnapshot as sessionFixture,
 } from '@berry-ai/harness-client-test-runtime'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { SessionListState, SessionSnapshot } from '@berry-ai/harness-api-session-controller/client'
 import type { ContextPressureProjection } from '@berry-ai/harness-token-meter/client'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import type { Context } from '@deepseek-ai/cordis'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SubmitOutcome } from '../src/client/contract/input.ts'

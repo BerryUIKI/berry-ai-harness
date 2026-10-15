@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
-import { IconQuestionOutlineRegular } from '@deepseek-ai/dsh-client-ui-primitives'
+import { IconQuestionOutlineRegular } from '@berry-ai/harness-client-ui-primitives'
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-agent/types'
-import type { InjectFace, PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
+import type { InjectFace, PropsLocale } from '@berry-ai/harness-client-ui-slots'
 // Also merges the userQuestions key into SessionProjectionMap for useProjection.
 import type {
   AskUserQuestionAnswerItem, AskUserQuestionItem, AskUserQuestionOption,

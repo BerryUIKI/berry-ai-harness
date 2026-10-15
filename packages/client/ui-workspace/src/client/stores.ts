@@ -5,7 +5,7 @@
  * register() receives the factory and the browser derives its PropsStore
  * share from the return type.
  */
-import { defineStore, type EngineStoreHandle } from '@deepseek-ai/dsh-client-store'
+import { defineStore, type EngineStoreHandle } from '@berry-ai/harness-client-store'
 import type { SessionListState } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { reconcileManualOrder, type ArchivedFilter, type SessionRowState } from './tree.ts'

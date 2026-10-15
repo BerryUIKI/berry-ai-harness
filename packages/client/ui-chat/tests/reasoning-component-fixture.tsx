@@ -1,8 +1,8 @@
 /** Child-renderer stubs for component units; registry behavior uses the real runtime fixture. */
 import { createElement, type ComponentProps } from 'react'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
-import type { PropsRenderFactories } from '@deepseek-ai/dsh-client-ui-slots'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
+import type { PropsRenderFactories } from '@berry-ai/harness-client-ui-slots'
 import type { ReasoningContentInput } from '../src/client/contract/slots.ts'
 import type { AssistantMarkdownProps } from '../src/client/chat/AssistantMarkdown.tsx'
 import { ReasoningContent } from '../src/client/chat/ReasoningContent.tsx'

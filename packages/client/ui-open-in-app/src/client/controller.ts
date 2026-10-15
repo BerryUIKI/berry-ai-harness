@@ -1,6 +1,6 @@
 /** Browser availability/choice state and the launch carrier for the split button. */
 
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 import {
   OPEN_IN_APP_APPS_ROUTE, OPEN_IN_APP_OPEN_ROUTE,
   type OpenInAppAppsPayload, type OpenInAppOpenPayload,

@@ -20,16 +20,16 @@
  * guide registers through those stages unmodified, exactly as a type shipped
  * from another package does — `ui-sidebar-documentpreview` is the live proof.
  */
-import type {} from '@deepseek-ai/dsh-client-shortcuts/client'
+import type {} from '@berry-ai/harness-client-shortcuts/client'
 import { observeSidebarFocus } from './focus.ts'
 import { registerSidebarShortcuts } from './shortcuts.ts'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-client-resources/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type { ILayout } from '@deepseek-ai/dsh-client-ui-layout/client'
-import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
+import type {} from '@berry-ai/harness-client-resources/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-session/client'
+import type { ILayout } from '@berry-ai/harness-client-ui-layout/client'
+import type {} from '@berry-ai/harness-client-ui-layout/client'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {} from './contract/slots.ts'
 import { GuideBody, type GuideInjected } from './tabs/guide/GuideBody.tsx'
@@ -45,7 +45,7 @@ import { createSidebarRightStore } from './stores.ts'
 import { en, zh } from './locales.ts'
 import { GUIDE_ID, guideDefinition } from './tabs/guide/definition.ts'
 import { guideTabInfoFactory, tabInfoFactory } from './tab-info.ts'
-import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
+import type { TabId } from '@berry-ai/harness-client-ui-dockkit'
 import { defaultSeed } from './contract/seed.ts'
 
 export type { SidebarRightTarget } from './focus.ts'
@@ -70,7 +70,7 @@ export type {
   SidebarRightTabParams, SidebarRightTabParamsFor, SidebarRightTabParamsMap,
 } from './contract/params.ts'
 // The layout ids and rectangle the navigation face takes, so a caller needs no import from the kit.
-export type { FloatRect, PaneId, TabId, TabRecord } from '@deepseek-ai/dsh-client-ui-dockkit'
+export type { FloatRect, PaneId, TabId, TabRecord } from '@berry-ai/harness-client-ui-dockkit'
 export type { PinResource, SidebarRightNavigator, TabOccurrence, SidebarRightOccurrenceId } from './tab-domain.ts'
 export type { SidebarRightKey } from './locales.ts'
 export type { OpenContentIntent } from './stores.ts'

@@ -26,11 +26,11 @@ The owner of a protocol declares its value type on `ResourceProtocolMap` and reg
 ```ts ignore-check
 import type { Context } from '@deepseek-ai/cordis'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
-import type {} from '@deepseek-ai/dsh-client-resources/client'
+import type {} from '@berry-ai/harness-client-resources/client'
 
 interface NoteView { readonly title: string; readonly updatedAt: string }
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface ResourceProtocolMap { note: NoteView }
 }
 
@@ -62,7 +62,7 @@ Every slot component receives `useResource` in its props, whatever its scope ([S
 | `failed` | The latest frame reported a failure | the last `ok` value, kept | the frame's `RemoteFailure` |
 
 ```tsx ignore-check
-import type { PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+import type { PropsRuntime } from '@berry-ai/harness-client-ui-slots'
 import type {} from '@berry-ai/harness-api-workspace-files/client'
 
 type Props = PropsRuntime<'sidebar.right.pane.tab'>

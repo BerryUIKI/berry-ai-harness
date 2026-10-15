@@ -285,7 +285,7 @@ describe('product package use', () => {
   it('requires a declared Web distribution package to remain source-reachable', () => {
     const root = fixture()
     const directory = 'packages/client/web'
-    const name = '@deepseek-ai/dsh-client-web'
+    const name = '@berry-ai/harness-client-web'
     pkg(root, directory, name)
     const policy = { [directory]: { category: 'web-distribution', reason: 'Browser boot kernel.' } } as const
     expect(failures(root, policy)).toContain('stale web-distribution policy')

@@ -7,7 +7,7 @@ import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import { loadOverlayPatches } from '@berry-ai/harness-app-boot'
 import * as Telemetry from '@berry-ai/harness-host-product-telemetry-otel'
-import Analytics from '@deepseek-ai/dsh-client-product-analytics'
+import Analytics from '@berry-ai/harness-client-product-analytics'
 import { afterEach, expect, it, onTestFinished, vi } from 'vitest'
 
 afterEach(() => { vi.unstubAllEnvs() })

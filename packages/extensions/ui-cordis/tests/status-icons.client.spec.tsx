@@ -2,7 +2,7 @@
 
 import { cleanup, render } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
+import type { ToolResultNode } from '@berry-ai/harness-client-ui-chat/client'
 import type { CordisDynamicPackageId, CordisDynamicPluginId, CordisDynamicPluginRunId, SessionId } from '@berry-ai/harness-api-remotes/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import { CordisActionRow } from '../src/client/CordisActionRow.tsx'

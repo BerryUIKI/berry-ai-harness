@@ -6,7 +6,7 @@ import { liveConfig, omitsGeneratedPage } from '../../../settings/settings/tests
 import { plainConfig } from '../../../settings/settings/src/schema.ts'
 import {
   DEFAULT_PREFERENCE, Config, apply,
-} from '@deepseek-ai/dsh-client-ui-theme'
+} from '@berry-ai/harness-client-ui-theme'
 
 
 /** Collect the injection table the way an index render or boot payload does. */

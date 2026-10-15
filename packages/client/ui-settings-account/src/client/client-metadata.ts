@@ -2,7 +2,7 @@
  * Platform client identity for one account call. The Host turns these fields
  * into the Platform request headers, so the browser sends the UI language and
  * the local UTC offset rather than any credential.
- * @module @deepseek-ai/dsh-client-ui-settings-account/src/client/client-metadata
+ * @module @berry-ai/harness-client-ui-settings-account/src/client/client-metadata
  */
 import type { AccountClientMetadata } from '@berry-ai/harness-deepseek-account/types'
 

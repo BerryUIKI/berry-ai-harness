@@ -1,6 +1,6 @@
 /** Root-scoped controller for the right Sidebar's Session content. */
 import { useLayoutEffect } from 'react'
-import type { HostObservable, InjectFace, PropsRenderSlots, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+import type { HostObservable, InjectFace, PropsRenderSlots, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
 import type { SessionReference } from '@berry-ai/harness-api-session-controller/client'
 import type { SidebarSessionViewSnapshot } from '../session-views.ts'
 import type {} from '../contract/slots.ts'

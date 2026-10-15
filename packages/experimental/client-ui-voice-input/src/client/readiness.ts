@@ -1,7 +1,7 @@
 /** One reconnecting Host readiness mirror shared by every voice UI occurrence. */
 import type { Context } from '@deepseek-ai/cordis'
 import { RemoteStreamCarrierError } from '@berry-ai/harness-api-gateway/client'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 import type { SpeechCatalog } from '@berry-ai/harness-experimental-api-speech-to-text/types'
 import type {} from '@berry-ai/harness-experimental-api-speech-to-text/remote'
 

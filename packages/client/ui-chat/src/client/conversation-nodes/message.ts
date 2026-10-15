@@ -1,7 +1,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ContextMessageNode, ConversationNodeDefinition, SteeringMessageNode, UserMessageNode,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import { isAppendSurfaceEvent, isReplacementSurfaceEvent } from '@berry-ai/harness-session/surface'
 import type { InboxState } from './inbox.ts'
 import { chatNode } from './common.ts'

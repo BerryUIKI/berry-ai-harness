@@ -18,9 +18,9 @@
  */
 import type { Branded } from '@berry-ai/harness-brand'
 import { randomUUID } from '@berry-ai/harness-util-crypto'
-import type { LayoutState, PaneId, TabId, TabRecord } from '@deepseek-ai/dsh-client-ui-dockkit'
-import { findTabPane } from '@deepseek-ai/dsh-client-ui-dockkit'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import type { LayoutState, PaneId, TabId, TabRecord } from '@berry-ai/harness-client-ui-dockkit'
+import { findTabPane } from '@berry-ai/harness-client-ui-dockkit'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SidebarRightNavigationParams } from './contract/params.ts'
 import type { SidebarRightTabActions, SidebarRightTabCommands, SidebarRightTabNavigation, SidebarRightTabPlacement } from './contract/slots.ts'

@@ -3,7 +3,7 @@ description: "Localization for the web GUI: the zh/en preference, browser-derive
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-client-locale
+# @berry-ai/harness-client-locale
 
 English | [中文](README.zh.md)
 

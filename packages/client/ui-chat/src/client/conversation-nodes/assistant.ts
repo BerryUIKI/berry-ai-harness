@@ -2,7 +2,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {
   AssistantBlock, AssistantMessageNode, ConversationLocation, ConversationMatch,
   ConversationNodeContext, ConversationNodeDefinition,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import type {} from '@berry-ai/harness-llm-retry/types'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
@@ -19,7 +19,7 @@ declare module '../contract/chat-nodes.ts' {
   }
 }
 
-declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
+declare module '@berry-ai/harness-client-ui-conversation/client' {
   interface ConversationStepDataMap {
     /** Streaming, settled, or interrupted Assistant material for this Step. */
     'assistant-step': AssistantChatData

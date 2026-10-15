@@ -10,15 +10,15 @@
 import type { ComponentType } from 'react'
 import type {
   PickOutcome, ReferenceInsert, TokenSpan,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { IconProps } from '@deepseek-ai/dsh-client-ui-primitives'
+} from '@berry-ai/harness-client-ui-conversation/client'
+import type { IconProps } from '@berry-ai/harness-client-ui-primitives'
 import type { SessionId } from '@berry-ai/harness-session/types'
 
 export type {
   ArbitrateKey, ArbitrateOutcome, BeginCommandRequest, CommandClaim, ConsumeTokenRequest,
   InsertReferenceRequest, InsertTextRequest, PickOutcome, ReferenceInsert, SubmitAttachment,
   SubmitOutcome, TokenSpan,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 
 /**
  * The provider-facing projection of one client session. It carries stable

@@ -3,8 +3,8 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { en as commonEn } from '@berry-ai/harness-client-locale/src/locales/en.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import { ContextInjectionRow } from '../src/client/chat/ContextInjectionRow.tsx'
 import { en, zh } from '../src/client/locale.ts'
 

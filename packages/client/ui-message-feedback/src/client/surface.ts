@@ -3,7 +3,7 @@
  * dialog controller, plus the routing between them. A message target puts a
  * selected judgment through the message controller; the Session target records
  * through the `sessionFeedback` Remote.
- * @module @deepseek-ai/dsh-client-ui-message-feedback/client/surface
+ * @module @berry-ai/harness-client-ui-message-feedback/client/surface
  */
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'

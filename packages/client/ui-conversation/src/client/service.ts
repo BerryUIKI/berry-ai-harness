@@ -16,11 +16,11 @@ import { randomUUID } from '@berry-ai/harness-util-crypto'
 import type {
   ISessions, PendingSubmissionRetirement, SessionFace,
 } from '@berry-ai/harness-api-session-controller/client'
-import type {} from '@deepseek-ai/dsh-client-file-upload/client'
+import type {} from '@berry-ai/harness-client-file-upload/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { ImageMediaType } from '@berry-ai/harness-attachment'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { SnapshotStore } from '@berry-ai/harness-client-store'
 import type {
   ComposerAttachment, ComposerFileAttachment, ComposerImageAttachment, DraftFileUpload,
 } from './contract/slots.ts'

@@ -1,16 +1,16 @@
 // @vitest-environment jsdom
 
 import ShortcutsService from '../../shortcuts/src/client/index.ts'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { Context, type Fiber } from '@deepseek-ai/cordis'
 import { stubConfigForm } from '@berry-ai/harness-client-test-runtime'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { SlotRendererHost } from '@deepseek-ai/dsh-client-ui-slots'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { apply as themeApply, inject as themeInject, ThemeRuntime } from '@deepseek-ai/dsh-client-ui-theme/client'
-import { apply, inject, LayoutController } from '@deepseek-ai/dsh-client-ui-layout/client'
-import { apply as nodeApply } from '@deepseek-ai/dsh-client-ui-layout'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
+import type { SlotRendererHost } from '@berry-ai/harness-client-ui-slots'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import { apply as themeApply, inject as themeInject, ThemeRuntime } from '@berry-ai/harness-client-ui-theme/client'
+import { apply, inject, LayoutController } from '@berry-ai/harness-client-ui-layout/client'
+import { apply as nodeApply } from '@berry-ai/harness-client-ui-layout'
 import type { MainPanelId } from '../src/client/service.ts'
 import type { createLayoutStore } from '../src/client/stores.ts'
 

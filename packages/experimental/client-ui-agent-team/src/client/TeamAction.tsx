@@ -10,10 +10,10 @@ import {
   IconChevronDownOutlineRegular,
   IconUserOutlineRegular, IconUsersOutlineRegular, StateDot, Tag, Tooltip,
   useAnchoredPosition, useDismissOnOutsidePointer, type StateDotState,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
-import type { TranslateNS } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-primitives'
+import type { PropsLocale, PropsRuntime } from '@berry-ai/harness-client-ui-slots'
+import type { TranslateNS } from '@berry-ai/harness-client-ui-slots'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
 import { NS, type TeamKey } from './locales.ts'
 import css from './TeamAction.module.css'
 

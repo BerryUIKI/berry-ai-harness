@@ -10,7 +10,7 @@
  * @module
  */
 import { useEffect, useMemo } from 'react'
-import type { SidebarRightNavigationParams } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
+import type { SidebarRightNavigationParams } from '@berry-ai/harness-client-ui-sidebar-right/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { scheduleTaskParams } from './definition.ts'
 import type { TaskTabBindings, TaskTabPage, TaskTabTarget } from './task-tab-bindings.ts'

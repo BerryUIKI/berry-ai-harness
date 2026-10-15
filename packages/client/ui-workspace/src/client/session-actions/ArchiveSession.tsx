@@ -15,7 +15,7 @@ import type {} from '@berry-ai/harness-schedule/client'
 import type {} from '@berry-ai/harness-subagent/client'
 import {
   Button, IconArchiveOutlineRegular, IconUnarchiveOutlineRegular, MenuItemButton, Modal, Tooltip,
-} from '@deepseek-ai/dsh-client-ui-primitives'
+} from '@berry-ai/harness-client-ui-primitives'
 import type {
   ArchiveSessionInjected, SessionArchiveConfirmInjected, SessionArchiveConfirmProps, SessionArchiveConfirmRequest,
   SessionMenuItemProps, SessionRowActionProps,

@@ -1,18 +1,18 @@
 // @vitest-environment jsdom
 /** Conversation assembly acceptance independent of Tool presentation. */
 import './control-row-dom.ts'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, waitFor, within } from '@testing-library/react'
 import { useState } from 'react'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
 import type { ISession } from '@berry-ai/harness-api-session-controller/client'
-import type { PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
+import type { PropsRenderSlots } from '@berry-ai/harness-client-ui-slots'
 import {
   RemoteError, SlotTestRuntime, usePinnedBrowserLanguages, stubConfigForm,
 } from '@berry-ai/harness-client-test-runtime'
 import { InputHub } from '../src/client/input/hub.ts'
-import { apply, inject, type EmptyWorkspaceOwnerProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import { apply, inject, type EmptyWorkspaceOwnerProps } from '@berry-ai/harness-client-ui-conversation/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 

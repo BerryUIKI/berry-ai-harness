@@ -14,15 +14,15 @@
 import type { ModelSelection } from '@berry-ai/harness-api-session-controller/types'
 import type {} from '@berry-ai/harness-api-session-controller/client'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { CommandUiContract, SelectOption } from '@deepseek-ai/dsh-client-ui-commands/client'
+import type { CommandUiContract, SelectOption } from '@berry-ai/harness-client-ui-commands/client'
 // Type-only: pulls the ui-conversation SlotMap merge (the input.model seat).
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type { TranslateNS } from '@deepseek-ai/dsh-client-ui-slots'
-import { IconDataOutlineRegular } from '@deepseek-ai/dsh-client-ui-primitives'
+import type {} from '@berry-ai/harness-client-locale/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-session/client'
+import type { TranslateNS } from '@berry-ai/harness-client-ui-slots'
+import { IconDataOutlineRegular } from '@berry-ai/harness-client-ui-primitives'
 import type { ModelDirectoryState } from './directory.ts'
 import { ModelDirectoryResolver } from './service.ts'
 import type { ModelSelectInjected } from './slots.ts'
@@ -36,7 +36,7 @@ export { ModelDirectoryResolver } from './service.ts'
 export type { ModelSelectInjected } from './slots.ts'
 export type { ModelKey } from './locales.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface LocaleNamespaceMap {
     /** The model selection surfaces' copy (/model popup + composer seat). */
     model: ModelKey

@@ -8,10 +8,10 @@
  * disposes it with the scope fiber.
  */
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type SnapshotStore } from '@berry-ai/harness-client-store'
 import type {
   ArbitrateKey, ArbitrateOutcome, PickOutcome, ReferenceInsert,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { detectTrigger } from '../core/detect.ts'
 import { MENU_CLOSED, menuReduce, seedGroups } from '../core/menu.ts'

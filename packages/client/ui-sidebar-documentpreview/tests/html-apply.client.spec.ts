@@ -1,6 +1,6 @@
 import { byteResult } from './fixtures.client.ts'
 /** HTML metadata and keyed slot contributions share one identity and unwind with their fiber. */
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { sessionFileAddress } from '@berry-ai/harness-util-workspace-path'

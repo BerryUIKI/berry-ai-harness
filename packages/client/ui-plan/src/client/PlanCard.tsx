@@ -1,13 +1,13 @@
 /** Persistent transcript cards and pending-review sidebar navigation. */
 import { useEffect } from 'react'
-import { FileTypeIcon, IconChevronRightOutlineRegular } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import { FileTypeIcon, IconChevronRightOutlineRegular } from '@berry-ai/harness-client-ui-primitives'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
 import type { SubmittedPlan } from './plan.ts'
 import type {} from './plan-definition.ts'
-import type { HostObservable, InjectFace, PropsLocale, PropsRuntime, PropsStore } from '@deepseek-ai/dsh-client-ui-slots'
+import type { HostObservable, InjectFace, PropsLocale, PropsRuntime, PropsStore } from '@berry-ai/harness-client-ui-slots'
 import type { ToolCallId } from '@berry-ai/harness-llm/brand'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type {} from '@deepseek-ai/dsh-client-ui-user-questions/client'
+import type {} from '@berry-ai/harness-client-ui-user-questions/client'
 import type { createPlanReviewStore } from './review-store.ts'
 import css from './PlanPreview.module.css'
 

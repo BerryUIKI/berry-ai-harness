@@ -10,7 +10,7 @@
  */
 import type { Context } from '@deepseek-ai/cordis'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
-import { createSnapshotStore, type ObservableSnapshot, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore, type ObservableSnapshot, type SnapshotStore } from '@berry-ai/harness-client-store'
 import type {
   ResourceOpenContext,
   ResourceProtocol,

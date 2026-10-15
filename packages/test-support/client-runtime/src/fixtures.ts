@@ -7,11 +7,11 @@ import type { SessionId } from '@berry-ai/harness-session/types'
 import {
   EMPTY_CONVERSATION_SNAPSHOT,
   type ConversationSnapshot,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import {
   EMPTY_CHAT_SNAPSHOT,
   type ChatSnapshot,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-chat/client'
 
 /**
  * Fixture overrides for the session behavior face: any subset of the

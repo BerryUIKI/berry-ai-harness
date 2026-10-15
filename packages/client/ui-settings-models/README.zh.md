@@ -3,7 +3,7 @@ description: "dsh Web 客户端的模型设置与产品引导插件：提供商�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-client-ui-settings-models
+# @berry-ai/harness-client-ui-settings-models
 
 [English](README.md) | 中文
 

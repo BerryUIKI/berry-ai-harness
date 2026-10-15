@@ -9,11 +9,11 @@ import type { SessionEvent } from '@berry-ai/harness-session/types'
 import {
   ConversationLocationIndex,
   ConversationNodeAssembler as RuntimeConversationNodeAssembler,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type {
   ConversationMatch, ConversationNodeContext,
   ConversationNodeDefinition, ConversationViewDefinition, ConversationViewNode,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 
 interface ScopeProbeStepData {
   readonly value: number
@@ -23,7 +23,7 @@ interface ScopeProbeTurnData {
   readonly valueSeenFromStep: number
 }
 
-declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
+declare module '@berry-ai/harness-client-ui-conversation/client' {
   interface ConversationStepDataMap {
     'scope-probe': ScopeProbeStepData
   }

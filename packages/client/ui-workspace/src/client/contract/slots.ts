@@ -40,17 +40,17 @@
  */
 import type {
   HostObservable, InjectFace, PropsHooks, PropsLocale, PropsRenderSlots, PropsRuntime, PropsStore, SlotHookFactory,
-} from '@deepseek-ai/dsh-client-ui-slots'
+} from '@berry-ai/harness-client-ui-slots'
 // Type-only: pull the owner SlotMap merges into programs that resolve the
 // runtime shares below.
-import type {} from '@deepseek-ai/dsh-client-ui-sidebar/client'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
+import type {} from '@berry-ai/harness-client-ui-sidebar/client'
+import type {} from '@berry-ai/harness-client-ui-conversation/client'
+import type {} from '@berry-ai/harness-client-ui-layout/client'
 import type { SessionSearchResultItem } from '@berry-ai/harness-api-session-controller/client'
 import type { RemoteHostFacts } from '@berry-ai/harness-api-remotes/client'
 import type { SessionActivity, WorkspaceId, WorkspaceView } from '@berry-ai/harness-api-workspace-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { ShortcutCatalogEntry } from '@deepseek-ai/dsh-client-shortcuts/client'
+import type { ShortcutCatalogEntry } from '@berry-ai/harness-client-shortcuts/client'
 import type { WorkspaceShortcutState } from '../shortcuts.ts'
 import type { StartSessionOptions } from '../navigation.ts'
 import type { createWorkspaceViewStore } from '../stores.ts'
@@ -112,7 +112,7 @@ export interface SessionRowScheduleOwnerProps {
   readonly sessionId: SessionId
 }
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface SlotMap {
     /** Directory-flow hole under the conversation empty-state picker (declared by the WorkspacePicker entry). */
     'conversation.hero.workspace.directoryFlow': { kind: 'single'; scope: 'root'; owner: DirectoryFlowOwnerProps }

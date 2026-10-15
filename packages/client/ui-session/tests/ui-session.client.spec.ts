@@ -9,8 +9,8 @@ import type {
   SessionSnapshot,
 } from '@berry-ai/harness-api-session-controller/client'
 import { MutableSessionEventSource } from '@berry-ai/harness-api-session-controller/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { HostObservable, RootStandardSourceContribution } from '@deepseek-ai/dsh-client-ui-slots'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { HostObservable, RootStandardSourceContribution } from '@berry-ai/harness-client-ui-slots'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import {

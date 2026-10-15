@@ -2,7 +2,7 @@
 /** The band draws a serialized mod tree and sends a button press to the Host with the generation it saw. */
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { SurfaceSnapshot } from '@berry-ai/harness-experimental-claude-code-mods/types'
 import { afterEach, expect, it, vi } from 'vitest'
 import { Band, type BandProps } from '../src/client/Band.tsx'

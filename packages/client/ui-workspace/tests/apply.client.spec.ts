@@ -1,4 +1,4 @@
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import type {
@@ -7,12 +7,12 @@ import type {
 import { SessionForkError } from '@berry-ai/harness-api-session-controller/client'
 import type { WorkspaceId, WorkspaceSnapshot, WorkspaceView } from '@berry-ai/harness-api-workspace-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { StoredEntry } from '@deepseek-ai/dsh-client-ui-slots'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
+import type { StoredEntry } from '@berry-ai/harness-client-ui-slots'
 import { RemoteError, TestRemote } from '@berry-ai/harness-client-test-runtime'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { apply, inject } from '@deepseek-ai/dsh-client-ui-workspace/client'
-import type { WorkspaceBrowserInjected, WorkspacePickerInjected } from '@deepseek-ai/dsh-client-ui-workspace/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import { apply, inject } from '@berry-ai/harness-client-ui-workspace/client'
+import type { WorkspaceBrowserInjected, WorkspacePickerInjected } from '@berry-ai/harness-client-ui-workspace/client'
 import {
   type ArchiveSessionInjected, type ForkSessionInjected, menuOpenStateFactory, type PinSessionInjected,
   type RenameSessionInjected, type RowToastInjected, type SessionArchiveConfirmInjected, type SessionRenameDialogInjected,

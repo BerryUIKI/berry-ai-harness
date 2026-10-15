@@ -1,7 +1,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ConversationMatch, ConversationNodeContext, ConversationNodeDefinition, TurnLocation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type {} from '@berry-ai/harness-llm-retry/types'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
 import { deriveTurnTokenUsage } from '@berry-ai/harness-token-meter/client'
@@ -17,7 +17,7 @@ declare module '../contract/chat-nodes.ts' {
   }
 }
 
-declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
+declare module '@berry-ai/harness-client-ui-conversation/client' {
   interface ConversationTurnDataMap {
     /** Closing Assistant and footer facts derived for this completed Turn. */
     'turn-tail': TurnTailChatData

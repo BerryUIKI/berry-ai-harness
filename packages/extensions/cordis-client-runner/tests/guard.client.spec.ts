@@ -16,7 +16,7 @@ import type {
   CordisDynamicPluginRunId,
   DynamicCordisPackage,
 } from '@berry-ai/harness-api-remotes/client'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
 import { dynamicCordisContext } from '../src/client/guard.ts'
 import type { DynamicCordisSlotLedgerRow } from '../src/client/guard.ts'
 

@@ -6,7 +6,7 @@
  * message.
  */
 import type { RemoteFailure } from '@berry-ai/harness-api-remotes/client'
-import type { TranslateNS } from '@deepseek-ai/dsh-client-locale/client'
+import type { TranslateNS } from '@berry-ai/harness-client-locale/client'
 
 /** Render a byte count the way a person reads one. */
 function humanBytes(bytes: number): string {

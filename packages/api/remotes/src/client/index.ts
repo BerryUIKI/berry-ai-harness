@@ -1,8 +1,8 @@
 /** Platform-neutral assembly of generated Host Remote contributions. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import productAnalyticsRemote from '@deepseek-ai/dsh-client-product-analytics/remote'
-export type {} from '@deepseek-ai/dsh-client-product-analytics/remote'
+import productAnalyticsRemote from '@berry-ai/harness-client-product-analytics/remote'
+export type {} from '@berry-ai/harness-client-product-analytics/remote'
 import agentPresetsRemote from '@berry-ai/harness-agent-preset-registry/remote'
 import userQuestionsRemote from '@berry-ai/harness-user-questions/remote'
 import commandsRemote from '@berry-ai/harness-commands/remote'
@@ -14,12 +14,12 @@ import scheduleRemote from '@berry-ai/harness-schedule/remote'
 import llmRemote from '@berry-ai/harness-llm/remote'
 import dynamicRemote from '@berry-ai/harness-cordis-host-runner/remote'
 import pluginManagerRemote from '@berry-ai/harness-plugin-manager/remote'
-import pluginRegistryProbeRemote from '@deepseek-ai/dsh-client-ui-plugin-manager/remote'
+import pluginRegistryProbeRemote from '@berry-ai/harness-client-ui-plugin-manager/remote'
 import pluginInventoryRemote from '@berry-ai/harness-host-plugin-inventory/remote'
 import messageFeedbackRemote from '@berry-ai/harness-message-feedback/remote'
 import permissionPresetsRemote from '@berry-ai/harness-permission-presets/remote'
 import sessionFeedbackRemote from '@berry-ai/harness-command-feedback/remote'
-import fileUploadsRemote from '@deepseek-ai/dsh-client-file-upload/remote'
+import fileUploadsRemote from '@berry-ai/harness-client-file-upload/remote'
 import sessionReferencesRemote from '@berry-ai/harness-session-reference/remote'
 import subagentsRemote from '@berry-ai/harness-subagent/remote'
 import sessionRemote from '@berry-ai/harness-api-session-controller/remote'
@@ -37,7 +37,7 @@ export type {
   PluginInstallLogChunk, PluginInstallProgress, PluginInstallRequestId, PluginRegistries, PluginSpecInspection, ReadOnlyReason, Registry,
 } from '@berry-ai/harness-plugin-manager/types'
 export type {} from '@berry-ai/harness-plugin-manager/remote'
-export type {} from '@deepseek-ai/dsh-client-ui-plugin-manager/remote'
+export type {} from '@berry-ai/harness-client-ui-plugin-manager/remote'
 export type { PluginInventorySnapshot } from '@berry-ai/harness-host-plugin-inventory/types'
 export type {} from '@berry-ai/harness-agent-preset-registry/remote'
 export type {} from '@berry-ai/harness-user-questions/remote'
@@ -52,7 +52,7 @@ export type {} from '@berry-ai/harness-host-plugin-inventory/remote'
 export type {} from '@berry-ai/harness-message-feedback/remote'
 export type {} from '@berry-ai/harness-permission-presets/remote'
 export type {} from '@berry-ai/harness-command-feedback/remote'
-export type {} from '@deepseek-ai/dsh-client-file-upload/remote'
+export type {} from '@berry-ai/harness-client-file-upload/remote'
 export type {} from '@berry-ai/harness-session-reference/remote'
 export type {} from '@berry-ai/harness-subagent/remote'
 export type * from '@berry-ai/harness-subagent/client'
@@ -93,7 +93,7 @@ export type {
   MessageId,
   RpcId, RpcRequest, RpcResponse, RpcResult, SessionId,
   StreamChunk,
-} from '@deepseek-ai/dsh-client-connection/client'
+} from '@berry-ai/harness-client-connection/client'
 export type {} from '@berry-ai/harness-api-gateway/client'
 export type {} from '@berry-ai/harness-cordis-host-runner/remote'
 

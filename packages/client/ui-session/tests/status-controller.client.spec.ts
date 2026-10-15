@@ -5,7 +5,7 @@ import { createClientTest, webApp } from '@berry-ai/harness-client-test-runtime/
 import { SESSION_FORMAT_VERSION, type SessionId } from '@berry-ai/harness-session/types'
 import type { SessionFollowFrame } from '@berry-ai/harness-api-session-controller/types'
 
-const it = createClientTest({ roster: webApp.closure(['@deepseek-ai/dsh-client-ui-session']) })
+const it = createClientTest({ roster: webApp.closure(['@berry-ai/harness-client-ui-session']) })
 const parentId = 'status-parent' as SessionId
 const childId = 'status-child' as SessionId
 

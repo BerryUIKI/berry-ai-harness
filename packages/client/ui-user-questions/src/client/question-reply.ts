@@ -1,7 +1,7 @@
 /** Late-reply conversation node: the steered `user-question-reply` message projected as question and answer pairs. */
-import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { ConversationNodeDefinition } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
+import type {} from '@berry-ai/harness-client-ui-chat/client'
+import type { ConversationNodeDefinition } from '@berry-ai/harness-client-ui-conversation/client'
+import type { PropsLocale } from '@berry-ai/harness-client-ui-slots'
 import { isAppendSurfaceEvent } from '@berry-ai/harness-session/surface'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
 import type {} from '@berry-ai/harness-user-questions/types'
@@ -35,7 +35,7 @@ export interface QuestionReplyData {
   readonly time: number
 }
 
-declare module '@deepseek-ai/dsh-client-ui-chat/client' {
+declare module '@berry-ai/harness-client-ui-chat/client' {
   interface ChatNodeDataMap {
     /** Late answer to a continued question. */
     'question-reply': QuestionReplyData

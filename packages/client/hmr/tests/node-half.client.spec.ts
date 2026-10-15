@@ -10,7 +10,7 @@ import { join } from 'node:path'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import { Context } from '@deepseek-ai/cordis'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import type { ClientArtifactBaseline, ClientModuleRegistry, WebBootGraph } from '@deepseek-ai/dsh-client-modules'
+import type { ClientArtifactBaseline, ClientModuleRegistry, WebBootGraph } from '@berry-ai/harness-client-modules'
 import type { WebRoute, WebServer } from '@berry-ai/harness-host-webserver'
 import { apply, Config, EVENTS_ENDPOINT, inject } from '../src/index.ts'
 

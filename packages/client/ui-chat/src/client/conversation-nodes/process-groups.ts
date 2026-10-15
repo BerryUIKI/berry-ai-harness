@@ -3,7 +3,7 @@ import { brandString } from '@berry-ai/harness-brand'
 import type {
   ConversationGroupDefinition, ConversationGroupInput, GroupKey, GroupSnapshot,
   GroupUpdate, NodeKey, NodeReference, RenderEntry,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type { ChatConversationViewNode, ChatNode } from '../contract/chat-nodes.ts'
 import type { ProcessActivitySummary, ProcessGroupData } from '../contract/process-groups.ts'
 import { hasAssistantReplyContent } from '../contract/assistant-content.ts'

@@ -7,9 +7,9 @@
  */
 import { isAbsoluteWorkspacePath } from '@berry-ai/harness-util-workspace-path'
 import { isAppendSurfaceEvent } from '@berry-ai/harness-session/surface'
-import type { TurnTailOwnerProps } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { ConversationNodeDefinition } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { MarkdownFileMentions } from '@deepseek-ai/dsh-client-ui-primitives'
+import type { TurnTailOwnerProps } from '@berry-ai/harness-client-ui-chat/client'
+import type { ConversationNodeDefinition } from '@berry-ai/harness-client-ui-conversation/client'
+import type { MarkdownFileMentions } from '@berry-ai/harness-client-ui-primitives'
 import type { PresentedFile } from '@berry-ai/harness-tool-present/types'
 import { isChangesEvent } from '../changes.ts'
 import { basename, isPresentedData, isPresentedFile } from '../presented.ts'
@@ -38,7 +38,7 @@ export interface DeliverablesTurnData {
   readonly changes?: ChangesTurnData
 }
 
-declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
+declare module '@berry-ai/harness-client-ui-conversation/client' {
   interface ConversationTurnDataMap {
     /** Successful mutation paths, recorded changed files, and deliveries accumulated in this Turn. */
     deliverables: DeliverablesTurnData

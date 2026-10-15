@@ -1,7 +1,7 @@
 /** Producer-to-UI regression for shell results bounded by the real spill policy. */
 import { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@berry-ai/harness-agent'
-import type { ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
+import type { ToolResultNode } from '@berry-ai/harness-client-ui-chat/client'
 import { PtcRuntime } from '@berry-ai/harness-ptc-runtime'
 import type { PtcRunRequest, PtcRunSpec, PtcRunResult } from '@berry-ai/harness-ptc-runtime'
 import { estimateContent } from '@berry-ai/harness-token-meter/estimate'

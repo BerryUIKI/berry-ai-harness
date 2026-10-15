@@ -1,7 +1,7 @@
 /** Client Cordis plugin that publishes browser observations directly to the Inspector Worker. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-client-connection/client'
+import type {} from '@berry-ai/harness-client-connection/client'
 import type { InspectorClientBootstrap } from '../shared/bridge/messages/control.ts'
 import { INSPECTOR_BOOTSTRAP_ROUTE } from '../shared/web.ts'
 import { parseInspectorClientBootstrap } from '../shared/bridge/control-codec.ts'

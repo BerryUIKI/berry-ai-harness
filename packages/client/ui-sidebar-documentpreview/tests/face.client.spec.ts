@@ -15,7 +15,7 @@ import type { DocumentFileBytes, ReadDocumentBytes, ReadWorkspaceFilePage } from
 import { hostFileOf } from '../src/client/rpc.ts'
 import { createTextStore } from '../src/client/store.ts'
 import { ABSOLUTE_PATH, FILE, PATH, SESSION, createResources, failure, page } from './fixtures.client.ts'
-import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
+import type { TabId } from '@berry-ai/harness-client-ui-dockkit'
 
 const TAB_1 = 'tab-1' as TabId
 

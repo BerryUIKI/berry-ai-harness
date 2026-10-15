@@ -116,7 +116,7 @@ async function bootWeb(
     { id: 'directory-picker', disabled: true },
     { insert: [
       { id: 'directory-picker-browse', name: '@berry-ai/harness-host-directory-picker-browse' },
-      { id: 'ui-directory-picker-browse', name: '@deepseek-ai/dsh-client-ui-directory-picker-browse' },
+      { id: 'ui-directory-picker-browse', name: '@berry-ai/harness-client-ui-directory-picker-browse' },
     ] },
     { id: 'agent-preset-registry', config: { default: 'standard' } },
     ...extra,

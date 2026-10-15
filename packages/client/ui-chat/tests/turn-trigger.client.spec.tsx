@@ -2,7 +2,7 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { cleanup, fireEvent, render } from '@testing-library/react'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { IconClockOutlineRegular } from '@deepseek-ai/dsh-client-ui-primitives'
+import { IconClockOutlineRegular } from '@berry-ai/harness-client-ui-primitives'
 import type { ChatNode } from '../src/client/contract/chat-nodes.ts'
 import { TurnTriggerNodeView } from '../src/client/chat/TurnTriggerNodeView.tsx'
 import { turnTriggerDetails } from '../src/client/chat/turn-trigger.ts'

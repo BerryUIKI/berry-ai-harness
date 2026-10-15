@@ -13,7 +13,7 @@ import type { AgentContext } from '../scope.ts'
 import type { SessionSearchResultItem } from '../sessions/manager.ts'
 import type { SessionBinding, SessionListState } from '../sessions/service.ts'
 import type { SessionFace } from './session.ts'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
 import type { SessionReferenceSource } from '../index.ts'
 
 export type { AgentContext } from '../scope.ts'

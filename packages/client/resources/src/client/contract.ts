@@ -15,10 +15,10 @@
  * type without importing the owner's runtime.
  */
 import type { RemoteFailure, RemoteResult } from '@berry-ai/harness-typert-protocol'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import type { ResourceProtocolMap } from '@deepseek-ai/dsh-client-ui-slots'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
+import type { ResourceProtocolMap } from '@berry-ai/harness-client-ui-slots'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface GlobalStandardProps {
     /** Live value of one address, resolved through the provider registered for its protocol. */
     useResource: UseResource

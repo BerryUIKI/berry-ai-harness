@@ -3,7 +3,7 @@
  * fiber's lifetime, reading through `ctx.remote` in the Session each address names.
  */
 import { Context } from '@deepseek-ai/cordis'
-import type { ResourceProvider } from '@deepseek-ai/dsh-client-resources/client'
+import type { ResourceProvider } from '@berry-ai/harness-client-resources/client'
 import { sessionFileAddress } from '@berry-ai/harness-util-workspace-path'
 import { describe, expect, it, onTestFinished } from 'vitest'
 import { apply, inject } from '../src/client/index.ts'

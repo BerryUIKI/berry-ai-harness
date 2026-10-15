@@ -9,15 +9,15 @@
  */
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
 import { TestRemote } from '@berry-ai/harness-client-test-runtime'
 import { remoteDefaultResponses } from '@berry-ai/harness-client-test-runtime/src/assembly/remote-default-responses.ts'
 import { RemoteMock } from '@berry-ai/harness-remote-mock'
-import { apply as settingsApply, inject as settingsInject } from '@deepseek-ai/dsh-client-ui-settings/client'
-import type { CommandDecoration, PopupSelectSpec } from '@deepseek-ai/dsh-client-ui-commands/client'
-import { PopupSelectController } from '@deepseek-ai/dsh-client-ui-commands/client'
+import { apply as settingsApply, inject as settingsInject } from '@berry-ai/harness-client-ui-settings/client'
+import type { CommandDecoration, PopupSelectSpec } from '@berry-ai/harness-client-ui-commands/client'
+import { PopupSelectController } from '@berry-ai/harness-client-ui-commands/client'
 import type {
   PermissionCatalog, PermissionSelection,
 } from '@berry-ai/harness-permission-presets/client'

@@ -1,5 +1,5 @@
 /** Browser-safe formatting shared by Session and Host reminder catalogs. */
-import type { Translate } from '@deepseek-ai/dsh-client-ui-slots'
+import type { Translate } from '@berry-ai/harness-client-ui-slots'
 import type { ScheduleRecord } from '@berry-ai/harness-schedule/client'
 import { assertNever } from '@berry-ai/harness-util-values'
 import type { CronDescriptionKey } from './task-cron.ts'

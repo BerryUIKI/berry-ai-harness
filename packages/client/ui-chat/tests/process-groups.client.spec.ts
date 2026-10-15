@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { SessionSeq } from '@berry-ai/harness-session/types'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
-import type { ConversationTimelineSnapshot, TurnLocation } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import type { ConversationTimelineSnapshot, TurnLocation } from '@berry-ai/harness-client-ui-conversation/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import type { ChatConversationViewNode, ChatNode } from '../src/client/contract/chat-nodes.ts'
 import { ChatSnapshotBuilder } from '../src/client/conversation-nodes/chat-snapshot-builder.ts'

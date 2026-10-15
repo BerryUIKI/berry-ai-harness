@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-ui-settings-models",
+  "name": "@berry-ai/harness-client-ui-settings-models",
   "description": "Models settings and shared product-onboarding dialogs over existing settings and credential joins",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -28,8 +28,8 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-client-ui-settings",
-        "@deepseek-ai/dsh-client-locale",
+        "@berry-ai/harness-client-ui-settings",
+        "@berry-ai/harness-client-locale",
         "@berry-ai/harness-api-remotes"
       ],
       "platform": "web"
@@ -46,19 +46,19 @@
   "devDependencies": {
     "@berry-ai/harness-host-webserver": "workspace:*",
     "@berry-ai/harness-api-remotes": "workspace:*",
-    "@deepseek-ai/dsh-client-locale": "workspace:*",
-    "@deepseek-ai/dsh-client-store": "workspace:*",
+    "@berry-ai/harness-client-locale": "workspace:*",
+    "@berry-ai/harness-client-store": "workspace:*",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-settings": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
+    "@berry-ai/harness-client-ui-primitives": "workspace:*",
+    "@berry-ai/harness-client-ui-settings": "workspace:*",
+    "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@types/react": "~18.3.1",
     "@deepseek-ai/cordis": "workspace:~",
     "react": "^18.2.0",
-    "@deepseek-ai/dsh-client-ui-renderer": "workspace:*",
+    "@berry-ai/harness-client-ui-renderer": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-remote-mock": "workspace:*",
-    "@deepseek-ai/dsh-client-product-analytics": "workspace:*"
+    "@berry-ai/harness-client-product-analytics": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"

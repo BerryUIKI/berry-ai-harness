@@ -15,8 +15,8 @@ import type {
   ApprovalRequestId, CordisDynamicPluginId, DynamicCordisInvokeResult,
   DynamicCordisInventoryRow,
 } from '@berry-ai/harness-api-remotes/client'
-import type { ClientModuleSystem } from '@deepseek-ai/dsh-client-modules/client'
-import type { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
+import type { ClientModuleSystem } from '@berry-ai/harness-client-modules/client'
+import type { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 // The Client Remote assembly is the one place the two planes meet: it mounts the
 // `dynamicCordisRunner` namespace and re-exports its payload vocabulary, so this

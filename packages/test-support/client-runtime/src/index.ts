@@ -22,28 +22,28 @@ import { act, render, within } from '@testing-library/react'
 import type { RenderResult } from '@testing-library/react'
 import type { queries } from '@testing-library/dom'
 import type { BoundFunctions } from '@testing-library/dom'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import { bindSnapshotSelector as bindRendererSnapshotSelector } from '@deepseek-ai/dsh-client-ui-renderer/src/client/bind.ts'
-import { createSlotRenderer as createRenderer } from '@deepseek-ai/dsh-client-ui-renderer/src/client/scoped-slots.tsx'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
+import { bindSnapshotSelector as bindRendererSnapshotSelector } from '@berry-ai/harness-client-ui-renderer/src/client/bind.ts'
+import { createSlotRenderer as createRenderer } from '@berry-ai/harness-client-ui-renderer/src/client/scoped-slots.tsx'
 import {
   apply as applyUiSession, inject as uiSessionInject,
-} from '@deepseek-ai/dsh-client-ui-session/client'
+} from '@berry-ai/harness-client-ui-session/client'
 import type { SessionReference } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { PanelInfo } from '@deepseek-ai/dsh-client-ui-layout/client'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { PanelInfo } from '@berry-ai/harness-client-ui-layout/client'
 import type {
   ChildrenDecl, ComposedProps, HostObservable, OwnerOf, RenderOpts, SlotComponent, SlotMap, SlotRenderer,
   ScopedStandardSourceBinding, SessionProviderComponent, SlotEntryDef, SlotFactoryMap, SlotRendererHost, SlotSpec,
   SnapshotSelectorHook, StoredFactory, StoreInstanceLike,
-} from '@deepseek-ai/dsh-client-ui-slots'
+} from '@berry-ai/harness-client-ui-slots'
 import { registerDomSnapshotSerializer } from './snapshot.ts'
 import { TestRemote } from './remote.ts'
 import { TestSessions } from './sessions.ts'
 import { TestWorkspaces } from './workspaces.ts'
 import type { Stabilizer } from './fixtures.ts'
 
-export type { UseSession } from '@deepseek-ai/dsh-client-ui-session/client'
+export type { UseSession } from '@berry-ai/harness-client-ui-session/client'
 export { domSnapshotSerializer, registerDomSnapshotSerializer } from './snapshot.ts'
 export { FixtureSession, TestSessions } from './sessions.ts'
 export { stubConfigForm } from './config-form.ts'

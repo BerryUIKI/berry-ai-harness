@@ -6,8 +6,8 @@
  * @module @berry-ai/harness-client-test-runtime/src/assembly/roster
  */
 import type { Context } from '@deepseek-ai/cordis'
-import type { WebBootEntry, WebBootGraph } from '@deepseek-ai/dsh-client-modules/client'
-import { PLATFORM_MODULES } from '@deepseek-ai/dsh-client-web/src/platform.ts'
+import type { WebBootEntry, WebBootGraph } from '@berry-ai/harness-client-modules/client'
+import { PLATFORM_MODULES } from '@berry-ai/harness-client-web/src/platform.ts'
 
 /** One browser plugin row as `dsh.client` declares it, keyed by package name. */
 export interface ClientRosterRow {

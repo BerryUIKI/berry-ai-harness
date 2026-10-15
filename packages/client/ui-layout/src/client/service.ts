@@ -8,7 +8,7 @@
  * right-panel show/hide from ui-sidebar-right) — writes stay inside the
  * store's declared action set, shared with the root registration.
  */
-import type { BoundActions, HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
+import type { BoundActions, HostObservable } from '@berry-ai/harness-client-ui-slots'
 import type { Branded } from '@berry-ai/harness-brand'
 import type { createLayoutStore } from './stores.ts'
 

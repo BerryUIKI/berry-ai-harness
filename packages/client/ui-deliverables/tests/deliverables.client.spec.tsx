@@ -7,22 +7,22 @@
  * SlotRegistry.
  */
 import { renderFileActions } from './file-actions.tsx'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { Context } from '@deepseek-ai/cordis'
 import { cleanup, fireEvent, render, within } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import type { SessionLiveEventEntry, SessionListState } from '@berry-ai/harness-api-session-controller/client'
 import {
   ConversationNodeAssembler, UiConversation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type {
   ConversationLocationDataSource, ConversationLocationDataStore, ConversationMatch, ConversationNodeDefinition,
   ConversationStartMatch, ConversationTimelineSnapshot, ConversationTurnDataMap, ConversationViewDefinition,
   ConversationViewNode, TurnLocation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import { apply as applyLocale, inject as localeInject } from '@deepseek-ai/dsh-client-locale/client'
-import type { ChatFileMentions, TurnTailOwnerProps } from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
+import { apply as applyLocale, inject as localeInject } from '@berry-ai/harness-client-locale/client'
+import type { ChatFileMentions, TurnTailOwnerProps } from '@berry-ai/harness-client-ui-chat/client'
 import { makeTranslate, stubConfigForm } from '@berry-ai/harness-client-test-runtime'
 import { Deliverables, DeliverablesTail, selectDeliverables, type DeliverablesInjected } from '../src/client/Deliverables.tsx'
 import type { ReviewInjected } from '../src/client/ReviewTab.tsx'
@@ -865,7 +865,7 @@ describe('plugin registration', () => {
     expect(entry?.inject).toBeDefined()
     expect(registered).toMatchObject({ kind: 'changes-review', patterns: ['dsh-resource://changes-review/**'] })
     const [tabEntry] = ctx.slots.entries('sidebar.right.pane.tab')
-    expect(tabEntry?.options.key).toBe('@deepseek-ai/dsh-client-ui-deliverables')
+    expect(tabEntry?.options.key).toBe('@berry-ai/harness-client-ui-deliverables')
 
     // The prose face is live while the plugin is: a produced turn yields a
     // resolver whose matches open through the owner-supplied opener.

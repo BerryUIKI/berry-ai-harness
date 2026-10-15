@@ -4,7 +4,7 @@
  * catalog subscription. Saved drafts enter the model before the first lookup
  * returns; Session-scope disposal releases the shell and its resources.
  */
-import type {} from '@deepseek-ai/dsh-client-product-analytics/client'
+import type {} from '@berry-ai/harness-client-product-analytics/client'
 import type { ModelSelectionProjection } from '@berry-ai/harness-api-session-controller/types'
 import type { PlanProjection } from '@berry-ai/harness-plan-mode/types'
 import type { GoalProjection } from '@berry-ai/harness-goal/types'
@@ -13,9 +13,9 @@ import type {
   ISessions, SessionBinding, SessionFace,
 } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { TranslateNS } from '@deepseek-ai/dsh-client-locale/client'
+import type { TranslateNS } from '@berry-ai/harness-client-locale/client'
 import type { InboxState } from '@berry-ai/harness-agent/types'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
 import type {
   DraftAttachmentId, DraftAttachmentSerializationResult, DraftInitializationOptions, DraftInitializationResult, InputTriggerController,
   SessionInputResolver, SessionInput, SubmitOutcome,

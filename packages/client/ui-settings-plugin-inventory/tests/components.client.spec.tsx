@@ -1,9 +1,9 @@
 // @vitest-environment jsdom
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { ClientEntryState } from '@deepseek-ai/dsh-client-modules/client'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { ClientEntryState } from '@berry-ai/harness-client-modules/client'
 import type { PluginEntryId } from '@berry-ai/harness-api-remotes/client'
 import { Context } from '@deepseek-ai/cordis'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
 import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
 import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { afterEach, describe, expect, it, onTestFinished, vi } from 'vitest'

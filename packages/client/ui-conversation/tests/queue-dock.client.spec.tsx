@@ -3,7 +3,7 @@
  * QueueDock rendering and operations: authoritative rows, inline editing,
  * collapse state, removal, QueueDock Steer, failure notices, and live retirement.
  */
-import type { GlobalStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
+import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react'
 import { useSyncExternalStore } from 'react'
@@ -14,13 +14,13 @@ import type { InboxState } from '@berry-ai/harness-agent/types'
 import type { UserMessage } from '@berry-ai/harness-llm/types'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { SnapshotSelectorHook } from '@deepseek-ai/dsh-client-ui-slots'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import type { SnapshotSelectorHook } from '@berry-ai/harness-client-ui-slots'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import {
   bindSnapshotSelector, conversationSnapshot, makeTranslate,
 } from '@berry-ai/harness-client-test-runtime'
-import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import type { SessionStatusSnapshot } from '@berry-ai/harness-client-ui-session/client'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import type { InputState } from '../src/client/contract/input.ts'
 import { zh } from '../src/client/locales.ts'
 import { QueueDock, queueDockEntry, type QueueDockInjected, type QueueDockProps } from '../src/client/queue/QueueDock.tsx'

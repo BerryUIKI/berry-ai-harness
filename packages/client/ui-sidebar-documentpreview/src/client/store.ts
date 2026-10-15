@@ -13,8 +13,8 @@
  * ends, and a tab that never read has no bucket to forget.
  */
 import type { RemoteFailure } from '@berry-ai/harness-api-remotes/client'
-import { defineStore, type EngineStoreHandle } from '@deepseek-ai/dsh-client-store'
-import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
+import { defineStore, type EngineStoreHandle } from '@berry-ai/harness-client-store'
+import type { TabId } from '@berry-ai/harness-client-ui-dockkit'
 import type { WorkspaceFileText } from '@berry-ai/harness-api-workspace-files/types'
 import type { DocumentFileBytes } from './rpc.ts'
 import type { DocumentLoadMode } from './document/registry.ts'

@@ -2,12 +2,12 @@
 /** FontSettingsGroup behavior: the text font-size row shows collapsed, its
  * disclosure button toggles the font and size rows, and each row routes its
  * write to its own role. */
-import type { GlobalStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
+import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import type { SessionListState } from '@berry-ai/harness-api-session-controller/client'
 import type { WorkspaceSnapshot } from '@berry-ai/harness-api-workspace-controller/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
 import { FontSettingsGroup } from '../src/client/FontSettingsGroup.tsx'
 import type { FontSettingsGroupProps } from '../src/client/FontSettingsGroup.tsx'

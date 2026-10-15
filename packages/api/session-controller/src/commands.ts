@@ -9,8 +9,8 @@ import { AttachmentError } from '@berry-ai/harness-attachment'
 import type {
   AttachmentAdmissionPart, FileAttachmentRef, ImageAttachmentRef,
 } from '@berry-ai/harness-attachment'
-import type { FileUploadReceiptId } from '@deepseek-ai/dsh-client-file-upload/types'
-import type {} from '@deepseek-ai/dsh-client-file-upload'
+import type { FileUploadReceiptId } from '@berry-ai/harness-client-file-upload/types'
+import type {} from '@berry-ai/harness-client-file-upload'
 import {
   ReasoningEffortId, assistantStreamChunks, createUserMessage, freezeMessage,
 } from '@berry-ai/harness-llm'

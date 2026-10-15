@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-ui-reference",
+  "name": "@berry-ai/harness-client-ui-reference",
   "description": "Unified Web @file and @session reference source",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -30,10 +30,10 @@
       "inject": [
         "@berry-ai/harness-api-remotes",
         "@berry-ai/harness-api-session-controller",
-        "@deepseek-ai/dsh-client-connection",
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-input-trigger",
-        "@deepseek-ai/dsh-client-ui-sidebar-right"
+        "@berry-ai/harness-client-connection",
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-input-trigger",
+        "@berry-ai/harness-client-ui-sidebar-right"
       ],
       "platform": "web"
     }
@@ -49,18 +49,18 @@
   "devDependencies": {
     "@berry-ai/harness-api-remotes": "workspace:*",
     "@berry-ai/harness-api-session-controller": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-locale": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
+    "@berry-ai/harness-client-locale": "workspace:*",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-input-trigger": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
+    "@berry-ai/harness-client-ui-input-trigger": "workspace:*",
+    "@berry-ai/harness-client-ui-primitives": "workspace:*",
+    "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-file-reference": "workspace:*",
     "@berry-ai/harness-session-reference": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-client-ui-sidebar-right": "workspace:*"
+    "@berry-ai/harness-client-ui-sidebar-right": "workspace:*"
   },
   "files": [
     "lib/index.js",

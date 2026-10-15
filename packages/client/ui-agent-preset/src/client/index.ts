@@ -22,16 +22,16 @@ import type { SessionBinding } from '@berry-ai/harness-api-session-controller/cl
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { WeakMapWithValues } from '@berry-ai/harness-util-values'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
-import type {} from '@deepseek-ai/dsh-client-locale/client'
+import type {} from '@berry-ai/harness-client-locale/client'
 // Type-only: pulls the ctx.remote merge and the forwarded-event key face
 // (the settings invalidation rides the allowlist) into this program.
 import type {} from '@berry-ai/harness-api-remotes/client'
 // Type-only: pulls the settings shell's SlotMap merge (the 'settings.section' entry).
-import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-settings/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
 // Type-only: pulls the Workspace UI navigation service merge (ctx.uiWorkspace).
-import type {} from '@deepseek-ai/dsh-client-ui-workspace/client'
-import type {} from '@deepseek-ai/dsh-client-ui-plugin-manager/client'
+import type {} from '@berry-ai/harness-client-ui-workspace/client'
+import type {} from '@berry-ai/harness-client-ui-plugin-manager/client'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import { AgentPresetLabel } from './AgentPresetLabel.tsx'
 import { CreatePluginMenuItem } from './CreatePluginMenuItem.tsx'
@@ -45,7 +45,7 @@ import { AgentPresetSectionController } from './section-store.ts'
 import { en, zh, type AgentPresetSettingsKey } from './locales.ts'
 import { AGENT_PRESET_SETTINGS_NS, AgentPresetSettingsController } from './settings-store.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface LocaleNamespaceMap {
     /** Agent-preset surface copy. */
     'settings.agentPreset': AgentPresetSettingsKey

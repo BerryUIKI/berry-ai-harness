@@ -1,5 +1,5 @@
 /** Shared native-open status for delivery cards, the changed-files card, and closing-message file mentions. */
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { changedFileUrl } from '../changes.ts'
 import { presentedFileUrl, PRESENT_HOST_ROUTE, isPresentedHost, type PresentedAction, type PresentedHost } from '../presented.ts'

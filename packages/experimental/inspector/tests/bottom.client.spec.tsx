@@ -3,9 +3,9 @@
 import { afterEach, expect, it } from 'vitest'
 import { act } from '@testing-library/react'
 import { SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import ShortcutsService from '@deepseek-ai/dsh-client-shortcuts/client'
-import type { ShortcutCommandId } from '@deepseek-ai/dsh-client-shortcuts/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import ShortcutsService from '@berry-ai/harness-client-shortcuts/client'
+import type { ShortcutCommandId } from '@berry-ai/harness-client-shortcuts/client'
 import { registerInspectorPage } from '../src/client/bottom/page.tsx'
 import { inspectorId } from '../src/shared/identity.ts'
 

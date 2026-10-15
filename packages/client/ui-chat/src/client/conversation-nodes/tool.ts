@@ -2,7 +2,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {
   ConversationMatch, ConversationNodeContext, ConversationNodeDefinition, PreparingToolCall, StartedToolCall,
   ToolCallBlock, ToolResultNode,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import { isAppendSurfaceEvent } from '@berry-ai/harness-session/surface'
 import type {} from '@berry-ai/harness-tools/types'
 import { PartialArguments } from '@berry-ai/harness-util-values'

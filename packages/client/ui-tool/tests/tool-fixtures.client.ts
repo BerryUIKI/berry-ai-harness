@@ -4,7 +4,7 @@ import { SessionSeq } from '@berry-ai/harness-session/types'
 import { isJsonValue, type JsonValue } from '@berry-ai/harness-util-values'
 import type {
   ChatConversationViewNode, ChatSnapshot, ConversationNode, StartedToolCall, ToolResultNode,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-chat/client'
 
 function jsonFixture(value: unknown): JsonValue {
   if (!isJsonValue(value)) throw new Error('tool event fixture must be lossless JSON')

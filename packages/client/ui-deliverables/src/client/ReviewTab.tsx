@@ -8,9 +8,9 @@ import type { ReactNode } from 'react'
 import {
   IconChevronDownOutlineRegular, IconCompareSplitOutlineRegular, IconInspectOutlineRegular,
   IconNowrapFillRegular, IconWrapFillRegular, Menu, PathLabel, Tooltip,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { InjectFace, PropsLocale, PropsRenderSlots, PropsRuntime, PropsStore } from '@deepseek-ai/dsh-client-ui-slots'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+} from '@berry-ai/harness-client-ui-primitives'
+import type { InjectFace, PropsLocale, PropsRenderSlots, PropsRuntime, PropsStore } from '@berry-ai/harness-client-ui-slots'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
 import { fileAddressFor } from '@berry-ai/harness-util-workspace-path'
 import type { WorkspaceChangedFile } from '@berry-ai/harness-workspace-changes/types'
 import { changedFileUrl, changesDiffUrl, changesSummaryUrl, parseChangesReviewAddress } from '../changes.ts'

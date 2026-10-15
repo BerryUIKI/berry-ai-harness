@@ -7,41 +7,41 @@
  * event ledger with its timing overview, and fiber disposal removes the tab.
  * Timeline projection and inclusive focus edge cases ride along.
  */
-import type { GlobalStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
+import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import { createElement, type ComponentProps, type FC, type ReactNode } from 'react'
 import { bindSnapshotSelector, SlotTestRuntime, stubConfigForm } from '@berry-ai/harness-client-test-runtime'
-import { resolveSlotLabel } from '@deepseek-ai/dsh-client-ui-slots'
+import { resolveSlotLabel } from '@berry-ai/harness-client-ui-slots'
 import {
   EMPTY_CONVERSATION_SNAPSHOT, UiConversation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type {
   ConversationBinding, ConversationSnapshot, ConversationViewSnapshotMap, ConvViewProps,
   InputActions, InputState, RequestView, ViewTab,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { EMPTY_CHAT_SNAPSHOT } from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
+import { EMPTY_CHAT_SNAPSHOT } from '@berry-ai/harness-client-ui-chat/client'
 import type {
   ChatSnapshot, LegacyConversationSlice,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+} from '@berry-ai/harness-client-ui-chat/client'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
 import type {
   SessionBinding, SessionListState, SessionProjectionMap, SessionSnapshot, UseProjection,
 } from '@berry-ai/harness-api-session-controller/client'
 import type { WorkspaceSnapshot } from '@berry-ai/harness-api-workspace-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
+import type { SessionStatusSnapshot } from '@berry-ai/harness-client-ui-session/client'
 import {
   ConversationSession, ConversationSessionHeader,
   type ConversationSessionHeaderProps, type ConversationSessionProps,
-} from '@deepseek-ai/dsh-client-ui-conversation/src/client/skeleton/ConversationSession.tsx'
-import { createConversationStore } from '@deepseek-ai/dsh-client-ui-conversation/src/client/stores.ts'
-import { zh as conversationZh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
-import * as localePlugin from '@deepseek-ai/dsh-client-locale/client'
-import { apply, inject } from '@deepseek-ai/dsh-client-ui-trajectory/client'
-import { apply as nodeApply } from '@deepseek-ai/dsh-client-ui-trajectory'
+} from '@berry-ai/harness-client-ui-conversation/src/client/skeleton/ConversationSession.tsx'
+import { createConversationStore } from '@berry-ai/harness-client-ui-conversation/src/client/stores.ts'
+import { zh as conversationZh } from '@berry-ai/harness-client-ui-conversation/src/client/locales.ts'
+import * as localePlugin from '@berry-ai/harness-client-locale/client'
+import { apply, inject } from '@berry-ai/harness-client-ui-trajectory/client'
+import { apply as nodeApply } from '@berry-ai/harness-client-ui-trajectory'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import type { TrajectoryTurnModel } from '../src/client/layout.ts'
 import { TrajectoryTimeline as LocalizedTrajectoryTimeline } from '../src/client/TrajectoryTimeline.tsx'

@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { SessionPendingInteractionBase } from '@deepseek-ai/dsh-client-ui-session/client'
-import type { Shortcuts, ShortcutContext, ShortcutGesture } from '@deepseek-ai/dsh-client-shortcuts/client'
+import type { SessionPendingInteractionBase } from '@berry-ai/harness-client-ui-session/client'
+import type { Shortcuts, ShortcutContext, ShortcutGesture } from '@berry-ai/harness-client-shortcuts/client'
 import { makeTranslate, SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
 import { MutableSessionEventSource } from '@berry-ai/harness-api-session-controller/client'
 import { SessionSeq, type SessionId } from '@berry-ai/harness-session/types'

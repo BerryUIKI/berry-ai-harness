@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 /** Frame interactions with a real store and explicitly driven browser measurements. */
-import type { GlobalStandardProps, RenderOpts } from '@deepseek-ai/dsh-client-ui-slots'
+import type { GlobalStandardProps, RenderOpts } from '@berry-ai/harness-client-ui-slots'
 import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, render } from '@testing-library/react'

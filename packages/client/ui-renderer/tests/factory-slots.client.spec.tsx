@@ -8,8 +8,8 @@ import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   ActionsDecl, FactoryComponentPropsOf, FactoryLocalComponentPropsOf, HostObservable,
   PropsRenderFactories, PropsRuntime, StoreHandle, StoreInstanceLike,
-} from '@deepseek-ai/dsh-client-ui-slots'
-import { StaleAuthorizationError } from '@deepseek-ai/dsh-client-ui-slots'
+} from '@berry-ai/harness-client-ui-slots'
+import { StaleAuthorizationError } from '@berry-ai/harness-client-ui-slots'
 
 interface CounterState { count: number }
 interface CounterActions extends ActionsDecl<CounterState> {
@@ -17,7 +17,7 @@ interface CounterActions extends ActionsDecl<CounterState> {
 }
 type CounterStore = StoreHandle<CounterState, CounterActions>
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface SlotMap {
     'renderer.factory.child': { kind: 'list'; scope: 'root' }
     'renderer.factory.chain': { kind: 'chain'; scope: 'root'; owner: { enabled: boolean } }

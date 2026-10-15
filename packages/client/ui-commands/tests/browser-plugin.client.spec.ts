@@ -9,12 +9,12 @@
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished } from 'vitest'
 import { TestSessions } from '@berry-ai/harness-client-test-runtime'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
+import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { InputTriggerSource } from '@deepseek-ai/dsh-client-ui-input-trigger/client'
+import type { InputTriggerSource } from '@berry-ai/harness-client-ui-input-trigger/client'
 import type { CommandUiContract } from '../src/client/contract.ts'
 import type { PopupSelectInjected } from '../src/client/PopupSelectView.tsx'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
+import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
 import { apply, CommandUiRuntime, inject } from '../src/client/index.ts'
 
 const sid = (k: string): SessionId => k as SessionId

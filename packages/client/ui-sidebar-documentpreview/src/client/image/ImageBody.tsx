@@ -1,6 +1,6 @@
 /** Complete image bytes rendered in a shared zoom viewport. */
 import { useCallback, useEffect, useMemo, useState, type CSSProperties, type ReactNode } from 'react'
-import type { PropsLocale, PropsStore } from '@deepseek-ai/dsh-client-ui-slots'
+import type { PropsLocale, PropsStore } from '@berry-ai/harness-client-ui-slots'
 import { pathPartsOf } from '@berry-ai/harness-util-workspace-path'
 import type { DocumentPreviewProps } from '../document/contract.ts'
 import { LoadingIndicator } from '../LoadingIndicator.tsx'

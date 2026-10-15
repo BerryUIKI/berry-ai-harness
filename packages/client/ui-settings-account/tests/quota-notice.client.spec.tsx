@@ -2,8 +2,8 @@
 /** Account take-over of the frame-wide quota notice, and its generic fallback. */
 import { act, cleanup, render, fireEvent, screen } from '@testing-library/react'
 import { afterEach, expect, it, vi, type Mock } from 'vitest'
-import type { GlobalStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
-import type { QuotaNoticeOwnerProps } from '@deepseek-ai/dsh-client-ui-chat/client'
+import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
+import type { QuotaNoticeOwnerProps } from '@berry-ai/harness-client-ui-chat/client'
 import type { AccountView } from '@berry-ai/harness-deepseek-account/types'
 import type { AccountSnapshot } from '../src/client/AccountSection.tsx'
 import type {} from '../src/client/index.ts'

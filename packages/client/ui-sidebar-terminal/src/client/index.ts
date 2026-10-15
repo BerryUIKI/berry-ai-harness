@@ -1,16 +1,16 @@
 /** Register interactive terminal tabs and explicit process cleanup with the sidebar. */
-import type { ShortcutCommandId } from '@deepseek-ai/dsh-client-shortcuts/client'
+import type { ShortcutCommandId } from '@berry-ai/harness-client-shortcuts/client'
 import type { Context } from '@deepseek-ai/cordis'
 import type { WebTerminalId } from '@berry-ai/harness-api-terminal-controller/types'
-import type { SidebarRightTabParamsMap, TabId } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
+import type { SidebarRightTabParamsMap, TabId } from '@berry-ai/harness-client-ui-sidebar-right/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {} from '@berry-ai/harness-api-terminal-controller/client'
-import type {} from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type {} from '@deepseek-ai/dsh-client-ui-theme/client'
-import { PluginArtworkTerminal } from '@deepseek-ai/dsh-client-ui-primitives'
+import type {} from '@berry-ai/harness-client-ui-sidebar-right/client'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-locale/client'
+import type {} from '@berry-ai/harness-client-ui-session/client'
+import type {} from '@berry-ai/harness-client-ui-theme/client'
+import { PluginArtworkTerminal } from '@berry-ai/harness-client-ui-primitives'
 import { TerminalGuide, type TerminalGuideInjected } from './TerminalGuide.tsx'
 import { LazyTerminalBody } from './LazyTerminalBody.tsx'
 import { TerminalTitle } from './TerminalTitle.tsx'
@@ -49,7 +49,7 @@ export function apply(ctx: Context): void {
       params !== undefined && 'shellPath' in params ? params.shellPath : undefined)
   }
   const namespace = 'sidebarTerminal'
-  const id = '@deepseek-ai/dsh-client-ui-sidebar-terminal'
+  const id = '@berry-ai/harness-client-ui-sidebar-terminal'
   const t = ctx.locale.bind(namespace)
   ctx.effect(() => ctx.shortcuts.register({
     id: 'terminal.new' as ShortcutCommandId, label: () => t('new'), aliases: ['new terminal', 'shell'],

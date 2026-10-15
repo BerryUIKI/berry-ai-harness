@@ -2,7 +2,7 @@
  * Host half of open-in-app: three routes on the composition's `webServer`
  * serving the resolved application catalog, per-application icons, and the
  * launch endpoint the browser split button
- * (`@deepseek-ai/dsh-client-ui-open-in-app`) posts to.
+ * (`@berry-ai/harness-client-ui-open-in-app`) posts to.
  *
  * Security has one home, here. Every route asks the composition's
  * `connection` service for a rejection first (`requestRejection`): its

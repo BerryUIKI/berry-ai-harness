@@ -2,15 +2,15 @@
 /** ToolCallTree-owned root/subcall markers and keyed Tool dispatch. */
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import { bindDisclosure, useDisclosure } from '@deepseek-ai/dsh-client-ui-chat/src/client/chat/use-disclosure.ts'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import { bindDisclosure, useDisclosure } from '@berry-ai/harness-client-ui-chat/src/client/chat/use-disclosure.ts'
 import type { SessionSnapshot } from '@berry-ai/harness-api-session-controller/client'
-import type { ToolCallBlock, ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
+import type { ToolCallBlock, ToolResultNode } from '@berry-ai/harness-client-ui-chat/client'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import type { ToolCallOwnerProps, ToolTreeProps } from '../src/client/contract/slots.ts'
 import { ToolCallTree } from '../src/client/tool/ToolCallTree.tsx'
-import { zh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
+import { zh } from '@berry-ai/harness-client-ui-conversation/src/client/locales.ts'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 
 afterEach(cleanup)

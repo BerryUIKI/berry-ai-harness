@@ -1,7 +1,7 @@
 /** Sidebar-owned commands resolved against the currently mounted page. */
-import type { Shortcuts, ShortcutBinding, ShortcutCommandId } from '@deepseek-ai/dsh-client-shortcuts/client'
-import type { TranslateNS } from '@deepseek-ai/dsh-client-locale/client'
-import { closeTopModal } from '@deepseek-ai/dsh-client-ui-primitives'
+import type { Shortcuts, ShortcutBinding, ShortcutCommandId } from '@berry-ai/harness-client-shortcuts/client'
+import type { TranslateNS } from '@berry-ai/harness-client-locale/client'
+import { closeTopModal } from '@berry-ai/harness-client-ui-primitives'
 import type { SidebarRightController } from './service.ts'
 import type { SidebarRightTarget } from './focus.ts'
 import type {} from './locales.ts'

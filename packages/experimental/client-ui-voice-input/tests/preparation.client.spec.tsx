@@ -2,8 +2,8 @@
 /** Collapsed progress summaries and Host-owned steps survive view remounts. */
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import { bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import type { SpeechPreparationState, SpeechPreparationStep, SpeechProviderId } from '@berry-ai/harness-experimental-speech-to-text/types'
 import { afterEach, expect, it, vi } from 'vitest'
 import { PreparationCard, VoicePreparation } from '../src/client/PreparationCard.tsx'

@@ -1,11 +1,11 @@
 // @vitest-environment jsdom
 /** Detail adapters accept the exact recorded result text and retain safe fallback paths. */
 import { describe, expect, it } from 'vitest'
-import type { ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
+import type { ToolResultNode } from '@berry-ai/harness-client-ui-chat/client'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { en, zh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
-import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { en, zh } from '@berry-ai/harness-client-ui-conversation/src/client/locales.ts'
+import { en as commonEn } from '@berry-ai/harness-client-locale/src/locales/en.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import { statusLine } from '@berry-ai/harness-tool-jobs/src/render.ts'
 import { presentation } from '@berry-ai/harness-tool-session-query/src/presentation.ts'
 import { renderList, renderRead, renderSpawn } from '@berry-ai/harness-tool-terminal/src/render.ts'

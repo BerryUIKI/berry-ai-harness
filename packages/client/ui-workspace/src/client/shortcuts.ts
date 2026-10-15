@@ -1,9 +1,9 @@
 /** Workspace command registration and browser-owned opening requests. */
 import type { Context } from '@deepseek-ai/cordis'
 import type { SessionForkError } from '@berry-ai/harness-api-session-controller/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { ShortcutCommand, ShortcutCommandId } from '@deepseek-ai/dsh-client-shortcuts/client'
-import type { SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
+import type { ShortcutCommand, ShortcutCommandId } from '@berry-ai/harness-client-shortcuts/client'
+import type { SnapshotStore } from '@berry-ai/harness-client-store'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { UiWorkspace } from './navigation.ts'
 

@@ -8,10 +8,10 @@ import type {
   TeamMemberProjection, TeamProjection, TeamTaskId, TeamTaskView as TeamTask,
 } from '@berry-ai/harness-experimental-agent-team/client'
 import type { SessionListState, SessionSnapshot, SessionSummary, UseProjection } from '@berry-ai/harness-api-session-controller/client'
-import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import type { SessionStatusSnapshot } from '@berry-ai/harness-client-ui-session/client'
+import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { zh as commonZh } from '@berry-ai/harness-client-locale/src/locales/zh.ts'
 import { TeamAction, type TeamActionInjected, type TeamActionProps } from '../src/client/TeamAction.tsx'
 import { zh } from '../src/client/locales.ts'
 

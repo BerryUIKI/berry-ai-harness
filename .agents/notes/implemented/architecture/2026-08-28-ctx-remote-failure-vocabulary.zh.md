@@ -6,7 +6,7 @@ Status: implemented
 
 ## Problem
 
-每个 Remote owner 包各自维护一套失败面：一个 `XxxErrorDetailsMap` 接口、由它派生的 `XxxError` union，以及一个出口映射函数，把域内错误类（`UnknownPresetError`、`PresetMountError`、`SessionTitleInvalidError` 等）翻译成 wire 失败值。`@berry-ai/harness-typert-protocol` 同时携带两个失败类——owner 主动上报用 `TypertRemoteFailure`，lookup resolver 产生的用 `TypertLookupFailure`——而 `@deepseek-ai/dsh-client-connection` 又保留了第二份 typed 视图 `RpcErrorDetailsMap`，把 `agent-preset-not-found`、`session-not-found` 这类域码硬编码进载体层。
+每个 Remote owner 包各自维护一套失败面：一个 `XxxErrorDetailsMap` 接口、由它派生的 `XxxError` union，以及一个出口映射函数，把域内错误类（`UnknownPresetError`、`PresetMountError`、`SessionTitleInvalidError` 等）翻译成 wire 失败值。`@berry-ai/harness-typert-protocol` 同时携带两个失败类——owner 主动上报用 `TypertRemoteFailure`，lookup resolver 产生的用 `TypertLookupFailure`——而 `@berry-ai/harness-client-connection` 又保留了第二份 typed 视图 `RpcErrorDetailsMap`，把 `agent-preset-not-found`、`session-not-found` 这类域码硬编码进载体层。
 
 于是一个码同时存在三处：owner 的表、载体的 typed 视图、以及消费方为窄化而写的 union 或 cast（`result.error as SessionError`）。新增一个域码要改三处，跨域转述一个别人的码则要把对方的码复制进自己的表——`SessionErrorDetailsMap` 就收编了 `agent-preset-*`、`subagent-*`、`workspace-not-found` 五个他域码。
 
@@ -55,7 +55,7 @@ client 面不构造 `RemoteError`：唯一例外是 Gateway 的 client face 本�
 
 `ctx.remote.$host` 暴露两条固定事实：`home: string | undefined` 与 `isLoopback: boolean`。它是 Client Remote service 上的 getter，读的是 service 构造期取得的 connection 句柄——`home` 来自 generation 快照的 ready frame（ready 之前是 `undefined`），`isLoopback` 来自载体。没有 store、没有订阅、没有 generation 计数器。
 
-重连后的刷新走既有信号：Client Remote 在连上时 emit `connection/reset`，需要重取的消费方监听它或各域自己的 remote event，而不是让 `$host` 变成一个可订阅对象。因此消费方不再注入 `connection`：`@deepseek-ai/dsh-client-connection` 的消费白名单收缩到 hmr、frontend-static、bundle/web-app、session-log-export、webworker-runtime、gateway 与 api-remotes 装配。
+重连后的刷新走既有信号：Client Remote 在连上时 emit `connection/reset`，需要重取的消费方监听它或各域自己的 remote event，而不是让 `$host` 变成一个可订阅对象。因此消费方不再注入 `connection`：`@berry-ai/harness-client-connection` 的消费白名单收缩到 hmr、frontend-static、bundle/web-app、session-log-export、webworker-runtime、gateway 与 api-remotes 装配。
 
 ## What the wire carries
 
@@ -63,7 +63,7 @@ envelope 不变：wire 上仍是 `{ code, message, details }` 数据，`RemoteEr
 
 三条 wire 可见行为随之确定。Gateway 的 17 个装配码按语义上 wire，client 因此能把「方法未挂载」与「业务拒绝」分开处理。owner 不预折无关异常：未归类的 throw 交给 Gateway 折一次 `gateway/internal`，诊断串保留在 `message` 里。client 一元调用被调用方 abort 时答 `gateway/cancelled`，即使本地 throw 抢在 wire 往返之前赢得竞争，也与 Host 会给出的码一致。
 
-载体层只保留开放的 wire 形状。`@deepseek-ai/dsh-client-connection` 的 `ConnectionRpcFailure`/`ConnectionRpcResult` 不含任何域码知识，其 `transportError()` 产出 `gateway/internal`；typed 视图的正家从此只有 protocol 的 `RemoteFailure`。
+载体层只保留开放的 wire 形状。`@berry-ai/harness-client-connection` 的 `ConnectionRpcFailure`/`ConnectionRpcResult` 不含任何域码知识，其 `transportError()` 产出 `gateway/internal`；typed 视图的正家从此只有 protocol 的 `RemoteFailure`。
 
 ## Alternatives considered
 

@@ -2,8 +2,8 @@
 /** The credential onboarding step owns login until dismissal or completion. */
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, expect, it, vi } from 'vitest'
-import type { GlobalStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
-import type { ThemeSnapshot } from '@deepseek-ai/dsh-client-ui-theme/client'
+import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
+import type { ThemeSnapshot } from '@berry-ai/harness-client-ui-theme/client'
 import { AccountOnboarding } from '../src/client/AccountOnboarding.tsx'
 import type { AccountSnapshot } from '../src/client/AccountSection.tsx'
 import { makeTranslate } from '@berry-ai/harness-client-test-runtime'

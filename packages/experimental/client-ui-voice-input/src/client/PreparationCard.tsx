@@ -1,7 +1,7 @@
 /** Provider-owned preparation steps and persisted recognition preferences. */
 import { useEffect, useState } from 'react'
-import { Button, DisclosureRow, IconChevronDownOutlineRegular, StateDot, type StateDotState } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { InjectFace, PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
+import { Button, DisclosureRow, IconChevronDownOutlineRegular, StateDot, type StateDotState } from '@berry-ai/harness-client-ui-primitives'
+import type { InjectFace, PropsLocale } from '@berry-ai/harness-client-ui-slots'
 import type { SpeechPreparationState, SpeechProviderId, SpeechProviderView, SpeechSelectionPatch } from '@berry-ai/harness-experimental-speech-to-text/types'
 import type { VoiceInputInjected } from './VoiceInput.tsx'
 import { MicrophonePicker } from './MicrophonePicker.tsx'

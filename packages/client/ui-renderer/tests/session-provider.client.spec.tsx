@@ -8,8 +8,8 @@ import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   SessionProviderComponent, StoredEntry, ScopedStandardSourceBinding,
   SlotRendererHost, SlotScopeAdapter, StandardSourceBinding,
-} from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
+} from '@berry-ai/harness-client-ui-slots'
+import type {} from '@berry-ai/harness-client-ui-session/client'
 import { renderSessionArea } from '../../ui-session/src/client/session-provider.tsx'
 import { createSlotRenderer } from '../src/client/scoped-slots.tsx'
 

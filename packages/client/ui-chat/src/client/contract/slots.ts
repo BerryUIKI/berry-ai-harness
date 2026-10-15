@@ -8,14 +8,14 @@ import type {
   CommandNode, CompactionSummaryNode, ConversationLocationDataStore, ConversationTurnDataMap,
   ConversationGroupData, GroupSnapshot,
   MessageImageLoader, MessageImagesOwnerProps, RenderEntry, RenderMessageImages, TurnLocation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@berry-ai/harness-client-ui-conversation/client'
 import type {
   HostObservable, InjectFace, KeyedSnapshotSelectorHook, PropsLocale, PropsRenderSlots, PropsRuntime,
   PropsStore, SlotHookFactory, SnapshotSelectorHook,
-} from '@deepseek-ai/dsh-client-ui-slots'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import type { MarkdownFileMentions, MarkdownLabels } from '@deepseek-ai/dsh-client-ui-primitives'
-import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
+} from '@berry-ai/harness-client-ui-slots'
+import type { ObservableSnapshot } from '@berry-ai/harness-client-store'
+import type { MarkdownFileMentions, MarkdownLabels } from '@berry-ai/harness-client-ui-primitives'
+import type {} from '@berry-ai/harness-client-ui-layout/client'
 import type { createChatStore } from '../stores.ts'
 import type { ChatPresentationPolicy } from '../presentation-policy.ts'
 import type { FlowMotionRows } from '../chat/flow-motion.ts'
@@ -340,7 +340,7 @@ export type ChatViewSlotProps =
 /** Full props of the durable-message image renderer. */
 export type MessageImagesProps = PropsRuntime<'conversation.message.images'> & PropsLocale<'conversation'>
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@berry-ai/harness-client-ui-slots' {
   interface SessionStandardProps {
     /** Selector hook over the current Conversation binding's Chat target. */
     useChat: UseChat

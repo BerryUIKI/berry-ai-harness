@@ -6,8 +6,8 @@ import { SessionSeq, type SessionEvent } from '@berry-ai/harness-session/types'
 import type {
   SessionAssistantSettlementEntry, SessionEventLikeEntry, SessionLiveEventEntry, SessionTransientEventEntry,
 } from '@berry-ai/harness-api-session-controller/client'
-import { ConversationNodeAssembler } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
+import { ConversationNodeAssembler } from '@berry-ai/harness-client-ui-conversation/client'
+import type { ChatSnapshot } from '@berry-ai/harness-client-ui-chat/client'
 import { assistantDefinition } from '../src/client/conversation-nodes/assistant.ts'
 import { chatViewDefinition } from '../src/client/conversation-nodes/chat-snapshot-builder.ts'
 import { turnProcessDefinition } from '../src/client/conversation-nodes/turn-process.ts'

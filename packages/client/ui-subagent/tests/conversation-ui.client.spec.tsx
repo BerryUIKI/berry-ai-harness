@@ -7,7 +7,7 @@ import type {
 } from '@berry-ai/harness-api-session-controller/client'
 import type { SubagentAddress, SubagentCatalogEntry } from '@berry-ai/harness-subagent/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
+import type { SessionStatusSnapshot } from '@berry-ai/harness-client-ui-session/client'
 import {
   SubagentCatalogAction, SubagentHeaderLineage,
   type SubagentCatalogActionProps, type SubagentHeaderLineageProps,

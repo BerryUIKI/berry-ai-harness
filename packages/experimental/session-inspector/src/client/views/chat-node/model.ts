@@ -1,8 +1,8 @@
 /** Chat table order follows root references and group membership, independently of row data. */
 
-import type { ChatSnapshot, ChatConversationViewNode } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { ConversationBinding, ConversationGroupedView, GroupKey, GroupSnapshot, NodeReference, RenderEntry } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { createSnapshotStore, type ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import type { ChatSnapshot, ChatConversationViewNode } from '@berry-ai/harness-client-ui-chat/client'
+import type { ConversationBinding, ConversationGroupedView, GroupKey, GroupSnapshot, NodeReference, RenderEntry } from '@berry-ai/harness-client-ui-conversation/client'
+import { createSnapshotStore, type ObservableSnapshot } from '@berry-ai/harness-client-store'
 import { InspectorRecordSource, type InspectorRecord, type InspectorRow } from '../table-model.ts'
 import { inspectorPreview } from '../format.ts'
 import type { SessionId } from '@berry-ai/harness-session/types'

@@ -21,7 +21,7 @@
  * the stream: the next write stats again. One {@link ChangeFeed}
  * serves every open file of the Client.
  */
-import type { ResourceProvider } from '@deepseek-ai/dsh-client-resources/client'
+import type { ResourceProvider } from '@berry-ai/harness-client-resources/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'

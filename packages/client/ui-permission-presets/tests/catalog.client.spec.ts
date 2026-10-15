@@ -2,7 +2,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
 import type {
   ConnectionGeneration, ConnectionHandle,
-} from '@deepseek-ai/dsh-client-connection/client'
+} from '@berry-ai/harness-client-connection/client'
 import { TestRemote } from '@berry-ai/harness-client-test-runtime'
 import type { PermissionCatalog } from '@berry-ai/harness-permission-presets/client'
 import { PermissionCatalogDirectory } from '../src/client/catalog.ts'

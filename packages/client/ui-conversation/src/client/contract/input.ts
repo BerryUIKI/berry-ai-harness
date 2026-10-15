@@ -9,7 +9,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type { SessionBinding } from '@berry-ai/harness-api-session-controller/client'
 import type { InboxState } from '@berry-ai/harness-agent/types'
-import type { ObservableSnapshot, SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import type { ObservableSnapshot, SnapshotStore } from '@berry-ai/harness-client-store'
 import type { Branded } from '@berry-ai/harness-brand'
 import type { ArbitrateKey, ArbitrateOutcome, Occurrence, ReferenceInsert, TokenSpan } from './draft-editor.ts'
 import type { InputSubmitMode, MessageSubmission } from './composer-submission.ts'

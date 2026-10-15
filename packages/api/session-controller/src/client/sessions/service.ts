@@ -8,7 +8,7 @@ import { SESSION_SEARCH_RESULT_LIMIT } from '../../types.ts'
 import type { SessionProjectionMap } from '@berry-ai/harness-session-projection/types'
 import {
   createSnapshotStore, notifySubscribers, type ObservableSnapshot, type SnapshotStore,
-} from '@deepseek-ai/dsh-client-store'
+} from '@berry-ai/harness-client-store'
 import type { RemoteFailure, RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { SessionEventSource } from '../contract/events.ts'
 import type { SessionFace } from '../contract/session.ts'
