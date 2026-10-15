@@ -44,7 +44,7 @@
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-host-webserver": "workspace:*",
+    "@berry-ai/harness-host-webserver": "workspace:*",
     "@berry-ai/harness-api-remotes": "workspace:*",
     "@deepseek-ai/dsh-client-locale": "workspace:*",
     "@deepseek-ai/dsh-client-store": "workspace:*",

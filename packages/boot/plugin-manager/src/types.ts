@@ -1,9 +1,9 @@
 /** Public plugin management records shared with clients. */
 import type { Branded } from '@berry-ai/harness-brand'
 import type { PluginLocalizedMeta } from '@berry-ai/harness-package-manifest'
-import type { PluginInventoryEntry } from '@deepseek-ai/dsh-host-plugin-inventory/types'
-export type { PluginEntryId } from '@deepseek-ai/dsh-host-plugin-inventory/types'
-import type { PluginEntryId } from '@deepseek-ai/dsh-host-plugin-inventory/types'
+import type { PluginInventoryEntry } from '@berry-ai/harness-host-plugin-inventory/types'
+export type { PluginEntryId } from '@berry-ai/harness-host-plugin-inventory/types'
+import type { PluginEntryId } from '@berry-ai/harness-host-plugin-inventory/types'
 
 /** Reasons a profile control cannot modify its target. */
 export type ReadOnlyReason = 'management-required' | 'unaddressable'

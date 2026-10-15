@@ -18,7 +18,7 @@
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-host-webserver": "workspace:*",
+    "@berry-ai/harness-host-webserver": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
     "@berry-ai/harness-jobs": "workspace:*",
     "@berry-ai/harness-schedule": "workspace:*",

@@ -80,7 +80,7 @@ import {
 } from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 // Empty type imports carry the webServer/agents/sessionPersistence Context merges.
-import type {} from '@deepseek-ai/dsh-host-webserver'
+import type {} from '@berry-ai/harness-host-webserver'
 import type {} from '@berry-ai/harness-agent'
 import { provideCmdline } from '@berry-ai/harness-cmdline'
 import { startPrefixProxy, type PrefixProxy } from './prefix-proxy.ts'
@@ -655,7 +655,7 @@ export async function launchWebScaffold(options: LaunchOptions = {}): Promise<We
     // disable+insert pair.
     { id: 'directory-picker', disabled: true },
     { insert: [
-      { id: 'directory-picker-browse', name: '@deepseek-ai/dsh-host-directory-picker-browse' },
+      { id: 'directory-picker-browse', name: '@berry-ai/harness-host-directory-picker-browse' },
       { id: 'ui-directory-picker-browse', name: '@deepseek-ai/dsh-client-ui-directory-picker-browse' },
     ] },
     // Ordinary scenarios exclude host-dependent application discovery. The

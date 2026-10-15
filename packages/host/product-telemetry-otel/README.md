@@ -3,7 +3,7 @@ description: "Configure explicit product usage events, OTLP/HTTP routing, batchi
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-host-product-telemetry-otel
+# @berry-ai/harness-host-product-telemetry-otel
 
 English | [中文](README.zh.md)
 
@@ -29,7 +29,7 @@ Mount the plugin in a Cordis composition with the application identity; override
 
 ```yaml
 - name: '@berry-ai/harness-otel'
-- name: '@deepseek-ai/dsh-host-product-telemetry-otel'
+- name: '@berry-ai/harness-host-product-telemetry-otel'
   config:
     endpoint: https://dsh-otel-collector.deepseeksvc.com/v1/logs
     serviceName: deepseek-harness

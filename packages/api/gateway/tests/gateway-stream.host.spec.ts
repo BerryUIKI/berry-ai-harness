@@ -5,7 +5,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import WebSocket, { type RawData } from 'ws'
 import { Context, symbols } from '@deepseek-ai/cordis'
 import { apply as applyConnection, inject as connectionInject } from '@deepseek-ai/dsh-client-connection'
-import WebServer from '@deepseek-ai/dsh-host-webserver'
+import WebServer from '@berry-ai/harness-host-webserver'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import type { AppReady } from '@berry-ai/harness-cmdline'
 import {

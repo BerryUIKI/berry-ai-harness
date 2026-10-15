@@ -3,7 +3,7 @@ description: "Host half of open-in-app: resolving installed editors, Git GUIs, t
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-host-open-in-app
+# @berry-ai/harness-host-open-in-app
 
 English | [中文](README.zh.md)
 
@@ -34,7 +34,7 @@ Choose it for a Web deployment whose users work beside a local editor, Git GUI, 
 ### Minimal configuration
 
 ```yaml
-- name: '@deepseek-ai/dsh-host-open-in-app'
+- name: '@berry-ai/harness-host-open-in-app'
   config:
     probeTimeoutMs: 10000
     iconTimeoutMs: 10000

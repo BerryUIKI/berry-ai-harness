@@ -6,7 +6,7 @@ import type { ThemePreference } from './theme-settings.ts'
 import z from '@deepseek-ai/schemastery'
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-host-webserver'
+import type {} from '@berry-ai/harness-host-webserver'
 import { bootThemeInjections } from './boot-theme.ts'
 import { DEFAULT_PREFERENCE, FONT_SIZE_SPECS, fontSizeSchema, THEME_PREFERENCES } from './theme-settings.ts'
 

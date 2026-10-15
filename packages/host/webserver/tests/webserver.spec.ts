@@ -93,7 +93,7 @@ async function loadComposition(
   const root = await mkdtemp(join(tmpdir(), 'dsh-webserver-loader-'))
   const configPath = join(root, 'cordis.yml')
   await writeFile(configPath, [
-    "- name: '@deepseek-ai/dsh-host-webserver'",
+    "- name: '@berry-ai/harness-host-webserver'",
     '  config:',
     `    host: '${host}'`,
     `    port: ${String(port)}`,
@@ -122,7 +122,7 @@ async function loadComposition(
   await context.plugin(Loader)
   context.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-host-webserver', HttpServer],
+    ['@berry-ai/harness-host-webserver', HttpServer],
   ])
   context.loader.internal = {
     version: 'v2',
@@ -141,7 +141,7 @@ async function loadComposition(
 
 /** The webserver row's fiber in a Loaded composition. */
 function webserverFiber(context: Context) {
-  return [...context.loader.entries()].find(entry => entry.options.name === '@deepseek-ai/dsh-host-webserver')?.fiber
+  return [...context.loader.entries()].find(entry => entry.options.name === '@berry-ai/harness-host-webserver')?.fiber
 }
 
 /** GET (by default) one path against the running server; returns status plus a body prefix. */

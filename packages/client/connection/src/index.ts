@@ -5,7 +5,7 @@ import z from '@deepseek-ai/schemastery'
 import type {} from '@berry-ai/harness-attachment'
 import type {} from '@berry-ai/harness-credentials'
 // Activates the webServer Context merge used below.
-import type { WebRoute } from '@deepseek-ai/dsh-host-webserver'
+import type { WebRoute } from '@berry-ai/harness-host-webserver'
 import { API_PATH } from './api-path.ts'
 import { bridge, DEFAULT_MAX_REQUEST_BODY_BYTES } from './http-bridge.ts'
 import { assertTrustedAuthority } from './api-request-trust.ts'

@@ -10,7 +10,7 @@ import {
   WebhookSourceId,
   type VerifiedWebhookDelivery,
 } from '@deepseek-ai/dsh-webhook'
-import type { WebRoute } from '@deepseek-ai/dsh-host-webserver'
+import type { WebRoute } from '@berry-ai/harness-host-webserver'
 import { readBoundedUtf8Body, WebhookHttpError } from './body.ts'
 import type { GitHubJsonObject } from './types.ts'
 

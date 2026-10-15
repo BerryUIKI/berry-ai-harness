@@ -1,7 +1,7 @@
 /** Host registry and HTTP adapter for generic Connection RPC channels. */
 
 import { Context, Service } from '@deepseek-ai/cordis'
-import type { WebRoute } from '@deepseek-ai/dsh-host-webserver'
+import type { WebRoute } from '@berry-ai/harness-host-webserver'
 import type { PeerScope } from '@berry-ai/harness-typert-protocol'
 import {
   RpcId,

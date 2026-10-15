@@ -7,7 +7,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import { Context } from '@deepseek-ai/cordis'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import WebServer from '@deepseek-ai/dsh-host-webserver'
+import WebServer from '@berry-ai/harness-host-webserver'
 import { HostConnectionService } from '@deepseek-ai/dsh-client-connection'
 import { composeEntries, loadOverlayPatches } from '@berry-ai/harness-app-boot'
 import type { BrowserAuth } from '@deepseek-ai/dsh-client-connection/src/browser-auth.ts'
@@ -38,7 +38,7 @@ describe('experimental Inspector through a real Loader composition', () => {
     ))])
     const inspector = entries.find(entry => entry.id === 'experimental-inspector')!
     await writeFile(configPath, JSON.stringify([
-      { name: '@deepseek-ai/dsh-host-webserver', config: { host: '127.0.0.1', port: 0 } },
+      { name: '@berry-ai/harness-host-webserver', config: { host: '127.0.0.1', port: 0 } },
       { name: 'fixture:connection' },
     ]))
 
@@ -56,7 +56,7 @@ describe('experimental Inspector through a real Loader composition', () => {
     })
     context.loader.builtins.include = Include
     const modules = new Map<string, unknown>([
-      ['@deepseek-ai/dsh-host-webserver', WebServer],
+      ['@berry-ai/harness-host-webserver', WebServer],
       ['fixture:connection', (ctx: Context) => { new HostConnectionService(ctx, [], {} as BrowserAuth) }],
       ['@deepseek-ai/dsh-experimental-inspector', Inspector],
     ])

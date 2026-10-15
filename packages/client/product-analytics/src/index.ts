@@ -2,7 +2,7 @@
 import { type Context, type Volatile } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
-import type {} from '@deepseek-ai/dsh-host-product-telemetry-otel'
+import type {} from '@berry-ai/harness-host-product-telemetry-otel'
 import type {} from '@berry-ai/harness-deepseek-account'
 import type {} from '@berry-ai/harness-settings'
 import type {} from '@deepseek-ai/cordis-plugin-loader'

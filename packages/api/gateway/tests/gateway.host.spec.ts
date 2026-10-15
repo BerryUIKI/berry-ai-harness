@@ -10,7 +10,7 @@ import type {
   PeerId,
   PeerScope,
 } from '@deepseek-ai/dsh-client-connection'
-import type { WebServer, WebRoute } from '@deepseek-ai/dsh-host-webserver'
+import type { WebServer, WebRoute } from '@berry-ai/harness-host-webserver'
 import {
   bindTypertRemote,
   Remote,

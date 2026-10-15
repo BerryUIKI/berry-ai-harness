@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-host-directory-picker-native",
+  "name": "@berry-ai/harness-host-directory-picker-native",
   "description": "Native-OS-chooser backend of the directory-picker seam for the DeepSeek Harness web GUI host",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-host-directory-picker": "workspace:*",
+    "@berry-ai/harness-host-directory-picker": "workspace:*",
     "@berry-ai/harness-native-command": "workspace:*",
     "koffi": "3.1.1"
   },

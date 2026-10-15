@@ -59,7 +59,7 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/dsh-client-modules": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-host-webserver": "workspace:*"
+    "@berry-ai/harness-host-webserver": "workspace:*"
   },
   "devDependencies": {
     "chrome-devtools-frontend": "1.0.1638082",
@@ -78,7 +78,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-host-webserver": "workspace:*",
+    "@berry-ai/harness-host-webserver": "workspace:*",
     "@berry-ai/harness-cmdline": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@types/ws": "^8.18.1",

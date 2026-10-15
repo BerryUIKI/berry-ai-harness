@@ -5,13 +5,13 @@
 
 import { Context } from '@deepseek-ai/cordis'
 import { z } from 'zod'
-import { DirectoryPickerError } from '@deepseek-ai/dsh-host-directory-picker'
+import { DirectoryPickerError } from '@berry-ai/harness-host-directory-picker'
 import type {
   DirectoryPickerCapabilities, DirectoryPickerErrorCode,
-} from '@deepseek-ai/dsh-host-directory-picker'
+} from '@berry-ai/harness-host-directory-picker'
 // The seam owns the listing declaration; the generator requires the reference
 // site to name that package rather than this package's re-export of it.
-import type { DirectoryListing } from '@deepseek-ai/dsh-host-directory-picker/types'
+import type { DirectoryListing } from '@berry-ai/harness-host-directory-picker/types'
 import { Remote, RemoteError, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import type { RemoteErrorCode } from '@berry-ai/harness-typert-protocol'
 

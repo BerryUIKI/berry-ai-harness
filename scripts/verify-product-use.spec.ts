@@ -260,7 +260,7 @@ describe('product package use', () => {
 
   it('follows explicit directory-picker dynamic mounts and their client face', () => {
     const root = fixture()
-    const picker = '@deepseek-ai/dsh-host-directory-picker-auto'
+    const picker = '@berry-ai/harness-host-directory-picker-auto'
     pkg(root, 'packages/host/directory-picker-auto', picker)
     pkg(root, candidateDir, candidate, { dsh: { client: { platform: 'web' } } })
     pkg(root, 'packages/client/indirect', '@deepseek-ai/dsh-client-indirect')

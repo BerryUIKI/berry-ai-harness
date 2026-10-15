@@ -3,7 +3,7 @@ description: "配置显式产品使用事件、OTLP/HTTP 路由、批量发送�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-host-product-telemetry-otel
+# @berry-ai/harness-host-product-telemetry-otel
 
 [English](README.md) | 中文
 
@@ -29,7 +29,7 @@ kind: "package-reference"
 
 ```yaml
 - name: '@berry-ai/harness-otel'
-- name: '@deepseek-ai/dsh-host-product-telemetry-otel'
+- name: '@berry-ai/harness-host-product-telemetry-otel'
   config:
     endpoint: https://dsh-otel-collector.deepseeksvc.com/v1/logs
     serviceName: deepseek-harness

@@ -10,7 +10,7 @@
 import { Command } from 'commander'
 import type { Context } from '@deepseek-ai/cordis'
 import { parseCmdline } from '@berry-ai/harness-cmdline'
-import { isWildcardHost, type TlsConfig } from '@deepseek-ai/dsh-host-webserver'
+import { isWildcardHost, type TlsConfig } from '@berry-ai/harness-host-webserver'
 import { parsePublicUrl } from './public-url.ts'
 
 /** Stable Cordis plugin name. */
