@@ -35,7 +35,7 @@ const INSTALL_SECTIONS = ['dependencies', 'optionalDependencies'] as const
 const PEER_SECTIONS = ['peerDependencies'] as const
 
 /** The workspace root manifest, which is never a release member. */
-const WORKSPACE_ROOT_PACKAGE = '@deepseek-ai/dsh-root'
+const WORKSPACE_ROOT_PACKAGE = '@berry-ai/harness-root'
 
 /** One peer declaration the publish order leaves unordered. */
 interface DroppedPeerEdge {
@@ -132,8 +132,8 @@ export abstract class ReleaseFamily {
       if (manifest.private === true) continue
       const name = requireString(manifest, 'name', normalized)
       const version = requireString(manifest, 'version', normalized)
-      if (name === WORKSPACE_ROOT_PACKAGE) throw new Error(`${normalized} selected the workspace root`)
-      if (!name.startsWith('@deepseek-ai/')) throw new Error(`${normalized} must name an @deepseek-ai package`)
+      if (name === WORKSPACE_ROOT_PACKAGE || name === '@deepseek-ai/dsh-root') throw new Error(`${normalized} selected the workspace root`)
+      if (!name.startsWith('@deepseek-ai/') && !name.startsWith('@berry-ai/')) throw new Error(`${normalized} must name an @berry-ai or @deepseek-ai package`)
       if (seen.has(name)) throw new Error(`${name} appears twice in release family ${this.id}`)
       seen.add(name)
       members.push({
@@ -397,7 +397,7 @@ class DshFamily extends ReleaseFamily {
 
   /** Publish every advertised on-demand package before the installation that offers it. */
   protected override publicationPrerequisites(member: ReleaseMember): readonly string[] {
-    return member.name === '@deepseek-ai/dsh' ? ON_DEMAND_BUNDLES : []
+    return (member.name === '@deepseek-ai/dsh' || member.name === '@berry-ai/harness') ? ON_DEMAND_BUNDLES : []
   }
 
   /** Require the packed DSH runtime graph to stay on the shared exact release version. */
@@ -407,7 +407,8 @@ class DshFamily extends ReleaseFamily {
       const dependencies = manifest[section]
       if (dependencies === null || typeof dependencies !== 'object' || Array.isArray(dependencies)) continue
       for (const [name, range] of Object.entries(dependencies)) {
-        if (name !== '@deepseek-ai/dsh' && !name.startsWith('@deepseek-ai/dsh-')) continue
+        if (name !== '@deepseek-ai/dsh' && !name.startsWith('@deepseek-ai/dsh-')
+          && name !== '@berry-ai/harness' && !name.startsWith('@berry-ai/harness-')) continue
         if (range !== member.version) {
           throw new Error(`${member.name}: packed ${section}.${name} must equal ${member.version}, got ${String(range)}`)
         }
@@ -415,7 +416,7 @@ class DshFamily extends ReleaseFamily {
     }
   }
 
-  readonly installedEntry = { packageName: '@deepseek-ai/dsh', binPath: 'lib/bin.js' }
+  readonly installedEntry = { packageName: '@berry-ai/harness', binPath: 'lib/bin.js' }
 }
 
 /** `vendor/*`: every package keeps its own version line, so every package has its own tag. */
