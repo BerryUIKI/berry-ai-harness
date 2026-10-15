@@ -20,7 +20,7 @@ const CASES = [
   '', '.', '..', '/', '//', '///', 'a', '/a', 'a/', '/a/', 'a/b', '/a/b/c', 'a//b', '/a//b/',
   './a', '../a', 'a/./b', 'a/../b', '/a/../..', '/../a', 'a/b/../../c', '.hidden', 'a.b.c',
   '/a/b/c.txt', 'c.txt', '.txt', 'a/.txt', 'a/b.', '/a/b/.', '/a/b/..', 'foo/bar/../baz/./qux',
-  '/dsh/node_modules/@deepseek-ai/dsh-session/lib/index.js', 'node_modules/.bin/x',
+  '/dsh/node_modules/@berry-ai/harness-session/lib/index.js', 'node_modules/.bin/x',
 ]
 
 const JOINS: string[][] = [

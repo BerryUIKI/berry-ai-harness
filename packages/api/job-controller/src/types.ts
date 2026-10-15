@@ -7,7 +7,7 @@
 
 import type { JobId } from '@berry-ai/harness-jobs/brand'
 import type { JobChunk, JobView } from '@berry-ai/harness-jobs/view'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 
 export type { JobChunk, JobView } from '@berry-ai/harness-jobs/view'
 

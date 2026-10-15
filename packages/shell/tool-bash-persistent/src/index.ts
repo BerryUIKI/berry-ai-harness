@@ -7,11 +7,11 @@ import type {} from '@deepseek-ai/dsh-working-directory'
 import { randomUUID } from 'node:crypto'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { truncateWithoutSplittingSurrogatePair } from '@berry-ai/harness-output-retention'
 import type { TerminalReadResult, TerminalSessionId } from '@berry-ai/harness-terminal'
 import { deadline, timeoutOf } from '@berry-ai/harness-timeout'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
 
 // TODO: Replace the file-search advice; arbitrary command output need not come from a searchable file.
 const TRUNCATED_MESSAGE = '<response clipped><NOTE>To save on context only part of this file has been shown to you. You should retry this tool after you have searched inside the file with `grep -n` in order to find the line numbers of what you are looking for.</NOTE>'

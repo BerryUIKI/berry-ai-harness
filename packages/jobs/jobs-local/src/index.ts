@@ -12,9 +12,9 @@
 
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { ScopedLayers, scopeOf } from '@deepseek-ai/dsh-scope'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { Agent } from '@berry-ai/harness-agent'
+import { ScopedLayers, scopeOf } from '@berry-ai/harness-scope'
+import type { SessionId } from '@berry-ai/harness-session'
 import { deadline, timeoutOf } from '@berry-ai/harness-timeout'
 import { JobRegistry, JobId } from '@berry-ai/harness-jobs'
 import type {
@@ -358,7 +358,7 @@ export class LocalJobRegistry extends JobRegistry {
     if (session === undefined) return undefined
     const agents = this.selfCtx.get('agents')
     if (agents === undefined) {
-      throw new Error('background job ownership requires the agent registry (load @deepseek-ai/dsh-agent)')
+      throw new Error('background job ownership requires the agent registry (load @berry-ai/harness-agent)')
     }
     const owner = agents.get(session)
     if (owner === undefined) {

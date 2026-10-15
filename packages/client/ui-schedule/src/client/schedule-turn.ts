@@ -9,7 +9,7 @@
  * belongs to ui-tool's generic keyed tool view, so this package contributes
  * only the Turn-level card.
  */
-import { isAppendSurfaceEvent } from '@deepseek-ai/dsh-session/surface'
+import { isAppendSurfaceEvent } from '@berry-ai/harness-session/surface'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import type {
   ConversationMatch, ConversationNodeDefinition, ToolResultNode, TurnLocation,

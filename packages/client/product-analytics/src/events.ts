@@ -1,5 +1,5 @@
 /** Desktop analytics fields selected by product event owners. */
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 
 /** Event names and their selected product attributes. */

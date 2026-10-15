@@ -1,7 +1,7 @@
 import { imageOffloadProjection } from '@berry-ai/harness-compaction-image-offload/projection'
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { CommandId } from '@berry-ai/harness-commands/brand'
 import { BasicCompactionEngine } from '@berry-ai/harness-compaction-basic'
@@ -20,12 +20,12 @@ import type {
   StreamChunk,
   TokenUsage,
 } from '@berry-ai/harness-llm'
-import SessionStore, { buildForkSeed, Session, SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
+import SessionStore, { buildForkSeed, Session, SessionId, type SessionEvent } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import LlmRuntime from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import TokenMeter from '@berry-ai/harness-token-meter'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type {
   SummarizationInput,
   SummaryResult,

@@ -2,13 +2,13 @@ import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import LlmRuntime, { createUserMessage, ToolCallId, LlmError, StreamChunk, errorChain  } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
-import SessionStore, { SessionId, TurnEndReason } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
-import AgentRegistry, { type Agent } from '@deepseek-ai/dsh-agent'
+import SessionStore, { SessionId, TurnEndReason } from '@berry-ai/harness-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime, { defineContentToolFixture } from '@berry-ai/harness-tools'
+import AgentRegistry, { type Agent } from '@berry-ai/harness-agent'
 
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { MockAdapter, textResponse, toolCallResponse } from './mock-adapter.ts'
 
@@ -371,7 +371,7 @@ describe('persistent step-close rejection', () => {
 
 describe('tool result meta persistence', () => {
   it('records a presentationMeta payload on the tool/result event', async () => {
-    const { defineTool } = await import('@deepseek-ai/dsh-tools')
+    const { defineTool } = await import('@berry-ai/harness-tools')
     const adapter = new MockAdapter([
       toolCallResponse('c1', 'meta-tool', {}),
       textResponse('done'),

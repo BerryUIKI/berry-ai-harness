@@ -7,7 +7,7 @@ import { describe, expect, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import type { SessionId } from '@deepseek-ai/dsh-api-remotes/client'
 import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
-import { SessionSeq } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq } from '@berry-ai/harness-session/types'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { ok, type RemoteMock } from '@deepseek-ai/dsh-remote-mock'
 import {

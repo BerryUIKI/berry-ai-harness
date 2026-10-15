@@ -18,7 +18,7 @@ import {
 import {
   apply as applyChat, inject as injectChat, type ChatFlowDataInjected, type ChatViewInjected,
 } from '@deepseek-ai/dsh-client-ui-chat/client'
-import { SessionSeq, type SessionId } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq, type SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import { createChatStore } from '../src/client/stores.ts'
 import { CHAT_SETTINGS_NAMESPACE, type ChatSettings } from '../src/chat-settings.ts'

@@ -15,7 +15,7 @@ Status: implemented
 工具调用超时是仅适用于面向模型的工具执行的策略，由三部分组成：
 
 - `@berry-ai/harness-timeout` 仍是拥有 `deadline()` 和 `timeoutOf()` 的共享库。
-- `@deepseek-ai/dsh-tools` 在 `tools/pre-execute` 和 `tools/post-execute` 之间有一个环绕分发的 waterfall（瀑布式事件）`tools/execute`。
+- `@berry-ai/harness-tools` 在 `tools/pre-execute` 和 `tools/post-execute` 之间有一个环绕分发的 waterfall（瀑布式事件）`tools/execute`。
 - [仓库命名约定](../../archived/architecture/2026-08-11-repository-naming-contract-and-rename-ledger.md)使用 `@berry-ai/harness-tool-call-timeout-policy`，准确说明该策略所限制的操作。插件从 runtime 读取每个工具声明的 `timeoutMs`，并通过派生新的 `exec.signal` 来包装有此声明的调用。
 
 执行流水线如下：
@@ -34,7 +34,7 @@ ctx.tools.execute(exec)
 
 ### `tools/execute` 环绕分发扩展点
 
-`@deepseek-ai/dsh-tools` 声明了一个 `tools/execute` waterfall，其基础 `next()` 是带规范化的分发 thunk——即同一个内部 `try`/`catch`，将抛出的工具错误（或未知工具错误）转换为 `isError` 的 `ToolExecutionResult`。监听器接收 `(exec, next)`：调用 `next()` 委托给分发（返回其结果，可选地包装），或返回替代结果以短路分发。整个流水线仍位于 `execute` 的外层 try/catch 内，因此抛出异常的监听器会变成 `isError` 结果，而非轮次失败。
+`@berry-ai/harness-tools` 声明了一个 `tools/execute` waterfall，其基础 `next()` 是带规范化的分发 thunk——即同一个内部 `try`/`catch`，将抛出的工具错误（或未知工具错误）转换为 `isError` 的 `ToolExecutionResult`。监听器接收 `(exec, next)`：调用 `next()` 委托给分发（返回其结果，可选地包装），或返回替代结果以短路分发。整个流水线仍位于 `execute` 的外层 try/catch 内，因此抛出异常的监听器会变成 `isError` 结果，而非轮次失败。
 
 catch 是基础 `next`（而非 waterfall 之外的东西）这一点至关重要：当提供方看到超时信号并抛出自己的上游中止错误时，注册表分发首先将其转换为普通错误结果，然后 `timeout-policy` 才能将最终结果替换为 `TOOL_TIMEOUT`。
 
@@ -107,7 +107,7 @@ function toolTimeoutResult(timeoutMs: number): ToolExecutionResult {
 
 ## 后果
 
-- `@deepseek-ai/dsh-tools` 在拦截点有意拆分 pre/post 工具钩子之后，获得了一个环绕分发接口。其约定范围很窄——包装注册表分发，而非替代 pre 门禁或 post 结果策略——且基础 `next()` 是带规范化的分发，因此包装器永远不会看到未经处理的工具异常。
+- `@berry-ai/harness-tools` 在拦截点有意拆分 pre/post 工具钩子之后，获得了一个环绕分发接口。其约定范围很窄——包装注册表分发，而非替代 pre 门禁或 post 结果策略——且基础 `next()` 是带规范化的分发，因此包装器永远不会看到未经处理的工具异常。
 - 多个 `tools/execute` 监听器按普通 Cordis waterfall 顺序组合：调用 `next()` 的监听器包装下游监听器加分发；不调用 `next()` 直接返回的监听器短路它们。一个同时组合超时与未来重试/沙箱/指标包装器的部署通过注册顺序选择语义（「超时覆盖整个重试」vs「超时覆盖每次尝试」）。
 - 通过声明选择加入会带来一种有意接受的误配置风险：工具可以声明 `timeoutMs` 但不遵循 `exec.signal`，这样的工具在超时时不会停止。注册表会等待这个尚未完全停稳的工具体结束，而不是与它竞速；同时插件约定声明：声明预算意味着协作；web 工具在已转发信号的工具上验证了这一模式。
 - 过渡期间 `bash` 和已迁移的 web 工具有意使用不同的超时路径：`TOOL_TIMEOUT` 是面向模型的工具调用预算，而 `BASH_TIMEOUT` 仍是 bash 和钩子使用的 bash 后端超时。

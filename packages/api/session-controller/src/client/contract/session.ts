@@ -9,7 +9,7 @@
  */
 import type { AttachmentIdType, FileAttachmentRef, ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
-import type { SessionId, SessionSeq } from '@deepseek-ai/dsh-session/types'
+import type { SessionId, SessionSeq } from '@berry-ai/harness-session/types'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
 import type { PromptContentPart, QueueAction, SessionRequestId } from '../../types.ts'

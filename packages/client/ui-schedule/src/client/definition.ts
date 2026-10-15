@@ -8,7 +8,7 @@
 import type { TranslateNS } from '@deepseek-ai/dsh-client-locale/client'
 import type { SidebarRightTabDefinition, SidebarRightTabParamsMap, SidebarRightNavigationParams } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
 import type { ScheduleId } from '@berry-ai/harness-schedule/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 
 /** This implementation's identity in the tab system: the key its body and title register under. */
 export const SCHEDULE_TASK_ID = '@deepseek-ai/dsh-client-ui-schedule/task'

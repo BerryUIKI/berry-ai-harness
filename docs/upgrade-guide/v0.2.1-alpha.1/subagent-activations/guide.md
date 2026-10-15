@@ -31,7 +31,7 @@ The published `@deepseek-ai/dsh-subagent-in-process-driver` package is removed. 
 3. For host code that must await a result, replace `ctx.subagents.start()` or `startContinuable()` with `startActivation()` and caller delivery. Given a composed service and live parent:
 
    ```ts
-   import type { Agent } from '@deepseek-ai/dsh-agent'
+   import type { Agent } from '@berry-ai/harness-agent'
    import type SubagentRuntime from '@deepseek-ai/dsh-subagent'
 
    async function collect(subagents: SubagentRuntime, parent: Agent, signal: AbortSignal) {

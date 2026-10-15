@@ -6,7 +6,7 @@
  */
 
 import type { Branded } from '@berry-ai/harness-brand'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type {} from '@berry-ai/harness-typert-protocol'
 
 /**

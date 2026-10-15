@@ -124,8 +124,8 @@ V3 未知内容标签变为 `plugin:<original-type>`，其他字段原样保留�
 | `compact` | `compact-checkpoint` |
 | `tools-code-mode`、`tools-ptc` | `ptc-mode` |
 | `dsh-compaction-basic` | `compact-basic` |
-| system 角色消息中的 `@deepseek-ai/dsh-system-prompt` | `system-prompt` |
-| 其他角色中的 `@deepseek-ai/dsh-system-prompt` | `runtime-context` |
+| system 角色消息中的 `@berry-ai/harness-system-prompt` | `system-prompt` |
+| 其他角色中的 `@berry-ai/harness-system-prompt` | `runtime-context` |
 | 下文列出的同名第一方生产者 | 精确的 plugin 字符串 |
 | 其他任何插件名 | `plugin:` 后接完整的原始名称 |
 

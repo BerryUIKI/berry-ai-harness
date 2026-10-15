@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import { createMessage, createUserMessage } from '@berry-ai/harness-llm'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
+import { Session, SessionId } from '@berry-ai/harness-session'
 
 export const name = 'session-reference-source-fixture'
 export const inject = ['sessions']

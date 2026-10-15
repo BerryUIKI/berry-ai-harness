@@ -12,8 +12,8 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { ToolSchema } from '@berry-ai/harness-llm'
-import type { ToolExecution, ToolRunContext } from '@deepseek-ai/dsh-tools'
-import { ToolArgsError, validateJsonSchemaValue, type ObjectJsonSchema } from '@deepseek-ai/dsh-tools'
+import type { ToolExecution, ToolRunContext } from '@berry-ai/harness-tools'
+import { ToolArgsError, validateJsonSchemaValue, type ObjectJsonSchema } from '@berry-ai/harness-tools'
 
 /** The model-facing tool name a structured child must call to finish. */
 export const STRUCTURED_OUTPUT_TOOL = 'structured_output'

@@ -2,11 +2,11 @@
 
 import { randomUUID } from 'node:crypto'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type { FileAttachmentRef } from '@berry-ai/harness-attachment'
 import type {} from '@deepseek-ai/dsh-client-connection'
 import type { CommandFileReceiptResolver } from '@berry-ai/harness-commands'
-import type { Session, SessionEvent, SessionId } from '@deepseek-ai/dsh-session'
+import type { Session, SessionEvent, SessionId } from '@berry-ai/harness-session'
 import { Remote, RemoteError, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import { handleFileUploadHttp } from './http-route.ts'
 import { FILE_UPLOAD_PATH } from './protocol.ts'

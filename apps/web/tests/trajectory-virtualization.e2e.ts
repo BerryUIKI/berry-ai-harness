@@ -11,7 +11,7 @@ import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import type { ReplayEntry } from '@deepseek-ai/dsh-llm-replay'
 import { sessionFixtureName } from '@deepseek-ai/dsh-session-snapshot'
-import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 import { createChatScrollFixture } from './chat-scroll-fixture.ts'
 import {
   captureStableAria,

@@ -7,11 +7,11 @@ import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-test
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { PtcRuntime } from '@berry-ai/harness-ptc-runtime'
-import { createScope, type Scope } from '@deepseek-ai/dsh-scope'
-import { turnBoundaryProjectionDefinition } from '@deepseek-ai/dsh-agent-loop'
+import { createScope, type Scope } from '@berry-ai/harness-scope'
+import { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import SystemPrompt, { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime, { type ToolResult } from '@deepseek-ai/dsh-tools'
+import SystemPrompt, { renderPrompt } from '@berry-ai/harness-system-prompt'
+import ToolRuntime, { type ToolResult } from '@berry-ai/harness-tools'
 import { FileSystem, FsError, FsTargetKey, FsVersion } from '@berry-ai/harness-fs'
 import type {
   FsDirEntry,
@@ -32,7 +32,7 @@ import { sessionResolveOptions } from '../src/session-cwd.ts'
 import ApprovalService from '@berry-ai/harness-user-approval'
 import type { SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
-import { SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
+import { SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 
 const testToolSignal = new AbortController().signal

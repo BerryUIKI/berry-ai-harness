@@ -11,7 +11,7 @@ import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
 import { canonicalPath } from '@berry-ai/harness-sandbox'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 import type { WebTerminalId } from '@deepseek-ai/dsh-api-terminal-controller/types'
 import type {} from '@deepseek-ai/dsh-api-terminal-controller'
 import {

@@ -14,7 +14,7 @@ This permission gate is one example of a hook plugin. It returns a typed decisio
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type { PreToolDecision, ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { PreToolDecision, ToolExecution } from '@berry-ai/harness-tools'
 
 declare function isAllowed(exec: ToolExecution): Promise<boolean>
 
@@ -40,7 +40,7 @@ A UI plugin combines durable `session/event` records (Assistant settlements, tur
 import type { Context } from '@deepseek-ai/cordis'
 import { brandString } from '@berry-ai/harness-brand'
 import { createUserMessage } from '@berry-ai/harness-llm'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionId } from '@berry-ai/harness-session'
 
 declare function render(text: string): void
 declare function onUserInput(handler: (text: string) => void): void

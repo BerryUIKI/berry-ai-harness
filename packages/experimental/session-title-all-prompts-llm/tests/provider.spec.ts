@@ -2,9 +2,9 @@ import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished } from 'vitest'
 import LlmRuntime, { createUserMessage, LlmAdapter, ReasoningEffortId, ToolCallId } from '@berry-ai/harness-llm'
 import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-ai/harness-llm'
-import SessionStore, { Session, SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { Session, SessionId } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import { turnBoundaryProjectionDefinition } from '@deepseek-ai/dsh-agent-loop'
+import { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
 import SessionTitleService, {
   SessionTitleProviderId,
   type SessionTitleUserMessage,

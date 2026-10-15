@@ -2,7 +2,7 @@
 import type { ISessions, SessionBinding } from '@deepseek-ai/dsh-api-session-controller/client'
 import type { Shortcuts } from '@deepseek-ai/dsh-client-shortcuts/client'
 import type { UiSession } from '@deepseek-ai/dsh-client-ui-session/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
 import { StopSequence } from './stop-sequence.ts'
 

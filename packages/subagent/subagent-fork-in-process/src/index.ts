@@ -9,8 +9,8 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { SessionEvent } from '@berry-ai/harness-session'
+import type { Agent } from '@berry-ai/harness-agent'
 import type {
   ContinuableCreateRequest,
   ContinuableCreateSpec,

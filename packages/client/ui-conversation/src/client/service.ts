@@ -17,7 +17,7 @@ import type {
   ISessions, PendingSubmissionRetirement, SessionFace,
 } from '@deepseek-ai/dsh-api-session-controller/client'
 import type {} from '@deepseek-ai/dsh-client-file-upload/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { ImageMediaType } from '@berry-ai/harness-attachment'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { SnapshotStore } from '@deepseek-ai/dsh-client-store'

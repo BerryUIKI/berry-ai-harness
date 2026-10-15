@@ -6,7 +6,7 @@ import type {
 } from '@deepseek-ai/dsh-api-session-controller/client'
 import { SessionForkError } from '@deepseek-ai/dsh-api-session-controller/client'
 import type { WorkspaceId, WorkspaceSnapshot, WorkspaceView } from '@deepseek-ai/dsh-api-workspace-controller/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type { StoredEntry } from '@deepseek-ai/dsh-client-ui-slots'
 import { RemoteError, TestRemote } from '@deepseek-ai/dsh-client-test-runtime'

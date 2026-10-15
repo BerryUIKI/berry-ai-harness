@@ -6,7 +6,7 @@ import type {
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import { assistantStreamFirstTokenTime } from '@berry-ai/harness-llm/assistant-stream'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+import type { SessionEvent } from '@berry-ai/harness-session/types'
 import { trajectoryNode } from './trajectory-definition-common.ts'
 import type { TrajectoryPartialAssistant } from './trajectory-contract.ts'
 import {

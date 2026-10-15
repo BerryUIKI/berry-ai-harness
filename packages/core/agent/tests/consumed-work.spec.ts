@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { createUserMessage } from '@berry-ai/harness-llm'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
-import type { TurnEndReason } from '@deepseek-ai/dsh-session'
-import { foldConsumedWork } from '@deepseek-ai/dsh-agent'
+import { Session, SessionId } from '@berry-ai/harness-session'
+import type { TurnEndReason } from '@berry-ai/harness-session'
+import { foldConsumedWork } from '@berry-ai/harness-agent'
 
 /** One pending message, as the inbox records it. */
 function message(text: string) {

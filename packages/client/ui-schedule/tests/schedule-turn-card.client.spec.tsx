@@ -15,7 +15,7 @@ import {
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { SessionLiveEventEntry } from '@deepseek-ai/dsh-api-session-controller/client'
 import { createToolResultMessage, ToolCallId } from '@berry-ai/harness-llm'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+import type { SessionEvent } from '@berry-ai/harness-session/types'
 import type { ScheduleCatalogEntry, ScheduleId } from '@berry-ai/harness-schedule/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import { ScheduleTurnCard, type ScheduleTurnCardProps } from '../src/client/ScheduleTurnCard.tsx'

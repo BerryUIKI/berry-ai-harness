@@ -5,7 +5,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'
 import { LlmAttemptId, ToolCallId } from '@berry-ai/harness-llm/brand'
 import type { StreamChunk } from '@berry-ai/harness-llm'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+import type { SessionEvent } from '@berry-ai/harness-session/types'
 import type { ChatNode, ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
 import type { SessionEventLikeEntry } from '@deepseek-ai/dsh-api-session-controller/client'
 // These Client-only fold modules have no plain-Node package export and are compiled into this worker.
@@ -261,7 +261,7 @@ assertBuiltBenchmarkRuntime(import.meta.url, {
   '@berry-ai/harness-brand': import.meta.resolve('@berry-ai/harness-brand'),
   '@deepseek-ai/dsh-client-store': import.meta.resolve('@deepseek-ai/dsh-client-store'),
   '@berry-ai/harness-llm/assistant-stream': import.meta.resolve('@berry-ai/harness-llm/assistant-stream'),
-  '@deepseek-ai/dsh-session/surface': import.meta.resolve('@deepseek-ai/dsh-session/surface'),
+  '@berry-ai/harness-session/surface': import.meta.resolve('@berry-ai/harness-session/surface'),
   '@berry-ai/harness-token-meter/client': import.meta.resolve('@berry-ai/harness-token-meter/client'),
   '@berry-ai/harness-util-values': import.meta.resolve('@berry-ai/harness-util-values'),
 })

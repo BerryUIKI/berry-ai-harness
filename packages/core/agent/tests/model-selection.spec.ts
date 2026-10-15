@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
 import {
   agentEvents,
   installModelSelection,
@@ -14,7 +14,7 @@ import {
   type LlmCallConfig,
   type UserMessage,
 } from '@berry-ai/harness-llm'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
+import { Session, SessionId } from '@berry-ai/harness-session'
 
 const SIGNAL = new AbortController().signal
 const INPUT = createUserMessage({

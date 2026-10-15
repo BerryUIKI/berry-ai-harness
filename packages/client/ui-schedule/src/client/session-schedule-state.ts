@@ -13,7 +13,7 @@
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { HostObservable, SnapshotSelectorHook } from '@deepseek-ai/dsh-client-ui-slots'
 import type { ScheduleCatalogEntry } from '@berry-ai/harness-schedule/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { createCatalogSource, type CatalogInjected, type CatalogSnapshot } from './catalog-source.ts'
 
 /** Per-Session source factory handed to the Session-header catalog occupant. */

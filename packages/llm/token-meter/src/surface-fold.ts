@@ -14,8 +14,8 @@
  * @module @berry-ai/harness-token-meter/surface-fold
  */
 
-import { deriveEventMessage } from '@deepseek-ai/dsh-session'
-import type { SessionSeq, SurfaceEvent } from '@deepseek-ai/dsh-session'
+import { deriveEventMessage } from '@berry-ai/harness-session'
+import type { SessionSeq, SurfaceEvent } from '@berry-ai/harness-session'
 import type { ContentBlock, ImageBlock, Message } from '@berry-ai/harness-llm'
 import { estimateMessage, estimateStructuralBlock } from './estimate.ts'
 

@@ -8,14 +8,14 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { scopeChainOf, scopeOf } from '@deepseek-ai/dsh-scope'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { ToolDefinition } from '@deepseek-ai/dsh-tools'
-import type { Agent, AgentOptions } from '@deepseek-ai/dsh-agent'
+import { scopeChainOf, scopeOf } from '@berry-ai/harness-scope'
+import { defineTool } from '@berry-ai/harness-tools'
+import type { ToolDefinition } from '@berry-ai/harness-tools'
+import type { Agent, AgentOptions } from '@berry-ai/harness-agent'
 import { ReasoningEffortId } from '@berry-ai/harness-llm'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import { SessionSeq } from '@deepseek-ai/dsh-session'
-import type { Session } from '@deepseek-ai/dsh-session'
+import { SessionSeq } from '@berry-ai/harness-session'
+import type { Session } from '@berry-ai/harness-session'
 import {
   assertSubagentMaxDepth,
   parentAgentOptionsForDelegation,

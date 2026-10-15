@@ -70,7 +70,7 @@ flowchart LR
 
 提供方包仅依赖 `dsh-web` 和 Cordis。它们拥有凭证、端点、协议格式映射、解析和 `WebError` 转换，使用平台 `fetch`。每个提供方注入共享服务并注册后端；只有 `dsh-web` 拥有 `ctx.web` 键。提供方私有的协议形状不会产生对 `ctx.llm` 或 Cordis HTTP 服务的依赖。
 
-`@berry-ai/harness-tool-web` 依赖 `@berry-ai/harness-web`、`@deepseek-ai/dsh-tools`、`@deepseek-ai/dsh-system-prompt` 和 Cordis。它从不导入具体的提供方包。
+`@berry-ai/harness-tool-web` 依赖 `@berry-ai/harness-web`、`@berry-ai/harness-tools`、`@berry-ai/harness-system-prompt` 和 Cordis。它从不导入具体的提供方包。
 
 ## `ctx.web` 约定
 

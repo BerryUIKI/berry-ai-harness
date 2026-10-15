@@ -7,7 +7,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
 import z from '@deepseek-ai/schemastery'
 import { registerTimedAskUser } from './timed.ts'
 import '@berry-ai/harness-user-questions'

@@ -5,9 +5,9 @@
 import assert from 'node:assert/strict'
 import { describe, expect, it, vi, beforeEach } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import SystemPrompt, { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import { createScope } from '@deepseek-ai/dsh-scope'
+import SystemPrompt, { renderPrompt } from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
+import { createScope } from '@berry-ai/harness-scope'
 import type { Config } from '@berry-ai/harness-mcp-client'
 
 // ---- Mock MCP SDK ----

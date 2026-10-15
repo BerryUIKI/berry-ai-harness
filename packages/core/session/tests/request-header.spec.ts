@@ -1,8 +1,8 @@
 /** Request-header canonicalization, equality, and snapshot folding. */
 
 import { describe, expect, it } from 'vitest'
-import { Session, SessionId, SessionSeq, canonicalHeader, foldRequestHeader, headerEquals } from '@deepseek-ai/dsh-session'
-import type { EpochHeader, SessionEvent } from '@deepseek-ai/dsh-session'
+import { Session, SessionId, SessionSeq, canonicalHeader, foldRequestHeader, headerEquals } from '@berry-ai/harness-session'
+import type { EpochHeader, SessionEvent } from '@berry-ai/harness-session'
 import { createUserMessage, ReasoningEffortId } from '@berry-ai/harness-llm'
 import type { ToolSchema } from '@berry-ai/harness-llm'
 

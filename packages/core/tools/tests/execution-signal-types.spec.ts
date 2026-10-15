@@ -1,13 +1,13 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type { Context } from '@deepseek-ai/cordis'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
 import type {
   ToolDispatchExecution,
   ToolExecution,
   ToolExecutionInput,
   ToolRunContext,
-} from '@deepseek-ai/dsh-tools'
+} from '@berry-ai/harness-tools'
 
 function inputAndExecutionContracts(
   input: ToolExecutionInput,

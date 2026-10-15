@@ -3,7 +3,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
 import BrowserUseRegistry from '@berry-ai/harness-browser-use'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import * as Provider from '../../lib/index.js'
 
 const [endpoint, url] = process.argv.slice(2)

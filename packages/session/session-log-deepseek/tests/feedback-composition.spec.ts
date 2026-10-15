@@ -6,7 +6,7 @@ import { afterEach, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import MessageFeedback from '@berry-ai/harness-message-feedback'
 import { recordFeedback } from '@berry-ai/harness-command-feedback'
@@ -40,7 +40,7 @@ async function boot(
   vi.stubEnv('DEEPSEEK_API_KEY', 'feedback-test-key')
   server = await startMockLlmServer(mock)
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-session', SessionStore],
+    ['@berry-ai/harness-session', SessionStore],
     ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlSessionPersistence],
     ['@berry-ai/harness-message-feedback', MessageFeedback],
     ['@berry-ai/harness-llm', LlmRuntime],

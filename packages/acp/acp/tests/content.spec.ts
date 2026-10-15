@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import type { Context } from '@deepseek-ai/cordis'
 import { AttachmentError, AttachmentId } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentRef, SaveImageAttachment } from '@berry-ai/harness-attachment'
-import type { ModelSelection } from '@deepseek-ai/dsh-agent'
+import type { ModelSelection } from '@berry-ai/harness-agent'
 import {
   AcpContentError,
   admitAcpPrompt,

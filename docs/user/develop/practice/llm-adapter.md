@@ -134,7 +134,7 @@ The first argument lists provider routes handled by the adapter. `GenerateOption
       - my-provider
 
 - id: agent-loop
-  name: '@deepseek-ai/dsh-agent-loop'
+  name: '@berry-ai/harness-agent-loop'
   config:
     agents:
       - id: main

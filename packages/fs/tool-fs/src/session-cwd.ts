@@ -5,7 +5,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { ToolExecution } from '@berry-ai/harness-tools'
 import type {} from '@deepseek-ai/dsh-working-directory'
 
 /**

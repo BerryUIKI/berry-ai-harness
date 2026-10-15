@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import { afterEach, describe, expect, it, onTestFinished, vi } from 'vitest'
-import { SessionSeq } from '@deepseek-ai/dsh-session/types'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq } from '@berry-ai/harness-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { createAssistantMessage, LlmAttemptId } from '@berry-ai/harness-llm'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import {

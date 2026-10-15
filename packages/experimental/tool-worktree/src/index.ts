@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/dsh-experimental-worktree'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
 
 /** Cordis plugin name. */
 export const name = 'tool-worktree'

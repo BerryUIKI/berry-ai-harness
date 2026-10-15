@@ -4,10 +4,10 @@
  * @module @deepseek-ai/dsh-subagent/continuation-messages
  */
 
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { boundContextSummary, createUserMessage } from '@berry-ai/harness-llm'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionId } from '@berry-ai/harness-session'
 import type { SubagentResult } from './types.ts'
 
 /** Durable attribution for one model-authored message between Agents. */

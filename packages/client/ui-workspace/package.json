@@ -54,7 +54,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-api-remotes": "workspace:*",
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@deepseek-ai/dsh-api-session-controller": "workspace:*",
     "@deepseek-ai/dsh-api-workspace-controller": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
@@ -70,7 +70,7 @@
     "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
     "@berry-ai/harness-jobs": "workspace:*",
     "@berry-ai/harness-schedule": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",

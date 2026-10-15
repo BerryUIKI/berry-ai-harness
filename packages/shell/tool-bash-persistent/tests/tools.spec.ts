@@ -2,9 +2,9 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { provideWorkingDirectoryFixture, unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import { SESSION_FORMAT_VERSION, Session, SessionId } from '@deepseek-ai/dsh-session'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import { SESSION_FORMAT_VERSION, Session, SessionId } from '@berry-ai/harness-session'
+import AgentRegistry from '@berry-ai/harness-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import TerminalSessionService from '@berry-ai/harness-terminal'
 import type {
   TerminalBackend,
@@ -16,8 +16,8 @@ import type {
   TerminalSignal,
   TerminalWaitReason,
 } from '@berry-ai/harness-terminal'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
 import * as ToolBashPersistent from '@berry-ai/harness-tool-bash-persistent'
 
 const contexts: Context[] = []

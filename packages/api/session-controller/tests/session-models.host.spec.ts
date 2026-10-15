@@ -7,8 +7,8 @@
 
 import { describe, expect, it, vi, onTestFinished } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry, { agentEvents } from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import AgentRegistry, { agentEvents } from '@berry-ai/harness-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import AttachmentStore from '@berry-ai/harness-attachment'
 import LlmRuntime, { LlmAdapter, ReasoningEffortId } from '@berry-ai/harness-llm'
 import type {
@@ -16,12 +16,12 @@ import type {
   LlmModelReasoningInfo, LlmProviderInfo, LlmResolvedModelInfo, StreamChunk,
   UserMessage,
 } from '@berry-ai/harness-llm'
-import SessionStore from '@deepseek-ai/dsh-session'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore from '@berry-ai/harness-session'
+import type { SessionId } from '@berry-ai/harness-session'
 import type { SessionPromptRequest, SessionRequestId } from '../src/types.ts'
 import { ApiSessionAgentController } from '../src/agent.ts'
 import { buildModelCatalog, hasProviderApiKey } from '../src/catalog.ts'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { createSessionTestController, createSessionTestRemote } from './test-remote.ts'
 

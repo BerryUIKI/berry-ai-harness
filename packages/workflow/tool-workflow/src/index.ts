@@ -14,12 +14,12 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { ToolCallView, ToolResultView } from '@deepseek-ai/dsh-tools'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import { defineTool } from '@berry-ai/harness-tools'
+import type { ToolCallView, ToolResultView } from '@berry-ai/harness-tools'
+import type { Agent } from '@berry-ai/harness-agent'
 import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { JobId, JobOutcome } from '@berry-ai/harness-jobs'
-import type { Session, SessionEventMap } from '@deepseek-ai/dsh-session'
+import type { Session, SessionEventMap } from '@berry-ai/harness-session'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type {
   WorkflowResult, WorkflowRun, WorkflowRunId, WorkflowStopReason,

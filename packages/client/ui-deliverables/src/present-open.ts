@@ -7,7 +7,7 @@ import type {} from '@berry-ai/harness-sandbox-policy'
 import { remoteErrorOf } from '@berry-ai/harness-typert-protocol'
 import type {} from '@deepseek-ai/dsh-client-connection'
 import type {} from '@berry-ai/harness-session-query'
-import type { SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
+import type { SessionId, SessionSeq } from '@berry-ai/harness-session'
 import { CHANGES_DIFF_PATH, CHANGES_OPEN_PATH, CHANGED_FILES_PATH, type ChangesSummary } from './changes.ts'
 import { isPresentedData, isPresentedFile, PRESENT_OPEN_PATH, PRESENT_HOST_PATH, type PresentedHost } from './presented.ts'
 

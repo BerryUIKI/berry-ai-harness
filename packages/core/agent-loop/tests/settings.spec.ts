@@ -3,13 +3,13 @@
 import { expect, it, onTestFinished } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import LlmRuntime from '@berry-ai/harness-llm'
-import SessionStore from '@deepseek-ai/dsh-session'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
+import SessionStore from '@berry-ai/harness-session'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
+import AgentRegistry from '@berry-ai/harness-agent'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { liveConfig } from '../../../settings/settings/tests/live-config.ts'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 
 async function boot() {
   const ctx = new Context()

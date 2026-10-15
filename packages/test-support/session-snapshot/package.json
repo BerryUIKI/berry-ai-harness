@@ -37,21 +37,21 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-http-proxy": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-agent-loop": "workspace:*",
     "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*",
     "@types/js-yaml": "^4.0.9",
     "@berry-ai/harness-http-proxy": "workspace:*"

@@ -8,10 +8,10 @@ import type {} from '@deepseek-ai/dsh-working-directory'
 import { createHash } from 'node:crypto'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import type { Agent, PreStepDecision } from '@berry-ai/harness-agent'
+import { defineTool } from '@berry-ai/harness-tools'
 import { createUserMessage } from '@berry-ai/harness-llm'
-import { SessionSeq, type UserMessage } from '@deepseek-ai/dsh-session'
+import { SessionSeq, type UserMessage } from '@berry-ai/harness-session'
 import {
   escapeText,
   isModelInvocable,

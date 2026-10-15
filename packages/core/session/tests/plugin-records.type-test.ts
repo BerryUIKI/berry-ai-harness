@@ -1,6 +1,6 @@
 /** Compile-time calls to the public plugin-record writer; excluded from production declarations. */
-import { appendPluginRecord, pluginRecordOf } from '@deepseek-ai/dsh-session'
-import type { Session, SessionEvent } from '@deepseek-ai/dsh-session'
+import { appendPluginRecord, pluginRecordOf } from '@berry-ai/harness-session'
+import type { Session, SessionEvent } from '@berry-ai/harness-session'
 import type { LlmCallConfig, RequestUserInput } from '@berry-ai/harness-llm'
 
 /** An independent request with domain interfaces and immutable message arrays. */
@@ -9,7 +9,7 @@ export interface PluginRequestFixture {
   readonly messages: readonly RequestUserInput[]
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface PluginRecordMap {
     'plugin:test/state': { count: number }
     'plugin:test/echo': Record<string, never>

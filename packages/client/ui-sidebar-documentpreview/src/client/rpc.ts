@@ -7,7 +7,7 @@
  * session address, so this module also owns that translation.
  */
 import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceFileBytes, WorkspaceFileRange, WorkspaceFileText } from '@deepseek-ai/dsh-api-workspace-files/types'
 import { parseFileAddress } from '@berry-ai/harness-util-workspace-path'
 

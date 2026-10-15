@@ -6,10 +6,10 @@ import path from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import { ToolCallId, ReasoningEffortId } from '@berry-ai/harness-llm'
-import { TOOL_ABORTED_BEFORE_DISPATCH } from '@deepseek-ai/dsh-tools'
-import { assembleContextFor } from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import { TOOL_ABORTED_BEFORE_DISPATCH } from '@berry-ai/harness-tools'
+import { assembleContextFor } from '@berry-ai/harness-agent'
+import type { Agent } from '@berry-ai/harness-agent'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'
@@ -19,7 +19,7 @@ import { MockAdapter, textResponse } from '../../../core/agent-loop/tests/mock-a
 import { loadStoredSession } from '../../subagent/tests/persistence-helpers.ts'
 import * as mock from './scripted-provider.ts'
 import * as tool from '../src/index.ts'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import {
   callSubagent,
   disposeSetupProvider,

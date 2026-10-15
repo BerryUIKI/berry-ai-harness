@@ -108,7 +108,7 @@ interface ReviewEndData {
   readonly summary: string
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /**
      * Opens one durable review job.

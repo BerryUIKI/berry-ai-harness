@@ -30,7 +30,7 @@ kind: "package-reference"
 ### 组合
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
+- name: '@berry-ai/harness-session'
 - name: '@deepseek-ai/dsh-session-projection'
 - name: '@deepseek-ai/dsh-session-stats'
 ```

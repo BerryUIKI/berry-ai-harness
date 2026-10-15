@@ -6,7 +6,7 @@
  * the closing prose.
  */
 import { isAbsoluteWorkspacePath } from '@berry-ai/harness-util-workspace-path'
-import { isAppendSurfaceEvent } from '@deepseek-ai/dsh-session/surface'
+import { isAppendSurfaceEvent } from '@berry-ai/harness-session/surface'
 import type { TurnTailOwnerProps } from '@deepseek-ai/dsh-client-ui-chat/client'
 import type { ConversationNodeDefinition } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { MarkdownFileMentions } from '@deepseek-ai/dsh-client-ui-primitives'

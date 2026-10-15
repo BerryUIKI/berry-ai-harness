@@ -2,10 +2,10 @@ import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { createUserMessage, ToolCallId, createMessage } from '@berry-ai/harness-llm'
 import type { MessageSource } from '@berry-ai/harness-llm'
-import SessionStore, { Session, SessionForkError, SessionId, SessionLogOffset, SessionSeq, TOOL_NOT_STARTED, TOOL_OUTCOME_UNKNOWN } from '@deepseek-ai/dsh-session'
-import type { SessionEvent, SurfaceEvent, TurnEndReason } from '@deepseek-ai/dsh-session'
+import SessionStore, { Session, SessionForkError, SessionId, SessionLogOffset, SessionSeq, TOOL_NOT_STARTED, TOOL_OUTCOME_UNKNOWN } from '@berry-ai/harness-session'
+import type { SessionEvent, SurfaceEvent, TurnEndReason } from '@berry-ai/harness-session'
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     'test/log-only': { value: string }
     /** Stands in for a plugin's open/close bracket (`compaction/start`). */

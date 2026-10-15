@@ -124,8 +124,8 @@ A plugin source requires a string `plugin`, including the empty string. Conversi
 | `compact` | `compact-checkpoint` |
 | `tools-code-mode`, `tools-ptc` | `ptc-mode` |
 | `dsh-compaction-basic` | `compact-basic` |
-| `@deepseek-ai/dsh-system-prompt`, on a system-role message | `system-prompt` |
-| `@deepseek-ai/dsh-system-prompt`, on another role | `runtime-context` |
+| `@berry-ai/harness-system-prompt`, on a system-role message | `system-prompt` |
+| `@berry-ai/harness-system-prompt`, on another role | `runtime-context` |
 | Same-name first-party producers listed below | The exact plugin string |
 | Any other plugin name | `plugin:` followed by the complete original name |
 

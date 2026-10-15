@@ -13,7 +13,7 @@ import z from '@deepseek-ai/schemastery'
 import { DSH_ENV_PREFIX } from '@berry-ai/harness-shell'
 import type { DshEnvironment, DshEnvironmentKey } from '@berry-ai/harness-shell'
 import { DSH_HOME_ENV, resolveDshHome } from '@berry-ai/harness-home-paths'
-import type { ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { ToolExecution } from '@berry-ai/harness-tools'
 // Declares `Context.profileContext`, the launcher-provided profile the built-ins read.
 import type {} from '@berry-ai/harness-app-boot'
 

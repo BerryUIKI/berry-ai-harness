@@ -7,7 +7,7 @@ import { Context } from '@deepseek-ai/cordis'
 import Storage from '@berry-ai/harness-storage'
 import { DomainFacility } from '@berry-ai/harness-storage-domain'
 import { JsonStorageBackend } from '@berry-ai/harness-storage-json'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import { MessageId } from '@berry-ai/harness-llm/brand'
 import { scheduleDomain, scheduleTaskSchema, type ScheduleTask } from '../src/storage.ts'
 import {

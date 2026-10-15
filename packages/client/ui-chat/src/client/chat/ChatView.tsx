@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type {
   NodeKey, RenderEntry,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { InboxState } from '@deepseek-ai/dsh-agent/types'
+import type { InboxState } from '@berry-ai/harness-agent/types'
 import type { PendingSubmission } from '@deepseek-ai/dsh-api-session-controller/client'
 import {
   Button, IconChevronDownOutlineRegular, MarkdownDelegateProvider, Modal,

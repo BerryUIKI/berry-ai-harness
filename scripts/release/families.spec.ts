@@ -267,11 +267,11 @@ describe('release families', () => {
     'requires exact packed DSH %s while preserving external ranges', (section) => {
       const pkg = member('packages/example/provider', '@deepseek-ai/dsh-provider')
       const family = releaseFamily('dsh')
-      const manifest = { name: pkg.name, version: pkg.version, [section]: { '@deepseek-ai/dsh-tools': pkg.version, external: '^4.0.0' } }
+      const manifest = { name: pkg.name, version: pkg.version, [section]: { '@berry-ai/harness-tools': pkg.version, external: '^4.0.0' } }
       expect(() => { family.validatePackedManifest(pkg, manifest) }).not.toThrow()
       for (const range of ['workspace:*', '^0.0.1', '~0.0.1', '0.0.2', '*']) {
-        expect(() => { family.validatePackedManifest(pkg, { ...manifest, [section]: { '@deepseek-ai/dsh-tools': range } }) })
-          .toThrow(`packed ${section}.@deepseek-ai/dsh-tools must equal`)
+        expect(() => { family.validatePackedManifest(pkg, { ...manifest, [section]: { '@berry-ai/harness-tools': range } }) })
+          .toThrow(`packed ${section}.@berry-ai/harness-tools must equal`)
       }
     },
   )
@@ -279,7 +279,7 @@ describe('release families', () => {
   it('checks packed identities and preserves independent vendor versions', () => {
     const pkg = member('vendor/example', '@deepseek-ai/example')
     const family = releaseFamily('vendor')
-    expect(() => { family.validatePackedManifest(pkg, { name: pkg.name, version: pkg.version, dependencies: { '@deepseek-ai/dsh-tools': '^4.0.0' } }) })
+    expect(() => { family.validatePackedManifest(pkg, { name: pkg.name, version: pkg.version, dependencies: { '@berry-ai/harness-tools': '^4.0.0' } }) })
       .not.toThrow()
     expect(() => { family.validatePackedManifest(pkg, { name: '@deepseek-ai/other', version: pkg.version }) }).toThrow('packed identity')
     expect(() => { family.validatePackedManifest(pkg, { name: pkg.name, version: '0.0.2' }) }).toThrow('packed identity')

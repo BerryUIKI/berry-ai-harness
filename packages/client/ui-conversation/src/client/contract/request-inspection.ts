@@ -1,5 +1,5 @@
 import type { ContentBlock, ToolSchema } from '@berry-ai/harness-llm/types'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+import type { SessionEvent } from '@berry-ai/harness-session/types'
 import type {
   AssistantProviderMetadataView, AssistantRequestConfig,
 } from './records.ts'

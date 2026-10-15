@@ -3,7 +3,7 @@ description: "面向工具作者与维护者的工具注册表与执行流水线
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tools
+# @berry-ai/harness-tools
 
 [English](README.md) | 中文
 
@@ -38,7 +38,7 @@ kind: "package-reference"
 ```ts
 import { readFile } from 'node:fs/promises'
 import type { Context } from '@deepseek-ai/cordis'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
 
 declare const ctx: Context
 
@@ -68,7 +68,7 @@ ctx.tools.register(defineTool({
 `mode` 配置决定模型看到什么：`native`（每个可见 schema）或 `ptc`（只有 `run_code` 加一份生成 SDK）。
 
 ```yaml
-- name: '@deepseek-ai/dsh-tools'
+- name: '@berry-ai/harness-tools'
   config:
     mode: native
 ```

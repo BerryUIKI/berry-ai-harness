@@ -16,7 +16,7 @@ harness 扩展的参考模式。代码片段省略了 import 和辅助实现，�
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type { PreToolDecision, ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { PreToolDecision, ToolExecution } from '@berry-ai/harness-tools'
 
 declare function isAllowed(exec: ToolExecution): Promise<boolean>
 
@@ -42,7 +42,7 @@ UI 插件把持久 `session/event` record（Assistant settlement、轮次/步骤
 import type { Context } from '@deepseek-ai/cordis'
 import { brandString } from '@berry-ai/harness-brand'
 import { createUserMessage } from '@berry-ai/harness-llm'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionId } from '@berry-ai/harness-session'
 
 declare function render(text: string): void
 declare function onUserInput(handler: (text: string) => void): void

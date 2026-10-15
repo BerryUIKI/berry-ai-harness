@@ -39,7 +39,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*"
@@ -54,11 +54,11 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/dsh-loader-smoke": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-checkpoint-policy": "workspace:*",
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
@@ -67,7 +67,7 @@
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-tool-jobs": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*"
+    "@berry-ai/harness-tools": "workspace:*"
   },
   "icon": "./icon.svg"
 }

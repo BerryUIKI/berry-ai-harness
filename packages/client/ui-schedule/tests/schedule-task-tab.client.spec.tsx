@@ -7,7 +7,7 @@ import type { SessionListState } from '@deepseek-ai/dsh-api-session-controller/c
 import type { WorkspaceSnapshot } from '@deepseek-ai/dsh-api-workspace-controller/client'
 import type { PaneId, SidebarRightTabActions, SidebarRightTabInfo } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
 import type { ScheduleCatalogEntry, ScheduleId } from '@berry-ai/harness-schedule/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { CatalogSnapshot } from '../src/client/catalog-source.ts'
 import { ScheduleTaskTab, type ScheduleTaskTabProps } from '../src/client/ScheduleTaskTab.tsx'
 import { ScheduleTaskTabTitle, type ScheduleTaskTabTitleProps } from '../src/client/ScheduleTaskTabTitle.tsx'

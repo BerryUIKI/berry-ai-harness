@@ -7,7 +7,7 @@ import { unzipSync, strFromU8 } from 'fflate'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { tmpdir, release } from 'node:os'
 import { createLaunchEnvironmentSnapshot } from '@berry-ai/harness-launch-environment'
-import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionEvent, SessionId } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-tool-present/types'
 import {
   acknowledgeReloadConnectionLoss, assertFinalWorkspaceSnapshot, captureExpandedTurnProcessAria,

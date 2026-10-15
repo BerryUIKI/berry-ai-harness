@@ -61,7 +61,7 @@ Feedback does not have to come from the slash command or the dialog: any UI, hoo
 
 ```yaml
 - id: session
-  name: '@deepseek-ai/dsh-session'
+  name: '@berry-ai/harness-session'
 - id: commands
   name: '@berry-ai/harness-commands'
 - id: command-feedback

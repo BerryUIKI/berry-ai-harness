@@ -4,19 +4,19 @@
  * isolation, and prompt failure mapping.
  */
 
-import { SESSION_FORMAT_VERSION, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import SessionStore from '@deepseek-ai/dsh-session'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
+import SessionStore from '@berry-ai/harness-session'
+import AgentRegistry from '@berry-ai/harness-agent'
 import { SessionHistoryController } from '@deepseek-ai/dsh-api-session-controller/src/history.ts'
 import { subagentIdentityProjectionDefinition } from '@deepseek-ai/dsh-subagent/src/projection.ts'
 import TypertRegistry from '@berry-ai/harness-typert-registry'
 import { createUserMessage, MessageId } from '@berry-ai/harness-llm'
 import { snapshotSubagentDescriptor } from '@deepseek-ai/dsh-subagent'
 import { createInboxStub, mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
-import type { Agent, Inbox } from '@deepseek-ai/dsh-agent'
-import type { SessionEvent, SessionHeader, SessionId } from '@deepseek-ai/dsh-session'
+import type { Agent, Inbox } from '@berry-ai/harness-agent'
+import type { SessionEvent, SessionHeader, SessionId } from '@berry-ai/harness-session'
 import AttachmentStore from '@berry-ai/harness-attachment'
 import type { SessionPromptRequest, SessionRequestId } from '../src/types.ts'
 import {
@@ -418,7 +418,7 @@ describe('Remote Agent and Session lookup policy', () => {
       list: () => Promise.resolve([meta]),
       inspect,
     })
-    const resumedSession = { id: sessionId, header: meta, events: [] } as unknown as import('@deepseek-ai/dsh-session').Session
+    const resumedSession = { id: sessionId, header: meta, events: [] } as unknown as import('@berry-ai/harness-session').Session
     const resumedAgent = { id: sessionId, session: resumedSession, status: 'idle', ctx } as Agent
     const release = Promise.withResolvers<undefined>()
     const resume = vi.spyOn(ctx.agents, 'resume').mockImplementation(async () => {

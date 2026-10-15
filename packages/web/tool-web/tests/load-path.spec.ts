@@ -8,8 +8,8 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
 import WebRuntime from '@berry-ai/harness-web'
 import * as toolWeb from '@berry-ai/harness-tool-web'
 

@@ -2,7 +2,7 @@
  * Concrete agent-loop plugin: creates scoped ReactLoopAgents, publishes them
  * through the agent/session registries, and owns their ordered teardown.
  *
- * @module @deepseek-ai/dsh-agent-loop
+ * @module @berry-ai/harness-agent-loop
  */
 import type { Volatile } from '@deepseek-ai/cosmokit'
 
@@ -21,12 +21,12 @@ import type {
   ResumeAgentOptions,
   SessionStartSource,
   TurnBoundaryProjection,
-} from '@deepseek-ai/dsh-agent'
+} from '@berry-ai/harness-agent'
 import { errorChain, ReasoningEffortId } from '@berry-ai/harness-llm'
-import { interruptedTurnClosers, SessionLogOffset, SessionPreparation, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { Session, SessionHeader, SessionId } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-system-prompt'
-import type {} from '@deepseek-ai/dsh-tools'
+import { interruptedTurnClosers, SessionLogOffset, SessionPreparation, SessionSeq } from '@berry-ai/harness-session'
+import type { Session, SessionHeader, SessionId } from '@berry-ai/harness-session'
+import type {} from '@berry-ai/harness-system-prompt'
+import type {} from '@berry-ai/harness-tools'
 import type {} from '@deepseek-ai/dsh-session-projection'
 import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
 import { SessionPersistenceNotFoundError } from '@deepseek-ai/dsh-session-persistence'

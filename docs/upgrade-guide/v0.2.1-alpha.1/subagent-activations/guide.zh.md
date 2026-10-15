@@ -31,7 +31,7 @@ description: "受管理的子 agent activation 替代前台与 Job 后台委派�
 3. 对于必须等待结果的宿主代码，将 `ctx.subagents.start()` 或 `startContinuable()` 替换为 `startActivation()`，并选择调用方投递。以下示例假设服务已组合且父 agent 在线：
 
    ```ts
-   import type { Agent } from '@deepseek-ai/dsh-agent'
+   import type { Agent } from '@berry-ai/harness-agent'
    import type SubagentRuntime from '@deepseek-ai/dsh-subagent'
 
    async function collect(subagents: SubagentRuntime, parent: Agent, signal: AbortSignal) {

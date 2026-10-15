@@ -3,7 +3,7 @@
 import { Profiler } from 'react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   TeamMemberProjection, TeamProjection, TeamTaskId, TeamTaskView as TeamTask,
 } from '@deepseek-ai/dsh-experimental-agent-team/client'

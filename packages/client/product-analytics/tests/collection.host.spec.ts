@@ -4,7 +4,7 @@ import { createServer } from 'node:http'
 import { once } from 'node:events'
 import { afterEach, expect, it, vi } from 'vitest'
 import ProductTelemetry, { Config as TelemetryConfig, type ProductTelemetryRecord } from '@deepseek-ai/dsh-host-product-telemetry-otel'
-import { Session, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
+import { Session, SessionId, SessionSeq } from '@berry-ai/harness-session'
 import { CompactionId } from '@berry-ai/harness-compaction'
 import Analytics from '../src/index.ts'
 

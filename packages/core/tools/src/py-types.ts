@@ -10,7 +10,7 @@
  * descriptions, and canonical output types. Object-shaped arguments and outputs render as one
  * named `TypedDict` per tool (and per nested object), not an opaque `dict[str, Any]`, so the
  * shape survives into the program under the mode that has nothing else to carry it.
- * @module @deepseek-ai/dsh-tools/src/py-types
+ * @module @berry-ai/harness-tools/src/py-types
  */
 
 import { assertSupportedJsonSchema } from './json-schema.ts'

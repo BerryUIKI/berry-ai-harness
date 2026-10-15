@@ -27,7 +27,7 @@ import {
   SESSION_FORMAT_VERSION,
   Session,
   SessionId,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import type {} from '@deepseek-ai/dsh-session-title'
 import {
   assertFixtureInventory,

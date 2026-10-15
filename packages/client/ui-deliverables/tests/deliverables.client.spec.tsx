@@ -36,8 +36,8 @@ import {
 } from '../src/client/turn-deliverables.ts'
 import { apply, inject } from '../src/client/index.ts'
 import { en, zh } from '../src/client/locales.ts'
-import { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+import { SessionId } from '@berry-ai/harness-session/types'
+import type { SessionEvent } from '@berry-ai/harness-session/types'
 
 function openProps(controller = new PresentedOpenController(), summaries = new ChangesSummaryStore()) {
   controller.host.set({ name: 'desktop', available: true, fileManager: 'finder' })

@@ -1,7 +1,7 @@
 /** Minimal concrete Session query for Agent Team continuation tests. */
 
-import { SessionLogOffset } from '@deepseek-ai/dsh-session'
-import type { SessionEvent, SessionHeader, SessionId } from '@deepseek-ai/dsh-session'
+import { SessionLogOffset } from '@berry-ai/harness-session'
+import type { SessionEvent, SessionHeader, SessionId } from '@berry-ai/harness-session'
 import SessionQueryEngine from '@berry-ai/harness-session-query'
 import type { SessionObservation, SessionObservationOptions } from '@berry-ai/harness-session-query'
 

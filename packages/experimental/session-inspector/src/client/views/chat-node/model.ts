@@ -5,7 +5,7 @@ import type { ConversationBinding, ConversationGroupedView, GroupKey, GroupSnaps
 import { createSnapshotStore, type ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
 import { InspectorRecordSource, type InspectorRecord, type InspectorRow } from '../table-model.ts'
 import { inspectorPreview } from '../format.ts'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { InspectorChatTarget, InspectorObjects, InspectorObjectReference } from '../objects.ts'
 import { ChatObjectIndex } from './objects.ts'
 import { matchChatNodeRow, type InspectorPickTarget } from './pick-match.ts'

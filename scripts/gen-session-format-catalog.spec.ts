@@ -47,8 +47,8 @@ function fixture(edges: Array<[number, number]>): string {
   mkdirSync(catalog, { recursive: true })
   writeFileSync(join(catalog, 'package.json'), JSON.stringify({
     dependencies: catalogDependencies,
-    peerDependencies: { '@deepseek-ai/dsh-session': 'workspace:^' },
-    devDependencies: { '@deepseek-ai/dsh-session': 'workspace:^' },
+    peerDependencies: { '@berry-ai/harness-session': 'workspace:^' },
+    devDependencies: { '@berry-ai/harness-session': 'workspace:^' },
   }))
   return root
 }
@@ -108,7 +108,7 @@ describe('session format catalog generator', () => {
     expect(output).toContain('restoreTransformedCurrent(artifact)')
     expect(output).toContain('assertReleasedV2Header(header)')
     expect(output).toContain('validateInstalledCurrentSessionHeader(header)')
-    expect(output).toContain("from '@deepseek-ai/dsh-session'")
+    expect(output).toContain("from '@berry-ai/harness-session'")
     expect(output).toContain("from './current.ts'")
     const imports = output.split('\n').filter(line => line.startsWith('import {'))
     expect(imports.filter(line => line.includes('releasedV1SessionFormatCodec'))).toHaveLength(1)
@@ -157,8 +157,8 @@ describe('session format catalog generator', () => {
       peerDependencies: Record<string, string>
       devDependencies: Record<string, string>
     }
-    manifest.dependencies['@deepseek-ai/dsh-session'] = 'workspace:^'
-    delete manifest.peerDependencies['@deepseek-ai/dsh-session']
+    manifest.dependencies['@berry-ai/harness-session'] = 'workspace:^'
+    delete manifest.peerDependencies['@berry-ai/harness-session']
     writeFileSync(path, JSON.stringify(manifest))
 
     expect(() => collectSessionFormatMigrations(root, 2))

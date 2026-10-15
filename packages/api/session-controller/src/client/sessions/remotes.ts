@@ -7,7 +7,7 @@
 
 import type { ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
 import type { CommandSubmitAttachment } from '@berry-ai/harness-commands/types'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   SubagentInterruptReceipt, SubagentPromptReceipt, SubagentPromptRequest,
 } from '@deepseek-ai/dsh-subagent/client'

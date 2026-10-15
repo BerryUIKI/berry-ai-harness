@@ -70,7 +70,7 @@ flowchart LR
 
 Provider packages depend only on `dsh-web` and Cordis. They own credentials, endpoints, wire mapping, parsing, and `WebError` translation, using platform `fetch`. Each provider injects the shared service and registers a backend; only `dsh-web` owns the `ctx.web` key. Provider-private protocol shapes do not create dependencies on `ctx.llm` or a Cordis HTTP service.
 
-`@berry-ai/harness-tool-web` depends on `@berry-ai/harness-web`, `@deepseek-ai/dsh-tools`, `@deepseek-ai/dsh-system-prompt`, and Cordis. It never imports concrete provider packages.
+`@berry-ai/harness-tool-web` depends on `@berry-ai/harness-web`, `@berry-ai/harness-tools`, `@berry-ai/harness-system-prompt`, and Cordis. It never imports concrete provider packages.
 
 ## `ctx.web` contract
 

@@ -1,8 +1,8 @@
 /** Process-local assistant state retained for reconnecting Web followers. */
 
-import type { AssistantStreamFrame } from '@deepseek-ai/dsh-agent'
+import type { AssistantStreamFrame } from '@berry-ai/harness-agent'
 import { AssistantStreamAccumulator } from '@berry-ai/harness-llm'
-import type { SessionSeqCursor } from '@deepseek-ai/dsh-session'
+import type { SessionSeqCursor } from '@berry-ai/harness-session'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type {
   SessionAssistantStreamAttempt,

@@ -25,11 +25,11 @@ import { Context, Service } from '@deepseek-ai/cordis'
 import { brandString } from '@berry-ai/harness-brand'
 import { z as zod } from 'zod'
 import type { ZodType } from 'zod'
-import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
+import type { Agent, PreStepDecision } from '@berry-ai/harness-agent'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
-import type { Session, UserMessage } from '@deepseek-ai/dsh-session'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import type { Session, UserMessage } from '@berry-ai/harness-session'
+import { defineTool } from '@berry-ai/harness-tools'
 import { UserQuestionError, type AskUserQuestionAnswer } from '@berry-ai/harness-user-questions'
 import type { CommandDefinitionId, CommandId } from '@berry-ai/harness-commands'
 import type {} from '@deepseek-ai/dsh-session-projection'
@@ -42,7 +42,7 @@ declare module '@berry-ai/harness-llm' {
 }
 export type * from './types.ts'
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /**
      * Whether plan mode is in force from this point on: log-only, non-surface,

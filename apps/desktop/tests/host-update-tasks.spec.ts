@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import { JobId, JobRegistry } from '@berry-ai/harness-jobs'
 import type { JobStatus, JobView } from '@berry-ai/harness-jobs'
-import { SessionId } from '@deepseek-ai/dsh-session/types'
+import { SessionId } from '@berry-ai/harness-session/types'
 import { Readable } from 'node:stream'
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'

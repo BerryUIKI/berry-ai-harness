@@ -1,6 +1,6 @@
 /** Durable provider-independent translations through an existing Session writer. */
 import type { Context } from '@deepseek-ai/cordis'
-import { appendPluginRecord, pluginRecordOf, SessionSeq, type SessionId } from '@deepseek-ai/dsh-session'
+import { appendPluginRecord, pluginRecordOf, SessionSeq, type SessionId } from '@berry-ai/harness-session'
 import { SessionPersistenceNotFoundError, type SessionPersistence } from '@deepseek-ai/dsh-session-persistence'
 import { deepEqualJson, deepFreeze } from '@berry-ai/harness-util-values'
 import type { TranslationIdentity, TranslationRequestRecord } from './types.ts'
@@ -100,7 +100,7 @@ export class TranslationStorage {
           if (this.ctx.get('sessions')?.get(id) !== session) throw required()
         }
         const append = <K extends 'plugin:translator/request' | 'plugin:translator/result'>(type: K,
-          data: import('@deepseek-ai/dsh-session/types').PluginRecordMap[K]): Promise<SessionSeq> => {
+          data: import('@berry-ai/harness-session/types').PluginRecordMap[K]): Promise<SessionSeq> => {
           const writing = (async () => {
             try {
               live()

@@ -4,7 +4,7 @@
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { bindSnapshotSelector, makeTranslate, sessionSnapshot } from '@deepseek-ai/dsh-client-test-runtime'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { afterEach, beforeEach, expect, it, onTestFinished, vi } from 'vitest'
 import { InspectorTable, type InspectorTableProps } from '../src/client/views/InspectorTable.tsx'
 import type { InspectorRecord, InspectorRow } from '../src/client/views/table-model.ts'

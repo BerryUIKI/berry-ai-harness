@@ -6,13 +6,13 @@
  * 404, missing descendant → errored stream).
  */
 
-import { SESSION_FORMAT_VERSION, SessionSeq } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION, SessionSeq } from '@berry-ai/harness-session'
 import { randomBytes } from 'node:crypto'
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { unzipSync, strFromU8 } from 'fflate'
 import type { FileAttachmentRef, ImageAttachmentRef } from '@berry-ai/harness-attachment'
-import type { SessionEvent, SessionHeader, SessionId, ToolResultMessage, UserMessage } from '@deepseek-ai/dsh-session'
+import type { SessionEvent, SessionHeader, SessionId, ToolResultMessage, UserMessage } from '@berry-ai/harness-session'
 import type { SessionLineageNode } from '@berry-ai/harness-session-query'
 import { SessionPersistenceNotFoundError } from '@deepseek-ai/dsh-session-persistence'
 import type { SessionAccess, SessionHandle } from '@deepseek-ai/dsh-session-persistence'

@@ -10,7 +10,7 @@ import type { Context, Volatile } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { brandString } from '@berry-ai/harness-brand'
 import type {} from '@berry-ai/harness-deepseek-llm-api-extensions'
-import { KNOWN_SESSION_EVENT_TYPES, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
+import { KNOWN_SESSION_EVENT_TYPES, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import type {
   Session,
   SessionEvent,
@@ -19,7 +19,7 @@ import type {
   SessionSeq as SessionSeqType,
   SessionSeqCursor,
   SurfaceOp,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type {
   DeepSeekSessionLogExtension,

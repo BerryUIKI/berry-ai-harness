@@ -12,8 +12,8 @@ import type {
   LlmResolvedModelInfo,
   StreamChunk,
 } from '@berry-ai/harness-llm'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
 import SubagentRuntime from '@deepseek-ai/dsh-subagent'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import * as tool from '../src/index.ts'

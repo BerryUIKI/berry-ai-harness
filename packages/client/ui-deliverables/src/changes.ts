@@ -1,5 +1,5 @@
 /** Validate workspace-change records that cross the Host routes and address their summary, comparison, and native-open actions. */
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceChangedFile, WorkspaceChangesSummary, WorkspaceDiffHunk, WorkspaceFileDiff } from '@berry-ai/harness-workspace-changes/types'
 
 /** Authenticated GET route serving one announced change summary while its Session lives. */

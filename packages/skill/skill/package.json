@@ -29,7 +29,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*"
+    "@berry-ai/harness-scope": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-util-values": "workspace:*",
@@ -38,6 +38,6 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*"
+    "@berry-ai/harness-scope": "workspace:*"
   }
 }

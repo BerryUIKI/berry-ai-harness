@@ -12,7 +12,7 @@ const CLIENT_FACE_EXCLUDE: readonly string[] = [
 /** Host-only packages whose peer relays are deliberately flattened. */
 const HOST_DEPENDENCY_PACKAGES: readonly string[] = [
   '@berry-ai/harness-llm',
-  '@deepseek-ai/dsh-session',
+  '@berry-ai/harness-session',
 ]
 
 /** Required Cordis services whose Host imports are type-only. */
@@ -62,8 +62,8 @@ const SAFE_HOST_DEPENDENCY_EXPORTS = {
 /** Runtime exports that require every consumer to resolve the provider's shared peer instance. */
 const PEER_REQUIRED_HOST_EXPORTS = {
   '@deepseek-ai/dsh-client-connection': ['OperatorPeer'],
-  '@deepseek-ai/dsh-scope': ['carrierKeyOf', 'createScope', 'scopeOf', 'scopeTarget'],
-  '@deepseek-ai/dsh-session': ['SESSION_FORMAT_VERSION'],
+  '@berry-ai/harness-scope': ['carrierKeyOf', 'createScope', 'scopeOf', 'scopeTarget'],
+  '@berry-ai/harness-session': ['SESSION_FORMAT_VERSION'],
   '@deepseek-ai/dsh-session-persistence': ['SessionPersistenceNotFoundError'],
 } as const satisfies HostDependencyExports
 

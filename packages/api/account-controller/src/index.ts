@@ -2,7 +2,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import { isRunningAccountTask } from '@berry-ai/harness-deepseek-account'
-import type {} from '@deepseek-ai/dsh-agent'
+import type {} from '@berry-ai/harness-agent'
 import type { AccountBonusBatch, AccountBonusOrderId, AccountClientMetadata, AccountDetails, AccountUserId } from '@berry-ai/harness-deepseek-account/types'
 import type { AccountView, SignInAttemptId } from './types.ts'
 

@@ -9,7 +9,7 @@ export type {
   ServerResponse,
 } from '../rpc.ts'
 export { RpcId, transportError } from '../rpc.ts'
-export type { SessionId, SessionEvent } from '@deepseek-ai/dsh-session/types'
+export type { SessionId, SessionEvent } from '@berry-ai/harness-session/types'
 export type { MessageId } from '@berry-ai/harness-llm/brand'
 export type { ContentBlock, StreamChunk } from '@berry-ai/harness-llm/types'
 

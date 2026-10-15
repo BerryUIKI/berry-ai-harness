@@ -14,7 +14,7 @@ import type {
   SessionSeq,
   OptionalSessionSeq,
   SurfaceEvent,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import type { SessionTitleSnapshot } from '@deepseek-ai/dsh-session-title'
 import type { SessionSearchCursor } from './cursor.ts'
 

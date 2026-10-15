@@ -36,7 +36,7 @@ Use it when the product shows a persistent workspace surface — a sidebar, sess
 The package needs a session store, a session persistence backend, and the storage rows that keep its records. A minimal composition:
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
+- name: '@berry-ai/harness-session'
 - name: '@deepseek-ai/dsh-session-persistence-jsonl'
 - name: '@berry-ai/harness-storage'
 - name: '@berry-ai/harness-storage-json'

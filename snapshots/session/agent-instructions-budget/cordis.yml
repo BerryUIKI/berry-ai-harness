@@ -2,7 +2,7 @@
 # DSH_AGENTS_HOME=<cwd>/.agents, so project-root and both user-global root
 # discoveries stay inside the scenario's temporary cwd.
 - id: agent-default-model
-  name: '@deepseek-ai/dsh-agent-default-model'
+  name: '@berry-ai/harness-agent-default-model'
   config:
     provider: deepseek-official
     model: deepseek-v4-pro
@@ -21,7 +21,7 @@
       - .dsh-project
 
 - id: system-prompt
-  name: '@deepseek-ai/dsh-system-prompt'
+  name: '@berry-ai/harness-system-prompt'
   config:
     personaPrefix: |
       You are a coding assistant powered by the {{model}} model.

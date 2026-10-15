@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-system-prompt",
+  "name": "@berry-ai/harness-system-prompt",
   "description": "System prompt assembly registry for the DeepSeek Harness",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -28,7 +28,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

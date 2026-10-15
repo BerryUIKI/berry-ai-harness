@@ -8,11 +8,11 @@ import { pathToFileURL } from 'node:url'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context, LoggerLevel, Service } from '@deepseek-ai/cordis'
 import LocalAttachments from '@berry-ai/harness-attachment-local'
-import AgentRegistry, { installModelSelection } from '@deepseek-ai/dsh-agent'
-import type { Agent, ModelSelectionRef } from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import AgentRegistry, { installModelSelection } from '@berry-ai/harness-agent'
+import type { Agent, ModelSelectionRef } from '@berry-ai/harness-agent'
+import AgentLoop from '@berry-ai/harness-agent-loop'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import { AttachmentId } from '@berry-ai/harness-attachment'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
@@ -22,7 +22,7 @@ import type { Message } from '@berry-ai/harness-llm'
 import { credentialRef } from '@berry-ai/harness-credentials'
 import LocalCredentials from '@berry-ai/harness-credentials-local'
 import { profileComposition } from '../../../settings/settings/tests/profile-composition.ts'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import { DeepSeekAdapter } from '../src/adapter.ts'
 import { object } from '../src/replay.ts'
 import { DeepSeekFileStore } from '../src/file-store.ts'
@@ -312,9 +312,9 @@ describe('Cordis provider composition', () => {
     const modules = new Map<string, unknown>([
       ['@berry-ai/harness-llm', LlmRuntime], ['@berry-ai/harness-llm-deepseek-api-key', Messages], ['@berry-ai/harness-llm-deepseek-account', AccountProvider],
       ['@berry-ai/harness-credentials-local', LocalCredentials],
-      ['@deepseek-ai/dsh-agent', AgentRegistry], ['@deepseek-ai/dsh-agent-loop', AgentLoop],
-      ['@deepseek-ai/dsh-session', SessionStore], ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
-      ['@deepseek-ai/dsh-system-prompt', SystemPrompt], ['@deepseek-ai/dsh-tools', ToolRuntime],
+      ['@berry-ai/harness-agent', AgentRegistry], ['@berry-ai/harness-agent-loop', AgentLoop],
+      ['@berry-ai/harness-session', SessionStore], ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+      ['@berry-ai/harness-system-prompt', SystemPrompt], ['@berry-ai/harness-tools', ToolRuntime],
     ])
     // The importer supplies source modules while Loader still owns configuration and effects.
     for (const name of modules.keys()) {

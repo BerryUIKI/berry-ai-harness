@@ -38,7 +38,7 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-spill": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }

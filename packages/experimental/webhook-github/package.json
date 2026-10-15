@@ -38,7 +38,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-credentials": "workspace:*",
     "@deepseek-ai/dsh-host-webserver": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-webhook": "workspace:*"
   },
   "dependencies": {
@@ -52,7 +52,7 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-credentials": "workspace:*",
     "@deepseek-ai/dsh-host-webserver": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-webhook": "workspace:*"
   }
 }

@@ -6,7 +6,7 @@
 import { Context, Service } from '@deepseek-ai/cordis'
 import { afterEach, beforeEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { RemoteError, TestSessions } from '@deepseek-ai/dsh-client-test-runtime'
 import type { SessionFixture } from '@deepseek-ai/dsh-client-test-runtime'
 import type {

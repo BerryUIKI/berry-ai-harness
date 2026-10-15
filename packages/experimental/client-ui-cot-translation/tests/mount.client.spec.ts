@@ -1,7 +1,7 @@
 /** The optional namespace and both UI contributions leave with the plugin. */
 import assert from 'node:assert/strict'
 import { Context, Service } from '@deepseek-ai/cordis'
-import { SessionId } from '@deepseek-ai/dsh-session/types'
+import { SessionId } from '@berry-ai/harness-session/types'
 import { expect, it, vi } from 'vitest'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type { InjectParams, StoredEntry } from '@deepseek-ai/dsh-client-ui-slots'

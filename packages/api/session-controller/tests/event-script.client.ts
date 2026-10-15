@@ -1,11 +1,11 @@
 import {
   ToolCallId, createMessage, createToolResultMessage, createUserMessage,
 } from '@berry-ai/harness-llm'
-import { SessionSeq } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq } from '@berry-ai/harness-session/types'
 // Minimal SessionEvent builders for orchestration tests (shape mirrors what the
 // host emits; only the fields the object layer reads).
 import type { ContentBlock } from '@berry-ai/harness-llm/types'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+import type { SessionEvent } from '@berry-ai/harness-session/types'
 import type {
   SessionEventEntry,
   SessionPage,

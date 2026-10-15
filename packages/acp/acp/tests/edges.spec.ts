@@ -2,8 +2,8 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { PROTOCOL_VERSION } from '@agentclientprotocol/sdk'
 import { createUserMessage, ToolCallId, type StreamChunk  } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
+import { SessionId } from '@berry-ai/harness-session'
+import { defineContentToolFixture } from '@berry-ai/harness-tools'
 import { makeBridgeHarness, textResponse, type BridgeHarness } from './harness.ts'
 
 declare module '@berry-ai/harness-llm' {

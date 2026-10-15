@@ -8,7 +8,7 @@
 
 import {
   decodeSeqRanges,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import { prepareSessionSnapshotFixtureForComparison } from '@deepseek-ai/dsh-llm-replay'
 import { redactSessionSnapshotIds } from './identity.ts'
 import { sessionHeaderVersion } from './session-files.ts'

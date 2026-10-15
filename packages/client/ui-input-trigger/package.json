@@ -57,7 +57,7 @@
     "@berry-ai/harness-file-reference": "workspace:*",
     "@deepseek-ai/dsh-api-session-controller": "workspace:*",
     "@deepseek-ai/dsh-client-store": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/dsh-client-ui-session": "workspace:*",
     "clsx": "^2.0.0"

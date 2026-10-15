@@ -27,8 +27,8 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
     "@berry-ai/harness-jobs": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
@@ -39,11 +39,11 @@
   "devDependencies": {
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-jobs": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"

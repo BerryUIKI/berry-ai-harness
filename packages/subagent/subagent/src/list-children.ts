@@ -5,7 +5,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionId } from '@berry-ai/harness-session'
 import type { SubagentListEntry } from './control-types.ts'
 import { SubagentError } from './error.ts'
 import type { SubagentCatalogEntry } from './projection-types.ts'
@@ -69,7 +69,7 @@ export async function listDescendants(
   const sessions = ctx.get('sessions')
   if (sessions === undefined) {
     throw new SubagentError(
-      'listing subagents requires the session store (load @deepseek-ai/dsh-session)',
+      'listing subagents requires the session store (load @berry-ai/harness-session)',
       'SUBAGENT_CONTROL_SESSION_STORE_UNAVAILABLE',
     )
   }

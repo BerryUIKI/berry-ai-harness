@@ -12,7 +12,7 @@ import type {
   PickOutcome, ReferenceInsert, TokenSpan,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { IconProps } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 
 export type {
   ArbitrateKey, ArbitrateOutcome, BeginCommandRequest, CommandClaim, ConsumeTokenRequest,

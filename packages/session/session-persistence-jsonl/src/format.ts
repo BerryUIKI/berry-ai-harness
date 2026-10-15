@@ -13,13 +13,13 @@ import {
   SESSION_FORMAT_VERSION,
   KNOWN_SESSION_EVENT_TYPES,
   SessionLogOffset,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import type {
   SessionEvent,
   SessionHeader,
   SessionId,
   SessionLogOffset as SessionLogOffsetType,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import { parseSessionFormatLogFilename, sessionFormatLogFilename, SessionFormatUnsupportedMigrationError } from '@deepseek-ai/dsh-session-format'
 import type { SessionFormatEvent } from '@deepseek-ai/dsh-session-format'
 import type { SessionFormatRecovery, SessionFormatRestore } from '@deepseek-ai/dsh-session-format'

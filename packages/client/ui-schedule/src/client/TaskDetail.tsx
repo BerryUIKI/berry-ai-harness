@@ -14,7 +14,7 @@ import type {
   ScheduleCatalogEntry, ScheduleId, ScheduleRecord, ScheduleTimingChange, ScheduleUpdateContent,
   ScheduleUpdateRequest, ScheduleUpdateResult,
 } from '@berry-ai/harness-schedule/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { CatalogFeedback } from './CatalogFeedback.tsx'
 import { IconCalendarOutlineRegular } from './CalendarIcon.tsx'
 import { ClockPicker } from './ClockPicker.tsx'

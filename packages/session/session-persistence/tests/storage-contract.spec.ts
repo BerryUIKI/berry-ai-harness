@@ -4,8 +4,8 @@
  */
 
 import { describe, expect, it } from 'vitest'
-import { SESSION_FORMAT_VERSION, SessionId } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION, SessionId } from '@berry-ai/harness-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 import {
   SessionAlreadyExistsError,
   SessionAlreadyOwnedError,

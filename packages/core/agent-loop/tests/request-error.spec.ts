@@ -1,13 +1,13 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import AgentRegistry from '@berry-ai/harness-agent'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import LlmRuntime, { createUserMessage, LlmError  } from '@berry-ai/harness-llm'
 import type { LlmFailure, ResolvedRetryPolicy } from '@berry-ai/harness-llm'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
 import { MockAdapter, textResponse } from './mock-adapter.ts'
 
 async function harness(adapter: MockAdapter): Promise<Context> {

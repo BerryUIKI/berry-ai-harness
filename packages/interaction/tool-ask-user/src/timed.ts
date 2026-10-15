@@ -3,7 +3,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { defineTool, type ToolExecution } from '@deepseek-ai/dsh-tools'
+import { defineTool, type ToolExecution } from '@berry-ai/harness-tools'
 import { TIMED_WAIT_PARAMETER } from '@berry-ai/harness-user-questions'
 import type {
   AskUserQuestionAnswer, AskUserQuestionRequestEvent,

@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { FsTarget, FsVersion } from '@berry-ai/harness-fs'
-import type { ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { ToolExecution } from '@berry-ai/harness-tools'
 
 /**
  * Record the new file version and expose the mutation result with its canonical path.

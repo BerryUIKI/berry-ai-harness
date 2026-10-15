@@ -4,7 +4,7 @@ import type { SessionPendingInteractionBase } from '@deepseek-ai/dsh-client-ui-s
 import type { Shortcuts, ShortcutContext, ShortcutGesture } from '@deepseek-ai/dsh-client-shortcuts/client'
 import { makeTranslate, SlotTestRuntime } from '@deepseek-ai/dsh-client-test-runtime'
 import { MutableSessionEventSource } from '@deepseek-ai/dsh-api-session-controller/client'
-import { SessionSeq, type SessionId } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq, type SessionId } from '@berry-ai/harness-session/types'
 import { UiConversation } from '../src/client/conversation/assembly.ts'
 import { ComposerBlockRegistry } from '../src/client/input/blocks.ts'
 import { InputHub } from '../src/client/input/hub.ts'

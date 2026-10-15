@@ -22,11 +22,11 @@
  */
 
 import { snapshotJsonValue } from '@berry-ai/harness-util-values'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 import type { ReasoningEffortId } from '@berry-ai/harness-llm'
-import type { ToolRestriction } from '@deepseek-ai/dsh-tools'
+import type { ToolRestriction } from '@berry-ai/harness-tools'
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /**
      * Durable identity and lifecycle mode of a session-backed subagent child,

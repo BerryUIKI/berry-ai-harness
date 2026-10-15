@@ -29,7 +29,7 @@ import {
   apply as applyUiSession, inject as uiSessionInject,
 } from '@deepseek-ai/dsh-client-ui-session/client'
 import type { SessionReference } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { PanelInfo } from '@deepseek-ai/dsh-client-ui-layout/client'
 import type {

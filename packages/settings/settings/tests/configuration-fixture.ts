@@ -9,7 +9,7 @@ import Timer from '@deepseek-ai/cordis-plugin-timer'
 import { boot, initProfile, readProfilePatches, type ProfileContext } from '@berry-ai/harness-app-boot'
 import ConfigEditor from '@berry-ai/harness-config-editor'
 import Hmr from '@berry-ai/harness-hmr'
-import DefaultModel from '@deepseek-ai/dsh-agent-default-model'
+import DefaultModel from '@berry-ai/harness-agent-default-model'
 import Settings from '../src/index.ts'
 
 export async function configurationFixture(options: { schema?: z; apply?: (ctx: Context, config: unknown) => void; hmr?: boolean } = {}) {

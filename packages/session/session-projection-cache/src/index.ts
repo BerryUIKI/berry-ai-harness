@@ -19,13 +19,13 @@
 import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { snapshotJsonValue } from '@berry-ai/harness-util-values'
-import { SessionLogOffset } from '@deepseek-ai/dsh-session'
+import { SessionLogOffset } from '@berry-ai/harness-session'
 import type {
   Session,
   SessionEvent,
   SessionHeader,
   SessionId,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import type {
   ProjectionCheckpoint,
   ProjectionSnapshot,

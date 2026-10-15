@@ -11,7 +11,7 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import * as WorkspaceChangesPlugin from '@berry-ai/harness-workspace-changes'
@@ -32,7 +32,7 @@ describe('real Loader composition', () => {
     root = await mkdtemp(join(tmpdir(), 'dsh-workspace-changes-loader-'))
     const cwd = join(root, 'ws')
     await writeFile(join(root, 'cordis.yml'), [
-      "- name: '@deepseek-ai/dsh-session'",
+      "- name: '@berry-ai/harness-session'",
       "- name: '@berry-ai/harness-subprocess-local'",
       "- name: '@berry-ai/harness-fs-local'",
       "- name: '@berry-ai/harness-workspace-changes'",
@@ -43,7 +43,7 @@ describe('real Loader composition', () => {
     await context.plugin(Loader)
     context.loader.builtins.include = Include
     const modules = new Map<string, unknown>([
-      ['@deepseek-ai/dsh-session', SessionStore],
+      ['@berry-ai/harness-session', SessionStore],
       ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],
       ['@berry-ai/harness-fs-local', LocalFileSystem],
       ['@berry-ai/harness-workspace-changes', WorkspaceChangesPlugin],

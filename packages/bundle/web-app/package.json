@@ -54,7 +54,7 @@
     "@berry-ai/harness-agent-instructions": "workspace:*",
     "@berry-ai/harness-agent-preset": "workspace:*",
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
-    "@deepseek-ai/dsh-agent-tool-presentation": "workspace:*",
+    "@berry-ai/harness-agent-tool-presentation": "workspace:*",
     "@deepseek-ai/dsh-api-job-controller": "workspace:*",
     "@deepseek-ai/dsh-api-remotes": "workspace:*",
     "@deepseek-ai/dsh-api-session-controller": "workspace:*",
@@ -186,7 +186,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-shell-env": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*"
+    "@berry-ai/harness-system-prompt": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -195,10 +195,10 @@
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@berry-ai/harness-shell-env": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-typert-registry": "workspace:*",
     "@deepseek-ai/libreoffice-kit": "^0.1.5",
     "@berry-ai/harness-otel": "workspace:*"

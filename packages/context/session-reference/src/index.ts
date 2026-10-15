@@ -7,18 +7,18 @@
 
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
+import type { Agent, PreStepDecision } from '@berry-ai/harness-agent'
 import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import { createUserMessage, freezeMessage, LlmError } from '@berry-ai/harness-llm'
 import type { ContentBlock, LlmResolvedModelInfo, UserMessage } from '@berry-ai/harness-llm'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionId } from '@berry-ai/harness-session'
 // Type-only: the `title` projection key plus the live registry and durable
 // cache Context merges — the two projection faces discovery labels from.
 import type { ProjectionSnapshot } from '@deepseek-ai/dsh-session-projection'
 import type {} from '@deepseek-ai/dsh-session-projection-cache'
 import type {} from '@deepseek-ai/dsh-session-title'
 import type {} from '@deepseek-ai/dsh-subagent'
-import type {} from '@deepseek-ai/dsh-system-prompt'
+import type {} from '@berry-ai/harness-system-prompt'
 import type { SessionRecord, SessionSurfaceSnapshot } from '@berry-ai/harness-session-query'
 import { prepareReferenceOmission, REFERENCE_WARNING } from './spill.ts'
 import {

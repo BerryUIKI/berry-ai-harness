@@ -1,8 +1,8 @@
 import { describe, expect, expectTypeOf, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import { Session, SessionId } from '@berry-ai/harness-session'
+import AgentRegistry from '@berry-ai/harness-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import TerminalSessionService, { TerminalBackendCleanupError, TerminalError, TerminalSessionId } from '@berry-ai/harness-terminal'
 import type {
   TerminalBackend,

@@ -12,8 +12,8 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { GenericCallView, SearchResultView, ToolResult } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
+import type { GenericCallView, SearchResultView, ToolResult } from '@berry-ai/harness-tools'
 import type { RetainedItems } from '@berry-ai/harness-output-retention'
 import type { SpillRef } from '@berry-ai/harness-spill'
 import type { GrepMatch } from './search-core.ts'

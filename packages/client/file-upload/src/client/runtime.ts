@@ -4,7 +4,7 @@ import { Service, type Context } from '@deepseek-ai/cordis'
 import { bytesToBase64 } from '@berry-ai/harness-util-crypto'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { FILE_UPLOAD_ROUTE } from '../protocol.ts'
 import type {
   ClientFileUploadHooks, EncodedFileUploadRequest, FileUploadFetch, FileUploadValue,

@@ -4,8 +4,8 @@ import { expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import ComputerUseRegistry from '@berry-ai/harness-computer-use'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
 import * as NativeProvider from '../src/index.ts'
 
 it.skipIf(process.env.DSH_COMPUTER_USE_NATIVE_E2E !== '1')(

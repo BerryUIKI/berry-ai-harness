@@ -8,10 +8,10 @@ import Loader from '@deepseek-ai/cordis-plugin-loader'
 import * as AgentInstructions from '@berry-ai/harness-agent-instructions'
 import LlmRuntime, { createUserMessage, ToolCallId, type Message, type MessageSource, type StreamChunk } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
-import SessionStore, { SessionId, SessionSeq, type SessionEvent, type SurfaceIntent, type UserMessage } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId, SessionSeq, type SessionEvent, type SurfaceIntent, type UserMessage } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import AgentRegistry, { agentEvents, type Agent } from '@deepseek-ai/dsh-agent'
-import AgentLoop, { turnBoundaryProjectionDefinition } from '@deepseek-ai/dsh-agent-loop'
+import AgentRegistry, { agentEvents, type Agent } from '@berry-ai/harness-agent'
+import AgentLoop, { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
 import { FileSystem, FsTargetKey, FsVersion } from '@berry-ai/harness-fs'
 import type {
   FsDirEntry,
@@ -24,12 +24,12 @@ import type {
   FsWriteOutcome,
 } from '@berry-ai/harness-fs'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime, { defineContentToolFixture } from '@berry-ai/harness-tools'
 import type {
   ToolExecution,
   ToolExecutionToken,
-} from '@deepseek-ai/dsh-tools'
+} from '@berry-ai/harness-tools'
 import * as ToolFs from '@berry-ai/harness-tool-fs'
 import {
   discoverBaselineInstructionFiles,

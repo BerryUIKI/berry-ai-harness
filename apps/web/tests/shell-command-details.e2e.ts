@@ -2,7 +2,7 @@ import { fileURLToPath } from 'node:url'
 import { chromium } from 'playwright'
 import { expect, it } from 'vitest'
 import { ToolCallId, createAssistantMessage, createToolResultMessage, createUserMessage } from '@berry-ai/harness-llm'
-import { SESSION_FORMAT_VERSION, Session, SessionId } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION, Session, SessionId } from '@berry-ai/harness-session'
 import {
   captureStableAria, compareOrRefreshGolden, launchWebScaffold,
   seedSession, watchConsole, webSnapshotMode,

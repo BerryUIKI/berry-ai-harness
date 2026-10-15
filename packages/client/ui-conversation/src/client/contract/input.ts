@@ -8,7 +8,7 @@
  */
 import type { Context } from '@deepseek-ai/cordis'
 import type { SessionBinding } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { InboxState } from '@deepseek-ai/dsh-agent/types'
+import type { InboxState } from '@berry-ai/harness-agent/types'
 import type { ObservableSnapshot, SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { Branded } from '@berry-ai/harness-brand'
 import type { ArbitrateKey, ArbitrateOutcome, Occurrence, ReferenceInsert, TokenSpan } from './draft-editor.ts'

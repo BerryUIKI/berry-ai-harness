@@ -9,7 +9,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import type { ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { ToolExecution } from '@berry-ai/harness-tools'
 import { resolveRgPath, runRipgrep } from '@berry-ai/harness-tool-fs-search'
 
 // Any access to the mocked module's surface throws — the shape a missing

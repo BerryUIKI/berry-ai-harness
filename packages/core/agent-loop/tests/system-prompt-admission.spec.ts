@@ -1,13 +1,13 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry, { installModelSelection, type Agent, type ModelSelectionRef } from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import AgentRegistry, { installModelSelection, type Agent, type ModelSelectionRef } from '@berry-ai/harness-agent'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import LlmRuntime, { createUserMessage, LlmError, type GenerateOptions } from '@berry-ai/harness-llm'
 import { toPiContext } from '@berry-ai/harness-llm-pi-ai/src/context.ts'
-import SessionStore, { Session, SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { Session, SessionId } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime, { defineContentToolFixture } from '@berry-ai/harness-tools'
 import { MockAdapter, textResponse } from './mock-adapter.ts'
 
 declare module '@berry-ai/harness-llm' {

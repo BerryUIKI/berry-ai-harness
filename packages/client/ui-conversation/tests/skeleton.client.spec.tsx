@@ -10,7 +10,7 @@ import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import {
   bindSnapshotSelector, makeTranslate, RemoteError, sessionSnapshot as sessionFixture,
 } from '@deepseek-ai/dsh-client-test-runtime'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'

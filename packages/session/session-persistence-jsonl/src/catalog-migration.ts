@@ -6,7 +6,7 @@ import { historicalSessionFormatCatalog, sessionFormatCatalog } from '@deepseek-
 import { historicalChildCatalogSource } from '@deepseek-ai/dsh-session-format-v3-to-v4'
 import { SessionFormatUnsupportedMigrationError } from '@deepseek-ai/dsh-session-format'
 import type { SessionFormatJsonObject } from '@deepseek-ai/dsh-session-format'
-import type { SessionHeader, SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionHeader, SessionId } from '@berry-ai/harness-session'
 import { parseGenerationLogFilename } from './format.ts'
 import type { JsonlCompression } from './format.ts'
 import { JsonlGenerationSourceChangedError, readDecodedJsonlSource } from './generation.ts'

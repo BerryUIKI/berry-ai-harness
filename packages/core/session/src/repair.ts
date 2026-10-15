@@ -2,7 +2,7 @@
  * Pending tool-result recovery shared by failed live steps, interrupted logs,
  * and fork seeds. Tail repair preserves closed steps and supplies only missing
  * tool results and lifecycle boundaries, with cause-specific retry guidance.
- * @module @deepseek-ai/dsh-session/repair
+ * @module @berry-ai/harness-session/repair
  */
 
 import { brandString } from '@berry-ai/harness-brand'

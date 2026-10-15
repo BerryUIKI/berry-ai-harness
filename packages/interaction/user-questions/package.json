@@ -44,24 +44,24 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*"
+    "@berry-ai/harness-tools": "workspace:*"
   },
   "dependencies": {
     "zod": "^4.4.3",

@@ -1,10 +1,10 @@
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createScope, type Scope } from '@deepseek-ai/dsh-scope'
+import { createScope, type Scope } from '@berry-ai/harness-scope'
 import TurndownService from 'turndown'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import SystemPrompt, { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime, { type ToolExecutionResult } from '@deepseek-ai/dsh-tools'
+import SystemPrompt, { renderPrompt } from '@berry-ai/harness-system-prompt'
+import ToolRuntime, { type ToolExecutionResult } from '@berry-ai/harness-tools'
 import WebRuntime from '@berry-ai/harness-web'
 import type { WebSearchProvider, WebSearchResult } from '@berry-ai/harness-web'
 import * as ToolWeb from '@berry-ai/harness-tool-web'
@@ -24,7 +24,7 @@ import {
   WEB_SEARCH_MAX_RESULTS,
 } from '@berry-ai/harness-tool-web'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import type { ToolResult } from '@deepseek-ai/dsh-tools'
+import type { ToolResult } from '@berry-ai/harness-tools'
 import { parseSearchArgs } from '../src/search.ts'
 
 const testToolSignal = new AbortController().signal

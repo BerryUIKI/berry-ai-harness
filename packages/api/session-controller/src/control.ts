@@ -4,7 +4,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import { Deque } from '@berry-ai/harness-deque'
 import type {
   Session, SessionId,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type {
   SessionControlBaseline,

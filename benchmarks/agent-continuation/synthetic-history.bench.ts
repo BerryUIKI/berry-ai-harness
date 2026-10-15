@@ -2,7 +2,7 @@
 import { expect, it } from 'vitest'
 import { createSystemMessage } from '@berry-ai/harness-llm'
 import { parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
-import { Session, SessionId, SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
+import { Session, SessionId, SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 import { syntheticHistory as browserHistory } from '../long-session-browser/synthetic-history.ts'
 import { syntheticHistory } from './workload.ts'
 

@@ -29,24 +29,24 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*"
+    "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-agent": "workspace:*"
+    "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-util-values": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-system-prompt": {
+    "@berry-ai/harness-system-prompt": {
       "optional": true
     }
   }

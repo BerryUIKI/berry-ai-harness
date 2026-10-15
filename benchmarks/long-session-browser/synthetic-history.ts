@@ -2,7 +2,7 @@
 import { createAssistantMessage, createSystemMessage, createUserMessage, createToolResultMessage, ToolCallId } from '@berry-ai/harness-llm'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'
-import { Session, SessionId, SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
+import { Session, SessionId, SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 import type {} from '@deepseek-ai/dsh-session-title'
 
 /** Closed turns in the browser history workload. */

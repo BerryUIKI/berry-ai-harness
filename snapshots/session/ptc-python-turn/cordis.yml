@@ -1,7 +1,7 @@
 # Python PTC composition: replace the Node provider through
 # the real Loader and render the generated Python SDK prompt.
 - id: agent-default-model
-  name: '@deepseek-ai/dsh-agent-default-model'
+  name: '@berry-ai/harness-agent-default-model'
   config:
     provider: deepseek-official
     model: deepseek-v4-pro
@@ -18,7 +18,7 @@
     maxBytes: 65536
 
 - id: tools
-  name: '@deepseek-ai/dsh-tools'
+  name: '@berry-ai/harness-tools'
   config:
     mode: ptc
 
@@ -36,7 +36,7 @@
       name: '@deepseek-ai/dsh-experimental-ptc-runtime-python'
 
 - id: system-prompt
-  name: '@deepseek-ai/dsh-system-prompt'
+  name: '@berry-ai/harness-system-prompt'
   config:
     personaPrefix: |
       You are a coding assistant powered by the {{model}} model.

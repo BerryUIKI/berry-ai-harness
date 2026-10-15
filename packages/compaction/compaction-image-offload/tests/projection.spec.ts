@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { createAssistantMessage, createToolResultMessage, createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
 import type { ContentBlock, ImageBlock } from '@berry-ai/harness-llm'
-import { deriveEventMessage, foldSurface, Session, SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionEvent, SessionEventMap } from '@deepseek-ai/dsh-session'
+import { deriveEventMessage, foldSurface, Session, SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
+import type { SessionEvent, SessionEventMap } from '@berry-ai/harness-session'
 import { imageOffloadProjection } from '../src/projection.ts'
 
 function createSession(...args: Parameters<typeof Session.create>): Session {

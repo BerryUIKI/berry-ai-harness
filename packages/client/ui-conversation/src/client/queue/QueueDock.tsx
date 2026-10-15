@@ -2,13 +2,13 @@ import type { Context } from '@deepseek-ai/cordis'
 import { useEffect, useId, useMemo, useState } from 'react'
 import type { FileAttachmentRef, ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import type { PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import {
   IconCheckOutlineRegular, IconChevronDownOutlineRegular, IconChevronUpOutlineRegular, IconCloseOutlineRegular,
   FileTypeIcon, fileSizeText, IconEditOutlineRegular, InlineEditor, IconQueueOutlineRegular, IconSendOutlineRegular,
   IconTrashOutlineRegular, projectUserText, Tooltip,
 } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { InboxState } from '@deepseek-ai/dsh-agent/types'
+import type { InboxState } from '@berry-ai/harness-agent/types'
 import type { QueueAction } from '@deepseek-ai/dsh-api-session-controller/types'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import { NS } from '../locales.ts'

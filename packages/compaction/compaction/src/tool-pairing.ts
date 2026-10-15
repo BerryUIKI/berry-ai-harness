@@ -5,7 +5,7 @@
  * @module @berry-ai/harness-compaction/tool-pairing
  */
 
-import type { Session, SessionEvent, SessionSeq } from '@deepseek-ai/dsh-session'
+import type { Session, SessionEvent, SessionSeq } from '@berry-ai/harness-session'
 
 /** Incremental balance state for one session surface generation. */
 interface BalanceCache {

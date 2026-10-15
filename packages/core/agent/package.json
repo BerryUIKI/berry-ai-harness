@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-agent",
+  "name": "@berry-ai/harness-agent",
   "description": "Agent interface, registry, initiator scope, and event vocabulary for the DeepSeek Harness",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -33,10 +33,10 @@
   "license": "MIT",
   "peerDependencies": {
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*",
@@ -49,10 +49,10 @@
   },
   "devDependencies": {
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-typert-registry": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",

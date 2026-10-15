@@ -6,11 +6,11 @@ import { mkdtempSync, rmSync, writeFileSync, chmodSync, existsSync, readFileSync
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import { SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
+import { SessionId, type SessionEvent } from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import { defineContentToolFixture } from '@berry-ai/harness-tools'
+import type { Agent } from '@berry-ai/harness-agent'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import { LocalBashExecutor } from '@berry-ai/harness-bash-local'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import * as HooksCodex from '@deepseek-ai/dsh-hooks-codex'
@@ -646,7 +646,7 @@ export function defineCoverageCases(groups: CoverageGroup | readonly CoverageGro
       await ctx.plugin(HooksCodex, { configPath: join(serverDir, 'hooks.json'), model: 'm' })
       ctx.llm.registerAdapter(['mock'], adapter)
       ctx.tools.register(defineContentToolFixture({ name: 'Bash', description: 'b', parameters: { command: { type: 'string' } }, async execute() { return [{ type: 'text', text: 'ok' }] } }))
-      const { SessionId } = await import('@deepseek-ai/dsh-session')
+      const { SessionId } = await import('@berry-ai/harness-session')
       const handle = await ctx.agents.create({ sessionId: SessionId('s1'), meta: { cwd: sessionDir }, agentOptions: { provider: 'mock', model: 'mock' } })
       handle.agent.followup(createUserMessage({ content: [{ type: 'text', text: 'go' }], source: { kind: 'user' } }))
       await waitForIdle(ctx, handle.agent)

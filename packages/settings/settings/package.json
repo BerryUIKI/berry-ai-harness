@@ -34,18 +34,18 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "@deepseek-ai/cordis-plugin-timer": "workspace:~",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-hmr": "workspace:*",
-    "@deepseek-ai/dsh-agent-default-model": "workspace:*",
+    "@berry-ai/harness-agent-default-model": "workspace:*",
     "yaml": "^2.8.1"
   },
   "dependencies": {

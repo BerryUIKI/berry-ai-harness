@@ -57,8 +57,8 @@ describe('rewritePluginSource', () => {
   it('rewrites renamed and role-sensitive producers, dropping the plugin field', () => {
     expect(rewritePluginSource({ kind: 'plugin', plugin: 'tools-ptc' }, 1, 'user')).toEqual({ kind: 'ptc-mode' })
     expect(rewritePluginSource({ kind: 'plugin', plugin: 'tools-code-mode' }, 1, 'user')).toEqual({ kind: 'ptc-mode' })
-    expect(rewritePluginSource({ kind: 'plugin', plugin: '@deepseek-ai/dsh-system-prompt' }, 1, 'system')).toEqual({ kind: 'system-prompt' })
-    expect(rewritePluginSource({ kind: 'plugin', plugin: '@deepseek-ai/dsh-system-prompt' }, 1, 'user')).toEqual({ kind: 'runtime-context' })
+    expect(rewritePluginSource({ kind: 'plugin', plugin: '@berry-ai/harness-system-prompt' }, 1, 'system')).toEqual({ kind: 'system-prompt' })
+    expect(rewritePluginSource({ kind: 'plugin', plugin: '@berry-ai/harness-system-prompt' }, 1, 'user')).toEqual({ kind: 'runtime-context' })
     expect(rewritePluginSource({ kind: 'plugin', plugin: 'external', extra: true }, 1, 'user')).toEqual({ kind: 'plugin:external', extra: true })
   })
 
@@ -76,7 +76,7 @@ describe('rewritePluginSource', () => {
     expect(rewritePluginSource({ kind: 'plugin', plugin: 'agent-instructions', form: 'instructions', changes: [] }, 3, 'user'))
       .toEqual({ kind: 'agent-instructions', form: 'instructions', changes: [] })
     expect(rewritePluginSource({ kind: 'plugin', plugin: 'tool-jobs' }, 3, 'user')).toEqual({ kind: 'tool-jobs' })
-    expect(rewritePluginSource({ kind: 'plugin', plugin: '@deepseek-ai/dsh-system-prompt' }, 3, 'system')).toEqual({ kind: 'system-prompt' })
+    expect(rewritePluginSource({ kind: 'plugin', plugin: '@berry-ai/harness-system-prompt' }, 3, 'system')).toEqual({ kind: 'system-prompt' })
   })
 })
 

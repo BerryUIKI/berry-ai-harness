@@ -10,8 +10,8 @@ import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deep
 import ComputerUseRegistry from '@berry-ai/harness-computer-use'
 import { LlmAdapter, ToolCallId } from '@berry-ai/harness-llm'
 import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-ai/harness-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import type { ToolExecution } from '@deepseek-ai/dsh-tools'
+import { SessionId } from '@berry-ai/harness-session'
+import type { ToolExecution } from '@berry-ai/harness-tools'
 import * as NativeProvider from '../src/index.ts'
 import { fixture, resetFixture } from './fixtures/cua-driver.ts'
 

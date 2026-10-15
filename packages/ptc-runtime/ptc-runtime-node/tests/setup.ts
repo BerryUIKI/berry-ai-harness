@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import { onTestFinished } from 'vitest'
-import SessionStore from '@deepseek-ai/dsh-session'
+import SessionStore from '@berry-ai/harness-session'
 import FileSystem from '@berry-ai/harness-fs-local'
 import Subprocess from '@berry-ai/harness-subprocess-local'
 import Sandbox from '@berry-ai/harness-sandbox-local'

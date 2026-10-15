@@ -12,8 +12,8 @@ import {
   expandAssistantStream,
 } from '@berry-ai/harness-llm'
 import type { AssistantStreamRecord } from '@berry-ai/harness-llm'
-import { SessionSeq } from '@deepseek-ai/dsh-session/types'
-import type { SessionEvent, SessionEventMap } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq } from '@berry-ai/harness-session/types'
+import type { SessionEvent, SessionEventMap } from '@berry-ai/harness-session/types'
 import type {
   SessionEventEntry,
   SessionHistoryRecord,

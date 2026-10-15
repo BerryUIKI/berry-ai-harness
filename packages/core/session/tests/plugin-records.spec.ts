@@ -9,8 +9,8 @@ import SessionStore, {
   SessionId,
   SessionLogOffset,
   SessionSeq,
-} from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 import type { PluginRequestFixture } from './plugin-records.type-test.ts'
 
 /** One user turn opening, so a record lands between model-visible events. */

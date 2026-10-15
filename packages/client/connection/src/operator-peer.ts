@@ -7,7 +7,7 @@
 
 import { randomUUID } from 'node:crypto'
 import type { Context } from '@deepseek-ai/cordis'
-import { createScope, type Scope } from '@deepseek-ai/dsh-scope'
+import { createScope, type Scope } from '@berry-ai/harness-scope'
 import type { PeerId, PeerScope } from '@berry-ai/harness-typert-protocol'
 
 /**

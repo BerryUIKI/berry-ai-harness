@@ -8,7 +8,7 @@ import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { freezeMessage } from '@berry-ai/harness-llm'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import type { Session, SessionEvent, SessionSeq, ToolResultMessage } from '@deepseek-ai/dsh-session'
+import type { Session, SessionEvent, SessionSeq, ToolResultMessage } from '@berry-ai/harness-session'
 // Type-only: the `compaction/*` SessionEventMap merges (the shadow-price event).
 import type {} from '@berry-ai/harness-compaction'
 // Type-only: the `ctx.tokenMeter` Context merge for the declared injection.

@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest'
-import { createScope } from '@deepseek-ai/dsh-scope'
-import { assembleContextFor } from '@deepseek-ai/dsh-agent'
+import { createScope } from '@berry-ai/harness-scope'
+import { assembleContextFor } from '@berry-ai/harness-agent'
 import { entryListProblem } from '../src/index.ts'
 import { currentKey, harness, declare, contribution, agentOn, liveRegistries, plugin } from './harness.ts'
 import { omitsGeneratedPage } from '../../../settings/settings/tests/live-config.ts'

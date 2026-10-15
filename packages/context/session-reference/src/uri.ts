@@ -1,7 +1,7 @@
 /** Canonical session URI and inline mention encoding. */
 
 import { brandString } from '@berry-ai/harness-brand'
-import type { SessionId as SessionIdType } from '@deepseek-ai/dsh-session'
+import type { SessionId as SessionIdType } from '@berry-ai/harness-session'
 import { SessionReferenceError } from './config.ts'
 import type { SessionReferenceInput } from './types.ts'
 

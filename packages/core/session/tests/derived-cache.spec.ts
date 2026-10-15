@@ -7,7 +7,7 @@ import type { MessageSource } from '@berry-ai/harness-llm'
  */
 
 import { describe, expect, it } from 'vitest'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
+import { Session, SessionId } from '@berry-ai/harness-session'
 
 type CheckpointSource = Extract<MessageSource, { readonly kind: 'compact-checkpoint' }>
 

@@ -36,7 +36,7 @@ With the default settings you get four behaviors: automatic condensation as the 
 Mount session storage, token measurement, the optional pruner, this backend, and optionally the on-demand command:
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
+- name: '@berry-ai/harness-session'
 - name: '@berry-ai/harness-token-meter'
 - name: '@berry-ai/harness-compaction-tool-result-pruner'
 - name: '@berry-ai/harness-compaction-basic'

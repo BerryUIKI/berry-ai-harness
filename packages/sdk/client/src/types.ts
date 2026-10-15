@@ -7,7 +7,7 @@
 
 import type { ContentBlock, ReasoningEffortId } from '@berry-ai/harness-llm'
 import type { SdkPromptContentBlock } from '@deepseek-ai/dsh-sdk-protocol'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 
 /** One server-to-client notification as received off the wire. */
 export interface HarnessNotification {

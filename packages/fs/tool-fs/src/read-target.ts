@@ -6,7 +6,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { FsError } from '@berry-ai/harness-fs'
 import type { FsInfo, FsTarget } from '@berry-ai/harness-fs'
-import type { ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { ToolExecution } from '@berry-ai/harness-tools'
 import { sessionResolveOptions } from './session-cwd.ts'
 
 /**

@@ -6,8 +6,8 @@
  */
 import { describe, expect, it, vi, beforeEach } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
 import McpResources from '@berry-ai/harness-mcp-resources'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import type { Config } from '@berry-ai/harness-mcp-client'

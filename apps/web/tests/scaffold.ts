@@ -77,11 +77,11 @@ import {
   type Session,
   type SessionEvent,
   type SessionHeader,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 // Empty type imports carry the webServer/agents/sessionPersistence Context merges.
 import type {} from '@deepseek-ai/dsh-host-webserver'
-import type {} from '@deepseek-ai/dsh-agent'
+import type {} from '@berry-ai/harness-agent'
 import { provideCmdline } from '@berry-ai/harness-cmdline'
 import { startPrefixProxy, type PrefixProxy } from './prefix-proxy.ts'
 import { REPO_ROOT, requireBuilt, requireDist } from './support.ts'

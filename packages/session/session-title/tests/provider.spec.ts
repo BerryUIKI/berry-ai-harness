@@ -2,9 +2,9 @@ import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import LlmRuntime, { createUserMessage, markAgentLoopRequest } from '@berry-ai/harness-llm'
 import { deepFreeze } from '@berry-ai/harness-util-values'
-import SessionStore, { SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId, SessionSeq } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import { turnBoundaryProjectionDefinition } from '@deepseek-ai/dsh-agent-loop'
+import { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
 import SessionTitleService, {
   SessionTitleProviderId,
   type SessionTitleProvider,

@@ -9,14 +9,14 @@ import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { dump } from 'js-yaml'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import type { Agent, AgentHandle } from '@deepseek-ai/dsh-agent'
+import type { Agent, AgentHandle } from '@berry-ai/harness-agent'
 import { entryListSchema } from '@deepseek-ai/cordis-plugin-include'
 import { bundlePatchPaths, composeEntries, loadOverlayPatches } from '@berry-ai/harness-app-boot'
 import { MessageId, ToolCallId, createUserMessage, LlmAdapter } from '@berry-ai/harness-llm'
 import { appendDelivery } from '../../../packages/schedule/schedule/src/delivery-history.ts'
 import type { ScheduleTask } from '@berry-ai/harness-schedule'
 import type { ContextFormed, GenerateOptions, StreamChunk } from '@berry-ai/harness-llm'
-import { SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
+import { SessionId, type SessionEvent } from '@berry-ai/harness-session'
 import {
   ScheduleId,
   createEveryScheduleRecord,

@@ -52,7 +52,7 @@
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/dsh-api-workspace-files": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*"
+    "@berry-ai/harness-session": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/libreoffice-kit": "^0.1.5",

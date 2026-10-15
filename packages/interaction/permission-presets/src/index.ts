@@ -20,7 +20,7 @@ import { CommandDefinitionId } from '@berry-ai/harness-commands/brand'
 import z from '@deepseek-ai/schemastery'
 import { z as zod } from 'zod'
 import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
-import type { Session, SessionEvent } from '@deepseek-ai/dsh-session'
+import type { Session, SessionEvent } from '@berry-ai/harness-session'
 import type { SandboxMode } from '@berry-ai/harness-sandbox'
 import { SANDBOX_MODES, setSandboxMode } from '@berry-ai/harness-sandbox-policy'
 // Side-effect type import: declaration-merges `ctx.shell` (the capability fact
@@ -48,7 +48,7 @@ declare module '@deepseek-ai/dsh-session-projection/types' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /**
      * Records the selected preset as durable, log-only user intent. The knob

@@ -9,7 +9,7 @@ import { describe, expect, it } from 'vitest'
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import { createScope, scopeOf } from '@deepseek-ai/dsh-api-session-controller/client'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { apply, inject, InputTriggerService } from '@deepseek-ai/dsh-client-ui-input-trigger/client'
 import type { MenuViewInjected } from '@deepseek-ai/dsh-client-ui-input-trigger/client'
 

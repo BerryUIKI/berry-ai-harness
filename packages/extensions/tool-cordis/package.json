@@ -34,20 +34,20 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-cordis-host-runner": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*"
+    "@berry-ai/harness-tools": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-group": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-cordis-host-runner": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~"
   }
 }

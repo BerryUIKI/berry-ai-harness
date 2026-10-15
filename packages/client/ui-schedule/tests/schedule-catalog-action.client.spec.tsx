@@ -7,7 +7,7 @@ import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
 import type { SessionSnapshot } from '@deepseek-ai/dsh-api-session-controller/client'
 import type { ScheduleRecord } from '@berry-ai/harness-schedule/client'
 import { ScheduleId } from '@berry-ai/harness-schedule'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import {
   formatScheduleAbsolute,
   formatScheduleFrequency,

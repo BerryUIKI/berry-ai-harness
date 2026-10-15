@@ -2,7 +2,7 @@
 
 import { MutableSessionEventSource } from '@deepseek-ai/dsh-api-session-controller/client'
 import type { SessionEventLikeEntry } from '@deepseek-ai/dsh-api-session-controller/client'
-import { SessionSeq } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq } from '@berry-ai/harness-session/types'
 import type { LlmAttemptId, StreamChunk, ToolCallId } from '@berry-ai/harness-llm'
 import { expect, it, onTestFinished, vi } from 'vitest'
 import { SessionLogModel } from '../src/client/views/session-log/model.ts'

@@ -2,7 +2,7 @@
 
 import type { ChatConversationViewNode } from '@deepseek-ai/dsh-client-ui-chat/client'
 import { ConversationLocationIndex } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { SessionSeq, type SessionEvent } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq, type SessionEvent } from '@berry-ai/harness-session/types'
 
 declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
   interface ConversationStepDataMap {

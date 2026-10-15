@@ -2,9 +2,9 @@
 import { describe, expect, it } from 'vitest'
 import { createDeveloperMessage } from '@berry-ai/harness-llm'
 import type { ToolSchema } from '@berry-ai/harness-llm'
-import { Session, SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import { buildForkSeed } from '@deepseek-ai/dsh-session/fork'
+import { Session, SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
+import { buildForkSeed } from '@berry-ai/harness-session/fork'
 import { foldSurface } from '../src/surface.ts'
 
 const first: ToolSchema = { name: 'search', description: 'First', parameters: { type: 'object' } }

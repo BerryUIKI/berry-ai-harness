@@ -28,6 +28,6 @@
           enabled: false
 
 - id: tools
-  name: '@deepseek-ai/dsh-tools'
+  name: '@berry-ai/harness-tools'
   config:
     mode: ptc

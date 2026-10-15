@@ -33,7 +33,7 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
@@ -47,7 +47,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",

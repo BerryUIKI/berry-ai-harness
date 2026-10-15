@@ -1,6 +1,6 @@
 /** Session-owned observable state excluding Conversation target data. */
 import type { FileAttachmentRef } from '@berry-ai/harness-attachment'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
 import type { RemoteFailure } from '@berry-ai/harness-typert-protocol'
 import type { SessionRequestId } from '../../types.ts'

@@ -15,7 +15,7 @@
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
-import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionEvent, SessionId } from '@berry-ai/harness-session'
 
 declare module '@deepseek-ai/cordis' {
   interface Context {

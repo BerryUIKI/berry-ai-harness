@@ -11,7 +11,7 @@ import { makeTranslate, RemoteError, SlotTestRuntime } from '@deepseek-ai/dsh-cl
 import type {
   BeginSubmissionInput, PendingSubmissionRetirement,
 } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { ComposerBlockRegistry } from '../src/client/input/blocks.ts'
 import { InputHub } from '../src/client/input/hub.ts'
 import { ConversationController } from '../src/client/service.ts'

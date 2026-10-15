@@ -18,7 +18,7 @@
  */
 import type { BoundActions } from '@deepseek-ai/dsh-client-store'
 import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { ReadDocumentBytes, ReadWorkspaceFilePage, SessionFile } from './rpc.ts'
 import type { TextStore } from './store.ts'
 import type { DocumentLoadMode } from './document/registry.ts'

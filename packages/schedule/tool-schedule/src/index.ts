@@ -7,11 +7,11 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type { ContentBlock } from '@berry-ai/harness-llm'
 import { delegationDepthOf } from '@deepseek-ai/dsh-subagent'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { GenericCallView } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
+import type { GenericCallView } from '@berry-ai/harness-tools'
 import {
   MAX_TITLE_LENGTH, MIN_EVERY_INTERVAL_SECONDS, REQUIRED_TITLE_MESSAGE, ScheduleId, ScheduleInputError, scheduleView,
 } from '@berry-ai/harness-schedule'

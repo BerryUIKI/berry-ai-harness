@@ -24,7 +24,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-title": "workspace:*",
     "@deepseek-ai/dsh-session-title-llm": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
@@ -40,11 +40,11 @@
     "@berry-ai/harness-llm-deepseek": "workspace:*",
     "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
     "@berry-ai/harness-llm-pi-ai": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-title": "workspace:*",
     "@deepseek-ai/dsh-session-title-llm": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop": "workspace:*"
+    "@berry-ai/harness-agent-loop": "workspace:*"
   }
 }

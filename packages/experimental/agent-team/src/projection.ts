@@ -3,7 +3,7 @@
 import { z } from 'zod'
 import { brandString } from '@berry-ai/harness-brand'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import type { SessionEvent, SessionEventMap, SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionEvent, SessionEventMap, SessionId } from '@berry-ai/harness-session'
 import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
 import type {
   TeamId,

@@ -25,7 +25,7 @@ export interface TodoItem {
   status: 'pending' | 'in_progress' | 'completed'
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /** Whole-list snapshot; latest write wins on replay. Log-only UI state; never derived history. */
     'todo/write': { todos: TodoItem[] }

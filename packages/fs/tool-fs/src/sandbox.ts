@@ -11,7 +11,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { ToolExecution } from '@berry-ai/harness-tools'
 import type { SandboxExecutionPolicy, SandboxMode } from '@berry-ai/harness-sandbox'
 import { ESCALATION_TARGETS, approveEscalation, escalationHintMarker, sandboxDenialMarker, sandboxPermissionsDescription, validateEscalationArgs } from '@berry-ai/harness-sandbox'
 import type { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'

@@ -36,7 +36,7 @@ kind: "package-reference"
 所有上限都是必填项；该库不提供默认值。以三个上限挂载服务：
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
+- name: '@berry-ai/harness-session'
 - name: '@deepseek-ai/dsh-session-title'
   config:
     fallbackMaxWords: 8

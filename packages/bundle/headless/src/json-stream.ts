@@ -8,9 +8,9 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { lastAssistantStreamChunk } from '@berry-ai/harness-llm/assistant-stream'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 
 /** Default per-string and per-key cap applied to every bounded projected payload. */
 export const MAX_STRING_BYTES = 8 * 1024

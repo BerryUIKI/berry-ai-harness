@@ -1,13 +1,13 @@
 /** One-shot session-lineage and event-relationship tracing helpers. */
 
 import { currentSessionMessageProjections } from '@deepseek-ai/dsh-session-format-catalog/message-projections'
-import { foldSurface, isSurfaceEvent, snapshotSessionEvent } from '@deepseek-ai/dsh-session'
+import { foldSurface, isSurfaceEvent, snapshotSessionEvent } from '@berry-ai/harness-session'
 import type {
   SessionEvent,
   SessionId,
   SessionSeq,
   SurfaceEvent,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import { SessionQueryError } from './config.ts'
 import type {
   SessionEventRecord,

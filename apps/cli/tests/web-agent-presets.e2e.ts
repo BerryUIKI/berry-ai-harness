@@ -15,8 +15,8 @@ import {
   type Profile,
 } from '@berry-ai/harness-app-boot'
 import { provideCmdline } from '@berry-ai/harness-cmdline'
-import { SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import { SessionId, SessionLogOffset } from '@berry-ai/harness-session'
+import type { Agent } from '@berry-ai/harness-agent'
 import type { PatchOptions } from '@deepseek-ai/cordis-plugin-include'
 import { afterAll, beforeAll, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { bundlePatchPaths, composeEntries } from '@berry-ai/harness-app-boot'
@@ -28,7 +28,7 @@ import { applyChildComposition, childSessionMeta } from '@deepseek-ai/dsh-subage
 import { ToolCallId } from '@berry-ai/harness-llm'
 import type {} from '@berry-ai/harness-compaction-basic'
 import type {} from '@berry-ai/harness-skill'
-import type {} from '@deepseek-ai/dsh-tools'
+import type {} from '@berry-ai/harness-tools'
 // Type-only: resolves `ctx.get('sessionProjections')` and `ctx.get('tokenMeter')`.
 import type {} from '@deepseek-ai/dsh-session-projection'
 import type {} from '@berry-ai/harness-token-meter'
@@ -681,7 +681,7 @@ describe('a user preset declared from the shipped cordis rows', () => {
           expect(page.isError, resultText(page)).toBe(false)
           return (JSON.parse(resultText(page)) as ConfigPage).data
         }
-        const toolsRows = await listConfigs({ name: '@deepseek-ai/dsh-tools' }, 'copied-preset-inspect-configs')
+        const toolsRows = await listConfigs({ name: '@berry-ai/harness-tools' }, 'copied-preset-inspect-configs')
         const toolsRow = toolsRows.entries[0]
         expect(toolsRow).toMatchObject({ patchId: 'tools', status: 'schema' })
         expect(toolsRows).toMatchObject({ total: 1, nextOffset: null })

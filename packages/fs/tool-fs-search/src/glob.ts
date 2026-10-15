@@ -11,8 +11,8 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import { sep } from 'node:path'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { GenericCallView, SearchResultView, ToolResult } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
+import type { GenericCallView, SearchResultView, ToolResult } from '@berry-ai/harness-tools'
 import type { SpillRef } from '@berry-ai/harness-spill'
 import { runRipgrep, toWorkdirRelative, trySaveFormattedResult } from './search-core.ts'
 import { globSearchMeta, searchViewFromMeta } from './presentation.ts'

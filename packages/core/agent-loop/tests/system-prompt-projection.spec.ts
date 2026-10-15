@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { createSystemMessage, createUserMessage } from '@berry-ai/harness-llm'
-import SessionStore, { SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { Session, SurfaceIntent } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId, SessionSeq } from '@berry-ai/harness-session'
+import type { Session, SurfaceIntent } from '@berry-ai/harness-session'
 import { SystemPromptProjection } from '../src/runtime-context.ts'
 import type { SystemPromptCommit, SystemPromptDecisionInput } from '../src/runtime-context.ts'
 

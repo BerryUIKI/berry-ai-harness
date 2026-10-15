@@ -3,7 +3,7 @@ import type {
   ContextMessageNode, ConversationNodeDefinition, ConversationPreviousContext,
   SteeringMessageNode, UserMessageNode,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-agent/types'
+import type {} from '@berry-ai/harness-agent/types'
 import { trajectoryNode } from './trajectory-definition-common.ts'
 import { contextForm, contextProducer } from './trajectory-event-projection.ts'
 

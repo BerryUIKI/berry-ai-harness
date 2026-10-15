@@ -12,8 +12,8 @@ import { delimiter as pathDelimiter } from 'node:path'
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-compaction'
 import type {} from '@berry-ai/harness-deepseek-llm-api-extensions'
-import { SESSION_FORMAT_VERSION, SessionLogOffset, type SessionEvent } from '@deepseek-ai/dsh-session'
-import type { SessionLogOffset as SessionLogOffsetType } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION, SessionLogOffset, type SessionEvent } from '@berry-ai/harness-session'
+import type { SessionLogOffset as SessionLogOffsetType } from '@berry-ai/harness-session'
 import {
   createSessionFormatCatalogWithChildren,
   SessionFormatUnsupportedMigrationError,

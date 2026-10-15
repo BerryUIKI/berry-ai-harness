@@ -9,8 +9,8 @@ import { pathToFileURL } from 'node:url'
 import LlmRuntime, { createUserMessage, LlmAdapter, ReasoningEffortId } from '@berry-ai/harness-llm'
 import type { GenerateOptions, LlmCallConfig, StreamChunk } from '@berry-ai/harness-llm'
 import * as LlmPiAi from '@berry-ai/harness-llm-pi-ai'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import type { Session, SessionSeq } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
+import type { Session, SessionSeq } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import SessionTitleService from '@deepseek-ai/dsh-session-title'
 import * as providerPlugin from '@deepseek-ai/dsh-session-title-first-prompt-llm'
@@ -54,7 +54,7 @@ async function loadComposition(
   const configPath = join(root, 'cordis.yml')
   await writeFile(configPath, [
     "- name: '@berry-ai/harness-llm'",
-    "- name: '@deepseek-ai/dsh-session'",
+    "- name: '@berry-ai/harness-session'",
     "- name: '@deepseek-ai/dsh-session-projection'",
     "- name: '@deepseek-ai/dsh-session-title'",
     '  config:',
@@ -76,7 +76,7 @@ async function loadComposition(
   context.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-llm', LlmRuntime],
-    ['@deepseek-ai/dsh-session', SessionStore],
+    ['@berry-ai/harness-session', SessionStore],
     ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
     ['@deepseek-ai/dsh-session-title', SessionTitleService],
     ['@deepseek-ai/dsh-session-title-first-prompt-llm', providerPlugin],

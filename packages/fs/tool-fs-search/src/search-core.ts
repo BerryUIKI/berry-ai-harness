@@ -27,7 +27,7 @@ import { ItemRetainer, TextRetainer } from '@berry-ai/harness-output-retention'
 import type { RetainedItems } from '@berry-ai/harness-output-retention'
 import type { SubprocessHandle, SubprocessOutcome, SubprocessOutputRead, SubprocessSpawnSpec } from '@berry-ai/harness-subprocess'
 import type { SaveTextSpill, SpillRef } from '@berry-ai/harness-spill'
-import type { ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { ToolExecution } from '@berry-ai/harness-tools'
 
 /**
  * Default cap on the complete raw `rg` stdout the tools will parse (the

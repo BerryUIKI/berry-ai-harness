@@ -35,9 +35,9 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-browser-use": "workspace:*",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
   },
   "devDependencies": {
@@ -45,12 +45,12 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@berry-ai/harness-browser-use": "workspace:*",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-agent-loop": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-working-directory": "workspace:*"
   }

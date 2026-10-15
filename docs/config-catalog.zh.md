@@ -1998,10 +1998,10 @@ export interface AcpConfig {
 ```
 <!-- END GENERATED config-catalog:@berry-ai/harness-acp -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-default-model -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-agent-default-model -->
 <a id="deepseek-aidsh-agent-default-model"></a>
 
-## `@deepseek-ai/dsh-agent-default-model`
+## `@berry-ai/harness-agent-default-model`
 
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
 - `source`: [`packages/core/agent-default-model/src/index.ts:24`](../packages/core/agent-default-model/src/index.ts)
@@ -2017,12 +2017,12 @@ export interface Config {
   reasoningEffort: Volatile<string | undefined>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-default-model -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-agent-default-model -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-loop -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-agent-loop -->
 <a id="deepseek-aidsh-agent-loop"></a>
 
-## `@deepseek-ai/dsh-agent-loop`
+## `@berry-ai/harness-agent-loop`
 
 - `inject`: `agents` · `sessions` · `llm` · `tools` · `systemPrompt` · `sessionProjections`
 - `refs`: [`AgentOptions`](subsystems/core.zh.md) · [`SessionId`](subsystems/core.zh.md) · `Volatile` (`@deepseek-ai/cosmokit`)
@@ -2049,12 +2049,12 @@ export interface Config {
   })[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-loop -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-agent-loop -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-tool-presentation -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-agent-tool-presentation -->
 <a id="deepseek-aidsh-agent-tool-presentation"></a>
 
-## `@deepseek-ai/dsh-agent-tool-presentation`
+## `@berry-ai/harness-agent-tool-presentation`
 
 - `inject`: `tools`
 - `refs`: [`ToolPresentationMode`](subsystems/tools.zh.md)
@@ -2073,7 +2073,7 @@ export interface Config {
   mode: ToolPresentationMode
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-tool-presentation -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-agent-tool-presentation -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-api-gateway -->
 <a id="deepseek-aidsh-api-gateway"></a>
@@ -4253,10 +4253,10 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-spawn-in-process -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-system-prompt -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-system-prompt -->
 <a id="deepseek-aidsh-system-prompt"></a>
 
-## `@deepseek-ai/dsh-system-prompt`
+## `@berry-ai/harness-system-prompt`
 
 - `source`: [`packages/core/system-prompt/src/index.ts:254`](../packages/core/system-prompt/src/index.ts)
 
@@ -4285,7 +4285,7 @@ export interface Config {
   toolOrder?: string[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-system-prompt -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-system-prompt -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-token-meter -->
 <a id="deepseek-aidsh-token-meter"></a>
@@ -4421,10 +4421,10 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-terminal -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tools -->
+<!-- BEGIN GENERATED config-catalog:@berry-ai/harness-tools -->
 <a id="deepseek-aidsh-tools"></a>
 
-## `@deepseek-ai/dsh-tools`
+## `@berry-ai/harness-tools`
 
 - `inject`: `systemPrompt`
 - `source`: [`packages/core/tools/src/index.ts:675`](../packages/core/tools/src/index.ts)
@@ -4456,7 +4456,7 @@ export interface Config {
 /** How the registry presents its tools to the model (see {@link Config.mode}). */
 export type ToolPresentationMode = 'native' | 'ptc'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tools -->
+<!-- END GENERATED config-catalog:@berry-ai/harness-tools -->
 
 <!-- BEGIN GENERATED config-catalog:@berry-ai/harness-typert-loader -->
 <a id="deepseek-aidsh-typert-loader"></a>
@@ -4524,7 +4524,7 @@ export interface Config {
 | `@deepseek-ai/dsh-webhook` | `agents` · `agentDefaultModel` · `agentPresets` · `permissionPresets` · `sessionTitle` · `workspaceRegistry` | [`packages/experimental/webhook/src/index.ts`](../packages/experimental/webhook/src/index.ts) |
 | `@berry-ai/harness-workspace` | `storageDomain` · `sessionPersistence` | [`packages/workspace/workspace/src/index.ts`](../packages/workspace/workspace/src/index.ts) |
 | `@deepseek-ai/dsh-acp-app` | `cmdlineArgs` | [`packages/bundle/acp-app/src/index.ts`](../packages/bundle/acp-app/src/index.ts) |
-| `@deepseek-ai/dsh-agent` | — | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
+| `@berry-ai/harness-agent` | — | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
 | `@deepseek-ai/dsh-api-account-controller` | `deepseekAccount` · `agents` | [`packages/api/account-controller/src/index.ts`](../packages/api/account-controller/src/index.ts) |
 | `@deepseek-ai/dsh-api-remotes` | `typertGateway` | [`packages/api/remotes/src/index.ts`](../packages/api/remotes/src/index.ts) |
 | `@deepseek-ai/dsh-client-file-upload` | `agents` · `attachments` · `commands` · `connection` | [`packages/client/file-upload/src/index.ts`](../packages/client/file-upload/src/index.ts) |
@@ -4592,7 +4592,7 @@ export interface Config {
 | `@deepseek-ai/dsh-host-directory-picker-native` | — | [`packages/host/directory-picker-native/src/index.ts`](../packages/host/directory-picker-native/src/index.ts) |
 | `@deepseek-ai/dsh-host-plugin-inventory` | `loader` | [`packages/host/plugin-inventory/src/index.ts`](../packages/host/plugin-inventory/src/index.ts) |
 | `@berry-ai/harness-llm` | — | [`packages/llm/llm/src/index.ts`](../packages/llm/llm/src/index.ts) |
-| `@deepseek-ai/dsh-session` | — | [`packages/core/session/src/index.ts`](../packages/core/session/src/index.ts) |
+| `@berry-ai/harness-session` | — | [`packages/core/session/src/index.ts`](../packages/core/session/src/index.ts) |
 | `@deepseek-ai/dsh-session-checkpoint-policy` | `llm` · `sessionPersistence` · `sessions` · `tools` | [`packages/session/session-checkpoint-policy/src/index.ts`](../packages/session/session-checkpoint-policy/src/index.ts) |
 | `@deepseek-ai/dsh-session-projection` | — | [`packages/session/session-projection/src/index.ts`](../packages/session/session-projection/src/index.ts) |
 | `@deepseek-ai/dsh-session-stats` | `sessionProjections` | [`packages/session/session-stats/src/index.ts`](../packages/session/session-stats/src/index.ts) |
@@ -4683,7 +4683,7 @@ export interface Config {
 | `@deepseek-ai/dsh-llm-mock-server` | — | [`packages/test-support/llm-mock-server/src/index.ts`](../packages/test-support/llm-mock-server/src/index.ts) |
 | `@deepseek-ai/dsh-loader-smoke` | — | [`packages/test-support/loader-smoke/src/index.ts`](../packages/test-support/loader-smoke/src/index.ts) |
 | `@deepseek-ai/dsh-remote-mock` | — | [`packages/test-support/remote-mock/src/index.ts`](../packages/test-support/remote-mock/src/index.ts) |
-| `@deepseek-ai/dsh-scope` | — | [`packages/core/scope/src/index.ts`](../packages/core/scope/src/index.ts) |
+| `@berry-ai/harness-scope` | — | [`packages/core/scope/src/index.ts`](../packages/core/scope/src/index.ts) |
 | `@deepseek-ai/dsh-sdk-client` | — | [`packages/sdk/client/src/index.ts`](../packages/sdk/client/src/index.ts) |
 | `@deepseek-ai/dsh-sdk-minimal` | — | [`packages/bundle/sdk-minimal/src/index.ts`](../packages/bundle/sdk-minimal/src/index.ts) |
 | `@deepseek-ai/dsh-sdk-protocol` | — | [`packages/sdk/protocol/src/index.ts`](../packages/sdk/protocol/src/index.ts) |

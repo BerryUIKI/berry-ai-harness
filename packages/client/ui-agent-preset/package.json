@@ -65,7 +65,7 @@
     "@deepseek-ai/dsh-client-ui-settings": "workspace:*",
     "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
     "@deepseek-ai/dsh-client-ui-workspace": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@types/react": "~18.3.1",
     "react": "^18.2.0"

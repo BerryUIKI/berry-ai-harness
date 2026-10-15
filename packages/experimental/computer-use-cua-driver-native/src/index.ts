@@ -10,8 +10,8 @@ import { createMcpToolDefinition } from '@berry-ai/harness-mcp-client'
 import { z } from 'zod'
 import type { CuaDriver as NativeDriver } from '@trycua/cua-driver'
 import type {} from '@berry-ai/harness-computer-use'
-import type {} from '@deepseek-ai/dsh-system-prompt'
-import type {} from '@deepseek-ai/dsh-tools'
+import type {} from '@berry-ai/harness-system-prompt'
+import type {} from '@berry-ai/harness-tools'
 
 /** Cordis plugin identity for the native Cua Driver provider. */
 export const name = 'experimental-computer-use-cua-driver-native'

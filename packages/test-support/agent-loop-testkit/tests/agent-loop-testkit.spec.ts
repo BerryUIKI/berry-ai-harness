@@ -5,8 +5,8 @@ import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import FsLocal from '@berry-ai/harness-fs-local'
 import { createUserMessage } from '@berry-ai/harness-llm'
-import { Session, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
-import { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
+import { Session, SessionId, SessionSeq } from '@berry-ai/harness-session'
+import { renderPrompt } from '@berry-ai/harness-system-prompt'
 import {
   createInboxStub,
   mountAgentLoopTestDependencies,

@@ -5,7 +5,7 @@
  */
 
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import type { ObjectJsonSchema } from '@deepseek-ai/dsh-tools'
+import type { ObjectJsonSchema } from '@berry-ai/harness-tools'
 import type { WorkflowMeta } from '@berry-ai/harness-workflow'
 
 /**

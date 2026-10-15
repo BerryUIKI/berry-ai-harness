@@ -7,7 +7,7 @@ import { describe, expect, it } from 'vitest'
 import { runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
 import { readImageFile } from '@berry-ai/harness-attachment-local'
 import { parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 
 const repo = fileURLToPath(new URL('../../../../', import.meta.url))
 // DSH_PRIMARY_RUNTIME names the same runtime.json + dependencies/ payload used by shipped deployments.

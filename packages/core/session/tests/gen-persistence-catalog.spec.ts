@@ -36,14 +36,14 @@ const make = (files: Record<string, string>): string => {
 
 /** A merge-form declaration file wrapping `members` in the session module. */
 const merge = (members: string): string =>
-  `declare module '@deepseek-ai/dsh-session/types' {\n  interface SessionEventMap {\n${members}\n  }\n}\n`
+  `declare module '@berry-ai/harness-session/types' {\n  interface SessionEventMap {\n${members}\n  }\n}\n`
 
 afterEach(() => {
   while (roots.length) rmSync(roots.pop()!, { recursive: true, force: true })
 })
 
 /** The manifest that marks a fixture package as the owning session package. */
-const OWNER_MANIFEST = '{ "name": "@deepseek-ai/dsh-session" }\n'
+const OWNER_MANIFEST = '{ "name": "@berry-ai/harness-session" }\n'
 
 describe('gen-persistence-catalog collectLogEvents', () => {
   it('generates required interpreter types from plugin-owned event declarations', () => {
@@ -102,7 +102,7 @@ describe('gen-persistence-catalog collectLogEvents', () => {
   it('hard-errors on an extends clause (inherited keys would escape the catalog)', () => {
     expect(() => collectLogEvents(make({
       'packages/group/fix/src/types.ts':
-        'interface Extra { \'fix/hidden\': { turn: number } }\ndeclare module \'@deepseek-ai/dsh-session/types\' {\n  interface SessionEventMap extends Extra {\n    /** Declared directly. */\n    \'fix/direct\': { turn: number }\n  }\n}\n',
+        'interface Extra { \'fix/hidden\': { turn: number } }\ndeclare module \'@berry-ai/harness-session/types\' {\n  interface SessionEventMap extends Extra {\n    /** Declared directly. */\n    \'fix/direct\': { turn: number }\n  }\n}\n',
     }))).toThrow(/uses extends; inherited keys would join keyof SessionEventMap without a catalog row/)
   })
 

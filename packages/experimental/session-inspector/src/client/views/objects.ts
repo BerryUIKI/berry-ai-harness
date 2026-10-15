@@ -1,6 +1,6 @@
 /** Session-local object references used by the Chat Inspector's detail tree. */
 
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
 
 /**

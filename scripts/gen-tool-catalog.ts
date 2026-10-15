@@ -11,15 +11,15 @@ import { basename, resolve } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import LlmRuntime from '@berry-ai/harness-llm'
 import type { ToolSchema } from '@berry-ai/harness-llm'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { createScope } from '@deepseek-ai/dsh-scope'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import AgentRegistry from '@berry-ai/harness-agent'
+import type { Agent } from '@berry-ai/harness-agent'
+import { createScope } from '@berry-ai/harness-scope'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import SqliteSessionQueryEngine from '@berry-ai/harness-session-query-sqlite'
 import GoalService from '@berry-ai/harness-goal'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime, { type Config as ToolsConfig } from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime, { type Config as ToolsConfig } from '@berry-ai/harness-tools'
 import LocalBashExecutor from '@berry-ai/harness-bash-local'
 import * as BashEnvPlugin from '@berry-ai/harness-shell-env'
 import { PwshLocalExecutor } from '@berry-ai/harness-pwsh-local'
@@ -241,7 +241,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'ask_user_question keeps the original blocking behavior by default; set `mode: timed` to opt into a foreground timeout and pending result while the question remains answerable. In timed mode, `timeout: -1` keeps that call blocking indefinitely.',
   },
   {
-    pkg: '@deepseek-ai/dsh-tools',
+    pkg: '@berry-ai/harness-tools',
     dir: 'tools',
     source: 'packages/core/tools/src/ptc.ts',
     requires: ['ctx.workingDirectory (Agent executions)', 'ctx.tools', 'ctx.ptcRuntime (execution time)', 'ctx.systemPrompt'],

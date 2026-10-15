@@ -1,6 +1,6 @@
 import { resolve } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import SessionStore, { SESSION_FORMAT_VERSION, SessionId, type SessionHeader } from '@deepseek-ai/dsh-session'
+import SessionStore, { SESSION_FORMAT_VERSION, SessionId, type SessionHeader } from '@berry-ai/harness-session'
 import TypertRegistry from '@berry-ai/harness-typert-registry'
 import { describe, expect, it, vi } from 'vitest'
 import WorkspaceFiles from '../src/index.ts'
@@ -53,7 +53,7 @@ describe('Workspace Files Session scope lookup', () => {
         parameter: 'workspaceFileScope',
         wire: 'workspaceFileScopeId',
         hostTypeSymbol: '@deepseek-ai/dsh-api-workspace-files#WorkspaceFileScope',
-        wireTypeSymbol: '@deepseek-ai/dsh-session/types#SessionId',
+        wireTypeSymbol: '@berry-ai/harness-session/types#SessionId',
       })
       if (lookup === undefined) throw new Error('workspaceFileScope lookup did not register')
 

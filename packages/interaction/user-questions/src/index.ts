@@ -8,12 +8,12 @@
  */
 
 import { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-agent'
+import type {} from '@berry-ai/harness-agent'
 import { createUserMessage, HarnessError, type MessageId, type ToolCallId, type UserMessage } from '@berry-ai/harness-llm'
-import type { Session } from '@deepseek-ai/dsh-session'
-import { scopeTarget } from '@deepseek-ai/dsh-scope'
+import type { Session } from '@berry-ai/harness-session'
+import { scopeTarget } from '@berry-ai/harness-scope'
 import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type {} from '@deepseek-ai/dsh-session-projection'
 import z from '@deepseek-ai/schemastery'
 import { userQuestionProjectionDefinition } from './projection.ts'

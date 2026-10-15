@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import { LocalSpillStore } from '@berry-ai/harness-spill-local'
 import { LocalFileSystem } from '@berry-ai/harness-fs-local'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import { mkdtemp, readFile, realpath, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'

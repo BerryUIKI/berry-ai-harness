@@ -2,7 +2,7 @@
 
 import { homedir } from 'node:os'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type {
   TypertRemoteEventDispatch,
   TypertRemoteEventInvocation,
@@ -10,7 +10,7 @@ import type {
   TypertRemoteEventSource,
 } from '@deepseek-ai/dsh-api-gateway'
 import { Deque } from '@berry-ai/harness-deque'
-import { carrierKeyOf } from '@deepseek-ai/dsh-scope'
+import { carrierKeyOf } from '@berry-ai/harness-scope'
 import { isJsonValue, type JsonValue } from '@berry-ai/harness-util-values'
 import { API_REMOTE_FORWARDED_EVENTS } from './remote-events.ts'
 

@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url'
 import { chromium } from 'playwright'
 import { expect, it } from 'vitest'
 import { LlmAdapter, type GenerateOptions, type StreamChunk } from '@berry-ai/harness-llm'
-import type {} from '@deepseek-ai/dsh-agent-default-model'
+import type {} from '@berry-ai/harness-agent-default-model'
 import {
   captureStableAria, compareOrRefreshGolden, launchWebScaffold, watchConsole, webSnapshotMode,
 } from './scaffold.ts'

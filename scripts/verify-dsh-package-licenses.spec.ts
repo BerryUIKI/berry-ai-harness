@@ -32,7 +32,7 @@ describe('DSH package license gate', () => {
     const root = createWorkspace()
     writeManifest(root, 'apps/cli/package.json', { name: '@deepseek-ai/dsh', license: 'MIT' })
     writeManifest(root, 'packages/core/agent/package.json', {
-      name: '@deepseek-ai/dsh-agent',
+      name: '@berry-ai/harness-agent',
       license: 'BSD-3-Clause',
     })
     writeManifest(root, 'vendor/cordis/package.json', {
@@ -43,17 +43,17 @@ describe('DSH package license gate', () => {
     expect(inspectDshPackageLicenses(root)).toEqual({
       packageCount: 3,
       failures: [
-        'packages/core/agent/package.json: @deepseek-ai/dsh-agent must declare "license": "MIT"; found "BSD-3-Clause".',
+        'packages/core/agent/package.json: @berry-ai/harness-agent must declare "license": "MIT"; found "BSD-3-Clause".',
       ],
     })
   })
 
   it('rejects a missing license declaration', () => {
     const root = createWorkspace()
-    writeManifest(root, 'packages/core/agent/package.json', { name: '@deepseek-ai/dsh-agent' })
+    writeManifest(root, 'packages/core/agent/package.json', { name: '@berry-ai/harness-agent' })
 
     expect(inspectDshPackageLicenses(root).failures).toEqual([
-      'packages/core/agent/package.json: @deepseek-ai/dsh-agent must declare "license": "MIT"; found undefined.',
+      'packages/core/agent/package.json: @berry-ai/harness-agent must declare "license": "MIT"; found undefined.',
     ])
   })
 })

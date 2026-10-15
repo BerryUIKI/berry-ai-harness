@@ -313,14 +313,14 @@ describe('manifest declarations', () => {
     roots.push(root)
     const subject = pkg('feature', {
       external: ['', 'react', '@deepseek-ai/dsh-client-feature', '@deepseek-ai/dsh-missing'],
-      inject: ['', '@deepseek-ai/dsh-agent', '@deepseek-ai/dsh-agent'],
+      inject: ['', '@berry-ai/harness-agent', '@berry-ai/harness-agent'],
       sourceUses: {
-        '@deepseek-ai/dsh-agent': ['packages/client/feature/src/index.ts'],
+        '@berry-ai/harness-agent': ['packages/client/feature/src/index.ts'],
         '@deepseek-ai/dsh-client-ui-slots': ['packages/client/feature/src/view.tsx'],
       },
       dependencies: {
         [CORDIS]: 'workspace:^',
-        '@deepseek-ai/dsh-agent': 'workspace:*',
+        '@berry-ai/harness-agent': 'workspace:*',
       },
       peerDependencies: {
         '@deepseek-ai/dsh-client-ui-slots': 'workspace:^',
@@ -354,7 +354,7 @@ describe('manifest declarations', () => {
     }
     expect(fixed.dsh.client).toMatchObject({
       external: ['@deepseek-ai/dsh-missing'],
-      inject: ['@deepseek-ai/dsh-agent'],
+      inject: ['@berry-ai/harness-agent'],
     })
     expect(fixed.dependencies).toEqual(subject.dependencies)
     expect(fixed.peerDependencies).toEqual(subject.peerDependencies)

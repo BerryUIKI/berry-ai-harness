@@ -21,7 +21,7 @@
 import type { Context, LoggerService } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { z as zod } from 'zod'
-import type { PreStepDecision } from '@deepseek-ai/dsh-agent'
+import type { PreStepDecision } from '@berry-ai/harness-agent'
 import type {} from '@deepseek-ai/dsh-session-projection'
 import type { ShellExecutor, ShellRunResult } from '@berry-ai/harness-shell'
 import { createUserMessage } from '@berry-ai/harness-llm'

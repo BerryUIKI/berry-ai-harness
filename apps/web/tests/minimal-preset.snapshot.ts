@@ -4,12 +4,12 @@ import { fileURLToPath } from 'node:url'
 import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import type { AgentHandle } from '@deepseek-ai/dsh-agent'
+import type { AgentHandle } from '@berry-ai/harness-agent'
 import { ToolCallId, createUserMessage } from '@berry-ai/harness-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import type { Session } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
+import type { Session } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-agent-preset-registry'
-import type {} from '@deepseek-ai/dsh-system-prompt'
+import type {} from '@berry-ai/harness-system-prompt'
 import {
   assertFixtureInventory,
   captureStableAria,

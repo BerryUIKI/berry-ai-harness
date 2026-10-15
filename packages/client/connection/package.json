@@ -45,7 +45,7 @@
   ],
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-scope": "workspace:*"
+    "@berry-ai/harness-scope": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -53,8 +53,8 @@
     "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-host-webserver": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*"
   }
 }

@@ -3,13 +3,13 @@
 import { describe, expect, expectTypeOf, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime, {
   defineContentToolFixture,
   type ToolDefinition,
   type ToolExecutionInput,
   type ToolExecutionMode,
-} from '@deepseek-ai/dsh-tools'
+} from '@berry-ai/harness-tools'
 
 const testToolSignal = new AbortController().signal
 

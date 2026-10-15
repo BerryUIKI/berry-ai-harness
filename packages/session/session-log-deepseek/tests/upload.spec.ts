@@ -9,7 +9,7 @@ import SessionStore, {
   type CreateSessionOptions,
   type SessionEvent,
   type SessionHeader,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import { createSessionFormatCatalogWithChildren } from '@deepseek-ai/dsh-session-format-catalog'
 import DeepSeekLlmApiExtensionRegistry from '@berry-ai/harness-deepseek-llm-api-extensions'
 import { createDeveloperMessage, createAssistantMessage, createSystemMessage, createUserMessage } from '@berry-ai/harness-llm'

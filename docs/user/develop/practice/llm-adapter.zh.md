@@ -134,7 +134,7 @@ ctx.llm.registerAdapter(['my-provider'], adapter)
       - my-provider
 
 - id: agent-loop
-  name: '@deepseek-ai/dsh-agent-loop'
+  name: '@berry-ai/harness-agent-loop'
   config:
     agents:
       - id: main

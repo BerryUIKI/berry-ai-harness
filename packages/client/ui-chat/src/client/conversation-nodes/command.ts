@@ -5,7 +5,7 @@ import type {
 import type { CompactionCheckpointSource } from '@berry-ai/harness-compaction/checkpoint'
 import type {} from '@berry-ai/harness-compaction/types'
 import type {} from '@berry-ai/harness-commands/types'
-import { isReplacementSurfaceEvent } from '@deepseek-ai/dsh-session/surface'
+import { isReplacementSurfaceEvent } from '@berry-ai/harness-session/surface'
 import type { ManualCompactionChatData } from '../contract/chat-nodes.ts'
 import { chatNode } from './common.ts'
 

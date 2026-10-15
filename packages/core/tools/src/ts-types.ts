@@ -3,7 +3,7 @@
  * text the model programs against (the `tools:sdk` prompt section). Sibling of
  * `json-schema.ts` — `schemas()` (native function calling) and this module (the generated
  * `declare const tools` API) are two projections of the same store.
- * @module @deepseek-ai/dsh-tools/src/ts-types
+ * @module @berry-ai/harness-tools/src/ts-types
  */
 
 import type { ToolSchema } from '@berry-ai/harness-llm'

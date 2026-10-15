@@ -6,7 +6,7 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import { remoteMethods } from '@berry-ai/harness-typert-protocol'
 import MessageFeedbackService from '../src/index.ts'
@@ -27,7 +27,7 @@ async function loadComposition(configPath: string): Promise<Context> {
   await ctx.plugin(Loader)
   ctx.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-session', SessionStore],
+    ['@berry-ai/harness-session', SessionStore],
     ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlSessionPersistence],
     ['@berry-ai/harness-message-feedback', MessageFeedbackService],
   ])
@@ -55,7 +55,7 @@ describe('message feedback through a real Loader composition', () => {
     root = await mkdtemp(join(tmpdir(), 'dsh-message-feedback-loader-'))
     const configPath = join(root, 'cordis.yml')
     await writeFile(configPath, [
-      "- name: '@deepseek-ai/dsh-session'",
+      "- name: '@berry-ai/harness-session'",
       "- name: '@deepseek-ai/dsh-session-persistence-jsonl'",
       '  config:',
       `    root: ${JSON.stringify(join(root, 'sessions'))}`,

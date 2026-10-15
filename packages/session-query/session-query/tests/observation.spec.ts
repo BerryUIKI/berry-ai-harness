@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import { createUserMessage } from '@berry-ai/harness-llm'
-import SessionStore, { SessionLogOffset, SessionSeq, SESSION_FORMAT_VERSION, SessionId } from '@deepseek-ai/dsh-session'
-import type { SessionEvent, SessionHeader, SessionId as SessionIdType } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionLogOffset, SessionSeq, SESSION_FORMAT_VERSION, SessionId } from '@berry-ai/harness-session'
+import type { SessionEvent, SessionHeader, SessionId as SessionIdType } from '@berry-ai/harness-session'
 import SessionPersistence, {
   SessionPersistenceCorruptionError,
   SessionPersistenceNotFoundError,

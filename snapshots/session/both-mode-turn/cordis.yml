@@ -1,7 +1,7 @@
 # PTC mode executes the recorded program through run_code and its TypeScript
 # SDK. Recording applies this profile patch; replay applies its sibling patch.
 - id: agent-default-model
-  name: '@deepseek-ai/dsh-agent-default-model'
+  name: '@berry-ai/harness-agent-default-model'
   config:
     provider: deepseek-official
     model: deepseek-v4-pro
@@ -18,12 +18,12 @@
     maxBytes: 65536
 
 - id: tools
-  name: '@deepseek-ai/dsh-tools'
+  name: '@berry-ai/harness-tools'
   config:
     mode: ptc
 
 - id: system-prompt
-  name: '@deepseek-ai/dsh-system-prompt'
+  name: '@berry-ai/harness-system-prompt'
   config:
     personaPrefix: |
       You are a coding assistant powered by the {{model}} model.

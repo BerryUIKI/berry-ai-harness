@@ -1,8 +1,8 @@
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import AgentRegistry from '@berry-ai/harness-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
+import { Session, SessionId } from '@berry-ai/harness-session'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { SessionResources } from '../src/index.ts'
 

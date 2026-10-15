@@ -22,7 +22,7 @@ import {
   SessionSeq,
   type SessionEvent,
   type SessionHeader,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import { logPath } from '../../../../../../packages/session/session-persistence-jsonl/src/format.ts'
 import { renderAgentInstructions } from '@berry-ai/harness-agent-instructions'

@@ -10,7 +10,7 @@ import { deepFreeze } from '@berry-ai/harness-util-values'
 import type {
   ContentBlock, FinishReason, GenerateOptions, Message, RequestMessage, TokenUsage, ToolSchema,
 } from '@berry-ai/harness-llm'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 
 interface SummaryConfig {
   readonly summarizationProvider: string

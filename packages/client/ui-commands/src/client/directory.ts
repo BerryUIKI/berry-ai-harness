@@ -6,7 +6,7 @@
  * is the only extra dimension.
  */
 import type { CommandDescriptor } from '@berry-ai/harness-commands/types'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { resolveCommand } from './resolution.ts'
 
 export type { CommandDescriptor } from '@berry-ai/harness-commands/types'

@@ -9,8 +9,8 @@ import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import LlmRuntime from '@berry-ai/harness-llm'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import AgentRegistry from '@berry-ai/harness-agent'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import { credentialRef } from '@berry-ai/harness-credentials'
 import LocalCredentialProvider from '@berry-ai/harness-credentials-local'
 import { profileComposition } from '../../../settings/settings/tests/profile-composition.ts'
@@ -57,9 +57,9 @@ async function loadComposition(
     '- id: llm',
     "  name: '@berry-ai/harness-llm'",
     '- id: session',
-    "  name: '@deepseek-ai/dsh-session'",
+    "  name: '@berry-ai/harness-session'",
     '- id: agents',
-    "  name: '@deepseek-ai/dsh-agent'",
+    "  name: '@berry-ai/harness-agent'",
     '- id: deepseek-llm-api-extensions',
     "  name: '@berry-ai/harness-deepseek-llm-api-extensions'",
     '- id: session-log-deepseek',
@@ -92,8 +92,8 @@ async function loadComposition(
   ctx.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-llm', LlmRuntime],
-    ['@deepseek-ai/dsh-session', SessionStore],
-    ['@deepseek-ai/dsh-agent', AgentRegistry],
+    ['@berry-ai/harness-session', SessionStore],
+    ['@berry-ai/harness-agent', AgentRegistry],
     ['@berry-ai/harness-deepseek-llm-api-extensions', DeepSeekLlmApiExtensionRegistry],
     ['@deepseek-ai/dsh-session-log-deepseek', SessionLogDeepSeek],
     ['@berry-ai/harness-plugin-package-inventory-deepseek', DeepSeekPluginPackageInventory],

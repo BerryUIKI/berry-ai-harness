@@ -11,7 +11,7 @@
 export {}
 
 import type { Branded } from '@berry-ai/harness-brand'
-import type { OptionalSessionSeq, SessionSeq } from '@deepseek-ai/dsh-session/types'
+import type { OptionalSessionSeq, SessionSeq } from '@berry-ai/harness-session/types'
 
 /** Identifies one session-title provider registration. */
 export type SessionTitleProviderId = Branded<'SessionTitleProviderId'>

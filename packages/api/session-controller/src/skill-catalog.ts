@@ -5,7 +5,7 @@ import type {} from '@berry-ai/harness-agent-preset-registry/types'
 import { SessionQueryError } from '@berry-ai/harness-session-query'
 import { isUserInvocable } from '@berry-ai/harness-skill'
 import type {} from '@deepseek-ai/dsh-working-directory'
-import type { ScopeKey } from '@deepseek-ai/dsh-scope'
+import type { ScopeKey } from '@berry-ai/harness-scope'
 import { Remote, RemoteError, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 import type { SkillListRequest, SkillListValue } from './types.ts'
 

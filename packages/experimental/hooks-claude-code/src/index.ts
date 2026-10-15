@@ -12,7 +12,7 @@ import type {} from '@deepseek-ai/dsh-working-directory'
 import { readFileSync } from 'node:fs'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent, PreStepDecision, TurnBoundaryProjection } from '@deepseek-ai/dsh-agent'
+import type { Agent, PreStepDecision, TurnBoundaryProjection } from '@berry-ai/harness-agent'
 import type {} from '@deepseek-ai/dsh-session-projection'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
@@ -23,8 +23,8 @@ declare module '@berry-ai/harness-llm' {
 }
 
 import type { ContentBlock, MessageSource } from '@berry-ai/harness-llm'
-import type { UserMessage } from '@deepseek-ai/dsh-session'
-import type { PostToolDecision, PreToolDecision, ToolExecution, ToolExecutionResult } from '@deepseek-ai/dsh-tools'
+import type { UserMessage } from '@berry-ai/harness-session'
+import type { PostToolDecision, PreToolDecision, ToolExecution, ToolExecutionResult } from '@berry-ai/harness-tools'
 import {
   appendHookInvoked,
   appendHookResult,

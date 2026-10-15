@@ -188,7 +188,7 @@ describe('package dependency scope', () => {
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.hostPackages).toEqual([
       '@berry-ai/harness-llm',
-      '@deepseek-ai/dsh-session',
+      '@berry-ai/harness-session',
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.requiredServicePeers).toEqual({
       '@deepseek-ai/dsh-api-terminal-controller': ['@berry-ai/harness-subprocess'],
@@ -215,9 +215,9 @@ describe('package dependency scope', () => {
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@berry-ai/harness-deque']).toEqual(['Deque'])
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@deepseek-ai/schemastery']).toEqual(['default'])
-    expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@deepseek-ai/dsh-session/types']).toBeUndefined()
+    expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@berry-ai/harness-session/types']).toBeUndefined()
     expect(PACKAGE_DEPENDENCY_POLICY.safeHostDependencyExports['@berry-ai/harness-typert-protocol']).toBeUndefined()
-    expect(PACKAGE_DEPENDENCY_POLICY.peerRequiredHostExports['@deepseek-ai/dsh-scope']).toEqual([
+    expect(PACKAGE_DEPENDENCY_POLICY.peerRequiredHostExports['@berry-ai/harness-scope']).toEqual([
       'carrierKeyOf', 'createScope', 'scopeOf', 'scopeTarget',
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.peerRequiredHostExports['@berry-ai/harness-typert-protocol']).toBeUndefined()

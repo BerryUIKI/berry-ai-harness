@@ -12,11 +12,11 @@
 
 import { describe, expect, it, vi } from 'vitest'
 import type { Context } from '@deepseek-ai/cordis'
-import { appendPluginRecord, pluginRecordOf, SessionId } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import { appendPluginRecord, pluginRecordOf, SessionId } from '@berry-ai/harness-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 import type { SessionPersistence } from '../src/index.ts'
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface PluginRecordMap {
     'plugin:persistence-test/state': { count: number }
   }

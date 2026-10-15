@@ -36,7 +36,7 @@ kind: "package-reference"
 此包需要会话存储、会话持久化后端，以及保存其记录的存储行。最小组合如下：
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
+- name: '@berry-ai/harness-session'
 - name: '@deepseek-ai/dsh-session-persistence-jsonl'
 - name: '@berry-ai/harness-storage'
 - name: '@berry-ai/harness-storage-json'

@@ -9,7 +9,7 @@
  * This plugin does not create goals; deployments may expose /goal separately.
  */
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
 // Type-only: pulls the generated Remote API and ctx.remote merge through the Client assembly boundary.
 import type {} from '@deepseek-ai/dsh-api-remotes/client'

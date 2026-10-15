@@ -9,8 +9,8 @@ import {
   isCompactCheckpointSource,
 } from '@berry-ai/harness-compaction'
 import type { CompactionResult, CompactionTrigger } from '@berry-ai/harness-compaction'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
-import type { SessionSeq } from '@deepseek-ai/dsh-session'
+import { Session, SessionId } from '@berry-ai/harness-session'
+import type { SessionSeq } from '@berry-ai/harness-session'
 import type { CompactionAgentContext } from '@berry-ai/harness-compaction'
 import type { ManualCompactAgentContext } from '@berry-ai/harness-compaction'
 

@@ -1,7 +1,7 @@
 /** Client Session object layer, Agent scopes, and Remote lifecycle wiring. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-agent/types'
+import type {} from '@berry-ai/harness-agent/types'
 import type { ConnectionHandle } from '@deepseek-ai/dsh-client-connection/client'
 import type {} from '@deepseek-ai/dsh-client-file-upload/client'
 import { typertOwnedValue } from '@berry-ai/harness-typert-protocol'

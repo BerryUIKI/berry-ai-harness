@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context, type Fiber } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { createUserMessage, ToolCallId, HarnessError , createMessage } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import { MAX_TIMER_DELAY_MS, TimeoutReason } from '@berry-ai/harness-timeout'
@@ -13,9 +13,9 @@ import SessionStore, {
   type SessionEvent,
   type SessionHeader,
   type SessionId as SessionIdValue,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import { turnBoundaryProjectionDefinition } from '@deepseek-ai/dsh-agent-loop'
+import { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
 import SessionQueryEngine, {
   SessionQueryError,
   SessionSearchCursor,
@@ -29,8 +29,8 @@ import SessionQueryEngine, {
   type SessionSearchRequest,
   type SessionTitleObservationResult,
 } from '@berry-ai/harness-session-query'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime, { type ToolExecutionResult } from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime, { type ToolExecutionResult } from '@berry-ai/harness-tools'
 import * as ToolSessionQuery from '@deepseek-ai/dsh-tool-session-query'
 
 declare module '@berry-ai/harness-llm' {

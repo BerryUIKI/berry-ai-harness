@@ -30,7 +30,7 @@ import type {
   SearchFileMatches,
   SearchLineMatch,
   SearchResultView,
-} from '@deepseek-ai/dsh-tools'
+} from '@berry-ai/harness-tools'
 import type { RetainedItems } from '@berry-ai/harness-output-retention'
 import type { GrepMatch } from './search-core.ts'
 

@@ -5,7 +5,7 @@
  */
 
 import type { Branded } from '@berry-ai/harness-brand'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 
 /** Internal exported basis for the public `TerminalSessionId` type/value pair. */
 export type TerminalSessionIdValue = Branded<'TerminalSessionId'>

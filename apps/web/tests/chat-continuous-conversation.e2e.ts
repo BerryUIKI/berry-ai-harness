@@ -11,7 +11,7 @@ import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
 import { ToolCallId, expandAssistantStream, type StreamChunk } from '@berry-ai/harness-llm'
 import type { ReplayEntry, ReplayOverrideDoc } from '@deepseek-ai/dsh-llm-replay'
-import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionEvent, SessionId } from '@berry-ai/harness-session'
 import {
   launchWebScaffold,
   watchConsole,

@@ -74,7 +74,7 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-llm-retry": "workspace:*",
     "@berry-ai/harness-plan-mode": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-token-meter": "workspace:*",
     "@berry-ai/harness-tool-todo": "workspace:*",
@@ -94,7 +94,7 @@
     "@lexical/text": "^0.49.0",
     "@lexical/plain-text": "^0.49.0",
     "@lexical/history": "^0.49.0",
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-client-shortcuts": "workspace:*",
     "@deepseek-ai/dsh-client-product-analytics": "workspace:*"

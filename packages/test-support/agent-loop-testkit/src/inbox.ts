@@ -1,6 +1,6 @@
-import type { Inbox, InboxTarget } from '@deepseek-ai/dsh-agent'
+import type { Inbox, InboxTarget } from '@berry-ai/harness-agent'
 import type { MessageId } from '@berry-ai/harness-llm'
-import type { UserMessage } from '@deepseek-ai/dsh-session'
+import type { UserMessage } from '@berry-ai/harness-session'
 
 /**
  * Create a mutable in-memory Inbox stub for tests that exercise only the public

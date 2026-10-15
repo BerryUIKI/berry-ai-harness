@@ -133,7 +133,7 @@
               fetch: true
               searchTimeoutMs: 60000
           - id: tool-presentation
-            name: '@deepseek-ai/dsh-agent-tool-presentation'
+            name: '@berry-ai/harness-agent-tool-presentation'
             config:
               mode: ptc
           - id: present

@@ -9,7 +9,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 // Type-only: activate the `ctx.get('subprocess')` and `ctx.get('sessionProjections')` Context declarations.
 import type {} from '@berry-ai/harness-subprocess'
 import type {} from '@deepseek-ai/dsh-session-projection'
@@ -18,15 +18,15 @@ import type { CommandDefinition } from '@berry-ai/harness-commands'
 import type { FileSystem, FsTarget } from '@berry-ai/harness-fs'
 import { createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
 import type { ContentBlock, Message } from '@berry-ai/harness-llm'
-import { scopeOf } from '@deepseek-ai/dsh-scope'
-import type { Session } from '@deepseek-ai/dsh-session'
+import { scopeOf } from '@berry-ai/harness-scope'
+import type { Session } from '@berry-ai/harness-session'
 import type { WorkingDirectoryService } from '@deepseek-ai/dsh-working-directory'
 // Type-only: merges the token-meter projection states into SessionProjectionStateMap.
 import type {} from '@berry-ai/harness-token-meter'
 import { defineDomain, domainTable } from '@berry-ai/harness-storage-domain'
 import type { Domain } from '@berry-ai/harness-storage-domain'
-import { assertObjectJsonSchema } from '@deepseek-ai/dsh-tools'
-import type { ToolDefinition, ToolExecutionResult } from '@deepseek-ai/dsh-tools'
+import { assertObjectJsonSchema } from '@berry-ai/harness-tools'
+import type { ToolDefinition, ToolExecutionResult } from '@berry-ai/harness-tools'
 import type { AskUserQuestionOption } from '@berry-ai/harness-user-questions'
 import { randomUUID } from '@berry-ai/harness-util-crypto'
 import type { JsonValue } from '@berry-ai/harness-util-values'

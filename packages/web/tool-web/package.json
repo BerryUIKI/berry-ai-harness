@@ -29,8 +29,8 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-web": "workspace:*"
   },
   "dependencies": {
@@ -41,19 +41,19 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-spill-local": "workspace:*",
     "@berry-ai/harness-spill-policy": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-tool-call-timeout-policy": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-web": "workspace:*",
     "@berry-ai/harness-web-fetch-http": "workspace:*",
     "@berry-ai/harness-web-search-exa": "workspace:*",
     "@types/turndown": "^5.0.6",
-    "@deepseek-ai/dsh-scope": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
     "@berry-ai/harness-token-meter": "workspace:*"
   }
 }

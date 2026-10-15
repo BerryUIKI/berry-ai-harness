@@ -3,8 +3,8 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import ComputerUse from '@berry-ai/harness-computer-use'
 import { ComputerUseProviderName } from '@berry-ai/harness-computer-use/brand'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
 
 const fake = vi.hoisted(() => ({
   start: vi.fn<() => Promise<void>>(),

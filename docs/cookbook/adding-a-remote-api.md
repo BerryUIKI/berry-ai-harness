@@ -10,7 +10,7 @@ The owner is a Host-side Cordis service: extend `TypertRemoteService` so the ser
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 
 /** One stored note as a Client reads it. */

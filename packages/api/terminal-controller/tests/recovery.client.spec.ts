@@ -7,7 +7,7 @@ import { RemoteError, type RemoteResult } from '@berry-ai/harness-typert-protoco
 import { streamMethod } from '@deepseek-ai/dsh-remote-mock'
 import { RemoteStream, type ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
 import type {} from '@deepseek-ai/dsh-api-terminal-controller/remote'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WebTerminalId, WebTerminalInfo, TerminalEnvironment } from '../src/types.ts'
 import { TerminalView, type TerminalRemote } from '../src/client/model.ts'
 import { TerminalCloseRequests } from '../src/client/close-requests.ts'

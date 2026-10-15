@@ -1,7 +1,7 @@
 /** Log inspection submits original coordinates without reading Chat nodes. */
 
 import { expect, it } from 'vitest'
-import { SessionSeq, type SessionEvent } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq, type SessionEvent } from '@berry-ai/harness-session/types'
 import type { MessageId, ToolCallId } from '@berry-ai/harness-llm'
 import { sessionLogChatTarget } from '../src/client/views/session-log/chat-target.ts'
 

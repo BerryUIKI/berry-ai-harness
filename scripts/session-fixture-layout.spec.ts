@@ -1,7 +1,7 @@
 import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { createAssistantMessage } from '@berry-ai/harness-llm'
-import { SESSION_FORMAT_VERSION, SessionSeq, type SessionEvent } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION, SessionSeq, type SessionEvent } from '@berry-ai/harness-session'
 import { parseSessionLog, prepareSessionSnapshotFixtureForComparison } from '@deepseek-ai/dsh-llm-replay'
 import { scrubSessionSnapshot } from '@deepseek-ai/dsh-session-snapshot'
 import {

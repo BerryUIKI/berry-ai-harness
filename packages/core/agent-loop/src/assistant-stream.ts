@@ -11,8 +11,8 @@ import {
   type StreamChunk,
   type TokenUsage,
 } from '@berry-ai/harness-llm'
-import type { AssistantStreamFrame } from '@deepseek-ai/dsh-agent'
-import type { SessionEventMap, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
+import type { AssistantStreamFrame } from '@berry-ai/harness-agent'
+import type { SessionEventMap, SessionId, SessionSeq } from '@berry-ai/harness-session'
 
 /** Folds one model attempt into one compact stream plus ordered transient frames. */
 export class AssistantStreamAttempt {

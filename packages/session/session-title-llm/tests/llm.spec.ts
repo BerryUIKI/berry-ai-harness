@@ -7,7 +7,7 @@ import type {
   LlmResolvedModelInfo,
   StreamChunk,
 } from '@berry-ai/harness-llm'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import { SessionTitleProviderId } from '@deepseek-ai/dsh-session-title'
 import type { SessionTitleProviderRequest } from '@deepseek-ai/dsh-session-title'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'

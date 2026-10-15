@@ -17,8 +17,8 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { SESSION_FORMAT_VERSION, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionHeader } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION, SessionId, SessionSeq } from '@berry-ai/harness-session'
+import type { SessionHeader } from '@berry-ai/harness-session'
 import {
   SessionAlreadyExistsError,
   SessionAlreadyOwnedError,

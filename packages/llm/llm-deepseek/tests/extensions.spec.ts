@@ -7,7 +7,7 @@ import { Context, LoggerLevel } from '@deepseek-ai/cordis'
 import LlmRuntime from '@berry-ai/harness-llm'
 import DeepSeekLlmApiExtensionRegistry from '@berry-ai/harness-deepseek-llm-api-extensions'
 import type { DeepSeekLlmApiExtensionRequest } from '@berry-ai/harness-deepseek-llm-api-extensions'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import * as DeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 import { adapter, assemble, options, sse, textEvents } from './helpers.ts'
 

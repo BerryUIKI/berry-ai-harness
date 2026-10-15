@@ -4,19 +4,19 @@ import { Readable } from 'node:stream'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { brandString } from '@berry-ai/harness-brand'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
+import AgentRegistry from '@berry-ai/harness-agent'
 import type {
   Agent,
   AgentHandle,
   AssistantStreamFrame,
   CreateAgentOptions,
   ResumeAgentOptions,
-} from '@deepseek-ai/dsh-agent'
-import AgentDefaultModelConfig from '@deepseek-ai/dsh-agent-default-model'
+} from '@berry-ai/harness-agent'
+import AgentDefaultModelConfig from '@berry-ai/harness-agent-default-model'
 import { LlmAttemptId, ToolCallId, createAssistantMessage, createToolResultMessage, createUserMessage, type MessageId, type StreamChunk } from '@berry-ai/harness-llm'
-import SessionStore from '@deepseek-ai/dsh-session'
+import SessionStore from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { Session, SessionId, UserMessage } from '@deepseek-ai/dsh-session'
+import type { Session, SessionId, UserMessage } from '@berry-ai/harness-session'
 import { SessionQueryError } from '@berry-ai/harness-session-query'
 import { createInboxStub, provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { apply, Config } from '../src/index.ts'

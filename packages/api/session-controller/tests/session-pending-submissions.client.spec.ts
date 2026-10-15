@@ -7,7 +7,7 @@
 import { afterEach, describe, expect, vi } from 'vitest'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { FileAttachmentRef, ImageAttachmentRef } from '@berry-ai/harness-attachment'
-import { SessionSeq, type SessionEvent } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq, type SessionEvent } from '@berry-ai/harness-session/types'
 import type { SessionId } from '@deepseek-ai/dsh-api-remotes/client'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { createClientTest, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'

@@ -8,9 +8,9 @@
 import * as vm from 'node:vm'
 import { brandString } from '@berry-ai/harness-brand'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import type { SessionId } from '@deepseek-ai/dsh-session'
-import { assertObjectJsonSchema, JsonSchemaError } from '@deepseek-ai/dsh-tools'
-import type { ObjectJsonSchema } from '@deepseek-ai/dsh-tools'
+import type { SessionId } from '@berry-ai/harness-session'
+import { assertObjectJsonSchema, JsonSchemaError } from '@berry-ai/harness-tools'
+import type { ObjectJsonSchema } from '@berry-ai/harness-tools'
 import { isFatalWorkflowError, WorkflowError } from '@berry-ai/harness-workflow'
 import type {
   WorkflowAgentEndInfo,

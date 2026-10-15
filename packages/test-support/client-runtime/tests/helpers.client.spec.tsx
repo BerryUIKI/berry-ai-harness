@@ -4,7 +4,7 @@ import type { SessionLiveEventEntry } from '@deepseek-ai/dsh-api-session-control
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { EMPTY_CHAT_SNAPSHOT } from '@deepseek-ai/dsh-client-ui-chat/client'
 import { EMPTY_CONVERSATION_SNAPSHOT } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { MainPanelId, PanelInfo } from '@deepseek-ai/dsh-client-ui-layout/client'
 import type { PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
 import { afterAll, afterEach, describe, expect, it, vi } from 'vitest'

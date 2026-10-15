@@ -7,8 +7,8 @@ import {
   Session,
   SessionId,
   SessionSeq,
-} from '@deepseek-ai/dsh-session'
-import type { SurfaceEvent } from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
+import type { SurfaceEvent } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import TokenMeter from '@berry-ai/harness-token-meter'
 import ToolResultPruner, {

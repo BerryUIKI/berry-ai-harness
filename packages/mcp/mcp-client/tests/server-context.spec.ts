@@ -1,10 +1,10 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import SystemPrompt, { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import SystemPrompt, { renderPrompt } from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import McpResources from '@berry-ai/harness-mcp-resources'
-import { createScope } from '@deepseek-ai/dsh-scope'
+import { createScope } from '@berry-ai/harness-scope'
 import { registerServerContext } from '../src/server-context.ts'
 
 const roots: Context[] = []

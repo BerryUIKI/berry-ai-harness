@@ -5,8 +5,8 @@ import { dirname, join } from 'node:path'
 import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'
 import { MessageId, ToolCallId } from '@berry-ai/harness-llm'
 import type { ContentBlock, StreamChunk } from '@berry-ai/harness-llm'
-import { SESSION_FORMAT_VERSION, SessionId } from '@deepseek-ai/dsh-session'
-import type { SessionEvent, SessionEventMap, SessionEventType, SessionHeader } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION, SessionId } from '@berry-ai/harness-session'
+import type { SessionEvent, SessionEventMap, SessionEventType, SessionHeader } from '@berry-ai/harness-session'
 import {
   eventLines,
   generationLogPath,

@@ -9,13 +9,13 @@ import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import ComputerUse from '@berry-ai/harness-computer-use'
 import { ComputerUseProviderName } from '@berry-ai/harness-computer-use/brand'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
 import LlmRuntime, { LlmAdapter, ToolCallId, createUserMessage } from '@berry-ai/harness-llm'
 import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-ai/harness-llm'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
+import AgentRegistry from '@berry-ai/harness-agent'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import LocalAttachmentStore from '@berry-ai/harness-attachment-local'
 import * as Provider from '../src/index.ts'
@@ -61,12 +61,12 @@ async function load(mode?: string): Promise<{ ctx: Context; root: string; model:
   const model = new ScreenshotModel()
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-computer-use', ComputerUse],
-    ['@deepseek-ai/dsh-system-prompt', SystemPrompt],
-    ['@deepseek-ai/dsh-tools', ToolRuntime],
+    ['@berry-ai/harness-system-prompt', SystemPrompt],
+    ['@berry-ai/harness-tools', ToolRuntime],
     ['@berry-ai/harness-llm', LlmRuntime],
-    ['@deepseek-ai/dsh-session', SessionStore],
-    ['@deepseek-ai/dsh-agent', AgentRegistry],
-    ['@deepseek-ai/dsh-agent-loop', AgentLoop],
+    ['@berry-ai/harness-session', SessionStore],
+    ['@berry-ai/harness-agent', AgentRegistry],
+    ['@berry-ai/harness-agent-loop', AgentLoop],
     ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-attachment-local', LocalAttachmentStore],
     ['@fixture/model', { inject: ['llm'], apply(ctx: Context) { ctx.effect(() => ctx.llm.registerAdapter(['fixture'], model)) } }],
@@ -84,7 +84,7 @@ async function load(mode?: string): Promise<{ ctx: Context; root: string; model:
       }
       : name === '@berry-ai/harness-attachment-local'
         ? { dshHome: root }
-        : name === '@deepseek-ai/dsh-agent-loop' ? { agents: [] } : {},
+        : name === '@berry-ai/harness-agent-loop' ? { agents: [] } : {},
   }))))
   const ctx = new Context()
   contexts.push(ctx)

@@ -79,7 +79,7 @@
     "@deepseek-ai/dsh-api-gateway": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@deepseek-ai/dsh-host-directory-picker": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*"
@@ -92,7 +92,7 @@
     "@deepseek-ai/dsh-client-test-runtime": "workspace:*",
     "@deepseek-ai/dsh-host-directory-picker": "workspace:*",
     "@deepseek-ai/dsh-remote-mock": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*"

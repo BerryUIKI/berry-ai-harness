@@ -8,14 +8,14 @@
 
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createScope } from '@deepseek-ai/dsh-scope'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
+import { createScope } from '@berry-ai/harness-scope'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
 import { PtcRuntime } from '@berry-ai/harness-ptc-runtime'
 import type { PtcRunRequest, PtcRunResult } from '@berry-ai/harness-ptc-runtime'
-import ToolRuntime, { RUN_CODE_NAME, defineTool } from '@deepseek-ai/dsh-tools'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { apply, Config, inject, name } from '@deepseek-ai/dsh-agent-tool-presentation'
+import ToolRuntime, { RUN_CODE_NAME, defineTool } from '@berry-ai/harness-tools'
+import type { Agent } from '@berry-ai/harness-agent'
+import { SessionId } from '@berry-ai/harness-session'
+import { apply, Config, inject, name } from '@berry-ai/harness-agent-tool-presentation'
 
 /** A runtime that never runs anything: presentation never dispatches. */
 class StubRuntime extends PtcRuntime {

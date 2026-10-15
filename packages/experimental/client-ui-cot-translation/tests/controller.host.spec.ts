@@ -1,6 +1,6 @@
 /** Remote translation enforces accepted routing and sanitizes provider failures. */
 import { Context } from '@deepseek-ai/cordis'
-import { SessionId } from '@deepseek-ai/dsh-session/types'
+import { SessionId } from '@berry-ai/harness-session/types'
 import { afterEach, expect, it, vi } from 'vitest'
 import { TranslationError } from '@deepseek-ai/dsh-experimental-translator'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'

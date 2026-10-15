@@ -6,8 +6,8 @@
 
 import type {} from '@deepseek-ai/dsh-working-directory'
 import { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { Session, SessionEvent } from '@deepseek-ai/dsh-session'
+import type { Agent } from '@berry-ai/harness-agent'
+import type { Session, SessionEvent } from '@berry-ai/harness-session'
 import { TerminalBackendCleanupError } from '@berry-ai/harness-terminal'
 import type { TerminalBackend, TerminalBackendSpawnSpec, TerminalSendOperation } from '@berry-ai/harness-terminal'
 import type { SubprocessTerminalHandle, SubprocessTerminalSpawnSpec } from '@berry-ai/harness-subprocess'

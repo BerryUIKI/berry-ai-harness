@@ -9,7 +9,7 @@
 
 import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
 import type { ClientRemote, MessageId } from '@deepseek-ai/dsh-api-remotes/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { FeedbackRecord } from '@berry-ai/harness-command-feedback/types'
 import type {
   MessageFeedbackItem,

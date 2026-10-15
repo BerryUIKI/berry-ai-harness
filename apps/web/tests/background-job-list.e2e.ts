@@ -6,9 +6,9 @@ import { join } from 'node:path'
 import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import { JobId } from '@berry-ai/harness-jobs'
 import {
   assertFixtureInventory, captureStableAria, compareOrRefreshGolden,

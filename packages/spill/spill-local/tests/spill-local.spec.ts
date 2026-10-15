@@ -16,7 +16,7 @@ import { realpath } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { basename, dirname, isAbsolute, join, normalize } from 'node:path'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import type { SaveTextSpill } from '@berry-ai/harness-spill'
 import LocalSpillStore, {
   DEFAULT_ROOT_PREFIX,

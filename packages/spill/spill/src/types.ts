@@ -8,7 +8,7 @@
 
 import type { Branded } from '@berry-ai/harness-brand'
 import type { ToolCallId } from '@berry-ai/harness-llm'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionId } from '@berry-ai/harness-session'
 
 /**
  * Opaque model-facing handle for one spilled artifact. A local backend may use a

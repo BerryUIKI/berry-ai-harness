@@ -1,7 +1,7 @@
 /** Pure replay fold and strict decoder for durable goal changes. */
 
 import type { MessageSource } from '@berry-ai/harness-llm'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 import { GOAL_CHANGE_VERSION, GoalId } from './runtime.ts'
 import type { GoalBlockReason, GoalPhase, GoalRef, GoalSnapshot } from './types.ts'
 import type {

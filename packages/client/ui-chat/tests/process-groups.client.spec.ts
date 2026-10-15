@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { SessionSeq } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq } from '@berry-ai/harness-session/types'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { ConversationTimelineSnapshot, TurnLocation } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'

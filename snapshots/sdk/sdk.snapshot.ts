@@ -61,7 +61,7 @@ import {
   type RunResult,
   type SdkPromptContentBlock,
 } from '@deepseek-ai/dsh-sdk-client'
-import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 
 const corpusRoot = fileURLToPath(new URL('../', import.meta.url))
 

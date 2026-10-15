@@ -2,7 +2,7 @@
 
 import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type {} from '@deepseek-ai/dsh-session-persistence'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import { steerHostSubagentPrompt } from '@deepseek-ai/dsh-subagent/internal'

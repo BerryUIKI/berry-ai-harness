@@ -21,8 +21,8 @@
 import { readFile, readdir, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
-import { isSurfaceEligibleType } from '@deepseek-ai/dsh-session/surface'
-import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
+import { isSurfaceEligibleType } from '@berry-ai/harness-session/surface'
+import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 import { describe, expect, it } from 'vitest'
 import { type AgentUnderTest, type HarvestedLog, type InputScript, runScenario } from './harness.ts'
 import {

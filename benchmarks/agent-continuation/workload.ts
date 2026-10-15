@@ -3,8 +3,8 @@
 import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'
 import { MessageId, ToolCallId } from '@berry-ai/harness-llm'
 import type { ContentBlock, StreamChunk } from '@berry-ai/harness-llm'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import { Session, SessionId } from '@berry-ai/harness-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 
 /** Workload dimensions, independent of environment and recorded user material. */
 export const WORKLOAD = {

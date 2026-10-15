@@ -1,13 +1,13 @@
 // Sessions remain resident after creation so their open Remote sources keep running off-screen.
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { InboxState, InboxTarget } from '@deepseek-ai/dsh-agent/types'
+import type { InboxState, InboxTarget } from '@berry-ai/harness-agent/types'
 import { randomUUID } from '@berry-ai/harness-util-crypto'
 import type { AttachmentIdType, FileAttachmentRef, ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { UserMessage } from '@berry-ai/harness-llm/types'
-import { SessionLogOffset, SessionSeq, type SessionId } from '@deepseek-ai/dsh-session/types'
+import { SessionLogOffset, SessionSeq, type SessionId } from '@berry-ai/harness-session/types'
 import { SessionEventStream } from '../transport.ts'
 import type { SessionJournalChange } from '../transport.ts'
 import type {

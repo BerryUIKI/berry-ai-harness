@@ -4,7 +4,7 @@ import { modelAvailable } from './catalog.ts'
 import { randomUUID } from 'node:crypto'
 import type { Context } from '@deepseek-ai/cordis'
 import { brandString } from '@berry-ai/harness-brand'
-import type { Agent, ModelSelection as AgentModelSelection } from '@deepseek-ai/dsh-agent'
+import type { Agent, ModelSelection as AgentModelSelection } from '@berry-ai/harness-agent'
 import { AttachmentError } from '@berry-ai/harness-attachment'
 import type {
   AttachmentAdmissionPart, FileAttachmentRef, ImageAttachmentRef,
@@ -15,9 +15,9 @@ import {
   ReasoningEffortId, assistantStreamChunks, createUserMessage, freezeMessage,
 } from '@berry-ai/harness-llm'
 import type { MessageSource } from '@berry-ai/harness-llm'
-import { buildForkSeed } from '@deepseek-ai/dsh-session/fork'
-import { SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionEvent, SessionHeader, SessionId, UserMessage } from '@deepseek-ai/dsh-session'
+import { buildForkSeed } from '@berry-ai/harness-session/fork'
+import { SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
+import type { SessionEvent, SessionHeader, SessionId, UserMessage } from '@berry-ai/harness-session'
 import { SessionQueryError, type SessionObservation } from '@berry-ai/harness-session-query'
 import { SessionTitleInvalidError } from '@deepseek-ai/dsh-session-title'
 import { canonicalClientTimeZone } from '@berry-ai/harness-util-time'

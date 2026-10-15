@@ -8,9 +8,9 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import { defineTool } from '@berry-ai/harness-tools'
+import type { Agent } from '@berry-ai/harness-agent'
+import type { SessionId } from '@berry-ai/harness-session'
 import type {
   SubagentCatalogEntry, SubagentDescendantListEntry, SubagentListEntry,
 } from '@deepseek-ai/dsh-subagent'

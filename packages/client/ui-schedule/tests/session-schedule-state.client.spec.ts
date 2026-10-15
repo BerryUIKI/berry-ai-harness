@@ -4,7 +4,7 @@ import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
 import type {
   ScheduleCatalogEntry, ScheduleDeleteResult, ScheduleId, ScheduleRecord,
 } from '@berry-ai/harness-schedule/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { CatalogSnapshot } from '../src/client/catalog-source.ts'
 import {
   createSessionScheduleSource, selectSessionScheduleFacts,

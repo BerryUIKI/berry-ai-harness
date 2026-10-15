@@ -21,7 +21,7 @@ import {
 import AttachmentStore, { AttachmentError, AttachmentId } from '@berry-ai/harness-attachment'
 import type { ImageAttachmentLimits, ImageAttachmentRef, SaveImageAttachment, StoredImageAttachment } from '@berry-ai/harness-attachment'
 import { type GenerateOptions, LlmAdapter, ReasoningEffortId, type LlmResolvedModelInfo, type StreamChunk } from '@berry-ai/harness-llm'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import TokenMeter from '@berry-ai/harness-token-meter'

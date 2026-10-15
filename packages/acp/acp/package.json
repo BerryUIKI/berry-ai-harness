@@ -33,11 +33,11 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-mcp-client": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-persistence": "workspace:*",
     "@berry-ai/harness-token-meter": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*"
@@ -49,19 +49,19 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-agent-loop": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-mcp-client": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-session-persistence": "workspace:*",
     "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
     "@deepseek-ai/dsh-subagent": "workspace:*",
     "@berry-ai/harness-token-meter": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*"
   }
 }
