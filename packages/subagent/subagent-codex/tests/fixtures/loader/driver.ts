@@ -3,7 +3,7 @@
 
 import { resolveConfigPath } from '@berry-ai/harness-app-boot'
 import type {} from '@deepseek-ai/dsh-subagent'
-import type {} from '@deepseek-ai/dsh-tools'
+import type {} from '@berry-ai/harness-tools'
 import { bootProductionProfile } from '../../../../../test-support/loader-smoke/tests/fixtures/production-profile.ts'
 
 const configPath = process.argv[2]

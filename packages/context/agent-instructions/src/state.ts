@@ -4,10 +4,10 @@
  * @module @berry-ai/harness-agent-instructions/state
  */
 
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { Message } from '@berry-ai/harness-llm'
-import type { Session, UserMessage } from '@deepseek-ai/dsh-session'
+import type { Session, UserMessage } from '@berry-ai/harness-session'
 import type { FileSystem, FsVersion } from '@berry-ai/harness-fs'
 import type { ResolvedConfig } from './config.ts'
 import { instructionContentSha1, trimmedInstructionDigest } from './digest.ts'

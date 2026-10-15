@@ -9,7 +9,7 @@
 import { notifySubscribers } from '@deepseek-ai/dsh-client-store'
 import type { JobId } from '@berry-ai/harness-jobs/brand'
 import type { JobView } from '@berry-ai/harness-jobs/view'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { JobFollowFrame } from '../types.ts'
 
 /** Bounded per-job render tail, in UTF-16 code units. */

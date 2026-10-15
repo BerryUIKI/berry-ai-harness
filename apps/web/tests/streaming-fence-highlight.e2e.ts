@@ -6,7 +6,7 @@ import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
 import type { GenerateOptions, StreamChunk } from '@berry-ai/harness-llm'
 import { LlmAdapter } from '@berry-ai/harness-llm'
-import type {} from '@deepseek-ai/dsh-agent-default-model'
+import type {} from '@berry-ai/harness-agent-default-model'
 import {
   assertFixtureInventory,
   captureStableAria,

@@ -11,7 +11,7 @@ import { createUserMessage, resolveImageAttachmentAccess } from '@berry-ai/harne
 import type { ContentBlock, ImageBlock, LlmImageRequestPrice, ToolCallId } from '@berry-ai/harness-llm'
 import { estimateContent } from '@berry-ai/harness-token-meter/estimate'
 import type { SpillRef } from '@berry-ai/harness-spill'
-import type { PostToolDecision, ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { PostToolDecision, ToolExecution } from '@berry-ai/harness-tools'
 import type {} from '@berry-ai/harness-attachment'
 import type {} from '@berry-ai/harness-fs'
 import type { SpillPolicyExec } from './types.ts'

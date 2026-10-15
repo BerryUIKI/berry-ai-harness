@@ -1,6 +1,6 @@
 /** Retained V3 replay inputs, current-writer fixtures, and bounded older migration coverage. */
 
-import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 import type { SnapshotSessionFormatManifest } from '@deepseek-ai/dsh-session-snapshot'
 
 /** One owning scenario's selected parent and child generations. */

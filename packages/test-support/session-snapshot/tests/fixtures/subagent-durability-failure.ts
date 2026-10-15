@@ -1,5 +1,5 @@
 import type { Context } from '@deepseek-ai/cordis'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import type { SubagentPromptRequestId } from '@deepseek-ai/dsh-subagent'
 
 export const name = 'subagent-durability-failure'

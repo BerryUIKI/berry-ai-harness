@@ -13,8 +13,8 @@
 import { Context, Service } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-llm'
 import { assertNever } from '@berry-ai/harness-util-values'
-import { NamedEntries, ScopedLayers, scopeChainOf, scopeOf } from '@deepseek-ai/dsh-scope'
-import type { ScopeKey, ScopeLayer } from '@deepseek-ai/dsh-scope'
+import { NamedEntries, ScopedLayers, scopeChainOf, scopeOf } from '@berry-ai/harness-scope'
+import type { ScopeKey, ScopeLayer } from '@berry-ai/harness-scope'
 import z from '@deepseek-ai/schemastery'
 import type Schema from '@deepseek-ai/schemastery'
 

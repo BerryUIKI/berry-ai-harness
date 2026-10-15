@@ -173,7 +173,7 @@ The registry's Host root entry has the complete `TypertRegistryContract` interfa
 Remote Client DTS does not copy business DTOs or redeclare structurally identical shadow types. It imports original symbols only from public, type-only subpaths that do not carry Host Cordis merges:
 
 ```text
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { CreateGoalRequest, CreateGoalResult } from '@berry-ai/harness-goal/types'
 ```
 
@@ -305,7 +305,7 @@ Typert.remotes  已导入的 Remote contribution
 
 ```text
 import goalsRemote from '@berry-ai/harness-goal/remote'
-import sessionsRemote from '@deepseek-ai/dsh-session/remote'
+import sessionsRemote from '@berry-ai/harness-session/remote'
 
 await ctx.remote.$mount(goalsRemote)
 await ctx.remote.$mount(sessionsRemote)

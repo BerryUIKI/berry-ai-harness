@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { createUserMessage, ToolCallId , createMessage, createToolResultMessage } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import { CompactionId, compactCheckpointSource, toolPairingBalancedAfter, toolPairingBalancedBefore } from '@berry-ai/harness-compaction'
-import { Session, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionEvent, SessionSeq as SessionSeqType } from '@deepseek-ai/dsh-session'
+import { Session, SessionId, SessionSeq } from '@berry-ai/harness-session'
+import type { SessionEvent, SessionSeq as SessionSeqType } from '@berry-ai/harness-session'
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

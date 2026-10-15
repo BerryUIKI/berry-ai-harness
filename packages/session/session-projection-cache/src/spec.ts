@@ -13,8 +13,8 @@
 import { z } from 'zod'
 import { isJsonValue } from '@berry-ai/harness-util-values'
 import type { JsonValue } from '@berry-ai/harness-util-values'
-import { SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionId, SessionSeqCursor } from '@deepseek-ai/dsh-session'
+import { SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
+import type { SessionId, SessionSeqCursor } from '@berry-ai/harness-session'
 import { defineDomain, domainTable } from '@berry-ai/harness-storage-domain'
 
 /**

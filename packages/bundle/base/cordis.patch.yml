@@ -38,7 +38,7 @@
       name: '@berry-ai/harness-deepseek-llm-api-extensions'
 
     - id: session
-      name: '@deepseek-ai/dsh-session'
+      name: '@berry-ai/harness-session'
 
     - id: session-log-deepseek
       name: '@deepseek-ai/dsh-session-log-deepseek'
@@ -75,7 +75,7 @@
       name: '@berry-ai/harness-user-questions'
 
     - id: agent
-      name: '@deepseek-ai/dsh-agent'
+      name: '@berry-ai/harness-agent'
 
     - id: plugin-package-inventory-deepseek
       name: '@berry-ai/harness-plugin-package-inventory-deepseek'
@@ -83,7 +83,7 @@
     # The transport-independent default for Agents created by entry points.
     # Settings may supply a saved selection; consumers read it at creation time.
     - id: agent-default-model
-      name: '@deepseek-ai/dsh-agent-default-model'
+      name: '@berry-ai/harness-agent-default-model'
       config:
         provider: deepseek-official
         model: deepseek-flash
@@ -485,19 +485,19 @@
     # The tool registry. Presentation mode is a deployment choice; omitting it here
     # keeps the schema default (native).
     - id: tools
-      name: '@deepseek-ai/dsh-tools'
+      name: '@berry-ai/harness-tools'
 
     # The deployment persona is a deployment choice; plan-mode and tool plugins own
     # their own prompt sections.
     - id: system-prompt
-      name: '@deepseek-ai/dsh-system-prompt'
+      name: '@berry-ai/harness-system-prompt'
       config:
         personaPrefix: ''
 
     # Agents created at startup. The base stays empty; raw overlays may create
     # agents, while Web creates sessions on client request.
     - id: agent-loop
-      name: '@deepseek-ai/dsh-agent-loop'
+      name: '@berry-ai/harness-agent-loop'
       config:
         agents: []
 

@@ -1,6 +1,6 @@
 /** Metadata inventory of saved and adopted layouts without mounting their content. */
 import { createSnapshotStore, type ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { TabId, TabRecord } from '@deepseek-ai/dsh-client-ui-dockkit'
 import { readSidebarLayout, sidebarPersistence } from './persistence.ts'
 

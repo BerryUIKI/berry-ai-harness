@@ -45,7 +45,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@berry-ai/harness-commands": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-anonymous-user-id": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-typert-protocol": "workspace:*"
@@ -56,11 +56,11 @@
   "devDependencies": {
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-anonymous-user-id": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-typert-protocol": "workspace:*"

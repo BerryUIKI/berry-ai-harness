@@ -9,7 +9,7 @@ import type { SidebarRightTabDefinition } from '@deepseek-ai/dsh-client-ui-sideb
 import type {
   PropsRenderFactories, PropsRenderSlots, PropsRuntime, TranslateNS,
 } from '@deepseek-ai/dsh-client-ui-slots'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
 import type { NS } from '../locales.ts'
 import css from './SidebarChat.module.css'

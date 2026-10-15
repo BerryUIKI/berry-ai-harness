@@ -7,7 +7,7 @@
 
 import type { UserMessage } from '@berry-ai/harness-llm/message'
 import type { ContentBlock } from '@berry-ai/harness-llm/types'
-import type { OptionalSessionSeq, SessionId } from '@deepseek-ai/dsh-session/types'
+import type { OptionalSessionSeq, SessionId } from '@berry-ai/harness-session/types'
 
 /** Durable source session, cited event seqs, and snapshot facts for prepared cross-session context. */
 export interface SessionReferenceSource {

@@ -12,8 +12,8 @@ import { truncateWithoutSplittingSurrogatePair } from '@berry-ai/harness-output-
 import { sandboxDenialMarker } from '@berry-ai/harness-sandbox'
 import type { SandboxExecutionPolicy } from '@berry-ai/harness-sandbox'
 import type { SandboxPolicyService } from '@berry-ai/harness-sandbox-policy'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { ToolCallView, ToolRunContext } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
+import type { ToolCallView, ToolRunContext } from '@berry-ai/harness-tools'
 
 const TRUNCATED_MESSAGE = '<response clipped><NOTE>To save on context only part of this file has been shown to you. You should retry this tool after you have searched inside the file with `grep -n` in order to find the line numbers of what you are looking for.</NOTE>'
 

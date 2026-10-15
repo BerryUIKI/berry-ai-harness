@@ -5,8 +5,8 @@
 
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import AgentLoop from '@berry-ai/harness-agent-loop'
+import type { Agent } from '@berry-ai/harness-agent'
 import BasicCompactionEngine from '@berry-ai/harness-compaction-basic'
 import TokenMeter from '@berry-ai/harness-token-meter'
 import { ImageVariantId } from '@berry-ai/harness-attachment'
@@ -15,8 +15,8 @@ import { inlineImages } from '@berry-ai/harness-llm-deepseek/src/images.ts'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { createAssistantMessage, createToolResultMessage, createUserMessage, projectOffloadedImages, offloadedImageText, IMAGE_OFFLOAD_REQUIRED_CODE, LlmAdapter, LlmError, ToolCallId } from '@berry-ai/harness-llm'
 import type { ContentBlock, GenerateOptions, StreamChunk } from '@berry-ai/harness-llm'
-import { isReplacementSurfaceEvent, SessionId } from '@deepseek-ai/dsh-session'
-import type { Session } from '@deepseek-ai/dsh-session'
+import { isReplacementSurfaceEvent, SessionId } from '@berry-ai/harness-session'
+import type { Session } from '@berry-ai/harness-session'
 import * as offload from '../src/index.ts'
 
 type ScriptEntry = StreamChunk[] | (() => never)

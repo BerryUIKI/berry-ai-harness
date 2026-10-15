@@ -6,7 +6,7 @@ import type {} from '@deepseek-ai/dsh-host-product-telemetry-otel'
 import type {} from '@berry-ai/harness-deepseek-account'
 import type {} from '@berry-ai/harness-settings'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
-import type {} from '@deepseek-ai/dsh-session'
+import type {} from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-compaction/types'
 import type { ProductEvent } from './events.ts'
 

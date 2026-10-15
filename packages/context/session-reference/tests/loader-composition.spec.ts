@@ -8,16 +8,16 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import { agentEvents, type Agent } from '@deepseek-ai/dsh-agent'
+import { agentEvents, type Agent } from '@berry-ai/harness-agent'
 import { createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
-import * as systemPromptPlugin from '@deepseek-ai/dsh-system-prompt'
-import * as toolsPlugin from '@deepseek-ai/dsh-tools'
+import * as systemPromptPlugin from '@berry-ai/harness-system-prompt'
+import * as toolsPlugin from '@berry-ai/harness-tools'
 import * as fsPlugin from '@berry-ai/harness-fs-local'
 import * as toolFsPlugin from '@berry-ai/harness-tool-fs'
-import * as sessionPlugin from '@deepseek-ai/dsh-session'
+import * as sessionPlugin from '@berry-ai/harness-session'
 import * as sessionProjectionPlugin from '@deepseek-ai/dsh-session-projection'
 import * as workingDirectoryPlugin from '@deepseek-ai/dsh-working-directory'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
+import { Session, SessionId } from '@berry-ai/harness-session'
 import * as queryPlugin from '@berry-ai/harness-session-query-sqlite'
 import * as referencePlugin from '@berry-ai/harness-session-reference'
 import * as spillPlugin from '@berry-ai/harness-spill-local'
@@ -46,11 +46,11 @@ describe('session-reference real Loader composition', () => {
     await ctx.plugin(Loader)
     ctx.loader.builtins.include = Include
     const modules = new Map<string, unknown>([
-      ['@deepseek-ai/dsh-session', sessionPlugin],
+      ['@berry-ai/harness-session', sessionPlugin],
       ['@deepseek-ai/dsh-session-projection', sessionProjectionPlugin],
       ['@deepseek-ai/dsh-working-directory', workingDirectoryPlugin],
-      ['@deepseek-ai/dsh-system-prompt', systemPromptPlugin],
-      ['@deepseek-ai/dsh-tools', toolsPlugin],
+      ['@berry-ai/harness-system-prompt', systemPromptPlugin],
+      ['@berry-ai/harness-tools', toolsPlugin],
       ['@berry-ai/harness-fs-local', fsPlugin],
       ['@berry-ai/harness-tool-fs', toolFsPlugin],
       ['@berry-ai/harness-session-query-sqlite', queryPlugin],

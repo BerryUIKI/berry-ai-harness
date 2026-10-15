@@ -2,7 +2,7 @@ import { externalTestParent } from '../../../subagent/subagent/tests/external-ac
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-agent-instructions'
 import { compactCheckpointSource, CompactionId } from '@berry-ai/harness-compaction'
 import LlmRuntime, {
@@ -25,7 +25,7 @@ import SessionStore, {
   SessionId,
   SessionLogOffset,
   type Session,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import SubagentRuntime, {
   NO_START_CAPABILITIES,
@@ -33,7 +33,7 @@ import SubagentRuntime, {
   type SubagentStartRequest,
 } from '@deepseek-ai/dsh-subagent'
 import type {} from '@berry-ai/harness-shell'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
 import * as ToolSubagent from '@deepseek-ai/dsh-tool-subagent'
 import ToolRuntime, {
   defineContentToolFixture,
@@ -41,7 +41,7 @@ import ToolRuntime, {
   TOOL_ABORTED_BEFORE_DISPATCH,
   type PreToolDecision,
   type ToolExecutionToken,
-} from '@deepseek-ai/dsh-tools'
+} from '@berry-ai/harness-tools'
 import ApprovalService, { setApprovalPolicy, type ApprovalOutcome } from '@berry-ai/harness-user-approval'
 import * as AutoReview from '@deepseek-ai/dsh-experimental-auto-review'
 

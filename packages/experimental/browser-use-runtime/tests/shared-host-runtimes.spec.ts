@@ -22,7 +22,7 @@ interface Manifest {
 const manifestPath = fileURLToPath(new URL('../package.json', import.meta.url))
 
 /** Host runtimes whose module-local state must not be duplicated. */
-const SHARED_HOST_RUNTIMES = ['@berry-ai/harness-mcp-client', '@deepseek-ai/dsh-scope'] as const
+const SHARED_HOST_RUNTIMES = ['@berry-ai/harness-mcp-client', '@berry-ai/harness-scope'] as const
 
 describe('profile installs share the installation host runtime instances', () => {
   it('declares every identity-bearing host runtime as a peer, never a dependency', async () => {

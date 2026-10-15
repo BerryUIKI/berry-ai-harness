@@ -14,7 +14,7 @@ import type {
   WebSearchSource,
 } from '@berry-ai/harness-web'
 import type { CredentialRef } from '@berry-ai/harness-credentials'
-import type {} from '@deepseek-ai/dsh-session'
+import type {} from '@berry-ai/harness-session'
 import type {
   AnthropicError,
   AnthropicResponse,
@@ -76,7 +76,7 @@ export interface DeepSeekSearchLlmRequest {
   }
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /** Secret-free auxiliary DeepSeek search request recorded before dispatch. */
     'web/deepseek-search-llm-request': DeepSeekSearchLlmRequest

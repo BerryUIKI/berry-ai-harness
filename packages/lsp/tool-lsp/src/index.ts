@@ -13,7 +13,7 @@
 import type {} from '@deepseek-ai/dsh-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
 import { LspError } from '@berry-ai/harness-lsp'
 import type {} from '@berry-ai/harness-lsp'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'

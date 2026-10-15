@@ -6,7 +6,7 @@
  * @module @deepseek-ai/dsh-hook-protocol/events
  */
 
-import type { Session } from '@deepseek-ai/dsh-session'
+import type { Session } from '@berry-ai/harness-session'
 import type { HookDialect, HookOutput } from './types.ts'
 
 /** What identifies a hook invocation across its invoked/result pair. */

@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import { CordisInspectRegistryService } from '@berry-ai/harness-cordis-host-runner'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRegistry from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRegistry from '@berry-ai/harness-tools'
 import { describe, expect, it } from 'vitest'
 import * as CordisInspectProviders from '../src/host.ts'
 

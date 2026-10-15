@@ -29,7 +29,7 @@ function fixture(files: Record<string, string> = {}): string {
   const root = mkdtempSync(join(tmpdir(), 'dsh-plugin-record-catalog-'))
   roots.push(root)
   for (const [file, source] of Object.entries({
-    'packages/core/session/package.json': '{"name":"@deepseek-ai/dsh-session"}',
+    'packages/core/session/package.json': '{"name":"@berry-ai/harness-session"}',
     'packages/experimental/bridge/package.json': '{"name":"@deepseek-ai/dsh-experimental-bridge"}',
     [OWNER]: OWNER_SOURCE,
     ...files,
@@ -38,7 +38,7 @@ function fixture(files: Record<string, string> = {}): string {
 }
 
 function augmentation(members: string, heritage = ''): string {
-  return `export {}\ndeclare module '@deepseek-ai/dsh-session/types' {\n  interface PluginRecordMap ${heritage}{\n${members}\n  }\n}\n`
+  return `export {}\ndeclare module '@berry-ai/harness-session/types' {\n  interface PluginRecordMap ${heritage}{\n${members}\n  }\n}\n`
 }
 
 const ENTRY = "    /** Retains a bridge entry. */\n    'plugin:bridge/entry': SavedEntry"
@@ -106,7 +106,7 @@ describe('plugin record declarations', () => {
       [OWNER_SOURCE.replace('{}', "{ 'plugin:session/entry': string }"), /must remain empty/],
       [OWNER_SOURCE.replace('Map {}', 'Map<T> {}'), /without extends or type parameters/],
     ] as const) expect(() => collectPluginRecords(fixture({ [OWNER]: source }))).toThrow(error)
-    expect(() => collectPluginRecords(fixture({ [RECORDS]: OWNER_SOURCE }))).toThrow('is outside @deepseek-ai/dsh-session')
+    expect(() => collectPluginRecords(fixture({ [RECORDS]: OWNER_SOURCE }))).toThrow('is outside @berry-ai/harness-session')
   })
 
   it('finds and rejects record declarations outside experimental production source', () => {
@@ -120,7 +120,7 @@ describe('plugin record declarations', () => {
   it('requires the types module augmentation and verifiable package ownership', () => {
     expect(() => collectPluginRecords(fixture({
       [RECORDS]: augmentation(ENTRY).replace("dsh-session/types'", "dsh-session'"),
-    }))).toThrow("must augment declare module '@deepseek-ai/dsh-session/types'")
+    }))).toThrow("must augment declare module '@berry-ai/harness-session/types'")
     for (const manifest of ['{}', 'broken json', '{"name":"@external/bridge"}']) {
       expect(() => collectPluginRecords(fixture({
         [RECORDS]: augmentation(ENTRY), 'packages/experimental/bridge/package.json': manifest,
@@ -180,7 +180,7 @@ describe('plugin record catalogue output', () => {
     const root = fixture({
       'tsconfig.host.json': JSON.stringify({ compilerOptions: {
         target: 'es2024', module: 'esnext', moduleResolution: 'bundler', strict: true, types: [],
-        paths: { '@deepseek-ai/dsh-session/types': ['./packages/core/session/src/types.ts'] },
+        paths: { '@berry-ai/harness-session/types': ['./packages/core/session/src/types.ts'] },
       }, include: ['packages/**/src/**/*.ts'] }),
       [OWNER]: `${OWNER_SOURCE}
 export interface SessionHeader { version: 4; id: string; createdAt: number }

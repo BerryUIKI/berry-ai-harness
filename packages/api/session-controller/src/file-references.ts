@@ -1,7 +1,7 @@
 /** Session Controller adapter for Agent-scoped file-reference discovery. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-file-reference'
 import type { FileReferenceCandidate } from '@berry-ai/harness-file-reference/types'
 import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'

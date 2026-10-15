@@ -3,7 +3,7 @@ import { Context, type Fiber } from '@deepseek-ai/cordis'
 import { EntryTree, type EntryOptions } from '@deepseek-ai/cordis-plugin-loader'
 import { prepareProfileEntries } from '@berry-ai/harness-app-boot'
 import type { PresetDefinition } from './definition.ts'
-import { scopeOf, type ScopeKey } from '@deepseek-ai/dsh-scope'
+import { scopeOf, type ScopeKey } from '@berry-ai/harness-scope'
 
 /** In-memory Loader tree; only the profile configuration editor persists definitions. */
 class PresetTree extends EntryTree {

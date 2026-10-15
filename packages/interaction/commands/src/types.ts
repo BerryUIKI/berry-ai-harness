@@ -7,7 +7,7 @@
  * @module @berry-ai/harness-commands/types
  */
 
-import type { SessionSeq } from '@deepseek-ai/dsh-session/types'
+import type { SessionSeq } from '@berry-ai/harness-session/types'
 import type { CommandDefinitionId, CommandId } from './brand.ts'
 import type { EncodedImageAttachment } from '@berry-ai/harness-attachment/types'
 
@@ -90,7 +90,7 @@ declare module '@deepseek-ai/cordis' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /**
      * A resolved slash command entered its handler. Log-only (never model
@@ -113,7 +113,7 @@ declare module '@deepseek-ai/dsh-session/types' {
       commandId: CommandId
       kind: 'success' | 'error'
       text?: string
-      sourceEventSeq?: import('@deepseek-ai/dsh-session/types').SessionSeq
+      sourceEventSeq?: import('@berry-ai/harness-session/types').SessionSeq
     }
   }
 }

@@ -21,7 +21,7 @@ import {
   validatedSessionEvent,
 } from '@deepseek-ai/dsh-sdk-client'
 import type { ContentBlock, ReasoningEffortId } from '@berry-ai/harness-llm'
-import type { SessionId, TurnEndReason } from '@deepseek-ai/dsh-session'
+import type { SessionId, TurnEndReason } from '@berry-ai/harness-session'
 import type { SubagentResult, SubagentRun, SubagentStartRequest, SubagentStopReason } from '@deepseek-ai/dsh-subagent'
 import { AssistantOutputFold, settleRunResult, subprocessRunHandle } from '@deepseek-ai/dsh-subagent'
 import { scrubbedParentEnv } from '@berry-ai/harness-subprocess'

@@ -2,7 +2,7 @@ import type {
   ConversationLocation, ConversationNodeContext, ConversationNodeDefinition,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { ChatConversationViewNode } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   ToolWorkflowAgentEndData, ToolWorkflowAgentStartData,
 } from '@berry-ai/harness-tool-workflow/types'

@@ -11,9 +11,9 @@
  * the generic question flow. Both use the same carrier and composer seat.
  */
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { InboxWireState } from '@deepseek-ai/dsh-agent/types'
+import type { InboxWireState } from '@berry-ai/harness-agent/types'
 import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
 import type { ComposerChainProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'

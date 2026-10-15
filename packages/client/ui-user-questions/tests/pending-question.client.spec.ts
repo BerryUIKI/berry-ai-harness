@@ -1,6 +1,6 @@
 /** Card and waterfall settlement edges the composer and plugin specs do not reach. */
 import { describe, expect, it, vi } from 'vitest'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import { createWaterfallRequest, PendingQuestion } from '../src/client/contract/slots.ts'
 

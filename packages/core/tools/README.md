@@ -3,7 +3,7 @@ description: "The tool registry and execution pipeline for tool authors and main
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tools
+# @berry-ai/harness-tools
 
 English | [中文](README.zh.md)
 
@@ -38,7 +38,7 @@ Canonical values belong to execution; the Session records rendered content and o
 ```ts
 import { readFile } from 'node:fs/promises'
 import type { Context } from '@deepseek-ai/cordis'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
 
 declare const ctx: Context
 
@@ -68,7 +68,7 @@ The unified schema DSL supports `string`, `number`, `integer`, `boolean`, `null`
 The `mode` config decides what the model sees: `native` (every visible schema) or `ptc` (only `run_code` plus a generated SDK).
 
 ```yaml
-- name: '@deepseek-ai/dsh-tools'
+- name: '@berry-ai/harness-tools'
   config:
     mode: native
 ```

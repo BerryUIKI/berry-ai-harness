@@ -4,7 +4,7 @@ import type { ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import type {
   ISessions, SessionBinding, SessionEventSource, SessionEventWindow,
 } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionEvent, SessionId } from '@berry-ai/harness-session/types'
 import { WeakMapWithValues } from '@berry-ai/harness-util-values'
 import {
   createSnapshotStore, type ObservableSnapshot, type SnapshotStore,

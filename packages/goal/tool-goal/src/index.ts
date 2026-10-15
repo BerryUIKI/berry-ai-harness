@@ -16,8 +16,8 @@ declare module '@berry-ai/harness-llm' {
   }
 }
 
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { GenericCallView } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
+import type { GenericCallView } from '@berry-ai/harness-tools'
 import {
   completionAuthority,
   goalToolExecution,

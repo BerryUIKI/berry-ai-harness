@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { StreamChunk, TokenUsage } from '@berry-ai/harness-llm'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 import { deriveTurnTokenUsage } from '../src/turn-usage.ts'
 
 function event(seq: number, type: string, data: unknown): SessionEvent {

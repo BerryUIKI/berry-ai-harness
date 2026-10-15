@@ -1,7 +1,7 @@
 /** Authenticated raw-byte upload route registered on the Connection fetch registry. */
 
 import { brandString } from '@berry-ai/harness-brand'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionId } from '@berry-ai/harness-session'
 import { remoteErrorOf } from '@berry-ai/harness-typert-protocol'
 import type { FileUploads } from './index.ts'
 import type { FileUploadValue } from './types.ts'

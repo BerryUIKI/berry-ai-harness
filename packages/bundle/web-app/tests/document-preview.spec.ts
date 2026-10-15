@@ -11,7 +11,7 @@ import WorkspaceFiles, { type WorkspaceFileScope } from '@deepseek-ai/dsh-api-wo
 import OfficeToPdf from '@berry-ai/harness-office-to-pdf'
 import * as DocumentPreview from '@deepseek-ai/dsh-client-ui-sidebar-documentpreview'
 import type { IndexInjection } from '@deepseek-ai/dsh-host-webserver'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
@@ -46,7 +46,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
   ], (message) => { throw new Error(message) })
   expect(configured.find(row => row.id === 'ui-sidebar-documentpreview')!.config).toEqual(clientConfig)
   await writeFile(configPath, JSON.stringify([
-    { name: '@deepseek-ai/dsh-session' },
+    { name: '@berry-ai/harness-session' },
     { name: '@deepseek-ai/dsh-session-projection' },
     { name: '@berry-ai/harness-sandbox-policy', config: { workspaceRoot: directory } },
     { name: '@berry-ai/harness-fs-local', config: { cwd: directory } },
@@ -71,7 +71,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
   ctx.loader.builtins.include = Include
   // Loader's native imports must share the test's source-plane Service classes.
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-session', SessionStore],
+    ['@berry-ai/harness-session', SessionStore],
     ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-sandbox-policy', SandboxPolicyService],
     ['@berry-ai/harness-fs-local', LocalFileSystem],

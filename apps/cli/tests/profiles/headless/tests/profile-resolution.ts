@@ -114,11 +114,11 @@ export function testProfileResolution(mode: ExampleMode): void {
       const ancestorLeaf = join(home, 'node_modules', externalLeafName)
       await writePackage(pluginDir, {
         name: pluginName, version: '1.0.0', exports, dependencies: { [externalName]: '*' },
-        peerDependencies: { '@deepseek-ai/dsh-tools': '*' }, devDependencies: { '@deepseek-ai/dsh-tools': '*' },
+        peerDependencies: { '@berry-ai/harness-tools': '*' }, devDependencies: { '@berry-ai/harness-tools': '*' },
       }, {
         'index.mjs': [
           `export { external } from '${externalName}'`,
-          "import Tools from '@deepseek-ai/dsh-tools'",
+          "import Tools from '@berry-ai/harness-tools'",
           'export { Tools as PluginTools }',
           'export function apply() {}',
         ].join('\n'),
@@ -138,20 +138,20 @@ export function testProfileResolution(mode: ExampleMode): void {
       }
       const staleTools = join(root, 'stale-tools')
       const staleToolsLink = join(sharedModules, '@deepseek-ai', 'dsh-tools')
-      await writePackage(staleTools, { name: '@deepseek-ai/dsh-tools', version: '0.0.0', exports }, {
+      await writePackage(staleTools, { name: '@berry-ai/harness-tools', version: '0.0.0', exports }, {
         'index.mjs': "export default class Tools {}\nexport const TOOL_RUNTIME_SCHEDULER = Symbol()\nthrow new Error('STALE_DSH_TOOLS')",
         'index.cjs': "throw new Error('STALE_DSH_TOOLS')",
       })
       const sourceDir = join(sourcePackageDir, 'src')
-      const toolsCjsExpression = mode === 'lib' ? "require.resolve('@deepseek-ai/dsh-tools')" : 'null'
+      const toolsCjsExpression = mode === 'lib' ? "require.resolve('@berry-ai/harness-tools')" : 'null'
       await mkdir(sourceDir, { recursive: true })
       // The ESM-only source hook does not map CommonJS exports to source, so its CJS probe uses a fixture-owned peer.
       await writePackage(sourcePackageDir, {
-        name: 'source-package', version: '1.0.0', peerDependencies: { '@deepseek-ai/dsh-tools': '*', [leafName]: '*' },
+        name: 'source-package', version: '1.0.0', peerDependencies: { '@berry-ai/harness-tools': '*', [leafName]: '*' },
       }, {
         'src/query.mjs': [
           "import { createRequire } from 'node:module'",
-          "import Tools from '@deepseek-ai/dsh-tools'",
+          "import Tools from '@berry-ai/harness-tools'",
           'export { Tools as SourceTools }',
           'const require = createRequire(import.meta.url)',
           `export const sourceToolsCjs = ${toolsCjsExpression}`,
@@ -183,7 +183,7 @@ export function testProfileResolution(mode: ExampleMode): void {
         'probe.mjs': [
           "import { createRequire } from 'node:module'",
           "import { getEnvironmentData } from 'node:worker_threads'",
-          "import Tools, { TOOL_RUNTIME_SCHEDULER } from '@deepseek-ai/dsh-tools'",
+          "import Tools, { TOOL_RUNTIME_SCHEDULER } from '@berry-ai/harness-tools'",
           `import { leaf } from '${leafName}'`,
           `import { leaf as bridgeLeaf } from '${bridgeName}'`,
           `import { external } from '${externalName}'`,

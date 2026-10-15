@@ -3,7 +3,7 @@
 import { randomUUID } from 'node:crypto'
 import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-fs'
 import type {} from '@berry-ai/harness-sandbox-policy'
 import type {} from '@deepseek-ai/dsh-working-directory'

@@ -31,7 +31,7 @@
     "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-deepseek-llm-api-extensions": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*"
+    "@berry-ai/harness-session": "workspace:*"
   },
   "peerDependenciesMeta": {
     "@berry-ai/harness-deepseek-llm-api-extensions": {
@@ -43,7 +43,7 @@
     "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-deepseek-llm-api-extensions": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*"
+    "@berry-ai/harness-session": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/dsh-session-format-catalog": "workspace:*",

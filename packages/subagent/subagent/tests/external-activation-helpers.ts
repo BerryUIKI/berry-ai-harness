@@ -3,9 +3,9 @@
 import { randomUUID } from 'node:crypto'
 import { onTestFinished } from 'vitest'
 import type { Context } from '@deepseek-ai/cordis'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import AgentRegistry from '@berry-ai/harness-agent'
+import type { Agent } from '@berry-ai/harness-agent'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
 import type { SubagentActivation, SubagentStartRequest } from '../src/types.ts'
 

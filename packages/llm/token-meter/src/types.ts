@@ -5,7 +5,7 @@
  */
 
 import type { TokenUsage } from '@berry-ai/harness-llm'
-import type { SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session/types'
+import type { SessionLogOffset, SessionSeq } from '@berry-ai/harness-session/types'
 
 export type { ContextBreakdownProjection, ContextPressureProjection, TokenUsageProjection } from './projection.ts'
 

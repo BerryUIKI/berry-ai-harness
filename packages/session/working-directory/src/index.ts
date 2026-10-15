@@ -7,12 +7,12 @@ import { isAbsolute } from 'node:path'
 import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { z as zod } from 'zod'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-fs'
 import { createUserMessage } from '@berry-ai/harness-llm'
-import type { Session } from '@deepseek-ai/dsh-session'
+import type { Session } from '@berry-ai/harness-session'
 import type {} from '@deepseek-ai/dsh-session-projection'
-import type {} from '@deepseek-ai/dsh-system-prompt'
+import type {} from '@berry-ai/harness-system-prompt'
 
 declare module '@deepseek-ai/cordis' {
   interface Context {
@@ -30,7 +30,7 @@ declare module '@berry-ai/harness-llm' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /** Effective working directory; the immutable Session header retains the original project. */
     'working-directory/change': {

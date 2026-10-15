@@ -19,7 +19,7 @@ import LlmRuntime, { ToolCallId, createUserMessage,
 } from '@berry-ai/harness-llm'
 import { MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import { getOrCreateAnonymousUserId, type AnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import DeepSeekLlmApiExtensionRegistry from '@berry-ai/harness-deepseek-llm-api-extensions'
 import type { PreparedDeepSeekLlmApiExtensions } from '@berry-ai/harness-deepseek-llm-api-extensions'
 import * as LlmDeepSeek from '@berry-ai/harness-llm-deepseek-api-key'

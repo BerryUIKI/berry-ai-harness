@@ -34,7 +34,7 @@ Choose this backend when consumers benefit from one artifact per session — nav
 ### Minimal configuration
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
+- name: '@berry-ai/harness-session'
 - name: '@deepseek-ai/dsh-session-persistence-jsonl'
   config:
     root: /absolute/path/to/session-logs

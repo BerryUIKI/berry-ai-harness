@@ -2,9 +2,9 @@
 
 import { describe, expect, onTestFinished } from 'vitest'
 import { createUserMessage } from '@berry-ai/harness-llm'
-import type { InboxState } from '@deepseek-ai/dsh-agent/types'
+import type { InboxState } from '@berry-ai/harness-agent/types'
 import type { SessionControlFrame } from '@deepseek-ai/dsh-api-session-controller/types'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { SessionManager } from '../src/client/sessions/manager.ts'
 import { ok } from '@deepseek-ai/dsh-remote-mock'
 import { createClientTest, type ClientTestFixtures, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'

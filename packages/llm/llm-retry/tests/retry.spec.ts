@@ -11,15 +11,15 @@ import type {
   RetryPolicyConfig,
   StreamChunk,
 } from '@berry-ai/harness-llm'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { SessionEvent, SessionEventMap } from '@deepseek-ai/dsh-session'
+import type { SessionEvent, SessionEventMap } from '@berry-ai/harness-session'
 import type { LlmRetryEventData } from '@berry-ai/harness-llm-retry/types'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime, { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent, RequestErrorAction } from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime, { defineContentToolFixture } from '@berry-ai/harness-tools'
+import AgentRegistry from '@berry-ai/harness-agent'
+import type { Agent, RequestErrorAction } from '@berry-ai/harness-agent'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import * as retry from '../src/index.ts'
 
 type ScriptEntry = Error | Iterable<StreamChunk> | AsyncIterable<StreamChunk>

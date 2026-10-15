@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent, AgentCancelCause, AgentStatus, CancelOptions } from '@deepseek-ai/dsh-agent'
+import { Session, SessionId } from '@berry-ai/harness-session'
+import AgentRegistry from '@berry-ai/harness-agent'
+import type { Agent, AgentCancelCause, AgentStatus, CancelOptions } from '@berry-ai/harness-agent'
 import type { SessionActivity } from '@berry-ai/harness-workspace'
 
 type CancelCall = [AgentCancelCause, CancelOptions | undefined]

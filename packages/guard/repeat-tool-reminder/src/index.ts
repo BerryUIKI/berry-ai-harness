@@ -8,7 +8,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
+import type { Agent, PreStepDecision } from '@berry-ai/harness-agent'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 declare module '@berry-ai/harness-llm' {
@@ -18,8 +18,8 @@ declare module '@berry-ai/harness-llm' {
 }
 
 import type { MessageSource } from '@berry-ai/harness-llm'
-import type { UserMessage } from '@deepseek-ai/dsh-session'
-import type { PostToolDecision, ToolExecution } from '@deepseek-ai/dsh-tools'
+import type { UserMessage } from '@berry-ai/harness-session'
+import type { PostToolDecision, ToolExecution } from '@berry-ai/harness-tools'
 
 export const name = 'repeat-tool-reminder'
 

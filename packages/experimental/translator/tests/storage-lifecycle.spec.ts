@@ -1,5 +1,5 @@
 /** Queued cancellation, native storage ownership, and quiescent translator disposal. */
-import { pluginRecordOf, SessionId } from '@deepseek-ai/dsh-session'
+import { pluginRecordOf, SessionId } from '@berry-ai/harness-session'
 import { rm } from 'node:fs/promises'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { storageFixture, storageReply } from './storage-fixture.ts'

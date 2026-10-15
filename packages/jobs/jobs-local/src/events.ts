@@ -5,9 +5,9 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { AnonymousEntries, ScopedLayers, scopeOf } from '@deepseek-ai/dsh-scope'
-import type { ScopeLayer } from '@deepseek-ai/dsh-scope'
+import type { Agent } from '@berry-ai/harness-agent'
+import { AnonymousEntries, ScopedLayers, scopeOf } from '@berry-ai/harness-scope'
+import type { ScopeLayer } from '@berry-ai/harness-scope'
 import type { JobEvent, JobEventFilter, JobEventListener } from '@berry-ai/harness-jobs'
 
 /** One registered listener and the filter it declared. */

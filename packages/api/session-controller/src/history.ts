@@ -2,19 +2,19 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import { Deque } from '@berry-ai/harness-deque'
-import type { AssistantStreamFrame } from '@deepseek-ai/dsh-agent'
+import type { AssistantStreamFrame } from '@berry-ai/harness-agent'
 import {
   isAppendSurfaceEvent,
   SessionLogOffset,
   SessionSeq,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import type {
   SessionEvent,
   SessionHeader,
   SessionId,
   SessionLogOffset as SessionLogOffsetType,
   SessionSeqCursor,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import { SessionQueryError, type SessionObservation } from '@berry-ai/harness-session-query'
 import type {} from '@deepseek-ai/dsh-subagent'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'

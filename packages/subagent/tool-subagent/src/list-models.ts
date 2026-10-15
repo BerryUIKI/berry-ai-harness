@@ -3,7 +3,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type LlmRuntime from '@berry-ai/harness-llm'
 import type { LlmProviderInfo } from '@berry-ai/harness-llm'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
 import type { ModelSelectionPolicy } from './model-selection.ts'
 
 interface ListSubagentModelsRequest {

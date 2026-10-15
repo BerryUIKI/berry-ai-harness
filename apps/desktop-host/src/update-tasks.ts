@@ -1,7 +1,7 @@
 /** Desktop installation admission and task inspection for the shared Web Host. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-agent'
+import type {} from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-jobs'
 import type {} from '@deepseek-ai/dsh-client-connection'
 

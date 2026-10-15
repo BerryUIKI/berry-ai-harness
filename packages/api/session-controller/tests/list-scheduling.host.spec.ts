@@ -1,8 +1,8 @@
 /** Event-loop fairness and cancellation of synchronous Session-list summaries. */
 
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry, { type Agent } from '@deepseek-ai/dsh-agent'
-import SessionStore, { SessionId, type Session } from '@deepseek-ai/dsh-session'
+import AgentRegistry, { type Agent } from '@berry-ai/harness-agent'
+import SessionStore, { SessionId, type Session } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import type { SessionRecord } from '@berry-ai/harness-session-query'
 import { resolve } from 'node:path'

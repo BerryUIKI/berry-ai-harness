@@ -38,7 +38,7 @@ export type RemoteResult<T> = { ok: true; value: T } | { ok: false; error: Remot
 
 - **载体码**：`gateway/bad-request`、`gateway/cancelled`、`gateway/internal` 由 protocol 声明，人人可达。
 - **Gateway 装配码**：17 个 `gateway/*` 由 `packages/api/gateway/src/remote-error-codes.ts` 声明，details 统一为 `TypertGatewayFaultDetails { endpoint, field? }`；该模块 face-neutral，Host 与 Client 两面各自 import，因此两个 program 看到同一批条目。
-- **跨包共产**：两个及以上不同包抛同一个码时，声明落到双方都已依赖的最低层。`session/not-found` 落 `@deepseek-ai/dsh-session`（session-controller 与 workspace-controller 都依赖它），`workspace/not-found` 落 `@berry-ai/harness-workspace`（session-controller 与 workspace-controller 之间没有依赖边，能力包是唯一共同下层）。
+- **跨包共产**：两个及以上不同包抛同一个码时，声明落到双方都已依赖的最低层。`session/not-found` 落 `@berry-ai/harness-session`（session-controller 与 workspace-controller 都依赖它），`workspace/not-found` 落 `@berry-ai/harness-workspace`（session-controller 与 workspace-controller 之间没有依赖边，能力包是唯一共同下层）。
 - **单一生产者**：只有一个包抛的码落生产者包。`subagent/not-found` 与 `agent-preset/conflict` 因此落 session-controller——全仓只有它抛这两个码，subagent 与 agent-presets 的码表里都没有它们。
 
 共享的是校验逻辑，不是码。`session/invalid-time-zone` 与 `subagent/invalid-time-zone` 是两个域各自声明、各自抛出的两个码，两个端点共用 `@deepseek-ai/dsh-util-time` 的 `canonicalClientTimeZone()` 做规范化；client 对这个码没有分支语义，拆码的成本是零，而合成一个码就会重新制造可达性问题。

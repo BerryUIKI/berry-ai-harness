@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import AgentRegistry, { agentEvents } from '@deepseek-ai/dsh-agent'
-import type { Agent, AgentStatus, Inbox } from '@deepseek-ai/dsh-agent'
-import { turnBoundaryProjectionDefinition } from '@deepseek-ai/dsh-agent-loop'
+import AgentRegistry, { agentEvents } from '@berry-ai/harness-agent'
+import type { Agent, AgentStatus, Inbox } from '@berry-ai/harness-agent'
+import { turnBoundaryProjectionDefinition } from '@berry-ai/harness-agent-loop'
 import GoalService, { GoalId } from '@berry-ai/harness-goal'
 import type { GoalRef } from '@berry-ai/harness-goal'
 import { createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
@@ -14,11 +14,11 @@ import SessionStore, {
   Session,
   SessionId,
   SessionLogOffset,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import type { ToolExecutionResult } from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
+import type { ToolExecutionResult } from '@berry-ai/harness-tools'
 import * as toolGoal from '@berry-ai/harness-tool-goal'
 import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
 

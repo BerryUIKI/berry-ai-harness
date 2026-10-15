@@ -9,9 +9,9 @@
 
 import { randomUUID } from 'node:crypto'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { foldConsumedWork } from '@deepseek-ai/dsh-agent'
-import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session'
+import type { Agent } from '@berry-ai/harness-agent'
+import { foldConsumedWork } from '@berry-ai/harness-agent'
+import type { SessionEvent, SessionId } from '@berry-ai/harness-session'
 import { SubagentRunId } from './types.ts'
 import type { SubagentResult, SubagentRunEndInfo, SubagentRunInfo } from './types.ts'
 

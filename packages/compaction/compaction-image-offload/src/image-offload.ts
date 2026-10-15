@@ -1,7 +1,7 @@
 /** Select and log permanent image omissions in current model-request order. */
 
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import type { Session, SessionSeq } from '@deepseek-ai/dsh-session'
+import type { Session, SessionSeq } from '@berry-ai/harness-session'
 import type { ImageOffloadTarget } from './projection.ts'
 
 /**

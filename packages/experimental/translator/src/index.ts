@@ -9,7 +9,7 @@ import { addAbortListener } from 'node:events'
 import { assertNever } from '@berry-ai/harness-util-values'
 import { availablePaidProviders, deepseekRecipe, translateWithDeepSeek } from './deepseek.ts'
 import type { TranslationIdentity } from './types.ts'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 
 export type * from './types.ts'
 export { TranslationError } from './error.ts'

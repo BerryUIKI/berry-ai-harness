@@ -18,7 +18,7 @@ import {
 } from '@agentclientprotocol/sdk'
 import type { ContentBlock } from '@berry-ai/harness-llm'
 import { brandString } from '@berry-ai/harness-brand'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionId } from '@berry-ai/harness-session'
 import { AssistantOutputFold, settleRunResult, subprocessRunHandle } from '@deepseek-ai/dsh-subagent'
 import type { SubagentResult, SubagentRun, SubagentStartRequest, SubagentStopReason } from '@deepseek-ai/dsh-subagent'
 import type { SubprocessHandle, SubprocessOutcome, SubprocessSpawnSpec } from '@berry-ai/harness-subprocess'

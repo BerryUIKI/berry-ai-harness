@@ -9,7 +9,7 @@ for (const event of [
   { type: 'turn/start', seq: 0, time: 1, data: { turn: 1 } },
   { type: 'step/start', seq: 1, time: 1, data: { turn: 1, step: 1 } },
   { type: 'system/message', seq: 2, time: 1, surfaceOp: 'append', data: { turn: 1, step: 1, message: {
-    id: 'system', role: 'system', source: { kind: 'plugin', plugin: '@deepseek-ai/dsh-system-prompt' }, content: [],
+    id: 'system', role: 'system', source: { kind: 'plugin', plugin: '@berry-ai/harness-system-prompt' }, content: [],
   } } },
 ]) migrated.decodeRow(event)
 const source = (migrated.finish().events[2]?.data as { message: { source: object } }).message.source

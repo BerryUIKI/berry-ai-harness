@@ -34,7 +34,7 @@ kind: "package-reference"
 ### 最小配置
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
+- name: '@berry-ai/harness-session'
 - name: '@berry-ai/harness-session-query-sqlite'
   config:
     path: /absolute/path/to/session-search.db

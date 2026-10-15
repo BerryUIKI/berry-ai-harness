@@ -4,14 +4,14 @@ import { toolPairingBalancedAfter, toolPairingBalancedBefore } from '@berry-ai/h
 import { createUserMessage, createSystemMessage, CONTEXT_WINDOW_EXCEEDED_CODE, LlmError, resolveRetryPolicy , createMessage } from '@berry-ai/harness-llm'
 import type { ContentBlock, GenerateOptions, LlmResolvedModelInfo, ResolvedRetryPolicy, StreamChunk } from '@berry-ai/harness-llm'
 import { ToolCallId, LlmAdapter } from '@berry-ai/harness-llm'
-import { defineContentToolFixture } from '@deepseek-ai/dsh-tools'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import { defineContentToolFixture } from '@berry-ai/harness-tools'
+import type { Agent } from '@berry-ai/harness-agent'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { BasicCompactionEngine } from '@berry-ai/harness-compaction-basic'
 import TokenMeter from '@berry-ai/harness-token-meter'
 import * as LlmRetry from '@berry-ai/harness-llm-retry'
-import { Session, SessionId, type SessionEvent, type SurfaceEvent } from '@deepseek-ai/dsh-session'
+import { Session, SessionId, type SessionEvent, type SurfaceEvent } from '@berry-ai/harness-session'
 
 /**
  * CBR-001 regression through the real loop. A replacement checkpoint has a high

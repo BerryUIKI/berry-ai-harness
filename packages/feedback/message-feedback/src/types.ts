@@ -7,7 +7,7 @@
 
 import type { Branded } from '@berry-ai/harness-brand'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { FeedbackCategory } from '@berry-ai/harness-command-feedback/types'
 
 /** Opaque compare-and-set token for one exact feedback item revision. */
@@ -50,7 +50,7 @@ export interface MessageFeedbackDelete {
   readonly messageId: MessageId
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /** Log-only human feedback; never enters model history. */
     'feedback/message-put': MessageFeedbackPut

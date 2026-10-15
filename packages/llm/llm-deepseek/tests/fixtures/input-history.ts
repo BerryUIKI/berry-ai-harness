@@ -1,7 +1,7 @@
 /** Replay persisted user input carrying assistant-only content through Messages. */
 import assert from 'node:assert/strict'
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-agent'
+import type {} from '@berry-ai/harness-agent'
 import { createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
 import { resolveAdapterOptions } from '../../src/config.ts'
 import { serialize } from '../../src/serialize.ts'

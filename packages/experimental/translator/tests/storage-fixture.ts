@@ -3,7 +3,7 @@ import type { Context, Fiber } from '@deepseek-ai/cordis'
 import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
 import { boot } from '@berry-ai/harness-app-boot'
 import { createAssistantMessage, createUserMessage } from '@berry-ai/harness-llm'
-import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionSeq, type Session, type SessionEvent, type SessionHeader } from '@deepseek-ai/dsh-session'
+import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionSeq, type Session, type SessionEvent, type SessionHeader } from '@berry-ai/harness-session'
 import type { SessionHandle } from '@deepseek-ai/dsh-session-persistence'
 import JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
 import { once } from 'node:events'
@@ -95,7 +95,7 @@ export async function storageFixture(cleanups: Array<() => Promise<void>>, optio
   const origin = `http://127.0.0.1:${address.port}`, path = join(root, 'cordis.yml'), storedRoot = join(root, 'sessions')
   const config = { bingEndpoint: `${origin}/bing`, googleEndpoint: `${origin}/google`, timeoutMs: 60_000 }
   await writeFile(path, JSON.stringify([
-    ...options.withSessions === false ? [] : [{ id: 'sessions', name: '@deepseek-ai/dsh-session' }],
+    ...options.withSessions === false ? [] : [{ id: 'sessions', name: '@berry-ai/harness-session' }],
     ...options.withPersistence === false ? [] : [
       { id: 'storage', name: '@deepseek-ai/dsh-session-persistence-jsonl', config: { root: storedRoot, compression: 'none' } },
     ],
@@ -103,7 +103,7 @@ export async function storageFixture(cleanups: Array<() => Promise<void>>, optio
   ]))
   const start = () => boot('translator-storage', path, [], (host) => {
     const modules = new Map<string, unknown>([
-      ['@deepseek-ai/dsh-session', SessionStore], ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlPersistence],
+      ['@berry-ai/harness-session', SessionStore], ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlPersistence],
       ['@deepseek-ai/dsh-experimental-translator', Translator],
     ])
     const loader: ModuleLoaderV2 = {

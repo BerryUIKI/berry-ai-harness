@@ -1,16 +1,16 @@
 /** Session-owned MCP browser processes and provider catalog activation. @module */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import Schema from '@deepseek-ai/schemastery'
 import { BrowserUseProviderName } from '@berry-ai/harness-browser-use/brand'
 import * as McpClient from '@berry-ai/harness-mcp-client'
-import { createScope } from '@deepseek-ai/dsh-scope'
-import type { Scope } from '@deepseek-ai/dsh-scope'
+import { createScope } from '@berry-ai/harness-scope'
+import type { Scope } from '@berry-ai/harness-scope'
 import { SessionResources } from './index.ts'
 import type {} from '@berry-ai/harness-browser-use'
-import type {} from '@deepseek-ai/dsh-tools'
-import type {} from '@deepseek-ai/dsh-system-prompt'
+import type {} from '@berry-ai/harness-tools'
+import type {} from '@berry-ai/harness-system-prompt'
 import type {} from '@deepseek-ai/dsh-working-directory'
 
 /** Browser launch settings shared by the MCP integrations. */

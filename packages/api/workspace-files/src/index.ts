@@ -25,9 +25,9 @@ import z from '@deepseek-ai/schemastery'
 import type {} from '@berry-ai/harness-fs'
 import type { FsDirEntry, FsInfo, FsPathInfo, FsTarget } from '@berry-ai/harness-fs'
 import type {} from '@berry-ai/harness-sandbox-policy'
-import type {} from '@deepseek-ai/dsh-session'
+import type {} from '@berry-ai/harness-session'
 import type {} from '@deepseek-ai/dsh-session-persistence'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { Remote, RemoteError, TypertRemoteService, type TypertLookup } from '@berry-ai/harness-typert-protocol'
 import { WorkspaceChangeFeed } from './changes.ts'
 import type {
@@ -204,7 +204,7 @@ export class WorkspaceFiles extends TypertRemoteService {
         parameter: 'workspaceFileScope',
         wire: 'workspaceFileScopeId',
         hostTypeSymbol: '@deepseek-ai/dsh-api-workspace-files#WorkspaceFileScope',
-        wireTypeSymbol: '@deepseek-ai/dsh-session/types#SessionId',
+        wireTypeSymbol: '@berry-ai/harness-session/types#SessionId',
         resolve: async (sessionId) => {
           const live = scope.sessions.get(sessionId)?.header
           const stored = live === undefined

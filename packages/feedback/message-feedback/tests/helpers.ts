@@ -10,7 +10,7 @@ import SessionStore, { SessionLogOffset,
   SessionId,
   type SessionEvent,
   type SessionHeader,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import SessionPersistence, {
   SessionAlreadyExistsError,
   SessionHandleClosedError,

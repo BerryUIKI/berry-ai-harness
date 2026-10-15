@@ -1,7 +1,7 @@
 /** Loader fixture selecting a directory after initial prompt assembly. */
 import assert from 'node:assert/strict'
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-agent'
+import type {} from '@berry-ai/harness-agent'
 import type {} from '@deepseek-ai/dsh-working-directory'
 
 /** Loader identity for the admission timing scene. */

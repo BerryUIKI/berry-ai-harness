@@ -2,7 +2,7 @@
 import { describe, expect, it } from 'vitest'
 import { createAssistantMessage, createToolResultMessage, LlmAttemptId, ToolCallId } from '@berry-ai/harness-llm'
 import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'
-import { SessionSeq, type SessionEvent } from '@deepseek-ai/dsh-session/types'
+import { SessionSeq, type SessionEvent } from '@berry-ai/harness-session/types'
 import type {
   SessionAssistantSettlementEntry, SessionEventLikeEntry, SessionLiveEventEntry, SessionTransientEventEntry,
 } from '@deepseek-ai/dsh-api-session-controller/client'

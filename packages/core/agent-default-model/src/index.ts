@@ -1,7 +1,7 @@
 /**
  * Default model selection for an Agent without a session-specific selection.
  *
- * @module @deepseek-ai/dsh-agent-default-model
+ * @module @berry-ai/harness-agent-default-model
  */
 import type {} from '@berry-ai/harness-settings'
 
@@ -9,7 +9,7 @@ import type { Volatile } from '@deepseek-ai/cordis'
 
 import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { ModelSelection } from '@deepseek-ai/dsh-agent'
+import type { ModelSelection } from '@berry-ai/harness-agent'
 import { ReasoningEffortId } from '@berry-ai/harness-llm'
 import type {} from '@berry-ai/harness-config-editor'
 

@@ -7,7 +7,7 @@ import { createUserMessage } from '@berry-ai/harness-llm'
 
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import {
   SessionTelemetryCoordinator,
   type SessionTelemetrySink,

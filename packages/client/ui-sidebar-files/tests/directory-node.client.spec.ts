@@ -2,7 +2,7 @@
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import type { MockInstance } from 'vitest'
 import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { DirectoryNode } from '../src/client/directory-node.ts'
 import type { DirLevel } from '../src/client/store.ts'
 import { scriptedList } from './scripted-list.client.ts'

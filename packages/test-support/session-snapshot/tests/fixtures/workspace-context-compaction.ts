@@ -1,8 +1,8 @@
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-agent'
+import type {} from '@berry-ai/harness-agent'
 import { CompactionId, compactCheckpointSource } from '@berry-ai/harness-compaction'
 import { createUserMessage } from '@berry-ai/harness-llm'
-import type {} from '@deepseek-ai/dsh-tools'
+import type {} from '@berry-ai/harness-tools'
 
 export const name = 'workspace-context-compaction'
 

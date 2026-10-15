@@ -5,8 +5,8 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { chromium, type Page } from 'playwright'
 import { expect, it, onTestFinished } from 'vitest'
-import type { InboxState } from '@deepseek-ai/dsh-agent/types'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+import type { InboxState } from '@berry-ai/harness-agent/types'
+import type { SessionEvent } from '@berry-ai/harness-session/types'
 import { deriveReplayScript, parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
 import {
   parseRemoteStreamClientMessage, parseRemoteStreamServerMessage,

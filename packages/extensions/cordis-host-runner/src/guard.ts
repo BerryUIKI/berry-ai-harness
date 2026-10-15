@@ -15,9 +15,9 @@
 
 import { Context } from '@deepseek-ai/cordis'
 import type { Plugin } from '@deepseek-ai/cordis'
-import { scopeOf } from '@deepseek-ai/dsh-scope'
-import { assertSupportedJsonSchema, defineTool } from '@deepseek-ai/dsh-tools'
-import type { ToolDefinition } from '@deepseek-ai/dsh-tools'
+import { scopeOf } from '@berry-ai/harness-scope'
+import { assertSupportedJsonSchema, defineTool } from '@berry-ai/harness-tools'
+import type { ToolDefinition } from '@berry-ai/harness-tools'
 import type { ContentBlock } from '@berry-ai/harness-llm'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 

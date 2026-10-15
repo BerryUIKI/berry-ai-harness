@@ -10,7 +10,7 @@ owner 是一个 Host 侧 Cordis 服务：继承 `TypertRemoteService` 把 servic
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { Remote, TypertRemoteService } from '@berry-ai/harness-typert-protocol'
 
 /** One stored note as a Client reads it. */

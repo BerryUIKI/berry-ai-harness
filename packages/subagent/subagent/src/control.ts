@@ -6,7 +6,7 @@
  */
 
 import { AttachmentError } from '@berry-ai/harness-attachment'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionId } from '@berry-ai/harness-session'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { z } from 'zod'
 import { SubagentError } from './error.ts'

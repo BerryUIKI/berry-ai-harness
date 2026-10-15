@@ -4,10 +4,10 @@
  * @module @deepseek-ai/dsh-subagent/internal
  */
 
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import type { ContentBlock, MessageId, MessageSource } from '@berry-ai/harness-llm'
-import type { SessionId } from '@deepseek-ai/dsh-session'
-import type { ToolDefinition } from '@deepseek-ai/dsh-tools'
+import type { SessionId } from '@berry-ai/harness-session'
+import type { ToolDefinition } from '@berry-ai/harness-tools'
 import type SubagentRuntime from './index.ts'
 import type { SubagentDelivery } from './control-types.ts'
 

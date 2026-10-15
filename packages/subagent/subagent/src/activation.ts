@@ -2,8 +2,8 @@
  * @module @deepseek-ai/dsh-subagent/activation
  */
 
-import type { Agent, AgentHandle } from '@deepseek-ai/dsh-agent'
-import type { SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
+import type { Agent, AgentHandle } from '@berry-ai/harness-agent'
+import type { SessionId, SessionLogOffset } from '@berry-ai/harness-session'
 import { assertNever } from '@berry-ai/harness-util-values'
 import { finalAssistantOutput } from './assistant-output.ts'
 import { epochStopReason } from './lifecycle.ts'

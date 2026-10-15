@@ -30,7 +30,7 @@ Mount the plugin beside the session store and the projection registry when clien
 ### Composition
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
+- name: '@berry-ai/harness-session'
 - name: '@deepseek-ai/dsh-session-projection'
 - name: '@deepseek-ai/dsh-session-turn-outline'
 ```

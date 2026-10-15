@@ -26,7 +26,7 @@
         timeoutMs: 30000
 
 - id: agent-default-model
-  name: '@deepseek-ai/dsh-agent-default-model'
+  name: '@berry-ai/harness-agent-default-model'
   config:
     provider: deepseek-official
     model: deepseek-v4-pro
@@ -42,7 +42,7 @@
   disabled: true
 
 - id: system-prompt
-  name: '@deepseek-ai/dsh-system-prompt'
+  name: '@berry-ai/harness-system-prompt'
   config:
     personaPrefix: You are a concise snapshot agent.
 

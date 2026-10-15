@@ -57,7 +57,7 @@
     "@deepseek-ai/dsh-api-gateway": "workspace:*",
     "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/dsh-host-product-telemetry-otel": "workspace:*",
     "@berry-ai/harness-deepseek-account": "workspace:*",
     "@deepseek-ai/dsh-host-webserver": "workspace:*",

@@ -8,17 +8,17 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
+import AgentRegistry from '@berry-ai/harness-agent'
+import AgentLoop from '@berry-ai/harness-agent-loop'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import LlmRuntime, { ToolCallId } from '@berry-ai/harness-llm'
 import LocalSandbox from '@berry-ai/harness-sandbox-local'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import SystemPrompt from '@berry-ai/harness-system-prompt'
+import ToolRuntime from '@berry-ai/harness-tools'
 import WorkingDirectoryService from '@deepseek-ai/dsh-working-directory'
 import WorktreeService from '@deepseek-ai/dsh-experimental-worktree'
 import * as ToolWorktree from '../src/index.ts'
@@ -51,12 +51,12 @@ describe('worktree tool through real Loader composition', () => {
     const baseCommit = (await git('rev-parse', 'HEAD')).stdout.trim()
 
     const modules = new Map<string, unknown>([
-      ['@deepseek-ai/dsh-agent', AgentRegistry],
-      ['@deepseek-ai/dsh-session', SessionStore],
+      ['@berry-ai/harness-agent', AgentRegistry],
+      ['@berry-ai/harness-session', SessionStore],
       ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
-      ['@deepseek-ai/dsh-system-prompt', SystemPrompt],
+      ['@berry-ai/harness-system-prompt', SystemPrompt],
       ['@berry-ai/harness-llm', LlmRuntime],
-      ['@deepseek-ai/dsh-tools', ToolRuntime],
+      ['@berry-ai/harness-tools', ToolRuntime],
       ['@berry-ai/harness-fs-local', LocalFileSystem],
       ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],
       ['@berry-ai/harness-sandbox-local', LocalSandbox],
@@ -64,12 +64,12 @@ describe('worktree tool through real Loader composition', () => {
       ['@deepseek-ai/dsh-working-directory', WorkingDirectoryService],
       ['@deepseek-ai/dsh-experimental-worktree', WorktreeService],
       ['@deepseek-ai/dsh-experimental-tool-worktree', ToolWorktree],
-      ['@deepseek-ai/dsh-agent-loop', AgentLoop],
+      ['@berry-ai/harness-agent-loop', AgentLoop],
     ])
     const config = [...modules.keys()].flatMap(name => [
       `- name: 'cordis:${name}'`,
       ...name === '@berry-ai/harness-sandbox-policy' ? ['  config:', '    mode: danger-full-access'] : [],
-      ...name === '@deepseek-ai/dsh-agent-loop' ? ['  config:', '    agents: []'] : [],
+      ...name === '@berry-ai/harness-agent-loop' ? ['  config:', '    agents: []'] : [],
     ]).join('\n') + '\n'
     const configPath = join(root, 'cordis.yml')
     await writeFile(configPath, config)

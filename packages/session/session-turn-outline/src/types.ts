@@ -7,7 +7,7 @@
  * @module @deepseek-ai/dsh-session-turn-outline/types
  */
 
-import type { SessionSeq } from '@deepseek-ai/dsh-session/types'
+import type { SessionSeq } from '@berry-ai/harness-session/types'
 
 export {}
 

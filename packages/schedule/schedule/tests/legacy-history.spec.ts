@@ -3,8 +3,8 @@
  * `schedule/change` stream is unreadable.
  */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import { SessionId, SessionSeq } from '@berry-ai/harness-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 import { harness } from './harness.ts'
 
 const tests: Awaited<ReturnType<typeof harness>>[] = []

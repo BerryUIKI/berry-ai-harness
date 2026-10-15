@@ -7,7 +7,7 @@
 
 import { z } from 'zod'
 import { brandString } from '@berry-ai/harness-brand'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionId } from '@berry-ai/harness-session'
 import { defineDomain, domainTable } from '@berry-ai/harness-storage-domain'
 import type { WorkspaceId } from './types.ts'
 

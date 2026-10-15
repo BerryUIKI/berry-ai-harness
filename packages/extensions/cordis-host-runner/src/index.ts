@@ -7,7 +7,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import type { Fiber } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { createUserMessage } from '@berry-ai/harness-llm'
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

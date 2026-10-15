@@ -6,7 +6,7 @@
 import { RemoteStreamCarrierError } from '@deepseek-ai/dsh-api-gateway/client'
 import { ok, type RemoteMock } from '@deepseek-ai/dsh-remote-mock'
 import { createClientTest, type TestClient, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import { isTypertOwnedValue } from '@berry-ai/harness-typert-protocol'
 import { afterEach, describe, expect, vi, type MockInstance } from 'vitest'

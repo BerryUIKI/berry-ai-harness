@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-agent-default-model",
+  "name": "@berry-ai/harness-agent-default-model",
   "description": "Default model selection shared by Agent entry points",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -31,12 +31,12 @@
     "@berry-ai/harness-config-editor": "workspace:*"
   },
   "peerDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-settings": "workspace:*"

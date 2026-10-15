@@ -16,9 +16,9 @@ describe('generated tsconfig package aliases', () => {
   it('maps each package to its own source directory', () => {
     const aliases = collectPackageAliases()
     expect(aliases.length).toBeGreaterThan(100)
-    const session = aliases.find(alias => alias.specifier === '@deepseek-ai/dsh-session')
+    const session = aliases.find(alias => alias.specifier === '@berry-ai/harness-session')
     expect(session).toEqual({
-      specifier: '@deepseek-ai/dsh-session',
+      specifier: '@berry-ai/harness-session',
       source: './packages/core/session/src',
     })
     // Sorted, so a package added anywhere lands in a stable spot in the diff.

@@ -1,6 +1,6 @@
 /** Durable Host-wide Schedule tasks, independently of Session activation. */
 import { z } from 'zod'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import { MessageId } from '@berry-ai/harness-llm/brand'
 import { defineDomain, domainTable } from '@berry-ai/harness-storage-domain'
 import { decodeScheduleRecord } from './domain.ts'

@@ -9,7 +9,7 @@
  */
 
 import { stat } from 'node:fs/promises'
-import type { SessionHeader, SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionHeader, SessionId } from '@berry-ai/harness-session'
 import type { KvTable } from '@berry-ai/harness-storage-domain'
 import type { WorkspaceRecord } from './spec.ts'
 import type { Workspace, WorkspaceId } from './types.ts'

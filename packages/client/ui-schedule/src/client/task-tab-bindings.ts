@@ -18,7 +18,7 @@
  * succeeded after the tab appeared cannot resolve. Only the task's Session and id are stored; its name, instruction, and
  * deliveries are not.
  */
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { ScheduleId } from '@berry-ai/harness-schedule/client'
 
 /** The Sidebar fields that identify one task tab page across a reload. */

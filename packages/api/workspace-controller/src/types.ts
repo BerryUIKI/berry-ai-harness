@@ -5,7 +5,7 @@
  * restated: a browser consumer reads the very declaration the backend answers.
  */
 
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SessionActivity, WorkspaceId } from '@berry-ai/harness-workspace/types'
 
 export type { WorkspaceId } from '@berry-ai/harness-workspace/types'

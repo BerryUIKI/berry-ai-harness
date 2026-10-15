@@ -11,7 +11,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import { CommandDefinitionId } from '@berry-ai/harness-commands/brand'
 import type { CommandInvocation, CommandResult } from '@berry-ai/harness-commands'
-import type { Session } from '@deepseek-ai/dsh-session'
+import type { Session } from '@berry-ai/harness-session'
 import { getOrCreateAnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import { TypertRemoteService, Remote } from '@berry-ai/harness-typert-protocol'
 import type {

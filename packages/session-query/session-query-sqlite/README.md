@@ -34,7 +34,7 @@ Choose it when you want full-text recall over prior sessions with ranking and pa
 ### Minimal configuration
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
+- name: '@berry-ai/harness-session'
 - name: '@berry-ai/harness-session-query-sqlite'
   config:
     path: /absolute/path/to/session-search.db

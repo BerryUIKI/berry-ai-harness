@@ -6,7 +6,7 @@ import { ChatSnapshotBuilder } from '@deepseek-ai/dsh-client-ui-chat/src/client/
 import type { ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
 import { ConversationGroupStore } from '@deepseek-ai/dsh-client-ui-conversation/src/client/conversation/group-store.ts'
 import type { ConversationBinding, ConversationSnapshot, GroupKey, NodeKey } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { ChatNodeModel } from '../src/client/views/chat-node/model.ts'
 import { InspectorObjectValue } from '../src/client/views/object-value.ts'
 import { chatNodeWithLocation } from './chat-node-fixture.client.ts'

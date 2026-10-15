@@ -11,7 +11,7 @@
  */
 
 import { joinAssistantStreamText, type ContentBlock } from '@berry-ai/harness-llm'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 
 /**
  * Incremental fold of the selection rule, for backends that observe a child's

@@ -1,6 +1,6 @@
 /** Plan text and resource identities derived from logged native or PTC calls. */
 import type { ToolCallId } from '@berry-ai/harness-llm/brand'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SessionAddress } from '@deepseek-ai/dsh-api-session-controller/types'
 
 /** Complete Markdown and the heading displayed by a plan preview. */

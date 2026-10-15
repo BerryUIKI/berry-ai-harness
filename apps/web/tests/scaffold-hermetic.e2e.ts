@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { expect, it } from 'vitest'
 import type {} from '@berry-ai/harness-skill'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-agent-preset-registry'
 import { launchWebScaffold, type WebScaffold } from './scaffold.ts'
 

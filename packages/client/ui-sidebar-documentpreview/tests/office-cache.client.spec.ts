@@ -2,7 +2,7 @@
 import type { OfficeToPdfGeneration } from '@berry-ai/harness-office-to-pdf/types'
 import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
 import { expect, it, vi } from 'vitest'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SessionFile } from '../src/client/rpc.ts'
 import type { ReadOfficeDocument } from '../src/client/office/cache.ts'
 import { OfficePreviewCache } from '../src/client/office/cache.ts'

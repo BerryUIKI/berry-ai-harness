@@ -3,7 +3,7 @@ import type {
   ConversationMatch, ConversationNodeContext, ConversationNodeDefinition, StartedToolCall,
   ToolResultNode,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-tools/types'
+import type {} from '@berry-ai/harness-tools/types'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import { trajectoryNode } from './trajectory-definition-common.ts'
 

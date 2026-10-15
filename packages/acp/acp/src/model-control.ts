@@ -2,7 +2,7 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { SessionConfigOption, SessionConfigValueId } from '@agentclientprotocol/sdk'
-import { installModelSelection, type ModelSelection, type ModelSelectionRef } from '@deepseek-ai/dsh-agent'
+import { installModelSelection, type ModelSelection, type ModelSelectionRef } from '@berry-ai/harness-agent'
 import { ReasoningEffortId, type LlmCallConfig, type LlmRuntime } from '@berry-ai/harness-llm'
 
 const MODEL_CONFIG_ID = 'model'

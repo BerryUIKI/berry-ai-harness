@@ -1,5 +1,5 @@
 /** Temporary review previews carry their document in in-memory tab navigation. */
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { PlanDocument } from './plan.ts'
 
 declare module '@deepseek-ai/dsh-client-ui-sidebar-right/client' {

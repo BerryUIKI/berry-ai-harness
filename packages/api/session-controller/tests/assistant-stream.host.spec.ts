@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { LlmAttemptId } from '@berry-ai/harness-llm'
-import { SessionSeq } from '@deepseek-ai/dsh-session'
+import { SessionSeq } from '@berry-ai/harness-session'
 import { SessionAssistantStreamAccumulator } from '../src/assistant-stream.ts'
 
 describe('SessionAssistantStreamAccumulator', () => {

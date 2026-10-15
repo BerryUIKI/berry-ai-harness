@@ -9,11 +9,11 @@
  * @module @deepseek-ai/dsh-subagent/types
  */
 
-import type { Agent, AgentOptions } from '@deepseek-ai/dsh-agent'
+import type { Agent, AgentOptions } from '@berry-ai/harness-agent'
 import type { Branded } from '@berry-ai/harness-brand'
 import type { ContentBlock, MessageId } from '@berry-ai/harness-llm'
-import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session'
-import type { ObjectJsonSchema, ToolRestriction } from '@deepseek-ai/dsh-tools'
+import type { SessionEvent, SessionId } from '@berry-ai/harness-session'
+import type { ObjectJsonSchema, ToolRestriction } from '@berry-ai/harness-tools'
 
 /** Identifies one accepted subagent run across its lifecycle event pair. */
 export type SubagentRunId = Branded<'SubagentRunId'>

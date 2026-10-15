@@ -131,7 +131,7 @@ describe('client bundle purity gate', () => {
   })
 
   it('lets inline-safe libraries inline', () => {
-    expect(resolveId('@deepseek-ai/dsh-session/surface')).toBeNull()
+    expect(resolveId('@berry-ai/harness-session/surface')).toBeNull()
     expect(resolveId('@berry-ai/harness-brand')).toBeNull()
     expect(resolveId('@berry-ai/harness-deque')).toBeNull()
     expect(resolveId('@berry-ai/harness-util-values')).toBeNull()
@@ -162,7 +162,7 @@ describe('client bundle purity gate', () => {
   })
 
   it('throws on any other @deepseek-ai leak', () => {
-    expect(() => resolveId('@deepseek-ai/dsh-agent')).toThrow(/purity/)
+    expect(() => resolveId('@berry-ai/harness-agent')).toThrow(/purity/)
     expect(() => resolveId('@deepseek-ai/dsh-client-web')).toThrow(/purity/)
   })
 

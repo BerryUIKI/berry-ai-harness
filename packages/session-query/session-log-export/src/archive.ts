@@ -27,9 +27,9 @@ import type {
   AttachmentStore, FileAttachmentRef, ImageAttachmentRef,
 } from '@berry-ai/harness-attachment'
 import type { SessionLineageNode, SessionQueryEngine } from '@berry-ai/harness-session-query'
-import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
+import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 import { sessionFormatLogFilename } from '@deepseek-ai/dsh-session-format'
-import type { SessionEvent, SessionHeader, SessionId, SessionStore } from '@deepseek-ai/dsh-session'
+import type { SessionEvent, SessionHeader, SessionId, SessionStore } from '@berry-ai/harness-session'
 import type { SessionHandle, SessionPersistence } from '@deepseek-ai/dsh-session-persistence'
 import { SessionPersistenceNotFoundError } from '@deepseek-ai/dsh-session-persistence'
 

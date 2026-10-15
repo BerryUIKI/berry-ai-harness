@@ -54,24 +54,24 @@ describe('plugin compatibility', () => {
 
   it.each(['*', '^0.1.0', '~0.1.0', '>=0.1.0 <0.2.0', '0.1.x', '0.1.0 - 0.1.9', '^0.2.0 || ^0.1.0', runtime])(
     'includes prereleases in supported semver range %s', (range) => {
-      expect(check({ '@deepseek-ai/dsh': range, '@deepseek-ai/dsh-session': range })).toBeUndefined()
+      expect(check({ '@deepseek-ai/dsh': range, '@berry-ai/harness-session': range })).toBeUndefined()
     },
   )
 
   it.each(['workspace:^', 'workspace:~', 'workspace:*'])('uses the source runtime for %s', (range) => {
-    expect(check({ '@deepseek-ai/dsh-session': range })).toBeUndefined()
+    expect(check({ '@berry-ai/harness-session': range })).toBeUndefined()
   })
 
   it('checks the intersection of dsh requirements and returns only mismatches', () => {
     expect(check({
       '@deepseek-ai/dsh': '^0.1.0',
-      '@deepseek-ai/dsh-session': '>=0.2.0',
-      '@deepseek-ai/dsh-tools': '<0.1.0',
+      '@berry-ai/harness-session': '>=0.2.0',
+      '@berry-ai/harness-tools': '<0.1.0',
       '@deepseek-ai/cordis': '^99.0.0',
     })).toEqual({
       ...identity,
       runtimeVersion: runtime,
-      peers: { '@deepseek-ai/dsh-session': '>=0.2.0', '@deepseek-ai/dsh-tools': '<0.1.0' },
+      peers: { '@berry-ai/harness-session': '>=0.2.0', '@berry-ai/harness-tools': '<0.1.0' },
       exempted: false,
     })
   })
@@ -116,7 +116,7 @@ describe('plugin compatibility', () => {
   it('ignores inherited peer declarations and inherited peer entries', () => {
     expect(evaluatePluginCompatibility(Object.create(incompatible) as object, {}, runtime)).toBeUndefined()
     expect(check(Object.create(incompatible.peerDependencies) as object)).toBeUndefined()
-    expect(check(Object.assign(Object.create({ '@deepseek-ai/dsh': '^99' }) as object, { '@deepseek-ai/dsh-session': '*' }))).toBeUndefined()
+    expect(check(Object.assign(Object.create({ '@deepseek-ai/dsh': '^99' }) as object, { '@berry-ai/harness-session': '*' }))).toBeUndefined()
   })
 
   it('rejects an invalid explicit runtime even when no peers are declared', () => {
@@ -164,10 +164,10 @@ describe('compatibility warning', () => {
   it.each([false, true])('retains mismatch details and risk when exemption status is %s', (exempted) => {
     expect(pluginCompatibilityWarning({
       ...identity, runtimeVersion: runtime,
-      peers: { '@deepseek-ai/dsh': '^0.2.0', '@deepseek-ai/dsh-session': 'broken' }, exempted,
+      peers: { '@deepseek-ai/dsh': '^0.2.0', '@berry-ai/harness-session': 'broken' }, exempted,
     })).toBe(
       'Plugin @example/plugin@2.0.0 is incompatible with dsh 0.1.7-alpha.1: '
-      + 'peerDependencies {"@deepseek-ai/dsh":"^0.2.0","@deepseek-ai/dsh-session":"broken"}. '
+      + 'peerDependencies {"@deepseek-ai/dsh":"^0.2.0","@berry-ai/harness-session":"broken"}. '
       + 'Running it may cause crashes or data loss. '
       + 'Update the plugin or install a plugin version compatible with this dsh runtime. '
       + 'To accept this risk explicitly, grant the exact-version exemption for @example/plugin@2.0.0 on dsh 0.1.7-alpha.1 '

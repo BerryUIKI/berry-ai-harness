@@ -7,7 +7,7 @@
 import { randomUUID } from 'node:crypto'
 import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import { createUserMessage, type ToolCallId } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 declare module '@berry-ai/harness-llm' {
@@ -16,10 +16,10 @@ declare module '@berry-ai/harness-llm' {
   }
 }
 
-import { scopeTarget } from '@deepseek-ai/dsh-scope'
-import type { Session } from '@deepseek-ai/dsh-session'
-import { SessionSeq } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-system-prompt'
+import { scopeTarget } from '@berry-ai/harness-scope'
+import type { Session } from '@berry-ai/harness-session'
+import { SessionSeq } from '@berry-ai/harness-session'
+import type {} from '@berry-ai/harness-system-prompt'
 
 declare module '@deepseek-ai/cordis' {
   interface Context {
@@ -27,7 +27,7 @@ declare module '@deepseek-ai/cordis' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /**
      * The session's approval policy was switched — log-only, durable,

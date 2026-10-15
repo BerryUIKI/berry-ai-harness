@@ -9,10 +9,10 @@
 
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import SessionStore from '@deepseek-ai/dsh-session'
-import type { Session } from '@deepseek-ai/dsh-session'
+import AgentRegistry from '@berry-ai/harness-agent'
+import type { Agent } from '@berry-ai/harness-agent'
+import SessionStore from '@berry-ai/harness-session'
+import type { Session } from '@berry-ai/harness-session'
 import { CommandId } from '@berry-ai/harness-commands/brand'
 // Side-effect type imports: the configuration-event SessionEventMap merges.
 import type {} from '@berry-ai/harness-permission-presets'

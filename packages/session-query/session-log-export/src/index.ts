@@ -6,7 +6,7 @@ import Schema from '@deepseek-ai/schemastery'
 import { brandString } from '@berry-ai/harness-brand'
 import type {} from '@berry-ai/harness-attachment'
 import type { CommandResult } from '@berry-ai/harness-commands'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import {
   DEFAULT_SESSION_LOG_COMPRESSION_LEVEL,
   flushLiveSessionLog,

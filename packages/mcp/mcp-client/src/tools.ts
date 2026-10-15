@@ -19,9 +19,9 @@ import type { Context } from '@deepseek-ai/cordis'
 import { isImageAdmissionError } from '@berry-ai/harness-attachment'
 import type { AttachmentStore, ImageAttachmentRef, ImageMediaType, SaveImageAttachment } from '@berry-ai/harness-attachment'
 import type { ContentBlock } from '@berry-ai/harness-llm'
-import type { ToolDefinition, ToolExecution, ToolExecutionResult } from '@deepseek-ai/dsh-tools'
-import { assertSupportedJsonSchema } from '@deepseek-ai/dsh-tools'
-import type { JsonSchemaNode } from '@deepseek-ai/dsh-tools'
+import type { ToolDefinition, ToolExecution, ToolExecutionResult } from '@berry-ai/harness-tools'
+import { assertSupportedJsonSchema } from '@berry-ai/harness-tools'
+import type { JsonSchemaNode } from '@berry-ai/harness-tools'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 
 /** Resolved options relevant to tool bridging. */

@@ -13,7 +13,7 @@ import {
   SESSION_FORMAT_VERSION,
   Session,
   SessionId,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 // Carries the session/title event declaration into this fixture builder.
 import type {} from '@deepseek-ai/dsh-session-title'
 

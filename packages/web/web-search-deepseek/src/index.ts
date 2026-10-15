@@ -10,11 +10,11 @@ import type { Volatile } from '@deepseek-ai/cordis'
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type {} from '@deepseek-ai/dsh-agent'
+import type {} from '@berry-ai/harness-agent'
 import { credentialRef } from '@berry-ai/harness-credentials'
 import type {} from '@berry-ai/harness-deepseek-account'
 import { launchEnvironmentOf } from '@berry-ai/harness-launch-environment'
-import type {} from '@deepseek-ai/dsh-session'
+import type {} from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-web'
 import {
   DeepSeekSearchProvider,

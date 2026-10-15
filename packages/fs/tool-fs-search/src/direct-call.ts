@@ -1,7 +1,7 @@
 /** Shared top-level-call post-policy selection for search result spill. @module dsh-tool-fs-search/direct-call */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { PostToolDecision, ToolDefinition, ToolExecution, ToolExecutionResult } from '@deepseek-ai/dsh-tools'
+import type { PostToolDecision, ToolDefinition, ToolExecution, ToolExecutionResult } from '@berry-ai/harness-tools'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 
 /**

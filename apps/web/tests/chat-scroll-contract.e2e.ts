@@ -11,10 +11,10 @@ import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import type { AssistantStreamFrame } from '@deepseek-ai/dsh-agent'
+import type { AssistantStreamFrame } from '@berry-ai/harness-agent'
 import type { ReplayEntry, ReplayOverrideDoc } from '@deepseek-ai/dsh-llm-replay'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
+import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 import { createChatScrollFixture, type ChatScrollFixture } from './chat-scroll-fixture.ts'
 import {
   launchWebScaffold,

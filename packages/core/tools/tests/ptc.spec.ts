@@ -4,17 +4,17 @@ import { Context } from '@deepseek-ai/cordis'
 import { createUserMessage, ToolCallId  } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import type { ToolSchema } from '@berry-ai/harness-llm'
-import { createScope } from '@deepseek-ai/dsh-scope'
-import type { Scope } from '@deepseek-ai/dsh-scope'
-import SystemPrompt, { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
+import { createScope } from '@berry-ai/harness-scope'
+import type { Scope } from '@berry-ai/harness-scope'
+import SystemPrompt, { renderPrompt } from '@berry-ai/harness-system-prompt'
 import { PtcRuntime } from '@berry-ai/harness-ptc-runtime'
 import type { PtcRunRequest, PtcRunResult } from '@berry-ai/harness-ptc-runtime'
-import ToolRuntime, { CodeRunFailedError, RUN_CODE_NAME, TOOL_ABORTED_BEFORE_DISPATCH, defineContentToolFixture, defineTool } from '@deepseek-ai/dsh-tools'
-import type { Config, JsonSchemaNode, PostToolDecision, ToolExecutionResult } from '@deepseek-ai/dsh-tools'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
+import ToolRuntime, { CodeRunFailedError, RUN_CODE_NAME, TOOL_ABORTED_BEFORE_DISPATCH, defineContentToolFixture, defineTool } from '@berry-ai/harness-tools'
+import type { Config, JsonSchemaNode, PostToolDecision, ToolExecutionResult } from '@berry-ai/harness-tools'
+import type { Agent } from '@berry-ai/harness-agent'
+import { Session, SessionId } from '@berry-ai/harness-session'
 import ApprovalService, { type ApprovalOutcome, type ApprovalRequest } from '@berry-ai/harness-user-approval'
-import type { SessionEventMap } from '@deepseek-ai/dsh-session'
+import type { SessionEventMap } from '@berry-ai/harness-session'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
 import SessionProjections from '@deepseek-ai/dsh-session-projection'
@@ -2071,7 +2071,7 @@ describe('per-agent presentation', () => {
   })
 
   it('inherits a STANDING preset scope\'s mode down the chain, agents beside it unaffected', async () => {
-    const { bindScopeParent } = await import('@deepseek-ai/dsh-scope')
+    const { bindScopeParent } = await import('@berry-ai/harness-scope')
     const { ctx, systemPrompt } = await setup({ mode: 'native' })
     const calls = registerEcho(ctx)
     // The preset's standing scope declares once; the agent only PARENTS to it

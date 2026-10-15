@@ -26,7 +26,7 @@ import type {
 } from '@berry-ai/harness-llm'
 import { deadline, MAX_TIMER_DELAY_MS } from '@berry-ai/harness-timeout'
 import { assertNever, deepFreeze } from '@berry-ai/harness-util-values'
-import type { SessionSeq } from '@deepseek-ai/dsh-session'
+import type { SessionSeq } from '@berry-ai/harness-session'
 import { SessionTitleProviderId } from '@deepseek-ai/dsh-session-title'
 import type {
   SessionTitleModelIdentity,
@@ -51,7 +51,7 @@ export interface SessionTitleLlmRequestEventData {
   readonly reasoningEffort?: ReasoningEffortId
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /** Log-only pre-dispatch record of one session-title model request. */
     'session/title-llm-request': SessionTitleLlmRequestEventData

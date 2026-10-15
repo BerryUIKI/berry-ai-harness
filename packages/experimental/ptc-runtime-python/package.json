@@ -40,7 +40,7 @@
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-sandbox-local": "workspace:*",
     "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*"
+    "@berry-ai/harness-session": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"

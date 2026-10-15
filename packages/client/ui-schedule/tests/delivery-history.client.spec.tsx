@@ -5,7 +5,7 @@ import { act, cleanup, fireEvent, render, screen, within } from '@testing-librar
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { makeTranslate, RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
 import type { ScheduleDeliveryRecord, ScheduleId } from '@berry-ai/harness-schedule/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { DeliveryHistory, type DeliveryHistoryInjected } from '../src/client/DeliveryHistory.tsx'
 import { formatScheduleNextRun } from '../src/client/schedule-format.ts'
 import { zoneDifferingFrom, zoneOffsetMinutes } from './zone-fixture.ts'

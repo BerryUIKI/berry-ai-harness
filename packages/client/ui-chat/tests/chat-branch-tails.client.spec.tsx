@@ -675,7 +675,7 @@ describe('MessageItem arms', () => {
           form: 'snapshot',
           sections: [{ name: 'sandbox:policy', text: 'workspace-write' }, { name: 'workspace', text: '/repo' }],
         },
-        producer: { role: 'inject', label: '@deepseek-ai/dsh-system-prompt' },
+        producer: { role: 'inject', label: '@berry-ai/harness-system-prompt' },
         form: 'snapshot',
       } as never}
       />,

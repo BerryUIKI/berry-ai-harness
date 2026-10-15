@@ -24,10 +24,10 @@ import type {
   StreamChunk,
   TokenUsage,
 } from '@berry-ai/harness-llm'
-import SessionStore, { Session, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
+import SessionStore, { Session, SessionId, SessionSeq } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import TokenMeter from '@berry-ai/harness-token-meter'
-import { agentEvents, type Agent, type RequestErrorAction } from '@deepseek-ai/dsh-agent'
+import { agentEvents, type Agent, type RequestErrorAction } from '@berry-ai/harness-agent'
 import ToolResultPruner from '@berry-ai/harness-compaction-tool-result-pruner'
 
 declare module '@berry-ai/harness-llm' {

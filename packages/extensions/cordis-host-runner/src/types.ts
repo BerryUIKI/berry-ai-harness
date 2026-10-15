@@ -4,7 +4,7 @@
  */
 
 import type { Branded } from '@berry-ai/harness-brand'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 
 /** Stable identity of one dynamic plugin instance. */

@@ -13,7 +13,7 @@ import type {
   SessionHeader,
   SessionId,
   SessionLogOffset,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
 import type { SubagentCatalogEntry } from './projection-types.ts'
 
@@ -35,7 +35,7 @@ export type SubagentCatalogEvent =
     | { readonly version: 2; readonly mode: 'external'; readonly label?: string }
   )
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /**
      * A direct child's identity and available discovery fields.

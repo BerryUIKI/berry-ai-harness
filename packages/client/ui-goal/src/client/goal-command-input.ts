@@ -1,4 +1,4 @@
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+import type { SessionEvent } from '@berry-ai/harness-session/types'
 import type { CommandId } from '@berry-ai/harness-commands/brand'
 import type {} from '@berry-ai/harness-commands/types'
 import type {

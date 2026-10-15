@@ -123,7 +123,7 @@ class ReleasedV2ToV3Stage implements SessionFormatMigrationStage {
         ...this.step,
         message: {
           id,
-          role: 'system', source: { kind: 'plugin', plugin: '@deepseek-ai/dsh-system-prompt' },
+          role: 'system', source: { kind: 'plugin', plugin: '@berry-ai/harness-system-prompt' },
           content: prompt === '' ? [] : [{ type: 'text', text: prompt }],
         },
       },

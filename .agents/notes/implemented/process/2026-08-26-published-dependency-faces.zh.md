@@ -18,7 +18,7 @@ Client 构建输入由发布 profile 选择，而 Host value import 由导入它
 
 [`package-dependency-policy.ts`](../../../../scripts/package-dependency-policy.ts) 提供显式 Client 门面 include 与 exclude 列表。include 用于没有 `dsh.client` 的例外包，exclude 用于移除 `packages/client/` 之外自动发现的双面包。验证器拒绝未知、失效、冗余、重复、相互重叠和无法生效的配置项。include 列表为空；exclude 列表包含 `@deepseek-ai/dsh-api-session-controller` 和 `@deepseek-ai/dsh-api-workspace-controller`。把 Session Controller 加回会多迁移九条 Host 边，而五次候选复测的 resolver 中位数仅改善 0.15 秒。
 
-Host-only 包通过另一份显式列表加入同一策略。该列表包含 `@berry-ai/harness-llm` 和 `@deepseek-ai/dsh-session`；源码 import 不会自动扩大列表。
+Host-only 包通过另一份显式列表加入同一策略。该列表包含 `@berry-ai/harness-llm` 和 `@berry-ai/harness-session`；源码 import 不会自动扩大列表。
 
 ### 依赖区段
 

@@ -1,6 +1,6 @@
 /** Wire types for lossless incremental DeepSeek session-log upload. */
 
-import type { SessionEvent, SurfaceEventType } from '@deepseek-ai/dsh-session'
+import type { SessionEvent, SurfaceEventType } from '@berry-ai/harness-session'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 
 /** Session header fields serialized as raw JSON primitives on the external request wire. */
@@ -75,16 +75,16 @@ declare module '@berry-ai/harness-deepseek-llm-api-extensions/types' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /** Records that the configured endpoint accepted one delivery through `throughSeq`. */
     'session-log-deepseek/delivery-accepted': {
       /** Session identity the accepted delivery carried; inherited fork markers retain the parent's id. */
-      sessionId: import('@deepseek-ai/dsh-session/types').SessionId
+      sessionId: import('@berry-ai/harness-session/types').SessionId
       /** Accepted Session format generation; absence identifies version 0. */
       sessionFormatVersion?: number
       /** Last canonical event included in the accepted request. */
-      throughSeq: import('@deepseek-ai/dsh-session/types').SessionSeq
+      throughSeq: import('@berry-ai/harness-session/types').SessionSeq
     }
   }
 }

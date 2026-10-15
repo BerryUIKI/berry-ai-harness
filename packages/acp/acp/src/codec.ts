@@ -4,7 +4,7 @@
  */
 
 import type { StopReason } from '@agentclientprotocol/sdk'
-import type { TurnEndReason } from '@deepseek-ai/dsh-session'
+import type { TurnEndReason } from '@berry-ai/harness-session'
 
 /**
  * Map a harness turn ending to ACP's terminal reason vocabulary.

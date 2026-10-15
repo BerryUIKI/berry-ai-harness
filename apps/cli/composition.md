@@ -20,7 +20,7 @@ flowchart LR
   cfg --> plugin_dsh_base_llm
   plugin_dsh_base_deepseek_llm_api_extensions["deepseek-llm-api-extensions<br/>@berry-ai/harness-deepseek-llm-api-extensions"]
   cfg --> plugin_dsh_base_deepseek_llm_api_extensions
-  plugin_dsh_base_session["session<br/>@deepseek-ai/dsh-session"]
+  plugin_dsh_base_session["session<br/>@berry-ai/harness-session"]
   cfg --> plugin_dsh_base_session
   plugin_dsh_base_session_log_deepseek["session-log-deepseek<br/>@deepseek-ai/dsh-session-log-deepseek"]
   cfg --> plugin_dsh_base_session_log_deepseek
@@ -36,11 +36,11 @@ flowchart LR
   cfg --> plugin_dsh_base_session_title_llm
   plugin_dsh_base_user_questions["user-questions<br/>@berry-ai/harness-user-questions"]
   cfg --> plugin_dsh_base_user_questions
-  plugin_dsh_base_agent["agent<br/>@deepseek-ai/dsh-agent"]
+  plugin_dsh_base_agent["agent<br/>@berry-ai/harness-agent"]
   cfg --> plugin_dsh_base_agent
   plugin_dsh_base_plugin_package_inventory_deepseek["plugin-package-inventory-deepseek<br/>@berry-ai/harness-plugin-package-inventory-deepseek"]
   cfg --> plugin_dsh_base_plugin_package_inventory_deepseek
-  plugin_dsh_base_agent_default_model["agent-default-model<br/>@deepseek-ai/dsh-agent-default-model"]
+  plugin_dsh_base_agent_default_model["agent-default-model<br/>@berry-ai/harness-agent-default-model"]
   cfg --> plugin_dsh_base_agent_default_model
   plugin_dsh_base_jobs["jobs<br/>@berry-ai/harness-jobs-local"]
   cfg --> plugin_dsh_base_jobs
@@ -184,11 +184,11 @@ flowchart LR
   cfg --> plugin_dsh_base_tool_web
   plugin_dsh_base_mcp_resources["mcp-resources<br/>@berry-ai/harness-mcp-resources"]
   cfg --> plugin_dsh_base_mcp_resources
-  plugin_dsh_base_tools["tools<br/>@deepseek-ai/dsh-tools"]
+  plugin_dsh_base_tools["tools<br/>@berry-ai/harness-tools"]
   cfg --> plugin_dsh_base_tools
-  plugin_dsh_base_system_prompt["system-prompt<br/>@deepseek-ai/dsh-system-prompt"]
+  plugin_dsh_base_system_prompt["system-prompt<br/>@berry-ai/harness-system-prompt"]
   cfg --> plugin_dsh_base_system_prompt
-  plugin_dsh_base_agent_loop["agent-loop<br/>@deepseek-ai/dsh-agent-loop"]
+  plugin_dsh_base_agent_loop["agent-loop<br/>@berry-ai/harness-agent-loop"]
   cfg --> plugin_dsh_base_agent_loop
   plugin_dsh_base_fs_sandbox["fs-sandbox<br/>@berry-ai/harness-fs-sandbox"]
   cfg --> plugin_dsh_base_fs_sandbox
@@ -206,7 +206,7 @@ flowchart LR
 | `hmr` | `@berry-ai/harness-hmr` |
 | `llm` | `@berry-ai/harness-llm` |
 | `deepseek-llm-api-extensions` | `@berry-ai/harness-deepseek-llm-api-extensions` |
-| `session` | `@deepseek-ai/dsh-session` |
+| `session` | `@berry-ai/harness-session` |
 | `session-log-deepseek` | `@deepseek-ai/dsh-session-log-deepseek` |
 | `typert` | `@berry-ai/harness-typert-registry` |
 | `typert-loader` | `@berry-ai/harness-typert-loader` |
@@ -214,9 +214,9 @@ flowchart LR
 | `session-title` | `@deepseek-ai/dsh-session-title` |
 | `session-title-llm` | `@deepseek-ai/dsh-session-title-first-prompt-llm` |
 | `user-questions` | `@berry-ai/harness-user-questions` |
-| `agent` | `@deepseek-ai/dsh-agent` |
+| `agent` | `@berry-ai/harness-agent` |
 | `plugin-package-inventory-deepseek` | `@berry-ai/harness-plugin-package-inventory-deepseek` |
-| `agent-default-model` | `@deepseek-ai/dsh-agent-default-model` |
+| `agent-default-model` | `@berry-ai/harness-agent-default-model` |
 | `jobs` | `@berry-ai/harness-jobs-local` |
 | `llm-retry` | `@berry-ai/harness-llm-retry` |
 | `config-editor` | `@berry-ai/harness-config-editor` |
@@ -288,9 +288,9 @@ flowchart LR
 | `web-fetch-http` | `@berry-ai/harness-web-fetch-http` |
 | `tool-web` | `@berry-ai/harness-tool-web` |
 | `mcp-resources` | `@berry-ai/harness-mcp-resources` |
-| `tools` | `@deepseek-ai/dsh-tools` |
-| `system-prompt` | `@deepseek-ai/dsh-system-prompt` |
-| `agent-loop` | `@deepseek-ai/dsh-agent-loop` |
+| `tools` | `@berry-ai/harness-tools` |
+| `system-prompt` | `@berry-ai/harness-system-prompt` |
+| `agent-loop` | `@berry-ai/harness-agent-loop` |
 | `fs-sandbox` | `@berry-ai/harness-fs-sandbox` |
 | `llm-deepseek` | `@berry-ai/harness-llm-deepseek-api-key` |
 | `llm-deepseek-account` | `@berry-ai/harness-llm-deepseek-account` |

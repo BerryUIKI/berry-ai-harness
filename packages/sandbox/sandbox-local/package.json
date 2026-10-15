@@ -30,7 +30,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*"
+    "@berry-ai/harness-session": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-sandbox-windows-acl": "workspace:*",
@@ -42,6 +42,6 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*"
+    "@berry-ai/harness-session": "workspace:*"
   }
 }

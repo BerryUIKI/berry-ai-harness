@@ -9,9 +9,9 @@ import {
   adoptSessionEvent,
   KNOWN_SESSION_EVENT_TYPES,
   SESSION_FORMAT_VERSION,
-} from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
 import { snapshotJsonValue } from '@berry-ai/harness-util-values'
-import type { SessionEvent, SessionHeader, SessionId } from '@deepseek-ai/dsh-session'
+import type { SessionEvent, SessionHeader, SessionId } from '@berry-ai/harness-session'
 import {
   SessionFormatUnsupportedError,
   SessionPersistenceCorruptionError,

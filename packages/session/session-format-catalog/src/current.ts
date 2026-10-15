@@ -5,8 +5,8 @@ import {
   Session,
   SessionId,
   SessionLogOffset,
-} from '@deepseek-ai/dsh-session'
-import type { SessionEvent, SessionHeader } from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
+import type { SessionEvent, SessionHeader } from '@berry-ai/harness-session'
 import type { SessionFormatArtifact, SessionFormatHeader } from '@deepseek-ai/dsh-session-format'
 import { currentSessionMessageProjections } from './message-projections.ts'
 

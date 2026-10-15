@@ -1,8 +1,8 @@
 /** Developer field classification matches native admission and metadata preservation. */
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { Session, SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
-import type { SessionEvent, SessionHeader } from '@deepseek-ai/dsh-session'
+import { Session, SessionId, SessionLogOffset } from '@berry-ai/harness-session'
+import type { SessionEvent, SessionHeader } from '@berry-ai/harness-session'
 import type { SessionFormatEvent } from '@deepseek-ai/dsh-session-format'
 import { sessionFormatCatalog } from '@deepseek-ai/dsh-session-format-catalog'
 import { canonicalizeSchema, schemaDigest } from './persistence-schema-model.ts'

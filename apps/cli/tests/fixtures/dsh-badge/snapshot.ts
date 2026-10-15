@@ -1,10 +1,10 @@
 import { fileURLToPath } from 'node:url'
-import { agentEvents, type Agent } from '@deepseek-ai/dsh-agent'
+import { agentEvents, type Agent } from '@berry-ai/harness-agent'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import { boot, loadOverlayPatches } from '@berry-ai/harness-app-boot'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-skill'
-import type {} from '@deepseek-ai/dsh-tools'
+import type {} from '@berry-ai/harness-tools'
 import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
 
 const overlayPath = process.argv[2]

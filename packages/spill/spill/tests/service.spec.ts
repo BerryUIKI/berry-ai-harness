@@ -8,7 +8,7 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import { SpillLocator, SpillStore } from '@berry-ai/harness-spill'
 import type { SaveTextSpill, SpillRef } from '@berry-ai/harness-spill'
 

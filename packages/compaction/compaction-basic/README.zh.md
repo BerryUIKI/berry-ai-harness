@@ -36,7 +36,7 @@ kind: "package-reference"
 挂载会话存储、token 测量、可选修剪器、本后端，以及可选的按需命令：
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
+- name: '@berry-ai/harness-session'
 - name: '@berry-ai/harness-token-meter'
 - name: '@berry-ai/harness-compaction-tool-result-pruner'
 - name: '@berry-ai/harness-compaction-basic'

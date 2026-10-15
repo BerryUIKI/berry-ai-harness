@@ -35,7 +35,7 @@ Use `mountAgentLoopTestHarness()` when the test covers durable Inbox events, pro
 
 ```ts
 import { Context } from '@deepseek-ai/cordis'
-import { SessionId, type UserMessage } from '@deepseek-ai/dsh-session'
+import { SessionId, type UserMessage } from '@berry-ai/harness-session'
 import {
   mountAgentLoopTestDependencies,
   mountAgentLoopTestHarness,

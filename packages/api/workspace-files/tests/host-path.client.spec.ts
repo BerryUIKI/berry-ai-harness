@@ -1,5 +1,5 @@
 /** Host-resolved file identities across pending stats, reconnects, and disposal. */
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import { sessionFileAddress } from '@berry-ai/harness-util-workspace-path'

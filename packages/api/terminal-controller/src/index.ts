@@ -1,8 +1,8 @@
 /** Session-owned user terminals with the execution environment's system-user permissions. */
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { Agent } from '@berry-ai/harness-agent'
+import type { SessionId } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-sandbox-policy'
 import type {} from '@deepseek-ai/dsh-working-directory'
 import { Remote, RemoteError, TypertRemoteService } from '@berry-ai/harness-typert-protocol'

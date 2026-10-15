@@ -6,7 +6,7 @@ import type {} from '@berry-ai/harness-sandbox-policy'
 import type {} from '@berry-ai/harness-user-approval'
 import { approveEscalation } from '@berry-ai/harness-sandbox'
 import type { PluginEntryId } from './types.ts'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@berry-ai/harness-tools'
 import { getDshRuntimeVersion } from '@berry-ai/harness-app-boot'
 
 /** Required services for the management tool. */

@@ -2,7 +2,7 @@
 import { writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { beforeEach, afterEach, expect, it, vi } from 'vitest'
-import SessionStore from '@deepseek-ai/dsh-session'
+import SessionStore from '@berry-ai/harness-session'
 import TypertRegistry from '@berry-ai/harness-typert-registry'
 import TypertGateway from '@deepseek-ai/dsh-api-gateway'
 import { HostConnectionService } from '@deepseek-ai/dsh-client-connection/src/rpc-host.ts'

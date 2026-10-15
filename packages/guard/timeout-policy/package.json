@@ -29,13 +29,13 @@
   "peerDependencies": {
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

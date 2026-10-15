@@ -2,7 +2,7 @@
 /** Closing pages retains actual focus through layout replacement without stealing another input owner. */
 import { afterEach, expect, it } from 'vitest'
 import type { PaneId } from '@deepseek-ai/dsh-client-ui-dockkit'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { closeWithPaneFocus, openWithPaneFocus } from '../src/client/shell/close-focus.ts'
 
 const session = 'closing-session' as SessionId

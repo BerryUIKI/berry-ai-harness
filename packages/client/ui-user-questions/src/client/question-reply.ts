@@ -2,8 +2,8 @@
 import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
 import type { ConversationNodeDefinition } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
-import { isAppendSurfaceEvent } from '@deepseek-ai/dsh-session/surface'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+import { isAppendSurfaceEvent } from '@berry-ai/harness-session/surface'
+import type { SessionEvent } from '@berry-ai/harness-session/types'
 import type {} from '@berry-ai/harness-user-questions/types'
 
 /** One asked question as echoed in the reply payload. */

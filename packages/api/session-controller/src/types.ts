@@ -7,7 +7,7 @@ import type {
 import type { Branded } from '@berry-ai/harness-brand'
 import type { LlmAttemptId, MessageId } from '@berry-ai/harness-llm/brand'
 import type { TextBlock } from '@berry-ai/harness-llm'
-import type { SessionId, SessionSeqCursor } from '@deepseek-ai/dsh-session/types'
+import type { SessionId, SessionSeqCursor } from '@berry-ai/harness-session/types'
 import type { SessionProjectionMap } from '@deepseek-ai/dsh-session-projection/types'
 import type { JsonValue } from '@berry-ai/harness-util-values'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
@@ -31,7 +31,7 @@ declare module '@deepseek-ai/dsh-session-projection/types' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /**
      * Complete validated model selection requested for subsequent prompt

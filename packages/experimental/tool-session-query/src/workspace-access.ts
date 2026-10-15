@@ -10,13 +10,13 @@ import { HarnessError } from '@berry-ai/harness-llm'
 import {
   type SessionHeader,
   type SessionId as SessionIdValue,
-} from '@deepseek-ai/dsh-session'
-import type { TurnBoundaryProjection } from '@deepseek-ai/dsh-agent'
+} from '@berry-ai/harness-session'
+import type { TurnBoundaryProjection } from '@berry-ai/harness-agent'
 import type {
   SessionLineageNode,
   SessionRecord,
 } from '@berry-ai/harness-session-query'
-import type { ToolRunContext } from '@deepseek-ai/dsh-tools'
+import type { ToolRunContext } from '@berry-ai/harness-tools'
 import type {} from '@deepseek-ai/dsh-session-projection'
 import { serviceBoundary } from './service-boundary.ts'
 

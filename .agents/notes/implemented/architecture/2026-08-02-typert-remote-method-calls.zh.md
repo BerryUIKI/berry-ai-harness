@@ -173,7 +173,7 @@ Registry 的 Host 根入口拥有完整 `TypertRegistryContract` interface merge
 Remote Client DTS 不复制业务 DTO，也不重新声明一个结构相同的影子类型。它只从不携带 Host Cordis merge 的公共纯类型 subpath 引用原始符号：
 
 ```text
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { CreateGoalRequest, CreateGoalResult } from '@berry-ai/harness-goal/types'
 ```
 
@@ -305,7 +305,7 @@ Typert.remotes  已导入的 Remote contribution
 
 ```text
 import goalsRemote from '@berry-ai/harness-goal/remote'
-import sessionsRemote from '@deepseek-ai/dsh-session/remote'
+import sessionsRemote from '@berry-ai/harness-session/remote'
 
 await ctx.remote.$mount(goalsRemote)
 await ctx.remote.$mount(sessionsRemote)

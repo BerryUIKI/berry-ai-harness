@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { PROTOCOL_VERSION } from '@agentclientprotocol/sdk'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import type { Agent } from '@berry-ai/harness-agent'
+import { SessionId } from '@berry-ai/harness-session'
 import ApprovalService, { type ApprovalRequest } from '@berry-ai/harness-user-approval'
 import { makeBridgeHarness, type BridgeHarness } from './harness.ts'
 

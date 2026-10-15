@@ -6,8 +6,8 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import { HarnessError } from '@berry-ai/harness-llm'
-import { SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionSeq } from '@berry-ai/harness-session'
+import type { SessionId } from '@berry-ai/harness-session'
 import {
   SessionQueryError,
   type SessionEventSearchPage,
@@ -15,7 +15,7 @@ import {
   type SessionRecord,
   type SessionSearchCursor,
 } from '@berry-ai/harness-session-query'
-import type { ToolRunContext } from '@deepseek-ai/dsh-tools'
+import type { ToolRunContext } from '@berry-ai/harness-tools'
 import { toolInput } from './input.ts'
 import { presentation } from './presentation.ts'
 import { serviceBoundary } from './service-boundary.ts'

@@ -7,7 +7,7 @@ import {
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import { streamHandle } from '@deepseek-ai/dsh-remote-mock'
 import { LlmAttemptId } from '@berry-ai/harness-llm'
-import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session/types'
+import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session/types'
 import type { RemoteResult, RemoteStreamHandle } from '@berry-ai/harness-typert-protocol'
 import {
   createSessionControlStream,

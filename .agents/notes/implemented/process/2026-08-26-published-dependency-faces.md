@@ -18,7 +18,7 @@ The package that chooses a Client build input is the shipped profile, while a Ho
 
 [`package-dependency-policy.ts`](../../../../scripts/package-dependency-policy.ts) provides explicit Client-face include and exclude lists. An include handles an exceptional package without `dsh.client`, while an exclude removes an automatically discovered dual-face package outside `packages/client/`. The verifier rejects unknown, stale, redundant, duplicate, overlapping, and ineffective entries. The include list is empty; the exclude list contains `@deepseek-ai/dsh-api-session-controller` and `@deepseek-ai/dsh-api-workspace-controller`. Adding Session Controller back would migrate nine more Host edges while its five-run candidate retest improved median resolution by only 0.15 seconds.
 
-Host-only packages join the same policy through a separate explicit list. The list contains `@berry-ai/harness-llm` and `@deepseek-ai/dsh-session`; source imports do not expand it.
+Host-only packages join the same policy through a separate explicit list. The list contains `@berry-ai/harness-llm` and `@berry-ai/harness-session`; source imports do not expand it.
 
 ### Dependency sections
 

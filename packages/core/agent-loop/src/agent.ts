@@ -14,8 +14,8 @@ import type {
   InboxTarget,
   PreStepDecision,
   RequestErrorAction,
-} from '@deepseek-ai/dsh-agent'
-import { agentEvents, assembleContextFor } from '@deepseek-ai/dsh-agent'
+} from '@berry-ai/harness-agent'
+import { agentEvents, assembleContextFor } from '@berry-ai/harness-agent'
 import type { GenerateOptions, LlmCallConfig, Message, PreparedLlmCall } from '@berry-ai/harness-llm'
 import {
   LlmError,
@@ -25,12 +25,12 @@ import {
   markAgentLoopRequest,
 } from '@berry-ai/harness-llm'
 import { assertNever, deepFreeze } from '@berry-ai/harness-util-values'
-import type { Scope } from '@deepseek-ai/dsh-scope'
-import { createScope } from '@deepseek-ai/dsh-scope'
-import type { EpochHeader, RequestContext, Session, SessionId, SessionSeq, TurnEndReason, UserMessage } from '@deepseek-ai/dsh-session'
-import { canonicalHeader, headerEquals, ToolCallRecovery } from '@deepseek-ai/dsh-session'
-import { joinContextSections, renderContextSections, renderPrompt } from '@deepseek-ai/dsh-system-prompt'
-import type { PromptAssembly } from '@deepseek-ai/dsh-system-prompt'
+import type { Scope } from '@berry-ai/harness-scope'
+import { createScope } from '@berry-ai/harness-scope'
+import type { EpochHeader, RequestContext, Session, SessionId, SessionSeq, TurnEndReason, UserMessage } from '@berry-ai/harness-session'
+import { canonicalHeader, headerEquals, ToolCallRecovery } from '@berry-ai/harness-session'
+import { joinContextSections, renderContextSections, renderPrompt } from '@berry-ai/harness-system-prompt'
+import type { PromptAssembly } from '@berry-ai/harness-system-prompt'
 import type {} from '@deepseek-ai/dsh-session-projection'
 import type { Context } from '@deepseek-ai/cordis'
 import { ReactLoopInbox } from './inbox.ts'

@@ -2,7 +2,7 @@
 import { Context, FiberState } from '@deepseek-ai/cordis'
 import { ReasoningEffortId, createUserMessage, createAssistantMessage, type PreparedLlmCall } from '@berry-ai/harness-llm'
 import { Config as OfficialConfig } from '@berry-ai/harness-llm-deepseek-api-key'
-import { pluginRecordOf, SessionId } from '@deepseek-ai/dsh-session'
+import { pluginRecordOf, SessionId } from '@berry-ai/harness-session'
 import { TimeoutReason } from '@berry-ai/harness-timeout'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import Translator from '../src/index.ts'

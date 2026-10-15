@@ -5,7 +5,7 @@ import { createServer, type IncomingMessage, type ServerResponse } from 'node:ht
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { pluginRecordOf, SessionSeq, type SessionEvent } from '@deepseek-ai/dsh-session'
+import { pluginRecordOf, SessionSeq, type SessionEvent } from '@berry-ai/harness-session'
 import { chromium, type Browser } from 'playwright'
 import { expect, it, onTestFailed, onTestFinished } from 'vitest'
 import {

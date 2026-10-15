@@ -1,9 +1,9 @@
 /** Client-safe question, answer, and event types. @module @berry-ai/harness-user-questions/types */
 
-import type { Scoped } from '@deepseek-ai/dsh-scope'
-import type { Agent } from '@deepseek-ai/dsh-agent/types'
+import type { Scoped } from '@berry-ai/harness-scope'
+import type { Agent } from '@berry-ai/harness-agent/types'
 import type { ToolCallId } from '@berry-ai/harness-llm/brand'
-import type {} from '@deepseek-ai/dsh-session/types'
+import type {} from '@berry-ai/harness-session/types'
 import type {} from '@deepseek-ai/dsh-session-projection/types'
 
 /** One selectable answer offered to the user. */
@@ -150,7 +150,7 @@ declare module '@deepseek-ai/cordis' {
     /**
      * Ask composed answerers for structured user input. Return an answer to
      * claim the request or call `next()` to delegate. Scope-filtered dispatch
-     * (`@deepseek-ai/dsh-scope`): agent-scoped listeners receive only that agent.
+     * (`@berry-ai/harness-scope`): agent-scoped listeners receive only that agent.
      * @param request - pending user-question request.
      * @mode waterfall
      */

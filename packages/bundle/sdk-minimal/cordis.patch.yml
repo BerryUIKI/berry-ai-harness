@@ -81,7 +81,7 @@
       name: '@berry-ai/harness-llm'
 
     - id: session
-      name: '@deepseek-ai/dsh-session'
+      name: '@berry-ai/harness-session'
 
     - id: session-title
       name: '@deepseek-ai/dsh-session-title'
@@ -91,20 +91,20 @@
         maxTitleBytes: 80
 
     - id: system-prompt
-      name: '@deepseek-ai/dsh-system-prompt'
+      name: '@berry-ai/harness-system-prompt'
       config:
         includeHarnessIdentity: false
         includeRuntimeContext: false
         personaPrefix: !!js process.env.DSH_SYSTEM_PROMPT ?? 'You are a helpful software engineer assistant.'
 
     - id: tools
-      name: '@deepseek-ai/dsh-tools'
+      name: '@berry-ai/harness-tools'
 
     - id: mcp-resources
       name: '@berry-ai/harness-mcp-resources'
 
     - id: agent
-      name: '@deepseek-ai/dsh-agent'
+      name: '@berry-ai/harness-agent'
 
     - id: llm-retry
       name: '@berry-ai/harness-llm-retry'
@@ -113,7 +113,7 @@
       name: '@berry-ai/harness-jobs-local'
 
     - id: agent-loop
-      name: '@deepseek-ai/dsh-agent-loop'
+      name: '@berry-ai/harness-agent-loop'
       config:
         agents: []
 

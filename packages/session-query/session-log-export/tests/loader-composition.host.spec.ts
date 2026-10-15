@@ -6,9 +6,9 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import CommandRuntime from '@berry-ai/harness-commands'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
+import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import * as SessionLogDownload from '@berry-ai/harness-session-log-export'
 
 let root: string | undefined
@@ -26,7 +26,7 @@ describe('session-log-download real Loader composition', () => {
     root = await mkdtemp(join(tmpdir(), 'dsh-session-export-loader-'))
     const configPath = join(root, 'cordis.yml')
     await writeFile(configPath, [
-      "- name: '@deepseek-ai/dsh-session'",
+      "- name: '@berry-ai/harness-session'",
       "- name: '@berry-ai/harness-commands'",
       "- name: '@berry-ai/harness-session-log-export'",
       '',
@@ -40,7 +40,7 @@ describe('session-log-download real Loader composition', () => {
     await context.plugin(Loader)
     context.loader.builtins.include = Include
     const modules = new Map<string, unknown>([
-      ['@deepseek-ai/dsh-session', SessionStore],
+      ['@berry-ai/harness-session', SessionStore],
       ['@berry-ai/harness-commands', CommandRuntime],
       ['@berry-ai/harness-session-log-export', SessionLogDownload],
     ])

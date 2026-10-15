@@ -1189,7 +1189,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       const { stdout, code, stderr } = await runBuiltBin(['web', '--dump-default-config'], { DSH_HOME: home })
       expect(code).toBe(0)
       expect(stderr).toBe('')
-      expect(stdout).toContain("name: '@deepseek-ai/dsh-agent-loop'")
+      expect(stdout).toContain("name: '@berry-ai/harness-agent-loop'")
       expect(stdout).toContain('agents: []')
       expect(stdout).toContain('# == @deepseek-ai/dsh-base')
       expect(stdout).toContain("name: '@deepseek-ai/dsh-host-webserver'")
@@ -1259,15 +1259,15 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
         ['terminal-pwsh', '@berry-ai/harness-terminal-bash'],
         ['timer', '@deepseek-ai/cordis-plugin-timer'],
         ['llm', '@berry-ai/harness-llm'],
-        ['session', '@deepseek-ai/dsh-session'],
+        ['session', '@berry-ai/harness-session'],
         ['session-title', '@deepseek-ai/dsh-session-title'],
-        ['system-prompt', '@deepseek-ai/dsh-system-prompt'],
-        ['tools', '@deepseek-ai/dsh-tools'],
+        ['system-prompt', '@berry-ai/harness-system-prompt'],
+        ['tools', '@berry-ai/harness-tools'],
         ['mcp-resources', '@berry-ai/harness-mcp-resources'],
-        ['agent', '@deepseek-ai/dsh-agent'],
+        ['agent', '@berry-ai/harness-agent'],
         ['llm-retry', '@berry-ai/harness-llm-retry'],
         ['jobs', '@berry-ai/harness-jobs-local'],
-        ['agent-loop', '@deepseek-ai/dsh-agent-loop'],
+        ['agent-loop', '@berry-ai/harness-agent-loop'],
         ['persistent-bash', '@berry-ai/harness-tool-bash-persistent'],
         ['persistent-pwsh', '@berry-ai/harness-tool-pwsh-persistent'],
         ['sessions', '@deepseek-ai/dsh-session-persistence-jsonl'],

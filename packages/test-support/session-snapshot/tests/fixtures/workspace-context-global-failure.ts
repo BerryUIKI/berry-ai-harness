@@ -4,9 +4,9 @@ import assert from 'node:assert/strict'
 import { readFile, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-agent'
+import type {} from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-fs'
-import type {} from '@deepseek-ai/dsh-tools'
+import type {} from '@berry-ai/harness-tools'
 
 export const name = 'workspace-context-global-failure'
 export const inject = ['fs']

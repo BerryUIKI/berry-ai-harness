@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { LlmAttemptId, createAssistantMessage } from '@berry-ai/harness-llm'
-import { SessionSeq, type SessionEvent } from '@deepseek-ai/dsh-session'
+import { SessionSeq, type SessionEvent } from '@berry-ai/harness-session'
 import type {
   SessionAssistantStreamBaseline,
   SessionAssistantStreamFrame,

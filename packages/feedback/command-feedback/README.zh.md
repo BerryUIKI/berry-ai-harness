@@ -61,7 +61,7 @@ kind: "package-reference"
 
 ```yaml
 - id: session
-  name: '@deepseek-ai/dsh-session'
+  name: '@berry-ai/harness-session'
 - id: commands
   name: '@berry-ai/harness-commands'
 - id: command-feedback

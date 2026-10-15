@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import { JobId, JobRegistry } from '@berry-ai/harness-jobs'
 import type { JobStatus, JobView } from '@berry-ai/harness-jobs'
-import { SessionId } from '@deepseek-ai/dsh-session/types'
+import { SessionId } from '@berry-ai/harness-session/types'
 import type { SessionActivity } from '@berry-ai/harness-workspace'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { installDesktopQuitInspection } from '../src/quit-inspection.ts'

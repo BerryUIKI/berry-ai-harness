@@ -3,7 +3,7 @@
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { Branded } from '@berry-ai/harness-brand'
 import type { ContentBlock } from '@berry-ai/harness-llm/types'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 
 /** Identifies the implicit team rooted at one top-level Session. */
 export type TeamId = Branded<'TeamId'>
@@ -224,7 +224,7 @@ export interface TeamWaitResult {
   readonly timedOut: boolean
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /** Whole teammate lifecycle value, stored only in the Team Lead Session. */
     'team/member': { version: 2; teamId: TeamId; member: TeamMemberSnapshot }

@@ -3,7 +3,7 @@
  * The direct imports make historical readability independent of mounted plugins.
  */
 
-import { KNOWN_SESSION_EVENT_TYPES } from '@deepseek-ai/dsh-session'
+import { KNOWN_SESSION_EVENT_TYPES } from '@berry-ai/harness-session'
 import { createSessionFormatCatalog } from '@deepseek-ai/dsh-session-format'
 import type { SessionFormatCatalogOptions } from '@deepseek-ai/dsh-session-format'
 import { validateInstalledCurrentSessionArtifact, validateInstalledCurrentSessionHeader } from './current.ts'

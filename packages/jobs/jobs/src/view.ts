@@ -6,7 +6,7 @@
  * @module @berry-ai/harness-jobs/view
  */
 
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 // Type-only: the Workspace registry's archive-admission family map this seam merges `job` into.
 import type {} from '@berry-ai/harness-workspace/types'
 import type { JobId } from './brand.ts'

@@ -7,9 +7,9 @@ import { describe, expect, it, vi } from 'vitest'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import WorkingDirectory, { type Config as WorkingDirectoryConfig } from '@deepseek-ai/dsh-working-directory'
 import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@berry-ai/harness-session'
 import { ToolCallId } from '@berry-ai/harness-llm'
-import { renderContextSnapshot, renderPrompt } from '@deepseek-ai/dsh-system-prompt'
+import { renderContextSnapshot, renderPrompt } from '@berry-ai/harness-system-prompt'
 import * as WorkingDirectoryTool from '@deepseek-ai/dsh-tool-working-directory'
 
 async function fixture(config?: (root: string) => WorkingDirectoryConfig) {

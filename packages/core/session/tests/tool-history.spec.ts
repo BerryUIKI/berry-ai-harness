@@ -2,8 +2,8 @@
 import { describe, expect, it } from 'vitest'
 import { createDeveloperMessage, projectToolUpdates } from '@berry-ai/harness-llm'
 import type { ContentBlock, ToolSchema } from '@berry-ai/harness-llm'
-import { Session, SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import { Session, SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
+import type { SessionEvent } from '@berry-ai/harness-session'
 import { ToolHistoryProjection } from '../src/tool-history.ts'
 
 const search: ToolSchema = { name: 'search', description: 'Search', parameters: {} }

@@ -9,7 +9,7 @@ export interface PresentedFile {
   description?: string
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /** Declared filesystem files from a successful final present result, including nested calls. */
     'deliverables/presented': { turn: number; callId: ToolCallId; files: PresentedFile[] }

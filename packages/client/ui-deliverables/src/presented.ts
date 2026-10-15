@@ -1,6 +1,6 @@
 /** Validate declared workspace paths and address their native-open actions. */
 import type { PresentedFile } from '@berry-ai/harness-tool-present/types'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { ToolCallId } from '@berry-ai/harness-llm/brand'
 
 /** Authenticated POST route for opening a workspace file on the Host desktop. */

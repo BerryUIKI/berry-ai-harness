@@ -5,10 +5,10 @@
  */
 
 import { Service, type Context } from '@deepseek-ai/cordis'
-import { createScope, NamedEntries, ScopedLayers, scopeOf, type ScopeKey, type ScopeLayer } from '@deepseek-ai/dsh-scope'
+import { createScope, NamedEntries, ScopedLayers, scopeOf, type ScopeKey, type ScopeLayer } from '@berry-ai/harness-scope'
 import type { JsonValue } from '@berry-ai/harness-util-values'
-import type { ToolExecution } from '@deepseek-ai/dsh-tools'
-import type {} from '@deepseek-ai/dsh-system-prompt'
+import type { ToolExecution } from '@berry-ai/harness-tools'
+import type {} from '@berry-ai/harness-system-prompt'
 import { registerResourceTools } from './tools.ts'
 
 declare module '@deepseek-ai/cordis' {

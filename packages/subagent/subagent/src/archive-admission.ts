@@ -7,8 +7,8 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { Agent } from '@berry-ai/harness-agent'
+import type { SessionId } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-session-query'
 import type { SessionActivity, SessionActivityItem } from '@berry-ai/harness-workspace'
 import { foldSubagentDescriptor } from './descriptor.ts'

@@ -12,8 +12,8 @@ import SessionStore, {
   SessionLogOffset,
   SessionSeq,
   snapshotSessionEvent,
-} from '@deepseek-ai/dsh-session'
-import type { CreateSessionOptions, SessionEventType, SessionHeader, SessionSurface } from '@deepseek-ai/dsh-session'
+} from '@berry-ai/harness-session'
+import type { CreateSessionOptions, SessionEventType, SessionHeader, SessionSurface } from '@berry-ai/harness-session'
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

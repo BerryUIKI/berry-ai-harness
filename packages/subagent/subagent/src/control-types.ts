@@ -8,7 +8,7 @@
 import type { PromptContentPart } from '@berry-ai/harness-attachment/types'
 import type { Branded } from '@berry-ai/harness-brand'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 // Type-only: the Workspace registry's archive-admission family map this runtime merges `subagent` into.
 import type {} from '@berry-ai/harness-workspace/types'
 

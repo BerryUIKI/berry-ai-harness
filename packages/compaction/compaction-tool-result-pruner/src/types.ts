@@ -1,5 +1,5 @@
 import type { ToolCallId } from '@berry-ai/harness-llm'
-import type { SessionSeq } from '@deepseek-ai/dsh-session/types'
+import type { SessionSeq } from '@berry-ai/harness-session/types'
 
 /** Character-budget policy for deterministic tool-result pruning. */
 export interface ToolResultPruneConfig {

@@ -3,7 +3,7 @@
  * tools through nested executions scheduled under the native concurrency
  * contract; each sub-dispatch is logged for reconstruction, while only the
  * outer curated result enters model history.
- * @module @deepseek-ai/dsh-tools/src/ptc
+ * @module @berry-ai/harness-tools/src/ptc
  */
 
 import { brandString } from '@berry-ai/harness-brand'

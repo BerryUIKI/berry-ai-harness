@@ -7,7 +7,7 @@ import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
 import LlmRuntime from '@berry-ai/harness-llm'
-import SessionStore from '@deepseek-ai/dsh-session'
+import SessionStore from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
 import TokenMeter from '@berry-ai/harness-token-meter'
 import BasicCompactionEngine from '@berry-ai/harness-compaction-basic'
@@ -34,7 +34,7 @@ async function loadYaml(lines: readonly string[]): Promise<Context> {
   context.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
     ['@berry-ai/harness-llm', LlmRuntime],
-    ['@deepseek-ai/dsh-session', SessionStore],
+    ['@berry-ai/harness-session', SessionStore],
     ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-token-meter', TokenMeter],
     ['@berry-ai/harness-compaction-tool-result-pruner', ToolResultPruner],
@@ -59,7 +59,7 @@ describe('real Loader composition', () => {
   it('loads the shipped token-meter, pruning, and compaction-basic YAML order', async () => {
     const loaded = await loadYaml([
       "- name: '@berry-ai/harness-llm'",
-      "- name: '@deepseek-ai/dsh-session'",
+      "- name: '@berry-ai/harness-session'",
       "- name: '@deepseek-ai/dsh-session-projection'",
       "- name: '@berry-ai/harness-token-meter'",
       "- name: '@berry-ai/harness-compaction-tool-result-pruner'",

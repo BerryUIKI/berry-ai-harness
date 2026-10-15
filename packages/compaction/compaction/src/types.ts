@@ -9,12 +9,12 @@
 
 import type { ContentBlock, TokenUsage } from '@berry-ai/harness-llm'
 import type { CommandId } from '@berry-ai/harness-commands/brand'
-import type { SessionSeq } from '@deepseek-ai/dsh-session/types'
+import type { SessionSeq } from '@berry-ai/harness-session/types'
 import type { CompactionId } from './brand.ts'
 
 export type { CompactionId }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /**
      * Marks the start of a compaction — log-only, holds the lock until

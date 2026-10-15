@@ -3,10 +3,10 @@
  * @module @berry-ai/harness-schedule
  */
 
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import type { Branded } from '@berry-ai/harness-brand'
-import type {} from '@deepseek-ai/dsh-session/types'
+import type {} from '@berry-ai/harness-session/types'
 // Type-only: the Workspace registry's archive-admission family map this plugin merges `schedule` into.
 import type {} from '@berry-ai/harness-workspace/types'
 
@@ -356,7 +356,7 @@ declare module '@berry-ai/harness-workspace/types' {
   }
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@berry-ai/harness-session/types' {
   interface SessionEventMap {
     /**
      * Versioned Schedule mutation. The owning package validates the complete

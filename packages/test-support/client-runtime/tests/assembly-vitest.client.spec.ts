@@ -1,7 +1,7 @@
 /** Native fixture cleanup remains active after assertion failure and without a started client. */
 import { afterAll, describe, expect } from 'vitest'
 import { ok } from '@deepseek-ai/dsh-remote-mock'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@berry-ai/harness-session/types'
 import { createClientTest, webApp, type TestClient } from '../src/assembly/index.ts'
 
 const test = createClientTest({ roster: webApp.closure(['@deepseek-ai/dsh-api-gateway']) })

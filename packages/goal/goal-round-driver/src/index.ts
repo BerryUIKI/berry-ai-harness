@@ -6,11 +6,11 @@
 import { isDeepStrictEqual } from 'node:util'
 import { FiberState } from '@deepseek-ai/cordis'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
+import type { Agent, PreStepDecision } from '@berry-ai/harness-agent'
 import type { GoalMessageSource, GoalRef, GoalView } from '@berry-ai/harness-goal'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { ContentBlock, MessageId, MessageSource } from '@berry-ai/harness-llm'
-import type { Session, SessionEvent, UserMessage } from '@deepseek-ai/dsh-session'
+import type { Session, SessionEvent, UserMessage } from '@berry-ai/harness-session'
 import { renderGoalRoundPrompt } from './prompt.ts'
 
 export { renderGoalRoundPrompt } from './prompt.ts'

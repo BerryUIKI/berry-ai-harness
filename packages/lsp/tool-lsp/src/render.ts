@@ -6,7 +6,7 @@
  * @module @berry-ai/harness-tool-lsp/render
  */
 
-import type { GenericCallView } from '@deepseek-ai/dsh-tools'
+import type { GenericCallView } from '@berry-ai/harness-tools'
 import type { LspHover, LspLocation, LspOperation, LspPosition } from '@berry-ai/harness-lsp'
 import { posix, win32 } from 'node:path'
 import { fileURLToPath } from 'node:url'

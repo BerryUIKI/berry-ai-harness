@@ -13,7 +13,7 @@ import z from '@deepseek-ai/schemastery'
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@berry-ai/harness-command-feedback'
 import type {} from '@berry-ai/harness-message-feedback'
-import { Session, type SessionEvent } from '@deepseek-ai/dsh-session'
+import { Session, type SessionEvent } from '@berry-ai/harness-session'
 import {
   SessionTelemetryBackend,
   SessionTelemetryCoordinator,

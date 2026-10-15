@@ -6,7 +6,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-system-prompt'
+import type {} from '@berry-ai/harness-system-prompt'
 import type {} from '@berry-ai/harness-workspace-changes/types'
 import { registerPresentOpen } from './present-open.ts'
 
