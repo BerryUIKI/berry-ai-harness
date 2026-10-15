@@ -2,7 +2,7 @@
 /** Cleanup errors remain reachable after the terminal tab has disappeared. */
 import { afterEach, expect, it, vi } from 'vitest'
 import { cleanup, fireEvent, render, within } from '@testing-library/react'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import type { TerminalCloseFailure } from '@berry-ai/harness-api-terminal-controller/client'
 import type { WebTerminalId } from '@berry-ai/harness-api-terminal-controller/types'
 import { TerminalCleanup } from '../src/client/TerminalCleanup.tsx'

@@ -53,7 +53,7 @@ import {
   type NormalizeContext,
   type SnapshotManifest,
   type WorkspaceSnapshotEntry,
-} from '@deepseek-ai/dsh-session-snapshot'
+} from '@berry-ai/harness-session-snapshot'
 import {
   DeepSeekHarness,
   type HarnessNotification,

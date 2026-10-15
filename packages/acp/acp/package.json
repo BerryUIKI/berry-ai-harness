@@ -51,7 +51,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-mcp-client": "workspace:*",

@@ -3,7 +3,7 @@
 
 import type { Context, FiberState } from '@deepseek-ai/cordis'
 import { installFailLoud, loadEnv, resolveConfigPath } from '@berry-ai/harness-app-boot'
-import { runFixtureTurn } from '@deepseek-ai/dsh-loader-smoke'
+import { runFixtureTurn } from '@berry-ai/harness-loader-smoke'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import { bootProductionProfile } from './production-profile.ts'
 

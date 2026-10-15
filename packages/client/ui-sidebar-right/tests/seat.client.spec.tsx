@@ -3,7 +3,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { useEffect, useState, useSyncExternalStore } from 'react'
-import { SlotTestRuntime, type SlotView } from '@deepseek-ai/dsh-client-test-runtime'
+import { SlotTestRuntime, type SlotView } from '@berry-ai/harness-client-test-runtime'
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { ShortcutCatalogEntry, ShortcutCommandId } from '@deepseek-ai/dsh-client-shortcuts/client'

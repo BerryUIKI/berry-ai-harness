@@ -9,7 +9,7 @@ import type { WorkspaceSnapshot, WorkspaceView } from '@berry-ai/harness-api-wor
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import {
   bindSnapshotSelector, makeTranslate, RemoteError, sessionSnapshot as sessionFixture,
-} from '@deepseek-ai/dsh-client-test-runtime'
+} from '@berry-ai/harness-client-test-runtime'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
 import type { WorkspaceId } from '@berry-ai/harness-workspace/types'

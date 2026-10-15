@@ -128,7 +128,7 @@
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-agent-loop": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-fs-sandbox": "workspace:*",
     "@berry-ai/harness-tool-fs": "workspace:*",
     "@berry-ai/harness-session-persistence-jsonl": "workspace:*",

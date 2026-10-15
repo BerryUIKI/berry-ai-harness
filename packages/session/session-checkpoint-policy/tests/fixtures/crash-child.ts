@@ -1,7 +1,7 @@
 import { writeFile } from 'node:fs/promises'
 import { Context } from '@deepseek-ai/cordis'
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import { createUserMessage, ToolCallId, type GenerateOptions, LlmAdapter, type StreamChunk  } from '@berry-ai/harness-llm'
 import { SessionId } from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'

@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, onTestFinished, vi } from 'vitest'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import { SessionId } from '@berry-ai/harness-session/types'
 import type { ModelSelection } from '@berry-ai/harness-api-remotes/client'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'

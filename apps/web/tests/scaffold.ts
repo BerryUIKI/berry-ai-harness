@@ -56,19 +56,19 @@ import {
   stabilizeRefreshLog,
   writesCurrentSessionFixtures,
   type NormalizeContext,
-} from '@deepseek-ai/dsh-session-snapshot'
+} from '@berry-ai/harness-session-snapshot'
 import type { Profile, ProfileContext } from '@berry-ai/harness-app-boot'
 import { dshHomePath } from '@berry-ai/harness-home-paths'
 import { LlmAdapter } from '@berry-ai/harness-llm'
 import type {
   LlmModelInfo, LlmProviderInfo, LlmResolvedModelInfo, RetryPolicyConfig, StreamChunk,
 } from '@berry-ai/harness-llm'
-import type { ReplayHandle, ReplayProviderConfig } from '@deepseek-ai/dsh-llm-replay'
+import type { ReplayHandle, ReplayProviderConfig } from '@berry-ai/harness-llm-replay'
 import {
   installLlmReplay,
   parseSessionLog,
   prepareSessionSnapshotFixtureForComparison,
-} from '@deepseek-ai/dsh-llm-replay'
+} from '@berry-ai/harness-llm-replay'
 import type { SessionFormatEvent } from '@berry-ai/harness-session-format'
 import { sessionFormatCatalog } from '@berry-ai/harness-session-format-catalog'
 import {

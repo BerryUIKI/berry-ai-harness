@@ -15,7 +15,7 @@ import { subagentIdentityProjectionDefinition } from '@berry-ai/harness-subagent
 import { describe, expect, it, vi } from 'vitest'
 import { ApiSessionAgentController } from '../src/agent.ts'
 import { SessionCommandController } from '../src/commands.ts'
-import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { createInboxStub } from '@berry-ai/harness-agent-loop-testkit'
 import { installSessionReadTestServices, testSessionPersistence } from './test-remote.ts'
 
 declare module '@berry-ai/harness-llm' {

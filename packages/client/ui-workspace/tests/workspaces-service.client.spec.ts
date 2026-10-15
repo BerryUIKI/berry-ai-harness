@@ -11,7 +11,7 @@ import type {
   IWorkspaces, WorkspaceId, WorkspaceSnapshot, WorkspaceView,
 } from '@berry-ai/harness-api-workspace-controller/client'
 import type { ClientRemote, DirectoryListing } from '@berry-ai/harness-api-remotes/client'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import { SessionId } from '@berry-ai/harness-session/types'
 import { LayoutController } from '@deepseek-ai/dsh-client-ui-layout/client'

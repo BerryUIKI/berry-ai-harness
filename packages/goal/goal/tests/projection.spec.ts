@@ -19,7 +19,7 @@ import type { Session } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import GoalService, { GoalId, applyGoalProjection, foldGoal, goalProjectionDefinition } from '@berry-ai/harness-goal'
 import type { GoalProjection, GoalProjectionState, GoalRef } from '@berry-ai/harness-goal'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

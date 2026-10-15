@@ -67,6 +67,6 @@
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*"
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*"
   }
 }

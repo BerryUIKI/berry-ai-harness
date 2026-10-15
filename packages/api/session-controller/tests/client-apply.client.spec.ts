@@ -4,8 +4,8 @@
  * the real Connection, and Agent Context identity through the Typert registry.
  */
 import { RemoteStreamCarrierError } from '@berry-ai/harness-api-gateway/client'
-import { ok, type RemoteMock } from '@deepseek-ai/dsh-remote-mock'
-import { createClientTest, type TestClient, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
+import { ok, type RemoteMock } from '@berry-ai/harness-remote-mock'
+import { createClientTest, type TestClient, webApp } from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import { isTypertOwnedValue } from '@berry-ai/harness-typert-protocol'

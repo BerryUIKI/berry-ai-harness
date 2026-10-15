@@ -2,7 +2,7 @@
 import { StrictMode, useEffect, useState, type ReactNode } from 'react'
 import { act, fireEvent } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
-import { SlotTestRuntime } from '@deepseek-ai/dsh-client-test-runtime'
+import { SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
 import type { SessionReference } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {

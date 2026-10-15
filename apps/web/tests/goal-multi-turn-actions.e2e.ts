@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url'
 import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterEach, describe, expect, it, onTestFailed } from 'vitest'
-import { parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
+import { parseSessionLog } from '@berry-ai/harness-llm-replay'
 import type { SessionEvent, SessionId } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-goal'
 import {

@@ -20,7 +20,7 @@ import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import type { ToolExecutionResult } from '@berry-ai/harness-tools'
 import * as toolGoal from '@berry-ai/harness-tool-goal'
-import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { createInboxStub } from '@berry-ai/harness-agent-loop-testkit'
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {

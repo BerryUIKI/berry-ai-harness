@@ -10,7 +10,7 @@ import type {
   JobEvent, JobEventFilter, JobHandle, JobHooks, JobKind, JobOutcome, JobOutputSource, JobSpec, JobView,
 } from '@berry-ai/harness-jobs'
 import LocalJobRegistry, { type Config as JobsConfig } from '@berry-ai/harness-jobs-local'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 
 declare module '@berry-ai/harness-jobs' {
   interface JobKindMap {

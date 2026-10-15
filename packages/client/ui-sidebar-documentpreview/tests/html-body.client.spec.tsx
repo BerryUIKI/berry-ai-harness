@@ -3,7 +3,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, render, screen, waitFor } from '@testing-library/react'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import { bindSnapshotSelector, stubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
+import { bindSnapshotSelector, stubConfigForm } from '@berry-ai/harness-client-test-runtime'
 import { DeveloperToolsPreference } from '@deepseek-ai/dsh-client-ui-settings/src/client/developer-tools.ts'
 import type { DeveloperToolsSettings } from '@deepseek-ai/dsh-client-ui-settings/src/developer-tools-settings.ts'
 import type { Resources, ResourceSnapshot } from '@deepseek-ai/dsh-client-resources/client'

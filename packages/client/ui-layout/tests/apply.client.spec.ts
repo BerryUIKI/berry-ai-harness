@@ -3,7 +3,7 @@
 import ShortcutsService from '../../shortcuts/src/client/index.ts'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { Context, type Fiber } from '@deepseek-ai/cordis'
-import { stubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
+import { stubConfigForm } from '@berry-ai/harness-client-test-runtime'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type { SlotRendererHost } from '@deepseek-ai/dsh-client-ui-slots'

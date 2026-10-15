@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { ScheduleDeleteResult, ScheduleId, ScheduleRecord } from '@berry-ai/harness-schedule/client'
 import { createCatalogSource } from '../src/client/catalog-source.ts'
 

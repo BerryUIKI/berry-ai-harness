@@ -6,8 +6,8 @@ import type {
 } from '@berry-ai/harness-api-session-controller/client'
 import { SessionId } from '@berry-ai/harness-session/types'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
-import { ok, type RemoteMock } from '@deepseek-ai/dsh-remote-mock'
-import { createClientTest, webApp, type TestClient } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
+import { ok, type RemoteMock } from '@berry-ai/harness-remote-mock'
+import { createClientTest, webApp, type TestClient } from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
 import { ClientSessions } from '../src/client/sessions/service.ts'
 import { FOLLOW, followScript, type HistoryAnswer } from './remote/session.client.ts'
 

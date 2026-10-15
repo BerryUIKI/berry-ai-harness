@@ -2,7 +2,7 @@
 /** Test driver that sends two turns through one Headless Loader composition. */
 
 import { resolveConfigPath } from '@berry-ai/harness-app-boot'
-import { runFixtureTurn } from '@deepseek-ai/dsh-loader-smoke'
+import { runFixtureTurn } from '@berry-ai/harness-loader-smoke'
 import { bootProductionProfile } from '../../../../test-support/loader-smoke/tests/fixtures/production-profile.ts'
 
 const configPath = process.argv[2]

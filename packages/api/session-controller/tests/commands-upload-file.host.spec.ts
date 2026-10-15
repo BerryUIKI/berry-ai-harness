@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
-import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { createInboxStub } from '@berry-ai/harness-agent-loop-testkit'
 import type { Agent, ModelSelectionRef } from '@berry-ai/harness-agent'
 import AttachmentStore, { AttachmentId } from '@berry-ai/harness-attachment'
 import type {

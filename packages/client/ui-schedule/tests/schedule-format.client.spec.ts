@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import type { ScheduleId, ScheduleRecord } from '@berry-ai/harness-schedule/client'
 import {
   FALLBACK_ZONES, formatScheduleAbsolute, formatScheduleNextRun, formatWeekdays, recordTimeZone,

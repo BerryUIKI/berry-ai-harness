@@ -48,7 +48,7 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-llm-deepseek": "workspace:*",
     "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
-    "@deepseek-ai/dsh-loader-smoke": "workspace:*",
+    "@berry-ai/harness-loader-smoke": "workspace:*",
     "@berry-ai/harness-sdk-client": "workspace:*",
     "@berry-ai/harness-sdk-protocol": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",

@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen, within } from '@testing-library/react'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import type { JobsSnapshot, JobView, ObservedJob } from '@berry-ai/harness-api-job-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { JobListAction, type JobListActionProps } from '../src/client/JobListAction.tsx'

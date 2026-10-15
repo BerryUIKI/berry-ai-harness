@@ -53,7 +53,7 @@
     "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",

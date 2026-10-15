@@ -4,7 +4,7 @@
  * compaction calls, then binds fresh live sessions to parent/child scripts by
  * first-call order. Throw and hang cases require an explicit override because
  * a session log cannot reconstruct them alone.
- * @module @deepseek-ai/dsh-llm-replay
+ * @module @berry-ai/harness-llm-replay
  */
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'

@@ -12,7 +12,7 @@ import CommandRuntime from '@berry-ai/harness-commands'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import * as CommandFeedback from '@berry-ai/harness-command-feedback'
 import { getOrCreateAnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 
 let root: string | undefined
 let context: Context | undefined

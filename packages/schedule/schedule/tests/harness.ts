@@ -1,7 +1,7 @@
 /** Host Schedule tests use real domain storage and an explicit Session resolver. */
 import { Context, Service } from '@deepseek-ai/cordis'
 import AgentRegistry, { type Agent } from '@berry-ai/harness-agent'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import type { UserMessage } from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import type { CreateSessionOptions } from '@berry-ai/harness-session'

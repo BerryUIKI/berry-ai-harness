@@ -8,7 +8,7 @@
  * map) or from built `lib/` under plain Node (resolving bare packages through real `exports`, as an
  * installed consumer does, while Node type-strips relative example-local TypeScript plugins).
  *
- * @module @deepseek-ai/dsh-loader-smoke
+ * @module @berry-ai/harness-loader-smoke
  */
 
 import { clearedProxyEnv } from '@berry-ai/harness-http-proxy'

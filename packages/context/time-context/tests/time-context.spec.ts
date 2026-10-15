@@ -9,7 +9,7 @@ import AgentRegistry, { agentEvents, type Agent } from '@berry-ai/harness-agent'
 import { defineContentToolFixture } from '@berry-ai/harness-tools'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
-import { unsupportedInbox, mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox, mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import * as timeContext from '@berry-ai/harness-time-context'
 import type { Config } from '@berry-ai/harness-time-context'
 

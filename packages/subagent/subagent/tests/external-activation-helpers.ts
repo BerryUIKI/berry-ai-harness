@@ -6,7 +6,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
 import type { Agent } from '@berry-ai/harness-agent'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
-import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { createInboxStub } from '@berry-ai/harness-agent-loop-testkit'
 import type { SubagentActivation, SubagentStartRequest } from '../src/types.ts'
 
 const parents = new WeakMap<Context, Promise<WeakMap<Agent, Agent>>>()

@@ -2,7 +2,7 @@
 /** The task tab renders the one task its navigation parameters name. */
 import { act, cleanup, fireEvent, render, screen, within } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import type { SessionListState } from '@berry-ai/harness-api-session-controller/client'
 import type { WorkspaceSnapshot } from '@berry-ai/harness-api-workspace-controller/client'
 import type { PaneId, SidebarRightTabActions, SidebarRightTabInfo } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'

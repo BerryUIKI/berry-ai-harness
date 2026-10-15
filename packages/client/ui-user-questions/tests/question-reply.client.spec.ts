@@ -1,6 +1,6 @@
 /** Late-reply conversation node: source matching and payload projection. */
 import { describe, expect, it } from 'vitest'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { SessionSeq } from '@berry-ai/harness-session'
 import { messageDefinition } from '../../ui-chat/src/client/conversation-nodes/message.ts'
 import { en } from '../src/client/locales.ts'

@@ -9,10 +9,10 @@ import type { SessionId } from '@berry-ai/harness-api-remotes/client'
 import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import { SessionSeq } from '@berry-ai/harness-session/types'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
-import { ok, type RemoteMock } from '@deepseek-ai/dsh-remote-mock'
+import { ok, type RemoteMock } from '@berry-ai/harness-remote-mock'
 import {
   createClientTest, type ClientTestFixtures, webApp,
-} from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
+} from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
 import type {} from '@berry-ai/harness-session-title/client'
 import { SessionManager } from '../src/client/sessions/manager.ts'
 import { ClientSessions } from '../src/client/sessions/service.ts'

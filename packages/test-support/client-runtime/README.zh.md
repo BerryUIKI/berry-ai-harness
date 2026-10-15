@@ -3,7 +3,7 @@ description: "面向浏览器功能测试的 jsdom slot 测试运行时，供测
 kind: "package-library"
 ---
 
-# @deepseek-ai/dsh-client-test-runtime
+# @berry-ai/harness-client-test-runtime
 
 [English](README.md) | 中文
 
@@ -59,7 +59,7 @@ Session fixture 从显式提供的地址或已加载的父级投影解析子代�
 按 Host 会答的码来脚本化失败，并以生产代码同样的方式断言——判 `code`，绝不判类：
 
 ```text
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 
 remote.goals.create.mockResolvedValue({
   ok: false,
@@ -74,8 +74,8 @@ expect(view.getByRole('alert')).toHaveTextContent('goal/not-found')
 
 ```text
 // @vitest-environment jsdom
-import { createClientTest, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
-import { ok } from '@deepseek-ai/dsh-remote-mock'
+import { createClientTest, webApp } from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
+import { ok } from '@berry-ai/harness-remote-mock'
 
 const test = createClientTest({ roster: webApp }, { mount: true })
 test('registers into the sidebar', async ({ remote, start }) => {

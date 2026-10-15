@@ -11,7 +11,7 @@
  * bundle change is visible at the next import. Node only — the
  * whole-client tier runs under vitest, and this is the one place it reads the
  * repository.
- * @module @deepseek-ai/dsh-client-test-runtime/src/assembly/bundle-roster
+ * @module @berry-ai/harness-client-test-runtime/src/assembly/bundle-roster
  */
 import { existsSync, readFileSync, realpathSync } from 'node:fs'
 import { createRequire } from 'node:module'

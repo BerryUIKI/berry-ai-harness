@@ -15,7 +15,7 @@ import { act, cleanup, fireEvent, screen, waitFor } from '@testing-library/react
 import { afterEach, beforeEach, vi } from 'vitest'
 import { bootInjections, orderByModuleGraph } from '@deepseek-ai/dsh-client-modules'
 import type { ClientModuleLoaderTarget, WebBootEntry, WebBootGraph } from '@deepseek-ai/dsh-client-modules/client'
-import type { RemoteMock } from '@deepseek-ai/dsh-remote-mock'
+import type { RemoteMock } from '@berry-ai/harness-remote-mock'
 import { AppWebEntry } from '@deepseek-ai/dsh-client-web'
 import {
   createAssembledRemote, type AssembledRemote, type AssembledRemoteOptions,

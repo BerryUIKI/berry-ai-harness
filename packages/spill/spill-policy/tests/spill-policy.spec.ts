@@ -11,7 +11,7 @@
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import { createUserMessage, ToolCallId } from '@berry-ai/harness-llm'
 import { estimateContent } from '@berry-ai/harness-token-meter/estimate'
 import type { ContentBlock } from '@berry-ai/harness-llm'

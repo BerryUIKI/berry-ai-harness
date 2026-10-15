@@ -1,6 +1,6 @@
 /** Directory subscriptions and read settlements through the face's real store actions. */
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { WorkspaceDirectoryListing } from '@berry-ai/harness-api-workspace-files/types'
 import { childPath, createList, filesFace } from '../src/client/face.ts'

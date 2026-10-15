@@ -6,7 +6,7 @@
  */
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import {
   ConversationNodeAssembler, type ConversationLocationDataSource, type ConversationLocationDataStore,
   type ConversationMatch, type ConversationNodeDefinition, type ConversationStartMatch,

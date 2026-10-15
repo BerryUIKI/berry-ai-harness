@@ -1,7 +1,7 @@
 /** ui-subagent browser half: catalog actions and read-only composer routing. */
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { Context } from '@deepseek-ai/cordis'
-import { stubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
+import { stubConfigForm } from '@berry-ai/harness-client-test-runtime'
 import { describe, expect, it } from 'vitest'
 import type {
   SessionListState, SessionSnapshot, SessionSummary,

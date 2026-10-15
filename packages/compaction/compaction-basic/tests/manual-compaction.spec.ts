@@ -2,7 +2,7 @@ import { imageOffloadProjection } from '@berry-ai/harness-compaction-image-offlo
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import { CommandId } from '@berry-ai/harness-commands/brand'
 import { BasicCompactionEngine } from '@berry-ai/harness-compaction-basic'
 import { CompactionId, isCompactCheckpointSource, ManualCompactionError } from '@berry-ai/harness-compaction'

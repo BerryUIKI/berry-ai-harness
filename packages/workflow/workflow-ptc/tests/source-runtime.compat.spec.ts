@@ -1,4 +1,4 @@
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 /** The Node compatibility matrix runs this complete source-entry smoke. */
 import { readFile, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'

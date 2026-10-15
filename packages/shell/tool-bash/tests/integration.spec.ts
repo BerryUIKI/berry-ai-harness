@@ -9,7 +9,7 @@ import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl
 import type { Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { PtcRuntime, type PtcRunRequest, type PtcRunResult, type PtcRunSpec } from '@berry-ai/harness-ptc-runtime'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
 import * as ToolJobs from '@berry-ai/harness-tool-jobs'
 import { LocalBashExecutor } from '@berry-ai/harness-bash-local'

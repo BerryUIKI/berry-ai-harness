@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen, within } from '@testing-library/react'
-import { makeTranslate, RemoteError, sessionSnapshot } from '@deepseek-ai/dsh-client-test-runtime'
+import { makeTranslate, RemoteError, sessionSnapshot } from '@berry-ai/harness-client-test-runtime'
 import type {
   SessionListState, SessionSummary, SessionSnapshot,
 } from '@berry-ai/harness-api-session-controller/client'

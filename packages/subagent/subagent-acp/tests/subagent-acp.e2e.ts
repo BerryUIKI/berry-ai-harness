@@ -10,7 +10,7 @@ import type { Agent } from '@berry-ai/harness-agent'
 import SubagentRuntime from '@berry-ai/harness-subagent'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
-import { resolveExampleLaunch } from '@deepseek-ai/dsh-loader-smoke'
+import { resolveExampleLaunch } from '@berry-ai/harness-loader-smoke'
 import * as acp from '../src/index.ts'
 
 /**

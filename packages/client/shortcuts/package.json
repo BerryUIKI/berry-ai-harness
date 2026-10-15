@@ -51,7 +51,7 @@
     "@deepseek-ai/dsh-client-store": "workspace:*",
     "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
-    "@deepseek-ai/dsh-client-test-runtime": "workspace:*",
+    "@berry-ai/harness-client-test-runtime": "workspace:*",
     "@berry-ai/harness-host-webserver": "workspace:*"
   },
   "files": [

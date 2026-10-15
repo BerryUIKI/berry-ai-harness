@@ -14,7 +14,7 @@ import { subagentIdentityProjectionDefinition } from '@berry-ai/harness-subagent
 import TypertRegistry from '@berry-ai/harness-typert-registry'
 import { createUserMessage, MessageId } from '@berry-ai/harness-llm'
 import { snapshotSubagentDescriptor } from '@berry-ai/harness-subagent'
-import { createInboxStub, mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { createInboxStub, mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@berry-ai/harness-agent-loop-testkit'
 import type { Agent, Inbox } from '@berry-ai/harness-agent'
 import type { SessionEvent, SessionHeader, SessionId } from '@berry-ai/harness-session'
 import AttachmentStore from '@berry-ai/harness-attachment'

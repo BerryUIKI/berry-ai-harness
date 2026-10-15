@@ -3,7 +3,7 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
 import { type SessionEvent } from '@berry-ai/harness-session'
-import { LOADER_SMOKE_TEST_TIMEOUT_MS, runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
+import { LOADER_SMOKE_TEST_TIMEOUT_MS, runLoaderSmoke } from '@berry-ai/harness-loader-smoke'
 
 // Keep the Loader config under examples so both modes exercise the same deployable
 // topology: local fixture source plus bare plugins owned by the examples workspace.

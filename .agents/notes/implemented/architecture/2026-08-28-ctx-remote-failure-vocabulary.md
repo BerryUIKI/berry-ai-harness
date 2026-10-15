@@ -49,7 +49,7 @@ Discrimination always reads `code` and never uses `instanceof`. Client and Host 
 
 Business code usually needs neither function: the `ok: false` branch of `RemoteResult` is already a typed `RemoteFailure`, so `if (result.error.code === 'session/not-found')` narrows `details` to that code's shape with no cast. A site that must propagate the failure writes `throw result.error` — it is a real `Error`, with a working stack and `message`.
 
-The client plane does not construct `RemoteError`; the one exception is the Gateway's own client face, which rebuilds an instance from wire data in `invoke()` and folds carrier throws at stream boundaries into the same vocabulary. A test double that needs a failure value takes `RemoteError` from `@deepseek-ai/dsh-client-test-runtime` instead of making a client package import the protocol as a value. Assertions match the code (plus details fields where they matter) with `toMatchObject`: `RemoteError` is an `Error`, its own-key set differs from the former literal, and `toEqual` fails on it.
+The client plane does not construct `RemoteError`; the one exception is the Gateway's own client face, which rebuilds an instance from wire data in `invoke()` and folds carrier throws at stream boundaries into the same vocabulary. A test double that needs a failure value takes `RemoteError` from `@berry-ai/harness-client-test-runtime` instead of making a client package import the protocol as a value. Assertions match the code (plus details fields where they matter) with `toMatchObject`: `RemoteError` is an `Error`, its own-key set differs from the former literal, and `toEqual` fails on it.
 
 ## Fixed Host facts
 

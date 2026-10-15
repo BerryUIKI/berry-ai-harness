@@ -53,7 +53,7 @@
     "node-pty": "1.2.0-beta.15"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-loader-smoke": "workspace:*",
+    "@berry-ai/harness-loader-smoke": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"

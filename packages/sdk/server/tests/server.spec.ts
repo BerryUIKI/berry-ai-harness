@@ -13,7 +13,7 @@ import { scopeTarget } from '@berry-ai/harness-scope'
 import { randomUUID } from 'node:crypto'
 import AgentRegistry, { type Agent, type AgentHandle } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import { MockAdapter, textResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 
 import SessionStore, { SessionId, type SessionEvent } from '@berry-ai/harness-session'

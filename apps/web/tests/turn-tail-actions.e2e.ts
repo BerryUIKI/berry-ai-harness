@@ -14,7 +14,7 @@ import { join } from 'node:path'
 import type { Browser, Locator, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterEach, describe, expect, it, onTestFailed, vi } from 'vitest'
-import type { ReplayOverrideDoc } from '@deepseek-ai/dsh-llm-replay'
+import type { ReplayOverrideDoc } from '@berry-ai/harness-llm-replay'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import {
   acknowledgeReloadConnectionLoss, assertFixtureInventory, captureStableAria, compareOrRefreshGolden, fixtureUserPrompts,

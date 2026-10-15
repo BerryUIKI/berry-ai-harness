@@ -18,7 +18,7 @@ import {
   createUserMessage,
   expandAssistantStream,
 } from '@berry-ai/harness-llm'
-import type { ReplayEntry, ReplayOverrideDoc } from '@deepseek-ai/dsh-llm-replay'
+import type { ReplayEntry, ReplayOverrideDoc } from '@berry-ai/harness-llm-replay'
 import type { SessionEvent, SessionSeq } from '@berry-ai/harness-session'
 import {
   SESSION_FORMAT_VERSION,

@@ -1,7 +1,7 @@
 /** Directory-node lifecycle tests with controlled stream delivery and deferred reads. */
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import type { MockInstance } from 'vitest'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { DirectoryNode } from '../src/client/directory-node.ts'
 import type { DirLevel } from '../src/client/store.ts'

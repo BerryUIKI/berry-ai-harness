@@ -6,7 +6,7 @@ import { chromium } from 'playwright'
 import yaml from 'js-yaml'
 import { expect, it, onTestFinished } from 'vitest'
 import { credentialRef } from '@berry-ai/harness-credentials'
-import { startMockLlmServer } from '@deepseek-ai/dsh-llm-mock-server'
+import { startMockLlmServer } from '@berry-ai/harness-llm-mock-server'
 import { launchWebScaffold, webSnapshotMode } from './scaffold.ts'
 import { connectFreshWorkspace, newEnglishPage, openSettings } from './support.ts'
 

@@ -8,7 +8,7 @@ import { chromium, type Browser, type Page } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFinished } from 'vitest'
 import type {} from '@berry-ai/harness-workspace-changes'
 import type { ChangesSummary } from '@deepseek-ai/dsh-client-ui-deliverables/src/changes.ts'
-import { deriveReplayScript, parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
+import { deriveReplayScript, parseSessionLog } from '@berry-ai/harness-llm-replay'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import {
   assertFinalWorkspaceSnapshot, captureExpandedTurnProcessAria, compareOrRefreshGolden,

@@ -14,7 +14,7 @@ import { join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { describe, expect, it } from 'vitest'
 import { type SessionEvent } from '@berry-ai/harness-session'
-import { runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
+import { runLoaderSmoke } from '@berry-ai/harness-loader-smoke'
 
 const fixtureDir = new URL('./fixtures/loader/', import.meta.url)
 const driver = fileURLToPath(new URL('driver.ts', fixtureDir))

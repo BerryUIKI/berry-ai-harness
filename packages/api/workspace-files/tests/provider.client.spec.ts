@@ -1,5 +1,5 @@
 /** File-provider metadata reads, target subscriptions, failures, and cancellation. */
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { RemoteFailure, RemoteResult } from '@berry-ai/harness-typert-protocol'
 import { absoluteFileAddress, sessionFileAddress } from '@berry-ai/harness-util-workspace-path'

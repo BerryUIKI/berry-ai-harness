@@ -8,7 +8,7 @@ import { ShellExecutor } from '@berry-ai/harness-shell'
 import type { ShellExecRequest, ShellExecSpec, ShellExecution, ShellRunResult } from '@berry-ai/harness-shell'
 import * as tmuxContext from '@berry-ai/harness-tmux-context'
 import type { Config } from '@berry-ai/harness-tmux-context'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 
 /** Empty offset readers for fakes that never produce output. */
 const silentReader = { readFrom: (fromByte: number) => ({ text: '', nextOffset: fromByte, lossy: false }) }

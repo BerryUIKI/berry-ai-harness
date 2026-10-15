@@ -4,7 +4,7 @@ import { mountWorkingDirectoryFixture } from '../../../subagent/subagent/tests/w
 import { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import { SessionId } from '@berry-ai/harness-session'
 import SubagentRuntime, { NO_START_CAPABILITIES, type SubagentActivation } from '@berry-ai/harness-subagent'
 import { describe, expect, it, vi } from 'vitest'

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url'
 import type { Browser, Page, Route } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import { deriveReplayScript } from '@deepseek-ai/dsh-llm-replay'
+import { deriveReplayScript } from '@berry-ai/harness-llm-replay'
 import { SessionId } from '@berry-ai/harness-session'
 import {
   assertFixtureInventory, captureStableAria, compareOrRefreshGolden, fixtureUserPrompts,

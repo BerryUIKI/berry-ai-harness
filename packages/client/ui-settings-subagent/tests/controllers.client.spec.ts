@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import type { SettingsPathOpView } from '@berry-ai/harness-api-remotes/client'
-import { RemoteError, stubConfigForm, type StubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError, stubConfigForm, type StubConfigForm } from '@berry-ai/harness-client-test-runtime'
 import { SubagentLimitsCardController, type SubagentLimitsSettings } from '../src/client/subagent-limits-card-controller.ts'
 import { subagentCardFace, subagentCardShell } from '../src/client/subagent-card-controller.ts'
 import {

@@ -2,7 +2,7 @@
 import { describe, expect, onTestFinished, vi } from 'vitest'
 import { createElement, Fragment, useSyncExternalStore } from 'react'
 import { act, cleanup, render } from '@testing-library/react'
-import { createClientTest, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
+import { createClientTest, webApp } from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
 import { Modal } from '@deepseek-ai/dsh-client-ui-primitives'
 import type {} from '@deepseek-ai/dsh-client-shortcuts/client'
 import type { DesktopKeyboardApi, DesktopShortcutInput, ShortcutCommandId } from '@deepseek-ai/dsh-client-shortcuts/protocol'

@@ -9,7 +9,7 @@ import type { GoalRef } from '@berry-ai/harness-goal'
 import SessionStore, { Session, SessionId, type SessionEvent } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import * as commandGoal from '@berry-ai/harness-command-goal'
-import { createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { createInboxStub } from '@berry-ai/harness-agent-loop-testkit'
 
 interface Harness {
   readonly ctx: Context

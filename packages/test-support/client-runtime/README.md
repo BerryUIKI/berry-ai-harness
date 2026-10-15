@@ -3,7 +3,7 @@ description: "jsdom slot test runtime for browser feature specs, for test author
 kind: "package-library"
 ---
 
-# @deepseek-ai/dsh-client-test-runtime
+# @berry-ai/harness-client-test-runtime
 
 English | [中文](README.zh.md)
 
@@ -59,7 +59,7 @@ A registered snapshot serializer folds CSS-module class hashes (`_frame_a1b2c3` 
 Script a failure by the code the Host would answer with, and assert the same way production code discriminates — on `code`, never on the class:
 
 ```text
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
+import { RemoteError } from '@berry-ai/harness-client-test-runtime'
 
 remote.goals.create.mockResolvedValue({
   ok: false,
@@ -74,8 +74,8 @@ The slot tier above mounts one feature against doubles. The whole-client tier bo
 
 ```text
 // @vitest-environment jsdom
-import { createClientTest, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
-import { ok } from '@deepseek-ai/dsh-remote-mock'
+import { createClientTest, webApp } from '@berry-ai/harness-client-test-runtime/src/assembly/index.ts'
+import { ok } from '@berry-ai/harness-remote-mock'
 
 const test = createClientTest({ roster: webApp }, { mount: true })
 test('registers into the sidebar', async ({ remote, start }) => {

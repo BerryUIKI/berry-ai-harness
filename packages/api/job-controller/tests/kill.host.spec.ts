@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import type { Agent } from '@berry-ai/harness-agent'
 import type { JobId, JobOutcome } from '@berry-ai/harness-jobs'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'

@@ -2,7 +2,7 @@
  * Whole-client test carrier: boots an {@link AssemblyPlan} through the
  * production `bootClient` over an in-process module table, with a
  * `RemoteMock` bound to that client's Connection plugin instance.
- * @module @deepseek-ai/dsh-client-test-runtime/src/assembly/test-client
+ * @module @berry-ai/harness-client-test-runtime/src/assembly/test-client
  */
 import { Context, type Plugin } from '@deepseek-ai/cordis'
 import type { Entry } from '@deepseek-ai/cordis-plugin-loader'
@@ -13,7 +13,7 @@ import {
 } from '@deepseek-ai/dsh-client-connection/client'
 import { bootClient } from '@deepseek-ai/dsh-client-web/src/boot-client.ts'
 import { mountClient } from '@deepseek-ai/dsh-client-web/src/mount.ts'
-import type { RemoteMock } from '@deepseek-ai/dsh-remote-mock'
+import type { RemoteMock } from '@berry-ai/harness-remote-mock'
 import { act } from '@testing-library/react'
 import { createInProcessModules, loadPluginModules } from './modules.ts'
 import { assertPlan, graphFromRoster, type AssemblyPlan } from './roster.ts'

@@ -10,7 +10,7 @@ import { generationLogPath } from '../../../packages/session/session-persistence
 import { scanZstdFrames } from '../../../packages/session/session-persistence-jsonl/src/zstd.ts'
 import type {} from '@berry-ai/harness-agent-preset-registry'
 import type {} from '@berry-ai/harness-api-session-controller'
-import { normalizeSessionSnapshots } from '@deepseek-ai/dsh-session-snapshot'
+import { normalizeSessionSnapshots } from '@berry-ai/harness-session-snapshot'
 import { launchWebScaffold, webSnapshotMode } from './scaffold.ts'
 
 const childFixturePath = fileURLToPath(new URL('../../../snapshots/web/preset-migration/session.1.v2.jsonl', import.meta.url))

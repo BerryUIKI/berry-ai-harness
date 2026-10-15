@@ -5,7 +5,7 @@ import { boot, loadOverlayPatches } from '@berry-ai/harness-app-boot'
 import { SessionId } from '@berry-ai/harness-session'
 import type {} from '@berry-ai/harness-skill'
 import type {} from '@berry-ai/harness-tools'
-import { unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 
 const overlayPath = process.argv[2]
 if (overlayPath === undefined) throw new Error('dsh-badge snapshot requires an overlay path')

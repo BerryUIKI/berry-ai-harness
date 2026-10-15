@@ -69,6 +69,6 @@
     "@berry-ai/harness-attachment-local": "workspace:*",
     "@berry-ai/harness-tool-fs": "workspace:*",
     "sharp": "^0.35.5",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*"
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*"
   }
 }

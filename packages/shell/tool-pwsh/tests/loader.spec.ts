@@ -12,7 +12,7 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { spawnSync } from 'node:child_process'
 import { describe, expect, it } from 'vitest'
-import { runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
+import { runLoaderSmoke } from '@berry-ai/harness-loader-smoke'
 import { resolvePwshPath } from '@berry-ai/harness-pwsh-local'
 
 // The probe follows the executor's own resolution (Program Files installs on

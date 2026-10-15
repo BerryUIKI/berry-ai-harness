@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
-import { prepareSessionSnapshotFixtureForComparison } from '@deepseek-ai/dsh-llm-replay'
+import { prepareSessionSnapshotFixtureForComparison } from '@berry-ai/harness-llm-replay'
 import {
   type NormalizeContext,
   extractSnapshotSpillPaths,

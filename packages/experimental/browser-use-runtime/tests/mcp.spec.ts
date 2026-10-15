@@ -18,7 +18,7 @@ import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl
 import Agents from '@berry-ai/harness-agent'
 import type { Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import Projections from '@berry-ai/harness-session-projection'
 import WorkingDirectory from '@berry-ai/harness-working-directory'

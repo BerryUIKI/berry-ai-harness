@@ -2,7 +2,7 @@
 import { afterEach, expect, it, vi } from 'vitest'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { RemoteStream, type ClientRemote } from '@berry-ai/harness-api-gateway/client'
-import { streamMethod } from '@deepseek-ai/dsh-remote-mock'
+import { streamMethod } from '@berry-ai/harness-remote-mock'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { TerminalRemote } from '../src/client/model.ts'
 import { TerminalWindowHold } from '../src/client/retention.ts'

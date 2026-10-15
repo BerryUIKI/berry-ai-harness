@@ -229,7 +229,7 @@
     "@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp": "workspace:*",
     "@deepseek-ai/dsh-experimental-computer-use-cua-driver-native": "workspace:*",
     "@deepseek-ai/dsh-experimental-claude-code-mods": "workspace:*",
-    "@deepseek-ai/dsh-llm-replay": "workspace:*",
+    "@berry-ai/harness-llm-replay": "workspace:*",
     "@berry-ai/harness-mcp-client": "workspace:*",
     "@deepseek-ai/dsh-tool-session-query": "workspace:*",
     "@berry-ai/harness-web-fetch-http": "workspace:*",
