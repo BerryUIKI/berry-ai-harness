@@ -3,7 +3,7 @@ import { createAssistantMessage, createToolResultMessage, LlmAttemptId, ToolCall
 import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import { SessionSeq, type SessionEvent } from '@berry-ai/harness-session/types'
-import type { SessionAssistantSettlementEntry, SessionEventLikeEntry, SessionLiveEventEntry } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionAssistantSettlementEntry, SessionEventLikeEntry, SessionLiveEventEntry } from '@berry-ai/harness-api-session-controller/client'
 import { ConversationNodeAssembler } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { ChatNode, ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
 import { assistantDefinition } from '../src/client/conversation-nodes/assistant.ts'

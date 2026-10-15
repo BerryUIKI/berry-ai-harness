@@ -6,7 +6,7 @@ import type {
   NodeKey, RenderEntry,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { InboxState } from '@berry-ai/harness-agent/types'
-import type { PendingSubmission } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { PendingSubmission } from '@berry-ai/harness-api-session-controller/client'
 import {
   Button, IconChevronDownOutlineRegular, MarkdownDelegateProvider, Modal,
 } from '@deepseek-ai/dsh-client-ui-primitives'

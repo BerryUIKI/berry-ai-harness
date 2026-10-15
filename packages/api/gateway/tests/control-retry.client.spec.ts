@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
-import type { ConnectionHandle } from '@deepseek-ai/dsh-api-remotes/client'
+import type { ConnectionHandle } from '@berry-ai/harness-api-remotes/client'
 import {
   RemoteStreamCarrierError,
   RemoteStream,

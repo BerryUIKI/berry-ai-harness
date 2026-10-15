@@ -12,7 +12,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { act, fireEvent, render } from '@testing-library/react'
 import { useEffect, useState, type ReactNode } from 'react'
 import { Context } from '@deepseek-ai/cordis'
-import type { SessionReference } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionReference } from '@berry-ai/harness-api-session-controller/client'
 import type {} from '@deepseek-ai/dsh-client-ui-session/client'
 import {
   SlotOwnershipError, StaleAuthorizationError,

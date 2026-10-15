@@ -1,5 +1,5 @@
 /** Selection and retention policy for independently owned Sidebar Session views. */
-import type { ISessions, SessionReference } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { ISessions, SessionReference } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { SidebarSessionView } from './session-view.ts'

@@ -14,15 +14,15 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@deepseek-ai/dsh-api-account-controller` | no | Expose safe account operations over authenticated Remote |
-| `@deepseek-ai/dsh-api-gateway` | yes | Typert Remote Host dispatcher and Client API endpoint |
-| `@deepseek-ai/dsh-api-job-controller` | yes | Job Remote observation stream and the reference-counted client job-output service |
-| `@deepseek-ai/dsh-api-remotes` | no | Remote BFF assembly for application-selected Host capabilities |
-| `@deepseek-ai/dsh-api-session-controller` | yes | Session Remote commands, cold reads, and live control transport |
-| `@deepseek-ai/dsh-api-settings-controller` | yes | Remote owner for the configuration surfaces over the settings-domain seams |
-| `@deepseek-ai/dsh-api-terminal-controller` | yes | Session-owned interactive terminals with shell discovery, screen recovery and typed Remote control |
-| `@deepseek-ai/dsh-api-workspace-controller` | yes | Workspace Remote commands and reconnect-safe state transport |
-| `@deepseek-ai/dsh-api-workspace-files` | yes | Workspace file service and Client resource provider: bounded reads, directory listing, and live metadata over the workspaceFiles Remote namespace |
+| `@berry-ai/harness-api-account-controller` | no | Expose safe account operations over authenticated Remote |
+| `@berry-ai/harness-api-gateway` | yes | Typert Remote Host dispatcher and Client API endpoint |
+| `@berry-ai/harness-api-job-controller` | yes | Job Remote observation stream and the reference-counted client job-output service |
+| `@berry-ai/harness-api-remotes` | no | Remote BFF assembly for application-selected Host capabilities |
+| `@berry-ai/harness-api-session-controller` | yes | Session Remote commands, cold reads, and live control transport |
+| `@berry-ai/harness-api-settings-controller` | yes | Remote owner for the configuration surfaces over the settings-domain seams |
+| `@berry-ai/harness-api-terminal-controller` | yes | Session-owned interactive terminals with shell discovery, screen recovery and typed Remote control |
+| `@berry-ai/harness-api-workspace-controller` | yes | Workspace Remote commands and reconnect-safe state transport |
+| `@berry-ai/harness-api-workspace-files` | yes | Workspace file service and Client resource provider: bounded reads, directory listing, and live metadata over the workspaceFiles Remote namespace |
 
 ## attachment
 

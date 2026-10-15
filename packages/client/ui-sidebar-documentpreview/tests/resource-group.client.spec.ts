@@ -2,7 +2,7 @@ import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
 import type { Resources, ResourceSnapshot } from '@deepseek-ai/dsh-client-resources/client'
-import type { WorkspaceFileStat } from '@deepseek-ai/dsh-api-workspace-files/types'
+import type { WorkspaceFileStat } from '@berry-ai/harness-api-workspace-files/types'
 import { ResourceGroup } from '../src/client/document/resource-group.ts'
 
 function harness() {

@@ -6,8 +6,8 @@ export type {} from '@deepseek-ai/dsh-client-product-analytics/remote'
 import agentPresetsRemote from '@berry-ai/harness-agent-preset-registry/remote'
 import userQuestionsRemote from '@berry-ai/harness-user-questions/remote'
 import commandsRemote from '@berry-ai/harness-commands/remote'
-import accountRemote from '@deepseek-ai/dsh-api-account-controller/remote'
-import settingsControllerRemote from '@deepseek-ai/dsh-api-settings-controller/remote'
+import accountRemote from '@berry-ai/harness-api-account-controller/remote'
+import settingsControllerRemote from '@berry-ai/harness-api-settings-controller/remote'
 import officeToPdfRemote from '@berry-ai/harness-office-to-pdf/remote'
 import goalsRemote from '@berry-ai/harness-goal/remote'
 import scheduleRemote from '@berry-ai/harness-schedule/remote'
@@ -22,14 +22,14 @@ import sessionFeedbackRemote from '@berry-ai/harness-command-feedback/remote'
 import fileUploadsRemote from '@deepseek-ai/dsh-client-file-upload/remote'
 import sessionReferencesRemote from '@berry-ai/harness-session-reference/remote'
 import subagentsRemote from '@berry-ai/harness-subagent/remote'
-import sessionRemote from '@deepseek-ai/dsh-api-session-controller/remote'
-import jobRemote from '@deepseek-ai/dsh-api-job-controller/remote'
-import workspaceRemote from '@deepseek-ai/dsh-api-workspace-controller/remote'
-import terminalRemote from '@deepseek-ai/dsh-api-terminal-controller/remote'
-import workspaceFilesRemote from '@deepseek-ai/dsh-api-workspace-files/remote'
-import type { ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
+import sessionRemote from '@berry-ai/harness-api-session-controller/remote'
+import jobRemote from '@berry-ai/harness-api-job-controller/remote'
+import workspaceRemote from '@berry-ai/harness-api-workspace-controller/remote'
+import terminalRemote from '@berry-ai/harness-api-terminal-controller/remote'
+import workspaceFilesRemote from '@berry-ai/harness-api-workspace-files/remote'
+import type { ClientRemote } from '@berry-ai/harness-api-gateway/client'
 
-export type { ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
+export type { ClientRemote } from '@berry-ai/harness-api-gateway/client'
 export type {
   BundleInfo, BundleRowInfo, ChangeResult, IncompatiblePlugin, InspectOptions, InstallBundleOptions, InstallSpecKind, ManagementError,
   PackageResult,
@@ -42,8 +42,8 @@ export type { PluginInventorySnapshot } from '@deepseek-ai/dsh-host-plugin-inven
 export type {} from '@berry-ai/harness-agent-preset-registry/remote'
 export type {} from '@berry-ai/harness-user-questions/remote'
 export type {} from '@berry-ai/harness-commands/remote'
-export type {} from '@deepseek-ai/dsh-api-settings-controller/remote'
-export type {} from '@deepseek-ai/dsh-api-account-controller/remote'
+export type {} from '@berry-ai/harness-api-settings-controller/remote'
+export type {} from '@berry-ai/harness-api-account-controller/remote'
 export type {} from '@berry-ai/harness-goal/remote'
 export type {} from '@berry-ai/harness-schedule/remote'
 export type {} from '@berry-ai/harness-office-to-pdf/remote'
@@ -56,16 +56,16 @@ export type {} from '@deepseek-ai/dsh-client-file-upload/remote'
 export type {} from '@berry-ai/harness-session-reference/remote'
 export type {} from '@berry-ai/harness-subagent/remote'
 export type * from '@berry-ai/harness-subagent/client'
-export type {} from '@deepseek-ai/dsh-api-session-controller/remote'
-export type * from '@deepseek-ai/dsh-api-session-controller/types'
-export type {} from '@deepseek-ai/dsh-api-job-controller/remote'
-export type * from '@deepseek-ai/dsh-api-job-controller/types'
-export type {} from '@deepseek-ai/dsh-api-workspace-controller/remote'
-export type * from '@deepseek-ai/dsh-api-workspace-controller/types'
-export type {} from '@deepseek-ai/dsh-api-workspace-files/remote'
-export type * from '@deepseek-ai/dsh-api-workspace-files/types'
-export type {} from '@deepseek-ai/dsh-api-terminal-controller/remote'
-export type * from '@deepseek-ai/dsh-api-terminal-controller/types'
+export type {} from '@berry-ai/harness-api-session-controller/remote'
+export type * from '@berry-ai/harness-api-session-controller/types'
+export type {} from '@berry-ai/harness-api-job-controller/remote'
+export type * from '@berry-ai/harness-api-job-controller/types'
+export type {} from '@berry-ai/harness-api-workspace-controller/remote'
+export type * from '@berry-ai/harness-api-workspace-controller/types'
+export type {} from '@berry-ai/harness-api-workspace-files/remote'
+export type * from '@berry-ai/harness-api-workspace-files/types'
+export type {} from '@berry-ai/harness-api-terminal-controller/remote'
+export type * from '@berry-ai/harness-api-terminal-controller/types'
 // The forwarded-event allowlist's selection seat: without it in the consumer's
 // compilation face `TypertRemoteEvent` is `never` and every `$on` call fails.
 export type { ApiRemoteForwardedEvent } from '../types.ts'
@@ -81,7 +81,7 @@ export type {} from '@berry-ai/harness-permission-presets/types'
 export type {} from '@berry-ai/harness-settings/types'
 export type {} from '@berry-ai/harness-user-approval/types'
 export type {} from '@berry-ai/harness-user-questions/types'
-export type {} from '@deepseek-ai/dsh-api-session-controller/types'
+export type {} from '@berry-ai/harness-api-session-controller/types'
 
 /**
  * The carrier's Client-facing types, re-exported so a business package names one
@@ -94,7 +94,7 @@ export type {
   RpcId, RpcRequest, RpcResponse, RpcResult, SessionId,
   StreamChunk,
 } from '@deepseek-ai/dsh-client-connection/client'
-export type {} from '@deepseek-ai/dsh-api-gateway/client'
+export type {} from '@berry-ai/harness-api-gateway/client'
 export type {} from '@berry-ai/harness-cordis-host-runner/remote'
 
 // The payload vocabulary of the selected namespaces, re-exported so a Client
@@ -158,7 +158,7 @@ export type { SessionReferenceMentionCandidate } from '@berry-ai/harness-session
 export type {
   RemoteErrorCode, RemoteErrorDetailsMap, RemoteFailure, RemoteResult,
 } from '@berry-ai/harness-typert-protocol'
-export type { RemoteHostFacts } from '@deepseek-ai/dsh-api-gateway/client'
+export type { RemoteHostFacts } from '@berry-ai/harness-api-gateway/client'
 
 declare module '@deepseek-ai/cordis' {
   interface Context {

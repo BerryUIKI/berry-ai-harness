@@ -12,8 +12,8 @@
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 // Type-only: pulls the ctx.remote merge into this program.
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type { SessionSummary } from '@deepseek-ai/dsh-api-session-controller/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
+import type { SessionSummary } from '@berry-ai/harness-api-session-controller/client'
 import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type {} from '@berry-ai/harness-agent-preset-registry/types'
 import { presetOptions, readRoster } from './settings-store.ts'

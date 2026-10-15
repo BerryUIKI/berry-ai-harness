@@ -14,7 +14,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {
   ApprovalRequestId, CordisDynamicPluginId, DynamicCordisInvokeResult,
   DynamicCordisInventoryRow,
-} from '@deepseek-ai/dsh-api-remotes/client'
+} from '@berry-ai/harness-api-remotes/client'
 import type { ClientModuleSystem } from '@deepseek-ai/dsh-client-modules/client'
 import type { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type { JsonValue } from '@berry-ai/harness-util-values'
@@ -55,7 +55,7 @@ export { ClientTimerService } from './timer.ts'
 export type {
   ApprovalRequestId, CordisDynamicPackageId, CordisDynamicPluginId, CordisDynamicPluginRunId,
   DynamicCordisPackage,
-} from '@deepseek-ai/dsh-api-remotes/client'
+} from '@berry-ai/harness-api-remotes/client'
 
 
 /**

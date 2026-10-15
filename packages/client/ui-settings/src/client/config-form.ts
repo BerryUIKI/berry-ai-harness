@@ -6,10 +6,10 @@ import { Service } from '@deepseek-ai/cordis'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   SettingsNamespaceView, SettingsPathOpView,
-} from '@deepseek-ai/dsh-api-remotes/client'
+} from '@berry-ai/harness-api-remotes/client'
 import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { JsonValue } from '@berry-ai/harness-util-values'
-// Type-only, and deliberately NOT `@deepseek-ai/dsh-api-remotes/client`: this
+// Type-only, and deliberately NOT `@berry-ai/harness-api-remotes/client`: this
 // package is reachable from the Host build graph through its feature-package
 // callers, and api-remotes' Client face imports a Host-tsdown-generated
 // `/remote` artifact, which would deadlock the Host tsc phase. The gateway's
@@ -18,8 +18,8 @@ import type { JsonValue } from '@berry-ai/harness-util-values'
 // `$on` and its key face without dragging a build artifact in. The runtime
 // `remote` injection belongs to the providing plugin's apply, which registers
 // the mirror's invalidation subscriptions.
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type {} from '@deepseek-ai/dsh-api-remotes/types'
+import type {} from '@berry-ai/harness-api-remotes/client'
+import type {} from '@berry-ai/harness-api-remotes/types'
 // The forwarded event's own declaration: `$on`'s key face is
 // `Extract<keyof Events, keyof Selection>`, so the allowlist alone resolves to
 // never — the owning package's client-safe, type-only subpath supplies the

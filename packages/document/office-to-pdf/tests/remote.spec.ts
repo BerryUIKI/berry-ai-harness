@@ -1,7 +1,7 @@
 /** Authorized source identity and cancellation survive Host rendering. */
 import { Context } from '@deepseek-ai/cordis'
 import { SessionId } from '@berry-ai/harness-session/types'
-import type { WorkspaceFiles } from '@deepseek-ai/dsh-api-workspace-files'
+import type { WorkspaceFiles } from '@berry-ai/harness-api-workspace-files'
 import type { FileSystem, FsInfo, FsTarget } from '@berry-ai/harness-fs'
 import { OfficeToPdfError, OfficeToPdfKey, type OfficeToPdfResult } from '../src/index.ts'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'

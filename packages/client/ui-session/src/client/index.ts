@@ -9,9 +9,9 @@ import type {
   SessionSnapshot,
   SessionSummary,
   UseProjection,
-} from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 import { notifySubscribers } from '@deepseek-ai/dsh-client-store'
 import { WeakMapWithValues } from '@berry-ai/harness-util-values'
 import { standardHookPropName } from '@deepseek-ai/dsh-client-ui-slots'
@@ -179,7 +179,7 @@ declare module '@deepseek-ai/dsh-client-ui-slots' {
   }
 }
 
-declare module '@deepseek-ai/dsh-api-session-controller/client' {
+declare module '@berry-ai/harness-api-session-controller/client' {
   interface SessionReferenceSourceMap {
     mainView: unknown
   }

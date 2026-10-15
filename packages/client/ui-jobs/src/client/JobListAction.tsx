@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent } from 'react'
 import { createPortal } from 'react-dom'
-import type { JobsSnapshot, JobView, ObservedJob } from '@deepseek-ai/dsh-api-job-controller/client'
+import type { JobsSnapshot, JobView, ObservedJob } from '@berry-ai/harness-api-job-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import {
   IconChevronDownOutlineRegular, IconStopFillRegular, StateDot, TerminalBlock, useAnchoredPosition, useDismissOnOutsidePointer,

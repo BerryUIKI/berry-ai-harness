@@ -9,7 +9,7 @@ import {
   IconTrashOutlineRegular, projectUserText, Tooltip,
 } from '@deepseek-ai/dsh-client-ui-primitives'
 import type { InboxState } from '@berry-ai/harness-agent/types'
-import type { QueueAction } from '@deepseek-ai/dsh-api-session-controller/types'
+import type { QueueAction } from '@berry-ai/harness-api-session-controller/types'
 import type { MessageId } from '@berry-ai/harness-llm/brand'
 import { NS } from '../locales.ts'
 import css from './QueueDock.module.css'

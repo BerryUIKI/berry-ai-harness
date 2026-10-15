@@ -11,7 +11,7 @@
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 // Type-only: pulls the ctx.remote merge into this program.
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 import type { SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import {
   SettingsFormModel, settingsNumberField, settingsTextField,

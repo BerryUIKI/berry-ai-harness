@@ -6,7 +6,7 @@ import { apply as applyConnection, inject as connectionInject } from '@deepseek-
 import WebServer from '@deepseek-ai/dsh-host-webserver'
 import { Remote, TypertRemoteService, type RemoteStream } from '@berry-ai/harness-typert-protocol'
 import TypertRegistry from '@berry-ai/harness-typert-registry'
-import TypertGatewayService from '@deepseek-ai/dsh-api-gateway'
+import TypertGatewayService from '@berry-ai/harness-api-gateway'
 import { browserCookie, provideBrowserCredentials } from './browser-credentials.ts'
 
 /** The smallest Remote stream that reads its uplink: every carrier has to serve it alike. */

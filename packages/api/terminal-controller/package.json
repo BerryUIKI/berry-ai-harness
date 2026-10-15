@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-api-terminal-controller",
+  "name": "@berry-ai/harness-api-terminal-controller",
   "description": "Session-owned interactive terminals with shell discovery, screen recovery and typed Remote control",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -40,10 +40,10 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-gateway"
+        "@berry-ai/harness-api-gateway"
       ],
       "external": [
-        "@deepseek-ai/dsh-api-gateway/client"
+        "@berry-ai/harness-api-gateway/client"
       ],
       "platform": "web"
     }
@@ -69,7 +69,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-agent": "workspace:*",
-    "@deepseek-ai/dsh-api-gateway": "workspace:*",
+    "@berry-ai/harness-api-gateway": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "@deepseek-ai/dsh-client-store": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",

@@ -4,15 +4,15 @@ import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { afterEach, describe, expect, it, vi, type MockInstance } from 'vitest'
 import type {
   ISessions, SessionListState, SessionReference, SessionSummary,
-} from '@deepseek-ai/dsh-api-session-controller/client'
-import { SessionCreateError } from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
+import { SessionCreateError } from '@berry-ai/harness-api-session-controller/client'
 import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import type {
   IWorkspaces, WorkspaceId, WorkspaceSnapshot, WorkspaceView,
-} from '@deepseek-ai/dsh-api-workspace-controller/client'
-import type { ClientRemote, DirectoryListing } from '@deepseek-ai/dsh-api-remotes/client'
+} from '@berry-ai/harness-api-workspace-controller/client'
+import type { ClientRemote, DirectoryListing } from '@berry-ai/harness-api-remotes/client'
 import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
-import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
+import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import { SessionId } from '@berry-ai/harness-session/types'
 import { LayoutController } from '@deepseek-ai/dsh-client-ui-layout/client'
 import type { MainPanelId } from '@deepseek-ai/dsh-client-ui-layout/client'

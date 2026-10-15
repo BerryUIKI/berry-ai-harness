@@ -1393,11 +1393,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-api-gateway",
+      "name": "@berry-ai/harness-api-gateway",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-api-gateway",
+          "location": "node_modules/@berry-ai/harness-api-gateway",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1405,11 +1405,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-api-remotes",
+      "name": "@berry-ai/harness-api-remotes",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-api-remotes",
+          "location": "node_modules/@berry-ai/harness-api-remotes",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1417,11 +1417,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-api-session-controller",
+      "name": "@berry-ai/harness-api-session-controller",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-api-session-controller",
+          "location": "node_modules/@berry-ai/harness-api-session-controller",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1429,11 +1429,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-api-settings-controller",
+      "name": "@berry-ai/harness-api-settings-controller",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-api-settings-controller",
+          "location": "node_modules/@berry-ai/harness-api-settings-controller",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1441,11 +1441,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-api-workspace-controller",
+      "name": "@berry-ai/harness-api-workspace-controller",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-api-workspace-controller",
+          "location": "node_modules/@berry-ai/harness-api-workspace-controller",
           "direct": false,
           "optional": false,
           "peer": false
@@ -1453,11 +1453,11 @@
       ]
     },
     {
-      "name": "@deepseek-ai/dsh-api-workspace-files",
+      "name": "@berry-ai/harness-api-workspace-files",
       "version": "0.1.5-rc.2",
       "installations": [
         {
-          "location": "node_modules/@deepseek-ai/dsh-api-workspace-files",
+          "location": "node_modules/@berry-ai/harness-api-workspace-files",
           "direct": false,
           "optional": false,
           "peer": false

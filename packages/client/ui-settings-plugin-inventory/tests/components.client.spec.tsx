@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { ClientEntryState } from '@deepseek-ai/dsh-client-modules/client'
-import type { PluginEntryId } from '@deepseek-ai/dsh-api-remotes/client'
+import type { PluginEntryId } from '@berry-ai/harness-api-remotes/client'
 import { Context } from '@deepseek-ai/cordis'
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import { bindSnapshotSelector } from '@deepseek-ai/dsh-client-test-runtime'

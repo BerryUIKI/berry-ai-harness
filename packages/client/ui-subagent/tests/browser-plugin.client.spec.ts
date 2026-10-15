@@ -5,7 +5,7 @@ import { stubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
 import { describe, expect, it } from 'vitest'
 import type {
   SessionListState, SessionSnapshot, SessionSummary,
-} from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
 import type { SubagentAddress } from '@berry-ai/harness-subagent/client'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type { SessionId } from '@berry-ai/harness-session/types'

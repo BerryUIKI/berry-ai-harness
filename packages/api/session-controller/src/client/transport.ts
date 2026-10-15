@@ -1,6 +1,6 @@
 /** Session-specific adapters for Gateway-owned Remote stream lifecycles. */
 
-import type {} from '@deepseek-ai/dsh-api-session-controller/remote'
+import type {} from '@berry-ai/harness-api-session-controller/remote'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
 import {
   RemoteJournalStream,
@@ -9,7 +9,7 @@ import {
   type ClientRemote,
   type RemoteJournalChange,
   type RemoteJournalFrame,
-} from '@deepseek-ai/dsh-api-gateway/client'
+} from '@berry-ai/harness-api-gateway/client'
 import type {
   SessionAddress,
   SessionAssistantStreamBaseline,

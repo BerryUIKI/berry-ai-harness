@@ -14,7 +14,7 @@
  */
 
 import { Context } from '@deepseek-ai/cordis'
-import type { DynamicCordisPackage } from '@deepseek-ai/dsh-api-remotes/client'
+import type { DynamicCordisPackage } from '@berry-ai/harness-api-remotes/client'
 import type { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type { ThemeRuntime } from '@deepseek-ai/dsh-client-ui-theme/client'
 

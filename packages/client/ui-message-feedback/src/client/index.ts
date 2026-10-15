@@ -11,7 +11,7 @@
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type { SessionId } from '@berry-ai/harness-session/types'
 // Type-only: pulls the generated Remote API and ctx.remote merge through the Client assembly boundary.
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 // Type-only: pulls the ui-conversation SlotMap merge (the assistant-actions and overlay entries).
 import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
 // Type-only: pulls the command UI's Context merge (ctx.commandUi).

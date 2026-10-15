@@ -2,7 +2,7 @@
 import type { PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
 import type {} from '@deepseek-ai/dsh-client-ui-deliverables/client'
 import { parseNativeFileApplications } from '@berry-ai/harness-native-command/types'
-import type { SessionWorkspacePathApplication } from '@deepseek-ai/dsh-api-session-controller/types'
+import type { SessionWorkspacePathApplication } from '@berry-ai/harness-api-session-controller/types'
 import { useFileApplications } from './file-applications.ts'
 import { OpenTargetButton } from './OpenTargetButton.tsx'
 import type { NS } from './locales.ts'

@@ -28,7 +28,7 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-session-controller",
+        "@berry-ai/harness-api-session-controller",
         "@deepseek-ai/dsh-client-locale",
         "@deepseek-ai/dsh-client-ui-conversation",
         "@deepseek-ai/dsh-client-ui-renderer"
@@ -55,7 +55,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "react": "^18.2.0",
     "@berry-ai/harness-file-reference": "workspace:*",
-    "@deepseek-ai/dsh-api-session-controller": "workspace:*",
+    "@berry-ai/harness-api-session-controller": "workspace:*",
     "@deepseek-ai/dsh-client-store": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",

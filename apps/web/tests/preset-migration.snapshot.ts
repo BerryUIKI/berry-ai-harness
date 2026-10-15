@@ -9,7 +9,7 @@ import { SESSION_FORMAT_VERSION, SessionId } from '@berry-ai/harness-session'
 import { generationLogPath } from '../../../packages/session/session-persistence-jsonl/src/format.ts'
 import { scanZstdFrames } from '../../../packages/session/session-persistence-jsonl/src/zstd.ts'
 import type {} from '@berry-ai/harness-agent-preset-registry'
-import type {} from '@deepseek-ai/dsh-api-session-controller'
+import type {} from '@berry-ai/harness-api-session-controller'
 import { normalizeSessionSnapshots } from '@deepseek-ai/dsh-session-snapshot'
 import { launchWebScaffold, webSnapshotMode } from './scaffold.ts'
 

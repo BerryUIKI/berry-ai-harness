@@ -14,12 +14,12 @@
  * @module @deepseek-ai/dsh-client-ui-reference/client
  */
 // Type-only: pulls the generated Remote API and ctx.remote merge through the Client assembly boundary.
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
 import type {} from '@deepseek-ai/dsh-client-locale/client'
 import type {} from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { ISessions } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { ISessions } from '@berry-ai/harness-api-session-controller/client'
 import { relativeTime } from '@deepseek-ai/dsh-client-ui-primitives'
 import type {
   ClientSessionContext, InputTriggerCrumb, InputTriggerServiceContract, InputTriggerSource,
@@ -30,7 +30,7 @@ import type { SessionReferenceMentionCandidate } from '@berry-ai/harness-session
 import { abbreviateHomePath, fileAddressFor } from '@berry-ai/harness-util-workspace-path'
 import { en, NS, zh, type ReferenceKey } from './locales.ts'
 
-declare module '@deepseek-ai/dsh-api-session-controller/client' {
+declare module '@berry-ai/harness-api-session-controller/client' {
   interface SessionReferenceSourceMap {
     /** File and Session candidates waiting for initial history and their RPC results. */
     referenceCandidates: unknown

@@ -1,6 +1,6 @@
 /** Authoritative Schedule queries and deletion for Session and Host catalogs. */
 
-import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
+import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
 import type { ScheduleDeleteResult, ScheduleId, ScheduleRecord } from '@berry-ai/harness-schedule/client'
 

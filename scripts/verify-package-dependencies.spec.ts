@@ -183,27 +183,27 @@ function hostRuntimeFixture(): {
 describe('package dependency scope', () => {
   it('keeps the measured Host relay roster explicit', () => {
     expect(PACKAGE_DEPENDENCY_POLICY.clientFaceExclude).toEqual([
-      '@deepseek-ai/dsh-api-session-controller',
-      '@deepseek-ai/dsh-api-workspace-controller',
+      '@berry-ai/harness-api-session-controller',
+      '@berry-ai/harness-api-workspace-controller',
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.hostPackages).toEqual([
       '@berry-ai/harness-llm',
       '@berry-ai/harness-session',
     ])
     expect(PACKAGE_DEPENDENCY_POLICY.requiredServicePeers).toEqual({
-      '@deepseek-ai/dsh-api-terminal-controller': ['@berry-ai/harness-subprocess'],
+      '@berry-ai/harness-api-terminal-controller': ['@berry-ai/harness-subprocess'],
     })
     expect(PACKAGE_DEPENDENCY_POLICY.configurationOnlyDevDependencies).toEqual({
-      '@deepseek-ai/dsh-client-locale': ['@deepseek-ai/dsh-api-remotes'],
+      '@deepseek-ai/dsh-client-locale': ['@berry-ai/harness-api-remotes'],
       '@deepseek-ai/dsh-client-ui-conversation': [
-        '@deepseek-ai/dsh-api-remotes',
+        '@berry-ai/harness-api-remotes',
         '@deepseek-ai/dsh-client-ui-workspace',
       ],
       '@deepseek-ai/dsh-client-ui-model-selection': ['@deepseek-ai/dsh-client-ui-input-trigger'],
       '@deepseek-ai/dsh-client-ui-sidebar': ['@deepseek-ai/dsh-client-ui-workspace'],
       '@deepseek-ai/dsh-client-ui-subagent': ['@deepseek-ai/dsh-client-ui-input-trigger'],
-      '@deepseek-ai/dsh-client-ui-theme': ['@deepseek-ai/dsh-api-remotes'],
-      '@deepseek-ai/dsh-client-ui-tool': ['@deepseek-ai/dsh-api-remotes'],
+      '@deepseek-ai/dsh-client-ui-theme': ['@berry-ai/harness-api-remotes'],
+      '@deepseek-ai/dsh-client-ui-tool': ['@berry-ai/harness-api-remotes'],
     })
     expect(PACKAGE_DEPENDENCY_POLICY.duplicateSafePackages).toEqual([
       '@berry-ai/harness-brand',
@@ -794,7 +794,7 @@ describe('dependency sections', () => {
     const base = facts(manifest)
     const subject: PackageDependencyFacts = {
       ...base,
-      workspaceNames: new Set([...base.workspaceNames, '@deepseek-ai/dsh-api-remotes']),
+      workspaceNames: new Set([...base.workspaceNames, '@berry-ai/harness-api-remotes']),
     }
 
     expect(collectPackageDependencyViolations({

@@ -3,7 +3,7 @@ import type { OfficeToPdfGeneration } from '@berry-ai/harness-office-to-pdf/type
 import { Context } from '@deepseek-ai/cordis'
 import { expect, it, vi } from 'vitest'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { ClientRemote } from '@deepseek-ai/dsh-api-remotes/client'
+import type { ClientRemote } from '@berry-ai/harness-api-remotes/client'
 import type {} from '@berry-ai/harness-office-to-pdf/remote'
 import { makeTranslate, RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
 import { DocumentPreviewRegistry } from '../src/client/document/registry.ts'

@@ -7,7 +7,7 @@ import { monitorEventLoopDelay, performance } from 'node:perf_hooks'
 import { scheduler, setTimeout as delay } from 'node:timers/promises'
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
-import SessionController from '@deepseek-ai/dsh-api-session-controller'
+import SessionController from '@berry-ai/harness-api-session-controller'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, type SessionHeader } from '@berry-ai/harness-session'
 import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
@@ -283,7 +283,7 @@ async function measure(controller: SessionController, observation: ViewObservati
 }
 
 assertBuiltBenchmarkRuntime(import.meta.url, {
-  controller: import.meta.resolve('@deepseek-ai/dsh-api-session-controller'),
+  controller: import.meta.resolve('@berry-ai/harness-api-session-controller'),
   registry: import.meta.resolve('@berry-ai/harness-session-projection'),
   cache: import.meta.resolve('@berry-ai/harness-session-projection-cache'),
   persistence: import.meta.resolve('@berry-ai/harness-session-persistence-jsonl'),

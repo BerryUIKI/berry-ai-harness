@@ -5,7 +5,7 @@ import ts from 'typescript'
 import type { MaybeMockedDeep } from '@vitest/spy'
 import { describe, expect, expectTypeOf, it } from 'vitest'
 import type { TypertRemoteNamespace, TypertRemoteNamespaceMap } from '@berry-ai/harness-typert-protocol'
-import type {} from '@deepseek-ai/dsh-api-settings-controller/remote'
+import type {} from '@berry-ai/harness-api-settings-controller/remote'
 import type { RemoteMock } from '../src/index.ts'
 
 const root = resolve(import.meta.dirname, '../../../..')

@@ -12,7 +12,7 @@ import type { AssemblyPlan, ClientPluginModule, TestClientOptions } from '../src
 import { ClientRoster, TestClient, remoteDefaultResponses, webApp } from '../src/assembly/index.ts'
 
 /** The Gateway client and what it injects: the Typert registry and the Connection. */
-const API_ROSTER = webApp.closure(['@deepseek-ai/dsh-api-gateway'])
+const API_ROSTER = webApp.closure(['@berry-ai/harness-api-gateway'])
 const MODULES = '@deepseek-ai/dsh-client-modules'
 const SIDEBAR = '@deepseek-ai/dsh-client-ui-sidebar'
 const PARALLEL_PROBE = '@deepseek-ai/dsh-client-test-parallel-probe'
@@ -264,7 +264,7 @@ describe('TestClient (jsdom)', () => {
   it('reports the log when the connection never becomes ready', async () => {
     // No fixtures: workspace-controller's follow has no rule, so the proxy dispatches it as a unary call the mock
     // logs as unmatched, while $events never sends ready.
-    const roster = webApp.closure(['@deepseek-ai/dsh-api-workspace-controller'])
+    const roster = webApp.closure(['@berry-ai/harness-api-workspace-controller'])
     const mock = RemoteMock.create().stream('$events', openStream([]))
     await expect(TestClient.start({ roster }, mock, { connectTimeoutMs: 300 }))
       .rejects.toThrow(/connection state is \S+ after 300ms; unmatched: \[unary workspace\/follow\]; streams: \[.*\$events \(open\).*\]/)

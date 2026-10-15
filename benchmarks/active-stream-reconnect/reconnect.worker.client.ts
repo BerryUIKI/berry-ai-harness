@@ -2,7 +2,7 @@
 import { performance } from 'node:perf_hooks'
 import { AssistantStreamAccumulator } from '@berry-ai/harness-llm/assistant-stream'
 import { LlmAttemptId } from '@berry-ai/harness-llm/brand'
-import type { SessionAssistantStreamBaseline } from '@deepseek-ai/dsh-api-session-controller/types'
+import type { SessionAssistantStreamBaseline } from '@berry-ai/harness-api-session-controller/types'
 // The Client implementation has no plain-Node export; only this adapter is bundled.
 import { ClientAssistantStream } from '../../packages/api/session-controller/src/client/sessions/assistant-stream.ts'
 import { assertBuiltBenchmarkRuntime } from '../support/built-worker.ts'

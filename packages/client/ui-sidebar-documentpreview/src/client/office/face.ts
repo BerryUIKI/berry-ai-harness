@@ -2,7 +2,7 @@
 import type { BoundActions } from '@deepseek-ai/dsh-client-store'
 import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type { RemoteFailure } from '@deepseek-ai/dsh-api-remotes/client'
+import type { RemoteFailure } from '@berry-ai/harness-api-remotes/client'
 import type { SessionFile } from '../rpc.ts'
 import type { ReadOfficeDocument } from './cache.ts'
 import type { OfficeStore } from './store.ts'

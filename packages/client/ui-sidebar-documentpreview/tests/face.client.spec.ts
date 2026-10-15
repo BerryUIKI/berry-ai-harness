@@ -6,10 +6,10 @@
  * runs under the session the file names, not the one the face was injected for.
  */
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
+import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { sessionFileAddress } from '@berry-ai/harness-util-workspace-path'
-import type { WorkspaceFileText } from '@deepseek-ai/dsh-api-workspace-files/types'
+import type { WorkspaceFileText } from '@berry-ai/harness-api-workspace-files/types'
 import { textFace } from '../src/client/face.ts'
 import type { DocumentFileBytes, ReadDocumentBytes, ReadWorkspaceFilePage } from '../src/client/rpc.ts'
 import { hostFileOf } from '../src/client/rpc.ts'

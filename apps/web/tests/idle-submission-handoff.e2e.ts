@@ -10,7 +10,7 @@ import type { SessionEvent } from '@berry-ai/harness-session/types'
 import { deriveReplayScript, parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
 import {
   parseRemoteStreamClientMessage, parseRemoteStreamServerMessage,
-} from '@deepseek-ai/dsh-api-gateway/stream-protocol'
+} from '@berry-ai/harness-api-gateway/stream-protocol'
 import { launchWebScaffold, seedSession, watchConsole, webSnapshotMode } from './scaffold.ts'
 import { newEnglishPage } from './support.ts'
 

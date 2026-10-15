@@ -16,10 +16,10 @@ import { Service } from '@deepseek-ai/cordis'
 import type { Context } from '@deepseek-ai/cordis'
 // Type-only: pulls the ctx.remote merge and the forwarded-event key face
 // (`commands/change` rides the allowlist) into this program.
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 import type { CommandResult } from '@berry-ai/harness-commands/types'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { ISessions, SessionBinding } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { ISessions, SessionBinding } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { WeakMapWithValues } from '@berry-ai/harness-util-values'
 import type { TranslateNS } from '@deepseek-ai/dsh-client-locale/client'
@@ -36,7 +36,7 @@ import { builtinRowFace, sectionRows } from './presentation.ts'
 import { claimToken } from './resolution.ts'
 import type { TokenSegment } from './popup.ts'
 
-declare module '@deepseek-ai/dsh-api-session-controller/client' {
+declare module '@berry-ai/harness-api-session-controller/client' {
   interface SessionReferenceSourceMap {
     /** A command-catalog fetch waiting for initial history and its RPC result. */
     commandCatalog: unknown

@@ -57,7 +57,7 @@
     "@berry-ai/harness-fs-sandbox": "workspace:*",
     "@berry-ai/harness-goal": "workspace:*",
     "@berry-ai/harness-goal-round-driver": "workspace:*",
-    "@deepseek-ai/dsh-api-gateway": "workspace:*",
+    "@berry-ai/harness-api-gateway": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
     "@berry-ai/harness-llm-deepseek-account": "workspace:*",

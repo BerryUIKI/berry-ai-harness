@@ -20,9 +20,9 @@ A business Service extends `TypertRemoteService` and declares callable methods w
 
 The Remote consumer projection contains `.d.ts`, `.d.ts.map`, and `.js` files. The `.d.ts` exposes only methods marked with a Remote decorator and refers to the business package's single public type symbols. The `.d.ts.map` navigates consumer API methods back to their Host business method implementations. The `.js` carries endpoint, parameter, Context, and Zod information for the same contract. At the assembly layer, the Browser Client mounts the required Remote JS contributions onto the Client Remote Service. The projection and Remote abstraction remain platform-independent so that a future TUI can reuse them.
 
-`@deepseek-ai/dsh-api-gateway`, located at `packages/api/gateway`, provides two symmetric faces: its default entry provides Host `ctx.typertGateway`, while its `/client` entry provides consumer-side `ctx.remote`. Each side consumes a locally generated `InvocationDescriptor` from the same model; descriptors are not sent over the wire. The Remote data protocol runs over Connection's shared `/api` RPC channel. The business calling interface does not change when Connection migrates from HTTP to WebSocket.
+`@berry-ai/harness-api-gateway`, located at `packages/api/gateway`, provides two symmetric faces: its default entry provides Host `ctx.typertGateway`, while its `/client` entry provides consumer-side `ctx.remote`. Each side consumes a locally generated `InvocationDescriptor` from the same model; descriptors are not sent over the wire. The Remote data protocol runs over Connection's shared `/api` RPC channel. The business calling interface does not change when Connection migrates from HTTP to WebSocket.
 
-`@deepseek-ai/dsh-api-remotes`, located at `packages/api/remotes`, is the BFF layer above the Gateway. Its Host entry registers the application's forwarded Cordis event source and the Host facts carried by generation readiness; its `/client` entry selects the generated Remote contributions exposed by the application. The Client entry consumes the shared `TypertClientRemote` contract through Cordis rather than importing the concrete Gateway implementation.
+`@berry-ai/harness-api-remotes`, located at `packages/api/remotes`, is the BFF layer above the Gateway. Its Host entry registers the application's forwarded Cordis event source and the Host facts carried by generation readiness; its `/client` entry selects the generated Remote contributions exposed by the application. The Client entry consumes the shared `TypertClientRemote` contract through Cordis rather than importing the concrete Gateway implementation.
 
 ## Components and Cordis services
 
@@ -301,7 +301,7 @@ Typert.local    当前环境自己的反射模型
 Typert.remotes  已导入的 Remote contribution
 ```
 
-`@deepseek-ai/dsh-api-remotes/client` centrally loads the required Remote contributions:
+`@berry-ai/harness-api-remotes/client` centrally loads the required Remote contributions:
 
 ```text
 import goalsRemote from '@berry-ai/harness-goal/remote'
@@ -311,7 +311,7 @@ await ctx.remote.$mount(goalsRemote)
 await ctx.remote.$mount(sessionsRemote)
 ```
 
-Client business packages depend only on `@deepseek-ai/dsh-api-remotes/client`, not directly on the API Gateway or the runtime entry of each business `/remote`. API Remotes consumes the shared `TypertClientRemote` contract and Cordis `ctx.remote` service, then re-exports declarations so the selected Remote map reaches business compilation. Adding or removing a complete Client capability changes only this assembly point.
+Client business packages depend only on `@berry-ai/harness-api-remotes/client`, not directly on the API Gateway or the runtime entry of each business `/remote`. API Remotes consumes the shared `TypertClientRemote` contract and Cordis `ctx.remote` service, then re-exports declarations so the selected Remote map reaches business compilation. Adding or removing a complete Client capability changes only this assembly point.
 
 `ctx.remote.$mount()` registers a contribution with `Typert.remotes`, installs its namespace Services and concrete methods, and resolves only after they are ready. Its disposer is owned by the Cordis fiber that called the method. Duplicate endpoints, conflicting invocation modes for the same namespace and method, or conflicts between a descriptor and an existing type identity fail immediately.
 
@@ -453,11 +453,11 @@ The Gateway registers only its ownership matcher and RPC handler with Connection
 - `@berry-ai/harness-typert-protocol`: lightweight protocols for decorators, bindings, lookup, Remote Scope, and descriptors.
 - Typert generator: analyzes Host/Client Programs, generates local faces and Remote consumer projections, and emits canonical symbol/Zod information.
 - Typert runtime: separately stores the current environment's local reflection and imported Remote contributions.
-- `@deepseek-ai/dsh-api-gateway`: its default entry associates Host definitions with Services, claims Remote endpoints, validates input, performs lookup, resolves Context receivers, invokes methods, and registers an `/api` interceptor with Connection; its `/client` entry mounts Remote contributions, creates strict Remote namespace Services and methods, and delegates calls to `ctx.connection.rpc`. The entries share the Remote protocol but do not import each other's Cordis interface merges.
-- `@deepseek-ai/dsh-api-remotes`: the BFF layer; registers the application's forwarded Cordis event source and the Host home carried by generation readiness, selects Client `/remote` contributions, and exposes the merged Remote types to business packages through the shared `TypertClientRemote` contract.
+- `@berry-ai/harness-api-gateway`: its default entry associates Host definitions with Services, claims Remote endpoints, validates input, performs lookup, resolves Context receivers, invokes methods, and registers an `/api` interceptor with Connection; its `/client` entry mounts Remote contributions, creates strict Remote namespace Services and methods, and delegates calls to `ctx.connection.rpc`. The entries share the Remote protocol but do not import each other's Cordis interface merges.
+- `@berry-ai/harness-api-remotes`: the BFF layer; registers the application's forwarded Cordis event source and the Host home carried by generation readiness, selects Client `/remote` contributions, and exposes the merged Remote types to business packages through the shared `TypertClientRemote` contract.
 - Connection: owns the single HTTP Server/future WebSocket carrier, the shared `/api` route and its composite FetchHandler, owner-registered exact Fetch routes, the RPC envelope, rpcId, serialization, trust, and error transport.
 - Business-object packages such as Agent/Session: own lookup, Context providers, canonical ID types, and public type-only entries.
-- `@deepseek-ai/dsh-api-session-controller`: configures the shared `agent`/`session` lookup and `agent` Host Context resolver, so every Remote endpoint that accepts one of those objects shares one resume and ownership-fence policy.
+- `@berry-ai/harness-api-session-controller`: configures the shared `agent`/`session` lookup and `agent` Host Context resolver, so every Remote endpoint that accepts one of those objects shares one resume and ownership-fence policy.
 - Business Service packages: declare bindings, Remote methods, and their request/result types, and export the generated `/remote` subpath.
 
 ## Shipped scope and deferred work

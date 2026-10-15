@@ -1,7 +1,7 @@
 /** Serve change summaries and comparisons, and open declared or changed workspace files verified by the viewed Session's filesystem. */
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-api-session-controller'
-import type {} from '@deepseek-ai/dsh-api-workspace-files'
+import type {} from '@berry-ai/harness-api-session-controller'
+import type {} from '@berry-ai/harness-api-workspace-files'
 import type {} from '@berry-ai/harness-fs'
 import type {} from '@berry-ai/harness-sandbox-policy'
 import { remoteErrorOf } from '@berry-ai/harness-typert-protocol'

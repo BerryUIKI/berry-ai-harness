@@ -8,7 +8,7 @@ import { Context } from '@deepseek-ai/cordis'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
 import { agentPresetProjectionDefinition } from '@berry-ai/harness-agent-preset-registry'
-import SessionController from '@deepseek-ai/dsh-api-session-controller'
+import SessionController from '@berry-ai/harness-api-session-controller'
 import { currentSessionMessageProjections } from '@berry-ai/harness-session-format-catalog/message-projections'
 import { Session, SessionLogOffset } from '@berry-ai/harness-session'
 import type { SessionId } from '@berry-ai/harness-session'
@@ -353,7 +353,7 @@ async function measureFork(root: string, ranks: readonly number[]): Promise<Fork
 }
 
 assertBuiltBenchmarkRuntime(import.meta.url, Object.fromEntries([
-  '@deepseek-ai/dsh-api-session-controller',
+  '@berry-ai/harness-api-session-controller',
   '@berry-ai/harness-session-persistence-jsonl',
   '@berry-ai/harness-session-query-sqlite',
   '@berry-ai/harness-session-projection-cache',

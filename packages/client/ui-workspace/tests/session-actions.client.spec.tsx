@@ -10,8 +10,8 @@
  */
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
-import type { SessionListState, SessionSummary } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { WorkspaceId, WorkspaceSnapshot } from '@deepseek-ai/dsh-api-workspace-controller/client'
+import type { SessionListState, SessionSummary } from '@berry-ai/harness-api-session-controller/client'
+import type { WorkspaceId, WorkspaceSnapshot } from '@berry-ai/harness-api-workspace-controller/client'
 import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'

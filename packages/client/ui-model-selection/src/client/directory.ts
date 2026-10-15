@@ -7,8 +7,8 @@
 import type { TrackProductEvent } from '@deepseek-ai/dsh-client-product-analytics/client'
 import type {
   ModelCatalogFailure, ModelProviderGroup, ModelSelection, ModelSelectionProjection,
-} from '@deepseek-ai/dsh-api-session-controller/types'
-import type { SessionId } from '@deepseek-ai/dsh-api-remotes/client'
+} from '@berry-ai/harness-api-session-controller/types'
+import type { SessionId } from '@berry-ai/harness-api-remotes/client'
 import type { RemoteResult, TypertClientRemote } from '@berry-ai/harness-typert-protocol'
 import type { ObservableSnapshot, SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'

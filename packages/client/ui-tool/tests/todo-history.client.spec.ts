@@ -2,7 +2,7 @@
 import { describe, expect, it } from 'vitest'
 import { ConversationNodeAssembler } from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
-import type { SessionLiveEventEntry } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionLiveEventEntry } from '@berry-ai/harness-api-session-controller/client'
 import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
 import { en } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
 import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'

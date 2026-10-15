@@ -3,7 +3,7 @@ import { mkdtemp, rm, readFile, writeFile, mkdir, realpath, symlink, unlink } fr
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { LocalFileSystem } from '@berry-ai/harness-fs-local'
-import { WorkspaceFiles } from '@deepseek-ai/dsh-api-workspace-files'
+import { WorkspaceFiles } from '@berry-ai/harness-api-workspace-files'
 import { Context } from '@deepseek-ai/cordis'
 import { HostConnectionService } from '@deepseek-ai/dsh-client-connection'
 import type { BrowserAuth } from '@deepseek-ai/dsh-client-connection/src/browser-auth.ts'

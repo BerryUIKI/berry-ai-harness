@@ -3,7 +3,7 @@ import { Service, type Context } from '@deepseek-ai/cordis'
 import type { ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import type {
   ISessions, SessionBinding, SessionEventSource, SessionEventWindow,
-} from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
 import type { SessionEvent, SessionId } from '@berry-ai/harness-session/types'
 import { WeakMapWithValues } from '@berry-ai/harness-util-values'
 import {

@@ -1,7 +1,7 @@
 import { useEffect, useId, useMemo, useState, type ReactNode } from 'react'
 import type { ClientEntryState } from '@deepseek-ai/dsh-client-modules/client'
 import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import type { PluginInventorySnapshot } from '@deepseek-ai/dsh-api-remotes/client'
+import type { PluginInventorySnapshot } from '@berry-ai/harness-api-remotes/client'
 import type { LocalizedText } from '@berry-ai/harness-package-manifest'
 import {
   IconChevronDownOutlineRegular,

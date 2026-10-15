@@ -7,8 +7,8 @@ import type {
   SessionReference,
   SessionRetainInfo,
   SessionSnapshot,
-} from '@deepseek-ai/dsh-api-session-controller/client'
-import { MutableSessionEventSource } from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
+import { MutableSessionEventSource } from '@berry-ai/harness-api-session-controller/client'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { HostObservable, RootStandardSourceContribution } from '@deepseek-ai/dsh-client-ui-slots'
 import type { SessionId } from '@berry-ai/harness-session/types'

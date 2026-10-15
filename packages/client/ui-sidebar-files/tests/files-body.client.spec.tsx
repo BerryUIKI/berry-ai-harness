@@ -3,7 +3,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent } from '@testing-library/react'
 import { makeTranslate, RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
-import type { RemoteFailure } from '@deepseek-ai/dsh-api-remotes/client'
+import type { RemoteFailure } from '@berry-ai/harness-api-remotes/client'
 import { fileAddressFor } from '@berry-ai/harness-util-workspace-path'
 import { failureLine, orderEntries } from '../src/client/FilesBody.tsx'
 import type { DirLevel } from '../src/client/store.ts'

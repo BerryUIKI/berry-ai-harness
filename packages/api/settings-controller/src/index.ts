@@ -4,7 +4,7 @@
  * `ctx.settings`, owned by the class below; and `credentials`, mounted from
  * here as its own plugin.
  *
- * @module @deepseek-ai/dsh-api-settings-controller
+ * @module @berry-ai/harness-api-settings-controller
  */
 
 import { Context } from '@deepseek-ai/cordis'

@@ -25,7 +25,7 @@ import type {
   PluginSpecInspection,
   ReadOnlyReason,
   Registry,
-} from '@deepseek-ai/dsh-api-remotes/client'
+} from '@berry-ai/harness-api-remotes/client'
 import { normalizeRegistry, NPMMIRROR_REGISTRY, OFFICIAL_NPM_REGISTRY, REGISTRY_URL } from '@berry-ai/harness-plugin-manager/registry'
 import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'

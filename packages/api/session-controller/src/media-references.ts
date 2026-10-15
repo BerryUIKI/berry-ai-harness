@@ -2,7 +2,7 @@
  * Authenticated GET/HEAD /api/file reads bounded file responses through
  * the composed filesystem provider. Paths and MIME types do not restrict access;
  * the connection service authenticates requests before this handler.
- * @module @deepseek-ai/dsh-api-session-controller/media-references
+ * @module @berry-ai/harness-api-session-controller/media-references
  */
 
 import { isAbsolute } from 'node:path'

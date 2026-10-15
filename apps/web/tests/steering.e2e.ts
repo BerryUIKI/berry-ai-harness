@@ -11,7 +11,7 @@ import { afterAll, beforeAll, describe, expect, it, onTestFailed, type MockInsta
 import { parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
 import type { SessionEvent } from '@berry-ai/harness-session'
 import { expandAssistantStream } from '@berry-ai/harness-llm'
-import { parseRemoteStreamServerMessage } from '@deepseek-ai/dsh-api-gateway/stream-protocol'
+import { parseRemoteStreamServerMessage } from '@berry-ai/harness-api-gateway/stream-protocol'
 import {
   acknowledgeReloadConnectionLoss, assertFixtureInventory, captureExpandedTurnProcessAria, captureStableAria,
   compareOrRefreshGolden, fixtureUserPrompts,

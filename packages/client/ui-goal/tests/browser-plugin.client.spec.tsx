@@ -20,7 +20,7 @@ import type { GoalActivation, GoalId, GoalProjection, GoalView } from '@berry-ai
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import { makeTranslate, RemoteError, TestSessions } from '@deepseek-ai/dsh-client-test-runtime'
 import type { SessionFixture } from '@deepseek-ai/dsh-client-test-runtime'
-import type { RemoteFailure } from '@deepseek-ai/dsh-api-remotes/client'
+import type { RemoteFailure } from '@berry-ai/harness-api-remotes/client'
 import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
 import type { GoalActivationSnapshot, GoalBarActions, GoalBarInjected } from '../src/client/slots.ts'
 import { apply, inject } from '../src/client/index.ts'

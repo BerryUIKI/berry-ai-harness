@@ -4,7 +4,7 @@ import type {
 } from '@deepseek-ai/dsh-client-ui-chat/client'
 import type {
   SessionEventLikeEntry, SessionLiveEventEntry,
-} from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
 import {
   ConversationNodeAssembler,
   type ConversationNodeDefinition,

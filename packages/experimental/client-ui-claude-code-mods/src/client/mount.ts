@@ -1,8 +1,8 @@
 /** Source-safe browser registration of the mods band: the Remote stream behind a store, the dock entry, the press. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type {} from '@deepseek-ai/dsh-api-session-controller/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
+import type {} from '@berry-ai/harness-api-session-controller/client'
 import type {} from '@deepseek-ai/dsh-client-locale/client'
 import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'

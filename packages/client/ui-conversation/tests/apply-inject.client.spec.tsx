@@ -6,7 +6,7 @@ import { registerComposerKeymap } from '../src/client/input/editor/keymap.ts'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import type { CommandContribution, CommandUiContract } from '@deepseek-ai/dsh-client-ui-commands/client'
-import type { ISession, SessionReference } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { ISession, SessionReference } from '@berry-ai/harness-api-session-controller/client'
 import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
 import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
 import {

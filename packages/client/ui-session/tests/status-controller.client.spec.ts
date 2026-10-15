@@ -3,7 +3,7 @@ import { expect, vi } from 'vitest'
 import { ok } from '@deepseek-ai/dsh-remote-mock'
 import { createClientTest, webApp } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/index.ts'
 import { SESSION_FORMAT_VERSION, type SessionId } from '@berry-ai/harness-session/types'
-import type { SessionFollowFrame } from '@deepseek-ai/dsh-api-session-controller/types'
+import type { SessionFollowFrame } from '@berry-ai/harness-api-session-controller/types'
 
 const it = createClientTest({ roster: webApp.closure(['@deepseek-ai/dsh-client-ui-session']) })
 const parentId = 'status-parent' as SessionId

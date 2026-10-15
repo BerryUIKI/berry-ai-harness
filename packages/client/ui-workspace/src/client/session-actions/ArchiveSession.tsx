@@ -7,7 +7,7 @@
  * live in the injected callbacks, not here.
  */
 import { useState } from 'react'
-import type { SessionActivity } from '@deepseek-ai/dsh-api-workspace-controller/client'
+import type { SessionActivity } from '@berry-ai/harness-api-workspace-controller/client'
 // Type-only: the family keys each provider merges; a key this program did not compile takes the generic line.
 import type {} from '@berry-ai/harness-agent/types'
 import type {} from '@berry-ai/harness-jobs/view'

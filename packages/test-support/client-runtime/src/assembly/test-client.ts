@@ -177,7 +177,7 @@ export class TestClient {
    * `installConnection`, while this path supplies the mock carrier, uses
    * default recovery timings, and captures the current page hostname once for
    * later reloads. A caller-provided Connection row remains unchanged and owns
-   * its readiness behavior. The `@deepseek-ai/dsh-api-remotes` row is
+   * its readiness behavior. The `@berry-ai/harness-api-remotes` row is
    * dropped from the roster: its generated Remote clients exist only in built
    * `lib/`, and the `remote.<ns>` services the roster injects (plus the
    * namespaces the mock has rules for at this point) are provided as

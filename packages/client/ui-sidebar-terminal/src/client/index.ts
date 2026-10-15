@@ -1,10 +1,10 @@
 /** Register interactive terminal tabs and explicit process cleanup with the sidebar. */
 import type { ShortcutCommandId } from '@deepseek-ai/dsh-client-shortcuts/client'
 import type { Context } from '@deepseek-ai/cordis'
-import type { WebTerminalId } from '@deepseek-ai/dsh-api-terminal-controller/types'
+import type { WebTerminalId } from '@berry-ai/harness-api-terminal-controller/types'
 import type { SidebarRightTabParamsMap, TabId } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import type {} from '@deepseek-ai/dsh-api-terminal-controller/client'
+import type {} from '@berry-ai/harness-api-terminal-controller/client'
 import type {} from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
 import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type {} from '@deepseek-ai/dsh-client-locale/client'

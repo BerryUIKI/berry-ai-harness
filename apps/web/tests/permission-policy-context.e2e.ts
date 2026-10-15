@@ -12,8 +12,8 @@ import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
 import { canonicalPath } from '@berry-ai/harness-sandbox'
 import type { SessionEvent } from '@berry-ai/harness-session'
-import type { WebTerminalId } from '@deepseek-ai/dsh-api-terminal-controller/types'
-import type {} from '@deepseek-ai/dsh-api-terminal-controller'
+import type { WebTerminalId } from '@berry-ai/harness-api-terminal-controller/types'
+import type {} from '@berry-ai/harness-api-terminal-controller'
 import {
   assertFinalWorkspaceSnapshot, assertFixtureInventory, fixtureUserPrompts, launchWebScaffold, recordFixture,
   watchConsole, webSnapshotMode, type WebScaffold,

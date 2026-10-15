@@ -2,7 +2,7 @@
 import { afterEach, describe, expect, it, vi, type Mock } from 'vitest'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { ConversationNodeAssembler, type TurnLocation } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { SessionLiveEventEntry } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionLiveEventEntry } from '@berry-ai/harness-api-session-controller/client'
 import type { ChatNode, ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
 import { keyedObservableHook } from '../../ui-renderer/src/client/bindings.tsx'
 import { ChatSnapshotBuilder, chatViewDefinition } from '../../ui-chat/src/client/conversation-nodes/chat-snapshot-builder.ts'

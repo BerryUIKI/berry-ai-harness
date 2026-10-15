@@ -1,7 +1,7 @@
 /** A window hold accepts each physical acknowledgement and releases pending consumers. */
 import { afterEach, expect, it, vi } from 'vitest'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import { RemoteStream, type ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
+import { RemoteStream, type ClientRemote } from '@berry-ai/harness-api-gateway/client'
 import { streamMethod } from '@deepseek-ai/dsh-remote-mock'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { TerminalRemote } from '../src/client/model.ts'

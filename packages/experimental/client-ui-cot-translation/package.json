@@ -40,7 +40,7 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-remotes",
+        "@berry-ai/harness-api-remotes",
         "@deepseek-ai/dsh-client-locale",
         "@deepseek-ai/dsh-client-ui-chat",
         "@deepseek-ai/dsh-client-ui-plugin-manager",
@@ -60,7 +60,7 @@
     "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-experimental-translator": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-api-session-controller": "workspace:*"
+    "@berry-ai/harness-api-session-controller": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
@@ -71,7 +71,7 @@
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/dsh-experimental-translator": "workspace:*",
-    "@deepseek-ai/dsh-api-remotes": "workspace:*",
+    "@berry-ai/harness-api-remotes": "workspace:*",
     "@deepseek-ai/dsh-client-locale": "workspace:*",
     "@deepseek-ai/dsh-client-store": "workspace:*",
     "@deepseek-ai/dsh-client-test-runtime": "workspace:*",
@@ -87,7 +87,7 @@
     "react-dom": "^18.2.0",
     "@testing-library/react": "^16.3.3",
     "@berry-ai/harness-session": "workspace:*",
-    "@deepseek-ai/dsh-api-session-controller": "workspace:*",
+    "@berry-ai/harness-api-session-controller": "workspace:*",
     "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",

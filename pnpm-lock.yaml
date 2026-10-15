@@ -650,7 +650,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../vendor/cordis
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../packages/api/gateway
       electron-updater:
@@ -988,7 +988,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../packages/test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../packages/api/session-controller
       '@deepseek-ai/dsh-client-store':
@@ -1255,7 +1255,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
       '@deepseek-ai/dsh-client-connection':
@@ -1334,28 +1334,28 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-account-controller':
+      '@berry-ai/harness-api-account-controller':
         specifier: workspace:*
         version: link:../account-controller
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
-      '@deepseek-ai/dsh-api-job-controller':
+      '@berry-ai/harness-api-job-controller':
         specifier: workspace:*
         version: link:../job-controller
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../session-controller
-      '@deepseek-ai/dsh-api-settings-controller':
+      '@berry-ai/harness-api-settings-controller':
         specifier: workspace:*
         version: link:../settings-controller
-      '@deepseek-ai/dsh-api-terminal-controller':
+      '@berry-ai/harness-api-terminal-controller':
         specifier: workspace:*
         version: link:../terminal-controller
-      '@deepseek-ai/dsh-api-workspace-controller':
+      '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../workspace-controller
-      '@deepseek-ai/dsh-api-workspace-files':
+      '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../workspace-files
       '@deepseek-ai/dsh-client-connection':
@@ -1482,7 +1482,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
       '@deepseek-ai/dsh-client-connection':
@@ -1625,7 +1625,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
       '@deepseek-ai/dsh-client-store':
@@ -1668,7 +1668,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
       '@deepseek-ai/dsh-client-connection':
@@ -1720,7 +1720,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../gateway
       '@deepseek-ai/dsh-client-connection':
@@ -2203,7 +2203,7 @@ importers:
       '@berry-ai/harness-agent-loop':
         specifier: workspace:*
         version: link:../../core/agent-loop
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
       '@berry-ai/harness-command-compact':
@@ -2615,28 +2615,28 @@ importers:
       '@berry-ai/harness-agent-tool-presentation':
         specifier: workspace:*
         version: link:../../core/agent-tool-presentation
-      '@deepseek-ai/dsh-api-account-controller':
+      '@berry-ai/harness-api-account-controller':
         specifier: workspace:*
         version: link:../../api/account-controller
-      '@deepseek-ai/dsh-api-job-controller':
+      '@berry-ai/harness-api-job-controller':
         specifier: workspace:*
         version: link:../../api/job-controller
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-api-settings-controller':
+      '@berry-ai/harness-api-settings-controller':
         specifier: workspace:*
         version: link:../../api/settings-controller
-      '@deepseek-ai/dsh-api-terminal-controller':
+      '@berry-ai/harness-api-terminal-controller':
         specifier: workspace:*
         version: link:../../api/terminal-controller
-      '@deepseek-ai/dsh-api-workspace-controller':
+      '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
-      '@deepseek-ai/dsh-api-workspace-files':
+      '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
       '@deepseek-ai/dsh-client-connection':
@@ -2993,7 +2993,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-connection':
@@ -3037,7 +3037,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-connection':
@@ -3113,7 +3113,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
       '@berry-ai/harness-compaction':
@@ -3210,10 +3210,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-connection':
@@ -3267,10 +3267,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -3412,16 +3412,16 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-api-workspace-controller':
+      '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
-      '@deepseek-ai/dsh-api-workspace-files':
+      '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
       '@deepseek-ai/dsh-client-locale':
@@ -3526,10 +3526,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-connection':
@@ -3623,13 +3623,13 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-api-workspace-controller':
+      '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
       '@deepseek-ai/dsh-client-file-upload':
@@ -3753,13 +3753,13 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-api-workspace-files':
+      '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
       '@deepseek-ai/dsh-client-connection':
@@ -3825,7 +3825,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-locale':
@@ -3930,10 +3930,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -3990,7 +3990,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -4038,7 +4038,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-job-controller':
+      '@berry-ai/harness-api-job-controller':
         specifier: workspace:*
         version: link:../../api/job-controller
       '@deepseek-ai/dsh-client-locale':
@@ -4125,7 +4125,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-connection':
@@ -4194,10 +4194,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -4263,13 +4263,13 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -4332,10 +4332,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-connection':
@@ -4398,10 +4398,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -4486,7 +4486,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-locale':
@@ -4639,10 +4639,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-connection':
@@ -4711,13 +4711,13 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-api-workspace-controller':
+      '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
       '@deepseek-ai/dsh-client-connection':
@@ -4789,10 +4789,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-store':
@@ -4835,7 +4835,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-store':
@@ -4869,7 +4869,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-locale':
@@ -4938,7 +4938,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-locale':
@@ -4984,7 +4984,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-connection':
@@ -5051,7 +5051,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-locale':
@@ -5102,7 +5102,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-locale':
@@ -5180,7 +5180,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-locale':
@@ -5225,7 +5225,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-locale':
@@ -5264,7 +5264,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-locale':
@@ -5303,7 +5303,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-locale':
@@ -5387,7 +5387,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-workspace-controller':
+      '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
       '@deepseek-ai/dsh-client-locale':
@@ -5441,7 +5441,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-workspace-controller':
+      '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
       '@deepseek-ai/dsh-client-locale':
@@ -5502,13 +5502,13 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-workspace-files':
+      '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
       '@deepseek-ai/dsh-client-connection':
@@ -5613,10 +5613,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-workspace-files':
+      '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
       '@deepseek-ai/dsh-client-locale':
@@ -5685,7 +5685,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -5760,10 +5760,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-terminal-controller':
+      '@berry-ai/harness-api-terminal-controller':
         specifier: workspace:*
         version: link:../../api/terminal-controller
       '@deepseek-ai/dsh-client-locale':
@@ -5844,10 +5844,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-connection':
@@ -5910,7 +5910,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-connection':
@@ -5986,7 +5986,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-connection':
@@ -6058,10 +6058,10 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-workspace-controller':
+      '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
       '@deepseek-ai/dsh-client-connection':
@@ -6142,7 +6142,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -6217,10 +6217,10 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-connection':
@@ -6289,7 +6289,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -6352,13 +6352,13 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-api-workspace-controller':
+      '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
       '@deepseek-ai/dsh-client-connection':
@@ -7389,7 +7389,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-api-workspace-files':
+      '@berry-ai/harness-api-workspace-files':
         specifier: workspace:*
         version: link:../../api/workspace-files
       '@berry-ai/harness-session':
@@ -7927,7 +7927,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -7984,10 +7984,10 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -8051,10 +8051,10 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -8120,13 +8120,13 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -8585,7 +8585,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@deepseek-ai/dsh-client-locale':
@@ -9319,7 +9319,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
       '@deepseek-ai/dsh-client-connection':
@@ -9422,7 +9422,7 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-modules':
@@ -9465,7 +9465,7 @@ importers:
       '@berry-ai/harness-agent':
         specifier: workspace:*
         version: link:../../core/agent
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
       '@berry-ai/harness-llm':
@@ -9522,7 +9522,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
       '@deepseek-ai/dsh-client-connection':
@@ -11529,7 +11529,7 @@ importers:
       '@deepseek-ai/dsh-agent-loop-testkit':
         specifier: workspace:*
         version: link:../../test-support/agent-loop-testkit
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
       '@berry-ai/harness-llm':
@@ -14205,16 +14205,16 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
-      '@deepseek-ai/dsh-api-remotes':
+      '@berry-ai/harness-api-remotes':
         specifier: workspace:*
         version: link:../../api/remotes
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../api/session-controller
-      '@deepseek-ai/dsh-api-workspace-controller':
+      '@berry-ai/harness-api-workspace-controller':
         specifier: workspace:*
         version: link:../../api/workspace-controller
       '@deepseek-ai/dsh-base':
@@ -14358,7 +14358,7 @@ importers:
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
-      '@deepseek-ai/dsh-api-settings-controller':
+      '@berry-ai/harness-api-settings-controller':
         specifier: workspace:*
         version: link:../../api/settings-controller
       '@deepseek-ai/dsh-client-connection':
@@ -15311,10 +15311,10 @@ importers:
       '@berry-ai/harness-agent-tool-presentation':
         specifier: workspace:*
         version: link:../../packages/core/agent-tool-presentation
-      '@deepseek-ai/dsh-api-gateway':
+      '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../packages/api/gateway
-      '@deepseek-ai/dsh-api-session-controller':
+      '@berry-ai/harness-api-session-controller':
         specifier: workspace:*
         version: link:../../packages/api/session-controller
       '@deepseek-ai/dsh-base':

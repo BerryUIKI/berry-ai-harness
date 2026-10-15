@@ -16,13 +16,13 @@ import type {
 } from '@deepseek-ai/dsh-client-ui-chat/client'
 import type {
   SessionListState, SessionSnapshot,
-} from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
 import type {
   ConversationGroupedView,
   ConversationSnapshot, ConversationViewSnapshotStore, GroupKey, GroupSnapshot,
   MessageImagesOwnerProps, NodeKey, TurnLocation,
 } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { WorkspaceSnapshot } from '@deepseek-ai/dsh-api-workspace-controller/client'
+import type { WorkspaceSnapshot } from '@berry-ai/harness-api-workspace-controller/client'
 import { SessionSeq, type SessionId } from '@berry-ai/harness-session/types'
 import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
 import type { KeyedSnapshotSelectorHook, SnapshotSelectorHook } from '@deepseek-ai/dsh-client-ui-slots'

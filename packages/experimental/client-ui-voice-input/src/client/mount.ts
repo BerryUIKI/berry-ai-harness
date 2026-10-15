@@ -1,6 +1,6 @@
 /** Source-safe lifecycle for the optional speech Remote and browser UI. */
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import type {} from '@berry-ai/harness-api-remotes/client'
 import type {} from '@deepseek-ai/dsh-experimental-api-speech-to-text/remote'
 import type {} from '@deepseek-ai/dsh-client-locale/client'
 import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'

@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import type { SessionEventLike } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionEventLike } from '@berry-ai/harness-api-session-controller/client'
 import { SessionSeq, type SessionEvent } from '@berry-ai/harness-session/types'
 import {
   ConversationEventRegistry, ConversationNodeAssembler,

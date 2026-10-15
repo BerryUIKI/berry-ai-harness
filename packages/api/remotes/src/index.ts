@@ -8,7 +8,7 @@ import type {
   TypertRemoteEventInvocation,
   TypertRemoteEventOutcome,
   TypertRemoteEventSource,
-} from '@deepseek-ai/dsh-api-gateway'
+} from '@berry-ai/harness-api-gateway'
 import { Deque } from '@berry-ai/harness-deque'
 import { carrierKeyOf } from '@berry-ai/harness-scope'
 import { isJsonValue, type JsonValue } from '@berry-ai/harness-util-values'
@@ -28,7 +28,7 @@ import type {} from '@berry-ai/harness-permission-presets/types'
 import type {} from '@berry-ai/harness-settings/types'
 import type {} from '@berry-ai/harness-user-approval'
 import type {} from '@berry-ai/harness-user-questions'
-export type {} from '@deepseek-ai/dsh-api-session-controller/types'
+export type {} from '@berry-ai/harness-api-session-controller/types'
 
 export { API_REMOTE_FORWARDED_EVENTS } from './remote-events.ts'
 export type { ApiRemoteForwardedEvent } from './types.ts'

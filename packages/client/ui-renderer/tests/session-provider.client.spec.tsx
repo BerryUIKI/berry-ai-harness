@@ -3,7 +3,7 @@ import { useState, useSyncExternalStore, type ReactNode } from 'react'
 import { Context } from '@deepseek-ai/cordis'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
-import type { SessionBinding as ControllerBinding, SessionReference } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionBinding as ControllerBinding, SessionReference } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   SessionProviderComponent, StoredEntry, ScopedStandardSourceBinding,

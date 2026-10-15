@@ -1,7 +1,7 @@
 /** Session-scoped durable image URL cache shared by Conversation targets. */
 import type { Context } from '@deepseek-ai/cordis'
 import type { ImageAttachmentRef } from '@berry-ai/harness-attachment'
-import type { ISessions, SessionBinding } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { ISessions, SessionBinding } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { bytesToBase64 } from '@berry-ai/harness-util-crypto'
 import { WeakMapWithValues } from '@berry-ai/harness-util-values'

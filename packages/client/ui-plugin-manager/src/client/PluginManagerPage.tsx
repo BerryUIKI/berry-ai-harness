@@ -10,7 +10,7 @@
 
 import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
-import type { PluginInstallFailureKind, Registry } from '@deepseek-ai/dsh-api-remotes/client'
+import type { PluginInstallFailureKind, Registry } from '@berry-ai/harness-api-remotes/client'
 import {
   Button, IconCheckCircleFillRegular, IconChevronDownOutlineRegular, IconChevronLeftOutlineMedium,
   IconChevronRightOutlineRegular, IconCloseOutlineMedium,

@@ -1,5 +1,5 @@
 /** Adapt a relative workspace read without changing its Session or Host path authority. */
-import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
+import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
 import type { DocumentFileBytes } from '../rpc.ts'
 import type { ReadHtmlRelative } from './pack.ts'
 import { sessionFileAddress } from '@berry-ai/harness-util-workspace-path'

@@ -7,7 +7,7 @@ import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   TeamMemberProjection, TeamProjection, TeamTaskId, TeamTaskView as TeamTask,
 } from '@deepseek-ai/dsh-experimental-agent-team/client'
-import type { SessionListState, SessionSnapshot, SessionSummary, UseProjection } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionListState, SessionSnapshot, SessionSummary, UseProjection } from '@berry-ai/harness-api-session-controller/client'
 import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
 import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
 import { bindSnapshotSelector, makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'

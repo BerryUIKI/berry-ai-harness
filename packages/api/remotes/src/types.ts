@@ -6,7 +6,7 @@
  * and the consumer `ctx.remote.$on` key face read one declaration instead of
  * two copies that could drift.
  *
- * @module @deepseek-ai/dsh-api-remotes/types
+ * @module @berry-ai/harness-api-remotes/types
  */
 
 import type { API_REMOTE_FORWARDED_EVENTS } from './remote-events.ts'

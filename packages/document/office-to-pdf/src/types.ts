@@ -1,5 +1,5 @@
 /** Authorized Office input and complete PDF output, for the shared Host converter. */
-import type { WorkspaceFileBytes } from '@deepseek-ai/dsh-api-workspace-files/types'
+import type { WorkspaceFileBytes } from '@berry-ai/harness-api-workspace-files/types'
 import type {} from '@berry-ai/harness-typert-protocol'
 import type { OfficeSourceKey, OfficeToPdfGeneration, OfficeToPdfKey } from './identity.ts'
 export type { OfficeSourceKey, OfficeToPdfGeneration, OfficeToPdfKey } from './identity.ts'

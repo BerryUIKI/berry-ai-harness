@@ -203,7 +203,7 @@ export class WorkspaceFiles extends TypertRemoteService {
       scope.typert.lookups.register('workspaceFileScope', {
         parameter: 'workspaceFileScope',
         wire: 'workspaceFileScopeId',
-        hostTypeSymbol: '@deepseek-ai/dsh-api-workspace-files#WorkspaceFileScope',
+        hostTypeSymbol: '@berry-ai/harness-api-workspace-files#WorkspaceFileScope',
         wireTypeSymbol: '@berry-ai/harness-session/types#SessionId',
         resolve: async (sessionId) => {
           const live = scope.sessions.get(sessionId)?.header

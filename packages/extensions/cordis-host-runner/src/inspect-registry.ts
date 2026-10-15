@@ -3,7 +3,7 @@
 import { Service } from '@deepseek-ai/cordis'
 import type { Context } from '@deepseek-ai/cordis'
 import type { Agent } from '@berry-ai/harness-agent'
-import type {} from '@deepseek-ai/dsh-api-gateway'
+import type {} from '@berry-ai/harness-api-gateway'
 import { snapshotJsonValue, type JsonValue } from '@berry-ai/harness-util-values'
 import { assertSupportedJsonSchema, validateJsonSchemaValue } from '@berry-ai/harness-tools'
 import type { JsonSchemaNode } from '@berry-ai/harness-tools'

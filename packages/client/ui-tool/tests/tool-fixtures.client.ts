@@ -1,5 +1,5 @@
 /** Shared Chat-slice and Session-event fixtures for Tool row tests. */
-import type { SessionLiveEventEntry } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionLiveEventEntry } from '@berry-ai/harness-api-session-controller/client'
 import { SessionSeq } from '@berry-ai/harness-session/types'
 import { isJsonValue, type JsonValue } from '@berry-ai/harness-util-values'
 import type {

@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import type { Fiber } from '@deepseek-ai/cordis'
-import TypertGateway from '@deepseek-ai/dsh-api-gateway'
+import TypertGateway from '@berry-ai/harness-api-gateway'
 import TypertRegistry from '@berry-ai/harness-typert-registry'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import DynamicCordisRunnerService from '../src/index.ts'

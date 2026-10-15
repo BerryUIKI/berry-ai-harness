@@ -5,13 +5,13 @@
  * returns; Session-scope disposal releases the shell and its resources.
  */
 import type {} from '@deepseek-ai/dsh-client-product-analytics/client'
-import type { ModelSelectionProjection } from '@deepseek-ai/dsh-api-session-controller/types'
+import type { ModelSelectionProjection } from '@berry-ai/harness-api-session-controller/types'
 import type { PlanProjection } from '@berry-ai/harness-plan-mode/types'
 import type { GoalProjection } from '@berry-ai/harness-goal/types'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ISessions, SessionBinding, SessionFace,
-} from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { TranslateNS } from '@deepseek-ai/dsh-client-locale/client'
 import type { InboxState } from '@berry-ai/harness-agent/types'

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-api-job-controller",
+  "name": "@berry-ai/harness-api-job-controller",
   "description": "Job Remote observation stream and the reference-counted client job-output service",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -40,10 +40,10 @@
   "dsh": {
     "client": {
       "external": [
-        "@deepseek-ai/dsh-api-gateway/client"
+        "@berry-ai/harness-api-gateway/client"
       ],
       "inject": [
-        "@deepseek-ai/dsh-api-gateway",
+        "@berry-ai/harness-api-gateway",
         "@deepseek-ai/dsh-client-connection"
       ],
       "platform": "web"
@@ -75,7 +75,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-agent": "workspace:*",
-    "@deepseek-ai/dsh-api-gateway": "workspace:*",
+    "@berry-ai/harness-api-gateway": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@deepseek-ai/dsh-client-store": "workspace:*",
     "@berry-ai/harness-jobs": "workspace:*",

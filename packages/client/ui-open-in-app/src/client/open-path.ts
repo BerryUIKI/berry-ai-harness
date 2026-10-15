@@ -3,8 +3,8 @@
  * The desktop answer is read once per page; a failed read renders no control.
  */
 import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
-import type { SessionOpenWorkspacePathRequest, SessionWorkspacePathApplication } from '@deepseek-ai/dsh-api-session-controller/types'
+import type { RemoteResult } from '@berry-ai/harness-api-remotes/client'
+import type { SessionOpenWorkspacePathRequest, SessionWorkspacePathApplication } from '@berry-ai/harness-api-session-controller/types'
 
 /** What a path gesture asks of the Host desktop: the default application, or the file manager showing the file. */
 export type OpenInAppPathAction = 'open' | 'reveal'

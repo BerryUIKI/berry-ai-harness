@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-api-workspace-controller",
+  "name": "@berry-ai/harness-api-workspace-controller",
   "description": "Workspace Remote commands and reconnect-safe state transport",
   "version": "0.2.1-alpha.2",
   "publishConfig": {
@@ -44,10 +44,10 @@
   "dsh": {
     "client": {
       "external": [
-        "@deepseek-ai/dsh-api-gateway/client"
+        "@berry-ai/harness-api-gateway/client"
       ],
       "inject": [
-        "@deepseek-ai/dsh-api-gateway",
+        "@berry-ai/harness-api-gateway",
         "@deepseek-ai/dsh-client-connection"
       ],
       "platform": "web"
@@ -76,7 +76,7 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-api-gateway": "workspace:*",
+    "@berry-ai/harness-api-gateway": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@deepseek-ai/dsh-host-directory-picker": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
@@ -86,7 +86,7 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-api-gateway": "workspace:*",
+    "@berry-ai/harness-api-gateway": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
     "@deepseek-ai/dsh-client-store": "workspace:*",
     "@deepseek-ai/dsh-client-test-runtime": "workspace:*",

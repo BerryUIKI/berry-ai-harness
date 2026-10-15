@@ -3,9 +3,9 @@ import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import type {
   ISessions, SessionListState, SessionReference, SessionSnapshot, SessionSummary,
-} from '@deepseek-ai/dsh-api-session-controller/client'
-import { SessionForkError } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { WorkspaceId, WorkspaceSnapshot, WorkspaceView } from '@deepseek-ai/dsh-api-workspace-controller/client'
+} from '@berry-ai/harness-api-session-controller/client'
+import { SessionForkError } from '@berry-ai/harness-api-session-controller/client'
+import type { WorkspaceId, WorkspaceSnapshot, WorkspaceView } from '@berry-ai/harness-api-workspace-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type { StoredEntry } from '@deepseek-ai/dsh-client-ui-slots'

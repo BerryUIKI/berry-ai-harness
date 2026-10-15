@@ -34,8 +34,8 @@
 // Type-only: the carrier types, the forwarded Host-event face and the ctx.remote merge.
 import type {} from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { SkillEntry } from '@deepseek-ai/dsh-api-remotes/client'
-import type {} from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SkillEntry } from '@berry-ai/harness-api-remotes/client'
+import type {} from '@berry-ai/harness-api-session-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { InputTriggerServiceContract, InputTriggerSource } from '@deepseek-ai/dsh-client-ui-input-trigger/client'
 import { fileAddressFor } from '@berry-ai/harness-util-workspace-path'
@@ -47,7 +47,7 @@ import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
 import { SkillRow } from './SkillRow.tsx'
 import { en, NS, zh, type SkillKey } from './locales.ts'
 
-declare module '@deepseek-ai/dsh-api-session-controller/client' {
+declare module '@berry-ai/harness-api-session-controller/client' {
   interface SessionReferenceSourceMap {
     /** A skill-catalog fetch waiting for initial history and its RPC result. */
     skillCatalog: unknown

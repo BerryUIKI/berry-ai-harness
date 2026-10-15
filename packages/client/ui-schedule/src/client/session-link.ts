@@ -1,6 +1,6 @@
 /** Original-Session link label and availability from the current public Session and Workspace feeds. */
-import type { SessionListState } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { WorkspaceSnapshot } from '@deepseek-ai/dsh-api-workspace-controller/client'
+import type { SessionListState } from '@berry-ai/harness-api-session-controller/client'
+import type { WorkspaceSnapshot } from '@berry-ai/harness-api-workspace-controller/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 
 /** Navigation state shown beside the retained task's original Session id. */

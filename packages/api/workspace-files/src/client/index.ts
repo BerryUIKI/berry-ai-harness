@@ -6,7 +6,7 @@
  * stream, and this module only wires them into `ctx.resources`.
  */
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-api-gateway/client'
+import type {} from '@berry-ai/harness-api-gateway/client'
 import type {} from '@deepseek-ai/dsh-client-resources/client'
 import { ChangeFeed } from './change-feed.ts'
 import { createFileResourceProvider } from './provider.ts'

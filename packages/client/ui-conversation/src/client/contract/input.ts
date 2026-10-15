@@ -7,7 +7,7 @@
  * here is the submit plane (phase, claim, attempt) alone.
  */
 import type { Context } from '@deepseek-ai/cordis'
-import type { SessionBinding } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionBinding } from '@berry-ai/harness-api-session-controller/client'
 import type { InboxState } from '@berry-ai/harness-agent/types'
 import type { ObservableSnapshot, SnapshotStore } from '@deepseek-ai/dsh-client-store'
 import type { Branded } from '@berry-ai/harness-brand'

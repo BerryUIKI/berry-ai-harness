@@ -7,7 +7,7 @@
  */
 import { RemoteMock, ok } from '@deepseek-ai/dsh-remote-mock'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import type { MessageId, SessionId } from '@deepseek-ai/dsh-api-remotes/client'
+import type { MessageId, SessionId } from '@berry-ai/harness-api-remotes/client'
 import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
 import type {
   MessageFeedbackItem, MessageFeedbackVersion,

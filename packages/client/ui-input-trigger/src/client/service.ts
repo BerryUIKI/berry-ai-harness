@@ -8,7 +8,7 @@
 import { Service } from '@deepseek-ai/cordis'
 import type { Context } from '@deepseek-ai/cordis'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { ISessions, SessionBinding } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { ISessions, SessionBinding } from '@berry-ai/harness-api-session-controller/client'
 import { WeakMapWithValues } from '@berry-ai/harness-util-values'
 import type {} from '@deepseek-ai/dsh-client-locale/client'
 import type { InputTriggerSource } from '../types.ts'

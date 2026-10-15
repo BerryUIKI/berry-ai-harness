@@ -12,7 +12,7 @@ import {
 } from '../scripts/desktop-bundle-imports.mjs'
 
 const MAIN: BundleImportPolicy = {
-  packages: new Set(['electron', 'electron-updater', '@deepseek-ai/dsh-api-gateway']),
+  packages: new Set(['electron', 'electron-updater', '@berry-ai/harness-api-gateway']),
   nodeBuiltins: true,
 }
 const PRELOAD: BundleImportPolicy = { packages: new Set(['electron', 'events', 'timers', 'url']), nodeBuiltins: false }
@@ -20,7 +20,7 @@ const PRELOAD: BundleImportPolicy = { packages: new Set(['electron', 'events', '
 describe('desktop bundle imports', () => {
   it('names the package behind a bare specifier', () => {
     expect(importPackageName('electron-updater/out/electronHttpExecutor.js')).toBe('electron-updater')
-    expect(importPackageName('@deepseek-ai/dsh-api-gateway/stream-protocol')).toBe('@deepseek-ai/dsh-api-gateway')
+    expect(importPackageName('@berry-ai/harness-api-gateway/stream-protocol')).toBe('@berry-ai/harness-api-gateway')
     expect(importPackageName('ws')).toBe('ws')
   })
 
@@ -39,7 +39,7 @@ describe('desktop bundle imports', () => {
       'crypto',
       'electron',
       'electron-updater/out/electronHttpExecutor.js',
-      '@deepseek-ai/dsh-api-gateway/stream-protocol',
+      '@berry-ai/harness-api-gateway/stream-protocol',
     ], MAIN)).toEqual([])
   })
 

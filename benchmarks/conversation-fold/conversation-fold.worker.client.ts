@@ -7,7 +7,7 @@ import { LlmAttemptId, ToolCallId } from '@berry-ai/harness-llm/brand'
 import type { StreamChunk } from '@berry-ai/harness-llm'
 import type { SessionEvent } from '@berry-ai/harness-session/types'
 import type { ChatNode, ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { SessionEventLikeEntry } from '@deepseek-ai/dsh-api-session-controller/client'
+import type { SessionEventLikeEntry } from '@berry-ai/harness-api-session-controller/client'
 // These Client-only fold modules have no plain-Node package export and are compiled into this worker.
 import { ConversationNodeAssembler } from '../../packages/client/ui-conversation/src/client/conversation/assembler.ts'
 import { ConversationEventRegistry } from '../../packages/client/ui-conversation/src/client/conversation/event-registry.ts'

@@ -9,7 +9,7 @@
  */
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
-import { createScope, scopeOf } from '@deepseek-ai/dsh-api-session-controller/client'
+import { createScope, scopeOf } from '@berry-ai/harness-api-session-controller/client'
 import type { LocaleSnapshot } from '@deepseek-ai/dsh-client-locale/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { InputTriggerController, InputTriggerService } from '@deepseek-ai/dsh-client-ui-input-trigger/client'

@@ -4,11 +4,11 @@
  * `job.follow` stream per observed job — so overlapping viewers share a
  * stream, rosters resume whole after a reconnect, and observations resume
  * from the model's cursor, plus the human kill passthrough over `job.kill`.
- * @module @deepseek-ai/dsh-api-job-controller/client/service
+ * @module @berry-ai/harness-api-job-controller/client/service
  */
 
 import { Service, type Context } from '@deepseek-ai/cordis'
-import { RemoteStreamCarrierError, type ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
+import { RemoteStreamCarrierError, type ClientRemote } from '@berry-ai/harness-api-gateway/client'
 import type { RemoteResult } from '@berry-ai/harness-typert-protocol'
 import type { JobId } from '@berry-ai/harness-jobs/brand'
 import type { SessionId } from '@berry-ai/harness-session/types'

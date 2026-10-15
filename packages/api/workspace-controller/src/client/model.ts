@@ -1,8 +1,8 @@
 /** Client-side Workspace state model shared by Remote transport and UI projection. */
 
 import { notifySubscribers } from '@deepseek-ai/dsh-client-store'
-import type {} from '@deepseek-ai/dsh-api-workspace-controller/remote'
-import { isRemoteFailure } from '@deepseek-ai/dsh-api-gateway/client'
+import type {} from '@berry-ai/harness-api-workspace-controller/remote'
+import { isRemoteFailure } from '@berry-ai/harness-api-gateway/client'
 import type { RemoteFailure, RemoteResult, TypertClientRemote } from '@berry-ai/harness-typert-protocol'
 import type {
   WorkspaceArchiveSessionRequest,

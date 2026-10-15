@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import type { SettingsPathOpView } from '@deepseek-ai/dsh-api-remotes/client'
+import type { SettingsPathOpView } from '@berry-ai/harness-api-remotes/client'
 import { RemoteError, stubConfigForm, type StubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
 import { WebSearchCardController, type WebSearchSettings } from '../src/client/web-search-card-controller.ts'
 

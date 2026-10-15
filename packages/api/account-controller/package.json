@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-api-account-controller",
+  "name": "@berry-ai/harness-api-account-controller",
   "description": "Expose safe account operations over authenticated Remote",
   "version": "0.2.1-alpha.2",
   "publishConfig": {

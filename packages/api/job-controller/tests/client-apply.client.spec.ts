@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import type { ConnectionHandle } from '@deepseek-ai/dsh-client-connection/client'
-import { RemoteStream, type RemoteStreamOptions } from '@deepseek-ai/dsh-api-gateway/client'
+import { RemoteStream, type RemoteStreamOptions } from '@berry-ai/harness-api-gateway/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { afterEach, describe, expect, it } from 'vitest'
 import * as JobClient from '../src/client/index.ts'

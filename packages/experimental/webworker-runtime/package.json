@@ -47,7 +47,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-api-gateway": "workspace:*",
+    "@berry-ai/harness-api-gateway": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-bash-sandbox": "workspace:*",
     "@deepseek-ai/dsh-client-connection": "workspace:*",
