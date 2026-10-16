@@ -820,6 +820,12 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../vendor/loader
+      '@types/ws':
+        specifier: ^8.18.1
+        version: 8.18.1
+      ws:
+        specifier: ^8.21.3
+        version: 8.21.3
 
   apps/web:
     devDependencies:

@@ -3,6 +3,7 @@
 
 mod bridge;
 mod protocol;
+mod sidecar;
 mod webview_manager;
 
 fn main() {

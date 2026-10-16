@@ -14,6 +14,7 @@ import { installDesktopUpdateTaskControl } from './update-tasks.ts'
 import { installDesktopQuitInspection } from './quit-inspection.ts'
 import { installPlatformSessionPublisher } from './platform-session.ts'
 import { installOfficeEngineResolution } from './office-engine.ts'
+import { createHostControlChannel } from './sidecar-control.ts'
 
 async function main(): Promise<void> {
   const runtimeDir = process.argv[2] as string
@@ -40,23 +41,21 @@ async function main(): Promise<void> {
       },
     }),
   })
+  const channel = await createHostControlChannel()
   let stopping: Promise<void> | undefined
   const control: {
     updateTasks?: ReturnType<typeof installDesktopUpdateTaskControl>
     quitInspection?: ReturnType<typeof installDesktopQuitInspection>
   } = {}
-  const send = (message: object): Promise<void> => new Promise((resolve, reject) => {
-    if (!process.connected || process.send === undefined) { resolve(); return }
-    process.send(message, (error) => { if (error === null) resolve(); else reject(error) })
-  })
+  const send = (message: object): Promise<void> => channel.send(message)
   const stop = (): Promise<void> => stopping ??= (async () => {
     // Startup failure is reported by main; shutdown only owns a tree that booted.
     const running = await application.catch(() => undefined)
     await running?.shutdown.shutdown(0)
     await send({ type: 'shutdown-complete' })
-    if (process.connected) process.disconnect()
+    await channel.close()
   })()
-  process.on('message', (message: unknown) => {
+  channel.onMessage((message: unknown) => {
     if (typeof message !== 'object' || message === null || !('type' in message)) return
     if (message.type === 'shutdown') { void stop(); return }
     if (message.type === 'quit-inspection') {
@@ -88,7 +87,7 @@ async function main(): Promise<void> {
       }
     })().catch((error: unknown) => { console.error(error) })
   })
-  process.once('disconnect', () => { void stop() })
+  channel.onDisconnect(() => { void stop() })
   const { ctx } = await application
   control.updateTasks = installDesktopUpdateTaskControl(ctx)
   control.quitInspection = installDesktopQuitInspection(ctx)
@@ -98,10 +97,10 @@ async function main(): Promise<void> {
     root: join(resolveDshHome(), 'dsh-runtimes', 'dsh-primary-runtime'),
   })
   installPlatformSessionPublisher(ctx, (session) => {
-    if (process.connected) process.send?.({ type: 'platform-session', session })
+    void send({ type: 'platform-session', session })
   })
   const url = ctx.connection.authenticatedUrl(`${ctx.webServer.protocol}//127.0.0.1:${String(ctx.webServer.port)}`)
-  if (process.connected) process.send?.({ type: 'ready', url, injections: ctx.webServer.collectIndexInjections() }, (error) => { if (error !== null) console.error(error) })
+  await send({ type: 'ready', url, injections: ctx.webServer.collectIndexInjections() })
 }
 
 /** Upper bound of the startup diagnostic carried over IPC; the head holds the message and stack. */
