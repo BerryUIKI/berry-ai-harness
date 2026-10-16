@@ -32,13 +32,13 @@ export function getHarnessManifest(
   manifest: Partial<DshPackageManifest> | Record<string, unknown> | null | undefined,
 ): DshManifest | undefined {
   if (manifest === null || typeof manifest !== 'object') return undefined
-  const berry = (manifest as { berry?: unknown }).berry
-  if (typeof berry === 'object' && berry !== null) {
-    return berry as DshManifest
+  const berry = (manifest as { berry?: DshManifest }).berry
+  if (berry !== undefined) {
+    return berry
   }
-  const dsh = (manifest as { dsh?: unknown }).dsh
-  if (typeof dsh === 'object' && dsh !== null) {
-    return dsh as DshManifest
+  const dsh = (manifest as { dsh?: DshManifest }).dsh
+  if (dsh !== undefined) {
+    return dsh
   }
   return undefined
 }
