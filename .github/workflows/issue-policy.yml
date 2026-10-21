@@ -27,6 +27,11 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         shell: bash
         run: |
+          if [ -n "${GITHUB_REPOSITORY:-}" ] && [ "$GITHUB_REPOSITORY" != "deepseek-harness/deepseek-harness" ]; then
+            printf 'legacy-automated=true\nneeds-project=false\n' >> "$GITHUB_OUTPUT"
+            echo "Issue policy belongs to the upstream repository; skipping this fork."
+            exit 0
+          fi
           if [ -f .github/issue-management/selective-preflight.json ]; then
             node .github/issue-management/policy.mjs pr-preflight
           else
