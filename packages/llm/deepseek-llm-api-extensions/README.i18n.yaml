@@ -5,27 +5,27 @@
 /:
   en: 8805672f8507e16d
   zh: 07696ec60f8d86e8
-/deepseek-ai-dsh-deepseek-llm-api-extensions:
-  en: f49157e80e6436e6
-  zh: 7dd755bd83603393
-/deepseek-ai-dsh-deepseek-llm-api-extensions/summary:
+/berry-ai-harness-deepseek-llm-api-extensions:
+  en: e682e8c3b96f1123
+  zh: d2fea887436dd371
+/berry-ai-harness-deepseek-llm-api-extensions/summary:
   en: 2ee01d6439e60359
   zh: a1fb7c4c0d686895
-/deepseek-ai-dsh-deepseek-llm-api-extensions/table-of-contents:
+/berry-ai-harness-deepseek-llm-api-extensions/table-of-contents:
   en: 6b7f62c318c9aad6
   zh: 5e22d58884e60c87
-/deepseek-ai-dsh-deepseek-llm-api-extensions/service:
-  en: d9782207ffab7c50
-  zh: 22c2a10a5f0de61f
-/deepseek-ai-dsh-deepseek-llm-api-extensions/model-experience:
-  en: 88a785350ced5c14
-  zh: 755349be023a3f5c
-/deepseek-ai-dsh-deepseek-llm-api-extensions/model-experience/kv-cache-effect:
+/berry-ai-harness-deepseek-llm-api-extensions/service:
+  en: 6fc859d1d3667a22
+  zh: 01007282c569c0bd
+/berry-ai-harness-deepseek-llm-api-extensions/model-experience:
+  en: 4d6938f972b06f34
+  zh: f4283ee4fd386264
+/berry-ai-harness-deepseek-llm-api-extensions/model-experience/kv-cache-effect:
   en: 83eb7f1e6ce80b45
   zh: 516811171411ffca
-/deepseek-ai-dsh-deepseek-llm-api-extensions/known-limitations-and-deferred-work:
+/berry-ai-harness-deepseek-llm-api-extensions/known-limitations-and-deferred-work:
   en: 440169524f1a1323
   zh: 935424afe40201b7
-/deepseek-ai-dsh-deepseek-llm-api-extensions/known-limitations-and-deferred-work/dev-note:
+/berry-ai-harness-deepseek-llm-api-extensions/known-limitations-and-deferred-work/dev-note:
   en: e67f633dc6fe7773
   zh: e88aeb617ffb74ea
