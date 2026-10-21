@@ -1,4 +1,4 @@
-/** Verify npm's physical package placement for two incompatible DSH releases. */
+/** Verify npm's physical package placement for two incompatible Harness releases. */
 
 import { readFileSync } from 'node:fs'
 import { posix, resolve } from 'node:path'
@@ -10,7 +10,7 @@ import {
   type RegistryIndex,
 } from './benchmark-npm-resolution.ts'
 
-const DSH_PACKAGE = '@deepseek-ai/dsh'
+const DSH_PACKAGE = '@berry-ai/harness'
 const CORDIS_PACKAGE = '@deepseek-ai/cordis'
 const NESTED_DSH_ALIAS = 'dsh-previous'
 const NESTED_DSH_PATH = `node_modules/${NESTED_DSH_ALIAS}`
@@ -85,10 +85,10 @@ function cloneForVersion(manifest: object, version: string): MutableRegistryMani
 }
 
 /**
- * Replace the working release with two incompatible, internally consistent DSH releases.
+ * Replace the working release with two incompatible, internally consistent Harness releases.
  * @param index - Registry metadata containing the working release.
  * @param sourceVersion - Workspace version copied into each synthetic release.
- * @returns Registry metadata containing both synthetic DSH releases and unchanged external packages.
+ * @returns Registry metadata containing both synthetic Harness releases and unchanged external packages.
  */
 export function buildDualDshRegistry(index: RegistryIndex, sourceVersion: string): RegistryIndex {
   const output = new Map(index)
@@ -106,7 +106,7 @@ export function buildDualDshRegistry(index: RegistryIndex, sourceVersion: string
       cloneForVersion(source, version),
     ])))
   }
-  if (dshPackages === 0) throw new Error('registry contains no DSH packages')
+  if (dshPackages === 0) throw new Error('registry contains no Harness packages')
   return output
 }
 
@@ -142,9 +142,9 @@ function setDifference(left: ReadonlySet<string>, right: ReadonlySet<string>): s
 }
 
 /**
- * Assert that npm isolates both DSH releases while sharing the Cordis runtime.
+ * Assert that npm isolates both Harness releases while sharing the Cordis runtime.
  * @param packageLock - Metadata-only package lock produced by npm.
- * @returns Counts for the verified DSH packages and dependency edges.
+ * @returns Counts for the verified Harness packages and dependency edges.
  */
 export function assertDualDshInstallLayout(packageLock: NpmPackageLock): DshInstallLayoutSummary {
   const [nestedVersion, rootVersion] = SYNTHETIC_DSH_VERSIONS
@@ -159,12 +159,12 @@ export function assertDualDshInstallLayout(packageLock: NpmPackageLock): DshInst
   for (const [path, manifest] of installed) {
     const name = packageNameAtPath(path, manifest)
     if (name === 'react' || name === 'react-dom') {
-      errors.push(`${path}: ${name} is a browser build input, not a dependency of the synthetic DSH-only consumer`)
+      errors.push(`${path}: ${name} is a browser build input, not a dependency of the synthetic Harness-only consumer`)
     }
     if (name === undefined || !isDshPackage(name)) continue
     const version = manifest.version
     if (version !== nestedVersion && version !== rootVersion) {
-      errors.push(`${path}: expected DSH version ${nestedVersion} or ${rootVersion}, got ${String(version)}`)
+      errors.push(`${path}: expected Harness version ${nestedVersion} or ${rootVersion}, got ${String(version)}`)
       continue
     }
     namesByVersion.get(version)?.add(name)
@@ -257,7 +257,7 @@ async function main(): Promise<void> {
   const summary = assertDualDshInstallLayout(result.packageLock)
   const units = assertResolutionWorkBudget(summary)
   console.log(
-    `verify-npm-install-layout: ${String(summary.dshPackagesPerVersion)} DSH package(s) per release and `
+    `verify-npm-install-layout: ${String(summary.dshPackagesPerVersion)} Harness package(s) per release and `
     + `${String(summary.checkedDshEdges)} internal edge(s) verified in ${(result.durationMs / 1000).toFixed(2)} s; `
     + `${String(units)} of ${String(MAX_RESOLUTION_WORK_UNITS)} budgeted resolution work unit(s); `
     + `both releases share one Cordis installation; ${String(result.unknownPackages.length)} unavailable optional `
