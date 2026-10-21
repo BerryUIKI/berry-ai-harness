@@ -3,8 +3,8 @@
 # After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write docs/subsystems/token-meter.md
 /token-meter:
-  en: 7b81394f8688ad71
-  zh: e38852d59e9793fd
+  en: a5f0d7ea31c99412
+  zh: a2b0c8a5b93cc624
 /token-meter/tokenmeasurement:
   en: 34853869e90adf31
   zh: 285010a2f695ca01

@@ -1,0 +1,16 @@
+# Bilingual-pair consistency record for guide.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/upgrade-guide/v0.2.1-alpha.2/tauri-migration/guide.md
+/:
+  en: 81924e595b7e94e5
+  zh: 7d8932cfc7161631
+/berry-ai-harness-tauri-migration-and-complete-rename:
+  en: 9f850d57ed4145a7
+  zh: 0a2bbd817a7a37d6
+/berry-ai-harness-tauri-migration-and-complete-rename/summary:
+  en: 9d4630b441d5a41a
+  zh: f4a4da98e5289ec5
+/berry-ai-harness-tauri-migration-and-complete-rename/key-changes:
+  en: ee2bc40d8b1f7e03
+  zh: 726b764d158fc1ee

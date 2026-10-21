@@ -1,0 +1,16 @@
+# Bilingual-pair consistency record for 2026-10-12-tauri-desktop-migration.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-10-12-tauri-desktop-migration.md
+/:
+  en: dd65350a648248ab
+  zh: b40cbe0a40f4991d
+/2026-10-12-tauri-desktop-migration-and-architecture:
+  en: 9b123875b7668b60
+  zh: 454e2024e526b816
+/2026-10-12-tauri-desktop-migration-and-architecture/context:
+  en: 82cdfdcdc9365326
+  zh: 241696296e65ef2f
+/2026-10-12-tauri-desktop-migration-and-architecture/decision:
+  en: 2c38de1a9a634abd
+  zh: 484a4558af5e0b10
