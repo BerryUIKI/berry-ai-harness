@@ -32,6 +32,9 @@ env:
 
 jobs:
   preview:
+    # The Pages project and Access policy belong to the upstream repository;
+    # forks have no Cloudflare credentials and must not publish previews.
+    if: github.repository == 'deepseek-harness/deepseek-harness'
     runs-on: ubuntu-24.04
     name: cloudflare pages preview
     steps:
