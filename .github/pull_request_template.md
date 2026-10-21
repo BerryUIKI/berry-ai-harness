@@ -1,3 +1,9 @@
+## Branch target
+
+<!-- Follow [the branch policy](branching.md). -->
+
+- [ ] The base branch matches this change's branch type.
+
 ## Motivation
 
 <!-- 用一句话说明需要解决的问题，并以 Fixes #NN 或 Related #NN 引用同仓库 Issue。 -->

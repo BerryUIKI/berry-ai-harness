@@ -676,7 +676,7 @@ describe('CI workflow', () => {
     )
   })
 
-  it('cancels superseded master runs without changing the post-merge job inventory', () => {
+  it('cancels superseded post-merge runs without changing the job inventory', () => {
     const workflow = loadWorkflow('.github/workflows/ci-master.yml')
     const prWorkflow = loadWorkflow('.github/workflows/ci.yml')
     if (!isRecord(workflow.jobs) || !isRecord(workflow.concurrency)) {
@@ -692,8 +692,8 @@ describe('CI workflow', () => {
     })
     expect(prWorkflow.concurrency).toEqual(workflow.concurrency)
 
-    // The exact event sets are what keep master-only jobs out of the PR check
-    // panel: ci-master triggers only on push(master) + workflow_dispatch and
+    // The exact event sets are what keep post-merge jobs out of the PR check
+    // panel: ci-master triggers only on push(main/dev/master) + workflow_dispatch and
     // never on pull_request; ci.yml is exactly pull_request-only. Assert the
     // full sets so losing the wrong event, or gaining an extra one, fails.
     if (!isRecord(workflow.on) || !isRecord(prWorkflow.on)) {
@@ -737,6 +737,33 @@ describe('CI workflow', () => {
       }
       expect(job.strategy['max-parallel']).toBe(12)
       expect(job['timeout-minutes']).toBe(15)
+    }
+  })
+
+  it('runs hosted post-merge checks on Berry branches and keeps upstream standbys on master', () => {
+    const workflow = loadWorkflow('.github/workflows/ci-master.yml')
+    if (!isRecord(workflow.on) || !isRecord(workflow.on.push) || !isRecord(workflow.jobs)) {
+      throw new TypeError('ci-master workflow must define push triggers and jobs')
+    }
+
+    expect(workflow.on.push.branches).toEqual(['main', 'dev', 'master'])
+    for (const name of ['python-runtime', 'windows']) {
+      const job = workflow.jobs[name]
+      if (!isRecord(job)) throw new TypeError(`${name} must be defined`)
+      expect(job.if).toBe("github.event_name == 'push' && contains(fromJSON('[\"main\",\"dev\",\"master\"]'), github.ref_name)")
+    }
+    for (const name of ['serial-linux-selfhosted', 'serial-windows']) {
+      const job = workflow.jobs[name]
+      if (!isRecord(job)) throw new TypeError(`${name} must be defined`)
+      expect(job.if).toBe("github.event_name == 'push' && github.ref == 'refs/heads/master'")
+    }
+
+    for (const name of ['sandbox.yml', 'node-addon-system.yml', 'release.yml', 'release-vendor.yml']) {
+      const branchWorkflow = loadWorkflow('.github/workflows/' + name)
+      if (!isRecord(branchWorkflow.on) || !isRecord(branchWorkflow.on.push)) {
+        throw new TypeError(`${name} must define a push trigger`)
+      }
+      expect(branchWorkflow.on.push.branches).toEqual(['main', 'dev', 'master'])
     }
   })
 
