@@ -78,8 +78,8 @@ export function verifyDefaultProductIsolation(root: string): ProductIsolationRes
     if (!existsSync(resolve(root, path))) failures.push(`missing default product root ${path}`)
   }
   const cli = directories.get(resolve(root, 'apps/cli'))
-  if (cli?.manifest.name !== '@deepseek-ai/dsh') {
-    failures.push('apps/cli/package.json must identify @deepseek-ai/dsh')
+  if (cli?.manifest.name !== '@berry-ai/harness') {
+    failures.push('apps/cli/package.json must identify @berry-ai/harness')
   }
   // The bundles the launcher ships switched off: each a runtime dependency of the installation that is a bundle
   // with an icon and locale display metadata for the plugin manager's Official group, none a default.
