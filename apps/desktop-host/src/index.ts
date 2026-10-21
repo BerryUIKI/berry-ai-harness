@@ -3,7 +3,7 @@
 import { delimiter, join } from 'node:path'
 import { inspect } from 'node:util'
 import { loadLayeredEnv, loadProfileDirectory, reportSkippedBundles } from '@berry-ai/harness-app-boot'
-import { runProfile } from '@deepseek-ai/dsh/profile-boot'
+import { runProfile } from '@berry-ai/harness/profile-boot'
 import type {} from '@berry-ai/harness-client-connection'
 import type {} from '@berry-ai/harness-host-webserver'
 import type {} from '@berry-ai/harness-deepseek-account'
