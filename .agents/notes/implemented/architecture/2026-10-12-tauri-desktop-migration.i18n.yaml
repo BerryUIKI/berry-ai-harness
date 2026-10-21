@@ -2,15 +2,18 @@
 # section, a hash of its English and Chinese blocks outside code blocks and generated regions.
 # After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-10-12-tauri-desktop-migration.md
-/:
-  en: dd65350a648248ab
-  zh: b40cbe0a40f4991d
-/2026-10-12-tauri-desktop-migration-and-architecture:
-  en: 9b123875b7668b60
-  zh: 454e2024e526b816
-/2026-10-12-tauri-desktop-migration-and-architecture/context:
-  en: 82cdfdcdc9365326
-  zh: 241696296e65ef2f
-/2026-10-12-tauri-desktop-migration-and-architecture/decision:
+/agent-note-tauri-desktop-migration-and-architecture:
+  en: 041418b4f1384f1b
+  zh: 6616187aa8a7f951
+/agent-note-tauri-desktop-migration-and-architecture/problem:
+  en: 4f3434c85d5dd470
+  zh: cd507cc96dddc946
+/agent-note-tauri-desktop-migration-and-architecture/decision:
   en: 2c38de1a9a634abd
   zh: 484a4558af5e0b10
+/agent-note-tauri-desktop-migration-and-architecture/alternatives-considered:
+  en: bc34167356e47035
+  zh: 27a555cd89535951
+/agent-note-tauri-desktop-migration-and-architecture/consequences:
+  en: 6bf1b6e56be0431c
+  zh: 6f3be00187b844e3

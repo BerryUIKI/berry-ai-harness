@@ -3,14 +3,14 @@
 # After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write docs/upgrade-guide/v0.2.1-alpha.2/tauri-migration/guide.md
 /:
-  en: 81924e595b7e94e5
-  zh: 7d8932cfc7161631
+  en: 073ae9157cb24e9d
+  zh: 40fb64d8855633d4
 /berry-ai-harness-tauri-migration-and-complete-rename:
   en: 9f850d57ed4145a7
   zh: 0a2bbd817a7a37d6
-/berry-ai-harness-tauri-migration-and-complete-rename/summary:
-  en: 9d4630b441d5a41a
-  zh: f4a4da98e5289ec5
-/berry-ai-harness-tauri-migration-and-complete-rename/key-changes:
-  en: ee2bc40d8b1f7e03
-  zh: 726b764d158fc1ee
+/berry-ai-harness-tauri-migration-and-complete-rename/change:
+  en: 51e8b45f0def0481
+  zh: dd56ccf690c0f2e1
+/berry-ai-harness-tauri-migration-and-complete-rename/migration:
+  en: 996da1a3e7b15623
+  zh: c9f3a2af44f66f0b
