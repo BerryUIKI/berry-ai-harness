@@ -22,7 +22,7 @@ function fixture(edges: Array<[number, number]>): string {
   const catalogDependencies: Record<string, string> = {}
   for (const [from, to] of edges) {
     const dir = join(root, `packages/session/session-format-v${from}-to-v${to}`)
-    const name = `@deepseek-ai/dsh-session-format-v${from}-to-v${to}`
+    const name = `@berry-ai/harness-session-format-v${from}-to-v${to}`
     mkdirSync(dir, { recursive: true })
     catalogDependencies[name] = 'workspace:^'
     writeFileSync(join(dir, 'package.json'), JSON.stringify({
@@ -39,7 +39,7 @@ function fixture(edges: Array<[number, number]>): string {
         ? { '@berry-ai/harness-session-format': 'workspace:^' }
         : {
           '@berry-ai/harness-session-format': 'workspace:^',
-          [`@deepseek-ai/dsh-session-format-v${from - 1}-to-v${from}`]: 'workspace:^',
+          [`@berry-ai/harness-session-format-v${from - 1}-to-v${from}`]: 'workspace:^',
         },
     }))
   }
@@ -136,17 +136,17 @@ describe('session format catalog generator', () => {
     writeFileSync(manifest.path, JSON.stringify(manifest.value))
 
     expect(() => collectSessionFormatMigrations(root, 2))
-      .toThrow(/must depend on @deepseek-ai\/dsh-session-format-v0-to-v1/)
+      .toThrow(/must depend on @berry-ai\/harness-session-format-v0-to-v1/)
   })
 
   it('requires the package name to identify its declared adjacent edge', () => {
     const root = fixture([[0, 1], [1, 2]])
     const manifest = edgeManifest(root, 1, 2)
-    manifest.value['name'] = '@deepseek-ai/dsh-session-format-other'
+    manifest.value['name'] = '@berry-ai/harness-session-format-other'
     writeFileSync(manifest.path, JSON.stringify(manifest.value))
 
     expect(() => collectSessionFormatMigrations(root, 2))
-      .toThrow(/name must be @deepseek-ai\/dsh-session-format-v1-to-v2/)
+      .toThrow(/name must be @berry-ai\/harness-session-format-v1-to-v2/)
   })
 
   it('requires the catalog to share the installed Session package as a peer', () => {
@@ -162,6 +162,6 @@ describe('session format catalog generator', () => {
     writeFileSync(path, JSON.stringify(manifest))
 
     expect(() => collectSessionFormatMigrations(root, 2))
-      .toThrow(/must share @deepseek-ai\/dsh-session through peer \+ dev dependencies/)
+      .toThrow(/must share @berry-ai\/harness-session through peer \+ dev dependencies/)
   })
 })
