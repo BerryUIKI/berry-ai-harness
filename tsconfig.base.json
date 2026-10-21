@@ -74,6 +74,8 @@
       "@berry-ai/harness-experimental-claude-code-mods/types": ["./packages/experimental/claude-code-mods/src/types.ts"],
       // The example mods are source-only plugin entries; a source launch resolves the package subpath here.
       "@berry-ai/harness-experimental-claude-code-mods/examples/*": ["./packages/experimental/claude-code-mods/examples/*"],
+      "@berry-ai/harness/profile-boot": ["./apps/cli/src/profile-boot.ts"],
+      "@berry-ai/harness/lib/bin.js": ["./apps/cli/src/bin.ts"],
       "@deepseek-ai/dsh/profile-boot": ["./apps/cli/src/profile-boot.ts"],
       "@deepseek-ai/dsh/lib/bin.js": ["./apps/cli/src/bin.ts"],
       "@berry-ai/harness-browser-use": ["./packages/browser-use/browser-use/src/index.ts"],
