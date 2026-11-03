@@ -1714,7 +1714,7 @@ class FaceAnalyzer {
         const alias = type.aliasSymbol
         const aliasDeclaration = alias === undefined ? undefined : preferredDeclaration(this.resolveSymbol(alias))
         if (alias?.name === 'JsonValue' && aliasDeclaration !== undefined
-          && this.registrationForFile(aliasDeclaration.getSourceFile().fileName)?.name === '@deepseek-ai/dsh-util-values') {
+          && this.registrationForFile(aliasDeclaration.getSourceFile().fileName)?.name === '@berry-ai/harness-util-values') {
           return add({ kind: 'keyword', name: 'unknown', json: true })
         }
         const flags = type.flags

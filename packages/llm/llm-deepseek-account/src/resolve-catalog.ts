@@ -1,8 +1,8 @@
 /** The account catalog: version gating, this build's model knowledge, and deployment overrides. */
 import semver from 'semver'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
-import { resolveAdapterOptions } from '@deepseek-ai/dsh-llm-deepseek'
-import type { DeepSeekCatalogModel } from '@deepseek-ai/dsh-llm-deepseek'
+import { assertNever } from '@berry-ai/harness-util-values'
+import { resolveAdapterOptions } from '@berry-ai/harness-llm-deepseek'
+import type { DeepSeekCatalogModel } from '@berry-ai/harness-llm-deepseek'
 import type { ModelOverride } from './config.ts'
 import type { ListedFacts, ListingEntry } from './listing.ts'
 

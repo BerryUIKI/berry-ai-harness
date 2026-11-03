@@ -18,7 +18,7 @@ import { MODULES_PACKAGE, createInProcessModules, loadPluginModules } from '../s
 const RENDERER = '@berry-ai/harness-client-ui-renderer'
 const TYPERT = '@berry-ai/harness-typert-registry'
 const BRAND = '@berry-ai/harness-client-ui-brand-official'
-const MISSING = '@deepseek-ai/dsh-client-does-not-exist'
+const MISSING = '@berry-ai/harness-client-does-not-exist'
 
 const row = (name: string, immediately = false) => ({ name, inject: [], immediately })
 
@@ -72,7 +72,7 @@ describe('createInProcessModules', () => {
     await expect(system.import(MODULES_PACKAGE, '', {})).resolves.toBe(modulesClient)
     expect(system.loadCache.get(TYPERT)?.exports).toBe(typertRegistry)
     expect(system.loadCache.get(RENDERER)?.exports).toBe(uiRenderer)
-    await expect(system.import('@deepseek-ai/dsh-client-unknown', '', {})).rejects.toThrow('cannot resolve')
+    await expect(system.import('@berry-ai/harness-client-unknown', '', {})).rejects.toThrow('cannot resolve')
   })
 
   it('rejects loudly instead of fetching when a graph row has no loaded module', async () => {

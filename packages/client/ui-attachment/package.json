@@ -29,12 +29,12 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-chat",
-        "@deepseek-ai/dsh-client-ui-conversation",
-        "@deepseek-ai/dsh-client-ui-renderer",
-        "@deepseek-ai/dsh-client-ui-trajectory",
-        "@deepseek-ai/dsh-client-ui-tool"
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-chat",
+        "@berry-ai/harness-client-ui-conversation",
+        "@berry-ai/harness-client-ui-renderer",
+        "@berry-ai/harness-client-ui-trajectory",
+        "@berry-ai/harness-client-ui-tool"
       ],
       "platform": "web"
     }

@@ -29,8 +29,8 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-settings"
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-settings"
       ],
       "platform": "web"
     }

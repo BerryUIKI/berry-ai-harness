@@ -1,9 +1,9 @@
 import { Context, Service } from '@deepseek-ai/cordis'
 import { afterEach, expect, it } from 'vitest'
 import { z } from 'zod'
-import { bindTypertRemote, Remote } from '@deepseek-ai/dsh-typert-protocol'
-import TypertRegistry, { type TypertContribution } from '@deepseek-ai/dsh-typert-registry'
-import RemoteAccessService from '@deepseek-ai/dsh-api-remote-access'
+import { bindTypertRemote, Remote } from '@berry-ai/harness-typert-protocol'
+import TypertRegistry, { type TypertContribution } from '@berry-ai/harness-typert-registry'
+import RemoteAccessService from '@berry-ai/harness-api-remote-access'
 import TypertGateway from '../src/index.ts'
 import { ownerPeer } from './peer.ts'
 

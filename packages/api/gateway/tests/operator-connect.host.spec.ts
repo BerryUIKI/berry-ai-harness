@@ -9,13 +9,13 @@ import { pathToFileURL } from 'node:url'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import * as Connection from '@deepseek-ai/dsh-client-connection'
-import LocalCredentials from '@deepseek-ai/dsh-credentials-local'
-import WebServer from '@deepseek-ai/dsh-host-webserver'
-import * as FrontendStatic from '@deepseek-ai/dsh-host-frontend-static'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
-import TypertGateway from '@deepseek-ai/dsh-api-gateway'
-import RemoteAccess from '@deepseek-ai/dsh-api-remote-access'
+import * as Connection from '@berry-ai/harness-client-connection'
+import LocalCredentials from '@berry-ai/harness-credentials-local'
+import WebServer from '@berry-ai/harness-host-webserver'
+import * as FrontendStatic from '@berry-ai/harness-host-frontend-static'
+import TypertRegistry from '@berry-ai/harness-typert-registry'
+import TypertGateway from '@berry-ai/harness-api-gateway'
+import RemoteAccess from '@berry-ai/harness-api-remote-access'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import WebSocket from 'ws'
 import { z } from 'zod'
@@ -209,13 +209,13 @@ async function boot(): Promise<Host> {
   await writeFile(distIndex, '<head></head><body>operator fixture</body>')
   const configPath = join(root, 'cordis.yml')
   const rows = [
-    { name: '@deepseek-ai/dsh-credentials-local', config: { path: join(root, '.credentials.yaml'), watch: false } },
-    { name: '@deepseek-ai/dsh-host-webserver', config: { host: '127.0.0.1', port: 0 } },
-    { name: '@deepseek-ai/dsh-client-connection' },
-    { name: '@deepseek-ai/dsh-host-frontend-static', config: { distIndex } },
-    { name: '@deepseek-ai/dsh-typert-registry' },
-    { name: '@deepseek-ai/dsh-api-remote-access' },
-    { name: '@deepseek-ai/dsh-api-gateway' },
+    { name: '@berry-ai/harness-credentials-local', config: { path: join(root, '.credentials.yaml'), watch: false } },
+    { name: '@berry-ai/harness-host-webserver', config: { host: '127.0.0.1', port: 0 } },
+    { name: '@berry-ai/harness-client-connection' },
+    { name: '@berry-ai/harness-host-frontend-static', config: { distIndex } },
+    { name: '@berry-ai/harness-typert-registry' },
+    { name: '@berry-ai/harness-api-remote-access' },
+    { name: '@berry-ai/harness-api-gateway' },
     { name: '@fixture/operator-connect' },
   ]
   await writeFile(configPath, rows.map(row => `- ${JSON.stringify({ ...row, name: `cordis:${row.name}` })}`).join('\n') + '\n')
@@ -225,13 +225,13 @@ async function boot(): Promise<Host> {
     await ctx.plugin(Loader)
     Object.assign(ctx.loader.builtins, {
       include: Include,
-      '@deepseek-ai/dsh-credentials-local': LocalCredentials,
-      '@deepseek-ai/dsh-host-webserver': WebServer,
-      '@deepseek-ai/dsh-client-connection': Connection,
-      '@deepseek-ai/dsh-host-frontend-static': FrontendStatic,
-      '@deepseek-ai/dsh-typert-registry': TypertRegistry,
-      '@deepseek-ai/dsh-api-remote-access': RemoteAccess,
-      '@deepseek-ai/dsh-api-gateway': TypertGateway,
+      '@berry-ai/harness-credentials-local': LocalCredentials,
+      '@berry-ai/harness-host-webserver': WebServer,
+      '@berry-ai/harness-client-connection': Connection,
+      '@berry-ai/harness-host-frontend-static': FrontendStatic,
+      '@berry-ai/harness-typert-registry': TypertRegistry,
+      '@berry-ai/harness-api-remote-access': RemoteAccess,
+      '@berry-ai/harness-api-gateway': TypertGateway,
       '@fixture/operator-connect': OperatorConnectFixture,
     })
     await ctx.loader.create({ name: 'cordis:include', config: { path: pathToFileURL(configPath).href } })

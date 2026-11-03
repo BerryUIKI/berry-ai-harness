@@ -40,11 +40,11 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-remotes",
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-chat",
-        "@deepseek-ai/dsh-client-ui-plugin-manager",
-        "@deepseek-ai/dsh-client-ui-settings"
+        "@berry-ai/harness-api-remotes",
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-chat",
+        "@berry-ai/harness-client-ui-plugin-manager",
+        "@berry-ai/harness-client-ui-settings"
       ],
       "platform": "web"
     }

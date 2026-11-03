@@ -49,7 +49,7 @@
     "@deepseek-ai/cordis": "workspace:~"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-commands": {
+    "@berry-ai/harness-commands": {
       "optional": true
     }
   },

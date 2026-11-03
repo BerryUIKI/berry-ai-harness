@@ -73,11 +73,11 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-commands",
-        "@deepseek-ai/dsh-client-ui-conversation",
-        "@deepseek-ai/dsh-client-ui-renderer",
-        "@deepseek-ai/dsh-client-ui-session"
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-commands",
+        "@berry-ai/harness-client-ui-conversation",
+        "@berry-ai/harness-client-ui-renderer",
+        "@berry-ai/harness-client-ui-session"
       ],
       "platform": "web"
     }

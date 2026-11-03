@@ -61,10 +61,10 @@
     "@berry-ai/harness-system-prompt": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-mcp-resources": {
+    "@berry-ai/harness-mcp-resources": {
       "optional": true
     },
-    "@deepseek-ai/dsh-system-prompt": {
+    "@berry-ai/harness-system-prompt": {
       "optional": true
     }
   }

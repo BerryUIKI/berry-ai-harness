@@ -45,11 +45,11 @@
   "dsh": {
     "client": {
       "external": [
-        "@deepseek-ai/dsh-api-gateway/client"
+        "@berry-ai/harness-api-gateway/client"
       ],
       "inject": [
-        "@deepseek-ai/dsh-api-gateway",
-        "@deepseek-ai/dsh-client-connection"
+        "@berry-ai/harness-api-gateway",
+        "@berry-ai/harness-client-connection"
       ],
       "platform": "web"
     }

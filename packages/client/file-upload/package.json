@@ -41,7 +41,7 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-remotes"
+        "@berry-ai/harness-api-remotes"
       ],
       "platform": "web",
       "immediately": true

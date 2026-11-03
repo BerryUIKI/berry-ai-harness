@@ -4,8 +4,8 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { execa } from 'execa'
 import { expect, it } from 'vitest'
-import { runLoaderSmoke } from '@deepseek-ai/dsh-loader-smoke'
-import { parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
+import { runLoaderSmoke } from '@berry-ai/harness-loader-smoke'
+import { parseSessionLog } from '@berry-ai/harness-llm-replay'
 import { expectNoRenderContext, officeModelPatches } from './fixtures/real-office.ts'
 
 const repo = fileURLToPath(new URL('../../../../', import.meta.url))
@@ -22,8 +22,8 @@ const launch = {
 async function prepareOffice(cwd: string) {
   await writeFile(join(cwd, 'office.patch.json'), JSON.stringify([
     ...officeModelPatches(),
-    { insert: [{ id: 'skill-office', name: '@deepseek-ai/dsh-skill-office', config: { assetRoot: join(repo, 'packages/skill/skill-office/assets') } }] },
-    { insert: [{ id: 'workspace-dependencies', name: '@deepseek-ai/dsh-tool-workspace-dependencies', config: { source: runtime! } }] },
+    { insert: [{ id: 'skill-office', name: '@berry-ai/harness-skill-office', config: { assetRoot: join(repo, 'packages/skill/skill-office/assets') } }] },
+    { insert: [{ id: 'workspace-dependencies', name: '@berry-ai/harness-tool-workspace-dependencies', config: { source: runtime! } }] },
     { id: 'session-persistence-jsonl', config: { root: join(cwd, '.sessions'), compression: 'none' } },
   ]))
 }

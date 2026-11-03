@@ -41,8 +41,8 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-gateway",
-        "@deepseek-ai/dsh-client-resources"
+        "@berry-ai/harness-api-gateway",
+        "@berry-ai/harness-client-resources"
       ],
       "platform": "web"
     }

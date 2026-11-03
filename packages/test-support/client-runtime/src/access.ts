@@ -7,15 +7,15 @@
  * install an allow-all service and `useRemoteAccess` Hook instead, and
  * hand-built component props spread {@link allowAllAccess}; a spec of a
  * refused path overrides one Hook.
- * @module @deepseek-ai/dsh-client-test-runtime/src/access
+ * @module @berry-ai/harness-client-test-runtime/src/access
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { ClientRemoteAccess } from '@deepseek-ai/dsh-api-remote-access/client'
-import type { GlobalStandardProps, HostObservable, SessionStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type {} from '@deepseek-ai/dsh-client-ui-workspace/client'
+import type { ClientRemoteAccess } from '@berry-ai/harness-api-remote-access/client'
+import type { GlobalStandardProps, HostObservable, SessionStandardProps } from '@berry-ai/harness-client-ui-slots'
+import type {} from '@berry-ai/harness-client-ui-renderer/client'
+import type {} from '@berry-ai/harness-client-ui-session/client'
+import type {} from '@berry-ai/harness-client-ui-workspace/client'
 
 /** The access Hooks every Slot component receives. */
 export type AccessStandardProps =

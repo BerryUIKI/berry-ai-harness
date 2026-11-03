@@ -12,7 +12,7 @@ import LocalSubprocessRuntime from '@berry-ai/harness-subprocess-local'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { TerminalController, type Config } from '../src/index.ts'
 import { inputChannel } from './input.ts'
-import type { RemoteInvocation, PeerId } from '@deepseek-ai/dsh-typert-protocol'
+import type { RemoteInvocation, PeerId } from '@berry-ai/harness-typert-protocol'
 import { resolveShell } from '../src/shells.ts'
 import type { TerminalInput, WebTerminalId } from '../src/types.ts'
 

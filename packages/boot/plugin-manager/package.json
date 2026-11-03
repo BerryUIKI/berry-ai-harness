@@ -82,10 +82,10 @@
     "@berry-ai/harness-user-approval": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-hmr": {
+    "@berry-ai/harness-hmr": {
       "optional": true
     },
-    "@deepseek-ai/dsh-user-approval": {
+    "@berry-ai/harness-user-approval": {
       "optional": true
     }
   },

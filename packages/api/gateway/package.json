@@ -39,8 +39,8 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-typert-registry",
-        "@deepseek-ai/dsh-client-connection"
+        "@berry-ai/harness-typert-registry",
+        "@berry-ai/harness-client-connection"
       ],
       "platform": "web",
       "immediately": true

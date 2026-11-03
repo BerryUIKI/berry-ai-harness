@@ -15,7 +15,7 @@ import { ClientRoster, TestClient, remoteDefaultResponses, webApp } from '../src
 const API_ROSTER = webApp.closure(['@berry-ai/harness-api-gateway'])
 const MODULES = '@berry-ai/harness-client-modules'
 const SIDEBAR = '@berry-ai/harness-client-ui-sidebar'
-const PARALLEL_PROBE = '@deepseek-ai/dsh-client-test-parallel-probe'
+const PARALLEL_PROBE = '@berry-ai/harness-client-test-parallel-probe'
 /** Declared by ui-sidebar, whose SlotMap merge is outside this package's compilation face. */
 const SIDEBAR_SETTINGS = 'sidebar.settings' as never
 const BRAND = '@berry-ai/harness-client-ui-brand-official'
@@ -184,7 +184,7 @@ describe('TestClient (jsdom)', () => {
   })
 
   it('creates no mount element when the roster cannot be loaded', async () => {
-    const roster = ClientRoster.of([{ name: '@deepseek-ai/dsh-client-test-runtime-missing', inject: [], immediately: true }])
+    const roster = ClientRoster.of([{ name: '@berry-ai/harness-client-test-runtime-missing', inject: [], immediately: true }])
     const before = document.body.childElementCount
     await expect(TestClient.start({ roster }, RemoteMock.create(), { mount: true })).rejects.toThrow()
     expect(document.body.childElementCount).toBe(before)

@@ -29,14 +29,14 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-gateway",
-        "@deepseek-ai/dsh-api-workspace-files",
-        "@deepseek-ai/dsh-client-resources",
-        "@deepseek-ai/dsh-client-ui-sidebar-right",
-        "@deepseek-ai/dsh-client-ui-session",
-        "@deepseek-ai/dsh-api-remotes",
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-settings"
+        "@berry-ai/harness-api-gateway",
+        "@berry-ai/harness-api-workspace-files",
+        "@berry-ai/harness-client-resources",
+        "@berry-ai/harness-client-ui-sidebar-right",
+        "@berry-ai/harness-client-ui-session",
+        "@berry-ai/harness-api-remotes",
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-settings"
       ],
       "platform": "web"
     }

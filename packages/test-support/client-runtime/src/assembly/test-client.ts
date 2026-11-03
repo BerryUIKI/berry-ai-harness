@@ -21,7 +21,7 @@ import { REMOTES_PACKAGE, remoteNamespacesOf, remoteProxiesPlugin } from './remo
 import { allowAllAccessPlugin } from '../access.ts'
 
 /** The remote-access row: it mounts its own generated Remote contribution and publishes the access Hooks. */
-const REMOTE_ACCESS_PACKAGE = '@deepseek-ai/dsh-api-remote-access'
+const REMOTE_ACCESS_PACKAGE = '@berry-ai/harness-api-remote-access'
 
 /**
  * Rows whose generated Remote contributions exist only in built `lib/`. The
@@ -193,7 +193,7 @@ export class TestClient {
    * `lib/`, and the `remote.<ns>` services the roster injects (plus the
    * namespaces the mock has rules for at this point) are provided as
    * contract-free proxies over the same Connection instead. The
-   * `@deepseek-ai/dsh-api-remote-access` row, which mounts its own generated
+   * `@berry-ai/harness-api-remote-access` row, which mounts its own generated
    * contribution, is dropped too, and allow-all access Hooks replace it. A
    * `provide` entry for either row is refused. On any failure the context is disposed, an owned
    * mount removed, and this client's hold on the shims released before the

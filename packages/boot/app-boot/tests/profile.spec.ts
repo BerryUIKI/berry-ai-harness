@@ -392,7 +392,7 @@ describe('loadProfile', () => {
       'custom-bundle': { patch: '[]\n' },
     })
     const dir = join(tmp(), 'app-profile')
-    initProfile(dir, ['@berry-ai/harness-base', '@deepseek-ai/dsh-experimental-schedule-bundle', 'custom-bundle'])
+    initProfile(dir, ['@berry-ai/harness-base', '@berry-ai/harness-experimental-schedule-bundle', 'custom-bundle'])
     writeProfileManifest(dir, { ...readProfileManifest('t', dir), dependencies: { 'custom-bundle': '^1.0.0' } })
     const profile = loadProfileDirectory('t', dir, anchor)
     expect(profile.skippedBundles).toEqual([])
@@ -455,7 +455,7 @@ describe('loadProfile', () => {
     })
     const manifestPath = join(anchor, '..', 'node_modules', 'guarded', 'package.json')
     writeFileSync(manifestPath, JSON.stringify({
-      ...JSON.parse(readFileSync(manifestPath, 'utf8')) as object, peerDependencies: { '@deepseek-ai/dsh': '999.0.0' },
+      ...JSON.parse(readFileSync(manifestPath, 'utf8')) as object, peerDependencies: { '@berry-ai/harness': '999.0.0' },
     }))
     const dir = resolveProfileDir('demo', tmp())
     initProfile(dir, ['guarded', 'kept'])

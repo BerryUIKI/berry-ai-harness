@@ -41,10 +41,10 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-gateway"
+        "@berry-ai/harness-api-gateway"
       ],
       "external": [
-        "@deepseek-ai/dsh-api-gateway/client"
+        "@berry-ai/harness-api-gateway/client"
       ],
       "platform": "web"
     }

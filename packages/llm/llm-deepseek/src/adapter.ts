@@ -15,7 +15,7 @@ import { serialize } from './serialize.ts'
 import { parseSse } from './sse.ts'
 import { translate } from './translate.ts'
 import { providerError, providerErrorDetail } from './transport.ts'
-import type { ImageAttachmentRef } from '@deepseek-ai/dsh-attachment'
+import type { ImageAttachmentRef } from '@berry-ai/harness-attachment'
 import { resolveRequestImageTarget } from './request-pricing.ts'
 
 /** DeepSeek provider using Messages content and native thinking replay. */

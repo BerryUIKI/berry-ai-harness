@@ -50,7 +50,7 @@
     "@berry-ai/harness-subagent": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-subagent": {
+    "@berry-ai/harness-subagent": {
       "optional": true
     }
   }

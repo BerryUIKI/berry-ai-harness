@@ -15,7 +15,7 @@ function fixture() {
   const anchor = join(root, 'apps', 'cli', 'package.json')
   mkdirSync(dirname(anchor), { recursive: true })
   writeFileSync(join(root, 'package.json'), JSON.stringify({ name: '@berry-ai/harness-root' }))
-  writeFileSync(anchor, JSON.stringify({ name: '@deepseek-ai/dsh', version, dependencies: { '@berry-ai/harness-app-boot': 'workspace:*' } }))
+  writeFileSync(anchor, JSON.stringify({ name: '@berry-ai/harness', version, dependencies: { '@berry-ai/harness-app-boot': 'workspace:*' } }))
   const directory = join(root, 'packages', 'relocated', 'native-provider')
   mkdirSync(join(directory, 'lib'), { recursive: true })
   writeFileSync(join(directory, 'package.json'), JSON.stringify({ name, version, main: 'lib/index.js', dsh: { bundle: { patch: './cordis.patch.yml' } } }))
@@ -26,13 +26,13 @@ function fixture() {
 
 it('offers an exact prerelease registry target for a packed installation inside a checkout', () => {
   const { anchor } = fixture()
-  writeFileSync(anchor, JSON.stringify({ name: '@deepseek-ai/dsh', version, dependencies: { '@berry-ai/harness-app-boot': version } }))
+  writeFileSync(anchor, JSON.stringify({ name: '@berry-ai/harness', version, dependencies: { '@berry-ai/harness-app-boot': version } }))
   expect(officialBundleInstallTarget(name, anchor, version)).toEqual({ spec: `${name}@${version}`, version })
 })
 
 it('keeps an installation without workspace dependencies on the registry path', () => {
   const { anchor } = fixture()
-  writeFileSync(anchor, JSON.stringify({ name: '@deepseek-ai/dsh', version }))
+  writeFileSync(anchor, JSON.stringify({ name: '@berry-ai/harness', version }))
   expect(officialBundleInstallTarget(name, anchor, version)).toEqual({ spec: `${name}@${version}`, version })
 })
 

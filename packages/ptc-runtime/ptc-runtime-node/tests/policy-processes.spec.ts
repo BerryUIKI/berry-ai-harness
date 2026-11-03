@@ -1,7 +1,7 @@
 import { Context } from '@deepseek-ai/cordis'
-import Sessions, { SessionId } from '@deepseek-ai/dsh-session'
-import SandboxPolicy, { setSandboxMode } from '@deepseek-ai/dsh-sandbox-policy'
-import SessionProjections from '@deepseek-ai/dsh-session-projection'
+import Sessions, { SessionId } from '@berry-ai/harness-session'
+import SandboxPolicy, { setSandboxMode } from '@berry-ai/harness-sandbox-policy'
+import SessionProjections from '@berry-ai/harness-session-projection'
 import { expect, it, onTestFinished, vi } from 'vitest'
 import { PolicyProcesses } from '../src/policy-processes.ts'
 

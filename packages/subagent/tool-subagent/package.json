@@ -48,7 +48,7 @@
     "@berry-ai/harness-agent-preset-registry": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-agent-preset-registry": {
+    "@berry-ai/harness-agent-preset-registry": {
       "optional": true
     }
   },

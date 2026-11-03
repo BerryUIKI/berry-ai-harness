@@ -33,7 +33,7 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-gateway"
+        "@berry-ai/harness-api-gateway"
       ],
       "platform": "web",
       "immediately": true

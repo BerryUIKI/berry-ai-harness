@@ -9,7 +9,7 @@ import Loader, { ModuleLoader, type Entry } from '@deepseek-ai/cordis-plugin-loa
 import {
   boot, initProfile, ProfileRuntimeResolution, readProfileManifest, readProfilePatches, reconcileProfilePatches, ResolutionRestartRequired,
   type PluginPackages, type ProfileContext, type RuntimeResolution,
-} from '@deepseek-ai/dsh-app-boot'
+} from '@berry-ai/harness-app-boot'
 import Timer from '@deepseek-ai/cordis-plugin-timer'
 import { expect, it, onTestFinished, vi } from 'vitest'
 import Hmr from '../src/index.ts'
@@ -1202,7 +1202,7 @@ it.each(['disabled', 'removed', 'incompatible', 'dynamic'] as const)('never eval
   if (kind === 'incompatible') {
     const path = join(f.dir, 'node_modules', 'addon', 'package.json')
     file(path, JSON.stringify({ name: 'addon', version: '2.0.0', type: 'module', exports: './index.mjs',
-      peerDependencies: { '@deepseek-ai/dsh': '<0.0.0' }, dsh: { bundle: { patch: './cordis.patch.yml' } } }))
+      peerDependencies: { '@berry-ai/harness': '<0.0.0' }, dsh: { bundle: { patch: './cordis.patch.yml' } } }))
   } else if (kind === 'removed') {
     f.select(['other'])
   } else {
