@@ -619,6 +619,8 @@
       "@deepseek-ai/dsh-web-search-perplexity": ["./packages/web/web-search-perplexity/src"],
       "@berry-ai/harness-client-file-upload/types": ["./packages/client/file-upload/src/types.ts"],
       "@berry-ai/harness-api-remote-access": ["./packages/api/remote-access/src"],
+      "@berry-ai/harness-api-remote-access/client": ["./packages/api/remote-access/src/client/index.ts"],
+      "@berry-ai/harness-api-remote-access/types": ["./packages/api/remote-access/src/types.ts"],
       "@deepseek-ai/dsh-api-remote-access": ["./packages/api/remote-access/src"],
       "@berry-ai/harness-client-ui-secret-mask": ["./packages/client/ui-secret-mask/src"],
       "@deepseek-ai/dsh-client-ui-secret-mask": ["./packages/client/ui-secret-mask/src"],
