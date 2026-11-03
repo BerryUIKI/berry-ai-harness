@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Command-line entry for dsh.
- * @module @deepseek-ai/dsh/bin
+ * @module @berry-ai/harness/bin
  */
 
 /* v8 ignore file -- built-bin acceptance exercises this self-executing dispatch. */

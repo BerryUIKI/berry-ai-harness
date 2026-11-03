@@ -12,7 +12,7 @@
  *
  * `dsh <name>` abbreviates `dsh --profile <name>`; `plugin` manages a profile's
  * plugin dependencies by forwarding to pnpm.
- * @module @deepseek-ai/dsh/args
+ * @module @berry-ai/harness/args
  */
 
 import { Command, CommanderError, InvalidArgumentError } from 'commander'

@@ -28,7 +28,7 @@ import { assertInstalledTree, createPackedInstallation } from './packed-installa
 const root = fileURLToPath(new URL('../../../..', import.meta.url))
 const packages = ['@berry-ai/harness-subagent-claude-code', '@berry-ai/harness-subagent-codex']
 const built = existsSync(join(root, 'apps/cli/lib/bin.js'))
-  && packages.every(name => existsSync(join(root, 'packages/subagent', name.slice('@deepseek-ai/dsh-'.length), 'lib/index.js')))
+  && packages.every(name => existsSync(join(root, 'packages/subagent', name.slice('@berry-ai/harness-'.length), 'lib/index.js')))
 
 interface Observation {
   initial: BundleInfo[]
@@ -131,7 +131,7 @@ it.skipIf(!built)('installs the exported registry\'s local closure and switches 
       },
     },
   }] }]))
-  const child = execa(process.execPath, [join(installation, 'node_modules/@deepseek-ai/dsh/lib/bin.js'),
+  const child = execa(process.execPath, [join(installation, 'node_modules/@berry-ai/harness/lib/bin.js'),
     'web', '--patch', patch, '--no-open', '--port', '0'], {
     cwd: temporary, env: environment, extendEnv: false, reject: false, timeout: 240_000,
   })
@@ -158,7 +158,7 @@ it.skipIf(!built)('installs the exported registry\'s local closure and switches 
       expect(step.install, JSON.stringify(step.install)).toMatchObject({ application: 'applied', enabled: true, version })
       expect(step.savedVersion).toBe(version)
       expect(step.installed).toMatchObject({ official: true, availability: 'profile', enabled: true, installed: true, version })
-      const product = step.name.replace('@deepseek-ai/dsh-subagent-', '')
+      const product = step.name.replace('@berry-ai/harness-subagent-', '')
       expect(step.installed.rows.map(row => row.rowId)).toEqual([`subagent-${product}`, `tool-subagent-${product}`])
       expect(step.providerEnabled).toBe(true)
       expect(step.nativeArtifact).toBe(true)
