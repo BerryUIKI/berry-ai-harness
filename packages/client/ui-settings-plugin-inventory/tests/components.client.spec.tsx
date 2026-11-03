@@ -110,8 +110,8 @@ describe('PluginInventorySettingsTab', () => {
   it.each(['global', 'preset'])('shortens package and module name fallbacks in the %s inventory', async (scope) => {
     const names = [
       ['@berry-ai/harness-tool-subagent', 'tool-subagent'],
-      ['@deepseek-ai/dsh-host-web', 'web'],
-      ['@deepseek-ai/dsh-client-tabs', 'tabs'],
+      ['@berry-ai/harness-host-web', 'web'],
+      ['@berry-ai/harness-client-tabs', 'tabs'],
       ['@deepseek-ai/cordis-plugin-hmr', 'hmr'],
       ['cordis:timer', 'timer'],
       ['@acme/dsh-sidebar/navigation', 'sidebar/navigation'],

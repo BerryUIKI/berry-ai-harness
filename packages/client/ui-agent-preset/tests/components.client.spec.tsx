@@ -254,7 +254,7 @@ describe('a refused switch', () => {
     // lifetime assertion below would wait out its real nine seconds.
     vi.useFakeTimers({ shouldAdvanceTime: true })
     try {
-      const reason = 'failed to import loader entry live-on-mac (@deepseek-ai/dsh-also-gone)'
+      const reason = 'failed to import loader entry live-on-mac (@berry-ai/harness-also-gone)'
       const actions = renderSeat({ current: '' }, undefined, undefined, false)
       const refusal = { preset: { id: 'cordis' }, reason }
       act(() => { actions.store.set({ ...actions.store.getSnapshot(), error: refusal }) })

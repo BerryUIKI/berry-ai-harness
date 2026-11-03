@@ -1350,7 +1350,7 @@ describe('AgentPresetSeatController reconciliation', () => {
   })
 
   it('keeps the bare cause of a mount failure, not the frame that names the preset again', async () => {
-    const reason = 'failed to import loader entry ctx (@deepseek-ai/dsh-gone): Cannot find package'
+    const reason = 'failed to import loader entry ctx (@berry-ai/harness-gone): Cannot find package'
     const controller = new AgentPresetSeatController({
       ...developerTools(),
       remote: {

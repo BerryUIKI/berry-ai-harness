@@ -8,7 +8,7 @@
 import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
-import { allowAllAccess } from '@deepseek-ai/dsh-client-test-runtime'
+import { allowAllAccess } from '@berry-ai/harness-client-test-runtime'
 import type { SidebarRootComponentProps, SidebarSectionOwnerProps } from '../src/client/contract/slots.ts'
 import { SidebarRoot } from '../src/client/SidebarRoot.tsx'
 import { en } from '../src/client/locales.ts'

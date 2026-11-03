@@ -10,7 +10,7 @@ import type { HostObservable } from '@berry-ai/harness-client-ui-slots'
 import type { ConfigLedger } from '../src/client/config-ledger.ts'
 import { offeredRegistries, packageView, PluginManagerController, rowKey, sortPackages } from '../src/client/manager-store.ts'
 
-const INCOMPATIBLE = { name: 'dsh-late', version: '2.0.0', runtimeVersion: '0.1.0', peers: { '@deepseek-ai/dsh': '^0.2.0' } }
+const INCOMPATIBLE = { name: 'dsh-late', version: '2.0.0', runtimeVersion: '0.1.0', peers: { '@berry-ai/harness': '^0.2.0' } }
 const ROW_ENTRY = 'include:sidebar' as PluginEntryId
 
 const BUNDLE: BundleInfo = {
@@ -640,7 +640,7 @@ describe('PluginManagerController', () => {
   })
 
   it('refuses a spec the list already shows without asking the Host, and words what the Host refused', async () => {
-    const shipped: BundleInfo = { ...BUNDLE, name: '@deepseek-ai/dsh-official', installed: false, official: true, availability: 'installation', optional: true, removable: false }
+    const shipped: BundleInfo = { ...BUNDLE, name: '@berry-ai/harness-official', installed: false, official: true, availability: 'installation', optional: true, removable: false }
     const { plugins, face, state, controller } = bench({
       listBundles: vi.fn(() => Promise.resolve(ok([BUNDLE, shipped]))),
       inspect: vi.fn()
