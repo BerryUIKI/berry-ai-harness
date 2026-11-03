@@ -49,7 +49,10 @@ export function findRepositoryReferences(
     if (organizationUrl.test(canonicalReferenceText(line).replace(kitRepositoryUrl, ''))) {
       references.push({ file, line: index + 1, kind: 'organization-url' })
     }
-    if ([...line.matchAll(commitCandidate)].some(match => commits.has(match[0].toLowerCase()))) {
+    // PyPI wheel URLs embed SHA-256 content hashes; a 40-character window can
+    // coincide with a repository commit prefix without naming that commit.
+    const packageContentHash = line.includes('files.pythonhosted.org')
+    if (!packageContentHash && [...line.matchAll(commitCandidate)].some(match => commits.has(match[0].toLowerCase()))) {
       references.push({ file, line: index + 1, kind: 'commit-hash' })
     }
   }
