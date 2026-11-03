@@ -58,7 +58,6 @@
     "@berry-ai/harness-client-ui-primitives": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-plan-mode": "workspace:*",
-    "@types/react": "~18.3.1",
     "@deepseek-ai/cordis": "workspace:~",
     "react": "^18.2.0",
     "@berry-ai/harness-session": "workspace:*",

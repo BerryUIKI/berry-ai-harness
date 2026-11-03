@@ -209,7 +209,7 @@
     # the sections, and a persona that suppresses optional runtime context
     # also drops the two value lines.
     - id: harness-dev-context
-      name: '@deepseek-ai/dsh-harness-dev-context'
+      name: '@berry-ai/harness-harness-dev-context'
 
     # The client-plugin reload chain, always mounted: it is idle until a
     # rebuild watcher (pnpm run dev:web) actually rewrites client bundles. It
@@ -386,7 +386,7 @@
     # Display masking for recognized credentials in sent user text; remove
     # this entry to draw credentials as written.
     - id: ui-secret-mask
-      name: '@deepseek-ai/dsh-client-ui-secret-mask'
+      name: '@berry-ai/harness-client-ui-secret-mask'
 
     # Background jobs: the session-header roster with on-demand streaming
     # record panels over the session job-output service.

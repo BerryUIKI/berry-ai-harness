@@ -75,7 +75,6 @@
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-host-open-in-app": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@types/react": "~18.3.1",
     "react": "^18.2.0",
     "@berry-ai/harness-client-ui-deliverables": "workspace:*",
     "@berry-ai/harness-native-command": "workspace:*",

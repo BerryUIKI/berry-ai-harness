@@ -67,8 +67,6 @@
     "@berry-ai/harness-client-ui-sidebar": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-remote-mock": "workspace:*",
-    "@types/react": "~18.3.1",
-    "@types/react-dom": "~18.3.0",
     "clsx": "^2.0.0",
     "react": "^18.2.0",
     "@berry-ai/harness-settings": "workspace:*",

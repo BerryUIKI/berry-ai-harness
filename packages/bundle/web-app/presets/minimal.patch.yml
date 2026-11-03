@@ -15,7 +15,7 @@
               complete: true
               includeRuntimeContext: false
           - id: tool-fs
-            name: '@deepseek-ai/dsh-tool-fs'
+            name: '@berry-ai/harness-tool-fs'
             config:
               read: false
               readImage: true
@@ -28,9 +28,9 @@
               compaction: true
             config:
               - id: compaction-basic
-                name: '@deepseek-ai/dsh-compaction-basic'
+                name: '@berry-ai/harness-compaction-basic'
               - id: command-compact
-                name: '@deepseek-ai/dsh-command-compact'
+                name: '@berry-ai/harness-command-compact'
           - id: persistent-shell
             name: cordis:group
             group: true

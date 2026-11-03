@@ -59,7 +59,6 @@
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*",
-    "@types/react": "~18.3.1",
     "@berry-ai/harness-client-ui-primitives": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-client-ui-renderer": "workspace:*",

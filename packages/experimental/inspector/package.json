@@ -67,7 +67,6 @@
     "@berry-ai/harness-client-test-runtime": "workspace:*",
     "@testing-library/react": "^16.3.3",
     "@berry-ai/harness-client-ui-renderer": "workspace:*",
-    "@types/react": "~18.3.1",
     "@berry-ai/harness-client-ui-layout": "workspace:*",
     "@berry-ai/harness-client-shortcuts": "workspace:*",
     "@berry-ai/harness-client-store": "workspace:*",

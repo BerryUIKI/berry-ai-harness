@@ -68,8 +68,6 @@
     "@berry-ai/harness-experimental-speech-to-text": "workspace:*",
     "@berry-ai/harness-experimental-voice-input-bundle": "workspace:*",
     "@berry-ai/harness-experimental-cot-translation-bundle": "workspace:*",
-    "@berry-ai/harness-experimental-worktree": "workspace:*",
-    "@types/react": "~18.3.1",
-    "@types/react-dom": "~18.3.0"
+    "@berry-ai/harness-experimental-worktree": "workspace:*"
   }
 }

@@ -68,7 +68,6 @@
     "@berry-ai/harness-client-ui-workspace": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
-    "@types/react": "~18.3.1",
     "react": "^18.2.0"
   },
   "files": [

@@ -64,11 +64,9 @@
     "@berry-ai/harness-settings": "workspace:*",
     "@testing-library/react": "^16.3.3",
     "@types/big.js": "^6.2.2",
-    "@types/react": "~18.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "@berry-ai/harness-client-ui-settings-models": "workspace:*",
-    "@types/react-dom": "~18.3.0",
     "@berry-ai/harness-host-webserver": "workspace:*",
     "big.js": "^7.0.1",
     "@berry-ai/harness-client-product-analytics": "workspace:*"
