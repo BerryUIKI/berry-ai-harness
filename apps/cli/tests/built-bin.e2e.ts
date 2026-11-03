@@ -424,7 +424,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
     writeFileSync(patch, [
       '- insert:',
       '    - id: missing-sdk-startup-plugin',
-      '      name: "@deepseek-ai/dsh-missing-sdk-startup-plugin"',
+      '      name: "@berry-ai/harness-missing-sdk-startup-plugin"',
       '',
     ].join('\n'))
     try {
@@ -436,7 +436,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       expect(result.code).toBe(0)
       expect(result.stdout).toBe('')
       expect(result.stderr).toContain('warning: 1 entry did not activate')
-      expect(result.stderr).toContain('@deepseek-ai/dsh-missing-sdk-startup-plugin')
+      expect(result.stderr).toContain('@berry-ai/harness-missing-sdk-startup-plugin')
     } finally {
       rmSync(home, { recursive: true, force: true })
     }
@@ -666,7 +666,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
     }
   }, SPAWN_TIMEOUT_MS + 30_000)
 
-  it('creates a custom profile from the shipped web template before booting it', async () => {
+  it('creates and then replaces a custom profile from the shipped web template before booting it', async () => {
     const home = mkdtempSync(join(tmpdir(), 'dsh-from-default-profile-'))
     try {
       const created = await runBuiltBin(
@@ -689,14 +689,14 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       expect(readFileSync(join(dir, 'cordis.patch.yml'), 'utf8')).toContain('[]')
       expect(readFileSync(join(dir, 'pnpm-workspace.yaml'), 'utf8')).toContain('nodeLinker: hoisted')
 
+      writeFileSync(join(dir, 'cordis.patch.yml'), '- id: local-change\n  disabled: true\n')
       const repeated = await runBuiltBin(
         ['rescue', '--from-default-profile', 'web', '--help'],
         { DSH_HOME: home, DSH_TELEMETRY_DISABLED: '1' },
       )
-      expect(repeated.code).toBe(1)
-      expect(repeated.stdout).toBe('')
-      expect(repeated.stderr).toContain('profile "rescue" already exists')
-      expect(repeated.stderr).toContain('omit --from-default-profile to use it')
+      expect(repeated.code).toBe(0)
+      expect(repeated.stderr).toBe('')
+      expect(readFileSync(join(dir, 'cordis.patch.yml'), 'utf8')).not.toContain('local-change')
 
       const reopened = await runBuiltBin(
         ['rescue', '--help'],
@@ -1249,9 +1249,14 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
         ['llm-deepseek', '@berry-ai/harness-llm-deepseek-api-key'],
         ['sandbox', '@berry-ai/harness-sandbox-local'],
         ['filesystem', '@berry-ai/harness-fs-local'],
+        ['attachment-local', '@berry-ai/harness-attachment-local'],
+        ['tool-fs', '@berry-ai/harness-tool-fs'],
         ['working-directory', '@berry-ai/harness-working-directory'],
         ['tool-working-directory', '@berry-ai/harness-tool-working-directory'],
         ['session-projection', '@berry-ai/harness-session-projection'],
+        ['token-meter', '@berry-ai/harness-token-meter'],
+        ['compaction-basic', '@berry-ai/harness-compaction-basic'],
+        ['image-offload', '@berry-ai/harness-compaction-image-offload'],
         ['sandbox-policy', '@berry-ai/harness-sandbox-policy'],
         ['subprocess', '@berry-ai/harness-subprocess-local'],
         ['pty', '@berry-ai/harness-terminal'],

@@ -1,6 +1,6 @@
 import { staticLinked } from '../tsdown.client.ts'
 
 export default staticLinked(
-  '@berry-ai/harness-client-ui-dockkit',
+  import.meta.dirname,
   ['lib/types/index.js'],
 )

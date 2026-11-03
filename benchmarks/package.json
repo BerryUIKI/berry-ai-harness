@@ -44,7 +44,9 @@
     "@berry-ai/harness-token-meter": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
-    "zod": "^4.4.3"
+    "zod": "^4.4.3",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
+    "@berry-ai/harness-client-ui-conversation": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"

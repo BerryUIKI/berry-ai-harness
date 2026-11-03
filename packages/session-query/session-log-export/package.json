@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-session-log-export",
   "description": "Web Session-log export command and shared download dialog",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -23,9 +23,11 @@
       "default": "./lib/client.js"
     },
     "./src/*": "./src/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/client.js",
     "lib/types/**/*.d.ts"
@@ -71,11 +73,11 @@
   "dsh": {
     "client": {
       "inject": [
-        "@berry-ai/harness-client-locale",
-        "@berry-ai/harness-client-ui-commands",
-        "@berry-ai/harness-client-ui-conversation",
-        "@berry-ai/harness-client-ui-renderer",
-        "@berry-ai/harness-client-ui-session"
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-commands",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-session"
       ],
       "platform": "web"
     }

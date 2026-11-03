@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-subagent",
   "description": "Subagent conversation catalog, continuation routing UI, and '@' reference source",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -23,20 +23,21 @@
       "default": "./lib/client.js"
     },
     "./src/*": "./src/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "dsh": {
     "client": {
       "inject": [
-        "@berry-ai/harness-api-session-controller",
-        "@berry-ai/harness-client-locale",
-        "@berry-ai/harness-client-resources",
-        "@berry-ai/harness-client-ui-chat",
-        "@berry-ai/harness-client-ui-conversation",
-        "@berry-ai/harness-client-ui-primitives",
-        "@berry-ai/harness-client-ui-sidebar-right",
-        "@berry-ai/harness-client-ui-input-trigger",
-        "@berry-ai/harness-client-ui-workspace"
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-resources",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-primitives",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-input-trigger",
+        "@deepseek-ai/dsh-client-ui-workspace"
       ],
       "platform": "web"
     }
@@ -74,6 +75,7 @@
     "@berry-ai/harness-client-ui-workspace": "workspace:*"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/client.js",
     "lib/types/**/*.d.ts"

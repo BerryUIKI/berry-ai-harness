@@ -1,6 +1,6 @@
 import { clientBundle } from '../tsdown.client.ts'
 
 export default clientBundle(
-  '@berry-ai/harness-client-modules',
+  import.meta.dirname,
   ['lib/types/index.js'],
 )

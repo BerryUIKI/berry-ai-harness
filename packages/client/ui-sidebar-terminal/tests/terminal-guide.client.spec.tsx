@@ -2,7 +2,7 @@
 /** Guide shell discovery, direct launch and cancellation stay within the entry lifetime. */
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
 import { afterEach, expect, it, vi } from 'vitest'
-import { makeTranslate } from '@berry-ai/harness-client-test-runtime'
+import { allowAllAccess, makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import type { TerminalLaunchShells } from '@berry-ai/harness-api-terminal-controller/client'
 import type { GlobalStandardProps, SessionStandardProps } from '@berry-ai/harness-client-ui-slots'
 import type { SessionId } from '@berry-ai/harness-session/types'
@@ -19,6 +19,7 @@ const standard: GlobalStandardProps & SessionStandardProps = {
   useInput: unused, useChat: unused, useTrajectory: unused,
   usePanelInfo: unused, useSessions: unused, useSessionStatus: unused,
   useSessionRetainInfo: unused, useResource: unused, useWorkspaces: unused,
+  ...allowAllAccess,
   inputActions: { captureInsertion: unused, insertText: unused, setDraft: unused, persistDraft: unused,
     addAttachments: unused, removeAttachment: unused, pruneAttachments: unused, submit: unused },
 }

@@ -19,7 +19,7 @@ import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-tes
 import AgentPresets from '@berry-ai/harness-agent-preset-registry'
 import { SessionId } from '@berry-ai/harness-session'
 import type { SessionEvent } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '../../../session/session-persistence-jsonl/src/index.ts'
+import * as JsonlSessionPersistence from '../../../session/session-persistence-jsonl/src/index.ts'
 import SubagentRuntime from '@berry-ai/harness-subagent'
 import * as Spawn from '@berry-ai/harness-subagent-spawn-in-process'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'

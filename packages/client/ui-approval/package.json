@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-approval",
   "description": "Approval composer takeover over the scoped Remote Event waterfall",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -23,17 +23,18 @@
       "default": "./lib/client.js"
     },
     "./src/*": "./src/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "dsh": {
     "client": {
       "inject": [
-        "@berry-ai/harness-api-remotes",
-        "@berry-ai/harness-api-session-controller",
-        "@berry-ai/harness-client-locale",
-        "@berry-ai/harness-client-ui-conversation",
-        "@berry-ai/harness-client-ui-renderer",
-        "@berry-ai/harness-client-ui-session"
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-session"
       ],
       "platform": "web"
     }
@@ -64,6 +65,7 @@
     "@berry-ai/harness-client-shortcuts": "workspace:*"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/client.js",
     "lib/types/**/*.d.ts"

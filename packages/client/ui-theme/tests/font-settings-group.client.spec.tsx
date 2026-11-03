@@ -8,7 +8,7 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import type { SessionListState } from '@berry-ai/harness-api-session-controller/client'
 import type { WorkspaceSnapshot } from '@berry-ai/harness-api-workspace-controller/client'
 import { createSnapshotStore } from '@berry-ai/harness-client-store'
-import { bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
+import { allowAllAccess, bindSnapshotSelector } from '@berry-ai/harness-client-test-runtime'
 import { FontSettingsGroup } from '../src/client/FontSettingsGroup.tsx'
 import type { FontSettingsGroupProps } from '../src/client/FontSettingsGroup.tsx'
 import { createFontRowStore } from '../src/client/settings-store.ts'
@@ -55,6 +55,7 @@ function mount() {
     useSessionStatus,
     usePanelInfo, useSessionRetainInfo: () => undefined, useResource,
     useWorkspaces: emptyWorkspaces(),
+    ...allowAllAccess,
     useStore: bindSnapshotSelector(store),
     actions: store.actions,
     t: (key: string) => COPY[key] ?? key,

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-chat",
   "description": "Chat Conversation target, node definitions, renderers, and details surface",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -23,22 +23,23 @@
       "default": "./lib/client.js"
     },
     "./src/*": "./src/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "dsh": {
     "client": {
       "inject": [
-        "@berry-ai/harness-api-session-controller",
-        "@berry-ai/harness-api-workspace-controller",
-        "@berry-ai/harness-client-locale",
-        "@berry-ai/harness-client-ui-conversation",
-        "@berry-ai/harness-client-ui-input-trigger",
-        "@berry-ai/harness-client-ui-layout",
-        "@berry-ai/harness-client-ui-renderer",
-        "@berry-ai/harness-client-ui-session",
-        "@berry-ai/harness-client-ui-settings",
-        "@berry-ai/harness-client-ui-sidebar-right",
-        "@berry-ai/harness-client-ui-workspace"
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-input-trigger",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-workspace"
       ],
       "platform": "web"
     }
@@ -87,7 +88,7 @@
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
-    "@tanstack/react-virtual": "^3.14.10",
+    "@tanstack/react-virtual": "3.14.10",
     "@types/react": "~18.3.1",
     "@types/react-dom": "~18.3.0",
     "react": "^18.2.0",
@@ -99,6 +100,7 @@
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/client.js",
     "lib/types/**/*.d.ts"

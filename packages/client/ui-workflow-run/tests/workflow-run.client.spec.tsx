@@ -20,7 +20,7 @@ import type { SessionEvent, SessionId } from '@berry-ai/harness-session/types'
 import { SessionSeq } from '@berry-ai/harness-session'
 import { apply as applyLocale, inject as localeInject } from '@berry-ai/harness-client-locale/client'
 import {
-  chatSnapshot as emptyChatSnapshot, conversationSnapshot, makeTranslate, sessionSnapshot,
+  allowAllAccess, chatSnapshot as emptyChatSnapshot, conversationSnapshot, makeTranslate, sessionSnapshot,
   stubConfigForm, TestSessions, workspaceSnapshot,
 } from '@berry-ai/harness-client-test-runtime'
 import {
@@ -360,15 +360,14 @@ function panelProps(data: WorkflowRunChatData, sessions = listState(), openSessi
       submit: () => {},
     },
     useWorkspaces: selector => selector(panelWorkspace),
+    ...allowAllAccess,
     useTurnData: () => undefined,
     useDisclosure: () => { throw new Error('unused') },
     useGroupAction: () => { throw new Error('unused') },
-    openSkill: vi.fn(),
     openFile: () => {},
     inspectCall: () => {},
     forkAt: () => {},
     loadImage: () => Promise.reject(new Error('not used')),
-    renderMessageImages: () => null,
     fileMentions: () => undefined,
     openSession,
     t: makeTranslate(zh),

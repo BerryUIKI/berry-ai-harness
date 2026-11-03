@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-office-to-pdf",
   "description": "Shared Office-to-PDF conversion with bounded queues and caching",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BerryUIKI/berry-ai-harness.git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
     "directory": "packages/document/office-to-pdf"
   },
   "exports": {
@@ -32,9 +32,11 @@
     "./typert": {
       "types": "./lib/typert.host.d.ts",
       "default": "./lib/typert.host.js"
-    }
+    },
+    "./locale/*.json": "./locale/*.json"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/types/**/*.js",
     "lib/types/**/*.d.ts",
@@ -59,6 +61,6 @@
     "@deepseek-ai/schemastery": "workspace:~",
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
-    "zod": "^4.4.3"
+    "zod": "4.4.3"
   }
 }

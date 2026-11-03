@@ -9,7 +9,7 @@ import AgentRegistry from '@berry-ai/harness-agent'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, SessionSeq } from '@berry-ai/harness-session'
 import type { SessionHeader } from '@berry-ai/harness-session'
 import type { SessionPersistenceSnapshot } from '@berry-ai/harness-session-persistence'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SessionProjectionCache, {
   checkpointRecord,

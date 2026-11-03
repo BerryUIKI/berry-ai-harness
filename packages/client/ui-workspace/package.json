@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-workspace",
   "description": "Workspace picker plugin: one WorkspacePicker registered into the sidebar and empty-state workspace slots",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -23,22 +23,24 @@
       "default": "./lib/client.js"
     },
     "./src/*": "./src/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "dsh": {
     "client": {
       "inject": [
-        "@berry-ai/harness-api-remotes",
-        "@berry-ai/harness-api-session-controller",
-        "@berry-ai/harness-api-workspace-controller",
-        "@berry-ai/harness-client-connection",
-        "@berry-ai/harness-client-locale",
-        "@berry-ai/harness-client-shortcuts",
-        "@berry-ai/harness-client-ui-conversation",
-        "@berry-ai/harness-client-ui-layout",
-        "@berry-ai/harness-client-ui-renderer",
-        "@berry-ai/harness-client-ui-session",
-        "@berry-ai/harness-client-ui-sidebar"
+        "@berry-ai/harness-api-remote-access",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-shortcuts",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-sidebar"
       ],
       "platform": "web"
     }
@@ -79,9 +81,12 @@
     "clsx": "^2.0.0",
     "react": "^18.2.0",
     "@berry-ai/harness-client-shortcuts": "workspace:*",
-    "@berry-ai/harness-client-product-analytics": "workspace:*"
+    "@berry-ai/harness-client-product-analytics": "workspace:*",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
+    "@berry-ai/harness-agent-preset-registry": "workspace:*"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/client.js",
     "lib/types/**/*.d.ts"

@@ -50,6 +50,7 @@ describe('tsdown client artifact', () => {
       ['react', await import('react')],
       ['react/jsx-runtime', await import('react/jsx-runtime')],
       ['react-dom', await import('react-dom')],
+      ['@tanstack/react-virtual', await import('@tanstack/react-virtual')],
       ['@berry-ai/harness-client-store', await import('@berry-ai/harness-client-store')],
       ['@berry-ai/harness-client-ui-conversation/client', await import('@berry-ai/harness-client-ui-conversation/client')],
       ['@berry-ai/harness-client-ui-primitives', await import('@berry-ai/harness-client-ui-primitives')],

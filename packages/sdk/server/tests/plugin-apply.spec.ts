@@ -13,7 +13,7 @@ import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import { LlmAdapter } from '@berry-ai/harness-llm'
 import type { GenerateOptions, StreamChunk } from '@berry-ai/harness-llm'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import * as jsonrpc from '../src/index.ts'
 
 /**

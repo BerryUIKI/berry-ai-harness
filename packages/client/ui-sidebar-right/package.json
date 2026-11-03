@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-sidebar-right",
   "description": "Right Sidebar: the docking surface's session-bound state, its panel and header expand control, and the navigation service over it",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -23,17 +23,18 @@
       "default": "./lib/client.js"
     },
     "./src/*": "./src/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "dsh": {
     "client": {
       "inject": [
-        "@berry-ai/harness-api-session-controller",
-        "@berry-ai/harness-client-resources",
-        "@berry-ai/harness-client-ui-conversation",
-        "@berry-ai/harness-client-ui-layout",
-        "@berry-ai/harness-client-ui-session",
-        "@berry-ai/harness-client-shortcuts"
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-resources",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-shortcuts"
       ],
       "platform": "web"
     }
@@ -70,11 +71,12 @@
     "picomatch": "^4.0.7",
     "clsx": "^2.0.0",
     "@berry-ai/harness-util-crypto": "workspace:*",
-    "zod": "^4.4.3",
+    "zod": "4.4.3",
     "@berry-ai/harness-client-shortcuts": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/client.js",
     "lib/types/**/*.d.ts"

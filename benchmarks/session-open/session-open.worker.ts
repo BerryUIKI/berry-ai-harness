@@ -13,7 +13,7 @@ import SessionStore, {
   SessionPreparation,
 } from '@berry-ai/harness-session'
 import type { AgentHandle } from '@berry-ai/harness-agent'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SessionQueryEngine from '@berry-ai/harness-session-query'
 import type {

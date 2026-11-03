@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-sidebar-documentpreview",
   "description": "Extensible Sidebar previews for Office documents, spreadsheets, Markdown, code, images, PDF, HTML, and plain text",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -23,19 +23,20 @@
       "default": "./lib/client.js"
     },
     "./src/*": "./src/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "dsh": {
     "client": {
       "inject": [
-        "@berry-ai/harness-api-gateway",
-        "@berry-ai/harness-api-workspace-files",
-        "@berry-ai/harness-client-resources",
-        "@berry-ai/harness-client-ui-sidebar-right",
-        "@berry-ai/harness-client-ui-session",
-        "@berry-ai/harness-api-remotes",
-        "@berry-ai/harness-client-locale",
-        "@berry-ai/harness-client-ui-settings"
+        "@deepseek-ai/dsh-api-gateway",
+        "@deepseek-ai/dsh-api-workspace-files",
+        "@deepseek-ai/dsh-client-resources",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
       ],
       "platform": "web"
     }
@@ -67,7 +68,6 @@
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-office-to-pdf": "workspace:*",
     "@berry-ai/harness-host-webserver": "workspace:*",
-    "@berry-ai/harness-office-to-pdf": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
     "@fortune-sheet/core": "1.0.4",
@@ -89,6 +89,7 @@
     "yaml": "^2.9.0"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/client.js",
     "lib/client.*.js",

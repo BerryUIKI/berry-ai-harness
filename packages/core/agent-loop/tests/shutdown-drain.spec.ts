@@ -12,7 +12,7 @@ import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import AgentRegistry, { type Agent } from '@berry-ai/harness-agent'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { MockAdapter, textResponse } from './mock-adapter.ts'
 

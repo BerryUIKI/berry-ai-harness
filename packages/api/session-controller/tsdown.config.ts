@@ -1,7 +1,7 @@
 import { clientBundle } from '../../client/tsdown.client.ts'
 
 export default clientBundle(
-  '@berry-ai/harness-api-session-controller',
+  import.meta.dirname,
   ['lib/types/index.js'],
   { hostPhase: true },
 )

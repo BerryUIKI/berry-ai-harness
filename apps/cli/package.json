@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness",
   "description": "Berry AI Harness CLI: profile launch, plugin management, and configuration inspection",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -12,7 +12,6 @@
   },
   "type": "module",
   "bin": {
-    "berry": "lib/bin.js",
     "dsh": "lib/bin.js"
   },
   "files": [

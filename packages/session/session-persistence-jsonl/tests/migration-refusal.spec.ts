@@ -6,7 +6,7 @@ import { createSessionFormatCatalogWithChildren } from '@berry-ai/harness-sessio
 import type { SessionEvent } from '@berry-ai/harness-session'
 import type { SessionFormatJsonObject } from '@berry-ai/harness-session-format'
 import { SessionFormatUnsupportedError, SessionPersistenceCorruptionError } from '@berry-ai/harness-session-persistence'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import { createHash } from 'node:crypto'
 import { mkdir, mkdtemp, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'

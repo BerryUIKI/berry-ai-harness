@@ -38,10 +38,10 @@ const CONFIGURATION_ONLY_DEV_DEPENDENCIES = {
 const DUPLICATE_SAFE_PACKAGES: readonly string[] = [
   '@berry-ai/harness-brand',
   '@berry-ai/harness-lazy-require',
+  '@berry-ai/harness-typert-protocol',
   '@berry-ai/harness-util-code-language',
   '@berry-ai/harness-util-crypto',
   '@berry-ai/harness-util-values',
-  '@berry-ai/harness-typert-protocol',
 ]
 
 /**
@@ -51,17 +51,16 @@ const DUPLICATE_SAFE_PACKAGES: readonly string[] = [
  * prominent heading in the pull request description.
  */
 const SAFE_HOST_DEPENDENCY_EXPORTS = {
-  '@berry-ai/harness-deque': ['Deque'],
-  '@berry-ai/harness-timeout': ['MAX_TIMER_DELAY_MS'],
   '@berry-ai/harness-credentials': ['credentialKey'],
+  '@berry-ai/harness-deque': ['Deque'],
   '@berry-ai/harness-llm': ['callConfigEquals'],
   '@berry-ai/harness-session-format': ['sessionFormatLogFilename'],
+  '@berry-ai/harness-timeout': ['MAX_TIMER_DELAY_MS'],
   '@deepseek-ai/schemastery': ['default'],
 } as const satisfies HostDependencyExports
 
 /** Runtime exports that require every consumer to resolve the provider's shared peer instance. */
 const PEER_REQUIRED_HOST_EXPORTS = {
-  '@berry-ai/harness-client-connection': ['OperatorPeer'],
   '@berry-ai/harness-scope': ['carrierKeyOf', 'createScope', 'scopeOf', 'scopeTarget'],
   '@berry-ai/harness-session': ['SESSION_FORMAT_VERSION'],
   '@berry-ai/harness-session-persistence': ['SessionPersistenceNotFoundError'],

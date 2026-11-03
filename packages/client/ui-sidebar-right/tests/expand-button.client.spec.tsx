@@ -10,6 +10,7 @@ import { useSyncExternalStore } from 'react'
 import type { GlobalStandardProps, SessionStandardProps } from '@berry-ai/harness-client-ui-slots'
 import type { ShortcutCatalogEntry } from '@berry-ai/harness-client-shortcuts/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
+import { allowAllAccess } from '@berry-ai/harness-client-test-runtime'
 import { ExpandButton } from '../src/client/shell/ExpandButton.tsx'
 import type { ExpandButtonProps } from '../src/client/shell/ExpandButton.tsx'
 import { createSidebarRightStore } from '../src/client/stores.ts'
@@ -21,6 +22,7 @@ const standard: GlobalStandardProps & SessionStandardProps = {
   useInput: unused, useChat: unused, useTrajectory: unused,
   usePanelInfo: unused, useSessions: unused, useSessionStatus: unused,
   useSessionRetainInfo: unused, useResource: unused, useWorkspaces: unused,
+  ...allowAllAccess,
   inputActions: { captureInsertion: unused, insertText: unused, setDraft: unused, persistDraft: unused,
     addAttachments: unused, removeAttachment: unused, pruneAttachments: unused, submit: unused },
 }

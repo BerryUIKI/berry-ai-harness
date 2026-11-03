@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-session-inspector",
   "description": "Experimental virtualized Session log and live Chat group/node inspectors",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -55,7 +55,6 @@
   "devDependencies": {
     "@berry-ai/harness-client-test-runtime": "workspace:*",
     "@testing-library/react": "^16.3.3",
-    "@types/react-dom": "~18.3.0",
     "react-dom": "^18.2.0",
     "@berry-ai/harness-api-session-controller": "workspace:*",
     "@berry-ai/harness-client-store": "workspace:*",
@@ -66,7 +65,6 @@
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@tanstack/react-virtual": "^3.14.10",
-    "@types/react": "~18.3.1",
     "react": "^18.2.0",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-client-locale": "workspace:*",

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-web-app",
-  "description": "The dsh browser-surface bundle: the web patch layer over dsh-base plus the runtime glue plugin (frontend dist serving, web-surface prompt, bash runtime variables, URL line)",
-  "version": "0.2.1-alpha.2",
+  "description": "The dsh browser-surface bundle: the web patch layer over dsh-base plus the runtime glue plugin (frontend dist serving, bash runtime variables, URL line)",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -25,9 +25,13 @@
     "./cordis.patch.yml": "./cordis.patch.yml",
     "./presets/*.patch.yml": "./presets/*.patch.yml",
     "./src/*": "./src/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./startup/locale/*.json": "./locale/startup/*.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "files": [
+    "locale/*.json",
+    "locale/startup/*.json",
     "lib/index.js",
     "lib/startup.js",
     "cordis.patch.yml",
@@ -180,7 +184,9 @@
     "@berry-ai/harness-client-ui-shortcuts": "workspace:*",
     "@berry-ai/harness-client-product-analytics": "workspace:*",
     "@berry-ai/harness-host-product-telemetry-otel": "workspace:*",
-    "@berry-ai/harness-client-ui-settings-session-log": "workspace:*"
+    "@berry-ai/harness-client-ui-settings-session-log": "workspace:*",
+    "@berry-ai/harness-client-ui-secret-mask": "workspace:*",
+    "@berry-ai/harness-harness-dev-context": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",

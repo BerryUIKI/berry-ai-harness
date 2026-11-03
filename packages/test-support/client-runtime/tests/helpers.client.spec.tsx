@@ -5,10 +5,12 @@ import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { EMPTY_CHAT_SNAPSHOT } from '@berry-ai/harness-client-ui-chat/client'
 import { EMPTY_CONVERSATION_SNAPSHOT } from '@berry-ai/harness-client-ui-conversation/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
+import type { WorkspaceId } from '@berry-ai/harness-api-workspace-controller/client'
 import type { MainPanelId, PanelInfo } from '@berry-ai/harness-client-ui-layout/client'
 import type { PropsRuntime } from '@berry-ai/harness-client-ui-slots'
 import { afterAll, afterEach, describe, expect, it, vi } from 'vitest'
 import {
+  allowAllAccess,
   bindSnapshotSelector,
   chatSnapshot,
   conversationSnapshot,
@@ -46,6 +48,26 @@ function entry(seq: number): SessionLiveEventEntry {
 }
 
 describe('fixture helpers', () => {
+  it('allows every action on every resource through the hand-built access Hooks', () => {
+    expect(allowAllAccess.useRemoteAccess('session/list')).toBe(true)
+    expect(allowAllAccess.useAccess('session/fork')).toBe(true)
+    expect(allowAllAccess.useSessionAccess('s1' as SessionId, 'session/fork')).toBe(true)
+    expect(allowAllAccess.useWorkspaceAccess('w1' as WorkspaceId, 'workspace/follow')).toBe(true)
+  })
+
+  it('installs an allow-all remoteAccess service whose sources never change', async () => {
+    const runtime = await SlotTestRuntime.create()
+    try {
+      const source = runtime.ctx.remoteAccess.source('session', 's1', 'session/fork')
+      expect(source.getSnapshot()).toBe(true)
+      const unsubscribe = source.subscribe(() => {})
+      unsubscribe()
+      expect(source.getSnapshot()).toBe(true)
+    } finally {
+      await runtime.dispose()
+    }
+  })
+
   it('retracts default root sources without removing their live replacements', async () => {
     const runtime = await SlotTestRuntime.create()
     const hooks = { workspaces: runtime.workspaces.list, panelInfo: runtime.panelInfo }

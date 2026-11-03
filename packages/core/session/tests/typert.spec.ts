@@ -15,6 +15,7 @@ describe('Session Typert provider', () => {
     expect(lookup).toMatchObject({
       parameter: 'session',
       wire: 'sessionId',
+      resource: 'session',
       hostTypeSymbol: '@berry-ai/harness-session#Session',
       wireTypeSymbol: '@berry-ai/harness-session/types#SessionId',
     })

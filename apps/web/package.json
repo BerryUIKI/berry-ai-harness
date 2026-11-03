@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-web-frontend",
   "description": "Web application entry: vite build over the @berry-ai/harness-client-web shell library; dist/ served by apps/cli's dsh web",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -25,7 +25,7 @@
     "build": "vite build",
     "dev": "vite",
     "watch": "vite build --watch --no-emptyOutDir",
-    "build:preview": "pnpm --filter @berry-ai/harness-experimental-webworker-runtime exec tsdown && pnpm --filter @berry-ai/harness-experimental-webworker-packer exec tsdown && vite build && dsh-pack-vfs-image --out dist/preview/vfs-image.tar.gz",
+    "build:preview": "pnpm --filter @deepseek-ai/dsh-experimental-webworker-runtime exec tsdown && pnpm --filter @deepseek-ai/dsh-experimental-webworker-packer exec tsdown && vite build && dsh-pack-vfs-image --out dist/preview/vfs-image.tar.gz",
     "serve:preview": "http-server dist -a 0.0.0.0 -p 4173 -c-1"
   },
   "license": "MIT",
@@ -49,8 +49,6 @@
     "@berry-ai/harness-session-projection-cache": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@types/node": "^22.20.1",
-    "@types/react": "~18.3.1",
-    "@types/react-dom": "~18.3.0",
     "@types/ws": "8.18.1",
     "@vitejs/plugin-react": "^4.7.0",
     "http-server": "^14.1.1",
@@ -70,6 +68,8 @@
     "@berry-ai/harness-experimental-speech-to-text": "workspace:*",
     "@berry-ai/harness-experimental-voice-input-bundle": "workspace:*",
     "@berry-ai/harness-experimental-cot-translation-bundle": "workspace:*",
-    "@berry-ai/harness-experimental-worktree": "workspace:*"
+    "@berry-ai/harness-experimental-worktree": "workspace:*",
+    "@types/react": "~18.3.1",
+    "@types/react-dom": "~18.3.0"
   }
 }
