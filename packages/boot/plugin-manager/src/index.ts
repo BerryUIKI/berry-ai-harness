@@ -159,11 +159,6 @@ function printedError(printed: string): string {
 /** What applying the saved profile reports into a change result. */
 type Reload = Pick<ChangeResult, 'warnings' | 'restartReason'>
 
-/** The bundles a profile manifest selects. */
-function bundleSelection(manifest: ProfileManifest): readonly string[] {
-  return manifest.dsh?.profile?.bundles ?? []
-}
-
 /**
  * The package an installation spec names before pnpm runs: a registry name, a local directory's manifest name, or the
  * dependency saved with this git or tarball spec, compared as the plugin list shows saved specs.
