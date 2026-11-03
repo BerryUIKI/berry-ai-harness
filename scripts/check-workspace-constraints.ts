@@ -55,6 +55,10 @@ const publicationSourceAllowlist: Readonly<Record<string, readonly string[]>> = 
 }
 /** Public source home recorded in maintained package manifests. */
 const publishedRepositoryUrl = 'git+https://github.com/deepseek-ai/deepseek-harness.git'
+const berryPublishedRepositoryUrl = 'git+https://github.com/BerryUIKI/berry-ai-harness.git'
+/** Accept either the upstream source home or the Berry fork's public home. */
+const isPublishedRepositoryUrl = (url?: string): boolean =>
+  url === publishedRepositoryUrl || url === berryPublishedRepositoryUrl
 /** Packages that participate in the experimental policy. */
 const experimentalPackageDirectory = /^packages\/experimental\/[^/]+$/
 /** Ordinary directories whose packages this repository publishes: one release member each. */
@@ -460,9 +464,9 @@ export function checkWorkspaceManifest({ dir, manifest }: WorkspaceManifest): st
       errors.push(`${label}: release member must set publishConfig.access to "public"`)
     }
     if (manifest.repository?.type !== 'git'
-      || manifest.repository.url !== publishedRepositoryUrl
+      || !isPublishedRepositoryUrl(manifest.repository.url)
       || manifest.repository.directory !== dir) {
-      errors.push(`${label}: release member repository must use ${publishedRepositoryUrl} with directory ${dir}`)
+      errors.push(`${label}: release member repository must use a valid repository URL with directory ${dir}`)
     }
   } else if (!experimentalPackageDirectory.test(dir) && manifest.private !== true) {
     errors.push(`${label}: package.json must set "private": true`)
