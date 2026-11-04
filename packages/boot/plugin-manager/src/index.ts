@@ -969,7 +969,7 @@ export class PluginManager extends TypertRemoteService {
         name = target
         const dir = resolveBundleDir('dsh', name, this.profile.installAnchor, this.profile.dir)
         const manifest = bundleManifest(name, this.profile.dir, this.profile.installAnchor)
-        if ((manifest?.berry ?? manifest?.dsh)?.bundle === undefined) throw new ManagementFailure('not-bundle')
+        if (manifest === undefined || (manifest.berry ?? manifest.dsh)?.bundle === undefined) throw new ManagementFailure('not-bundle')
         const compatibility = evaluatePluginCompatibility(manifest, readProfileVersionExemptions(this.profile.dir))
         if (compatibility !== undefined && !compatibility.exempted) throw new ManagementFailure('incompatible-version', [incompatiblePlugin(compatibility)])
         const bundle = (manifest.berry ?? manifest.dsh)?.bundle
