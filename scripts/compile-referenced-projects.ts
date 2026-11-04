@@ -129,6 +129,9 @@ export function cleanSharedFaceTypes(root: string): void {
       if (!existsSync(join(dir, 'tsconfig.host.json')) || !existsSync(join(dir, 'tsconfig.client.json'))) continue
       rmSync(join(dir, 'lib', 'types'), { recursive: true, force: true })
       rmSync(join(dir, 'lib', 'tsconfig.client.tsbuildinfo'), { force: true })
+      // Force the next Host build to re-emit instead of trusting a tsbuildinfo
+      // whose declaration outputs were just removed.
+      rmSync(join(dir, 'lib', 'tsconfig.host.tsbuildinfo'), { force: true })
     }
   }
 }
