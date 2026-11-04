@@ -4,7 +4,6 @@
  */
 
 import { spawn, spawnSync } from 'node:child_process'
-import { existsSync, readdirSync, rmSync } from 'node:fs'
 import { join, relative, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parseArgs } from 'node:util'
@@ -14,7 +13,7 @@ import { pnpmCommand } from './release/process.ts'
 type CompilationMode = 'checked' | 'benchmark-emit'
 
 /** Identifier of one package-library build step. */
-export type LibraryStepId = 'host-src' | 'host-bundle' | 'host-typert' | 'desktop-bundle' | 'client-clean' | 'client-src' | 'client-bundle'
+export type LibraryStepId = 'host-src' | 'host-bundle' | 'host-typert' | 'desktop-bundle' | 'client-src' | 'client-bundle'
 
 /** One package-library build step as a shell-free child-process invocation. */
 export interface LibraryStep {
@@ -114,29 +113,6 @@ function hostHeapArgs(face: 'host' | 'client'): string[] {
 }
 
 /**
- * Remove the Host-emitted declarations that a split package's Client leaf would
- * also emit. Both leaves write to `lib/types`; leaving the Host files in place
- * makes the Client program treat them as inputs and reject the overwrite
- * (TS5055). Typert declarations at the package `lib/` root are untouched.
- * @param root - Repository root containing the package workspaces.
- */
-export function cleanSharedFaceTypes(root: string): void {
-  for (const group of readdirSync(join(root, 'packages'), { withFileTypes: true })) {
-    if (!group.isDirectory()) continue
-    for (const pkg of readdirSync(join(root, 'packages', group.name), { withFileTypes: true })) {
-      if (!pkg.isDirectory()) continue
-      const dir = join(root, 'packages', group.name, pkg.name)
-      if (!existsSync(join(dir, 'tsconfig.host.json')) || !existsSync(join(dir, 'tsconfig.client.json'))) continue
-      rmSync(join(dir, 'lib', 'types'), { recursive: true, force: true })
-      rmSync(join(dir, 'lib', 'tsconfig.client.tsbuildinfo'), { force: true })
-      // Force the next Host build to re-emit instead of trusting a tsbuildinfo
-      // whose declaration outputs were just removed.
-      rmSync(join(dir, 'lib', 'tsconfig.host.tsbuildinfo'), { force: true })
-    }
-  }
-}
-
-/**
  * Compile one aggregate's project references with the serial TypeScript builder.
  * @param root - Repository root containing the aggregate tsconfig.
  * @param face - Independent compiler face whose package projects are emitted.
@@ -148,7 +124,6 @@ export function compileReferencedProjects(
   face: 'host' | 'client',
   mode: CompilationMode = 'checked',
 ): void {
-  if (face === 'client') cleanSharedFaceTypes(root)
   runStep(root, compilerStep(root, face, mode, []))
 }
 
@@ -209,15 +184,7 @@ export function libraryBuildSteps(root: string, faces: 'host' | 'all', mode: Com
   return [
     ...host,
     pnpmStep('desktop-bundle', 'Desktop bundle', ['--filter', '@berry-ai/harness-desktop', 'run', 'bundle'], ['host-bundle']),
-    {
-      id: 'client-clean',
-      label: 'Client face cleanup',
-      displayCommand: 'clean shared face declarations',
-      command: process.execPath,
-      args: ['--import', import.meta.resolve('tsx/esm'), fileURLToPath(new URL('clean-shared-face-types.ts', import.meta.url))],
-      needs: ['desktop-bundle'],
-    },
-    compilerStep(root, 'client', mode, ['client-clean']),
+    compilerStep(root, 'client', mode, ['desktop-bundle']),
     pnpmStep('client-bundle', 'Client bundle', ['exec', 'tsdown', '--config-loader', 'native', '--env.DSH_BUILD_FACE', 'client'], ['client-src']),
   ]
 }
