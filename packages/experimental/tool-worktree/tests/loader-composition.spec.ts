@@ -1,3 +1,5 @@
+import { executeToolFixture } from '@berry-ai/harness-tool-testkit'
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import { execFile } from 'node:child_process'
 import { mkdir, mkdtemp, readFile, realpath, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
@@ -54,9 +56,11 @@ describe('worktree tool through real Loader composition', () => {
       ['@berry-ai/harness-agent', AgentRegistry],
       ['@berry-ai/harness-session', SessionStore],
       ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
+
       ['@berry-ai/harness-system-prompt', SystemPrompt],
       ['@berry-ai/harness-llm', LlmRuntime],
       ['@berry-ai/harness-tools', ToolRuntime],
+      ['@berry-ai/harness-tool-executor-native', NativeToolExecutor],
       ['@berry-ai/harness-fs-local', LocalFileSystem],
       ['@berry-ai/harness-subprocess-local', LocalSubprocessRuntime],
       ['@berry-ai/harness-sandbox-local', LocalSandbox],
@@ -82,7 +86,7 @@ describe('worktree tool through real Loader composition', () => {
     await context.loader.await()
 
     const agent = await context.agentLoop.create(SessionId('worktree-loader'), {}, { cwd: repository })
-    const invoke = (name: string, agentValue = agent) => context!.tools.execute({
+    const invoke = (name: string, agentValue = agent) => executeToolFixture(context!, {
       name: 'create_worktree', callId: ToolCallId(name), arguments: { name }, agent: agentValue, signal: new AbortController().signal,
     })
     const result = await invoke('new-checkout')
@@ -93,7 +97,7 @@ describe('worktree tool through real Loader composition', () => {
     expect(context.workingDirectory.get(agent.session)).toBe(path)
     expect(await readFile(join(path, 'file.txt'), 'utf8')).toBe('committed\n')
 
-    const failure = await context.tools.execute({
+    const failure = await executeToolFixture(context, {
       name: 'create_worktree', callId: ToolCallId('no-agent'), arguments: {}, signal: new AbortController().signal,
     })
     expect(failure.isError).toBe(true)

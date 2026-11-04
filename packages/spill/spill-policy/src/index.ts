@@ -5,6 +5,7 @@
  * content and reports the reason through the logger.
  * @module @berry-ai/harness-spill-policy
  */
+import type {} from '@berry-ai/harness-tool-executor-ptc'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { createUserMessage, resolveImageAttachmentAccess } from '@berry-ai/harness-llm'

@@ -1,0 +1,171 @@
+{
+  "name": "@berry-ai/harness-experimental-liveshare",
+  "description": "Opt-in LiveShare host bundle: share a Session through a separate Relay at the view or bounded-write tier, with forking and attachment uploads as independent switches",
+  "version": "0.2.2-alpha.2",
+  "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/experimental/liveshare"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./viewer-declarations": {
+      "types": "./lib/types/viewer-declarations.d.ts",
+      "default": "./lib/viewer-declarations.js"
+    },
+    "./typert": {
+      "types": "./lib/typert.host.d.ts",
+      "default": "./lib/typert.host.js"
+    },
+    "./remote": {
+      "types": "./lib/typert.remote-client.d.ts",
+      "default": "./lib/typert.remote-client.js"
+    },
+    "./types": {
+      "types": "./lib/types/share-api-types.d.ts"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "icon.svg",
+    "locale/*.json",
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "lib/owner-gateway/cli.js",
+    "lib/retry-backoff-*.js",
+    "lib/viewer-declarations.js",
+    "lib/viewer-declarations-*.js",
+    "lib/types/**/*.d.ts",
+    "lib/typert.host.js",
+    "lib/typert.host.d.ts",
+    "lib/typert.remote-client.js",
+    "lib/typert.remote-client.d.ts"
+  ],
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@berry-ai/harness-atomic-write": "workspace:*",
+    "@berry-ai/harness-brand": "workspace:*",
+    "@berry-ai/harness-experimental-liveshare-protocol": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
+    "@berry-ai/harness-util-values": "workspace:*",
+    "ws": "^8.18.3",
+    "zod": "4.4.3"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-scope": "workspace:*"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@deepseek-ai/cordis-plugin-loader": "workspace:~",
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
+    "@berry-ai/harness-api-gateway": "workspace:*",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
+    "@berry-ai/harness-api-remotes": "workspace:*",
+    "@berry-ai/harness-api-session-controller": "workspace:*",
+    "@berry-ai/harness-api-settings-controller": "workspace:*",
+    "@berry-ai/harness-api-workspace-controller": "workspace:*",
+    "@berry-ai/harness-api-workspace-files": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
+    "@berry-ai/harness-client-file-upload": "workspace:*",
+    "@berry-ai/harness-client-locale": "workspace:*",
+    "@berry-ai/harness-client-modules": "workspace:*",
+    "@berry-ai/harness-client-resources": "workspace:*",
+    "@berry-ai/harness-client-shortcuts": "workspace:*",
+    "@berry-ai/harness-client-store": "workspace:*",
+    "@berry-ai/harness-client-test-runtime": "workspace:*",
+    "@berry-ai/harness-client-ui-agent-preset": "workspace:*",
+    "@berry-ai/harness-client-ui-approval": "workspace:*",
+    "@berry-ai/harness-client-ui-attachment": "workspace:*",
+    "@berry-ai/harness-client-ui-brand-official": "workspace:*",
+    "@berry-ai/harness-client-ui-chat": "workspace:*",
+    "@berry-ai/harness-client-ui-commands": "workspace:*",
+    "@berry-ai/harness-client-ui-conversation": "workspace:*",
+    "@berry-ai/harness-client-ui-deliverables": "workspace:*",
+    "@berry-ai/harness-client-ui-input-trigger": "workspace:*",
+    "@berry-ai/harness-client-ui-jobs": "workspace:*",
+    "@berry-ai/harness-client-ui-layout": "workspace:*",
+    "@berry-ai/harness-client-ui-plan": "workspace:*",
+    "@berry-ai/harness-client-ui-primitives": "workspace:*",
+    "@berry-ai/harness-client-ui-reference": "workspace:*",
+    "@berry-ai/harness-client-ui-renderer": "workspace:*",
+    "@berry-ai/harness-client-ui-session": "workspace:*",
+    "@berry-ai/harness-client-ui-settings": "workspace:*",
+    "@berry-ai/harness-client-ui-sidebar": "workspace:*",
+    "@berry-ai/harness-client-ui-sidebar-right": "workspace:*",
+    "@berry-ai/harness-client-ui-slots": "workspace:*",
+    "@berry-ai/harness-client-ui-subagent": "workspace:*",
+    "@berry-ai/harness-client-ui-theme": "workspace:*",
+    "@berry-ai/harness-client-ui-tool": "workspace:*",
+    "@berry-ai/harness-client-ui-trajectory": "workspace:*",
+    "@berry-ai/harness-client-ui-user-questions": "workspace:*",
+    "@berry-ai/harness-client-ui-workflow-run": "workspace:*",
+    "@berry-ai/harness-client-ui-workspace": "workspace:*",
+    "@berry-ai/harness-client-web": "workspace:*",
+    "@berry-ai/harness-cua": "workspace:*",
+    "@berry-ai/harness-experimental-api-speech-to-text": "workspace:*",
+    "@berry-ai/harness-experimental-claude-code-mods": "workspace:*",
+    "@berry-ai/harness-experimental-client-ui-cot-translation": "workspace:*",
+    "@berry-ai/harness-fs": "workspace:*",
+    "@berry-ai/harness-fs-local": "workspace:*",
+    "@berry-ai/harness-fs-observation-policy": "workspace:*",
+    "@berry-ai/harness-fs-sandbox": "workspace:*",
+    "@berry-ai/harness-host-webserver": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-sandbox": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-fs": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
+    "@berry-ai/harness-typert-registry": "workspace:*",
+    "@berry-ai/harness-workspace": "workspace:*",
+    "@types/ws": "^8.18.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml",
+      "listedByDefault": false
+    },
+    "client": {
+      "inject": [
+        "@berry-ai/harness-api-remote-access",
+        "@berry-ai/harness-api-remotes",
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-conversation",
+        "@berry-ai/harness-client-ui-primitives",
+        "@berry-ai/harness-client-ui-renderer",
+        "@berry-ai/harness-client-ui-session"
+      ],
+      "platform": "web"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-tool-worktree",
   "description": "Model tool that creates and enters a new Git worktree",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -21,6 +21,7 @@
   "files": [
     "icon.svg",
     "locale/*.json",
+    "docs",
     "lib/index.js",
     "cordis.patch.yml",
     "lib/types/**/*.d.ts"
@@ -51,6 +52,8 @@
     "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-working-directory": "workspace:*",
     "@berry-ai/harness-experimental-worktree": "workspace:*",

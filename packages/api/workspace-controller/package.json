@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-api-workspace-controller",
   "description": "Workspace Remote commands and reconnect-safe state transport",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -89,6 +89,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-api-gateway": "workspace:*",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
     "@berry-ai/harness-client-connection": "workspace:*",
     "@berry-ai/harness-client-store": "workspace:*",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
@@ -97,7 +98,6 @@
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
-    "@berry-ai/harness-workspace": "workspace:*",
-    "@berry-ai/harness-api-remote-access": "workspace:*"
+    "@berry-ai/harness-workspace": "workspace:*"
   }
 }

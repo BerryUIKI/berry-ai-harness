@@ -4,9 +4,10 @@
  * Session's durable selection projection, then submit through the same
  * selectModel call. A switch made in either entry updates this shared state.
  */
+import type { ModelSelectionProjection } from '@berry-ai/harness-agent/types'
 import type { TrackProductEvent } from '@berry-ai/harness-client-product-analytics/client'
 import type {
-  ModelCatalogFailure, ModelProviderGroup, ModelSelection, ModelSelectionProjection,
+  ModelCatalogFailure, ModelProviderGroup, ModelSelection,
 } from '@berry-ai/harness-api-session-controller/types'
 import type { SessionId } from '@berry-ai/harness-api-remotes/client'
 import type { RemoteResult, TypertClientRemote } from '@berry-ai/harness-typert-protocol'

@@ -1,3 +1,4 @@
+import { executeToolFixture } from '@berry-ai/harness-tool-testkit'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { mkdtempSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
@@ -16,7 +17,7 @@ import * as SubagentFork from '@berry-ai/harness-subagent-fork-in-process'
 import * as SubagentSpawn from '@berry-ai/harness-subagent-spawn-in-process'
 import { renderPrompt, renderContextSnapshot } from '@berry-ai/harness-system-prompt'
 import * as ToolSubagentControl from '@berry-ai/harness-tool-subagent-control'
-import { defineContentToolFixture } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import { resolveAdapterOptions } from '@berry-ai/harness-llm-deepseek'
 import { serialize } from '@berry-ai/harness-llm-deepseek/src/serialize.ts'
 import type { GenerateOptions } from '@berry-ai/harness-llm'
@@ -98,7 +99,7 @@ function execute(
   args: unknown,
   signal: AbortSignal = SIGNAL,
 ) {
-  return ctx.tools.execute({
+  return executeToolFixture(ctx, {
     callId: ToolCallId(`team-call-${++callNumber}`),
     name,
     arguments: args,

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-cua",
   "description": "Shared Computer Use application objects, authorization, and logged tool execution",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -19,6 +19,7 @@
       "default": "./lib/index.js"
     },
     "./src/*": "./src/*",
+    "./locale/*.json": "./locale/*.json",
     "./package.json": "./package.json",
     "./api": {
       "types": "./lib/types/api.d.ts",
@@ -28,6 +29,18 @@
       "types": "./lib/types/bridge.d.ts",
       "default": "./lib/bridge.js"
     },
+    "./typert": {
+      "types": "./lib/typert.host.d.ts",
+      "default": "./lib/typert.host.js"
+    },
+    "./remote": {
+      "types": "./lib/typert.remote-client.d.ts",
+      "default": "./lib/typert.remote-client.js"
+    },
+    "./types": {
+      "types": "./lib/types/remote-types.d.ts",
+      "default": "./lib/remote-types.js"
+    },
     "./native-client": {
       "types": "./lib/types/native-client.d.ts",
       "default": "./lib/native-client.js"
@@ -35,34 +48,50 @@
     "./protocol": {
       "types": "./lib/types/protocol.d.ts",
       "default": "./lib/protocol.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
     }
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
+    "lib/client.js",
+    "lib/remote-types.js",
     "lib/api.js",
     "lib/bridge.js",
     "lib/native-client.js",
     "lib/protocol.js",
-    "lib/types/**/*.d.ts"
+    "lib/types/**/*.d.ts",
+    "lib/typert.host.js",
+    "lib/typert.host.d.ts",
+    "lib/typert.remote-client.js",
+    "lib/typert.remote-client.d.ts"
   ],
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-user-questions": "workspace:*",
+    "@berry-ai/harness-attachment": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-ptc-runtime-node": "workspace:*",
     "@berry-ai/harness-computer-use": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
-    "@berry-ai/harness-user-questions": "workspace:*",
-    "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*"
   },
   "dependencies": {
-    "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "^4.4.3",
-    "@berry-ai/harness-brand": "workspace:*",
-    "@berry-ai/harness-atomic-write": "workspace:*"
+    "@berry-ai/harness-atomic-write": "workspace:*",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
+    "@berry-ai/harness-computer-use": "workspace:*",
+    "@berry-ai/harness-storage-domain": "workspace:*",
+    "@berry-ai/harness-util-values": "workspace:*",
+    "@berry-ai/harness-brand": "workspace:*"
   },
   "devDependencies": {
     "@berry-ai/harness-working-directory": "workspace:*",
@@ -74,7 +103,6 @@
     "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-attachment-local": "workspace:*",
-    "@berry-ai/harness-computer-use": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-projection": "workspace:*",
@@ -90,10 +118,54 @@
     "sharp": "^0.35.3",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*",
-    "@berry-ai/harness-settings": "workspace:*",
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-config-editor": "workspace:*",
     "@berry-ai/harness-hmr": "workspace:*",
-    "@deepseek-ai/cordis-plugin-timer": "workspace:~"
+    "@deepseek-ai/cordis-plugin-timer": "workspace:~",
+    "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-agent-preset-registry": "workspace:*",
+    "@berry-ai/harness-api-remotes": "workspace:*",
+    "@berry-ai/harness-api-gateway": "workspace:*",
+    "@berry-ai/harness-client-locale": "workspace:*",
+    "@berry-ai/harness-client-store": "workspace:*",
+    "@berry-ai/harness-client-ui-primitives": "workspace:*",
+    "@berry-ai/harness-client-ui-renderer": "workspace:*",
+    "@berry-ai/harness-client-ui-slots": "workspace:*",
+    "@berry-ai/harness-client-ui-plugin-manager": "workspace:*",
+    "@berry-ai/harness-client-ui-settings": "workspace:*",
+    "@berry-ai/harness-client-ui-layout": "workspace:*",
+    "@berry-ai/harness-client-test-runtime": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@testing-library/react": "^16.1.0",
+    "@berry-ai/harness-loader-smoke": "workspace:*",
+    "@berry-ai/harness-util-values": "workspace:*",
+    "@berry-ai/harness-brand": "workspace:*",
+    "@berry-ai/harness-storage": "workspace:*",
+    "@berry-ai/harness-storage-json": "workspace:*",
+    "@berry-ai/harness-client-ui-user-questions": "workspace:*",
+    "@berry-ai/harness-client-ui-approval": "workspace:*",
+    "@berry-ai/harness-client-ui-conversation": "workspace:*",
+    "@berry-ai/harness-computer-use": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@berry-ai/harness-api-remotes",
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-plugin-manager",
+        "@berry-ai/harness-client-ui-settings",
+        "@berry-ai/harness-client-ui-layout",
+        "@berry-ai/harness-client-ui-user-questions",
+        "@berry-ai/harness-client-ui-approval",
+        "@berry-ai/harness-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
   }
 }

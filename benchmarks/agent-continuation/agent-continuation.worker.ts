@@ -10,7 +10,7 @@ import { createUserMessage, LlmAdapter } from '@berry-ai/harness-llm'
 import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-ai/harness-llm'
 import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
 import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
-import { defineContentToolFixture } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import { assertBuiltBenchmarkRuntime } from '../support/built-worker.ts'
 import { PARENT_ID, response, resultText, syntheticHistory, TIME_ZERO, WORKLOAD } from './workload.ts'
 

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-permission-presets",
   "description": "User-facing permission presets (ctx.permissionPresets) for the DeepSeek Harness: one product-level Permissions select bundling the sandbox-mode and approval-policy knobs, written through to their own session events",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -50,6 +50,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-shell": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
@@ -65,6 +66,7 @@
     "zod": "4.4.3"
   },
   "devDependencies": {
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-shell": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
@@ -74,6 +76,7 @@
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@berry-ai/harness-settings": "workspace:*"
+    "@berry-ai/harness-settings": "workspace:*",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*"
   }
 }

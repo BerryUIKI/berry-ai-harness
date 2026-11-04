@@ -8,7 +8,7 @@ import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-
 import { SessionId } from '@berry-ai/harness-session'
 import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@berry-ai/harness-agent-loop-testkit'
 import TokenMeter from '@berry-ai/harness-token-meter'
-import { defineContentToolFixture } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import BasicCompaction from '@berry-ai/harness-compaction-basic'
 import { expect, it } from 'vitest'
 

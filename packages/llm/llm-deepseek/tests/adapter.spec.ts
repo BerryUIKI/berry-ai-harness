@@ -1,4 +1,5 @@
 /** HTTP lifecycle, routing and optional Cordis services under real composition. */
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import { installAccountTaskCancellation, type DeepSeekAccount } from '@berry-ai/harness-deepseek-account'
 import type { AnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
 import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
@@ -8,8 +9,8 @@ import { pathToFileURL } from 'node:url'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context, LoggerLevel, Service } from '@deepseek-ai/cordis'
 import LocalAttachments from '@berry-ai/harness-attachment-local'
-import AgentRegistry, { installModelSelection } from '@berry-ai/harness-agent'
-import type { Agent, ModelSelectionRef } from '@berry-ai/harness-agent'
+import AgentRegistry from '@berry-ai/harness-agent'
+import type { Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
@@ -315,6 +316,7 @@ describe('Cordis provider composition', () => {
       ['@berry-ai/harness-agent', AgentRegistry], ['@berry-ai/harness-agent-loop', AgentLoop],
       ['@berry-ai/harness-session', SessionStore], ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
       ['@berry-ai/harness-system-prompt', SystemPrompt], ['@berry-ai/harness-tools', ToolRuntime],
+      ['@berry-ai/harness-tool-executor-native', NativeToolExecutor],
     ])
     // The importer supplies source modules while Loader still owns configuration and effects.
     for (const name of modules.keys()) {
@@ -475,9 +477,8 @@ describe('Cordis provider composition', () => {
     ctx.on('system-prompt/assemble', async (_assembly, _context, next) => ({
       ...await next(), sections: [{ name: 'test', text: prompt, order: 0 }],
     }))
-    const selection: ModelSelectionRef = { current: { provider: 'deepseek-official', model: MODEL }, assembled: undefined }
-    const agent = await ctx.agentLoop.create(SessionId('capability-switch'), selection.current)
-    installModelSelection(agent.ctx, selection)
+    const agentOptions = { provider: 'deepseek-official', model: MODEL }
+    const agent = await ctx.agentLoop.create(SessionId('capability-switch'), agentOptions)
     await send(agent, 'first')
     prompt = 'current prompt'
     await send(agent, 'second')
@@ -485,9 +486,8 @@ describe('Cordis provider composition', () => {
     const seed = [...agent.session.snapshotEvents()]
     const saved = JSON.stringify(seed)
     await ctx.settings.update(Messages.name, { models: [{ id: MODEL, ...inHistory ? { systemPromptUpdate: 'in-history' } : {} }] })
-    selection.current = { provider: 'deepseek-official', model: MODEL }
     await send(agent, 'switch')
-    const { agent: resumed } = await ctx.agents.create({ sessionId: SessionId('switch-resume'), agentOptions: selection.current, seed })
+    const { agent: resumed } = await ctx.agents.create({ sessionId: SessionId('switch-resume'), agentOptions: agentOptions, seed })
     await send(resumed, 'resume')
     for (const request of http.requests.slice(2)) {
       expect(request.path).toBe('/anthropic/v1/messages')

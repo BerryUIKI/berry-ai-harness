@@ -22,12 +22,11 @@ import {
 import type { DesktopPaths } from './paths.ts'
 import type { DesktopRelease } from './release.ts'
 import { readDesktopRuntime } from './runtime-tree.ts'
-import {
-  initProfile, PROFILE_TEMPLATES, removeLinkProjections, sanitizeProfile, type ProfileTemplate,
-} from '@berry-ai/harness-app-boot'
+import { initProfile, removeLinkProjections, sanitizeProfile } from '@berry-ai/harness-app-boot'
+import { PROFILE_TEMPLATES, type ProfileTemplate } from '@berry-ai/harness-official-bundles'
 
-const PROJECT_NAME = '@deepseek-ai/dsh-desktop-runtime'
-const DSH_PACKAGE = '@deepseek-ai/dsh'
+const PROJECT_NAME = '@berry-ai/harness-desktop-runtime'
+const DSH_PACKAGE = '@berry-ai/harness'
 const CORE_BUILD_PACKAGE = '@berry-ai/harness-subprocess-local'
 const WEB_PROFILE = PROFILE_TEMPLATES.web as ProfileTemplate
 const WORKSPACE_SETTINGS = 'nodeLinker: hoisted\nautoInstallPeers: false\n'

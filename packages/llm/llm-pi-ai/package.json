@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-llm-pi-ai",
   "description": "pi-ai-backed DeepSeek adapter for the DeepSeek Harness LLM seam (design-verification twin of dsh-llm-deepseek)",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -30,35 +30,39 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
+    "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-authorization": "workspace:*",
     "@berry-ai/harness-credentials": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@berry-ai/harness-timeout": "workspace:*",
-    "@deepseek-ai/cordis-plugin-loader": "workspace:~"
+    "@berry-ai/harness-timeout": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
-    "@earendil-works/pi-ai": "^1.1.0"
+    "@earendil-works/pi-ai": "^1.3.0"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
+    "@deepseek-ai/cordis-plugin-loader": "workspace:~",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
     "@berry-ai/harness-authorization": "workspace:*",
     "@berry-ai/harness-credentials": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
+    "@berry-ai/harness-http-proxy": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-llm-deepseek": "workspace:*",
     "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-settings": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
-    "@berry-ai/harness-http-proxy": "workspace:*",
-    "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@berry-ai/harness-settings": "workspace:*"
+    "@berry-ai/harness-tool-testkit": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*"
   },
   "peerDependenciesMeta": {
     "@deepseek-ai/cordis-plugin-loader": {

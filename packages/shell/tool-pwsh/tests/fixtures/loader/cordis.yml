@@ -15,6 +15,9 @@
 - id: tools
   name: '@berry-ai/harness-tools'
 
+- id: tool-executor-native
+  name: '@berry-ai/harness-tool-executor-native'
+
 - id: subprocess
   name: '@berry-ai/harness-subprocess-local'
 

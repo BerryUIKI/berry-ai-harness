@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { SessionLogOffset, SessionSeq, TOOL_OUTCOME_UNKNOWN, type SessionEvent } from '@berry-ai/harness-session'
 import { createToolResultMessage, createUserMessage, ToolCallId, type ToolSchema } from '@berry-ai/harness-llm'
-import type {} from '@berry-ai/harness-tools/types'
+import type {} from '@berry-ai/harness-tool-executor-ptc/types'
 import {
   applyUserQuestionEvent, foldUserQuestions, isTimedAskUserQuestionSchema, questionsOf, TIMED_WAIT_PARAMETER,
   userQuestionProjectionDefinition,

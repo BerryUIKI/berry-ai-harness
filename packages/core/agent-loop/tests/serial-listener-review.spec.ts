@@ -8,12 +8,7 @@ import AgentLoop from '@berry-ai/harness-agent-loop'
 import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import { SessionId } from '@berry-ai/harness-session'
-import { defineContentToolFixture } from '@berry-ai/harness-tools'
-import { bindScopeParent, createScope, scopeOf } from '@berry-ai/harness-scope'
 import LocalFileReference from '@berry-ai/harness-file-reference-local'
-import SubagentRuntime from '@berry-ai/harness-subagent'
-import * as SubagentSpawn from '@berry-ai/harness-subagent-spawn-in-process'
-import * as SubagentTool from '@berry-ai/harness-tool-subagent'
 import Selection from '@berry-ai/harness-tool-subagent/model-selection-settings'
 import type { Agent } from '@berry-ai/harness-agent'
 import { createUserMessage } from '@berry-ai/harness-llm'
@@ -99,24 +94,13 @@ describe('serial creation listener integrations', () => {
     }
   })
 
-  it('rolls back creation when a shared preset tool installation fails', async () => {
+  it('rolls back creation when the Host settings service cannot capture model-selection policy', async () => {
     const ctx = await core()
-    const errors: string[] = []
-    ctx.logger.error = ((error: unknown) => { errors.push(String(error)) }) as typeof ctx.logger.error
-    await ctx.plugin(Selection)
-    await ctx.plugin(SubagentRuntime)
-    await ctx.plugin(SubagentSpawn, { providerName: 'spawn' })
-    const preset = createScope(ctx, { preset: 'review' })
-    await preset.ctx.plugin(SubagentTool, { provider: 'spawn', modelSelectionSettings: true })
+    await ctx.plugin(Selection, { enabled: true, allowedModels: [] })
     try {
       await expect(ctx.agents.create({
         sessionId: SessionId('review-tool'),
-        setup(agentCtx) {
-          bindScopeParent(scopeOf(agentCtx)!, scopeOf(preset.ctx)!)
-          agentCtx.tools.register(defineContentToolFixture({ name: 'subagent', description: 'occupied', parameters: {}, execute: () => Promise.resolve([]) }))
-        },
-      })).rejects.toThrow('subagent')
-      expect(errors.some(error => error.includes('subagent'))).toBe(true)
+      })).rejects.toThrow('subagent model selection requires at least one allowed model')
       expect(ctx.agents.list()).toEqual([])
       expect(ctx.sessions.list()).toEqual([])
     } finally {

@@ -3,6 +3,7 @@
 - name: '@berry-ai/harness-session-projection'
 - name: '@berry-ai/harness-system-prompt'
 - name: '@berry-ai/harness-tools'
+- name: '@berry-ai/harness-tool-executor-native'
 - name: '@berry-ai/harness-agent'
 - name: '@berry-ai/harness-agent-loop'
   config:

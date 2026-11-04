@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness",
   "description": "dsh CLI: profile launch, plugin management, and configuration inspection",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -12,7 +12,6 @@
   },
   "type": "module",
   "bin": {
-    "berry": "lib/bin.js",
     "dsh": "lib/bin.js"
   },
   "files": [
@@ -49,6 +48,7 @@
     "@berry-ai/harness-jobs-local": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
     "@berry-ai/harness-mcp-client": "workspace:*",
+    "@berry-ai/harness-official-bundles": "workspace:*",
     "@berry-ai/harness-persona": "workspace:*",
     "@berry-ai/harness-plan-mode": "workspace:*",
     "@berry-ai/harness-pwsh-local": "workspace:*",
@@ -104,9 +104,13 @@
     "@berry-ai/harness-experimental-ralph-bundle": "workspace:*",
     "@berry-ai/harness-experimental-session-titles-bundle": "workspace:*",
     "@berry-ai/harness-experimental-terminal-bundle": "workspace:*",
+    "@berry-ai/harness-experimental-liveshare": "workspace:*",
     "@berry-ai/harness-experimental-session-search": "workspace:*",
     "@berry-ai/harness-experimental-tool-worktree": "workspace:*",
-    "@berry-ai/harness-experimental-plugin-market-bundle": "workspace:*"
+    "@berry-ai/harness-cua-bundle": "workspace:*",
+    "@berry-ai/harness-experimental-plugin-market-bundle": "workspace:*",
+    "@berry-ai/harness-personalized-recommendations": "workspace:*",
+    "@berry-ai/harness-experimental-forge-bundle": "workspace:*"
   },
   "devDependencies": {
     "@berry-ai/harness-skill-badge": "workspace:*",
@@ -155,6 +159,7 @@
     "@berry-ai/harness-subagent-spawn-in-process": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@types/js-yaml": "^4.0.9",
@@ -170,5 +175,8 @@
     },
     "./lib/*": "./lib/*",
     "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=24.9.0"
   }
 }

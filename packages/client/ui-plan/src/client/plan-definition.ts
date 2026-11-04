@@ -1,5 +1,5 @@
 /** Per-invocation plans use resolved Conversation locations for final Turn artifacts. */
-import type {} from '@berry-ai/harness-tools/types'
+import type {} from '@berry-ai/harness-tool-executor-ptc/client'
 import type { ChatNode } from '@berry-ai/harness-client-ui-chat/client'
 import type { ConversationNodeDefinition } from '@berry-ai/harness-client-ui-conversation/client'
 import { submittedPlan, type SubmittedPlan } from './plan.ts'

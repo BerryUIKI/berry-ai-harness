@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-trajectory",
-  "description": "Trajectory event ledger with an interactive timing overview: pure-consumer plugin registering into the conversation ViewMap (no service)",
-  "version": "0.2.1-rc.5",
+  "description": "Trajectory event ledger and timing overview with live tool-result inspection",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -24,7 +24,18 @@
     },
     "./src/*": "./src/*",
     "./package.json": "./package.json",
-    "./locale/*.json": "./locale/*.json"
+    "./locale/*.json": "./locale/*.json",
+    "./typert": {
+      "types": "./lib/typert.host.d.ts",
+      "default": "./lib/typert.host.js"
+    },
+    "./remote": {
+      "types": "./lib/typert.remote-client.d.ts",
+      "default": "./lib/typert.remote-client.js"
+    },
+    "./types": {
+      "types": "./lib/types/types.d.ts"
+    }
   },
   "dsh": {
     "client": {
@@ -52,10 +63,10 @@
     "@berry-ai/harness-client-test-runtime": "workspace:*",
     "@berry-ai/harness-client-ui-primitives": "workspace:*",
     "@berry-ai/harness-client-ui-conversation": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-compaction": "workspace:*",
-    "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -68,12 +79,23 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
     "@tanstack/react-virtual": "3.14.10",
-    "diff": "^9.0.0"
+    "diff": "^9.0.0",
+    "@berry-ai/harness-api-gateway": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*"
   },
   "files": [
     "locale/*.json",
     "lib/index.js",
     "lib/client.js",
-    "lib/types/**/*.d.ts"
-  ]
+    "lib/types/**/*.d.ts",
+    "lib/typert.host.js",
+    "lib/typert.host.d.ts",
+    "lib/typert.remote-client.js",
+    "lib/typert.remote-client.d.ts"
+  ],
+  "dependencies": {
+    "@berry-ai/harness-typert-protocol": "workspace:*",
+    "zod": "4.4.3",
+    "@deepseek-ai/schemastery": "workspace:~"
+  }
 }

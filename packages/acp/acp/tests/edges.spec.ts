@@ -3,7 +3,7 @@ import { PROTOCOL_VERSION } from '@agentclientprotocol/sdk'
 import { createUserMessage, ToolCallId, type StreamChunk  } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import { SessionId } from '@berry-ai/harness-session'
-import { defineContentToolFixture } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import { makeBridgeHarness, textResponse, type BridgeHarness } from './harness.ts'
 
 declare module '@berry-ai/harness-llm' {

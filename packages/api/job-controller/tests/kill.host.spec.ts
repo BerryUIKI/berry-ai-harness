@@ -1,5 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import type { Agent } from '@berry-ai/harness-agent'
 import type { JobId, JobOutcome } from '@berry-ai/harness-jobs'
@@ -45,6 +46,7 @@ async function harness(): Promise<{
 }> {
   const ctx = new Context()
   await ctx.plugin(SessionStore)
+  await ctx.plugin(SessionProjectionRegistry)
   await ctx.plugin(AgentRegistry)
   await ctx.plugin(LocalJobRegistry)
   ctx.jobs.attachController('kill-test')

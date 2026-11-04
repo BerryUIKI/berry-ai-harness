@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-desktop-host",
   "description": "Private Node-mode host process for the Electron desktop application",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "private": true,
   "license": "MIT",
   "type": "module",
@@ -25,12 +25,21 @@
     "@berry-ai/harness-tool-workspace-dependencies": "workspace:*",
     "@berry-ai/harness-skill-office": "workspace:*",
     "@berry-ai/harness-deepseek-account": "workspace:*",
-    "@berry-ai/harness-workspace": "workspace:*"
+    "@berry-ai/harness-workspace": "workspace:*",
+    "@berry-ai/harness-plugin-manager": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@berry-ai/harness-skill": "workspace:*",
+    "@berry-ai/harness-fs": "workspace:*",
+    "@berry-ai/harness-fs-local": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-session-persistence": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-util-workspace-path": "workspace:*",
+    "@berry-ai/harness-brand": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
     "@types/ws": "^8.18.1",
     "ws": "^8.21.3"
   }

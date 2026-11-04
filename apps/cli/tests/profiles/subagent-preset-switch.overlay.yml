@@ -1,0 +1,27 @@
+- insert:
+    - id: preset-delegate-a
+      name: '@berry-ai/harness-agent-preset'
+      config:
+        id: delegate-a
+        plugins:
+          - name: '@berry-ai/harness-tool-subagent'
+            config:
+              provider: spawn
+              allowedAgentPresets: [standard, ptc, minimal]
+          - name: '@berry-ai/harness-tool-subagent'
+            config:
+              provider: fork
+              toolName: subagent_fork
+    - id: preset-delegate-b
+      name: '@berry-ai/harness-agent-preset'
+      config:
+        id: delegate-b
+        plugins:
+          - name: '@berry-ai/harness-tool-subagent'
+            config:
+              provider: spawn
+              allowedAgentPresets: [standard, ptc, minimal]
+          - name: '@berry-ai/harness-tool-subagent'
+            config:
+              provider: fork
+              toolName: subagent_fork

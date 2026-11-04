@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-typert-loader",
   "description": "Loader integration for generated Typert package contributions",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -40,9 +40,9 @@
     "@berry-ai/harness-app-boot": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-typert-registry": "workspace:*",
-    "@deepseek-ai/cordis": "workspace:~",
-    "zod": "4.4.3",
     "@berry-ai/harness-typert-protocol": "workspace:*",
-    "typescript": "^6.0.3"
+    "@deepseek-ai/cordis": "workspace:~",
+    "typescript": "^6.0.3",
+    "zod": "4.4.3"
   }
 }

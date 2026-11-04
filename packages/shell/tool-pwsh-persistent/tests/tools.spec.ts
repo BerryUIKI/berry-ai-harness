@@ -1,5 +1,8 @@
+import { executeToolFixture } from '@berry-ai/harness-tool-testkit'
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { provideWorkingDirectoryFixture, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
+import { unsupportedModel, provideWorkingDirectoryFixture, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import { SESSION_FORMAT_VERSION, Session, SessionId } from '@berry-ai/harness-session'
@@ -42,6 +45,7 @@ async function agent(ctx: Context, cwd: string | undefined): Promise<Agent> {
     id,
     options: {},
     session,
+    model: unsupportedModel(),
     inbox: unsupportedInbox(),
     status: 'idle',
     ctx: scope.ctx,
@@ -67,7 +71,7 @@ function call(
   command: string,
   signal = new AbortController().signal,
 ) {
-  return ctx.tools.execute({
+  return executeToolFixture(ctx, {
     signal,
     callId: ToolCallId(`persistent-pwsh-${++callNumber}`),
     name: 'pwsh',
@@ -321,6 +325,8 @@ async function setup(
   contexts.push(ctx)
   await ctx.plugin(SystemPrompt)
   await ctx.plugin(ToolRegistry)
+  await ctx.plugin(SessionProjectionRegistry)
+  await ctx.plugin(NativeToolExecutor)
   await ctx.plugin(AgentRegistry)
   await ctx.plugin(TerminalSessionService)
   const stub = stubBackend(initialMode)
@@ -792,6 +798,8 @@ describe('tool-pwsh-persistent', () => {
     contexts.push(ctx)
     await ctx.plugin(SystemPrompt)
     await ctx.plugin(ToolRegistry)
+    await ctx.plugin(SessionProjectionRegistry)
+    await ctx.plugin(NativeToolExecutor)
     await ctx.plugin(AgentRegistry)
     await ctx.plugin(TerminalSessionService)
     const spawnStarted = Promise.withResolvers<undefined>()

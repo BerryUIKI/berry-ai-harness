@@ -1,5 +1,7 @@
+import { executeToolFixture } from '@berry-ai/harness-tool-testkit'
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import { spawnSync } from 'node:child_process'
-import { provideWorkingDirectoryFixture, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
+import { unsupportedModel, provideWorkingDirectoryFixture, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import { mkdtemp, realpath, rm, writeFile } from 'node:fs/promises'
 import { release, tmpdir, version } from 'node:os'
 import { join } from 'node:path'
@@ -83,6 +85,7 @@ async function agent(ctx: Context, cwd: string): Promise<Agent> {
     id,
     options: {},
     session,
+    model: unsupportedModel(),
     inbox: unsupportedInbox(),
     status: 'idle',
     ctx: scope.ctx,
@@ -110,6 +113,7 @@ describe.skipIf(!hasPwsh)('persistent pwsh through a real cordis.yml Loader comp
       "- name: '@berry-ai/harness-agent'",
       "- name: '@berry-ai/harness-system-prompt'",
       "- name: '@berry-ai/harness-tools'",
+      "- name: '@berry-ai/harness-tool-executor-native'",
       "- name: '@berry-ai/harness-terminal'",
       "- name: '@berry-ai/harness-test-sandbox'",
       "- name: '@berry-ai/harness-session-projection'",
@@ -157,6 +161,7 @@ describe.skipIf(!hasPwsh)('persistent pwsh through a real cordis.yml Loader comp
       ['@berry-ai/harness-agent', AgentRegistry],
       ['@berry-ai/harness-system-prompt', SystemPrompt],
       ['@berry-ai/harness-tools', ToolRegistry],
+      ['@berry-ai/harness-tool-executor-native', NativeToolExecutor],
       ['@berry-ai/harness-terminal', TerminalSessionService],
       ['@berry-ai/harness-test-sandbox', PassthroughSandbox],
       ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
@@ -214,7 +219,7 @@ describe.skipIf(!hasPwsh)('persistent pwsh through a real cordis.yml Loader comp
     const signal = new AbortController().signal
     const execute = (id: string, command: string) => {
       timeline.label(id)
-      return context!.tools.execute({
+      return executeToolFixture(context!, {
         signal,
         callId: ToolCallId(id),
         name: 'pwsh',

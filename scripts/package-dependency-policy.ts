@@ -51,21 +51,44 @@ const DUPLICATE_SAFE_PACKAGES: readonly string[] = [
  * prominent heading in the pull request description.
  */
 const SAFE_HOST_DEPENDENCY_EXPORTS = {
+  '@berry-ai/harness-atomic-write': ['withFileLock', 'writeFileAtomic'],
+  '@berry-ai/harness-computer-use/brand': ['ComputerUseProviderName'],
   '@berry-ai/harness-credentials': ['credentialKey'],
   '@berry-ai/harness-deque': ['Deque'],
+  // The Liveshare wire codec and identity helpers are stateless functions over caller-owned values.
+  '@berry-ai/harness-experimental-liveshare-protocol': [
+    'LIVESHARE_CAPABILITIES', 'LIVESHARE_PROTOCOL_VERSION', 'parseRelayFrame', 'parseShareAccessState',
+    'parseTunnelWorkerCommand', 'parseTunnelWorkerEvent', 'rawText', 'sendFrame', 'unsupportedFrameRefusal',
+    'viewerRequestFields', 'identityFromKey', 'identityKeyOf',
+  ],
   '@berry-ai/harness-llm': ['callConfigEquals'],
+  '@berry-ai/harness-session': ['SessionId'],
   '@berry-ai/harness-session-format': ['sessionFormatLogFilename'],
+  '@berry-ai/harness-storage-domain': ['defineDomain'],
   '@berry-ai/harness-timeout': ['MAX_TIMER_DELAY_MS'],
   '@deepseek-ai/schemastery': ['default'],
 } as const satisfies HostDependencyExports
 
 /** Runtime exports that require every consumer to resolve the provider's shared peer instance. */
 const PEER_REQUIRED_HOST_EXPORTS = {
+  // Profile settings must match the installed Node provider's configuration schema.
+  '@berry-ai/harness-ptc-runtime-node/configuration': ['resolvePersistentExecution'],
+  // CUA checks UserQuestionError and preserves AttachmentError from image admission.
+  '@berry-ai/harness-attachment': ['admitEncodedImages'],
+  '@berry-ai/harness-user-questions': ['UserQuestionError'],
   // `instanceof` checks need the translator's own class instance.
   '@berry-ai/harness-experimental-translator': ['TranslationError'],
+  // Stateless; a safe classification would turn the forge panel's forge and worktree peers into dependencies.
+  '@berry-ai/harness-experimental-forge': ['changeRequestKey'],
+  '@berry-ai/harness-experimental-worktree': ['generatedWorktreeName'],
+  // The forge panel matches ctx.fs failures with `instanceof FsError`.
+  '@berry-ai/harness-fs': ['FsError'],
   '@berry-ai/harness-scope': ['carrierKeyOf', 'createScope', 'scopeOf', 'scopeTarget'],
-  '@berry-ai/harness-session': ['SESSION_FORMAT_VERSION'],
+  // appendPluginRecord writes through the Session class's private log; pluginRecordOf is stateless.
+  '@berry-ai/harness-session': ['SESSION_FORMAT_VERSION', 'appendPluginRecord', 'pluginRecordOf'],
   '@berry-ai/harness-session-persistence': ['SessionPersistenceNotFoundError'],
+  // Readers recognize a deadline's TimeoutReason only by `instanceof` against their own copy.
+  '@berry-ai/harness-timeout': ['deadline'],
 } as const satisfies HostDependencyExports
 
 /** Exact import specifier to reviewed runtime exports. */

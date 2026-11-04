@@ -9,7 +9,7 @@ import type { GoalRef } from '@berry-ai/harness-goal'
 import SessionStore, { Session, SessionId, type SessionEvent } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import * as commandGoal from '@berry-ai/harness-command-goal'
-import { createInboxStub } from '@berry-ai/harness-agent-loop-testkit'
+import { unsupportedModel, createInboxStub } from '@berry-ai/harness-agent-loop-testkit'
 
 interface Harness {
   readonly ctx: Context
@@ -28,6 +28,7 @@ function stubAgent(ctx: Context, id: string): { agent: Agent; session: Session }
     id: session.id,
     options: {},
     session,
+    model: unsupportedModel(),
     inbox,
     ctx: new Context(),
     get status() { return status },

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-llm-retry",
   "description": "Provider-routed LLM request retry policy for the DeepSeek Harness",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -61,6 +61,8 @@
     "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }

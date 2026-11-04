@@ -1,3 +1,4 @@
+import { executeToolFixture } from '@berry-ai/harness-tool-testkit'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import { provideWorkingDirectoryFixture, mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
@@ -8,7 +9,7 @@ import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import { SessionId, type SessionEvent } from '@berry-ai/harness-session'
 import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
-import { defineContentToolFixture } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import type { Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { LocalBashExecutor } from '@berry-ai/harness-bash-local'
@@ -474,7 +475,7 @@ export function defineCoverageCases(groups: CoverageGroup | readonly CoverageGro
       let ran = false
       ctx.tools.register(defineContentToolFixture({ name: 'Bash', description: 'b', parameters: { command: { type: 'string' } }, async execute() { ran = true; return [{ type: 'text', text: 'x' }] } }))
       const { ToolCallId } = await import('@berry-ai/harness-llm')
-      const result = await ctx.tools.execute({ signal: testToolSignal, callId: ToolCallId('c1'), name: 'Bash', arguments: { command: 'x' } })
+      const result = await executeToolFixture(ctx, { signal: testToolSignal, callId: ToolCallId('c1'), name: 'Bash', arguments: { command: 'x' } })
       expect(ran).toBe(false) // denied
       expect(result.isError).toBe(true)
     })
@@ -485,7 +486,7 @@ export function defineCoverageCases(groups: CoverageGroup | readonly CoverageGro
       const ctx = await harness(join(d, 'hooks.json'), new MockAdapter([]))
       ctx.tools.register(defineContentToolFixture({ name: 'Bash', description: 'b', parameters: { command: { type: 'string' } }, async execute() { return [{ type: 'text', text: 'ok' }] } }))
       const { ToolCallId } = await import('@berry-ai/harness-llm')
-      const result = await ctx.tools.execute({ signal: testToolSignal, callId: ToolCallId('c1'), name: 'Bash', arguments: { command: 'x' } })
+      const result = await executeToolFixture(ctx, { signal: testToolSignal, callId: ToolCallId('c1'), name: 'Bash', arguments: { command: 'x' } })
       expect(result.isError).toBeFalsy()
       expect(result.additionalContexts?.[0]?.content.some(b => b.type === 'text' && b.text === 'x')).toBe(true)
     })

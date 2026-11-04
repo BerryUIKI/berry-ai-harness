@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-plugin-manager",
   "description": "Plugin management for the dsh web client: the sidebar Plugins panel installs, enables, disables, retries, and composes installed plugin packages",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -55,6 +55,7 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
     "@berry-ai/harness-api-remotes": "workspace:*",
     "@berry-ai/harness-client-locale": "workspace:*",
     "@berry-ai/harness-client-store": "workspace:*",
@@ -64,6 +65,7 @@
     "@berry-ai/harness-client-ui-renderer": "workspace:*",
     "@berry-ai/harness-client-ui-sidebar": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
+    "@berry-ai/harness-official-bundles": "workspace:*",
     "@berry-ai/harness-package-manifest": "workspace:*",
     "@testing-library/react": "^16.3.3",
     "clsx": "^2.1.1",

@@ -4,7 +4,7 @@ import { SessionLogOffset, TOOL_OUTCOME_UNKNOWN } from '@berry-ai/harness-sessio
 import type { SessionEvent, SessionLogOffset as SessionLogOffsetType } from '@berry-ai/harness-session'
 import type { ProjectionDefinition } from '@berry-ai/harness-session-projection'
 import type {} from '@berry-ai/harness-agent/types'
-import type {} from '@berry-ai/harness-tools/types'
+import type {} from '@berry-ai/harness-tool-executor-ptc/types'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import type { ContentBlock, ToolSchema } from '@berry-ai/harness-llm'
 import type { AskUserQuestionAnswerItem, AskUserQuestionItem, AskUserQuestionOption, PendingUserQuestion, SettledUserQuestion, UserQuestionProjectionView } from './types.ts'
@@ -329,9 +329,3 @@ export const userQuestionProjectionDefinition = {
   wire: { viewSchema: projectionViewSchema, view: state => state.questions },
   stateVersion: 2,
 } satisfies ProjectionDefinition<'userQuestions', UserQuestionProjectionState>
-
-declare module '@berry-ai/harness-session-projection/types' {
-  interface SessionProjectionStateMap {
-    userQuestions: UserQuestionProjectionState
-  }
-}

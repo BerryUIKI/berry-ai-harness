@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os'
 import { dirname, join, resolve } from 'node:path'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { officialClientBuildEnvironment, writeClientBuildRecord } from '../client-build-environment.ts'
-import { ON_DEMAND_BUNDLES } from '../../packages/boot/app-boot/src/official-bundles.ts'
+import { ON_DEMAND_BUNDLES } from '../../packages/util/official-bundles/src/bundles.ts'
 import { releaseFamily, type ReleaseMember } from './families.ts'
 import { compareVersions, nextVendorVersion, planShared, reachesPayload } from './bump.ts'
 
@@ -49,6 +49,7 @@ describe('release families', () => {
     expect(members
       .filter(member => member.directory.startsWith('packages/experimental/'))
       .map(member => member.name)).toEqual([
+      '@berry-ai/harness-action-cards',
       '@berry-ai/harness-experimental-agent-team-profile',
       '@berry-ai/harness-experimental-agent-team',
       '@berry-ai/harness-experimental-api-speech-to-text',
@@ -59,21 +60,36 @@ describe('release families', () => {
       '@berry-ai/harness-experimental-browser-use-runtime',
       '@berry-ai/harness-experimental-browser-use-stagehand-native',
       '@berry-ai/harness-experimental-claude-code-mods',
+      '@berry-ai/harness-client-ui-action-cards',
       '@berry-ai/harness-experimental-client-ui-agent-team',
       '@berry-ai/harness-experimental-client-ui-claude-code-mods',
       '@berry-ai/harness-experimental-client-ui-cot-translation',
+      '@berry-ai/harness-client-ui-creation-recommendations',
+      '@berry-ai/harness-experimental-client-ui-forge',
+      '@berry-ai/harness-client-ui-plugin-recommendations',
+      '@berry-ai/harness-experimental-client-ui-stats',
       '@berry-ai/harness-experimental-client-ui-voice-input',
       '@berry-ai/harness-experimental-computer-use-cua-driver-mcp',
       '@berry-ai/harness-experimental-computer-use-cua-driver-native',
       '@berry-ai/harness-experimental-cot-translation-bundle',
+      '@berry-ai/harness-creation-recommendations',
+      '@berry-ai/harness-cua-bundle',
       '@berry-ai/harness-experimental-cua-macos',
       '@berry-ai/harness-cua',
+      '@berry-ai/harness-experimental-forge-bundle',
+      '@berry-ai/harness-experimental-forge-github',
+      '@berry-ai/harness-experimental-forge-session',
+      '@berry-ai/harness-experimental-forge',
       '@berry-ai/harness-hook-protocol',
       '@berry-ai/harness-hooks-claude-code',
       '@berry-ai/harness-hooks-codex',
       '@berry-ai/harness-experimental-inspector-profile',
       '@berry-ai/harness-experimental-inspector',
+      '@berry-ai/harness-experimental-liveshare-protocol',
+      '@berry-ai/harness-experimental-liveshare',
+      '@berry-ai/harness-personalized-recommendations',
       '@berry-ai/harness-experimental-plugin-market-bundle',
+      '@berry-ai/harness-plugin-recommendations',
       '@berry-ai/harness-experimental-ptc-runtime-python',
       '@berry-ai/harness-experimental-ralph-bundle',
       '@berry-ai/harness-experimental-session-inspector',
@@ -83,10 +99,12 @@ describe('release families', () => {
       '@berry-ai/harness-skill-badge',
       '@berry-ai/harness-experimental-speech-to-text-sensevoice',
       '@berry-ai/harness-experimental-speech-to-text',
+      '@berry-ai/harness-experimental-subagent-oar',
       '@berry-ai/harness-experimental-terminal-bundle',
       '@berry-ai/harness-experimental-tool-agent-team',
       '@berry-ai/harness-tool-ralph',
       '@berry-ai/harness-tool-session-query',
+      '@berry-ai/harness-experimental-tool-subagent-oar',
       '@berry-ai/harness-tool-terminal',
       '@berry-ai/harness-experimental-tool-worktree',
       '@berry-ai/harness-experimental-translator',

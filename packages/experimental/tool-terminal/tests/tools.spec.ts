@@ -1,13 +1,17 @@
+import { executeToolFixture } from '@berry-ai/harness-tool-testkit'
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { describe, expect, it } from 'vitest'
-import { provideWorkingDirectoryFixture, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
+import { createInboxStub, unsupportedModel, provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import { Session, SessionId } from '@berry-ai/harness-session'
 import AgentRegistry from '@berry-ai/harness-agent'
 import type { Agent } from '@berry-ai/harness-agent'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
-import ToolRuntime, { renderToolsSdk } from '@berry-ai/harness-tools'
-import type { ToolSdkSchema } from '@berry-ai/harness-tools/src/ts-types.ts'
+import ToolRuntime from '@berry-ai/harness-tools'
+import { renderToolsSdk } from '@berry-ai/harness-tool-executor-ptc'
+import type { ToolSdkSchema } from '@berry-ai/harness-tool-executor-ptc/src/ts-types.ts'
 import TerminalSessionService, { TerminalSessionId } from '@berry-ai/harness-terminal'
 import type { TerminalBackend, TerminalBackendSession, TerminalSendOperation, TerminalSendRead, TerminalSendRequest, TerminalSessionStatus, TerminalSignal } from '@berry-ai/harness-terminal'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
@@ -20,7 +24,8 @@ async function fakeAgent(ctx: Context, rawId: string): Promise<Agent> {
   const id = SessionId(rawId)
   const session = Session.create(id)
   const agent: Agent = {
-    id, options: {}, session, inbox: unsupportedInbox(),
+    id, options: {}, session, model: unsupportedModel(),
+    inbox: createInboxStub(),
     status: 'idle',
     ctx: scope.ctx,
     send: () => {},
@@ -114,6 +119,8 @@ async function setupBase(jobs: boolean) {
   provideWorkingDirectoryFixture(ctx)
   await ctx.plugin(SystemPrompt)
   await ctx.plugin(ToolRuntime)
+  await ctx.plugin(SessionProjectionRegistry)
+  await ctx.plugin(NativeToolExecutor)
   await ctx.plugin(AgentRegistry)
   await ctx.plugin(TerminalSessionService)
   const stub = stubBackend()
@@ -129,11 +136,11 @@ let callNumber = 0
 const TOOL_NAMES = ['terminal_open', 'terminal_send', 'terminal_read', 'terminal_signal', 'terminal_close', 'terminal_list'] as const
 const testToolSignal = new AbortController().signal
 function call(ctx: Context, name: string, args: unknown, agent?: Agent) {
-  return ctx.tools.execute({ signal: testToolSignal, callId: ToolCallId(`pty-call-${++callNumber}`), name, arguments: args, ...agent ? { agent } : {} })
+  return executeToolFixture(ctx, { signal: testToolSignal, callId: ToolCallId(`pty-call-${++callNumber}`), name, arguments: args, ...agent ? { agent } : {} })
 }
 
 function callWithSignal(ctx: Context, name: string, args: unknown, agent: Agent, signal: AbortSignal) {
-  return ctx.tools.execute({ callId: ToolCallId(`pty-call-${++callNumber}`), name, arguments: args, agent, signal })
+  return executeToolFixture(ctx, { callId: ToolCallId(`pty-call-${++callNumber}`), name, arguments: args, agent, signal })
 }
 
 function text(result: { content: { type: string; text?: string }[] }): string {
@@ -493,7 +500,7 @@ describe('tool-terminal task integration', () => {
     stub.sessions[0]!.autoSettle = false
     const controller = new AbortController()
     const pending = callWithSignal(ctx, 'terminal_send', { sessionId: 'pty-1', text: 'sleep' }, agent, controller.signal)
-    await Promise.resolve()
+    await expect.poll(() => stub.sessions[0]!.operation).toBeDefined()
     controller.abort()
     stub.sessions[0]!.operation?.cancel()
     expect((await pending).isError).toBe(true)

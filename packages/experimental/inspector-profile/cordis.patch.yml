@@ -6,3 +6,5 @@
         captureFetch: true
     - id: session-inspector
       name: '@berry-ai/harness-experimental-session-inspector'
+    - id: client-ui-stats
+      name: '@berry-ai/harness-experimental-client-ui-stats'

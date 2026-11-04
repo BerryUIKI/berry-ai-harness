@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-browser-use-stagehand-native",
   "description": "Experimental Stagehand browser tools with separately configured native models",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -19,6 +19,7 @@
       "default": "./lib/index.js"
     },
     "./src/*": "./src/*",
+    "./locale/*.json": "./locale/*.json",
     "./package.json": "./package.json",
     "./worker": {
       "types": "./lib/types/worker.d.ts",
@@ -26,6 +27,7 @@
     }
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/worker.js",
     "lib/types/**/*.d.ts"
@@ -62,6 +64,8 @@
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "tsx": "^4.23.13"
   }

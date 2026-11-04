@@ -26,12 +26,12 @@ import {
   reportSkippedBundles,
   PluginPackages,
   PROFILE_PATCH_FILENAME,
-  PROFILE_TEMPLATES,
   resolveProfileDir,
   type ProfileContext,
   type Profile,
   type RuntimeResolution,
 } from '@berry-ai/harness-app-boot'
+import { PROFILE_TEMPLATES } from '@berry-ai/harness-official-bundles'
 import { resolveDshHome } from '@berry-ai/harness-home-paths'
 import { installProxyFromEnvironment } from '@berry-ai/harness-http-proxy'
 import { DSH_LAUNCH_ENVIRONMENT_KEY, type LaunchEnvironmentSnapshot } from '@berry-ai/harness-launch-environment'

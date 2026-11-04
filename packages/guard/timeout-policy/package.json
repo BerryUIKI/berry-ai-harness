@@ -1,13 +1,13 @@
 {
   "name": "@berry-ai/harness-tool-call-timeout-policy",
   "description": "Tool-call timeout policy: a tools/execute wrapper that arms a per-tool deadline on exec.signal and returns TOOL_TIMEOUT when it wins",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BerryUIKI/berry-ai-harness.git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
     "directory": "packages/guard/timeout-policy"
   },
   "type": "module",
@@ -37,6 +37,8 @@
   "devDependencies": {
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }

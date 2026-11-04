@@ -5,7 +5,8 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
-import { composeEntries, loadProfile, PROFILE_TEMPLATES } from '@berry-ai/harness-app-boot'
+import { composeEntries, loadProfile } from '@berry-ai/harness-app-boot'
+import { PROFILE_TEMPLATES } from '@berry-ai/harness-official-bundles'
 
 const installAnchor = fileURLToPath(new URL('../package.json', import.meta.url))
 const resourcePackage = '@berry-ai/harness-mcp-resources'

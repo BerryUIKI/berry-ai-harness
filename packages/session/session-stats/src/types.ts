@@ -8,6 +8,8 @@
  * @module @berry-ai/harness-session-stats/types
  */
 
+import type { SessionProjectionSummaryExcluded } from '@berry-ai/harness-session-projection/types'
+
 // Marks this file a module so the declaration below AUGMENTS the projection
 // table instead of declaring an ambient module.
 export {}
@@ -40,7 +42,11 @@ export interface SessionStatsProjection {
 
 declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionMap {
-    /** Whole-log turn/step counts and wall times; see {@link SessionStatsProjection}. */
-    sessionStats: SessionStatsProjection
+    /**
+     * Whole-log turn/step counts and wall times; see
+     * {@link SessionStatsProjection}. Excluded from Session summary payloads:
+     * no list row renders these figures.
+     */
+    sessionStats: SessionProjectionSummaryExcluded<SessionStatsProjection>
   }
 }

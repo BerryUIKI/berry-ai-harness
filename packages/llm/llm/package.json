@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-llm",
   "description": "Provider-neutral LLM service interface for the DeepSeek Harness",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -71,6 +71,7 @@
   },
   "devDependencies": {
     "@berry-ai/harness-attachment": "workspace:*",
+    "@berry-ai/harness-package-manifest": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

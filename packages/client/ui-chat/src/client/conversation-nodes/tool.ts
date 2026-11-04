@@ -4,7 +4,7 @@ import type {
   ToolCallBlock, ToolResultNode,
 } from '@berry-ai/harness-client-ui-conversation/client'
 import { isAppendSurfaceEvent } from '@berry-ai/harness-session/surface'
-import type {} from '@berry-ai/harness-tools/types'
+import type {} from '@berry-ai/harness-tool-executor-ptc/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import type { ChatNode, ToolChatData } from '../contract/chat-nodes.ts'
 import { CHAT_SYNTHETIC_SEQ_OFFSETS, chatNode, contextLocation } from './common.ts'

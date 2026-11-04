@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { runInNewContext } from 'node:vm'
 import AgentRegistry from '@berry-ai/harness-agent'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { Agent } from '@berry-ai/harness-agent'
 import { SessionId } from '@berry-ai/harness-session'
 
@@ -15,6 +16,7 @@ async function harness(): Promise<{
   dispose: () => Promise<void>
 }> {
   const ctx = new Context()
+  await ctx.plugin(SessionProjectionRegistry)
   const fiber = await ctx.plugin(AgentRegistry)
   return {
     ctx,

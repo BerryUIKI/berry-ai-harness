@@ -1,4 +1,3 @@
-import { createUserMessage } from '@berry-ai/harness-llm'
 /**
  * Loop-level tool-order determinism: the request/header event — and therefore the frozen
  * request the adapter receives — carries the assembly's canonical tool order (system-prompt's
@@ -6,6 +5,8 @@ import { createUserMessage } from '@berry-ai/harness-llm'
  * happened to register in. Registration order is a concurrent loading artifact
  * and must not leak downstream.
  */
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
+import { createUserMessage } from '@berry-ai/harness-llm'
 
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
@@ -13,7 +14,8 @@ import LlmRuntime from '@berry-ai/harness-llm'
 import SessionStore, { SessionId, foldRequestHeader } from '@berry-ai/harness-session'
 import SystemPrompt, { TOOL_ORDER_REST } from '@berry-ai/harness-system-prompt'
 import type { Config as SystemPromptConfig } from '@berry-ai/harness-system-prompt'
-import ToolRuntime, { defineContentToolFixture } from '@berry-ai/harness-tools'
+import ToolRuntime from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import AgentRegistry, { type Agent } from '@berry-ai/harness-agent'
 
 import AgentLoop from '@berry-ai/harness-agent-loop'
@@ -27,6 +29,7 @@ async function harness(adapter: MockAdapter, toolOrder?: SystemPromptConfig['too
   await ctx.plugin(SessionProjectionRegistry)
   await ctx.plugin(SystemPrompt, { personaPrefix: 'stable base', ...toolOrder !== undefined ? { toolOrder } : {} })
   await ctx.plugin(ToolRuntime)
+  await ctx.plugin(NativeToolExecutor)
   await ctx.plugin(AgentRegistry)
   await ctx.plugin(AgentLoop, { agents: [] })
   ctx.llm.registerAdapter(['mock'], adapter)

@@ -1,13 +1,13 @@
 {
   "name": "@berry-ai/harness-terminal-bash",
   "description": "Persistent shell PTY backend over the DeepSeek Harness subprocess terminal primitive",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BerryUIKI/berry-ai-harness.git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
     "directory": "packages/terminal/terminal-bash"
   },
   "type": "module",
@@ -36,8 +36,8 @@
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@berry-ai/harness-session-projection": "workspace:*",
-    "@berry-ai/harness-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-lazy-require": "workspace:*",
@@ -52,6 +52,7 @@
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",

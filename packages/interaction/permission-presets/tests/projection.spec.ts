@@ -9,13 +9,13 @@
  * registry, and removes the projection key on unload (HMR safety).
  */
 
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it, onTestFinished, vi } from 'vitest'
+import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@berry-ai/harness-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
-import SessionStore, { SessionId } from '@berry-ai/harness-session'
+import { SessionId } from '@berry-ai/harness-session'
 import type { Session } from '@berry-ai/harness-session'
 import type { Agent } from '@berry-ai/harness-agent'
 import { createScope } from '@berry-ai/harness-scope'
-import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import CommandRuntime from '@berry-ai/harness-commands'
 import PermissionPresetService from '@berry-ai/harness-permission-presets'
 import { AUTO_PRESET } from '@berry-ai/harness-permission-presets'
@@ -28,8 +28,9 @@ async function harness(options: {
   ctx?: Context
 } = {}): Promise<{ ctx: Context; session: Session }> {
   const ctx = options.ctx ?? new Context()
-  await ctx.plugin(SessionStore)
-  await ctx.plugin(SessionProjectionRegistry)
+  onTestFinished(() => ctx.fiber.dispose())
+  await mountAgentLoopTestDependencies(ctx)
+  await mountAgentLoopTestHarness(ctx)
   await ctx.plugin(CommandRuntime)
   ctx.provide('shell', {
     sandboxMode: 'workspace-write',
@@ -39,7 +40,8 @@ async function harness(options: {
   })
   await ctx.plugin(ApprovalService)
   if (options.withPermission !== false) await ctx.plugin(PermissionPresetService, options.config ?? {})
-  return { ctx, session: ctx.sessions.create(SessionId('perm-projected')) }
+  const { agent } = await ctx.agents.create({ sessionId: SessionId('perm-projected') })
+  return { ctx, session: agent.session }
 }
 
 /** Mint a scoped agent over a live session (the command executor's addressing shape). */
@@ -167,7 +169,7 @@ describe('/permission command', () => {
     expect(inject.mock.calls[0]?.[0]).toMatchObject({
       content: [{
         type: 'text',
-        text: 'The approval policy changed from "ask" to "never" (changed by the user).',
+        text: 'The user changed the approval policy from "ask the user for approval" to "never ask the user for approval".',
       }],
     })
     const run = session.snapshotEvents().find(event => event.type === 'command/run')

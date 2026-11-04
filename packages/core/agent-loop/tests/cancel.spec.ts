@@ -1,4 +1,3 @@
-import { ToolCallId, createUserMessage, expandAssistantStream } from '@berry-ai/harness-llm'
 /**
  * Tests for the queue-aware `Agent.cancel()` primitive. The default clears
  * queued and steering work, while `keepInbox` preserves pending input for a
@@ -7,13 +6,16 @@ import { ToolCallId, createUserMessage, expandAssistantStream } from '@berry-ai/
  * the cause each cancelled turn records.
  * @module dsh-agent-loop/tests/cancel
  */
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
+import { ToolCallId, createUserMessage, expandAssistantStream } from '@berry-ai/harness-llm'
 
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import LlmRuntime from '@berry-ai/harness-llm'
 import SessionStore, { Session, SessionId, SessionLogOffset, TurnEndReason } from '@berry-ai/harness-session'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
-import ToolRuntime, { defineContentToolFixture, TOOL_ABORTED_BEFORE_DISPATCH } from '@berry-ai/harness-tools'
+import ToolRuntime, { TOOL_ABORTED_BEFORE_DISPATCH } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import AgentRegistry, { type Agent, type AgentCancelCause } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
@@ -30,6 +32,7 @@ async function harness(adapter: MockAdapter) {
   await ctx.plugin(SessionProjectionRegistry)
   await ctx.plugin(SystemPrompt)
   await ctx.plugin(ToolRuntime)
+  await ctx.plugin(NativeToolExecutor)
   await ctx.plugin(AgentRegistry)
   await ctx.plugin(AgentLoop, { agents: [] })
   ctx.llm.registerAdapter(['mock'], adapter)
@@ -828,6 +831,7 @@ describe('Agent.cancel()', () => {
     await ctx.plugin(SessionProjectionRegistry)
     await ctx.plugin(SystemPrompt)
     await ctx.plugin(ToolRuntime)
+    await ctx.plugin(NativeToolExecutor)
     await ctx.plugin(AgentRegistry)
     await ctx.plugin(AgentLoop, { agents: [] })
     ctx.llm.registerAdapter(['mock'], adapter)

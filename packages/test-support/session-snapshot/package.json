@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-session-snapshot",
   "description": "Session-log snapshot core with an ACP protocol adapter, expected-output normalization, and fixture invariants",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -44,6 +44,7 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",
+    "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
@@ -51,10 +52,10 @@
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*",
     "@types/js-yaml": "^4.0.9",
-    "@berry-ai/harness-http-proxy": "workspace:*",
-    "@berry-ai/harness-agent-preset-registry": "workspace:*"
+    "@berry-ai/harness-http-proxy": "workspace:*"
   }
 }

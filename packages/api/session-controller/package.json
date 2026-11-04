@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-api-session-controller",
   "description": "Session Remote commands, cold reads, and live control transport",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -73,6 +73,7 @@
   "dependencies": {
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-deque": "workspace:*",
+    "@berry-ai/harness-timeout": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "mime-types": "^3.0.2",
     "zod": "4.4.3"
@@ -131,6 +132,7 @@
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
     "@berry-ai/harness-api-gateway": "workspace:*",
     "@berry-ai/harness-attachment": "workspace:*",
+    "@berry-ai/harness-attachment-local": "workspace:*",
     "@berry-ai/harness-client-connection": "workspace:*",
     "@berry-ai/harness-client-file-upload": "workspace:*",
     "@berry-ai/harness-client-store": "workspace:*",

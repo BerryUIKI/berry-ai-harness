@@ -1,8 +1,11 @@
+import { executeToolFixture, executeModelToolFixture } from '@berry-ai/harness-tool-testkit'
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
+import * as PtcToolExecutor from '@berry-ai/harness-tool-executor-ptc'
 import { setImmediate as nextEventLoopTurn } from 'node:timers/promises'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import SystemPrompt, { renderPrompt } from '@berry-ai/harness-system-prompt'
-import ToolRuntime, { defineTool, type Config as ToolConfig } from '@berry-ai/harness-tools'
+import ToolRuntime, { defineTool } from '@berry-ai/harness-tools'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import type { Agent } from '@berry-ai/harness-agent'
 import { bindScopeParent, createScope, type Scope } from '@berry-ai/harness-scope'
@@ -32,11 +35,12 @@ afterEach(async () => {
   await Promise.all(roots.splice(0).map(ctx => ctx.fiber.dispose()))
 })
 
-async function setup(mode: ToolConfig['mode'] = 'native') {
+async function setup(mode: ('native' | 'ptc') = 'native') {
   const ctx = new Context()
   roots.push(ctx)
   await ctx.plugin(SystemPrompt)
-  await ctx.plugin(ToolRuntime, { mode })
+  await ctx.plugin(ToolRuntime)
+  await ctx.plugin(mode === 'ptc' ? PtcToolExecutor : NativeToolExecutor)
   if (mode !== 'native') await ctx.plugin(BindingProbe)
   await ctx.plugin(McpResources)
   return ctx
@@ -55,7 +59,8 @@ function visibleResourceTools(ctx: Context, agent?: Agent): string[] {
 }
 
 function call(ctx: Context, name: string, args: unknown, agent?: Agent) {
-  return ctx.tools.execute({
+  const execute = name === 'run_code' ? executeModelToolFixture : executeToolFixture
+  return execute(ctx, {
     name, arguments: args, callId: ToolCallId('resource-test'),
     signal: new AbortController().signal,
     ...agent === undefined ? {} : { agent },
@@ -283,6 +288,7 @@ describe('MCP resource tools', () => {
     roots.push(ctx)
     await ctx.plugin(SystemPrompt)
     await ctx.plugin(ToolRuntime)
+    await ctx.plugin(NativeToolExecutor)
     const fiber = await ctx.plugin(McpResources)
     ctx.mcpResources.register('docs', { request: async () => ({ resources: [] }) })
     expect(renderPrompt(await ctx.systemPrompt.assemble())).toContain('MCP resource servers')

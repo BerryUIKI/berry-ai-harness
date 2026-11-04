@@ -1,6 +1,7 @@
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
-import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
+import { unsupportedModel, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import type { Agent } from '@berry-ai/harness-agent'
 import type { JobAppendOptions, JobHandle, JobOutcome } from '@berry-ai/harness-jobs'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
@@ -9,6 +10,7 @@ import { Session, SessionId } from '@berry-ai/harness-session'
 /** A registry with a tiny ring so eviction is cheap to reach. */
 export async function harness(): Promise<Context> {
   const ctx = new Context()
+  await ctx.plugin(SessionProjectionRegistry)
   await ctx.plugin(AgentRegistry)
   await ctx.plugin(LocalJobRegistry, { retainBytes: 64, settledRetainBytes: 64 })
   ctx.jobs.attachController('job-controller-test')
@@ -24,6 +26,7 @@ export async function registerAgent(ctx: Context, rawId: string): Promise<Agent 
     id,
     options: {},
     session,
+    model: unsupportedModel(),
     inbox: unsupportedInbox(),
     status: 'idle',
     ctx: scopeFiber.ctx,

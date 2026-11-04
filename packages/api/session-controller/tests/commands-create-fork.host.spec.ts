@@ -1,5 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import type { Agent, AgentHandle, CreateAgentOptions } from '@berry-ai/harness-agent'
 import type {} from '@berry-ai/harness-agent-preset-registry'
 import { createUserMessage } from '@berry-ai/harness-llm'
@@ -47,6 +48,7 @@ async function baseContext(): Promise<Context> {
   const ctx = new Context()
   await ctx.plugin(TypertRegistry)
   await ctx.plugin(SessionStore)
+  await ctx.plugin(SessionProjectionRegistry)
   await ctx.plugin(AgentRegistry)
   installSessionReadTestServices(ctx)
   ctx.provide('agentDefaultModel', {

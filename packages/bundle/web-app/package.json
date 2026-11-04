@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-web-app",
   "description": "The dsh browser-surface bundle: the web patch layer over dsh-base plus the runtime glue plugin (frontend dist serving, bash runtime variables, URL line)",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -58,7 +58,6 @@
     "@berry-ai/harness-agent-instructions": "workspace:*",
     "@berry-ai/harness-agent-preset": "workspace:*",
     "@berry-ai/harness-agent-preset-registry": "workspace:*",
-    "@berry-ai/harness-agent-tool-presentation": "workspace:*",
     "@berry-ai/harness-api-job-controller": "workspace:*",
     "@berry-ai/harness-api-remotes": "workspace:*",
     "@berry-ai/harness-api-session-controller": "workspace:*",
@@ -77,6 +76,7 @@
     "@berry-ai/harness-client-ui-approval": "workspace:*",
     "@berry-ai/harness-client-ui-attachment": "workspace:*",
     "@berry-ai/harness-client-ui-brand-official": "workspace:*",
+    "@berry-ai/harness-message-quotes": "workspace:*",
     "@berry-ai/harness-client-ui-chat": "workspace:*",
     "@berry-ai/harness-client-ui-commands": "workspace:*",
     "@berry-ai/harness-client-ui-conversation": "workspace:*",
@@ -91,7 +91,6 @@
     "@berry-ai/harness-client-ui-layout": "workspace:*",
     "@berry-ai/harness-client-ui-message-feedback": "workspace:*",
     "@berry-ai/harness-client-ui-model-selection": "workspace:*",
-    "@berry-ai/harness-client-ui-deepseek-model-label-1017": "workspace:*",
     "@berry-ai/harness-client-ui-open-in-app": "workspace:*",
     "@berry-ai/harness-client-ui-permission-presets": "workspace:*",
     "@berry-ai/harness-client-ui-plan": "workspace:*",
@@ -161,6 +160,7 @@
     "@berry-ai/harness-tool-bash": "workspace:*",
     "@berry-ai/harness-tool-bash-persistent": "workspace:*",
     "@berry-ai/harness-tool-cordis": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*",
     "@berry-ai/harness-tool-fs": "workspace:*",
     "@berry-ai/harness-tool-fs-search": "workspace:*",
     "@berry-ai/harness-tool-goal": "workspace:*",
@@ -189,7 +189,10 @@
     "@berry-ai/harness-client-product-analytics": "workspace:*",
     "@berry-ai/harness-host-product-telemetry-otel": "workspace:*",
     "@berry-ai/harness-client-ui-settings-session-log": "workspace:*",
-    "@berry-ai/harness-harness-dev-context": "workspace:*"
+    "@berry-ai/harness-harness-dev-context": "workspace:*",
+    "@berry-ai/harness-deliverable-file-references": "workspace:*",
+    "@berry-ai/harness-client-ui-file-drag": "workspace:*",
+    "@berry-ai/harness-agent-tool-presentation": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",

@@ -126,6 +126,7 @@
     "@berry-ai/harness-tool-bash-persistent": "workspace:*",
     "@berry-ai/harness-tool-call-timeout-policy": "workspace:*",
     "@berry-ai/harness-tool-cordis": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*",
     "@berry-ai/harness-tool-fs": "workspace:*",
     "@berry-ai/harness-tool-fs-search": "workspace:*",
     "@berry-ai/harness-tool-goal": "workspace:*",

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-skill-office",
   "description": "Bundled Word, PowerPoint, and Excel workflows and LibreOffice Kit operations",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -18,9 +18,11 @@
       "types": "./lib/types/index.d.ts",
       "default": "./lib/index.js"
     },
+    "./locale/*.json": "./locale/*.json",
     "./package.json": "./package.json"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "assets",
     "lib/types/**/*.d.ts"
@@ -32,6 +34,8 @@
   },
   "devDependencies": {
     "@berry-ai/harness-skill": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~"

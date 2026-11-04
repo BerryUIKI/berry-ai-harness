@@ -1,6 +1,6 @@
 /** Structured result delivery after a parent correction reaches the child. */
 import type { Context } from '@deepseek-ai/cordis'
-import { defineContentToolFixture } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 
 export const name = 'subagent-structured-parent'
 export const inject = ['subagents', 'tools']
