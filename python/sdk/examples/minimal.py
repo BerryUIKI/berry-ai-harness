@@ -7,17 +7,19 @@ import argparse
 import os
 from pathlib import Path
 
-from deepseek_harness import DeepSeekHarness
+from berry_ai_harness import DeepSeekHarness
 
 
 def main() -> None:
     """Parse one task and print the agent's final response."""
     parser = argparse.ArgumentParser()
-    configured_home = os.environ.get("DSH_HOME", "")
+    configured_home = os.environ.get("BERRY_HOME", "").strip() or os.environ.get("DSH_HOME", "")
     parser.add_argument("prompt", help="Task for the minimal agent")
     parser.add_argument("--workspace", type=Path, default=Path.cwd())
     parser.add_argument(
+        "--berry-home",
         "--dsh-home",
+        dest="home",
         type=Path,
         default=Path(configured_home) if configured_home.strip() else None,
     )
@@ -27,11 +29,11 @@ def main() -> None:
     parser.add_argument("--model", default=os.environ.get("DSH_MODEL", "deepseek-v4-flash"))
     parser.add_argument("--max-tokens", type=int)
     args = parser.parse_args()
-    if args.dsh_home is None:
-        parser.error("--dsh-home or a non-empty DSH_HOME is required")
+    if args.home is None:
+        parser.error("--berry-home or a non-empty BERRY_HOME/DSH_HOME is required")
 
     workspace = args.workspace.resolve()
-    dsh_home = args.dsh_home.resolve()
+    dsh_home = args.home.resolve()
     with DeepSeekHarness(
         provider=args.provider,
         model=args.model,
