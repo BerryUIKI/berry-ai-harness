@@ -1,5 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { provideWorkingDirectoryFixture } from '@berry-ai/harness-agent-loop-testkit'
 import type { Agent } from '@berry-ai/harness-agent'
 import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset } from '@berry-ai/harness-session'
@@ -41,6 +42,7 @@ function observation(
 async function context(): Promise<Context> {
   const ctx = new Context()
   await ctx.plugin(SessionStore)
+  await ctx.plugin(SessionProjectionRegistry)
   await ctx.plugin(AgentRegistry)
   provideWorkingDirectoryFixture(ctx, '/catalog/default')
   return ctx

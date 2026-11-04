@@ -1,5 +1,5 @@
 /** Indexed recorded todo predecessors for root and nested Tool calls. */
-import type {} from '@berry-ai/harness-tools/types'
+import type {} from '@berry-ai/harness-tool-executor-ptc/client'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ConversationNodeDefinition, ConversationViewDefinition, ConversationViewNode, TodoItem,

@@ -1,6 +1,8 @@
+import { executeToolFixture } from '@berry-ai/harness-tool-testkit'
 // Proves `allowParallelInProgress` is real configurability and not a constant:
 // the flag is set in a cordis.yml booted through the real Loader, and both faces
 // it controls — the model-facing description and the accepted input — follow it.
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -17,7 +19,7 @@ import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import * as ToolTodo from '@berry-ai/harness-tool-todo'
-import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
+import { unsupportedModel, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 
 let root: string | undefined
 let context: Context | undefined
@@ -34,7 +36,8 @@ async function agent(ctx: Context): Promise<Agent> {
   const id = SessionId('todo-loader-agent')
   const session = Session.create(id)
   const value: Agent = {
-    id, options: {}, session, inbox: unsupportedInbox(),
+    id, options: {}, session, model: unsupportedModel(),
+    inbox: unsupportedInbox(),
     status: 'idle', ctx: scope.ctx,
     followup: () => {}, steer: () => {}, inject: () => {}, send: () => {}, cancel() {},
     runMaintenance: task => task(new AbortController().signal),
@@ -60,6 +63,7 @@ async function boot(configLines: readonly string[]): Promise<Context> {
     "- name: '@berry-ai/harness-agent'",
     "- name: '@berry-ai/harness-system-prompt'",
     "- name: '@berry-ai/harness-tools'",
+    "- name: '@berry-ai/harness-tool-executor-native'",
     "- name: '@berry-ai/harness-session-projection'",
     "- name: '@berry-ai/harness-tool-todo'",
     ...configLines.length > 0 ? ['  config:', ...configLines] : [],
@@ -75,6 +79,7 @@ async function boot(configLines: readonly string[]): Promise<Context> {
     ['@berry-ai/harness-agent', AgentRegistry],
     ['@berry-ai/harness-system-prompt', SystemPrompt],
     ['@berry-ai/harness-tools', ToolRuntime],
+    ['@berry-ai/harness-tool-executor-native', NativeToolExecutor],
     ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
     ['@berry-ai/harness-tool-todo', ToolTodo],
   ])
@@ -104,7 +109,7 @@ describe('tool-todo real Loader composition through cordis.yml', () => {
     expect(description).not.toContain('several only')
 
     const owner = await agent(ctx)
-    const result = await ctx.tools.execute({
+    const result = await executeToolFixture(ctx, {
       signal: new AbortController().signal,
       callId: ToolCallId('parallel'),
       name: 'todo_write',
@@ -122,7 +127,7 @@ describe('tool-todo real Loader composition through cordis.yml', () => {
     expect(description).toContain('several only when work runs in parallel')
 
     const owner = await agent(ctx)
-    const result = await ctx.tools.execute({
+    const result = await executeToolFixture(ctx, {
       signal: new AbortController().signal,
       callId: ToolCallId('parallel-enabled'),
       name: 'todo_write',

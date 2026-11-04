@@ -17,7 +17,7 @@ const { LlmAdapter, createUserMessage } = await import(pathToFileURL(require.res
 const observed = []
 const { runProfile } = await import(pathToFileURL(require.resolve('@berry-ai/harness/profile-boot')).href)
 const { loadLayeredEnv, loadProfileDirectory } = await import(pathToFileURL(require.resolve('@berry-ai/harness-app-boot')).href)
-const installAnchor = require.resolve('@deepseek-ai/dsh/package.json')
+const installAnchor = require.resolve('@berry-ai/harness/package.json')
 const running = await runProfile({ environment: loadLayeredEnv('dsh'), profile: 'desktop',
   resolvedProfile: { profile: loadProfileDirectory('dsh', project, installAnchor), installAnchor },
   patchFiles: [], args: ['--no-open', '--port', '0'] })

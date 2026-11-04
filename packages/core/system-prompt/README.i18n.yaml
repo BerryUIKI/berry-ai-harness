@@ -21,8 +21,8 @@
   en: 378b30988ca88fea
   zh: b3090cd5056c5eb8
 /berry-ai-harness-system-prompt/use-this-package/contribute-a-prompt-section:
-  en: 165fecb5329b00b6
-  zh: a7c595d1787916c9
+  en: ef415fcd9e1cf8bb
+  zh: 6ad4df288f91bdb1
 /berry-ai-harness-system-prompt/use-this-package/contribute-a-prompt-variable:
   en: b3e4c9b4ced59488
   zh: d80c791e72bd5821
@@ -42,8 +42,8 @@
   en: d9575bcb07a1145b
   zh: 0f1a388780d055b1
 /berry-ai-harness-system-prompt/understand-the-implementation/assembly-and-rendering:
-  en: 54977e6c431f851e
-  zh: ef60007054b97ff0
+  en: d51940213af9b87f
+  zh: f3a2540010624a79
 /berry-ai-harness-system-prompt/understand-the-implementation/scoping:
   en: 1100ab1dfe961631
   zh: c510275c893951b4
@@ -57,8 +57,8 @@
   en: cf78b9dd5596495f
   zh: bd44560f8c2435e8
 /berry-ai-harness-system-prompt/model-experience/system-prompt/what-the-model-sees:
-  en: 0aaabee3a9883eea
-  zh: 13e6ead5b455fa30
+  en: 622e83de7772dc1f
+  zh: 7b3c54f08a317e93
 /berry-ai-harness-system-prompt/model-experience/system-prompt/what-the-model-sees/harness-identity:
   en: 40effd71cb503319
   zh: 9969356237a4f398
@@ -66,14 +66,14 @@
   en: 29722e212137deaa
   zh: 92cd0f1a16b10315
 /berry-ai-harness-system-prompt/model-experience/system-prompt/kv-cache-effect:
-  en: ae980c28b57dc060
-  zh: 331eea5b204fa9ac
+  en: 52fa5a522891ec6b
+  zh: 5c5c18359aaaf3db
 /berry-ai-harness-system-prompt/model-experience/tool-schemas:
   en: 3039bc5e7a796b21
   zh: 6b7a9eaf69c9ea53
 /berry-ai-harness-system-prompt/model-experience/tool-schemas/what-the-model-sees:
-  en: af6add06a10be50b
-  zh: 5412954dbf4613ba
+  en: a942b1f1c86403e0
+  zh: 3e4225f7fdb39516
 /berry-ai-harness-system-prompt/model-experience/tool-schemas/token-effect:
   en: f3a7d374c55e1720
   zh: 0ee48af678cb875f

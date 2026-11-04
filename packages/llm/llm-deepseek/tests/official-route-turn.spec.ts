@@ -8,6 +8,7 @@ import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
 import ToolRuntime from '@berry-ai/harness-tools'
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import * as DeepSeek from '@berry-ai/harness-llm-deepseek-api-key'
 
 const contexts: Context[] = []
@@ -25,6 +26,7 @@ it('records the prompt and fails the request when the official endpoint has a ma
   for (const plugin of [LlmRuntime, SessionStore, SessionProjectionRegistry, SystemPrompt, ToolRuntime, AgentRegistry]) {
     await ctx.plugin(plugin)
   }
+  await ctx.plugin(NativeToolExecutor)
   await ctx.plugin(AgentLoop, { agents: [] })
   await ctx.plugin(DeepSeek, {})
   const agent = await ctx.agentLoop.create(SessionId('malformed-official-key'), { provider: 'deepseek-official', model: 'deepseek-flash' })

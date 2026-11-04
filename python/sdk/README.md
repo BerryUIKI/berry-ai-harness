@@ -2,10 +2,10 @@
 
 English | [中文](README.zh.md)
 
-Python subprocess SDK for driving DeepSeek Harness over newline-delimited JSON-RPC on stdio. Install `deepseek-harness-sdk`; it installs the exact same-version `deepseek-harness-runtime-bin` wheel for the current platform.
+Python subprocess SDK for driving DeepSeek Harness over newline-delimited JSON-RPC on stdio. Install `berry-ai-harness-sdk`; it installs the exact same-version `berry-ai-harness-runtime-bin` wheel for the current platform.
 
 ```sh
-python -m pip install deepseek-harness-sdk
+python -m pip install berry-ai-harness-sdk
 ```
 
 ## Optional Office operations
@@ -13,8 +13,8 @@ python -m pip install deepseek-harness-sdk
 Download the Office runtime explicitly, then call the local API without an agent, Session, model request, API key, or Harness home:
 
 ```py
-from deepseek_harness_runtime import download_office
-from deepseek_harness.office import convert, recalculate, render_images
+from berry_ai_harness_runtime import download_office
+from berry_ai_harness.office import convert, recalculate, render_images
 
 download_office()
 pdf = convert("report.docx", "report.pdf")
@@ -24,16 +24,16 @@ preview = render_images("report.docx", "report-preview", pages=[1])
 
 The output file or image directory must not exist. Successful outputs belong to the caller; Kit removes failed outputs. `OfficeOptions` supplies operation limits and font preferences. Results expose typed paths, missing fonts, and image metadata. `OfficeError` retains CLI failure codes; malformed results raise `SdkProtocolError`. Recalculation does not verify business logic or Excel fidelity. Ctrl+C waits for CLI cleanup; a second interrupt forces termination and may leave partial output. Windows requires an absolute `SystemRoot` and a shared console for Ctrl+C delivery.
 
-The authoring environment is independently optional through `deepseek_harness_runtime.download_primary_runtime()`. See the [runtime reference](../sdk-runtime/README.md) for cache selection, resource activation, and download behavior. SDK startup and Office operations never acquire missing resources automatically.
+The authoring environment is independently optional through `berry_ai_harness_runtime.download_primary_runtime()`. See the [runtime reference](../sdk-runtime/README.md) for cache selection, resource activation, and download behavior. SDK startup and Office operations never acquire missing resources automatically.
 
 ## Start a runtime
 
-The Python SDK has no separate application entrypoint. It launches the bundled `dsh` CLI with `--profile sdk`; the selected profile owns the JSON-RPC server, agent composition, credentials, persistence, tools, and shutdown behavior.
+The Python SDK has no separate application entrypoint. It launches the bundled `berry` CLI with `--profile sdk`; the selected profile owns the JSON-RPC server, agent composition, credentials, persistence, tools, and shutdown behavior.
 
-Every launch requires an explicit Harness home. Pass `dsh_home` or provide a non-empty `DSH_HOME` in the child environment. The SDK deliberately never discovers `~/.dsh`.
+Every launch requires an explicit Harness home. Pass `dsh_home` or provide a non-empty `BERRY_HOME` or `DSH_HOME` in the child environment. The SDK deliberately never discovers a default home.
 
 ```py
-from deepseek_harness import DeepSeekHarness
+from berry_ai_harness import DeepSeekHarness
 
 with DeepSeekHarness(
     dsh_home="/absolute/path/to/isolated-dsh-home",
@@ -58,17 +58,38 @@ with DeepSeekHarness(dsh_home="/absolute/path/to/saved-home") as harness:
     result = session.run("Continue the task.")
 ```
 
+<a id="client-approvals"></a>
+## Client approvals
+
+This low-level example receives one approval and rejects it. Use a dedicated request-handling thread or loop for a full run: `next_request()` blocks, and the request handler must run concurrently with `session/wait` or a high-level `run()`. Set `approval_requests=True` on `HarnessClient.initialize()` or `DeepSeekHarnessConfig` only when that handler is ready. Omission preserves the runtime's answerer chain. Decisions are one-shot; invalid responses and lost connections fail closed, and cancellation discards late replies. `ApprovalRequestResult` validates response values when constructing decisions.
+
+```py
+from berry_ai_harness import ApprovalRequestParams, HarnessClient, HarnessConfig
+
+with HarnessClient(HarnessConfig(dsh_home="/absolute/path/to/dsh-home")) as client:
+    client.initialize(cwd="/absolute/path/to/workspace", provider="deepseek-official",
+                      model="deepseek-v4-flash", approval_requests=True)
+    client.session_prompt("main", [{"type": "text", "text": "Run the operation requiring approval."}])
+    request = client.next_request()
+    if request.method == "approval/request":
+        question = ApprovalRequestParams.model_validate(request.payload)
+        print(question.toolName, question.reason)
+        client.respond(request.id, {"outcome": "rejected"})
+    else:
+        client.respond_error(request.id, code=-32601, message="Unsupported client request")
+```
+
 ## Customize plugins
 
-Persistent customization belongs to a `dsh` profile. Initialize the shipped SDK profile and install an external bundle with the runtime wheel's `dsh` command:
+Persistent customization belongs to a `berry` profile. Initialize the shipped SDK profile and install an external bundle with the runtime wheel's `berry` command:
 
 ```sh
-export DSH_HOME=/absolute/path/to/isolated-dsh-home
+export BERRY_HOME=/absolute/path/to/isolated-berry-home
 dsh --profile sdk --dump-default-config >/dev/null
 dsh plugin --profile sdk add file:/absolute/path/to/my-plugin-bundle
 ```
 
-The `file:` form installs the local bundle into the profile package tree, where its peer imports reach the bundled installation fallback. The profile manifest records installed dependencies and ordered bundle layers; its `$DSH_HOME/profiles/sdk/cordis.patch.yml` is the persistent user patch. `dsh plugin` needs `pnpm` only when managing external packages. Running the SDK does not require system Node.js.
+The `file:` form installs the local bundle into the profile package tree, where its peer imports reach the bundled installation fallback. The profile manifest records installed dependencies and ordered bundle layers; its `$BERRY_HOME/profiles/sdk/cordis.patch.yml` is the persistent user patch. `berry plugin` needs `pnpm` only when managing external packages. Running the SDK does not require system Node.js.
 
 For an invocation-specific change, pass one or more patch files. They become absolute and are forwarded in order after the profile and home patch layers:
 
@@ -81,11 +102,17 @@ with DeepSeekHarness(
     result = harness.run("Make the requested code change.")
 ```
 
-`profile` may select another existing profile, but that composition must retain `@berry-ai/harness-sdk-app` or another `@berry-ai/harness-sdk-jsonrpc-server` row. Misconfiguration fails during CLI boot or SDK initialization; there is no complete-config fallback. `dsh_bin` may select another `dsh` executable while preserving the same profile grammar. Arbitrary argv replacement remains an internal fake-runtime test adapter, not public API.
+`profile` may select another existing profile, but that composition must retain `@berry-ai/harness-sdk-app` or another `@berry-ai/harness-sdk-jsonrpc-server` row. Misconfiguration fails during CLI boot or SDK initialization; there is no complete-config fallback. `dsh_bin` may select another `berry` executable while preserving the same profile grammar. Arbitrary argv replacement remains an internal fake-runtime test adapter, not public API.
 
 `provider` selects a provider route registered by the chosen Cordis composition; `model` is the model id resolved by that adapter. `reasoning_effort` is an optional non-empty adapter-owned identifier for that exact route; omission preserves the model's own default. `max_tokens` is an optional positive per-request output-token cap for the root agent and its in-process descendants; omission leaves the provider default in control. Initialization rejects a missing adapter, unavailable model, or unsupported effort before a prompt runs. Compaction summaries keep the separate limit configured by their compaction plugin. The bundled default composition registers `deepseek-official`. A custom composition can mount `llm-pi-ai`, configure provider-specific credentials/endpoints there, and select any provider/model present in pi-ai's installed catalog.
 
 The shipped `sdk-minimal` profile is a standalone explicit tree rather than an overlay on `dsh-base`. Select it with `profile="sdk-minimal"`; the ordinary `model` argument is the sole runtime model selection, including for model ids outside the adapter's advisory catalog. It provides a platform-selected persistent shell, `read_image`, `working_directory`, local execution, JSONL sessions, and automatic compaction. Text file tools, settings, managed credentials, telemetry, Web tools, and the full default tool roster remain available through the separate full `sdk` and `web` profiles. SDK prompt text does not execute `/compact`.
+
+## Native user questions
+
+Pass `on_user_question` to `DeepSeekHarnessConfig`, `DeepSeekHarness`, or `HarnessConfig` to answer the built-in `ask_user_question` tool through the native SDK protocol. The callback receives a `UserQuestionRequest` (`request_id`, `session_id`, and the original `questions`) and a `threading.Event` signalling cancellation. Return `UserQuestionAnswer` or a JSON object shaped as `{"answers": [{"id": "question-id", "selected": ["option label"], "custom": "optional free text"}]}`. Each original question id must appear exactly once. The application supplies its UI or simulated-user policy; the SDK does not choose answers.
+
+Callbacks run on separate threads so the reader can process cancellation and other requests. They may run concurrently and may make further client requests. Release callback-owned work when the cancellation Event is set. Closing the client signals outstanding callbacks and gives their workers a shared 0.5-second join window; callbacks that ignore cancellation may continue, but their late answers cannot reach the runtime or a later process. A callback exception becomes a protocol error, and an absent callback retains existing native answerers or reports `NO_PROVIDER`.
 
 ## Results and notifications
 
@@ -93,7 +120,7 @@ The shipped `sdk-minimal` profile is a standalone explicit tree rather than an o
 
 `HarnessClient` retains discovered subagent ancestry for the runtime process lifetime. During `Session.run()`, `RunResult.notifications` and `on_notification` receive the root session and known descendants in wire order. `RunResult.events` contains root-session events only, so descendant output cannot replace the root response. The low-level `session_prompt()` returns the queued message id immediately; callers that bypass `Session.run()` own the later activity boundary.
 
-The selected home stores profiles, plugins, and every profile-owned durable resource. The full `sdk` profile uses its credentials, settings, and session stores; `sdk-minimal` uses JSONL session storage and stores images under `$DSH_HOME/attachments/v1`, with request-image cache under `$DSH_HOME/cache/attachments`. Use a fresh home when those resources must be isolated, and a fresh session id for independent work. Reusing both a harness and session id continues the durable conversation and session-owned resources.
+The selected home stores profiles, plugins, and every profile-owned durable resource. The full `sdk` profile uses its credentials, settings, and session stores; `sdk-minimal` uses JSONL session storage and stores images under `$BERRY_HOME/attachments/v1`, with request-image cache under `$BERRY_HOME/cache/attachments`. Use a fresh home when those resources must be isolated, and a fresh session id for independent work. Reusing both a harness and session id continues the durable conversation and session-owned resources.
 
 See the [Python tutorial](../../docs/user/guide/python-sdk.md), [runnable example](examples/README.md), and [runtime wheel reference](../sdk-runtime/README.md).
 

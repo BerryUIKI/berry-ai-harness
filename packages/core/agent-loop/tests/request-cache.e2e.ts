@@ -1,10 +1,12 @@
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import LlmRuntime from '@berry-ai/harness-llm'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
-import ToolRuntime, { defineContentToolFixture } from '@berry-ai/harness-tools'
+import ToolRuntime from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import AgentRegistry, { type Agent } from '@berry-ai/harness-agent'
 
 import AgentLoop from '@berry-ai/harness-agent-loop'
@@ -45,6 +47,7 @@ async function loopHarness(): Promise<Context> {
   await created.plugin(SessionProjectionRegistry)
   await created.plugin(SystemPrompt, { personaPrefix: SYSTEM })
   await created.plugin(ToolRuntime)
+  await created.plugin(NativeToolExecutor)
   await created.plugin(AgentRegistry)
   await created.plugin(AgentLoop, { agents: [] })
   await created.plugin(LlmDeepSeek)

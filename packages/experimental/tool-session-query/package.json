@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-tool-session-query",
   "description": "Workspace-authorized model-facing session history search, trace, and event read tools",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -19,9 +19,11 @@
       "default": "./lib/index.js"
     },
     "./src/*": "./src/*",
+    "./locale/*.json": "./locale/*.json",
     "./package.json": "./package.json"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/types/**/*.d.ts"
   ],
@@ -31,11 +33,11 @@
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
-    "@berry-ai/harness-tools": "workspace:*"
+    "@berry-ai/harness-tools": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-brand": "workspace:*",
@@ -56,6 +58,8 @@
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-timeout": "workspace:*",
     "@berry-ai/harness-tool-call-timeout-policy": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*"
   }
 }

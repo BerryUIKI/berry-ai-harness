@@ -35,7 +35,8 @@ artifacts = [
 exclude = ["src/berry_ai_harness_runtime/runtime/node"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/berry_ai_harness_runtime"]
+# Ship the legacy import name beside the berry modules so older callers keep working.
+packages = ["src/berry_ai_harness_runtime", "src/deepseek_harness_runtime"]
 # The release job uses Twine 6.2.0, which accepts core metadata through 2.4.
 core-metadata-version = "2.4"
 

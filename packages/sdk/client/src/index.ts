@@ -22,6 +22,8 @@ export { JsonRpcResponseError } from '@berry-ai/harness-sdk-protocol'
 export type {
   ContentBlock,
   SdkPromptContentBlock,
+  SdkUserQuestionAnswer,
+  SdkUserQuestionRequest,
   DeepSeekHarnessOptions,
   HarnessClientOptions,
   HarnessNotification,

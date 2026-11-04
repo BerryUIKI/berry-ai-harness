@@ -39,7 +39,7 @@ function packageSetProject(): {
   const dshBody = Buffer.from('dsh')
   const baseBody = Buffer.from('base')
   const hostBody = Buffer.from('host')
-  const dsh = record('@deepseek-ai/dsh', 'dsh.tgz', dshBody)
+  const dsh = record('@berry-ai/harness', 'dsh.tgz', dshBody)
   const base = record('@berry-ai/harness-base', 'dsh-base.tgz', baseBody)
   const host = record('@berry-ai/harness-desktop-host', 'dsh-desktop-host.tgz', hostBody)
   writeFileSync(join(packageDir, dsh.file), dshBody)
@@ -62,7 +62,7 @@ describe('desktop core package set', () => {
     const packageSet = verifyDesktopCorePackageSet(root, '1.2.3')
     expect(desktopDshPackageSpec(packageSet)).toBe('file:./desktop-packages/dsh.tgz')
     expect(desktopCorePackageOverrides(packageSet)).toEqual({
-      '@deepseek-ai/dsh': 'file:./desktop-packages/dsh.tgz',
+      '@berry-ai/harness': 'file:./desktop-packages/dsh.tgz',
       '@berry-ai/harness-base': 'file:./desktop-packages/dsh-base.tgz',
       '@berry-ai/harness-desktop-host': 'file:./desktop-packages/dsh-desktop-host.tgz',
     })
@@ -84,18 +84,18 @@ describe('desktop core package set', () => {
   })
 
   it('rejects registry resolutions for names supplied by the local package set', () => {
-    const dsh = record('@deepseek-ai/dsh', 'dsh.tgz', Buffer.from('dsh'))
+    const dsh = record('@berry-ai/harness', 'dsh.tgz', Buffer.from('dsh'))
     const host = record('@berry-ai/harness-desktop-host', 'host.tgz', Buffer.from('host'))
     const packageSet = parseDesktopCorePackageSet({ schemaVersion: 1, packages: [host, dsh] })
     expect(() => {
       verifyDesktopCoreLockfile(
-        "packages:\n  '@deepseek-ai/dsh@file:desktop-packages/dsh.tgz':\n    resolution: {}\n",
+        "packages:\n  '@berry-ai/harness@file:desktop-packages/dsh.tgz':\n    resolution: {}\n",
         packageSet,
       )
     }).not.toThrow()
     expect(() => {
       verifyDesktopCoreLockfile(
-        "packages:\n  '@deepseek-ai/dsh@1.2.3':\n    resolution: {integrity: sha512-registry}\n",
+        "packages:\n  '@berry-ai/harness@1.2.3':\n    resolution: {integrity: sha512-registry}\n",
         packageSet,
       )
     }).toThrow(/outside the local package set/u)

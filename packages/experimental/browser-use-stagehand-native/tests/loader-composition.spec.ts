@@ -1,5 +1,6 @@
 /** A real Loader and AgentLoop exercise independently configured browser inference and durable screenshots. */
 
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -78,8 +79,10 @@ it('loads browser tools from cordis.yml, logs browser results, and admits the sc
     ['@berry-ai/harness-llm', LlmRuntime],
     ['@berry-ai/harness-session', SessionStore],
     ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
+
     ['@berry-ai/harness-system-prompt', SystemPrompt],
     ['@berry-ai/harness-tools', ToolRuntime],
+    ['@berry-ai/harness-tool-executor-native', NativeToolExecutor],
     ['@berry-ai/harness-agent', AgentRegistry],
     ['@berry-ai/harness-agent-loop', AgentLoop],
     ['@berry-ai/harness-attachment-local', LocalAttachmentStore],

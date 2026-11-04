@@ -1,8 +1,13 @@
 /** Experimental package identities, publication policy, and retained npm names. */
 
-/** Existing npm names retained by capabilities now housed under experimental/. */
+/**
+ * Experimental packages whose npm names omit the experimental prefix, by directory: identities retained across
+ * experimental classification and package-role moves, and packages named without the prefix so that leaving
+ * experimental status keeps their names.
+ */
 export const EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS: Readonly<Record<string, string>> = {
   'packages/experimental/cua': '@berry-ai/harness-cua',
+  'packages/experimental/cua-bundle': '@berry-ai/harness-cua-bundle',
   'packages/experimental/tool-session-query': '@berry-ai/harness-tool-session-query',
   'packages/experimental/session-title-all-prompts-llm': '@berry-ai/harness-session-title-all-prompts-llm',
   'packages/experimental/tool-terminal': '@berry-ai/harness-tool-terminal',
@@ -13,6 +18,13 @@ export const EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS: Readonly<Record<string, strin
   'packages/experimental/hooks-codex': '@berry-ai/harness-hooks-codex',
   'packages/experimental/webhook': '@berry-ai/harness-webhook',
   'packages/experimental/webhook-github': '@berry-ai/harness-webhook-github',
+  'packages/experimental/action-cards': '@berry-ai/harness-action-cards',
+  'packages/experimental/client-ui-action-cards': '@berry-ai/harness-client-ui-action-cards',
+  'packages/experimental/creation-recommendations': '@berry-ai/harness-creation-recommendations',
+  'packages/experimental/client-ui-creation-recommendations': '@berry-ai/harness-client-ui-creation-recommendations',
+  'packages/experimental/plugin-recommendations': '@berry-ai/harness-plugin-recommendations',
+  'packages/experimental/client-ui-plugin-recommendations': '@berry-ai/harness-client-ui-plugin-recommendations',
+  'packages/experimental/personalized-recommendations': '@berry-ai/harness-personalized-recommendations',
 } satisfies Record<`packages/experimental/${string}`, `@berry-ai/harness-${string}`>
 
 /** npm namespace for experimental packages without retained-name exceptions. */

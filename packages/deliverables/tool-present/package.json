@@ -1,13 +1,13 @@
 {
   "name": "@berry-ai/harness-tool-present",
   "description": "Explicit workspace file delivery declarations for the DeepSeek Harness",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BerryUIKI/berry-ai-harness.git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
     "directory": "packages/deliverables/tool-present"
   },
   "type": "module",
@@ -42,9 +42,9 @@
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
-    "@berry-ai/harness-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -53,12 +53,14 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",
     "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
-    "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
-    "@berry-ai/harness-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*"
   }
 }

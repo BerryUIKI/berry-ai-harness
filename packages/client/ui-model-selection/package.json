@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-model-selection",
   "description": "Model selection over the shared model catalog, Session projection, and session.selectModel",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -46,6 +46,7 @@
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
+    "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-api-remotes": "workspace:*",
     "@berry-ai/harness-api-session-controller": "workspace:*",
     "@berry-ai/harness-client-locale": "workspace:*",

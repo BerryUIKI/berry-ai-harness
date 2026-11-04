@@ -3,7 +3,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
 import type { Agent, AgentCancelCause, AgentStatus, CancelOptions } from '@berry-ai/harness-agent'
-import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
+import { unsupportedModel, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import type { Session } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
@@ -34,6 +34,7 @@ async function liveAgent(ctx: Context, session: Session, initial: AgentStatus): 
     id: session.id,
     options: {},
     session,
+    model: unsupportedModel(),
     inbox: unsupportedInbox(),
     get status() { return status },
     ctx,

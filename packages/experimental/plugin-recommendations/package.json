@@ -1,0 +1,75 @@
+{
+  "name": "@berry-ai/harness-plugin-recommendations",
+  "description": "Official plugin suggestions with explicit user activation and persistent conversation decisions",
+  "version": "0.2.2-alpha.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/experimental/plugin-recommendations"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./types": {
+      "types": "./lib/types/types.d.ts",
+      "default": "./lib/types/types.js"
+    },
+    "./typert": {
+      "types": "./lib/typert.host.d.ts",
+      "default": "./lib/typert.host.js"
+    },
+    "./remote": {
+      "types": "./lib/typert.remote-client.d.ts",
+      "default": "./lib/typert.remote-client.js"
+    },
+    "./skills/*.md": "./skills/*.md"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-plugin-manager": "workspace:*",
+    "@berry-ai/harness-package-manifest": "workspace:*",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
+    "@berry-ai/harness-skill": "workspace:*"
+  },
+  "dependencies": {
+    "zod": "4.4.3",
+    "@berry-ai/harness-client-ui-plugin-recommendations": "workspace:*",
+    "@berry-ai/harness-action-cards": "workspace:*",
+    "@berry-ai/harness-client-ui-action-cards": "workspace:*"
+  },
+  "files": [
+    "icon.svg",
+    "locale/*.json",
+    "lib/index.js",
+    "skills/*.md",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts",
+    "lib/typert.host.js",
+    "lib/typert.host.d.ts",
+    "lib/typert.remote-client.js",
+    "lib/typert.remote-client.d.ts"
+  ],
+  "icon": "./icon.svg"
+}

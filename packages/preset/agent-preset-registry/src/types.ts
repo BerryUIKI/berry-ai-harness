@@ -48,9 +48,6 @@ declare module '@berry-ai/harness-typert-protocol' {
 }
 
 declare module '@berry-ai/harness-session-projection/types' {
-  interface SessionProjectionStateMap {
-    agentPreset: string | null
-  }
   interface SessionProjectionMap {
     /** Preset the Session runs, or null when the deployment composes none. */
     agentPreset: string | null

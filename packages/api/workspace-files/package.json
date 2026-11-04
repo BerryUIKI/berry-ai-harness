@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-api-workspace-files",
   "description": "Workspace file service and Client resource provider: bounded reads, directory listing, and live metadata over the workspaceFiles Remote namespace",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -64,6 +64,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-api-gateway": "workspace:*",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
     "@berry-ai/harness-client-connection": "workspace:*",
     "@berry-ai/harness-client-resources": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
@@ -72,8 +73,7 @@
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-persistence": "workspace:*",
-    "@berry-ai/harness-util-workspace-path": "workspace:*",
-    "@berry-ai/harness-api-remote-access": "workspace:*"
+    "@berry-ai/harness-util-workspace-path": "workspace:*"
   },
   "files": [
     "locale/*.json",

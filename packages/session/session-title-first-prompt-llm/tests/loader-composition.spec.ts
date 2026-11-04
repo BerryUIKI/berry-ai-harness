@@ -12,6 +12,7 @@ import * as LlmPiAi from '@berry-ai/harness-llm-pi-ai'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import type { Session, SessionSeq } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
+import AgentRegistry from '@berry-ai/harness-agent'
 import SessionTitleService from '@berry-ai/harness-session-title'
 import * as providerPlugin from '@berry-ai/harness-session-title-first-prompt-llm'
 import { anthropicTextEvents, closeMockServers, mockServer } from '../../../llm/llm-pi-ai/tests/mock-server.ts'
@@ -56,6 +57,7 @@ async function loadComposition(
     "- name: '@berry-ai/harness-llm'",
     "- name: '@berry-ai/harness-session'",
     "- name: '@berry-ai/harness-session-projection'",
+    "- name: '@berry-ai/harness-agent'",
     "- name: '@berry-ai/harness-session-title'",
     '  config:',
     '    fallbackMaxWords: 5',
@@ -78,6 +80,7 @@ async function loadComposition(
     ['@berry-ai/harness-llm', LlmRuntime],
     ['@berry-ai/harness-session', SessionStore],
     ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
+    ['@berry-ai/harness-agent', AgentRegistry],
     ['@berry-ai/harness-session-title', SessionTitleService],
     ['@berry-ai/harness-session-title-first-prompt-llm', providerPlugin],
     ...entryModules,

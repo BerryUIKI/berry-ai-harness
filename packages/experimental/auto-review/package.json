@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-auto-review",
   "description": "Per-tool LLM authorization review for the DeepSeek Harness Auto permission preset",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "icon": "./icon.svg",
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "files": [
     "icon.svg",
     "locale/*.json",
+    "docs",
     "lib/index.js",
     "cordis.patch.yml",
     "lib/types/**/*.d.ts"
@@ -67,8 +68,11 @@
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-tool-bash": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*",
     "@berry-ai/harness-tool-fs": "workspace:*",
     "@berry-ai/harness-tool-subagent": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",

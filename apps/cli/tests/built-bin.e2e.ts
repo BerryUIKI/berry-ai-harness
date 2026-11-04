@@ -1274,6 +1274,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
         ['session-title', '@berry-ai/harness-session-title'],
         ['system-prompt', '@berry-ai/harness-system-prompt'],
         ['tools', '@berry-ai/harness-tools'],
+        ['tool-executor-native', '@berry-ai/harness-tool-executor-native'],
         ['mcp-resources', '@berry-ai/harness-mcp-resources'],
         ['agent', '@berry-ai/harness-agent'],
         ['llm-retry', '@berry-ai/harness-llm-retry'],
@@ -1282,6 +1283,7 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
         ['persistent-bash', '@berry-ai/harness-tool-bash-persistent'],
         ['persistent-pwsh', '@berry-ai/harness-tool-pwsh-persistent'],
         ['sessions', '@berry-ai/harness-session-persistence-jsonl'],
+        ['session-checkpoint-policy', '@berry-ai/harness-session-checkpoint-policy'],
       ])
       expect(stdout).toContain('# == @berry-ai/harness-sdk-minimal')
       expect(stdout).not.toContain('@berry-ai/harness-base')

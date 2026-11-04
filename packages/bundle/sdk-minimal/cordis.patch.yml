@@ -120,11 +120,15 @@
     - id: tools
       name: '@berry-ai/harness-tools'
 
+    - id: tool-executor-native
+      name: '@berry-ai/harness-tool-executor-native'
+
     - id: mcp-resources
       name: '@berry-ai/harness-mcp-resources'
 
     - id: agent
       name: '@berry-ai/harness-agent'
+
 
     - id: llm-retry
       name: '@berry-ai/harness-llm-retry'
@@ -170,3 +174,6 @@
       config:
         root: !!js dshHomePath('sessions')
         compression: none
+
+    - id: session-checkpoint-policy
+      name: '@berry-ai/harness-session-checkpoint-policy'

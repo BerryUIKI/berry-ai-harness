@@ -1,0 +1,126 @@
+{
+  "name": "@berry-ai/harness-experimental-client-ui-forge",
+  "description": "Sidebar panel for a Session's change requests, with a worktree option for new Sessions and its Host Remote",
+  "version": "0.2.2-alpha.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/experimental/client-ui-forge"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./remote": {
+      "types": "./lib/typert.remote-client.d.ts",
+      "default": "./lib/typert.remote-client.js"
+    },
+    "./typert": {
+      "types": "./lib/typert.host.d.ts",
+      "default": "./lib/typert.host.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./types": {
+      "types": "./lib/types/types.d.ts"
+    }
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@berry-ai/harness-api-remotes",
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-conversation",
+        "@berry-ai/harness-client-ui-layout",
+        "@berry-ai/harness-client-ui-sidebar-right",
+        "@berry-ai/harness-client-ui-workspace"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-experimental-worktree": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-timeout": "workspace:*",
+    "@berry-ai/harness-experimental-forge": "workspace:*",
+    "@berry-ai/harness-fs": "workspace:*"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "workspace:~",
+    "@berry-ai/harness-util-values": "workspace:*",
+    "diff": "^9.0.0",
+    "zod": "^4.4.3",
+    "@berry-ai/harness-typert-protocol": "workspace:*",
+    "@berry-ai/harness-storage-domain": "workspace:*"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
+    "@berry-ai/harness-api-remotes": "workspace:*",
+    "@berry-ai/harness-api-session-controller": "workspace:*",
+    "@berry-ai/harness-client-locale": "workspace:*",
+    "@berry-ai/harness-client-store": "workspace:*",
+    "@berry-ai/harness-client-test-runtime": "workspace:*",
+    "@berry-ai/harness-client-ui-conversation": "workspace:*",
+    "@berry-ai/harness-client-ui-layout": "workspace:*",
+    "@berry-ai/harness-client-ui-primitives": "workspace:*",
+    "@berry-ai/harness-client-ui-renderer": "workspace:*",
+    "@berry-ai/harness-client-ui-session": "workspace:*",
+    "@berry-ai/harness-client-ui-sidebar-right": "workspace:*",
+    "@berry-ai/harness-client-ui-slots": "workspace:*",
+    "@berry-ai/harness-client-ui-workspace": "workspace:*",
+    "@berry-ai/harness-experimental-forge": "workspace:*",
+    "@berry-ai/harness-experimental-forge-session": "workspace:*",
+    "@berry-ai/harness-experimental-worktree": "workspace:*",
+    "@berry-ai/harness-fs": "workspace:*",
+    "@berry-ai/harness-fs-local": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-sandbox": "workspace:*",
+    "@berry-ai/harness-sandbox-local": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-subprocess": "workspace:*",
+    "@berry-ai/harness-subprocess-local": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-util-workspace-path": "workspace:*",
+    "@berry-ai/harness-working-directory": "workspace:*",
+    "@testing-library/react": "^16.3.3",
+    "clsx": "^2.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@berry-ai/harness-timeout": "workspace:*",
+    "@berry-ai/harness-session-projection-cache": "workspace:*",
+    "@berry-ai/harness-session-query": "workspace:*",
+    "@berry-ai/harness-api-remote-access": "workspace:*"
+  },
+  "files": [
+    "locale/*.json",
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts",
+    "lib/typert.host.js",
+    "lib/typert.host.d.ts",
+    "lib/typert.remote-client.js",
+    "lib/typert.remote-client.d.ts"
+  ]
+}

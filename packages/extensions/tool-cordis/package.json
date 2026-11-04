@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-tool-cordis",
   "description": "Read-only runtime API inspection for Harness plugin development",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -51,6 +51,7 @@
     "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-cordis-host-runner": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~"
   }

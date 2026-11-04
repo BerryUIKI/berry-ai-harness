@@ -146,8 +146,6 @@ flowchart LR
   cfg --> plugin_dsh_base_subagent_fork_in_process
   plugin_dsh_base_tool_subagent_control["tool-subagent-control<br/>@berry-ai/harness-tool-subagent-control"]
   cfg --> plugin_dsh_base_tool_subagent_control
-  plugin_dsh_base_tool_subagent_list_agents["tool-subagent-list-agents<br/>@berry-ai/harness-tool-subagent-control/list-agents"]
-  cfg --> plugin_dsh_base_tool_subagent_list_agents
   plugin_dsh_base_tool_subagent["tool-subagent<br/>@berry-ai/harness-tool-subagent"]
   cfg --> plugin_dsh_base_tool_subagent
   plugin_dsh_base_tool_subagent_fork["tool-subagent-fork<br/>@berry-ai/harness-tool-subagent"]
@@ -190,6 +188,10 @@ flowchart LR
   cfg --> plugin_dsh_base_mcp_resources
   plugin_dsh_base_tools["tools<br/>@berry-ai/harness-tools"]
   cfg --> plugin_dsh_base_tools
+  plugin_dsh_base_tool_executor_native["tool-executor-native<br/>@berry-ai/harness-tool-executor-native"]
+  cfg --> plugin_dsh_base_tool_executor_native
+  plugin_dsh_base_tool_executor_ptc["tool-executor-ptc<br/>@berry-ai/harness-tool-executor-ptc"]
+  cfg --> plugin_dsh_base_tool_executor_ptc
   plugin_dsh_base_system_prompt["system-prompt<br/>@berry-ai/harness-system-prompt"]
   cfg --> plugin_dsh_base_system_prompt
   plugin_dsh_base_agent_loop["agent-loop<br/>@berry-ai/harness-agent-loop"]
@@ -273,7 +275,6 @@ flowchart LR
 | `subagent-spawn-in-process` | `@berry-ai/harness-subagent-spawn-in-process` |
 | `subagent-fork-in-process` | `@berry-ai/harness-subagent-fork-in-process` |
 | `tool-subagent-control` | `@berry-ai/harness-tool-subagent-control` |
-| `tool-subagent-list-agents` | `@berry-ai/harness-tool-subagent-control/list-agents` |
 | `tool-subagent` | `@berry-ai/harness-tool-subagent` |
 | `tool-subagent-fork` | `@berry-ai/harness-tool-subagent` |
 | `ptc-runtime` | `@berry-ai/harness-ptc-runtime-node` |
@@ -295,6 +296,8 @@ flowchart LR
 | `tool-web` | `@berry-ai/harness-tool-web` |
 | `mcp-resources` | `@berry-ai/harness-mcp-resources` |
 | `tools` | `@berry-ai/harness-tools` |
+| `tool-executor-native` | `@berry-ai/harness-tool-executor-native` |
+| `tool-executor-ptc` | `@berry-ai/harness-tool-executor-ptc` |
 | `system-prompt` | `@berry-ai/harness-system-prompt` |
 | `agent-loop` | `@berry-ai/harness-agent-loop` |
 | `fs-sandbox` | `@berry-ai/harness-fs-sandbox` |

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-tool-bash",
   "description": "Model-facing bash tool with optional generic background-job and sandbox-escalation support",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -62,7 +62,10 @@
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-jobs": "workspace:*",
     "@berry-ai/harness-jobs-local": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*",
     "@berry-ai/harness-tool-jobs": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",

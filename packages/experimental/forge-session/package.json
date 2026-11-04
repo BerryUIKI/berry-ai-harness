@@ -1,0 +1,88 @@
+{
+  "name": "@berry-ai/harness-experimental-forge-session",
+  "description": "Binds change requests to the Session that created, pushed, or tracked them",
+  "version": "0.2.2-alpha.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./types": {
+      "types": "./lib/types/types.d.ts"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "locale/*.json",
+    "lib/index.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/experimental/forge-session"
+  },
+  "dependencies": {
+    "@berry-ai/harness-timeout": "workspace:*",
+    "@berry-ai/harness-util-values": "workspace:*",
+    "@deepseek-ai/schemastery": "workspace:~",
+    "shell-quote": "^1.12.0",
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-experimental-forge": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-shell": "workspace:*",
+    "@berry-ai/harness-shell-env": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@deepseek-ai/cordis-plugin-include": "workspace:~",
+    "@deepseek-ai/cordis-plugin-loader": "workspace:~",
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-agent-loop": "workspace:*",
+    "@berry-ai/harness-bash-local": "workspace:*",
+    "@berry-ai/harness-experimental-forge": "workspace:*",
+    "@berry-ai/harness-experimental-forge-github": "workspace:*",
+    "@berry-ai/harness-fs-local": "workspace:*",
+    "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-shell-env": "workspace:*",
+    "@berry-ai/harness-subprocess-local": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tool-bash": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
+    "@berry-ai/harness-working-directory": "workspace:*",
+    "@berry-ai/harness-shell": "workspace:*",
+    "@berry-ai/harness-sandbox-policy": "workspace:*"
+  },
+  "peerDependenciesMeta": {
+    "@berry-ai/harness-shell": {
+      "optional": true
+    },
+    "@berry-ai/harness-shell-env": {
+      "optional": true
+    },
+    "@berry-ai/harness-tools": {
+      "optional": true
+    },
+    "@berry-ai/harness-sandbox-policy": {
+      "optional": true
+    }
+  }
+}

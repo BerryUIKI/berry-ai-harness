@@ -1,0 +1,46 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/experimental/cua-bundle/README.md
+/:
+  en: cc518dcd97629a96
+  zh: 465e999011282dc3
+/berry-ai-harness-cua-bundle:
+  en: 1ccdab19850d40a7
+  zh: 17595d48d52e8ace
+/berry-ai-harness-cua-bundle/summary:
+  en: 5f213491dd724c91
+  zh: 228439436d3b339c
+/berry-ai-harness-cua-bundle/table-of-contents:
+  en: b563e4ec4727d0de
+  zh: d0228da978238e05
+/berry-ai-harness-cua-bundle/use-this-package:
+  en: 05de9f31d7ae97ea
+  zh: 2721b92aeb2d0ff9
+/berry-ai-harness-cua-bundle/understand-the-implementation:
+  en: b1011db52cfc17cd
+  zh: 6fa8798fedc5c0b6
+/berry-ai-harness-cua-bundle/further-exploration:
+  en: 9f15d56b5b16e1ca
+  zh: 75eb08e8828c8877
+/berry-ai-harness-cua-bundle/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/berry-ai-harness-cua-bundle/model-experience/computer-use-in-ptc-sessions:
+  en: e8f11f45b375771e
+  zh: e8f11f45b375771e
+/berry-ai-harness-cua-bundle/model-experience/computer-use-in-ptc-sessions/what-the-model-sees:
+  en: 591af735d1eb92f6
+  zh: 3632bffa33c77b28
+/berry-ai-harness-cua-bundle/model-experience/computer-use-in-ptc-sessions/token-effect:
+  en: e8de232e96220fe7
+  zh: 5c791307e2123667
+/berry-ai-harness-cua-bundle/model-experience/computer-use-in-ptc-sessions/kv-cache-effect:
+  en: 417c40acd93df532
+  zh: 69cc5cf7140c75a9
+/berry-ai-harness-cua-bundle/known-limitations-and-deferred-work:
+  en: 5586cb62bb16d601
+  zh: 8b06372c77d0cd48
+/berry-ai-harness-cua-bundle/known-limitations-and-deferred-work/dev-note:
+  en: 0a1253c6f7b5e8b9
+  zh: ce96645b3e75874e

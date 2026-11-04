@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-sdk-minimal",
   "description": "The standalone minimal SDK profile bundle: JSON-RPC, one DeepSeek adapter, persistent shell, and JSONL sessions",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -37,6 +37,9 @@
     "@deepseek-ai/cordis-plugin-timer": "workspace:~",
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",
+    "@berry-ai/harness-attachment-local": "workspace:*",
+    "@berry-ai/harness-compaction-basic": "workspace:*",
+    "@berry-ai/harness-compaction-image-offload": "workspace:*",
     "@berry-ai/harness-deepseek-llm-api-extensions": "workspace:*",
     "@berry-ai/harness-jobs-local": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
@@ -49,6 +52,7 @@
     "@berry-ai/harness-sdk-app": "workspace:*",
     "@berry-ai/harness-sdk-jsonrpc-server": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-session-checkpoint-policy": "workspace:*",
     "@berry-ai/harness-session-log-deepseek": "workspace:*",
     "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
     "@berry-ai/harness-session-projection": "workspace:*",
@@ -57,17 +61,15 @@
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-terminal": "workspace:*",
     "@berry-ai/harness-terminal-bash": "workspace:*",
+    "@berry-ai/harness-token-meter": "workspace:*",
     "@berry-ai/harness-tool-bash-persistent": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-fs": "workspace:*",
     "@berry-ai/harness-tool-pwsh-persistent": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-working-directory": "workspace:*",
     "@berry-ai/harness-tool-working-directory": "workspace:*",
-    "@berry-ai/harness-fs-local": "workspace:*",
-    "@berry-ai/harness-attachment-local": "workspace:*",
-    "@berry-ai/harness-compaction-basic": "workspace:*",
-    "@berry-ai/harness-compaction-image-offload": "workspace:*",
-    "@berry-ai/harness-token-meter": "workspace:*",
-    "@berry-ai/harness-tool-fs": "workspace:*"
+    "@berry-ai/harness-fs-local": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"

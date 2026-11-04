@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-claude-code-mods",
   "description": "Experimental bridge: load Claude Code mods (hooks modules) and run their hook chains on DeepSeek Harness extension points",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -36,9 +36,11 @@
     },
     "./examples/*": "./examples/*",
     "./src/*": "./src/*",
+    "./locale/*.json": "./locale/*.json",
     "./package.json": "./package.json"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/types/**/*.js",
     "lib/types/**/*.d.ts",
@@ -62,14 +64,14 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-storage-domain": "workspace:*",
     "@berry-ai/harness-subprocess": "workspace:*",
     "@berry-ai/harness-token-meter": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*",
-    "@berry-ai/harness-working-directory": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -93,6 +95,8 @@
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-token-meter": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*",

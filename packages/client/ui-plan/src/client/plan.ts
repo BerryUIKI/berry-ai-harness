@@ -1,4 +1,5 @@
 /** Plan text and resource identities derived from logged native or PTC calls. */
+import type {} from '@berry-ai/harness-tool-executor-ptc/client'
 import type { ToolCallId } from '@berry-ai/harness-llm/brand'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { SessionAddress } from '@berry-ai/harness-api-session-controller/types'

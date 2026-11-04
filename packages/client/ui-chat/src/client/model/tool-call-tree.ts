@@ -1,5 +1,5 @@
 import type { SessionEvent } from '@berry-ai/harness-session/types'
-import type {} from '@berry-ai/harness-tools/types'
+import type {} from '@berry-ai/harness-tool-executor-ptc/client'
 import type {
   ConversationNode, RunningToolCall, ToolCallBlock, ToolResultNode,
 } from '@berry-ai/harness-client-ui-conversation/client'

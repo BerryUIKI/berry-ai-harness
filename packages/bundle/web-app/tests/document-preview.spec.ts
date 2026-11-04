@@ -10,7 +10,7 @@ import { loadOverlayPatches } from '@berry-ai/harness-app-boot'
 import WorkspaceFiles, { type WorkspaceFileScope } from '@berry-ai/harness-api-workspace-files'
 import OfficeToPdf from '@berry-ai/harness-office-to-pdf'
 import * as DocumentPreview from '@berry-ai/harness-client-ui-sidebar-documentpreview'
-import type { IndexInjection } from '@berry-ai/harness-host-webserver'
+import type { IndexInjection, WebServer } from '@berry-ai/harness-host-webserver'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SandboxPolicyService from '@berry-ai/harness-sandbox-policy'
@@ -19,6 +19,9 @@ import { FsError } from '@berry-ai/harness-fs'
 import TypertRegistry from '@berry-ai/harness-typert-registry'
 import type { Converter, ConverterOptions } from '@deepseek-ai/libreoffice-kit'
 import { expect, it, onTestFinished, vi } from 'vitest'
+
+/** The Peer an index render speaks for; this listener reads no field of it. */
+const PAGE_PEER = { principal: { kind: 'owner' } } as Parameters<WebServer['renderIndex']>[1]
 
 const kit = vi.hoisted(() => ({ create: vi.fn<(options?: ConverterOptions) => Promise<Converter>>() }))
 vi.mock('@deepseek-ai/libreoffice-kit', () => ({ createConverter: kit.create }))
@@ -92,7 +95,7 @@ it('loads the shipped Office rows with separately patched settings and authorize
   const entries = new Map([...ctx.loader.entries()].map(entry => [entry.options.id, entry]))
   for (const row of configured) await entries.get(row.id)!.fiber!.await()
   const injections: IndexInjection[] = []
-  ctx.emit('webserver/index-inject', injections)
+  ctx.emit('webserver/index-inject', injections, PAGE_PEER)
   expect(injections).toEqual([
     { kind: 'global', name: '__DSH_DOCUMENT_PREVIEW_CONFIG__', value: clientConfig },
   ])

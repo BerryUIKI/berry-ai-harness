@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-session",
   "description": "Session Controller adapter for React and session-scoped slots",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
     "@berry-ai/harness-api-remotes": "workspace:*",
     "@berry-ai/harness-api-session-controller": "workspace:*",
     "@berry-ai/harness-client-store": "workspace:*",
@@ -56,8 +57,7 @@
     "@berry-ai/harness-remote-mock": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
-    "react": "^18.2.0",
-    "@berry-ai/harness-api-remote-access": "workspace:*"
+    "react": "^18.2.0"
   },
   "files": [
     "locale/*.json",

@@ -6,13 +6,14 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import AgentRegistry from '@berry-ai/harness-agent'
 import type { Agent, AgentStatus } from '@berry-ai/harness-agent'
 import CommandRuntime from '@berry-ai/harness-commands'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
 import * as CommandFeedback from '@berry-ai/harness-command-feedback'
 import { getOrCreateAnonymousUserId } from '@berry-ai/harness-anonymous-user-id'
-import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
+import { unsupportedModel, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 
 let root: string | undefined
 let context: Context | undefined
@@ -35,6 +36,7 @@ async function agent(ctx: Context): Promise<Agent> {
     id,
     options: {},
     session,
+    model: unsupportedModel(),
     inbox: unsupportedInbox(),
     ctx: scope.ctx,
     get status() { return status },
@@ -56,7 +58,9 @@ describe('/feedback real Loader composition through cordis.yml', () => {
     vi.stubEnv('DSH_HOME', root)
     const configPath = join(root, 'cordis.yml')
     await writeFile(configPath, [
+      "- name: '@berry-ai/harness-session-projection'",
       "- name: '@berry-ai/harness-agent'",
+      "- name: '@berry-ai/harness-session-projection'",
       "- name: '@berry-ai/harness-session'",
       "- name: '@berry-ai/harness-commands'",
       "- name: '@berry-ai/harness-command-feedback'",
@@ -68,7 +72,9 @@ describe('/feedback real Loader composition through cordis.yml', () => {
     await context.plugin(Loader)
     context.loader.builtins.include = Include
     const modules = new Map<string, unknown>([
+      ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
       ['@berry-ai/harness-agent', AgentRegistry],
+      ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
       ['@berry-ai/harness-session', SessionStore],
       ['@berry-ai/harness-commands', CommandRuntime],
       ['@berry-ai/harness-command-feedback', CommandFeedback],

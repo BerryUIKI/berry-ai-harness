@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-tools",
   "description": "Tool registry and execution pipeline for the DeepSeek Harness",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -18,21 +18,23 @@
       "types": "./lib/types/index.d.ts",
       "default": "./lib/index.js"
     },
-    "./types": {
-      "types": "./lib/types/types.d.ts",
-      "default": "./lib/types/types.js"
-    },
     "./presentation": {
       "types": "./lib/types/presentation.d.ts",
       "default": "./lib/types/presentation.js"
     },
     "./src/*": "./src/*",
     "./package.json": "./package.json",
-    "./locale/*.json": "./locale/*.json"
+    "./locale/*.json": "./locale/*.json",
+    "./pipeline": {
+      "types": "./lib/types/pipeline.d.ts",
+      "default": "./lib/pipeline.js"
+    }
   },
   "files": [
     "locale/*.json",
     "lib/index.js",
+    "lib/pipeline.js",
+    "lib/shared-*.js",
     "lib/types/**/*.js",
     "lib/types/**/*.d.ts"
   ],
@@ -40,12 +42,12 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-agent": "workspace:*",
-    "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
+    "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-working-directory": "workspace:*"
@@ -58,16 +60,18 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-agent": "workspace:*",
-    "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
+    "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-sandbox": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@berry-ai/harness-working-directory": "workspace:*",
-    "@berry-ai/harness-agent-loop-testkit": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   }
 }

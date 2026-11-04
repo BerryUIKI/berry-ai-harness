@@ -39,3 +39,36 @@
         assetRoot: !!js "process.env.DSH_BUNDLED_OFFICE_SKILLS ?? process.getBuiltinModule('node:path').resolve(process.env.DSH_PRIMARY_RUNTIME ?? process.env.DSH_BUNDLED_PRIMARY_RUNTIME ?? '', '..', 'office-skills')"
         cli: !!js "process.env.DSH_BUNDLED_OFFICE_CLI === '' ? false : process.env.DSH_BUNDLED_OFFICE_CLI"
         node: !!js "process.env.DSH_BUNDLED_OFFICE_NODE ?? process.getBuiltinModule('node:path').resolve(process.env.DSH_PRIMARY_RUNTIME ?? process.env.DSH_BUNDLED_PRIMARY_RUNTIME ?? '', 'dependencies', 'node', 'bin', process.platform === 'win32' ? 'node.exe' : 'node')"
+
+# Share native desktop tools and model context without starting a Web server.
+- insert:
+    - id: connection
+      name: '@berry-ai/harness-client-connection'
+
+    - id: file-upload
+      name: '@berry-ai/harness-client-file-upload'
+
+    - id: workspace
+      name: '@berry-ai/harness-workspace'
+
+    - id: schedule
+      name: '@berry-ai/harness-schedule'
+      inject: [sdkSessionActivation]
+
+    - id: time-context
+      name: '@berry-ai/harness-time-context'
+
+    - id: tool-schedule
+      name: '@berry-ai/harness-tool-schedule'
+
+    - id: tool-ask-user
+      name: '@berry-ai/harness-tool-ask-user'
+
+    - id: present
+      name: '@berry-ai/harness-tool-present'
+
+    - id: file-reference-local
+      name: '@berry-ai/harness-file-reference-local'
+
+    - id: deliverable-file-references
+      name: '@berry-ai/harness-deliverable-file-references'

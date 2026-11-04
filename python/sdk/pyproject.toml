@@ -29,7 +29,8 @@ addopts = "-q"
 testpaths = ["tests"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/berry_ai_harness"]
+# Ship the legacy import name beside the berry modules so older callers keep working.
+packages = ["src/berry_ai_harness", "src/deepseek_harness"]
 # The release job uses Twine 6.2.0, which accepts core metadata through 2.4.
 core-metadata-version = "2.4"
 

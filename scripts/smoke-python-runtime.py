@@ -75,21 +75,26 @@ SPAWN_NODE_COMMAND = (
 )
 LEGACY_CUSTOM_DISABLED_ROWS = (
     "agent-instructions",
+    "deliverable-file-references",
+    "file-reference-local",
     "goal",
     "goal-round-driver",
     "command-goal",
     "plan-mode",
+    "present",
     "skill",
     "skill-filesystem",
     "skill-office",
     "workspace-dependencies",
+    "time-context",
+    "tool-ask-user",
     "tool-fs",
     "tool-fs-search",
     "tool-goal",
+    "tool-schedule",
     "tool-skill",
     "tool-str-replace-editor",
     "tool-subagent-control",
-    "tool-subagent-list-agents",
     "tool-subagent-fork",
     "tool-todo",
     "tool-web",
@@ -145,7 +150,7 @@ RESTART_SNAPSHOT_DIRECTORY = (
     Path(__file__).resolve().parent / "snapshots" / "python-sdk-single-exe" / "restart"
 )
 RESTART_SNAPSHOT_FILENAMES = (
-    "result.json", "requests.json", "session.1.v4.jsonl", "session.2.v4.jsonl",
+    "result.json", "requests.json", "session.1.v4.jsonl", "session.2.v4.jsonl", "resume.json",
 )
 RECOVERY_SNAPSHOT_DIRECTORY = (
     Path(__file__).resolve().parent / "snapshots" / "python-sdk-single-exe" / "scheduler-recovery"
@@ -253,7 +258,8 @@ def write_advanced_profile_patch(
 ) -> Path:
     """Write the shared custom, snapshot, and restart profile patch."""
     return write_profile_patch(root, name, sessions, [
-        {"id": "tools", "config": {"mode": mode}},
+        {"id": "tool-executor-native", "disabled": mode != "native"},
+        {"id": "tool-executor-ptc", "disabled": mode != "ptc"},
         {
             "id": "system-prompt",
             "config": {
@@ -916,7 +922,16 @@ def _smoke_sdk_authoring_cached(base_url: str, executable: Path, update_snapshot
                 skill.parent.mkdir(parents=True)
                 skill.write_text("---\nname: office-docx\ndescription: CUSTOM_OFFICE_DOCX\n---\nUse the bundled Python for custom document work.\n")
             patch = root / "skills.patch.yml"
-            patch.write_text(json.dumps([{"id": "skill-office", "disabled": True}] if mode == "disabled" else []))
+            # Fix the model-visible clock in this child only; native timers stay live.
+            patch_rows = [
+                {"insert": [{"id": "authoring-clock", "name": (
+                    Path(__file__).resolve().parent / "fixtures/python-sdk-authoring-clock.mjs"
+                ).as_uri()}]},
+                {"id": "time-context", "config": {"timeZone": "UTC"}},
+            ]
+            if mode == "disabled":
+                patch_rows.append({"id": "skill-office", "disabled": True})
+            patch.write_text(json.dumps(patch_rows))
             first = len(MockModelHandler.requests)
             with DeepSeekHarness(
                 provider="deepseek-official", model="smoke-model", cwd=str(root),
@@ -978,7 +993,7 @@ def smoke_sdk_office(executable: Path) -> None:
     with checks["workspace"](None if artifacts is None else Path(artifacts), prefix="dsh-sdk-office-") as root:
         relocated = root / executable.name
         stem = executable.name.removesuffix(".exe")
-        resources = executable.with_name(stem.removeprefix("deepseek-harness-sdk-runtime-"))
+        resources = executable.with_name(stem.removeprefix("berry-ai-harness-sdk-runtime-").removeprefix("deepseek-harness-sdk-runtime-"))
         for source in [*executable.parent.glob(f"{stem}*"), resources]:
             destination = root / source.name
             if source.is_dir():
@@ -989,7 +1004,7 @@ def smoke_sdk_office(executable: Path) -> None:
         office = Path(json.loads(subprocess.check_output([str(relocated)], encoding="utf-8", env={**cache_environment, "DSH_RUNTIME_DOWNLOAD": "office"})))
         assert not (office.parent / "primary").exists(), "Office download unexpectedly prepared the authoring environment"
         adapter = office / "node_modules/@deepseek-ai/libreoffice-kit/package.json"
-        native = stem.removeprefix("deepseek-harness-sdk-runtime-").replace("win-", "win32-").replace("macos-", "darwin-")
+        native = stem.removeprefix("berry-ai-harness-sdk-runtime-").removeprefix("deepseek-harness-sdk-runtime-").replace("win-", "win32-").replace("macos-", "darwin-")
         declared = json.loads(adapter.read_text(encoding="utf-8")).get("optionalDependencies", {})
         selected = native if f"@deepseek-ai/libreoffice-kit-{native}" in declared else "wasm"
         expected_backend = "wasm" if selected == "wasm" else "native"
@@ -1088,14 +1103,14 @@ def assert_installed_wheel_environment() -> Path:
     if cwd.is_relative_to(repo_root):
         raise AssertionError(f"installed-wheel smoke must run outside the repository, got {cwd}")
 
-    sdk_version = importlib.metadata.version("deepseek-harness-sdk")
-    runtime_version = importlib.metadata.version("deepseek-harness-runtime-bin")
+    sdk_version = importlib.metadata.version("berry-ai-harness-sdk")
+    runtime_version = importlib.metadata.version("berry-ai-harness-runtime-bin")
     if sdk_version != runtime_version:
         raise AssertionError(
             f"installed SDK/runtime versions differ: {sdk_version} != {runtime_version}"
         )
-    expected_runtime_requirement = f"deepseek-harness-runtime-bin=={sdk_version}"
-    requirements = importlib.metadata.requires("deepseek-harness-sdk") or []
+    expected_runtime_requirement = f"berry-ai-harness-runtime-bin=={sdk_version}"
+    requirements = importlib.metadata.requires("berry-ai-harness-sdk") or []
     if expected_runtime_requirement not in requirements:
         raise AssertionError(
             f"installed SDK does not require {expected_runtime_requirement}: {requirements}"
@@ -1103,7 +1118,7 @@ def assert_installed_wheel_environment() -> Path:
 
     prefix = Path(sys.prefix).resolve()
     imported: dict[str, Path] = {}
-    for name in ("deepseek_harness", "deepseek_harness_runtime"):
+    for name in ("berry_ai_harness", "berry_ai_harness_runtime", "deepseek_harness", "deepseek_harness_runtime"):
         module = importlib.import_module(name)
         module_file = getattr(module, "__file__", None)
         if not isinstance(module_file, str):
@@ -1115,12 +1130,12 @@ def assert_installed_wheel_environment() -> Path:
             raise AssertionError(f"installed module {name} came from the repository checkout: {path}")
         imported[name] = path
 
-    runtime_module = sys.modules["deepseek_harness_runtime"]
+    runtime_module = sys.modules["berry_ai_harness_runtime"]
     executable = runtime_module.bundled_runtime_path().resolve()
-    runtime_package = imported["deepseek_harness_runtime"].parent
+    runtime_package = imported["berry_ai_harness_runtime"].parent
     if not executable.is_relative_to(runtime_package):
         raise AssertionError(f"bundled runtime came from outside the installed runtime wheel: {executable}")
-    runtime_files = importlib.metadata.files("deepseek-harness-runtime-bin") or []
+    runtime_files = importlib.metadata.files("berry-ai-harness-runtime-bin") or []
     if not any(Path(file).name == executable.name for file in runtime_files):
         raise AssertionError(f"runtime executable is absent from installed distribution records: {executable}")
     return executable
@@ -1747,10 +1762,10 @@ def smoke_sdk_restart_snapshot(base_url: str, executable: Path, update_snapshots
         patch = write_advanced_profile_patch(root, "restart.patch.yml", sessions)
         first_request = len(MockModelHandler.requests)
 
-        def connect() -> DeepSeekHarness:
+        def connect(model: str = "smoke-model") -> DeepSeekHarness:
             return DeepSeekHarness(
                 provider="deepseek-official",
-                model="smoke-model",
+                model=model,
                 cwd=str(root),
                 dsh_bin=str(executable),
                 dsh_home=str(dsh_home),
@@ -1798,13 +1813,8 @@ def smoke_sdk_restart_snapshot(base_url: str, executable: Path, update_snapshots
             root,
             sessions,
         )
-        compare_snapshot_files(
-            files, update_snapshots, RESTART_SNAPSHOT_DIRECTORY, RESTART_SNAPSHOT_FILENAMES,
-            native_writer_output=True,
-        )
-
         before_resume = logs[RESTART_FIRST_SESSION_ID]
-        with connect() as harness:
+        with connect("resumed-smoke-model") as harness:
             session = harness.resume_session(RESTART_FIRST_SESSION_ID)
             if session.id != RESTART_FIRST_SESSION_ID:
                 raise AssertionError(f"resume changed the saved identity: {session.id}")
@@ -1841,6 +1851,28 @@ def smoke_sdk_restart_snapshot(base_url: str, executable: Path, update_snapshots
             raise AssertionError(f"resume did not continue the saved turn sequence: {turns}")
         if RESUME_TEXT not in render_jsonl(restored):
             raise AssertionError("resumed response was not appended to the saved session")
+
+        selection_events = [
+            {"type": record["type"], "data": record["data"]}
+            for record in restored[len(before_resume):]
+            if record.get("type") == "model/selection"
+        ]
+        if selection_events != [{"type": "model/selection", "data": {
+            "provider": "deepseek-official", "model": "resumed-smoke-model",
+        }}]:
+            raise AssertionError(f"resume did not persist the initialized model: {selection_events}")
+        if requests[0].get("model") != "resumed-smoke-model":
+            raise AssertionError(f"resumed request ignored the initialized model: {requests[0]}")
+        files["resume.json"] = json.dumps({
+            "model": requests[0].get("model"),
+            "final_response": resumed.final_response,
+            "eventTypes": [event.get("type") for event in resumed.events],
+            "selectionEvents": selection_events,
+        }, indent=2, ensure_ascii=False) + "\n"
+        compare_snapshot_files(
+            files, update_snapshots, RESTART_SNAPSHOT_DIRECTORY, RESTART_SNAPSHOT_FILENAMES,
+            native_writer_output=True,
+        )
 
 
 def smoke_sdk_scheduler_recovery(base_url: str, executable: Path, update_snapshots: bool) -> None:

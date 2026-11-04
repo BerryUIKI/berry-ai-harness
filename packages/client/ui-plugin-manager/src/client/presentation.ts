@@ -1,5 +1,6 @@
 /** Display labels and toast sentences for global plugin management. */
 
+import { EXPERIMENTAL_BUNDLES } from '@berry-ai/harness-official-bundles'
 import type { IncompatiblePlugin, ManagementError, Registry, RestartReason } from '@berry-ai/harness-api-remotes/client'
 import type { PropsLocale } from '@berry-ai/harness-client-ui-slots'
 import type { PluginManagerLocaleKey } from './locales.ts'
@@ -58,6 +59,7 @@ const CODE_KEYS = {
   'bundle-in-use': 'reasonBundleInUse',
   'stale-approval': 'reasonStaleApproval',
   'incompatible-version': 'reasonIncompatibleVersionUnnamed',
+  'unsupported-platform': 'reasonUnsupportedPlatform',
   'operation-error': 'reasonOperationError',
 } satisfies Record<ManagementError['code'], PluginManagerLocaleKey>
 
@@ -120,7 +122,7 @@ export function packageText(
   return {
     title: pkg.meta?.title === undefined ? pkg.name : resolveText(pkg.meta.title),
     description: pkg.meta?.description === undefined ? undefined : resolveText(pkg.meta.description) || undefined,
-    beta: pkg.name.startsWith('@berry-ai/harness-experimental-'),
+    beta: EXPERIMENTAL_BUNDLES.has(pkg.name),
   }
 }
 

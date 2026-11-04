@@ -1,7 +1,8 @@
+import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import AgentRegistry from '@berry-ai/harness-agent'
-import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
+import { unsupportedModel, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import type { Agent } from '@berry-ai/harness-agent'
 import { JobId } from '@berry-ai/harness-jobs'
 import LocalJobRegistry from '@berry-ai/harness-jobs-local'
@@ -215,6 +216,7 @@ describe('JobController', () => {
   async function controllerHarness() {
     const ctx = new Context()
     await ctx.plugin(SessionStore)
+    await ctx.plugin(SessionProjectionRegistry)
     await ctx.plugin(AgentRegistry)
     await ctx.plugin(LocalJobRegistry)
     await ctx.plugin(TypertRegistry)
@@ -229,6 +231,7 @@ describe('JobController', () => {
       id: session.id,
       options: {},
       session,
+      model: unsupportedModel(),
       inbox: unsupportedInbox(),
       status: 'idle',
       ctx,
@@ -247,6 +250,7 @@ describe('JobController', () => {
   it('waits for the job registry instead of serving without one', async () => {
     const ctx = new Context()
     await ctx.plugin(SessionStore)
+    await ctx.plugin(SessionProjectionRegistry)
     await ctx.plugin(AgentRegistry)
     await ctx.plugin(TypertRegistry)
     ctx.plugin(JobController, {})

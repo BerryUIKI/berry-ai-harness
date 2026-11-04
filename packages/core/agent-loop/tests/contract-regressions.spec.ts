@@ -1,10 +1,12 @@
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import LlmRuntime, { type RequestMessage, createUserMessage, ToolCallId, LlmError, MessageSource, ProviderRequestId, StreamChunk  } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import SessionStore, { Session, SessionEvent, SessionId, TurnEndReason, type UserMessage } from '@berry-ai/harness-session'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
-import ToolRuntime, { defineContentToolFixture, type PostToolDecision } from '@berry-ai/harness-tools'
+import ToolRuntime, { type PostToolDecision } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import AgentRegistry, { type Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
@@ -29,6 +31,7 @@ async function harness(adapter: MockAdapter) {
   await ctx.plugin(SessionProjectionRegistry)
   await ctx.plugin(SystemPrompt)
   await ctx.plugin(ToolRuntime)
+  await ctx.plugin(NativeToolExecutor)
   await ctx.plugin(AgentRegistry)
   await ctx.plugin(AgentLoop, { agents: [] })
   ctx.llm.registerAdapter(['mock'], adapter)
@@ -450,17 +453,15 @@ describe('adapter registration, routing, and accepted-input ownership', () => {
       : undefined).toContain('has no provider/model')
     expect(turnEnd?.type === 'turn/end' && turnEnd.data.reason.kind === 'error'
       ? turnEnd.data.reason.error.message
-      : undefined).toContain('agent/request')
+      : undefined).toContain('record a model selection')
   })
 
-  it('the agent/request waterfall can supply the model for a model-less agent', async () => {
+  it('a recorded selection supplies the route before a model-less Agent starts a step', async () => {
     const adapter = new MockAdapter([textResponse('routed')])
     const ctx = await harness(adapter)
-    const agent = await ctx.agentLoop.create(SessionId('a1'), {}) // no model — router plugin decides
+    const agent = await ctx.agentLoop.create(SessionId('a1'), {})
 
-    ctx.on('agent/request', async (_payload, next) => {
-      return { ...await next(), provider: 'mock', model: 'mock' }
-    })
+    agent.model.select({ provider: 'mock', model: 'mock' })
 
     send(agent, 'go')
     await waitForIdle(ctx, agent)
@@ -578,6 +579,7 @@ describe('turn numbering continues across seeded sessions', () => {
     await ctx2.plugin(SessionProjectionRegistry)
     await ctx2.plugin(SystemPrompt)
     await ctx2.plugin(ToolRuntime)
+    await ctx2.plugin(NativeToolExecutor)
     await ctx2.plugin(AgentRegistry)
     await ctx2.plugin(AgentLoop, { agents: [] })
     ctx2.llm.registerAdapter(['mock'], second)
@@ -1294,6 +1296,7 @@ describe('disposal and cancellation during pre-step assembly', () => {
     await ctx.plugin(SessionProjectionRegistry)
     await ctx.plugin(SystemPrompt)
     await ctx.plugin(ToolRuntime)
+    await ctx.plugin(NativeToolExecutor)
     await ctx.plugin(AgentRegistry)
     await ctx.plugin(AgentLoop, { agents: [] })
     ctx.llm.registerAdapter(['mock'], adapter)
@@ -1344,6 +1347,7 @@ describe('disposal and cancellation during pre-step assembly', () => {
     await ctx.plugin(SessionProjectionRegistry)
     await ctx.plugin(SystemPrompt)
     await ctx.plugin(ToolRuntime)
+    await ctx.plugin(NativeToolExecutor)
     await ctx.plugin(AgentRegistry)
     await ctx.plugin(AgentLoop, { agents: [] })
     ctx.llm.registerAdapter(['mock'], adapter)
@@ -1394,6 +1398,7 @@ describe('disposal and cancellation during pre-step assembly', () => {
     await ctx.plugin(SessionProjectionRegistry)
     await ctx.plugin(SystemPrompt)
     await ctx.plugin(ToolRuntime)
+    await ctx.plugin(NativeToolExecutor)
     await ctx.plugin(AgentRegistry)
     await ctx.plugin(AgentLoop, { agents: [] })
     ctx.llm.registerAdapter(['mock'], adapter)
@@ -1440,6 +1445,7 @@ describe('disposal and cancellation during pre-step assembly', () => {
     await ctx.plugin(SessionProjectionRegistry)
     await ctx.plugin(SystemPrompt)
     await ctx.plugin(ToolRuntime)
+    await ctx.plugin(NativeToolExecutor)
     await ctx.plugin(AgentRegistry)
     await ctx.plugin(AgentLoop, { agents: [] })
     ctx.llm.registerAdapter(['mock'], adapter)
@@ -1488,6 +1494,7 @@ describe('disposal and cancellation during pre-step assembly', () => {
     await ctx.plugin(SessionProjectionRegistry)
     await ctx.plugin(SystemPrompt)
     await ctx.plugin(ToolRuntime)
+    await ctx.plugin(NativeToolExecutor)
     await ctx.plugin(AgentRegistry)
     await ctx.plugin(AgentLoop, { agents: [] })
     ctx.llm.registerAdapter(['mock'], adapter)

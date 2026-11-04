@@ -1,9 +1,12 @@
 {
   "name": "@berry-ai/harness-desktop",
   "description": "Electron desktop shell for a bundled dsh runtime and external plugins",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "private": true,
   "license": "MIT",
+  "author": {
+    "name": "Hangzhou DeepSeek Artificial Intelligence Co., Ltd."
+  },
   "type": "module",
   "main": "lib/main.js",
   "scripts": {
@@ -40,7 +43,8 @@
     "upload:win:x64": "tsx scripts/upload-target.ts win-x64",
     "upload:latest:mac:arm64": "tsx scripts/upload-target.ts mac-arm64 --latest",
     "upload:latest:mac:x64": "tsx scripts/upload-target.ts mac-x64 --latest",
-    "upload:latest:win:x64": "tsx scripts/upload-target.ts win-x64 --latest"
+    "upload:latest:win:x64": "tsx scripts/upload-target.ts win-x64 --latest",
+    "purge:latest": "tsx scripts/upload-target.ts --latest --purge-only"
   },
   "dependencies": {
     "electron-updater": "^6.8.9",
@@ -56,6 +60,7 @@
     "@berry-ai/harness-client-ui-settings-general": "workspace:*",
     "@berry-ai/harness-client-ui-sidebar-browser": "workspace:*",
     "@berry-ai/harness-home-paths": "workspace:*",
+    "@berry-ai/harness-official-bundles": "workspace:*",
     "@deepseek-ai/node-addon-system": "workspace:~",
     "@electron/get": "^5.1.0",
     "@electron/notarize": "2.5.0",
@@ -70,7 +75,7 @@
     "js-yaml": "^4.3.2",
     "koffi": "3.1.1",
     "pnpm": "11.28.5",
-    "sharp": "^0.35.5",
+    "sharp": "0.35.5",
     "typescript": "^6.0.3",
     "@berry-ai/harness-deepseek-account": "workspace:*",
     "@types/ws": "^8.18.1",
@@ -82,6 +87,10 @@
     "@berry-ai/harness-client-shortcuts": "workspace:*",
     "@berry-ai/harness-atomic-write": "workspace:*",
     "@berry-ai/harness-client-product-analytics": "workspace:*",
+    "@berry-ai/harness-plugin-manager": "workspace:*",
+    "zod": "4.4.3",
+    "@berry-ai/harness-util-file-drag": "workspace:*",
+    "tencentcloud-sdk-nodejs-teo": "4.1.330",
     "@tauri-apps/cli": "2.12.3"
   }
 }

@@ -3,23 +3,23 @@
 # After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write packages/subagent/tool-subagent-control/README.md
 /:
-  en: 5413b8e52a0c8e3d
-  zh: 9b6d0385209ff9bb
+  en: 2ed769ff79f88a4b
+  zh: 73fcdc6c2ec4334c
 /berry-ai-harness-tool-subagent-control:
   en: 80e48cea5ed91bbd
   zh: 35956bffe451a87a
 /berry-ai-harness-tool-subagent-control/summary:
-  en: 7464eb99b6f618eb
-  zh: 8c7628c8e9f163ca
+  en: 49b8e317dae5d896
+  zh: dabe302587aacde2
 /berry-ai-harness-tool-subagent-control/table-of-contents:
   en: d152484eb41ac6b4
   zh: 09388d293f9be9cb
 /berry-ai-harness-tool-subagent-control/use-this-package:
-  en: 27c5bbe682f0b72b
-  zh: b16aeb2c43f3692e
+  en: 8b2e49621394d15d
+  zh: eb235870eac36532
 /berry-ai-harness-tool-subagent-control/use-this-package/minimal-configuration:
-  en: 4a52c81317ec9001
-  zh: ebd9f1ba920da50a
+  en: 4b4bf179ea0f1ecb
+  zh: f5cee3cb40710ace
 /berry-ai-harness-tool-subagent-control/use-this-package/send-message:
   en: d80bb1df2eb740b7
   zh: e3203d9868a82910
@@ -42,11 +42,11 @@
   en: 70e344022e6e535e
   zh: 355488590648a82e
 /berry-ai-harness-tool-subagent-control/understand-the-implementation/source-map:
-  en: 95f73146f8735ab1
-  zh: 9c67e064c4000613
+  en: fd6385e36c6b457b
+  zh: 8fe9a57b7e75dd82
 /berry-ai-harness-tool-subagent-control/further-exploration:
-  en: 8d0928d5a1a4db08
-  zh: fa7b8ee5f5ba02ac
+  en: 47a91849e9c393e8
+  zh: 47bff0e1204d936a
 /berry-ai-harness-tool-subagent-control/model-experience:
   en: 215e7ba838619b7b
   zh: a311da3843709f90
@@ -54,8 +54,8 @@
   en: e4c7376d4f29dbd5
   zh: 6b7a9eaf69c9ea53
 /berry-ai-harness-tool-subagent-control/model-experience/tool-schema/what-the-model-sees:
-  en: cef109c53f563c4c
-  zh: d19c37d080d59bda
+  en: 48c648b152d5a957
+  zh: 41bd2bd8818e93a9
 /berry-ai-harness-tool-subagent-control/model-experience/tool-schema/token-effect:
   en: db207dc8d5860684
   zh: ad2663b4967fbca9

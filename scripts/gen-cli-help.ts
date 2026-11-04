@@ -5,7 +5,7 @@ import { existsSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync 
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { promisify } from 'node:util'
-import { PROFILE_TEMPLATES } from '@berry-ai/harness-app-boot'
+import { PROFILE_TEMPLATES } from '@berry-ai/harness-official-bundles'
 import {
   computeTranslationPairingRecord,
   renderTranslationPairingRecord,

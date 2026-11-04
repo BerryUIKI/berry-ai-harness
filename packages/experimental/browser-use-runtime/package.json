@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-browser-use-runtime",
   "description": "Session-owned browser resource lifecycles and MCP integration for experimental providers",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -50,6 +50,9 @@
     "@berry-ai/harness-browser-use": "workspace:*",
     "@berry-ai/harness-mcp-client": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",

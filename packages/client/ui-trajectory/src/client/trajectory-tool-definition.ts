@@ -3,7 +3,7 @@ import type {
   ConversationMatch, ConversationNodeContext, ConversationNodeDefinition, StartedToolCall,
   ToolResultNode,
 } from '@berry-ai/harness-client-ui-conversation/client'
-import type {} from '@berry-ai/harness-tools/types'
+import type {} from '@berry-ai/harness-tool-executor-ptc/client'
 import { PartialArguments } from '@berry-ai/harness-util-values'
 import { trajectoryNode } from './trajectory-definition-common.ts'
 

@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/test-support/tool-testkit/README.md
+/:
+  en: 6c56a58c1397154b
+  zh: 7e37b4f4915f0a75
+/berry-ai-harness-tool-testkit:
+  en: a227c094cca36cf4
+  zh: 5733b4f3c4196ef0
+/berry-ai-harness-tool-testkit/summary:
+  en: 36a296389a56ac64
+  zh: f1aecbfb8f0ce528
+/berry-ai-harness-tool-testkit/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 1db86285abf6c499
+/berry-ai-harness-tool-testkit/use-this-package:
+  en: a5574e7c071d811f
+  zh: 9aa3fc3ae43e35e8
+/berry-ai-harness-tool-testkit/understand-the-implementation:
+  en: 236c624cc2445cd1
+  zh: 60d9dbafe03332b9
+/berry-ai-harness-tool-testkit/further-exploration:
+  en: db619f3ee3d024ef
+  zh: 02e35fcebaebd40e
+/berry-ai-harness-tool-testkit/model-experience:
+  en: 478835c82631e8c3
+  zh: cb4f938bcaa046be
+/berry-ai-harness-tool-testkit/model-experience/kv-cache-effect:
+  en: be3fa044c8f27bf0
+  zh: 35fdb79b58ba91f6
+/berry-ai-harness-tool-testkit/known-limitations-and-deferred-work:
+  en: c21236a743177477
+  zh: 8cc8678c2133a8be
+/berry-ai-harness-tool-testkit/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: e88aeb617ffb74ea

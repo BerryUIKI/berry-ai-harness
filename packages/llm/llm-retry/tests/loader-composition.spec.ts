@@ -1,3 +1,4 @@
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -62,8 +63,10 @@ async function loadYaml(lines: readonly string[]): Promise<Context> {
     ['@berry-ai/harness-llm', LlmRuntime],
     ['@berry-ai/harness-session', SessionStore],
     ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
+
     ['@berry-ai/harness-system-prompt', SystemPrompt],
     ['@berry-ai/harness-tools', ToolRuntime],
+    ['@berry-ai/harness-tool-executor-native', NativeToolExecutor],
     ['@berry-ai/harness-agent', AgentRegistry],
     ['@berry-ai/harness-llm-retry', retry],
     ['@berry-ai/harness-agent-loop', AgentLoop],
@@ -94,6 +97,7 @@ describe('real Loader composition', () => {
       "- name: '@berry-ai/harness-session-projection'",
       "- name: '@berry-ai/harness-system-prompt'",
       "- name: '@berry-ai/harness-tools'",
+      "- name: '@berry-ai/harness-tool-executor-native'",
       "- name: '@berry-ai/harness-agent'",
       "- name: '@berry-ai/harness-llm-retry'",
       "- name: '@berry-ai/harness-agent-loop'",

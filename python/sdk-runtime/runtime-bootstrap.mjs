@@ -96,7 +96,7 @@ if (resource !== undefined) {
   if (cache !== undefined && existsSync(join(cache, 'primary', 'complete'))) {
     process.env.DSH_BUNDLED_PRIMARY_RUNTIME = join(cache, 'primary', 'primary-runtime')
   }
-  const { runCli } = await import('@deepseek-ai/dsh/lib/bin.js')
+  const { runCli } = await import('@berry-ai/harness/lib/bin.js')
   await runCli()
 } else {
   Reflect.deleteProperty(process.env, selectorName)

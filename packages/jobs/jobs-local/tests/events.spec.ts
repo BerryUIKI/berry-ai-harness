@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { Session, SessionId } from '@berry-ai/harness-session'
-import { unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
+import { unsupportedModel, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import type { Agent } from '@berry-ai/harness-agent'
 import { ScopedLayers, bindScopeParent, createScope, scopeOf } from '@berry-ai/harness-scope'
 import type { ScopeKey } from '@berry-ai/harness-scope'
@@ -22,6 +22,7 @@ function agentIn(ctx: Context, rawId: string, presetScope?: ScopeKey): Agent {
     id,
     options: {},
     session,
+    model: unsupportedModel(),
     inbox: unsupportedInbox(),
     status: 'idle',
     ctx: agentCtx,

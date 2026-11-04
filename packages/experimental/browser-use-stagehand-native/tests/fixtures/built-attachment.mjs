@@ -4,6 +4,7 @@ import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@berr
 import BrowserUseRegistry from '@berry-ai/harness-browser-use'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import { SessionId } from '@berry-ai/harness-session'
+import { executeModelToolFixture } from '@berry-ai/harness-tool-testkit'
 import * as Provider from '../../lib/index.js'
 
 const [endpoint, url] = process.argv.slice(2)
@@ -19,7 +20,7 @@ try {
   const harness = await mountAgentLoopTestHarness(ctx)
   const agent = await harness.create(SessionId('built-stagehand'))
   const call = async (method, args) => {
-    const result = await ctx.tools.execute({ agent, name: `stagehand_${method}`, arguments: args, callId: ToolCallId(`built-${method}`), signal: new AbortController().signal })
+    const result = await executeModelToolFixture(ctx, { agent, name: `stagehand_${method}`, arguments: args, callId: ToolCallId(`built-${method}`), signal: new AbortController().signal })
     if (result.isError) throw new Error(JSON.stringify(result.content))
     return result
   }

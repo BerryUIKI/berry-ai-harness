@@ -13,7 +13,8 @@ import { setTimeout as delay } from 'node:timers/promises'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
 import WebSocket from 'ws'
-import { initProfile, PROFILE_TEMPLATES } from '@berry-ai/harness-app-boot'
+import { initProfile } from '@berry-ai/harness-app-boot'
+import { PROFILE_TEMPLATES } from '@berry-ai/harness-official-bundles'
 
 const REPO_ROOT = fileURLToPath(new URL('../../..', import.meta.url))
 const BUILT_BIN = join(REPO_ROOT, 'apps/cli/lib/bin.js')

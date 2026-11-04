@@ -124,7 +124,7 @@ function mirrorWorkspaceDependencies(roots: readonly string[], destinationRoot: 
  */
 export function prepareDevelopmentProject(options: DevelopmentProjectOptions): string {
   const cliManifest = readManifest(join(options.cliDir, 'package.json'))
-  if ((cliManifest.name !== '@berry-ai/harness' && cliManifest.name !== '@deepseek-ai/dsh') || cliManifest.version !== options.release.version) {
+  if ((cliManifest.name !== '@berry-ai/harness' && cliManifest.name !== '@berry-ai/harness') || cliManifest.version !== options.release.version) {
     throw new Error(
       `desktop development: apps/cli must be @berry-ai/harness@${options.release.version}, found `
       + `${String(cliManifest.name)}@${String(cliManifest.version)}`,
@@ -134,7 +134,7 @@ export function prepareDevelopmentProject(options: DevelopmentProjectOptions): s
     throw new Error('desktop development: workspace dependency links are missing; run pnpm install')
   }
   const hostManifest = readManifest(join(options.hostDir, 'package.json'))
-  if ((hostManifest.name !== '@berry-ai/harness-desktop-host' && hostManifest.name !== '@deepseek-ai/dsh-desktop-host') || hostManifest.version !== options.release.version) {
+  if ((hostManifest.name !== '@berry-ai/harness-desktop-host' && hostManifest.name !== '@berry-ai/harness-desktop-host') || hostManifest.version !== options.release.version) {
     throw new Error(
       `desktop development: apps/desktop-host must be @berry-ai/harness-desktop-host@${options.release.version}, found `
       + `${String(hostManifest.name)}@${String(hostManifest.version)}`,
@@ -164,7 +164,7 @@ export function prepareDevelopmentProject(options: DevelopmentProjectOptions): s
   const berryHostLink = join(destinationModules, '@berry-ai', 'harness-desktop-host')
   removeOwnedPath(berryHostLink)
   linkDirectory(options.hostDir, berryHostLink)
-  const sharedPackages = [...new Set([...names, '@deepseek-ai/dsh', '@berry-ai/harness', '@deepseek-ai/dsh-desktop-host', '@berry-ai/harness-desktop-host'])].flatMap((name) => {
+  const sharedPackages = [...new Set([...names, '@berry-ai/harness', '@berry-ai/harness', '@berry-ai/harness-desktop-host', '@berry-ai/harness-desktop-host'])].flatMap((name) => {
     const manifest = readManifest(join(destinationModules, name, 'package.json'))
     return typeof manifest.version === 'string' ? [{ name, version: manifest.version, path: `node_modules/${name}` }] : []
   })

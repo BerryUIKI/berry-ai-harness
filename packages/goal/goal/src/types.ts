@@ -126,9 +126,6 @@ export interface GoalProjectionState {
 }
 
 declare module '@berry-ai/harness-session-projection/types' {
-  interface SessionProjectionStateMap {
-    goal: GoalProjectionState
-  }
   interface SessionProjectionMap {
     /**
      * The session's current goal and admitted-round count, or

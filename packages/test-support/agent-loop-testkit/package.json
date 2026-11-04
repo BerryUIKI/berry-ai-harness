@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-agent-loop-testkit",
   "description": "Prerequisite mounting, production AgentLoop drivers, and Inbox stubs for tests",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -38,11 +38,15 @@
     "@berry-ai/harness-working-directory": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*"
+  },
   "devDependencies": {
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-agent-loop": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",

@@ -33,7 +33,7 @@ export async function prepareInstalledUpdateRuntime(manifest: string, sourceRoot
     await writeFile(join(receipt, 'source.json'), `${JSON.stringify({ sourceHash, version: run.source.version })}\n`,
       { flag: 'wx', mode: 0o600, flush: true })
     const releaseNames = new Set(source.sharedPackages.filter(entry => entry.version === run.source.version
-      && (entry.name === '@deepseek-ai/dsh' || entry.name.startsWith('@deepseek-ai/dsh-')
+      && (entry.name === '@berry-ai/harness' || entry.name.startsWith('@berry-ai/harness-')
         || entry.name === '@berry-ai/harness' || entry.name.startsWith('@berry-ai/harness-'))).map(entry => entry.name))
     for (const version of run.versions) {
       const directory = join(run.root, version)

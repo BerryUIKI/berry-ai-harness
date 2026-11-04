@@ -1,5 +1,7 @@
+import { executeToolFixture } from '@berry-ai/harness-tool-testkit'
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
-import { provideWorkingDirectoryFixture, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
+import { unsupportedModel, provideWorkingDirectoryFixture, unsupportedInbox } from '@berry-ai/harness-agent-loop-testkit'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
@@ -43,7 +45,8 @@ async function agent(ctx: Context): Promise<Agent> {
   const id = SessionId('pty-loader-agent')
   const session = Session.create(id)
   const value: Agent = {
-    id, options: {}, session, inbox: unsupportedInbox(),
+    id, options: {}, session, model: unsupportedModel(),
+    inbox: unsupportedInbox(),
     status: 'idle',
     ctx: scope.ctx,
     send: () => {},
@@ -69,6 +72,7 @@ suite('terminal real Loader composition through cordis.yml', () => {
       "- name: '@berry-ai/harness-agent'",
       "- name: '@berry-ai/harness-system-prompt'",
       "- name: '@berry-ai/harness-tools'",
+      "- name: '@berry-ai/harness-tool-executor-native'",
       "- name: '@berry-ai/harness-terminal'",
       "- name: '@berry-ai/harness-test-sandbox'",
       "- name: '@berry-ai/harness-session-projection'",
@@ -99,6 +103,7 @@ suite('terminal real Loader composition through cordis.yml', () => {
       ['@berry-ai/harness-agent', AgentRegistry],
       ['@berry-ai/harness-system-prompt', SystemPrompt],
       ['@berry-ai/harness-tools', ToolRuntime],
+      ['@berry-ai/harness-tool-executor-native', NativeToolExecutor],
       ['@berry-ai/harness-terminal', TerminalSessionService],
       ['@berry-ai/harness-test-sandbox', PassthroughSandbox],
       ['@berry-ai/harness-session-projection', SessionProjectionRegistry],
@@ -119,15 +124,15 @@ suite('terminal real Loader composition through cordis.yml', () => {
 
     const owner = await agent(context)
     const signal = new AbortController().signal
-    const spawn = await context.tools.execute({
+    const spawn = await executeToolFixture(context, {
       signal, callId: ToolCallId('spawn'), name: 'terminal_open', arguments: { type: 'shell', name: 'main', cwd: root }, agent: owner,
     })
     expect(resultText(spawn)).toContain('started terminal session pty-1 (main)')
 
-    await context.tools.execute({
+    await executeToolFixture(context, {
       signal, callId: ToolCallId('state'), name: 'terminal_send', arguments: { sessionId: 'pty-1', text: 'export KEEP=loader; cd /' }, agent: owner,
     })
-    const read = await context.tools.execute({
+    const read = await executeToolFixture(context, {
       signal, callId: ToolCallId('read'), name: 'terminal_send', arguments: { sessionId: 'pty-1', text: 'printf "cwd=%s keep=%s\\n" "$PWD" "$KEEP"' }, agent: owner,
     })
     expect(resultText(read)).toContain('cwd=/ keep=loader')

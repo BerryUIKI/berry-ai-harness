@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-time-context",
   "description": "Durable per-step context with the current time and elapsed time",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -38,7 +38,8 @@
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "@berry-ai/harness-session-projection": "workspace:*"
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-util-time": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
@@ -55,6 +56,8 @@
     "@berry-ai/harness-session-projection": "workspace:*",
     "@berry-ai/harness-subprocess-local": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
-    "@berry-ai/harness-tools": "workspace:*"
+    "@berry-ai/harness-tool-testkit": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
+    "@berry-ai/harness-util-time": "workspace:*"
   }
 }

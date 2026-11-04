@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-tool-fs",
   "description": "Model-facing filesystem tools (read, write, edit) over the DeepSeek Harness filesystem seam (ctx.fs)",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -61,6 +61,9 @@
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",

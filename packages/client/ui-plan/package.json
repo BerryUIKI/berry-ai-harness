@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-plan",
   "description": "Plan mode controls, persistent transcript plan cards, and sidebar Markdown previews",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
@@ -68,10 +68,11 @@
     "@berry-ai/harness-client-ui-sidebar-right": "workspace:*",
     "@berry-ai/harness-client-ui-user-questions": "workspace:*",
     "@berry-ai/harness-client-resources": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
-    "@berry-ai/harness-tools": "workspace:*",
-    "@berry-ai/harness-util-crypto": "workspace:*"
+    "@berry-ai/harness-util-crypto": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*"
   },
   "files": [
     "locale/*.json",

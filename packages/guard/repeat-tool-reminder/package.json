@@ -1,13 +1,13 @@
 {
   "name": "@berry-ai/harness-repeat-tool-reminder",
   "description": "Repeat-tool-call guard plugin: advisory reminders when an agent loops on identical tool calls",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BerryUIKI/berry-ai-harness.git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
     "directory": "packages/guard/repeat-tool-reminder"
   },
   "type": "module",
@@ -42,6 +42,7 @@
     "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-session-projection": "workspace:*"

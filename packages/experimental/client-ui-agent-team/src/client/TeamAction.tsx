@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import type {} from '@berry-ai/harness-agent/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type {
   TeamMemberProjection,

@@ -1,13 +1,13 @@
 {
   "name": "@berry-ai/harness-schedule",
   "description": "Host-wide durable reminders with shared management and original-Session delivery",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BerryUIKI/berry-ai-harness.git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
     "directory": "packages/schedule/schedule"
   },
   "type": "module",
@@ -57,6 +57,7 @@
     "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
+    "@berry-ai/harness-util-time": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
@@ -82,8 +83,10 @@
     "@berry-ai/harness-storage-json": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
+    "@berry-ai/harness-util-time": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }

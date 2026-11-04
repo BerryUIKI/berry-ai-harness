@@ -1,3 +1,4 @@
+import * as NativeToolExecutor from '@berry-ai/harness-tool-executor-native'
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import LlmRuntime, { createUserMessage, ToolCallId  } from '@berry-ai/harness-llm'
@@ -9,7 +10,8 @@ import SessionStore, {
   type UserMessage,
 } from '@berry-ai/harness-session'
 import SystemPrompt from '@berry-ai/harness-system-prompt'
-import ToolRuntime, { defineContentToolFixture, type PostToolDecision, type PreToolDecision } from '@berry-ai/harness-tools'
+import ToolRuntime, { type PostToolDecision, type PreToolDecision } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import AgentRegistry, {
   type Agent,
   type PreStepDecision,
@@ -47,6 +49,7 @@ async function harness(adapter: MockAdapter) {
   await ctx.plugin(SessionProjectionRegistry)
   await ctx.plugin(SystemPrompt)
   await ctx.plugin(ToolRuntime)
+  await ctx.plugin(NativeToolExecutor)
   await ctx.plugin(AgentRegistry)
   await ctx.plugin(AgentLoop, { agents: [] })
   ctx.llm.registerAdapter(['mock'], adapter)

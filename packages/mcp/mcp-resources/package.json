@@ -1,13 +1,13 @@
 {
   "name": "@berry-ai/harness-mcp-resources",
   "description": "Scoped MCP resource discovery and reading through shared model tools",
-  "version": "0.2.1-rc.5",
+  "version": "0.2.2-alpha.2",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BerryUIKI/berry-ai-harness.git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
     "directory": "packages/mcp/mcp-resources"
   },
   "type": "module",
@@ -40,6 +40,9 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-tool-executor-native": "workspace:*",
+    "@berry-ai/harness-tool-executor-ptc": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
     "@berry-ai/harness-agent": "workspace:*"

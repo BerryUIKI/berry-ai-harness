@@ -10,10 +10,10 @@ import { verifyDefaultProductIsolation } from './verify-default-product-isolatio
 import { writeFixtureFile as write } from './fixture-file.ts'
 
 const roots: string[] = []
-const experimental = '@deepseek-ai/dsh-experimental-prototype'
-const core = '@deepseek-ai/dsh-core'
+const experimental = '@berry-ai/harness-experimental-prototype'
+const core = '@berry-ai/harness-core'
 const base = '@berry-ai/harness-base'
-const profile = 'packages/boot/app-boot/src/profile.ts'
+const profile = 'packages/util/official-bundles/src/bundles.ts'
 const preset = 'packages/bundle/web-app/presets/standard.patch.yml'
 const patch = 'packages/bundle/base/cordis.patch.yml'
 
@@ -25,12 +25,12 @@ function manifest(root: string, path: string, fields: Record<string, unknown>): 
 function fixture(): string {
   const root = mkdtempSync(join(tmpdir(), 'dsh.default-isolation-'))
   roots.push(root)
-  write(root, 'apps/cli/package.json', { name: '@deepseek-ai/dsh', dependencies: { [core]: 'workspace:^' } })
+  write(root, 'apps/cli/package.json', { name: '@berry-ai/harness', dependencies: { [core]: 'workspace:^' } })
   write(root, 'apps/cli/src/bin.ts', 'export {}\n')
   write(root, 'apps/web/package.json', { name: '@berry-ai/harness-web-frontend' })
   write(root, 'apps/web/index.html', '<script type="module" src="/src/main.ts"></script>')
   write(root, 'apps/web/src/main.ts', 'export {}\n')
-  write(root, 'python/sdk-runtime/package.json', { name: '@deepseek-ai/dsh-python-runtime' })
+  write(root, 'python/sdk-runtime/package.json', { name: '@berry-ai/harness-python-runtime' })
   write(root, 'packages/core/core/package.json', { name: core })
   write(root, 'packages/core/core/src/index.ts', 'export {}\n')
   write(root, 'packages/bundle/base/package.json', { name: base, dsh: { bundle: { patch: './cordis.patch.yml' } } })
@@ -115,7 +115,7 @@ describe('default product isolation', () => {
 
   it.each([true, false])('ships an optional bundle switched off with legacy icon=%s', (legacy) => {
     const root = fixture()
-    const layer = '@deepseek-ai/dsh-experimental-layer'
+    const layer = '@berry-ai/harness-experimental-layer'
     write(root, 'packages/experimental/layer/package.json', {
       name: layer, ...legacy ? { icon: './icon.svg' } : {},
       exports: { ...legacy ? {} : { './icon': './icon.svg' }, './locale/*.json': './locale/*.json' },
@@ -141,7 +141,7 @@ describe('default product isolation', () => {
   it.each(['dependencies', 'source', 'patch'])(
     'checks a nonexperimental optional bundle for experimental %s', (kind) => {
       const root = fixture()
-      const layer = '@deepseek-ai/dsh-optional-layer'
+      const layer = '@berry-ai/harness-optional-layer'
       write(root, 'packages/bundle/optional-layer/package.json', {
         name: layer, icon: './icon.svg', exports: { './locale/*.json': './locale/*.json' },
         dsh: { bundle: { patch: './cordis.patch.yml' } },
@@ -178,7 +178,7 @@ describe('default product isolation', () => {
     write(root, profile, `export const PROFILE_TEMPLATES = { web: { bundles: ['${base}'] } }\n`
       + `export const DEFAULT_PROFILE_BUNDLES = ['${base}']\n`)
     manifest(root, 'apps/cli/package.json', { dependencies: { [core]: 'workspace:^', [experimental]: 'workspace:^' } })
-    expect(verifyDefaultProductIsolation(root).failures.join('\n')).toContain(`@deepseek-ai/dsh dependencies -> ${experimental}`)
+    expect(verifyDefaultProductIsolation(root).failures.join('\n')).toContain(`@berry-ai/harness dependencies -> ${experimental}`)
   })
 
   it.each(['dependencies', 'optionalDependencies', 'peerDependencies'])(
@@ -204,12 +204,12 @@ describe('default product isolation', () => {
 
   it('rejects experimental names absent from the inventory and paths with another package name', () => {
     const root = fixture()
-    manifest(root, 'apps/cli/package.json', { dependencies: { '@deepseek-ai/dsh-experimental-missing': '*' } })
+    manifest(root, 'apps/cli/package.json', { dependencies: { '@berry-ai/harness-experimental-missing': '*' } })
     manifest(root, 'packages/experimental/prototype/package.json', { name: '@fixture/innocent' })
     manifest(root, 'python/sdk-runtime/package.json', { dependencies: { '@fixture/innocent': '*' } })
 
     const failures = verifyDefaultProductIsolation(root).failures.join('\n')
-    expect(failures).toContain('@deepseek-ai/dsh-experimental-missing')
+    expect(failures).toContain('@berry-ai/harness-experimental-missing')
     expect(failures).toContain('@fixture/innocent')
   })
 
@@ -488,6 +488,6 @@ describe('default product isolation', () => {
   ])('rejects absent, empty, or uninspectable default profile definitions', (source) => {
     const root = fixture()
     write(root, profile, source)
-    expect(() => verifyDefaultProductIsolation(root)).toThrow('profile')
+    expect(() => verifyDefaultProductIsolation(root)).toThrow(`${profile}: `)
   })
 })

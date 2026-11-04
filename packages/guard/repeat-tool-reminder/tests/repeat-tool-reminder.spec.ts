@@ -1,9 +1,10 @@
+import { executeToolFixture } from '@berry-ai/harness-tool-testkit'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { createUserMessage, ToolCallId  } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import { SessionId, type SessionEvent } from '@berry-ai/harness-session'
-import { defineContentToolFixture } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import type { Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
@@ -299,7 +300,7 @@ describe('chain semantics', () => {
 
   it('ignores direct executes with no agent (they neither crash nor advance any chain)', async () => {
     const ctx = await harness({ thresholds: [2] })
-    const direct = await ctx.tools.execute({ signal: testToolSignal, callId: ToolCallId('d1'), name: 'probe', arguments: { q: 1 } })
+    const direct = await executeToolFixture(ctx, { signal: testToolSignal, callId: ToolCallId('d1'), name: 'probe', arguments: { q: 1 } })
     expect(direct.isError).toBe(false)
 
     ctx.llm.registerAdapter(['mock'], new MockAdapter([

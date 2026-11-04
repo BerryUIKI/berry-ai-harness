@@ -1,3 +1,4 @@
+import { executeToolFixture } from '@berry-ai/harness-tool-testkit'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import type { ContextFormed } from '@berry-ai/harness-llm'
 import { provideWorkingDirectoryFixture, mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
@@ -8,7 +9,7 @@ import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import { SessionId, type SessionEvent } from '@berry-ai/harness-session'
 import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
-import { defineContentToolFixture } from '@berry-ai/harness-tools'
+import { defineContentToolFixture } from '@berry-ai/harness-tool-testkit'
 import type { Agent } from '@berry-ai/harness-agent'
 import AgentLoop from '@berry-ai/harness-agent-loop'
 import { LocalBashExecutor } from '@berry-ai/harness-bash-local'
@@ -160,7 +161,7 @@ export function defineCoverageCases(group: CoverageGroup): void {
       let ran = false
       ctx.tools.register(defineContentToolFixture({ name: 'echo', description: 'e', parameters: {}, async execute() { ran = true; return [{ type: 'text', text: 'x' }] } }))
       const { ToolCallId } = await import('@berry-ai/harness-llm')
-      const result = await ctx.tools.execute({ signal: testToolSignal, callId: ToolCallId('c1'), name: 'echo', arguments: {} })
+      const result = await executeToolFixture(ctx, { signal: testToolSignal, callId: ToolCallId('c1'), name: 'echo', arguments: {} })
       expect(ran).toBe(false)
       expect(result.isError).toBe(true)
     })

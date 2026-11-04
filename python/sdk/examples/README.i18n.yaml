@@ -3,11 +3,11 @@
 # After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write python/sdk/examples/README.md
 /python-sdk-example:
-  en: d9dfc996ea2ace40
-  zh: 33de241bad6c4ee1
+  en: 08b64c9145ab6cb5
+  zh: 6e5059264dd96e9e
 /python-sdk-example/run-the-minimal-agent:
-  en: 0050fb99a20bc9a1
-  zh: 51185fb4bd29b87d
+  en: d2f33b1bcd8acf16
+  zh: 4aa7e30e6765e68a
 /python-sdk-example/add-plugins:
-  en: a36a6fbd76652150
-  zh: 7bbf5909a5999357
+  en: ba555e5b92ab50b8
+  zh: 757a76fa8d673341

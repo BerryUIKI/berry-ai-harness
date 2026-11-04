@@ -26,7 +26,7 @@ describe('desktop bundle imports', () => {
 
   it('tells external specifiers from bundled and virtual module ids', () => {
     expect(isBareSpecifier('electron')).toBe(true)
-    expect(isBareSpecifier('@deepseek-ai/dsh-home-paths')).toBe(true)
+    expect(isBareSpecifier('@berry-ai/harness-home-paths')).toBe(true)
     expect(isBareSpecifier('node:fs')).toBe(true)
     expect(isBareSpecifier('./helper.js')).toBe(false)
     expect(isBareSpecifier(join(tmpdir(), 'lib', 'index.js'))).toBe(false)
@@ -49,20 +49,20 @@ describe('desktop bundle imports', () => {
 
   it('reports each specifier the packaged application cannot resolve once, in import order', () => {
     expect(unpackagedImports([
-      '@deepseek-ai/dsh-home-paths',
+      '@berry-ai/harness-home-paths',
       'ws',
-      '@deepseek-ai/dsh-home-paths',
+      '@berry-ai/harness-home-paths',
       'electron',
-    ], MAIN)).toEqual(['@deepseek-ai/dsh-home-paths', 'ws'])
+    ], MAIN)).toEqual(['@berry-ai/harness-home-paths', 'ws'])
   })
 })
 
 describe('packaged imports plugin', () => {
   const root = mkdtempSync(join(tmpdir(), 'dsh-desktop-bundle-imports-'))
   const entries = {
-    static: ['import { app } from "electron";', 'import { resolveDshHome } from "@deepseek-ai/dsh-home-paths";', 'export const home = resolveDshHome(app);'],
-    dynamic: ['import { app } from "electron";', 'export const home = () => import("@deepseek-ai/dsh-home-paths").then(m => m.resolveDshHome(app));'],
-    require: ['import { app } from "electron";', 'export const home = () => require("@deepseek-ai/dsh-home-paths").resolveDshHome(app);'],
+    static: ['import { app } from "electron";', 'import { resolveDshHome } from "@berry-ai/harness-home-paths";', 'export const home = resolveDshHome(app);'],
+    dynamic: ['import { app } from "electron";', 'export const home = () => import("@berry-ai/harness-home-paths").then(m => m.resolveDshHome(app));'],
+    require: ['import { app } from "electron";', 'export const home = () => require("@berry-ai/harness-home-paths").resolveDshHome(app);'],
     builtin: ['import { contextBridge } from "electron";', 'import { readFileSync } from "node:fs";', 'contextBridge.exposeInMainWorld("x", readFileSync);'],
   } as const
   for (const [name, lines] of Object.entries(entries)) writeFileSync(join(root, `${name}.js`), lines.join('\n'))
@@ -110,7 +110,7 @@ describe('packaged imports plugin', () => {
   })
 
   it('passes the bundles whose external imports are all packaged', async () => {
-    const policy = { ...MAIN, packages: new Set(['electron', '@deepseek-ai/dsh-home-paths']) }
+    const policy = { ...MAIN, packages: new Set(['electron', '@berry-ai/harness-home-paths']) }
     for (const entry of ['static', 'dynamic'] as const) {
       const output = await generate(entry, policy)
       expect(output.output.map(chunk => chunk.fileName)).toEqual([`${entry}.js`])

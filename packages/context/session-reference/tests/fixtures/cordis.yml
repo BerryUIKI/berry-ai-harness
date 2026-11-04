@@ -1,6 +1,7 @@
 - name: '@berry-ai/harness-session'
 - name: '@berry-ai/harness-system-prompt'
 - name: '@berry-ai/harness-tools'
+- name: '@berry-ai/harness-tool-executor-native'
 - name: '@berry-ai/harness-fs-local'
 - name: '@berry-ai/harness-session-projection'
 - name: '@berry-ai/harness-working-directory'

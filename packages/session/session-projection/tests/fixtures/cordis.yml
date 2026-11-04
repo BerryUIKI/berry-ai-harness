@@ -1,0 +1,3 @@
+- name: '@berry-ai/harness-session'
+- name: '@berry-ai/harness-session-projection'
+- name: './legacy-plugin.ts'

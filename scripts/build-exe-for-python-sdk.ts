@@ -29,12 +29,12 @@ const DEPLOY_ROOT_PACKAGE = 'dsh-python-runtime-closure'
 /** The sole executable entry inside the deployed closure. */
 const ENTRY_BIN = 'runtime-bootstrap.mjs'
 /** Python-visible executable basename. */
-const OUTPUT_BASENAME = 'deepseek-harness-sdk-runtime'
+const OUTPUT_BASENAME = 'berry-ai-harness-sdk-runtime'
 /** Default Node major; SEA mode requires at least Node 22. */
 const DEFAULT_NODE_RANGE = 'node24'
 const OUT_DIR = 'dist-exe'
 /** Python package destination; created when absent. */
-const PYTHON_RUNTIME_DIR = 'python/sdk-runtime/src/deepseek_harness_runtime/runtime'
+const PYTHON_RUNTIME_DIR = 'python/sdk-runtime/src/berry_ai_harness_runtime/runtime'
 /** The deployed closure doubles as the node-mode carrier. */
 const PYTHON_NODE_SUBDIR = 'node'
 /** Legacy deploy may hoist peer-specialized workspace packages back here. */
@@ -159,6 +159,19 @@ class Target {
 /**
  * Validated CLI configuration; construction owns help and parse-error exits.
  */
+/** pkg's `--compress` values, whose build cost differs by two orders of magnitude. */
+const COMPRESS_TYPES = ['None', 'GZip', 'Brotli', 'Zstd'] as const
+type CompressType = typeof COMPRESS_TYPES[number]
+
+/**
+ * Narrow a raw `--compress` value to a supported pkg compressor.
+ * @param value - the command-line value.
+ * @returns whether pkg accepts the value.
+ */
+function isCompressType(value: string): value is CompressType {
+  return (COMPRESS_TYPES as readonly string[]).includes(value)
+}
+
 class BuildCli {
   private constructor(
     /** Build targets; defaults to the host platform only. */
@@ -167,6 +180,8 @@ class BuildCli {
     readonly skipBuild: boolean,
     /** Build through `pnpm run build:artifacts`, which omits the aggregate test and script typechecks. */
     readonly buildArtifacts: boolean,
+    /** pkg archive compression; Brotli is the smallest and by far the slowest. */
+    readonly compress: CompressType,
     /** Print every command and config patch instead of executing. */
     readonly dryRun: boolean,
   ) {}
@@ -205,7 +220,11 @@ class BuildCli {
       }
       seen.add(key)
     }
-    return new BuildCli(targets, values['skip-build'], values['build-artifacts'], values['dry-run'])
+    const compress = values.compress ?? 'Brotli'
+    if (!isCompressType(compress)) {
+      throw new Error(`build-exe-for-python-sdk: --compress must be one of ${COMPRESS_TYPES.join(' | ')}, got ${JSON.stringify(compress)}.`)
+    }
+    return new BuildCli(targets, values['skip-build'], values['build-artifacts'], compress, values['dry-run'])
   }
 
   private static parseRaw(argv: string[]) {
@@ -215,6 +234,7 @@ class BuildCli {
         'targets': { type: 'string' },
         'skip-build': { type: 'boolean', default: false },
         'build-artifacts': { type: 'boolean', default: false },
+        'compress': { type: 'string' },
         'dry-run': { type: 'boolean', default: false },
         'help': { type: 'boolean', default: false },
       },
@@ -229,10 +249,11 @@ class BuildCli {
       '                         Default: the host platform only (on node24).',
       '  --skip-build           skip `pnpm run build` (lib/ artifacts must already exist).',
       '  --build-artifacts      run `pnpm run build:artifacts` instead, omitting the aggregate test and script typechecks.',
+      '  --compress=<type>      pkg archive compression: None | GZip | Brotli | Zstd. Default: Brotli (smallest, slowest).',
       '  --dry-run              print every command and config patch without executing.',
       '  --help                 print this help.',
       '',
-      'Build route: @yao-pkg/pkg --sea (root devDependency, pnpm-patched); see .agents/notes/implemented/architecture/2026-07-10-single-file-executable-sdk-runtime-distribution.md.',
+      'Build route: @yao-pkg/pkg --sea with the selected --compress type (root devDependency, pnpm-patched); see .agents/notes/implemented/architecture/2026-07-10-single-file-executable-sdk-runtime-distribution.md.',
       `Stages the node carrier in ${PYTHON_RUNTIME_DIR}/${PYTHON_NODE_SUBDIR} and writes executables to ${OUT_DIR}/.`,
     ].join('\n')
   }
@@ -371,7 +392,7 @@ class SingleExeBuild {
     try {
       await bundle({ config: false, tsconfig: false, inputOptions: { tsconfig: false }, target: 'es2024', entry: entries,
         outDir: this.staging, clean: false, format: 'esm', platform: 'node', dts: false,
-        deps: { neverBundle: [/^@deepseek-ai\//u], alwaysBundle: [/.*/u] }, shims: true, outExtensions: () => ({ js: '.mjs' }),
+        deps: { neverBundle: [/^@(?:deepseek-ai|berry-ai)\//u], alwaysBundle: [/.*/u] }, shims: true, outExtensions: () => ({ js: '.mjs' }),
         define: { 'import.meta.main': 'false' } })
     } finally {
       for (const entry of Object.values(entries)) await rm(entry, { force: true })
@@ -399,6 +420,8 @@ class SingleExeBuild {
       'pkg',
       this.staging,
       '--sea',
+      '--compress',
+      this.cli.compress,
       '--targets',
       target.spec,
       '--output',

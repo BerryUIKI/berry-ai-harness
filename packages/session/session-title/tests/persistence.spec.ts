@@ -5,6 +5,7 @@ import { mkdtemp, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
+import AgentRegistry from '@berry-ai/harness-agent'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import SessionTitleService, { foldSessionTitle } from '@berry-ai/harness-session-title'
@@ -68,6 +69,7 @@ describe('session title persistence round trips', () => {
     const writer = new Context()
     await writer.plugin(SessionStore)
     await writer.plugin(SessionProjectionRegistry)
+    await writer.plugin(AgentRegistry)
     await writer.plugin(JsonlSessionPersistence, { root, compression: 'none' })
     await writer.plugin(SessionTitleService, CONFIG)
     await appendPersistedTitle(writer, id)
