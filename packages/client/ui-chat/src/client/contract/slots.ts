@@ -81,14 +81,20 @@ export interface QuotaNoticeState {
 
 /** Original model-provided reasoning offered to the expanded Body Slot. */
 export interface ReasoningBodyOwnerProps {
-  /** Complete or streaming reasoning text. */
+  /** Complete or streaming model output. */
+  readonly rawText: string
+  /** Reasoning text prepared for display. */
   readonly text: string
   /** Whether the reasoning tail is still streaming. */
   readonly running: boolean
 }
 
 /** Session-independent original or derived display input to the Content Factory. */
-export interface ReasoningContentInput extends ReasoningBodyOwnerProps {
+export interface ReasoningContentInput {
+  /** Caller-selected Markdown. */
+  readonly text: string
+  /** Whether the supplied text is still streaming. */
+  readonly running: boolean
   /** Localized Markdown controls, used unchanged when supplied; omission uses Chat's defaults. */
   readonly labels?: MarkdownLabels
 }
