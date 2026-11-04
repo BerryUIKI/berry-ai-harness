@@ -9,14 +9,20 @@
   en: 6cc2cd9ced70bb09
   zh: 1c0e6cb4ba2ed637
 /tool-schema-catalog/tool-package-map:
-  en: 44968bf55b862ec4
-  zh: 6f6ef8655e310db5
+  en: 19a54d59c466ffbc
+  zh: 16591d57a009920c
 /tool-schema-catalog/berry-ai-harness-plugin-manager:
   en: 4a08d618ad9e9a0f
   zh: 4a08d618ad9e9a0f
 /tool-schema-catalog/berry-ai-harness-plugin-manager/plugin-manager:
-  en: 221202cb361f0aaf
-  zh: 5263303aa6efd86e
+  en: df25c27707bac9cc
+  zh: a9de46c13bda53d8
+/tool-schema-catalog/berry-ai-harness-plugin-market:
+  en: 7b3e430771fec18d
+  zh: 7b3e430771fec18d
+/tool-schema-catalog/berry-ai-harness-plugin-market/plugin-market:
+  en: 8783cd5fba426a11
+  zh: 59af75c81d7d529d
 /tool-schema-catalog/berry-ai-harness-mcp-resources:
   en: 9e49a9e0089486b1
   zh: 9e49a9e0089486b1
@@ -60,8 +66,8 @@
   en: 8e3adf30188c3b6e
   zh: 8e3adf30188c3b6e
 /tool-schema-catalog/berry-ai-harness-tools/run-code:
-  en: 23078dba709c2ad7
-  zh: 0e7cd389c38e2d9f
+  en: 08058919c1992b60
+  zh: d1a4918fc45a7c87
 /tool-schema-catalog/berry-ai-harness-plan-mode:
   en: cd3111f420294941
   zh: cd3111f420294941

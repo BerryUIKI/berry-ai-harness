@@ -302,6 +302,9 @@ importers:
       '@berry-ai/harness-experimental-inspector-profile':
         specifier: workspace:*
         version: link:../../packages/experimental/inspector-profile
+      '@berry-ai/harness-experimental-plugin-market-bundle':
+        specifier: workspace:*
+        version: link:../../packages/experimental/plugin-market-bundle
       '@berry-ai/harness-experimental-ralph-bundle':
         specifier: workspace:*
         version: link:../../packages/experimental/ralph-bundle
@@ -840,6 +843,43 @@ importers:
         specifier: ^8.21.3
         version: 8.21.3
 
+  apps/plugin-market-generator:
+    dependencies:
+      '@berry-ai/harness-plugin-market-index':
+        specifier: workspace:*
+        version: link:../../packages/util/plugin-market-index
+      commander:
+        specifier: ^15.0.0
+        version: 15.0.0
+      hosted-git-info:
+        specifier: ^9.0.3
+        version: 9.0.3
+      resolve.exports:
+        specifier: ^2.0.3
+        version: 2.0.3
+      semver:
+        specifier: ^7.8.5
+        version: 7.8.5
+      tar:
+        specifier: ^7.5.22
+        version: 7.5.22
+      yaml:
+        specifier: ^2.9.0
+        version: 2.9.0
+    devDependencies:
+      '@berry-ai/harness-package-manifest':
+        specifier: workspace:*
+        version: link:../../packages/util/package-manifest
+      '@types/hosted-git-info':
+        specifier: ^3.0.5
+        version: 3.0.5
+      '@types/semver':
+        specifier: ^7.8.0
+        version: 7.8.0
+      tsx:
+        specifier: ^4.22.4
+        version: 4.23.13
+
   apps/web:
     devDependencies:
       '@berry-ai/harness-client-modules':
@@ -881,6 +921,9 @@ importers:
       '@berry-ai/harness-experimental-cot-translation-bundle':
         specifier: workspace:*
         version: link:../../packages/experimental/cot-translation-bundle
+      '@berry-ai/harness-experimental-plugin-market-bundle':
+        specifier: workspace:*
+        version: link:../../packages/experimental/plugin-market-bundle
       '@berry-ai/harness-experimental-speech-to-text':
         specifier: workspace:*
         version: link:../../packages/experimental/speech-to-text
@@ -1417,6 +1460,9 @@ importers:
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../boot/plugin-manager
+      '@berry-ai/harness-plugin-market':
+        specifier: workspace:*
+        version: link:../../boot/plugin-market
       '@berry-ai/harness-schedule':
         specifier: workspace:*
         version: link:../../schedule/schedule
@@ -1672,6 +1718,9 @@ importers:
       '@berry-ai/harness-brand':
         specifier: workspace:*
         version: link:../../util/brand
+      '@berry-ai/harness-client-connection':
+        specifier: workspace:*
+        version: link:../../client/connection
       '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../../client/store
@@ -2079,6 +2128,70 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3
 
+  packages/boot/plugin-market:
+    dependencies:
+      '@berry-ai/harness-app-boot':
+        specifier: workspace:*
+        version: link:../app-boot
+      '@berry-ai/harness-package-manifest':
+        specifier: workspace:*
+        version: link:../../util/package-manifest
+      '@berry-ai/harness-plugin-market-index':
+        specifier: workspace:*
+        version: link:../../util/plugin-market-index
+      '@berry-ai/harness-timeout':
+        specifier: workspace:*
+        version: link:../../util/timeout
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
+      '@deepseek-ai/schemastery':
+        specifier: link:../../../vendor/schemastery
+        version: link:../../../vendor/schemastery
+      minisearch:
+        specifier: ^7.2.0
+        version: 7.2.0
+      semver:
+        specifier: ^7.8.5
+        version: 7.8.5
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
+    devDependencies:
+      '@berry-ai/harness-config-editor':
+        specifier: workspace:*
+        version: link:../config-editor
+      '@berry-ai/harness-llm':
+        specifier: workspace:*
+        version: link:../../llm/llm
+      '@berry-ai/harness-plugin-manager':
+        specifier: workspace:*
+        version: link:../plugin-manager
+      '@berry-ai/harness-settings':
+        specifier: workspace:*
+        version: link:../../settings/settings
+      '@berry-ai/harness-system-prompt':
+        specifier: workspace:*
+        version: link:../../core/system-prompt
+      '@berry-ai/harness-tools':
+        specifier: workspace:*
+        version: link:../../core/tools
+      '@berry-ai/harness-typert-protocol':
+        specifier: workspace:*
+        version: link:../../typert/protocol
+      '@deepseek-ai/cordis':
+        specifier: workspace:~
+        version: link:../../../vendor/cordis
+      '@deepseek-ai/cordis-plugin-loader':
+        specifier: workspace:~
+        version: link:../../../vendor/loader
+      '@deepseek-ai/cosmokit':
+        specifier: link:../../../vendor/cosmokit
+        version: link:../../../vendor/cosmokit
+      '@types/semver':
+        specifier: ^7.8.0
+        version: 7.8.0
+
   packages/browser-use/browser-use:
     devDependencies:
       '@berry-ai/harness-brand':
@@ -2376,6 +2489,9 @@ importers:
       '@berry-ai/harness-web':
         specifier: workspace:*
         version: link:../../web/web
+      '@berry-ai/harness-web-deepseek-api':
+        specifier: workspace:*
+        version: link:../../web/web-deepseek-api
       '@berry-ai/harness-web-fetch-http':
         specifier: workspace:*
         version: link:../../web/web-fetch-http
@@ -2674,6 +2790,9 @@ importers:
       '@berry-ai/harness-client-ui-cordis':
         specifier: workspace:*
         version: link:../../extensions/ui-cordis
+      '@berry-ai/harness-client-ui-deepseek-model-label-1017':
+        specifier: workspace:*
+        version: link:../../client/ui-deepseek-model-label-1017
       '@berry-ai/harness-client-ui-deliverables':
         specifier: workspace:*
         version: link:../../client/ui-deliverables
@@ -2683,6 +2802,9 @@ importers:
       '@berry-ai/harness-client-ui-directory-picker-native':
         specifier: workspace:*
         version: link:../../client/ui-directory-picker-native
+      '@berry-ai/harness-client-ui-entry-customization':
+        specifier: workspace:*
+        version: link:../../client/ui-entry-customization
       '@berry-ai/harness-client-ui-goal':
         specifier: workspace:*
         version: link:../../client/ui-goal
@@ -2878,6 +3000,9 @@ importers:
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../boot/plugin-manager
+      '@berry-ai/harness-plugin-market':
+        specifier: workspace:*
+        version: link:../../boot/plugin-market
       '@berry-ai/harness-schedule':
         specifier: workspace:*
         version: link:../../schedule/schedule
@@ -3116,6 +3241,9 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
+      eventsource-parser:
+        specifier: ^3.1.0
+        version: 3.1.0
 
   packages/client/locale:
     dependencies:
@@ -3193,6 +3321,9 @@ importers:
       '@berry-ai/harness-api-gateway':
         specifier: workspace:*
         version: link:../../api/gateway
+      '@berry-ai/harness-app-boot':
+        specifier: workspace:*
+        version: link:../../boot/app-boot
       '@berry-ai/harness-compaction':
         specifier: workspace:*
         version: link:../../compaction/compaction
@@ -3208,6 +3339,9 @@ importers:
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
+      '@berry-ai/harness-loader-smoke':
+        specifier: workspace:*
+        version: link:../../test-support/loader-smoke
       '@berry-ai/harness-otel':
         specifier: workspace:*
         version: link:../../telemetry/otel
@@ -3308,6 +3442,9 @@ importers:
       '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
+      '@berry-ai/harness-client-product-analytics':
+        specifier: workspace:*
+        version: link:../product-analytics
       '@berry-ai/harness-client-store':
         specifier: workspace:*
         version: link:../store
@@ -3785,6 +3922,42 @@ importers:
         specifier: 4.4.3
         version: 4.4.3
 
+  packages/client/ui-deepseek-model-label-1017:
+    devDependencies:
+      '@berry-ai/harness-client-locale':
+        specifier: workspace:*
+        version: link:../locale
+      '@berry-ai/harness-client-test-runtime':
+        specifier: workspace:*
+        version: link:../../test-support/client-runtime
+      '@berry-ai/harness-client-ui-model-selection':
+        specifier: workspace:*
+        version: link:../ui-model-selection
+      '@berry-ai/harness-client-ui-primitives':
+        specifier: workspace:*
+        version: link:../ui-primitives
+      '@berry-ai/harness-client-ui-renderer':
+        specifier: workspace:*
+        version: link:../ui-renderer
+      '@berry-ai/harness-client-ui-slots':
+        specifier: workspace:*
+        version: link:../ui-slots
+      '@berry-ai/harness-session':
+        specifier: workspace:*
+        version: link:../../core/session
+      '@deepseek-ai/cordis':
+        specifier: workspace:~
+        version: link:../../../vendor/cordis
+      '@testing-library/react':
+        specifier: ^16.3.3
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+
   packages/client/ui-deliverables:
     dependencies:
       '@berry-ai/harness-typert-protocol':
@@ -3961,6 +4134,57 @@ importers:
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx:
         specifier: ^2.0.0
+        version: 2.1.1
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+
+  packages/client/ui-entry-customization:
+    devDependencies:
+      '@berry-ai/harness-client-locale':
+        specifier: workspace:*
+        version: link:../locale
+      '@berry-ai/harness-client-product-analytics':
+        specifier: workspace:*
+        version: link:../product-analytics
+      '@berry-ai/harness-client-test-runtime':
+        specifier: workspace:*
+        version: link:../../test-support/client-runtime
+      '@berry-ai/harness-client-ui-conversation':
+        specifier: workspace:*
+        version: link:../ui-conversation
+      '@berry-ai/harness-client-ui-plugin-manager':
+        specifier: workspace:*
+        version: link:../ui-plugin-manager
+      '@berry-ai/harness-client-ui-primitives':
+        specifier: workspace:*
+        version: link:../ui-primitives
+      '@berry-ai/harness-client-ui-renderer':
+        specifier: workspace:*
+        version: link:../ui-renderer
+      '@berry-ai/harness-client-ui-sidebar':
+        specifier: workspace:*
+        version: link:../ui-sidebar
+      '@berry-ai/harness-client-ui-sidebar-right':
+        specifier: workspace:*
+        version: link:../ui-sidebar-right
+      '@berry-ai/harness-client-ui-slots':
+        specifier: workspace:*
+        version: link:../ui-slots
+      '@berry-ai/harness-client-ui-workspace':
+        specifier: workspace:*
+        version: link:../ui-workspace
+      '@deepseek-ai/cordis':
+        specifier: workspace:~
+        version: link:../../../vendor/cordis
+      '@testing-library/react':
+        specifier: ^16.3.3
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      clsx:
+        specifier: ^2.1.1
         version: 2.1.1
       react:
         specifier: ^18.2.0
@@ -4546,6 +4770,60 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
 
+  packages/client/ui-plugin-market:
+    devDependencies:
+      '@berry-ai/harness-api-remotes':
+        specifier: workspace:*
+        version: link:../../api/remotes
+      '@berry-ai/harness-client-locale':
+        specifier: workspace:*
+        version: link:../locale
+      '@berry-ai/harness-client-store':
+        specifier: workspace:*
+        version: link:../store
+      '@berry-ai/harness-client-test-runtime':
+        specifier: workspace:*
+        version: link:../../test-support/client-runtime
+      '@berry-ai/harness-client-ui-plugin-manager':
+        specifier: workspace:*
+        version: link:../ui-plugin-manager
+      '@berry-ai/harness-client-ui-primitives':
+        specifier: workspace:*
+        version: link:../ui-primitives
+      '@berry-ai/harness-client-ui-renderer':
+        specifier: workspace:*
+        version: link:../ui-renderer
+      '@berry-ai/harness-client-ui-slots':
+        specifier: workspace:*
+        version: link:../ui-slots
+      '@berry-ai/harness-package-manifest':
+        specifier: workspace:*
+        version: link:../../util/package-manifest
+      '@berry-ai/harness-plugin-manager':
+        specifier: workspace:*
+        version: link:../../boot/plugin-manager
+      '@berry-ai/harness-plugin-market':
+        specifier: workspace:*
+        version: link:../../boot/plugin-market
+      '@berry-ai/harness-plugin-market-index':
+        specifier: workspace:*
+        version: link:../../util/plugin-market-index
+      '@berry-ai/harness-typert-protocol':
+        specifier: workspace:*
+        version: link:../../typert/protocol
+      '@deepseek-ai/cordis':
+        specifier: workspace:~
+        version: link:../../../vendor/cordis
+      '@testing-library/react':
+        specifier: ^16.1.0
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+
   packages/client/ui-primitives:
     devDependencies:
       '@berry-ai/harness-client-store':
@@ -4998,6 +5276,12 @@ importers:
       '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../locale
+      '@berry-ai/harness-client-modules':
+        specifier: workspace:*
+        version: link:../modules
+      '@berry-ai/harness-client-product-analytics':
+        specifier: workspace:*
+        version: link:../product-analytics
       '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../shortcuts
@@ -5007,6 +5291,9 @@ importers:
       '@berry-ai/harness-client-test-runtime':
         specifier: workspace:*
         version: link:../../test-support/client-runtime
+      '@berry-ai/harness-client-ui-layout':
+        specifier: workspace:*
+        version: link:../ui-layout
       '@berry-ai/harness-client-ui-primitives':
         specifier: workspace:*
         version: link:../ui-primitives
@@ -5816,6 +6103,9 @@ importers:
       '@berry-ai/harness-client-ui-tool':
         specifier: workspace:*
         version: link:../ui-tool
+      '@berry-ai/harness-plugin-manager':
+        specifier: workspace:*
+        version: link:../../boot/plugin-manager
       '@berry-ai/harness-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -7184,6 +7474,9 @@ importers:
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -7984,6 +8277,9 @@ importers:
 
   packages/experimental/client-ui-cot-translation:
     dependencies:
+      '@berry-ai/harness-typert-protocol':
+        specifier: workspace:*
+        version: link:../../typert/protocol
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -8045,9 +8341,6 @@ importers:
       '@berry-ai/harness-settings':
         specifier: workspace:*
         version: link:../../settings/settings
-      '@berry-ai/harness-typert-protocol':
-        specifier: workspace:*
-        version: link:../../typert/protocol
       '@berry-ai/harness-typert-registry':
         specifier: workspace:*
         version: link:../../typert/registry
@@ -8583,12 +8876,6 @@ importers:
       '@berry-ai/harness-app-boot':
         specifier: workspace:*
         version: link:../../boot/app-boot
-      '@berry-ai/harness-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
-      '@berry-ai/harness-client-modules':
-        specifier: workspace:*
-        version: link:../../client/modules
       '@berry-ai/harness-util-crypto':
         specifier: workspace:*
         version: link:../../util/crypto
@@ -8605,12 +8892,18 @@ importers:
         specifier: ^8.21.3
         version: 8.21.3
     devDependencies:
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-client-connection':
         specifier: workspace:*
         version: link:../../client/connection
       '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
+      '@berry-ai/harness-client-modules':
+        specifier: workspace:*
+        version: link:../../client/modules
       '@berry-ai/harness-client-shortcuts':
         specifier: workspace:*
         version: link:../../client/shortcuts
@@ -8687,6 +8980,19 @@ importers:
       js-yaml:
         specifier: ^4.3.2
         version: 4.3.2
+
+  packages/experimental/plugin-market-bundle:
+    dependencies:
+      '@berry-ai/harness-client-ui-plugin-market':
+        specifier: workspace:*
+        version: link:../../client/ui-plugin-market
+      '@berry-ai/harness-plugin-market':
+        specifier: workspace:*
+        version: link:../../boot/plugin-market
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: workspace:~
+        version: link:../../../vendor/cordis
 
   packages/experimental/ptc-runtime-python:
     dependencies:
@@ -9385,12 +9691,12 @@ importers:
 
   packages/experimental/webworker-packer:
     dependencies:
+      '@berry-ai/harness-app-boot':
+        specifier: workspace:*
+        version: link:../../boot/app-boot
       '@berry-ai/harness-experimental-webworker-runtime':
         specifier: workspace:*
         version: link:../webworker-runtime
-      '@berry-ai/harness-home-paths':
-        specifier: workspace:*
-        version: link:../../util/home-paths
       '@berry-ai/harness-session-format':
         specifier: workspace:*
         version: link:../../session/session-format
@@ -10773,6 +11079,9 @@ importers:
       eventsource-parser:
         specifier: ^3.1.0
         version: 3.1.0
+      semver:
+        specifier: ^7.8.5
+        version: 7.8.5
     devDependencies:
       '@berry-ai/harness-agent':
         specifier: workspace:*
@@ -10858,21 +11167,18 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
+      '@types/semver':
+        specifier: ^7.8.0
+        version: 7.8.0
 
   packages/llm/llm-deepseek-account:
     dependencies:
-      '@berry-ai/harness-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/cosmokit':
         specifier: link:../../../vendor/cosmokit
         version: link:../../../vendor/cosmokit
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
-      semver:
-        specifier: ^7.8.5
-        version: 7.8.5
     devDependencies:
       '@berry-ai/harness-deepseek-account':
         specifier: workspace:*
@@ -10898,9 +11204,6 @@ importers:
       '@deepseek-ai/cordis-plugin-loader':
         specifier: workspace:~
         version: link:../../../vendor/loader
-      '@types/semver':
-        specifier: ^7.8.0
-        version: 7.8.0
 
   packages/llm/llm-deepseek-api-key:
     dependencies:
@@ -14823,6 +15126,22 @@ importers:
         specifier: workspace:~
         version: link:../../../vendor/cordis
 
+  packages/util/plugin-market-index:
+    dependencies:
+      '@berry-ai/harness-package-manifest':
+        specifier: workspace:*
+        version: link:../package-manifest
+      semver:
+        specifier: ^7.8.5
+        version: 7.8.5
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: workspace:~
+        version: link:../../../vendor/cordis
+      '@types/semver':
+        specifier: ^7.8.0
+        version: 7.8.0
+
   packages/util/time:
     devDependencies:
       '@deepseek-ai/cordis':
@@ -14917,6 +15236,40 @@ importers:
       '@berry-ai/harness-llm':
         specifier: workspace:*
         version: link:../../llm/llm
+      '@deepseek-ai/cordis':
+        specifier: workspace:~
+        version: link:../../../vendor/cordis
+
+  packages/web/web-deepseek-api:
+    dependencies:
+      '@deepseek-ai/schemastery':
+        specifier: link:../../../vendor/schemastery
+        version: link:../../../vendor/schemastery
+    devDependencies:
+      '@berry-ai/harness-agent':
+        specifier: workspace:*
+        version: link:../../core/agent
+      '@berry-ai/harness-credentials':
+        specifier: workspace:*
+        version: link:../../credentials/credentials
+      '@berry-ai/harness-credentials-local':
+        specifier: workspace:*
+        version: link:../../credentials/credentials-local
+      '@berry-ai/harness-deepseek-account':
+        specifier: workspace:*
+        version: link:../../credentials/deepseek-account
+      '@berry-ai/harness-http-proxy':
+        specifier: workspace:*
+        version: link:../../util/http-proxy
+      '@berry-ai/harness-launch-environment':
+        specifier: workspace:*
+        version: link:../../util/launch-environment
+      '@berry-ai/harness-session':
+        specifier: workspace:*
+        version: link:../../core/session
+      '@berry-ai/harness-web':
+        specifier: workspace:*
+        version: link:../web
       '@deepseek-ai/cordis':
         specifier: workspace:~
         version: link:../../../vendor/cordis
@@ -15392,6 +15745,9 @@ importers:
       '@berry-ai/harness-plugin-manager':
         specifier: workspace:*
         version: link:../../packages/boot/plugin-manager
+      '@berry-ai/harness-plugin-market':
+        specifier: workspace:*
+        version: link:../../packages/boot/plugin-market
       '@berry-ai/harness-plugin-package-inventory-deepseek':
         specifier: workspace:*
         version: link:../../packages/llm/plugin-package-inventory-deepseek
@@ -18820,6 +19176,9 @@ packages:
   '@types/hast@3.0.5':
     resolution: {integrity: sha512-rp/ezSWaD1m44dPKICGhiskI13nVr7qTloFwDa/IYkhhf5nzwP+zIQcIJh3WIFSBOy/H1PzB40jPjMDksN4F+g==}
 
+  '@types/hosted-git-info@3.0.5':
+    resolution: {integrity: sha512-Dmngh7U003cOHPhKGyA7LWqrnvcTyILNgNPmNCxlx7j8MIi54iBliiT8XqVLIQ3GchoOjVAyBzNJVyuaJjqokg==}
+
   '@types/http-cache-semantics@4.2.0':
     resolution: {integrity: sha512-L3LgimLHXtGkWikKnsPg0/VFx9OGZaC+eN1u4r+OB1XRqH3meBIAVC2zr1WdMH+RHmnRkqliQAOHNJ/E0j/e0Q==}
 
@@ -20764,6 +21123,10 @@ packages:
   hosted-git-info@4.1.0:
     resolution: {integrity: sha512-kyCuEOWjJqZuDbRHzL8V93NzQhwIB71oFWSyzVo+KPZI+pnQPPxucdkrOZvkLRnrf5URsQM+IJ09Dw29cRALIA==}
     engines: {node: '>=10'}
+
+  hosted-git-info@9.0.3:
+    resolution: {integrity: sha512-Hc+ghLoSt6QaYZUv0WBiIvmMDZuZZ7oaDvdH8MbfOO4lOsxdXLEvuC6ePoGs9H1X9oCLyq6+NVN0MKqD+ydxyg==}
+    engines: {node: ^20.17.0 || >=22.9.0}
 
   html-encoding-sniffer@3.0.0:
     resolution: {integrity: sha512-oWv4T4yJ52iKrufjnyZPkrN0CH3QnrUqdB6In1g5Fe1mia8GmF36gnfNySxoZtxD5+NmYw1EElVXiBk93UeskA==}
@@ -26131,6 +26494,8 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
+  '@types/hosted-git-info@3.0.5': {}
+
   '@types/http-cache-semantics@4.2.0': {}
 
   '@types/http-errors@2.0.5': {}
@@ -28447,6 +28812,10 @@ snapshots:
   hosted-git-info@4.1.0:
     dependencies:
       lru-cache: 6.0.0
+
+  hosted-git-info@9.0.3:
+    dependencies:
+      lru-cache: 11.5.1
 
   html-encoding-sniffer@3.0.0:
     dependencies:
