@@ -6,7 +6,7 @@ import type { WorkspaceSnapshot } from '@berry-ai/harness-api-workspace-controll
 import type { SessionStatusSnapshot } from '@berry-ai/harness-client-ui-session/client'
 import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { createSnapshotStore } from '@berry-ai/harness-client-store'
-import { bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
+import { allowAllAccess, bindSnapshotSelector, makeTranslate } from '@berry-ai/harness-client-test-runtime'
 import { TranscriptViewRow, type TranscriptViewRowProps } from '../src/client/settings/TranscriptViewRow.tsx'
 import { PerformanceUsageRow } from '../src/client/settings/PerformanceUsageRow.tsx'
 import type { LinkOpening, PerformanceUsageMode, TranscriptViewMode } from '../src/chat-settings.ts'
@@ -47,6 +47,7 @@ function mount(mode: TranscriptViewMode = 'standard', dictionary: typeof en | ty
     useWorkspaces: emptyWorkspaces(),
     useSessionRetainInfo: () => undefined,
     useResource,
+    ...allowAllAccess,
     useTranscriptView: bindSnapshotSelector(source),
     useCollapseTiming: bindSnapshotSelector(collapseTiming),
     setTranscriptView,

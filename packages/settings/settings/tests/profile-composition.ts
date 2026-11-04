@@ -20,7 +20,7 @@ export async function profileComposition(ctx: Context, home: string, baseFile: s
   await writeFile(join(home, 'package.json'), '{"name":"test-installation"}\n')
   await writeFile(join(bundle, 'package.json'), JSON.stringify({ name: 'test-profile-bundle', version: '1.0.0', dsh: { bundle: { patch: 'cordis.patch.yml' } } }))
   const rows = yaml.load(await readFile(baseFile, 'utf8'), { schema: entryListSchema }) as EntryOptions[]
-  for (const row of rows) row.id ??= row.name.replace('@deepseek-ai/dsh-', '')
+  for (const row of rows) row.id ??= row.name.replace('@berry-ai/harness-', '')
   await writeFile(join(bundle, 'cordis.patch.yml'), yaml.dump([{ insert: rows }], { schema: entryListSchema }))
   await writeFile(join(dir, 'cordis.yml'), '[]\n')
   const profile: ProfileContext = {

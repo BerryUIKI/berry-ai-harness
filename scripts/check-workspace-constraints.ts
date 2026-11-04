@@ -56,6 +56,7 @@ const publicationSourceAllowlist: Readonly<Record<string, readonly string[]>> = 
 /** Public source home recorded in maintained package manifests. */
 const publishedRepositoryUrl = 'git+https://github.com/deepseek-ai/deepseek-harness.git'
 const berryPublishedRepositoryUrl = 'git+https://github.com/BerryUIKI/berry-ai-harness.git'
+/** Accept either the upstream source home or the Berry fork's public home. */
 const isPublishedRepositoryUrl = (url?: string): boolean =>
   url === publishedRepositoryUrl || url === berryPublishedRepositoryUrl
 /** Packages that participate in the experimental policy. */
@@ -66,11 +67,7 @@ const standardReleaseMemberDirectory = /^(?:packages\/(?!experimental\/)[^/]+\/[
 const desktopApplicationDirectory = 'apps/desktop'
 const localArtifactDirs = new Set(['node_modules'])
 const appPackageFiles: Readonly<Record<string, readonly string[]>> = {
-  '@deepseek-ai/dsh': ['lib/*.js', 'lib/types/*.d.ts'],
   '@berry-ai/harness': ['lib/*.js', 'lib/types/*.d.ts'],
-  '@deepseek-ai/dsh-desktop-host': [
-    'lib/index.js', 'lib/cli.js',
-  ],
   '@berry-ai/harness-desktop-host': [
     'lib/index.js', 'lib/cli.js',
   ],
@@ -177,6 +174,9 @@ export function readWorkspaceManifests(repositoryRoot: string): WorkspaceManifes
 }
 
 const packageFileExtras: Readonly<Record<string, readonly string[]>> = {
+  // CUA publishes its client API and attributed native source for local macOS builds.
+  '@berry-ai/harness-cua': ['lib/api.js', 'lib/bridge.js', 'lib/native-client.js', 'lib/protocol.js'],
+  '@berry-ai/harness-experimental-cua-macos': ['native/bin', 'native/Package.swift', 'native/Sources', 'native/tests/swift', 'native/tests/test_swift.py', 'native/LICENSE.cua-driver', 'native/upstream.json', 'native/README.md', 'native/README.zh.md', 'native/protocol.schema.json'],
   '@berry-ai/harness-webhook-github': ['examples/github-review/cordis.yml', 'examples/github-review/github-ready-review-rule.mjs'],
   // Owned Worker bundles import this public bootstrap before their business entry.
   '@berry-ai/harness-app-boot': ['lib/worker/profile-resolution-bootstrap.js'],
@@ -196,8 +196,8 @@ const packageFileExtras: Readonly<Record<string, readonly string[]>> = {
   // The CPython side ships as source .py files, published as-is rather than built.
   '@berry-ai/harness-experimental-ptc-runtime-python': ['py/**/*.py'],
   '@berry-ai/harness-experimental-speech-to-text-sensevoice': ['runtime/assets.json'],
-  // The isolated Node bootstrap is a separately launched bundle.
-  '@berry-ai/harness-ptc-runtime-node': ['lib/process.js'],
+  // Node execution modes each launch a separately bundled bootstrap.
+  '@berry-ai/harness-ptc-runtime-node': ['lib/process.js', 'lib/persistent-process.js'],
   // The Inspector owns a Worker and a mirrored frontend outside package export paths.
   '@berry-ai/harness-experimental-inspector': ['lib/client.*.js', 'lib/worker.js', 'lib/devtools/**'],
   // Creator's composition guidance travels with the declaration package.
@@ -256,6 +256,7 @@ export function expectedDshPackageFiles(manifest: PackageManifest): readonly str
     const target = exportDefault(manifest, resource)
     if (target?.startsWith('./') && target.endsWith('.json')) localeFiles.add(target.slice(2))
   }
+  const browserClient = exportDefault(manifest, './client')
   const bundle = manifest.dsh?.bundle
   const bundleFiles = bundle === undefined ? [] : bundlePatchFiles(bundle).map(file => file.replace(/^\.\//, ''))
   const extras = [
@@ -279,11 +280,11 @@ export function expectedDshPackageFiles(manifest: PackageManifest): readonly str
     // Keyed on the artifact path, like ./client below.
     ...exportDefault(manifest, './worker') === './lib/worker.cjs' ? ['lib/worker.cjs'] : [],
     ...exportDefault(manifest, './worker') === './lib/worker.js' ? ['lib/worker.js'] : [],
-    // UI plugin packages ship their browser bundle beside the node lib
-    // (single-artifact ruling: dist/ retired, ./client resolves lib/client.js).
-    // Keyed on the artifact path, not the subpath name: a package's ./client is
-    // a browser-safe source channel, not a bundle.
-    ...exportDefault(manifest, './client') === './lib/client.js' ? ['lib/client.js'] : [],
+    // Only physical browser bundles need a publication entry; a ./client
+    // subpath may instead expose a browser-safe emitted source tree.
+    ...browserClient === './lib/client.js' ? ['lib/client.js'] : [],
+    ...browserClient === './lib/client.browser.js' ? ['lib/client.browser.js'] : [],
+    ...exportCondition(manifest, './client', 'node') === './lib/client.node.js' ? ['lib/client.node.js'] : [],
     // runtime's shell-held loader subpath ships as its own bundle beside the client half.
     ...exportDefault(manifest, './loader') === './lib/loader.js' ? ['lib/loader.js'] : [],
     // A store subpath ships its own bundle (single-entry builds; no shared chunk).
@@ -335,6 +336,12 @@ function exportDefault(manifest: PackageManifest, subpath: string): string | und
   const entry = manifest.exports?.[subpath]
   if (typeof entry === 'string') return entry
   const target = exportFields(entry)?.default
+  return typeof target === 'string' ? target : undefined
+}
+
+/** Exact named condition target of an export entry. */
+function exportCondition(manifest: PackageManifest, subpath: string, condition: string): string | undefined {
+  const target = exportFields(manifest.exports?.[subpath])?.[condition]
   return typeof target === 'string' ? target : undefined
 }
 
@@ -405,7 +412,7 @@ function isReleaseMemberDirectory(dir: string): boolean {
  */
 export function checkDshFamilyVersion(manifest: PackageManifest, expected: string | undefined): string | undefined {
   const name = manifest.name
-  if (name !== '@deepseek-ai/dsh' && name !== '@berry-ai/harness' && name?.startsWith('@deepseek-ai/dsh-') !== true && name?.startsWith('@berry-ai/harness-') !== true) return undefined
+  if (name !== '@berry-ai/harness' && name?.startsWith('@berry-ai/harness-') !== true) return undefined
   if (manifest.version !== expected) {
     return `${name}: package.json version must match root version ${expected ?? '(missing)'}`
   }
@@ -436,9 +443,9 @@ export function checkWorkspaceManifest({ dir, manifest }: WorkspaceManifest): st
     }
     const expectedDirectory = dir
     if (manifest.repository?.type !== 'git'
-      || !isPublishedRepositoryUrl(manifest.repository.url)
+      || manifest.repository.url !== publishedRepositoryUrl
       || manifest.repository.directory !== expectedDirectory) {
-      errors.push(`${label}: published Landlock package repository must use a valid repository URL with directory ${expectedDirectory}`)
+      errors.push(`${label}: published Landlock package repository must use ${publishedRepositoryUrl} with directory ${expectedDirectory}`)
     }
   } else if (isReleaseMemberDirectory(dir)) {
     // Release members state that they are publishable: npm refuses a private
@@ -469,7 +476,7 @@ export function checkWorkspaceManifest({ dir, manifest }: WorkspaceManifest): st
     return errors
   }
 
-  if (manifest.name?.startsWith('@deepseek-ai/') || manifest.name?.startsWith('@berry-ai/')) {
+  if (manifest.name?.startsWith('@deepseek-ai/')) {
     const allowedSources = publicationSourceAllowlist[manifest.name] ?? []
     for (const file of manifest.files ?? []) {
       if (isForbiddenPublicationFile(file) && !allowedSources.includes(file)) {
@@ -478,7 +485,7 @@ export function checkWorkspaceManifest({ dir, manifest }: WorkspaceManifest): st
     }
   }
 
-  if (dir.startsWith('apps/') && dir !== desktopApplicationDirectory && (manifest.name?.startsWith('@deepseek-ai/') || manifest.name?.startsWith('@berry-ai/'))) {
+  if (dir.startsWith('apps/') && dir !== desktopApplicationDirectory && manifest.name?.startsWith('@deepseek-ai/')) {
     const expectedFiles = appPackageFiles[manifest.name]
     if (expectedFiles === undefined) {
       errors.push(`${label}: app package has no publication files policy`)
@@ -496,7 +503,7 @@ export function checkWorkspaceManifest({ dir, manifest }: WorkspaceManifest): st
     }
   }
 
-  if (dir.startsWith('packages/') && (manifest.name?.startsWith('@deepseek-ai/dsh-') || manifest.name?.startsWith('@berry-ai/harness-'))) {
+  if (dir.startsWith('packages/') && manifest.name?.startsWith('@berry-ai/harness-')) {
     const peer = manifest.peerDependencies?.['@deepseek-ai/cordis']
     const dev = manifest.devDependencies?.['@deepseek-ai/cordis']
 
@@ -586,7 +593,7 @@ export function checkExperimentalDependencyIsolation(
   const errors: string[] = []
   for (const { dir, manifest } of manifests) {
     if (!standardReleaseMemberDirectory.test(dir) && dir !== 'python/sdk-runtime') continue
-    const offered = (manifest.name === '@deepseek-ai/dsh' || manifest.name === '@berry-ai/harness') ? new Set(optionalBundles) : new Set<string>()
+    const offered = manifest.name === '@berry-ai/harness' ? new Set(optionalBundles) : new Set<string>()
     for (const section of runtimeDependencySections) {
       for (const [name, range] of Object.entries(manifest[section] ?? {})) {
         const experimental = experimentalNames.has(name) || isExperimentalPackageName(name)
@@ -620,7 +627,7 @@ export function checkWorkspaceProtocol(manifests: readonly WorkspaceManifest[]):
     for (const section of dependencySections) {
       for (const [name, range] of Object.entries(manifest[section] ?? {})) {
         if (!members.has(name)) continue
-        const expected = name === '@deepseek-ai/dsh' || name === '@berry-ai/harness' || name.startsWith('@deepseek-ai/dsh-') || name.startsWith('@berry-ai/harness-')
+        const expected = name === '@berry-ai/harness' || name.startsWith('@berry-ai/harness-')
           ? 'workspace:*'
           : vendors.has(name) ? 'workspace:~' : undefined
         if (expected !== undefined ? range === expected : range.startsWith('workspace:')) continue

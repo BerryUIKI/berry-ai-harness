@@ -6,10 +6,11 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@berry-ai/harness-agent-loop-testkit'
+import RemoteAccessService from '@berry-ai/harness-api-remote-access'
 import SessionController from '@berry-ai/harness-api-session-controller'
 import Translator from '@berry-ai/harness-experimental-translator'
 import { SESSION_FORMAT_VERSION, SessionId, SessionSeq } from '@berry-ai/harness-session'
-import JsonlPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import SessionQuery from '@berry-ai/harness-session-query'
 import TypertRegistry from '@berry-ai/harness-typert-registry'
 import { RemoteError } from '@berry-ai/harness-typert-protocol'
@@ -66,6 +67,7 @@ async function fixture(origin?: 'subagent') {
     saveSelection: async () => {},
   } as never)
   ctx.provide('fileUploads', { registerAgentResolver: () => () => {} } as never)
+  await ctx.plugin(RemoteAccessService)
   const sessions = new SessionController(ctx, { nativeOpen: false })
   await ctx.plugin(Translator, Translator.Config({ bingEndpoint: `http://127.0.0.1:${address.port}/bing` }))
   const ui = ctx.plugin(CotTranslationController, {})

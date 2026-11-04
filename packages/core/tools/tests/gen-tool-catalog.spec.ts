@@ -115,7 +115,7 @@ describe('gen-tool-catalog assertManifestComplete', () => {
 
 describe('gen-tool-catalog assertToolsHarvested', () => {
   const entry: ToolPackage = {
-    pkg: '@deepseek-ai/dsh-tool-demo',
+    pkg: '@berry-ai/harness-tool-demo',
     dir: 'tool-demo',
     source: 'packages/demo/tool-demo/src/index.ts',
     requires: ['ctx.tools', 'ctx.somethingUnmounted'],
@@ -140,7 +140,7 @@ describe('gen-tool-catalog render', () => {
   it('emits a package heading, a tool heading, and a json schema fence', () => {
     const catalog: ToolCatalog = [
       {
-        pkg: '@deepseek-ai/dsh-tool-demo',
+        pkg: '@berry-ai/harness-tool-demo',
         sources: { demo: 'packages/demo/tool-demo/src/index.ts' },
         requires: ['ctx.tools'],
         writes: ['tool/result'],
@@ -148,8 +148,8 @@ describe('gen-tool-catalog render', () => {
       },
     ]
     const md = render(catalog)
-    expect(md).toContain('| `@deepseek-ai/dsh-tool-demo` | `demo` | `ctx.tools` | `tool/result` |')
-    expect(md).toContain('## `@deepseek-ai/dsh-tool-demo`')
+    expect(md).toContain('| `@berry-ai/harness-tool-demo` | `demo` | `ctx.tools` | `tool/result` |')
+    expect(md).toContain('## `@berry-ai/harness-tool-demo`')
     expect(md).toContain('### `demo`')
     expect(md).toContain('A demo tool.')
     expect(md).toContain('```json')

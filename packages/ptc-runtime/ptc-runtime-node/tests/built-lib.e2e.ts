@@ -22,7 +22,7 @@ describe.skipIf(!built)('built lib real load path (plain node)', () => {
       const { NodePtcRuntime } = await import('@berry-ai/harness-ptc-runtime-node')
       const ctx = new Context()
       for (const name of ['session-projection', 'fs-local', 'subprocess-local', 'sandbox-local']) {
-        const plugin = await import('@deepseek-ai/dsh-' + name)
+        const plugin = await import('@berry-ai/harness-' + name)
         await ctx.plugin(plugin.default, {})
       }
       const { default: SandboxPolicy } = await import('@berry-ai/harness-sandbox-policy')

@@ -1,7 +1,7 @@
 /**
  * Migration tool for importing legacy DeepSeek Harness user data to Berry AI Harness.
  *
- * @module @deepseek-ai/dsh/migrate
+ * @module @berry-ai/harness/migrate
  */
 
 import { existsSync } from 'node:fs'

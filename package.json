@@ -1,6 +1,6 @@
 {
   "name": "@berry-ai/harness-root",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "license": "MIT",
   "private": true,
   "type": "module",
@@ -19,6 +19,8 @@
   "scripts": {
     "prepare:primary-runtime": "tsx scripts/primary-runtime/prepare.ts",
     "build": "tsx scripts/build.ts",
+    "build:artifacts": "tsx scripts/build.ts --scope artifacts",
+    "build:check": "tsx scripts/build.ts --scope check",
     "build:bench": "npm run build:native-system && npm run build:lib && tsdown --config-loader native --config benchmarks/tsdown.config.ts",
     "build:official": "tsx scripts/build.ts --profile official",
     "build:lib": "pnpm run build:lib:host && pnpm run build:lib:client",
@@ -48,11 +50,11 @@
     "upload:latest:win:x64": "pnpm --filter @berry-ai/harness-desktop run upload:latest:win:x64",
     "clean": "tsx scripts/clean.ts",
     "change-scope": "tsx scripts/change-scope.ts",
-    "typecheck": "npm run build:lib:host && npm run typecheck:contracts-ready",
+    "typecheck": "tsx scripts/build.ts --scope typecheck",
     "typecheck:contracts-ready": "tsc -b tsconfig.client.json",
-    "lint": "npm run build:lib:host && npm run lint:contracts-ready",
+    "lint": "tsx scripts/compile-referenced-projects.ts host-contracts && npm run lint:contracts-ready",
     "lint:contracts-ready": "tsx scripts/run-oxlint.ts .",
-    "lint:fix": "npm run build:lib:host && npm run lint:fix:contracts-ready",
+    "lint:fix": "tsx scripts/compile-referenced-projects.ts host-contracts && npm run lint:fix:contracts-ready",
     "lint:fix:contracts-ready": "tsx scripts/run-oxlint.ts --config .oxlintrc.staged.json packages/typert/generator/tests/fixtures/type-model --fix && tsx scripts/run-oxlint.ts . --fix",
     "duplication": "jscpd --config .jscpd.json packages scripts",
     "test": "pnpm run build:native-system && vitest run",
@@ -201,7 +203,6 @@
     "release:pack": "tsx scripts/release/pack.ts",
     "release:verify-packed-install": "tsx scripts/release/verify-packed-install.ts",
     "release:publish": "tsx scripts/release/publish.ts",
-    "berry": "node --import tsx/esm apps/cli/src/bin.ts",
     "dsh": "node --import tsx/esm apps/cli/src/bin.ts",
     "demo:ptc": "node scripts/demo-ptc.mjs",
     "demo:inspector": "node --import tsx/esm apps/cli/src/bin.ts web --patch ./packages/experimental/inspector/cordis.source.patch.yml",
@@ -212,7 +213,10 @@
     "postinstall": "node scripts/install-lefthook.mjs",
     "gen-official-bundle-catalog": "tsx scripts/gen-official-bundle-catalog.ts",
     "verify-official-bundle-catalog": "tsx scripts/gen-official-bundle-catalog.ts --check",
-    "verify-product-use": "tsx scripts/verify-product-use.ts"
+    "gen-provider-data": "tsx packages/llm/llm-pi-ai/scripts/gen-provider-data.ts",
+    "verify-provider-data": "tsx packages/llm/llm-pi-ai/scripts/gen-provider-data.ts --check",
+    "verify-product-use": "tsx scripts/verify-product-use.ts",
+    "berry": "node --import tsx/esm apps/cli/src/bin.ts"
   },
   "devDependencies": {
     "@berry-ai/harness-hooks-claude-code": "workspace:*",
@@ -228,6 +232,7 @@
     "@berry-ai/harness-computer-use": "workspace:*",
     "@berry-ai/harness-experimental-computer-use-cua-driver-mcp": "workspace:*",
     "@berry-ai/harness-experimental-computer-use-cua-driver-native": "workspace:*",
+    "@berry-ai/harness-cua": "workspace:*",
     "@berry-ai/harness-experimental-claude-code-mods": "workspace:*",
     "@berry-ai/harness-llm-replay": "workspace:*",
     "@berry-ai/harness-mcp-client": "workspace:*",
@@ -241,6 +246,8 @@
     "@types/mdast": "^4.0.4",
     "@types/papaparse": "^5.5.2",
     "@types/node": "^22.20.1",
+    "@types/react": "~18.3.1",
+    "@types/react-dom": "~18.3.0",
     "@types/semver": "^7.8.0",
     "@types/spdx-expression-parse": "^4.0.0",
     "@vitest/coverage-v8": "^4.1.11",
@@ -282,6 +289,7 @@
     "@berry-ai/harness-tool-working-directory": "workspace:*",
     "@berry-ai/harness-working-directory": "workspace:*",
     "@berry-ai/harness-experimental-worktree": "workspace:*",
-    "@berry-ai/harness-experimental-tool-worktree": "workspace:*"
+    "@berry-ai/harness-experimental-tool-worktree": "workspace:*",
+    "@berry-ai/harness-experimental-cua-macos": "workspace:*"
   }
 }

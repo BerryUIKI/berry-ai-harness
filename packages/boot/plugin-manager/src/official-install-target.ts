@@ -24,14 +24,14 @@ function manifestAt(file: string): WorkspaceManifest {
 export function officialBundleInstallTarget(name: string, installAnchor: string, version: string): { spec: string; version: string } {
   const anchor = realpathSync(installAnchor)
   const installation = manifestAt(anchor)
-  const source = (installation.name === '@berry-ai/harness' || installation.name === '@deepseek-ai/dsh')
+  const source = (installation.name === '@berry-ai/harness' || installation.name === '@berry-ai/harness')
     && Object.values(installation.dependencies ?? {}).some(value => value.startsWith('workspace:'))
   if (!source) return { spec: `${name}@${version}`, version }
   const root = resolve(dirname(anchor), '../..')
   const rootManifest = existsSync(join(root, 'package.json')) ? manifestAt(join(root, 'package.json')) : undefined
   if (anchor !== join(root, 'apps', 'cli', 'package.json')
     || rootManifest === undefined
-    || (rootManifest.name !== '@berry-ai/harness-root' && rootManifest.name !== '@deepseek-ai/dsh-root')) {
+    || (rootManifest.name !== '@berry-ai/harness-root' && rootManifest.name !== '@berry-ai/harness-root')) {
     throw new Error(`Official bundle ${name}: source DSH installation ${anchor} requires its complete workspace checkout`)
   }
   const matches = globSync('packages/*/*/package.json', { cwd: root })

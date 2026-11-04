@@ -2,7 +2,7 @@
 import { Context } from '@deepseek-ai/cordis'
 import { SessionId } from '@berry-ai/harness-session'
 import { SessionFormatUnsupportedError, SessionPersistenceCorruptionError } from '@berry-ai/harness-session-persistence'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import { mkdir, mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { basename, dirname, join } from 'node:path'

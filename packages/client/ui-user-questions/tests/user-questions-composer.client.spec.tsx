@@ -3,6 +3,7 @@ import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { useSyncExternalStore } from 'react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { allowAllAccess } from '@berry-ai/harness-client-test-runtime'
 import { ToolCallId } from '@berry-ai/harness-llm'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import type { AskUserQuestionAnswerItem } from '@berry-ai/harness-user-questions/types'
@@ -122,6 +123,7 @@ const kitBase: Omit<QuestionComposerProps, 'matched' | 'useStore' | 'useQuestion
   useSessionStatus: selector => selector(attentionState),
   useSessionRetainInfo: () => undefined,
   useWorkspaces: selector => selector(workspaceState),
+  ...allowAllAccess,
   useConversation: selector => selector(conversationState),
   useChat: selector => selector(chatState),
   useTrajectory: selector => selector(trajectoryState),

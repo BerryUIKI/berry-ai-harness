@@ -4,25 +4,28 @@
 #   pnpm run verify-translation-pairing --write docs/api-gateway.md
 /api-gateway:
   en: 735eb4f22d5f6f71
-  zh: 1ca2759961efdc06
+  zh: 697eef269b133039
 /api-gateway/programming-model:
-  en: 13893bf1ec05d7db
-  zh: 4ee95108d2043495
+  en: 1c1bcf01c301e692
+  zh: 72ed084899cbce77
 /api-gateway/component-responsibilities:
-  en: fe7484f3a72f799c
-  zh: 44128f98c838ee21
+  en: 5c9f71339ff17a38
+  zh: d5e2004d557de47a
 /api-gateway/strict-generation-pipeline:
-  en: 3d2dd9e375decfda
-  zh: 2ed9c496ae2aef11
+  en: fb15ab16140183af
+  zh: 9605d7ddb7706ba2
 /api-gateway/runtime-invocation:
-  en: 2a2fed340aaa926c
-  zh: 46bb1f500c870a76
+  en: 37b4858fa48a61b6
+  zh: 9a296a2171f1ab7d
 /api-gateway/src-development-fallback:
   en: 9570ffe7a348e5ac
   zh: 2b70b61b1ff1fbb0
 /api-gateway/development-mode:
-  en: ba090d76471dd663
-  zh: fcddcb232de98248
+  en: 23ae422bd65300da
+  zh: 67dd9c02f4ffec53
 /api-gateway/boundaries:
   en: e6befc5f8c90f97b
-  zh: 3ade08102542a894
+  zh: 4ace4a493fd2b41f
+/api-gateway/boundaries/business-ownership:
+  en: 980ef04e501a3896
+  zh: d2f6db14e5135b68

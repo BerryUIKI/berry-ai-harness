@@ -4,7 +4,7 @@ import { SESSION_FORMAT_VERSION, Session, SessionId, SessionLogOffset, SessionSe
 import type { SessionEvent } from '@berry-ai/harness-session'
 import { SessionFormatUnsupportedError } from '@berry-ai/harness-session-persistence'
 import type { SessionHandle } from '@berry-ai/harness-session-persistence'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import { mkdir, mkdtemp, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { dirname, join } from 'node:path'

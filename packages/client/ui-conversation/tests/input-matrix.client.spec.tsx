@@ -13,7 +13,7 @@ import type { Context } from '@deepseek-ai/cordis'
 import type { SessionSnapshot } from '@berry-ai/harness-api-session-controller/client'
 import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import {
-  bindSnapshotSelector, conversationSnapshot, sessionSnapshot,
+  allowAllAccess, bindSnapshotSelector, conversationSnapshot, sessionSnapshot,
 } from '@berry-ai/harness-client-test-runtime'
 import type { SessionStatusSnapshot } from '@berry-ai/harness-client-ui-session/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
@@ -66,6 +66,7 @@ function mountBar(shell: SessionInputShell, over?: { running?: boolean; disabled
       items: [], archivedSessionIds: [], pinnedSessionIds: [], state: 'idle', phase: 'ready', error: null,
       baselinesReady: true, recentWorkspaceId: undefined,
     })),
+    ...allowAllAccess,
     useProjection: (() => undefined),
     useConversation: bindSnapshotSelector(createSnapshotStore(conversationSnapshot())),
     useInput: bindSnapshotSelector(shell.state),

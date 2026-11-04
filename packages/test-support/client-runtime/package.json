@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-test-runtime",
   "description": "Browser test runtimes: a jsdom slot bench with test-owned Session and Workspace doubles, and a whole-client tier that boots the web roster through the production bootClient over an endpoint-named Remote mock",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -84,10 +84,10 @@
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-web-app": "workspace:*",
     "@types/js-yaml": "^4.0.9",
-    "@types/react": "~18.3.1",
-    "@types/react-dom": "~18.3.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
+    "@berry-ai/harness-client-ui-workspace": "workspace:*"
   },
   "files": [
     "lib/index.js",

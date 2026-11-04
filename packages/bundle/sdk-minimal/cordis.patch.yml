@@ -38,6 +38,17 @@
     - id: filesystem
       name: '@berry-ai/harness-fs-local'
 
+    - id: attachment-local
+      name: '@berry-ai/harness-attachment-local'
+
+    - id: tool-fs
+      name: '@berry-ai/harness-tool-fs'
+      config:
+        read: false
+        readImage: true
+        write: false
+        edit: false
+
     - id: working-directory
       name: '@berry-ai/harness-working-directory'
 
@@ -46,6 +57,15 @@
 
     - id: session-projection
       name: '@berry-ai/harness-session-projection'
+
+    - id: token-meter
+      name: '@berry-ai/harness-token-meter'
+
+    - id: compaction-basic
+      name: '@berry-ai/harness-compaction-basic'
+
+    - id: image-offload
+      name: '@berry-ai/harness-compaction-image-offload'
 
     - id: sandbox-policy
       name: '@berry-ai/harness-sandbox-policy'

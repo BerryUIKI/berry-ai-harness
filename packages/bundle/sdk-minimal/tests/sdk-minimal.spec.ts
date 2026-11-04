@@ -34,9 +34,14 @@ describe('dsh-sdk-minimal bundle', () => {
       ['llm-deepseek', '@berry-ai/harness-llm-deepseek-api-key'],
       ['sandbox', '@berry-ai/harness-sandbox-local'],
       ['filesystem', '@berry-ai/harness-fs-local'],
+      ['attachment-local', '@berry-ai/harness-attachment-local'],
+      ['tool-fs', '@berry-ai/harness-tool-fs'],
       ['working-directory', '@berry-ai/harness-working-directory'],
       ['tool-working-directory', '@berry-ai/harness-tool-working-directory'],
       ['session-projection', '@berry-ai/harness-session-projection'],
+      ['token-meter', '@berry-ai/harness-token-meter'],
+      ['compaction-basic', '@berry-ai/harness-compaction-basic'],
+      ['image-offload', '@berry-ai/harness-compaction-image-offload'],
       ['sandbox-policy', '@berry-ai/harness-sandbox-policy'],
       ['subprocess', '@berry-ai/harness-subprocess-local'],
       ['pty', '@berry-ai/harness-terminal'],
@@ -73,6 +78,8 @@ describe('dsh-sdk-minimal bundle', () => {
       personaPrefix: { __jsExpr: "process.env.DSH_SYSTEM_PROMPT ?? 'You are a helpful software engineer assistant.'" },
     })
     expect(rows.find(row => row.id === 'agent-loop')?.config).toEqual({ agents: [] })
+    expect(rows.find(row => row.id === 'tool-fs')?.config).toEqual({ read: false, readImage: true, write: false, edit: false })
+    expect(rows.find(row => row.id === 'compaction-basic')?.config).toBeUndefined()
     expect(rows.find(row => row.id === 'terminal-bash')).toMatchObject({
       disabled: { __jsExpr: "process.platform === 'win32'" },
     })

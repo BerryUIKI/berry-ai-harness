@@ -2,6 +2,7 @@
 
 /** Existing npm names retained by capabilities now housed under experimental/. */
 export const EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS: Readonly<Record<string, string>> = {
+  'packages/experimental/cua': '@berry-ai/harness-cua',
   'packages/experimental/tool-session-query': '@berry-ai/harness-tool-session-query',
   'packages/experimental/session-title-all-prompts-llm': '@berry-ai/harness-session-title-all-prompts-llm',
   'packages/experimental/tool-terminal': '@berry-ai/harness-tool-terminal',
@@ -34,7 +35,7 @@ export function isExperimentalPackageName(name: string): boolean {
  */
 export function hasExperimentalPackageReference(reference: string): boolean {
   const normalized = reference.replaceAll('\\', '/')
-  return [...normalized.matchAll(/(?:^|[/:\u0000])(@(?:berry-ai\/harness|deepseek-ai\/dsh)[^/@?#:\s]+)(?=$|[/@?#:])/g)]
+  return [...normalized.matchAll(/(?:^|[/:\u0000])(@deepseek-ai\/[^/@?#:\s]+)(?=$|[/@?#:])/g)]
     .some(([, name]) => name !== undefined && isExperimentalPackageName(name))
 }
 

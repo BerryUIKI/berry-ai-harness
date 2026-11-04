@@ -77,7 +77,7 @@ describe('gen-persistence-catalog collectLogEvents', () => {
 
   it('hard-errors on a top-level interface outside the owning package', () => {
     expect(() => collectLogEvents(make({
-      'packages/group/alien/package.json': '{ "name": "@deepseek-ai/dsh-alien" }\n',
+      'packages/group/alien/package.json': '{ "name": "@berry-ai/harness-alien" }\n',
       'packages/group/alien/src/types.ts':
         'export interface SessionEventMap {\n  /** Not the real vocabulary. */\n  \'alien/event\': { turn: number }\n}\n',
     }))).toThrow(/top-level interface SessionEventMap .* is outside @deepseek-ai\/dsh-session \(package @deepseek-ai\/dsh-alien\)/)

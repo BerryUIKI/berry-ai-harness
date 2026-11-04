@@ -8,7 +8,7 @@ import AgentLoop from '@berry-ai/harness-agent-loop'
 import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-testkit'
 import LocalFileSystem from '@berry-ai/harness-fs-local'
 import { SessionId } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import WorkingDirectory from '@berry-ai/harness-working-directory'
 import ClaudeCodeMods, { defineMod } from '../src/index.ts'
 

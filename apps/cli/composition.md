@@ -30,6 +30,8 @@ flowchart LR
   cfg --> plugin_dsh_base_typert_loader
   plugin_dsh_base_typert_gateway["typert-gateway<br/>@berry-ai/harness-api-gateway"]
   cfg --> plugin_dsh_base_typert_gateway
+  plugin_dsh_base_remote_access["remote-access<br/>@berry-ai/harness-api-remote-access"]
+  cfg --> plugin_dsh_base_remote_access
   plugin_dsh_base_session_title["session-title<br/>@berry-ai/harness-session-title"]
   cfg --> plugin_dsh_base_session_title
   plugin_dsh_base_session_title_llm["session-title-llm<br/>@berry-ai/harness-session-title-first-prompt-llm"]
@@ -211,6 +213,7 @@ flowchart LR
 | `typert` | `@berry-ai/harness-typert-registry` |
 | `typert-loader` | `@berry-ai/harness-typert-loader` |
 | `typert-gateway` | `@berry-ai/harness-api-gateway` |
+| `remote-access` | `@berry-ai/harness-api-remote-access` |
 | `session-title` | `@berry-ai/harness-session-title` |
 | `session-title-llm` | `@berry-ai/harness-session-title-first-prompt-llm` |
 | `user-questions` | `@berry-ai/harness-user-questions` |

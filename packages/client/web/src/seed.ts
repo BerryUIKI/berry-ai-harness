@@ -11,6 +11,8 @@ import * as ReactJsxRuntime from 'react/jsx-runtime'
 import * as ReactDom from 'react-dom'
 import * as ReactDomClient from 'react-dom/client'
 import * as Cordis from '@deepseek-ai/cordis'
+import * as Zod from 'zod'
+import * as ReactVirtual from '@tanstack/react-virtual'
 import * as ClientStore from '@berry-ai/harness-client-store'
 import * as UiSlots from '@berry-ai/harness-client-ui-slots'
 import * as UiPrimitives from '@berry-ai/harness-client-ui-primitives'
@@ -31,6 +33,8 @@ export function getStaticModules(): Record<string, unknown> {
     'react-dom': ReactDom,
     'react-dom/client': ReactDomClient,
     '@deepseek-ai/cordis': Cordis,
+    'zod': Zod,
+    '@tanstack/react-virtual': ReactVirtual,
     '@berry-ai/harness-client-store': ClientStore,
     '@berry-ai/harness-client-ui-slots': UiSlots,
     '@berry-ai/harness-client-ui-primitives': UiPrimitives,

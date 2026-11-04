@@ -180,7 +180,7 @@ function installGuarded(dir: string, dependency: string, name = dependency, vers
 function writePathSpec(home: string, peer: string): void {
   mkdirSync(join(home, 'plugin'), { recursive: true })
   writeFileSync(join(home, 'plugin', 'package.json'), JSON.stringify({
-    name: 'plugin', version: '1.0.0', peerDependencies: { '@deepseek-ai/dsh': peer },
+    name: 'plugin', version: '1.0.0', peerDependencies: { '@berry-ai/harness': peer },
   }))
 }
 
@@ -200,7 +200,7 @@ it.each([
   })
   expect(outcome.exitCode).toBe(1)
   expect(outcome.incompatible).toEqual([
-    { name: 'plugin', version: '1.0.0', runtimeVersion: getDshRuntimeVersion(), peers: { '@deepseek-ai/dsh': '999.0.0' } },
+    { name: 'plugin', version: '1.0.0', runtimeVersion: getDshRuntimeVersion(), peers: { '@berry-ai/harness': '999.0.0' } },
   ])
   expect(outcome.output).toContain('installation rejected')
   expect(outcome.output).toContain('plugin@1.0.0')
@@ -219,7 +219,7 @@ it.each(['plugin@1.0.0', '@scope/plugin@1.0.0'])('rejects the registry spec %s t
   const name = spec.slice(0, spec.lastIndexOf('@'))
   pnpm.view = () => ({
     exitCode: 0,
-    stdout: JSON.stringify({ name, version: '1.0.0', peerDependencies: { '@deepseek-ai/dsh': '999.0.0' } }),
+    stdout: JSON.stringify({ name, version: '1.0.0', peerDependencies: { '@berry-ai/harness': '999.0.0' } }),
   })
   const manifestBefore = readFileSync(join(dir, 'package.json'), 'utf8')
   const outcome = await runProfilePnpm(context, ['add', spec], { execution: 'service', outputBytes: 8192 })
@@ -241,7 +241,7 @@ it('reads the last match when the registry lookup answers with several versions'
     exitCode: 0,
     stdout: JSON.stringify([
       { name: 'plugin', version: '1.0.0' },
-      { name: 'plugin', version: '2.0.0', peerDependencies: { '@deepseek-ai/dsh': '999.0.0' } },
+      { name: 'plugin', version: '2.0.0', peerDependencies: { '@berry-ai/harness': '999.0.0' } },
     ]),
   })
   const outcome = await runProfilePnpm(context, ['add', 'plugin@^2', '--registry=https://registry.example'], {
@@ -269,7 +269,7 @@ it('installs an incompatible path spec the profile exempts', async () => {
   pnpm.mutate = (target) => {
     install(target, 'plugin')
     writeFileSync(join(target, 'node_modules', 'plugin', 'package.json'), JSON.stringify({
-      name: 'plugin', version: '1.0.0', peerDependencies: { '@deepseek-ai/dsh': '999.0.0' },
+      name: 'plugin', version: '1.0.0', peerDependencies: { '@berry-ai/harness': '999.0.0' },
       dsh: { bundle: { patch: './cordis.patch.yml' } },
     }))
   }
@@ -425,7 +425,7 @@ it('installs a dependency whose installed manifest declares compatible peers', a
   pnpm.mutate = (target) => {
     install(target, 'plugin')
     writeFileSync(join(target, 'node_modules', 'plugin', 'package.json'), JSON.stringify({
-      name: 'plugin', version: '1.0.0', peerDependencies: { '@deepseek-ai/dsh': '*' },
+      name: 'plugin', version: '1.0.0', peerDependencies: { '@berry-ai/harness': '*' },
       dsh: { bundle: { patch: './cordis.patch.yml' } },
     }))
   }
@@ -479,7 +479,7 @@ it('rejects an incompatible component declared by a newly installed bundle', asy
     const component = join(packageDir, 'node_modules', 'component')
     mkdirSync(component, { recursive: true })
     writeFileSync(join(component, 'package.json'), JSON.stringify({
-      name: 'component', version: '1.0.0', peerDependencies: { '@deepseek-ai/dsh': '>=999.0.0' },
+      name: 'component', version: '1.0.0', peerDependencies: { '@berry-ai/harness': '>=999.0.0' },
     }))
     writeFileSync(join(packageDir, 'cordis.patch.yml'), '- insert:\n    - id: component\n      name: component/subpath\n')
   }

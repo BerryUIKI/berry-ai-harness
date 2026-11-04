@@ -319,7 +319,7 @@ class MatrixFixture {
   setup(): void {
     const value = this.scenario
     manifest(this.installDir, {
-      name: '@deepseek-ai/dsh', version: '1.0.0',
+      name: '@berry-ai/harness', version: '1.0.0',
       dependencies: value.inRuntime ? { [value.name]: '*' } : {},
     })
     if (value.inRuntime) this.package(this.runtimeDir, 'runtime')

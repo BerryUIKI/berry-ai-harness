@@ -9,7 +9,7 @@ import { mountAgentLoopTestDependencies } from '@berry-ai/harness-agent-loop-tes
 import { createUserMessage, LlmAdapter } from '@berry-ai/harness-llm'
 import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@berry-ai/harness-llm'
 import { SESSION_FORMAT_VERSION } from '@berry-ai/harness-session'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import { defineContentToolFixture } from '@berry-ai/harness-tools'
 import { assertBuiltBenchmarkRuntime } from '../support/built-worker.ts'
 import { PARENT_ID, response, resultText, syntheticHistory, TIME_ZERO, WORKLOAD } from './workload.ts'

@@ -22,7 +22,7 @@ import type {
   SessionPersistenceListOptions,
   SessionPersistenceSnapshot,
 } from '@berry-ai/harness-session-persistence'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import SqliteSessionQueryEngine, {
   SESSION_QUERY_SQLITE_SCHEMA_VERSION,
 } from '@berry-ai/harness-session-query-sqlite'

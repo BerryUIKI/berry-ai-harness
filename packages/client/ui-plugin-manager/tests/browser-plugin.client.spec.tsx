@@ -8,7 +8,7 @@ import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import type { ILayout, PanelInfo } from '@berry-ai/harness-client-ui-layout/client'
 import { SlotRegistry } from '@berry-ai/harness-client-ui-renderer/client'
 import { resolveSlotLabel } from '@berry-ai/harness-client-ui-slots'
-import { TestRemote, usePinnedBrowserLanguages } from '@berry-ai/harness-client-test-runtime'
+import { allowAllAccess, TestRemote, usePinnedBrowserLanguages } from '@berry-ai/harness-client-test-runtime'
 import * as settings from '@berry-ai/harness-client-ui-settings/client'
 import { apply, inject, NS, PANEL_ID } from '../src/client/index.ts'
 import { PluginManagerPage } from '../src/client/PluginManagerPage.tsx'
@@ -147,7 +147,7 @@ describe('ui-plugin-manager browser plugin', () => {
     const unread = () => { throw new Error('The sidebar icon must not read application state') }
     const glyph = render(<PluginsPanelIcon size={18} active={false}
       usePanelInfo={unread} useSessions={unread} useSessionStatus={unread} useSessionRetainInfo={unread}
-      useWorkspaces={unread} useResource={unread} />)
+      useWorkspaces={unread} useResource={unread} {...allowAllAccess} />)
     expect(glyph.container.querySelector('svg')?.getAttribute('width')).toBe('18')
     expect(icon.options).toMatchObject({ id: PANEL_ID, order: 0 })
     expect(icon.locale).toBe(NS)

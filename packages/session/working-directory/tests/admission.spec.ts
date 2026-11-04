@@ -1,3 +1,4 @@
+import { setSandboxMode } from '@berry-ai/harness-sandbox-policy'
 /** Actual request admission follows directory and permission changes made after assembly. */
 import { mkdtemp, mkdir, realpath, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
@@ -6,7 +7,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { createUserMessage } from '@berry-ai/harness-llm'
 import { Session, SessionId } from '@berry-ai/harness-session'
 import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@berry-ai/harness-agent-loop-testkit'
-import SandboxPolicy, { setSandboxMode } from '@berry-ai/harness-sandbox-policy'
+import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
 import ApprovalService from '@berry-ai/harness-user-approval'
 import { describe, expect, it, vi } from 'vitest'
 import { MockAdapter, textResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'

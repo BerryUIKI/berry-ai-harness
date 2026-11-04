@@ -10,7 +10,7 @@ import { pnpmInvocation } from '../../../../scripts/pnpm-invocation.ts'
 
 const experimentalDirectory = fileURLToPath(new URL('../..', import.meta.url))
 const packages = ['webworker-runtime', 'webworker-packer']
-const packageNames = new Set(packages.map(name => `@deepseek-ai/dsh-experimental-${name}`))
+const packageNames = new Set(packages.map(name => `@berry-ai/harness-experimental-${name}`))
 
 it('loads both tarballs through plain Node and mounts their base image and overlay', { retry: 0 }, async (test) => {
   const root = await mkdtemp(join(tmpdir(), 'dsh-webworker-packed-'))
@@ -78,8 +78,8 @@ it('loads both tarballs through plain Node and mounts their base image and overl
     import * as client from '@berry-ai/harness-experimental-webworker-runtime/client'
     import { sessionFormatCatalog } from '@berry-ai/harness-session-format-catalog'
     for (const name of ['webworker-packer', 'webworker-runtime']) {
-      assert.equal(import.meta.resolve('@deepseek-ai/dsh-experimental-' + name),
-        new URL('./node_modules/@deepseek-ai/dsh-experimental-' + name + '/lib/index.js', import.meta.url).href)
+      assert.equal(import.meta.resolve('@berry-ai/harness-experimental-' + name),
+        new URL('./node_modules/@berry-ai/harness-experimental-' + name + '/lib/index.js', import.meta.url).href)
     }
     assert.equal(typeof client.connectWorkerHost, 'function')
     const worker = fileURLToPath(import.meta.resolve('@berry-ai/harness-experimental-webworker-runtime/worker'))
@@ -88,7 +88,7 @@ it('loads both tarballs through plain Node and mounts their base image and overl
     const base = packer.packVfsImage({ config: '[]\\n', profile: 'packed-consumer', workspaces: new Map(), resolveFrom: process.cwd(), entries: [] })
     assert.deepEqual(base.missing, [])
     mkdirSync('subject/lib', { recursive: true })
-    const subject = '@deepseek-ai/dsh-image-export-fixture'
+    const subject = '@berry-ai/harness-image-export-fixture'
     writeFileSync('subject/package.json', JSON.stringify({ name: subject, files: ['lib'], exports: {
       '.': { default: './lib/index.js' }, './types': { types: './lib/index.d.ts' },
     } }))

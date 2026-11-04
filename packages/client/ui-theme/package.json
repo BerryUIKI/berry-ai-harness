@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-theme",
   "description": "Theme plugin: Host bootstrap for the pre-plugin palette; DOM-free ThemeRuntime for light/dark/system state; --dsw-* token styles and Appearance settings row",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -24,13 +24,15 @@
     },
     "./src/*": "./src/*",
     "./package.json": "./package.json",
-    "./brand-font.css": "./lib/styles/brand-font.css"
+    "./brand-font.css": "./lib/styles/brand-font.css",
+    "./locale/*.json": "./locale/*.json"
   },
   "dsh": {
     "client": {
       "inject": [
         "@berry-ai/harness-client-connection",
         "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-shortcuts",
         "@berry-ai/harness-client-ui-renderer",
         "@berry-ai/harness-client-ui-settings",
         "@berry-ai/harness-api-remotes"
@@ -55,12 +57,13 @@
     "@berry-ai/harness-client-ui-settings": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-host-webserver": "workspace:*",
-    "@types/react": "~18.3.1",
     "react": "^18.2.0",
     "clsx": "^2.0.0",
-    "@berry-ai/harness-settings": "workspace:*"
+    "@berry-ai/harness-settings": "workspace:*",
+    "@berry-ai/harness-client-shortcuts": "workspace:*"
   },
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/client.js",
     "lib/styles",

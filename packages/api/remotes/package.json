@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-api-remotes",
   "description": "Remote BFF assembly for application-selected Host capabilities",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -27,7 +27,8 @@
       "default": "./lib/types/types.js"
     },
     "./src/*": "./src/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "dsh": {
     "client": {
@@ -44,6 +45,7 @@
   },
   "license": "MIT",
   "files": [
+    "locale/*.json",
     "lib/index.js",
     "lib/client.js",
     "lib/types/**/*.js",
@@ -86,7 +88,7 @@
     "@berry-ai/harness-user-approval": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "zod": "^4.4.3",
+    "zod": "4.4.3",
     "@berry-ai/harness-command-feedback": "workspace:*",
     "@berry-ai/harness-api-terminal-controller": "workspace:*",
     "@berry-ai/harness-plugin-manager": "workspace:*",
@@ -94,6 +96,7 @@
     "@berry-ai/harness-office-to-pdf": "workspace:*",
     "@berry-ai/harness-api-account-controller": "workspace:*",
     "@berry-ai/harness-deepseek-account": "workspace:*",
-    "@berry-ai/harness-client-product-analytics": "workspace:*"
+    "@berry-ai/harness-client-product-analytics": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*"
   }
 }

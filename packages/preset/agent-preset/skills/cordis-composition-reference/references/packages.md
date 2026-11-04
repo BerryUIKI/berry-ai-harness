@@ -17,6 +17,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@berry-ai/harness-api-account-controller` | no | Expose safe account operations over authenticated Remote |
 | `@berry-ai/harness-api-gateway` | yes | Typert Remote Host dispatcher and Client API endpoint |
 | `@berry-ai/harness-api-job-controller` | yes | Job Remote observation stream and the reference-counted client job-output service |
+| `@berry-ai/harness-api-remote-access` | no | Method-level Remote access control for non-owner Peers and the per-Peer access snapshot |
 | `@berry-ai/harness-api-remotes` | no | Remote BFF assembly for application-selected Host capabilities |
 | `@berry-ai/harness-api-session-controller` | yes | Session Remote commands, cold reads, and live control transport |
 | `@berry-ai/harness-api-settings-controller` | yes | Remote owner for the configuration surfaces over the settings-domain seams |
@@ -51,7 +52,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@berry-ai/harness-acp-app` | no | The dsh ACP profile bundle: automation-only JSON-RPC stdio and process lifecycle over dsh-base |
 | `@berry-ai/harness-headless` | yes | The dsh one-shot bundle: a direct core Agent/Session runner over dsh-base with no Host, HTTP, or browser layer |
 | `@berry-ai/harness-sdk-app` | yes | The dsh SDK profile bundle: stdio JSON-RPC serving and process lifecycle over dsh-base |
-| `@berry-ai/harness-web-app` | yes | The dsh browser-surface bundle: the web patch layer over dsh-base plus the runtime glue plugin (frontend dist serving, web-surface prompt, bash runtime variables, URL line) |
+| `@berry-ai/harness-web-app` | yes | The dsh browser-surface bundle: the web patch layer over dsh-base plus the runtime glue plugin (frontend dist serving, bash runtime variables, URL line) |
 
 ## client
 
@@ -88,6 +89,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@berry-ai/harness-client-ui-reference` | no | Unified Web @file and @session reference source |
 | `@berry-ai/harness-client-ui-renderer` | no | Browser UI renderer: React slot bindings, ctx.uiRenderer, and the assembled application root |
 | `@berry-ai/harness-client-ui-schedule` | no | Host task management page and Session reminder catalog |
+| `@berry-ai/harness-client-ui-secret-mask` | no | Web display masking for recognized credentials in sent user text |
 | `@berry-ai/harness-client-ui-session` | no | Session Controller adapter for React and session-scoped slots |
 | `@berry-ai/harness-client-ui-settings` | no | Settings domain base plugin: shared configuration forms and the canonical settings slot-type contract |
 | `@berry-ai/harness-client-ui-settings-account` | yes | Manage DeepSeek login and open Platform billing pages |
@@ -137,6 +139,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 |---|---|---|
 | `@berry-ai/harness-agent-instructions` | yes | Workspace context loader for AGENTS.md/CLAUDE.md instruction files |
 | `@berry-ai/harness-file-reference-local` | yes | Local-filesystem ctx.fileReferences provider with bounded fuzzy indexes |
+| `@berry-ai/harness-harness-dev-context` | no | Model context naming the DeepSeek Harness checkout and Web GUI URL without letting either change the system prompt |
 | `@berry-ai/harness-session-reference` | yes | Cross-session snapshot references and durable untrusted model context (ctx.sessionReferenceResolver) |
 | `@berry-ai/harness-time-context` | yes | Durable per-step context with the current time and elapsed time |
 | `@berry-ai/harness-tmux-context` | yes | Opt-in durable per-step context with this agent's tmux pane and window location |
@@ -191,6 +194,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@berry-ai/harness-experimental-client-ui-voice-input` | no | Record speech and insert editable text into the conversation draft |
 | `@berry-ai/harness-experimental-computer-use-cua-driver-mcp` | yes | Experimental computer use through an installed Cua Driver MCP executable |
 | `@berry-ai/harness-experimental-computer-use-cua-driver-native` | no | Experimental computer-use provider embedding the Cua Driver native npm SDK |
+| `@berry-ai/harness-experimental-cua-macos` | yes | macOS native provider for shared Computer Use application and window objects |
 | `@berry-ai/harness-experimental-inspector` | yes | Experimental cross-realm CDP hub for Host debugging and Client Runtime inspection |
 | `@berry-ai/harness-experimental-ptc-runtime-python` | yes | CPython subprocess implementation of the DeepSeek Harness PTC execution seam |
 | `@berry-ai/harness-experimental-session-inspector` | no | Experimental virtualized Session log and live Chat group/node inspectors |
@@ -329,7 +333,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@berry-ai/harness-ptc-runtime-node` | yes | Sandboxed Node process implementation of the DeepSeek Harness PTC execution capability |
+| `@berry-ai/harness-ptc-runtime-node` | yes | Node PTC execution with per-call sandboxed processes or in-memory REPL state |
 
 ## sandbox
 

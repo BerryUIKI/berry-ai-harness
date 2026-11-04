@@ -7,7 +7,7 @@ import type { Agent } from '@berry-ai/harness-agent'
 import AgentRegistry from '@berry-ai/harness-agent'
 import SessionStore from '@berry-ai/harness-session'
 import SessionProjections from '@berry-ai/harness-session-projection'
-import JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
+import * as JsonlSessionPersistence from '@berry-ai/harness-session-persistence-jsonl'
 import FileSystem from '@berry-ai/harness-fs-local'
 import Subprocess from '@berry-ai/harness-subprocess-local'
 import Sandbox from '@berry-ai/harness-sandbox-local'
@@ -18,7 +18,7 @@ import type { Config as NodeRuntimeConfig } from '@berry-ai/harness-ptc-runtime-
 import { onTestFinished } from 'vitest'
 
 /** Mount real Node execution services with a private working directory and awaited cleanup. */
-export async function mountPtcRuntime(ctx: Context, mode: SandboxMode = 'danger-full-access') {
+export async function mountPtcRuntime(ctx: Context, mode: SandboxMode = 'danger-full-access', executionMode: NodeRuntimeConfig['executionMode'] = 'per-call') {
   const root = await mkdtemp(join(homedir(), '.dsh-workflow-test-'))
   onTestFinished(async () => {
     await ctx.fiber.dispose()
@@ -26,7 +26,7 @@ export async function mountPtcRuntime(ctx: Context, mode: SandboxMode = 'danger-
   })
   const cwd = join(root, 'workspace')
   await mkdir(cwd)
-  await mountWorkflowRuntime(ctx, { cwd, mode, runtimeConfig: { graceMs: 50 } })
+  await mountWorkflowRuntime(ctx, { cwd, mode, runtimeConfig: { graceMs: 50, executionMode } })
   await ctx.plugin(JsonlSessionPersistence, { root: join(root, 'sessions') })
   return { root, cwd }
 }
