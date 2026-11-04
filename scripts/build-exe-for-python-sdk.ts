@@ -392,7 +392,7 @@ class SingleExeBuild {
     try {
       await bundle({ config: false, tsconfig: false, inputOptions: { tsconfig: false }, target: 'es2024', entry: entries,
         outDir: this.staging, clean: false, format: 'esm', platform: 'node', dts: false,
-        deps: { neverBundle: [/^@deepseek-ai\//u], alwaysBundle: [/.*/u] }, shims: true, outExtensions: () => ({ js: '.mjs' }),
+        deps: { neverBundle: [/^@(?:deepseek-ai|berry-ai)\//u], alwaysBundle: [/.*/u] }, shims: true, outExtensions: () => ({ js: '.mjs' }),
         define: { 'import.meta.main': 'false' } })
     } finally {
       for (const entry of Object.values(entries)) await rm(entry, { force: true })
