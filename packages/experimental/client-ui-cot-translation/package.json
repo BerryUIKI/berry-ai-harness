@@ -56,11 +56,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@berry-ai/harness-experimental-translator": "workspace:*",
-    "@berry-ai/harness-typert-protocol": "workspace:*",
-    "@berry-ai/harness-settings": "workspace:*",
-    "@berry-ai/harness-session": "workspace:*",
-    "@berry-ai/harness-api-session-controller": "workspace:*"
+    "@berry-ai/harness-experimental-translator": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
@@ -90,9 +86,7 @@
     "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
-    "@berry-ai/harness-typert-registry": "workspace:*",
-    "@berry-ai/harness-typert-protocol": "workspace:*",
-    "@deepseek-ai/schemastery": "workspace:~"
+    "@berry-ai/harness-typert-registry": "workspace:*"
   },
   "files": [
     "locale/*.json",

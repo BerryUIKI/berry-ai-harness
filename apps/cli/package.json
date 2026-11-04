@@ -12,6 +12,7 @@
   },
   "type": "module",
   "bin": {
+    "berry": "lib/bin.js",
     "dsh": "lib/bin.js"
   },
   "files": [
