@@ -4,7 +4,7 @@
  */
 
 import { spawn, spawnSync } from 'node:child_process'
-import { join, relative, resolve } from 'node:path'
+import { relative, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parseArgs } from 'node:util'
 import ts from 'typescript'
