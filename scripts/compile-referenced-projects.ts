@@ -4,7 +4,8 @@
  */
 
 import { spawn, spawnSync } from 'node:child_process'
-import { relative, resolve } from 'node:path'
+import { existsSync, readdirSync, rmSync } from 'node:fs'
+import { join, relative, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parseArgs } from 'node:util'
 import ts from 'typescript'
@@ -113,6 +114,26 @@ function hostHeapArgs(face: 'host' | 'client'): string[] {
 }
 
 /**
+ * Remove the Host-emitted declarations that a split package's Client leaf would
+ * also emit. Both leaves write to `lib/types`; leaving the Host files in place
+ * makes the Client program treat them as inputs and reject the overwrite
+ * (TS5055). Typert declarations at the package `lib/` root are untouched.
+ * @param root - Repository root containing the package workspaces.
+ */
+function cleanSharedFaceTypes(root: string): void {
+  for (const group of readdirSync(join(root, 'packages'), { withFileTypes: true })) {
+    if (!group.isDirectory()) continue
+    for (const pkg of readdirSync(join(root, 'packages', group.name), { withFileTypes: true })) {
+      if (!pkg.isDirectory()) continue
+      const dir = join(root, 'packages', group.name, pkg.name)
+      if (!existsSync(join(dir, 'tsconfig.host.json')) || !existsSync(join(dir, 'tsconfig.client.json'))) continue
+      rmSync(join(dir, 'lib', 'types'), { recursive: true, force: true })
+      rmSync(join(dir, 'lib', 'tsconfig.client.tsbuildinfo'), { force: true })
+    }
+  }
+}
+
+/**
  * Compile one aggregate's project references with the serial TypeScript builder.
  * @param root - Repository root containing the aggregate tsconfig.
  * @param face - Independent compiler face whose package projects are emitted.
@@ -124,6 +145,7 @@ export function compileReferencedProjects(
   face: 'host' | 'client',
   mode: CompilationMode = 'checked',
 ): void {
+  if (face === 'client') cleanSharedFaceTypes(root)
   runStep(root, compilerStep(root, face, mode, []))
 }
 
