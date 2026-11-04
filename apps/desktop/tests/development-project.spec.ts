@@ -41,7 +41,7 @@ describe('desktop development project', () => {
     mkdirSync(join(host, 'lib'), { recursive: true })
     mkdirSync(dependency)
     mkdirSync(hoisted)
-    writeFileSync(join(cli, 'package.json'), JSON.stringify({ name: '@deepseek-ai/dsh', version: '1.2.3', dependencies: { unhoisted: 'workspace:^' } }))
+    writeFileSync(join(cli, 'package.json'), JSON.stringify({ name: '@berry-ai/harness', version: '1.2.3', dependencies: { unhoisted: 'workspace:^' } }))
     writeFileSync(join(host, 'package.json'), JSON.stringify({ name: '@berry-ai/harness-desktop-host', version: '1.2.3' }))
     writeFileSync(join(host, 'lib/index.js'), '')
     writeFileSync(join(dependency, 'package.json'), JSON.stringify({ name: 'unhoisted', version: '1.2.3' }))
@@ -62,7 +62,7 @@ describe('desktop development project', () => {
     mkdirSync(join(host, 'lib'), { recursive: true })
     mkdirSync(join(dependencies, '@scope'), { recursive: true })
     mkdirSync(join(dependencies, '@deepseek-ai', 'dsh'), { recursive: true })
-    writeFileSync(join(cli, 'package.json'), '{"name":"@deepseek-ai/dsh","version":"1.2.3"}\n')
+    writeFileSync(join(cli, 'package.json'), '{"name":"@berry-ai/harness","version":"1.2.3"}\n')
     writeFileSync(join(host, 'package.json'), '{"name":"@berry-ai/harness-desktop-host","version":"1.2.3"}\n')
     writeFileSync(join(host, 'lib', 'index.js'), '')
     writeFileSync(join(dependencies, '@deepseek-ai', 'dsh', 'package.json'), '{}\n')
@@ -88,7 +88,7 @@ describe('desktop development project', () => {
     const manifest = JSON.parse(readFileSync(join(project, 'package.json'), 'utf8')) as {
       dependencies: Record<string, string>
     }
-    expect(manifest.dependencies['@deepseek-ai/dsh'] ?? manifest.dependencies['@berry-ai/harness']).toBe('1.2.3')
+    expect(manifest.dependencies['@berry-ai/harness'] ?? manifest.dependencies['@berry-ai/harness']).toBe('1.2.3')
     expect(manifest.dependencies['@berry-ai/harness-desktop-host']).toBe('1.2.3')
     const descriptor = JSON.parse(readFileSync(join(project, 'desktop-runtime.json'), 'utf8')) as { platform: string; arch: string }
     expect(descriptor).toMatchObject({ platform: 'win32', arch: 'x64' })
@@ -97,7 +97,7 @@ describe('desktop development project', () => {
     })
     await manager.applyRelease()
     await manager.disableAllPlugins()
-    expect(readFileSync(join(cli, 'package.json'), 'utf8')).toBe('{"name":"@deepseek-ai/dsh","version":"1.2.3"}\n')
+    expect(readFileSync(join(cli, 'package.json'), 'utf8')).toBe('{"name":"@berry-ai/harness","version":"1.2.3"}\n')
     expect(readFileSync(join(host, 'lib', 'index.js'), 'utf8')).toBe('')
 
   })

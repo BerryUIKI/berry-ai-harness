@@ -27,7 +27,7 @@ import { capture } from '../../../scripts/release/process.ts'
 import { tarballFiles } from '../../../scripts/release/tarball.ts'
 import { desktopTargetPlatform, resolveDesktopBuildTarget, resolveDesktopTargetBuildPaths } from './desktop-build-paths.mjs'
 
-const DSH_PACKAGE = '@deepseek-ai/dsh'
+const DSH_PACKAGE = '@berry-ai/harness'
 const BERRY_PACKAGE = '@berry-ai/harness'
 const APP_ROOT = resolve(import.meta.dirname, '..')
 const REPOSITORY_ROOT = resolve(APP_ROOT, '..', '..')
@@ -97,7 +97,7 @@ export function selectDesktopPackageClosure(
   }
   const hostPackage = available.has(DESKTOP_HOST_PACKAGE)
     ? DESKTOP_HOST_PACKAGE
-    : (available.has('@deepseek-ai/dsh-desktop-host') ? '@deepseek-ai/dsh-desktop-host' : DESKTOP_HOST_PACKAGE)
+    : (available.has('@berry-ai/harness-desktop-host') ? '@berry-ai/harness-desktop-host' : DESKTOP_HOST_PACKAGE)
   const rootPackages = [
     available.has(BERRY_PACKAGE) ? BERRY_PACKAGE : DSH_PACKAGE,
     hostPackage,
