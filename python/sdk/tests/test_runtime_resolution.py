@@ -226,13 +226,14 @@ def test_node_mode_runs_the_deployed_dsh_cli(
 def test_python_dsh_command_requires_explicit_home(
     monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
 ) -> None:
+    monkeypatch.delenv("BERRY_HOME", raising=False)
     monkeypatch.delenv("DSH_HOME", raising=False)
 
     with pytest.raises(SystemExit) as excinfo:
         main()
 
     assert excinfo.value.code == 2
-    assert "explicit DSH_HOME" in capsys.readouterr().err
+    assert "explicit BERRY_HOME or DSH_HOME" in capsys.readouterr().err
 
 
 def test_python_dsh_command_executes_the_bundled_cli(
@@ -276,7 +277,11 @@ def test_windows_console_waits_and_forwards_runtime_status(monkeypatch: pytest.M
     with pytest.raises(SystemExit) as result:
         main()
     assert result.value.code == returncode
-    assert called == [(("runtime.exe", "plugin", "argument with spaces", "中文"), {"env": os.environ})]
+    assert called == [(
+        ("runtime.exe", "plugin", "argument with spaces", "中文"),
+        # The launcher exports both home variable spellings so the CLI reads the same root.
+        {"env": {**os.environ, "BERRY_HOME": "/explicit/home"}},
+    )]
 
 
 @pytest.mark.parametrize("returncode", [0, 37, pytest.param(513, marks=pytest.mark.skipif(sys.platform != "win32", reason="POSIX truncates process exit codes to eight bits"))])

@@ -7,6 +7,7 @@ from berry_ai_harness_runtime import __all__
 import berry_ai_harness_runtime._resources as _resources
 
 sys.modules["deepseek_harness_runtime._resources"] = _resources
-
-def __getattr__(name: str):
-    return getattr(_runtime, name)
+# Alias the legacy module to the implementation it forwards to: callers that
+# patch `deepseek_harness_runtime.<name>` must reach the same module object
+# that `berry_ai_harness` imports.
+sys.modules[__name__] = _runtime
