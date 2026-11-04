@@ -43,7 +43,7 @@
     "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
-    "@earendil-works/pi-ai": "^1.3.0"
+    "@earendil-works/pi-ai": "1.3.0"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
