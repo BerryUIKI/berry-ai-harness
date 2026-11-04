@@ -9,8 +9,8 @@
   en: 6cc2cd9ced70bb09
   zh: 1c0e6cb4ba2ed637
 /tool-schema-catalog/tool-package-map:
-  en: 19a54d59c466ffbc
-  zh: 16591d57a009920c
+  en: 0d466655a5ce3f49
+  zh: ab6fa56a4c27ddd3
 /tool-schema-catalog/berry-ai-harness-plugin-manager:
   en: 4a08d618ad9e9a0f
   zh: 4a08d618ad9e9a0f
@@ -54,20 +54,26 @@
   en: 4910ab327694ee97
   zh: 17e79e4366cb636d
 /tool-schema-catalog/berry-ai-harness-experimental-browser-use-stagehand-native/stagehand-tabs:
-  en: b356ad1cb9492542
-  zh: abd8785f8acaa555
+  en: 05b0198681990696
+  zh: 25793a62709770b5
+/tool-schema-catalog/berry-ai-harness-action-cards:
+  en: 7ca5ac5b6e1cc82c
+  zh: 7ca5ac5b6e1cc82c
+/tool-schema-catalog/berry-ai-harness-action-cards/propose-action:
+  en: 444a148a01e6cfe5
+  zh: b88ea00b2033c11b
 /tool-schema-catalog/berry-ai-harness-tool-ask-user:
   en: 329f3b29f3b13d35
   zh: 329f3b29f3b13d35
 /tool-schema-catalog/berry-ai-harness-tool-ask-user/ask-user-question:
-  en: b489d23565e3ccd8
-  zh: a1a3c4bfcbf698ed
-/tool-schema-catalog/berry-ai-harness-tools:
-  en: 8e3adf30188c3b6e
-  zh: 8e3adf30188c3b6e
-/tool-schema-catalog/berry-ai-harness-tools/run-code:
-  en: 08058919c1992b60
-  zh: d1a4918fc45a7c87
+  en: 46187d04bc1169a3
+  zh: 2efa5d3f2cb31bf9
+/tool-schema-catalog/berry-ai-harness-tool-executor-ptc:
+  en: 6f5f206bfc4af0c3
+  zh: 6f5f206bfc4af0c3
+/tool-schema-catalog/berry-ai-harness-tool-executor-ptc/run-code:
+  en: 60ace5a92bcd716b
+  zh: 720040d11a3e31c2
 /tool-schema-catalog/berry-ai-harness-plan-mode:
   en: cd3111f420294941
   zh: cd3111f420294941
@@ -84,8 +90,8 @@
   en: d94a33777701dae6
   zh: d94a33777701dae6
 /tool-schema-catalog/berry-ai-harness-tool-present/present:
-  en: cee48562917d1dd1
-  zh: a2914d345bd8eefa
+  en: 0996daa39db08596
+  zh: d6afeb62bac77a24
 /tool-schema-catalog/berry-ai-harness-tool-pwsh:
   en: 2200a9296db2a965
   zh: 2200a9296db2a965
@@ -225,17 +231,23 @@
   en: c7bc2ee2892bf0e9
   zh: 1cd6a5d6f7494ca1
 /tool-schema-catalog/berry-ai-harness-tool-session-query/session-trace:
-  en: 74fc9858487bc2cd
-  zh: f62bda32d3a775c7
+  en: 800ae45408df4bdc
+  zh: 34caad3065de7148
+/tool-schema-catalog/berry-ai-harness-experimental-tool-subagent-oar:
+  en: be67a3c55a319cae
+  zh: be67a3c55a319cae
+/tool-schema-catalog/berry-ai-harness-experimental-tool-subagent-oar/subagent-oar:
+  en: 7be022603febb84c
+  zh: 9c018b8c12a3f1e7
 /tool-schema-catalog/berry-ai-harness-tool-subagent:
   en: 7e6e56ade1ae92d0
   zh: 7e6e56ade1ae92d0
 /tool-schema-catalog/berry-ai-harness-tool-subagent/list-subagent-models:
-  en: c89084b31ffccbce
-  zh: d7b3b7000f2d2be9
+  en: 207228068bc61885
+  zh: 36e9344ee1af8869
 /tool-schema-catalog/berry-ai-harness-tool-subagent/subagent:
-  en: f6bc235bbaf5996a
-  zh: 0544ac614aed3144
+  en: 7e1669f175dec716
+  zh: 95495dad5c77046d
 /tool-schema-catalog/berry-ai-harness-tool-subagent-control:
   en: d60070d636bb8089
   zh: d60070d636bb8089
@@ -246,8 +258,8 @@
   en: ae22e8543d123c39
   zh: 0991a73ef49bcdea
 /tool-schema-catalog/berry-ai-harness-tool-subagent-control/send-message:
-  en: 49a206ba8d55b78b
-  zh: 04f4ac5ec365aa63
+  en: 7114356b02adf2ee
+  zh: d63f94cffcb952d1
 /tool-schema-catalog/berry-ai-harness-tool-jobs:
   en: 4aa3ebf2e4192a61
   zh: 4aa3ebf2e4192a61
@@ -306,8 +318,8 @@
   en: 07cc3bacb02e7cea
   zh: 07cc3bacb02e7cea
 /tool-schema-catalog/berry-ai-harness-experimental-tool-worktree/create-worktree:
-  en: ef7886a8a4112680
-  zh: 28e78b4fae2d075b
+  en: 5acdb835048e6976
+  zh: baf372cb9242670c
 /tool-schema-catalog/berry-ai-harness-tool-workflow:
   en: 4382d40f0e2b444c
   zh: 4382d40f0e2b444c
