@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-system-prompt",
   "description": "System prompt assembly registry for the DeepSeek Harness",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-tool-workspace-dependencies",
   "description": "The load_workspace_dependencies tool: absolute paths into a bundled Python, Node.js, and pnpm payload",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },

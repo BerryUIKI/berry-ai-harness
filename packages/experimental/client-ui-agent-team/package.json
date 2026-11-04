@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-client-ui-agent-team",
   "description": "Web Agent Teams roster, task board, and teammate navigation",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -44,16 +44,6 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@berry-ai/harness-api-session-controller": "workspace:*",
-    "@berry-ai/harness-client-locale": "workspace:*",
-    "@berry-ai/harness-client-ui-conversation": "workspace:*",
-    "@berry-ai/harness-client-ui-primitives": "workspace:*",
-    "@berry-ai/harness-client-ui-renderer": "workspace:*",
-    "@berry-ai/harness-client-ui-session": "workspace:*",
-    "@berry-ai/harness-client-ui-slots": "workspace:*",
-    "@berry-ai/harness-client-ui-workspace": "workspace:*",
-    "@berry-ai/harness-experimental-agent-team": "workspace:*",
-    "@berry-ai/harness-session": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-product-analytics",
   "description": "Desktop product event collection and authenticated Host reporting",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -64,7 +64,9 @@
     "@berry-ai/harness-host-webserver": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@berry-ai/harness-otel": "workspace:*"
+    "@berry-ai/harness-otel": "workspace:*",
+    "@berry-ai/harness-app-boot": "workspace:*",
+    "@berry-ai/harness-loader-smoke": "workspace:*"
   },
   "files": [
     "locale/*.json",

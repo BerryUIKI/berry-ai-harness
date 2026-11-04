@@ -11,6 +11,7 @@ import type { SessionId } from '@berry-ai/harness-session/types'
 import type {} from '@berry-ai/harness-deepseek-account/types'
 import type {} from '@berry-ai/harness-permission-presets/types'
 import type {} from '@berry-ai/harness-plugin-manager/types'
+import type {} from '@berry-ai/harness-plugin-market/types'
 import type {} from '@berry-ai/harness-schedule/client'
 import type { TypertForwardableEventEntry } from '@berry-ai/harness-typert-protocol'
 
@@ -47,6 +48,7 @@ export const API_REMOTE_FORWARDED_EVENTS = [
   { event: 'plugin-manager/changed', mode: 'emit' },
   { event: 'plugin-manager/install-log', mode: 'emit' },
   { event: 'plugin-manager/install-state', mode: 'emit' },
+  { event: 'plugin-market/changed', mode: 'emit' },
   { event: 'settings/document-updated', mode: 'emit' },
   { event: 'schedule/changed', mode: 'emit' },
   { event: 'user-questions/request', mode: 'waterfall' },

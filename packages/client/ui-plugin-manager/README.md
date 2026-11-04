@@ -96,7 +96,13 @@ ctx.slots.inject('plugins.detail.section', () => ctx.slots.register({
 
 A row's page exists only while a `plugins.row.config` entry names the row, so a contribution meant for a row renders on the page that configuration opens.
 
+### Page tabs
+
+Another plugin adds a tab after the page's own **Installed** tab by registering into the `plugins.tab` list slot; the entry's `label` names the tab and `order` places it. The tabs appear under the page header once one entry exists and are hidden on a bundle's, row's, or official plugin's page; the selected tab survives leaving **Plugins**, and a tab whose entry leaves falls back to **Installed**. The page renders the selected entry in place of its groups and hides its own refresh and add buttons there. The owner props carry `install({ spec, registry?, title, version })` and `openPackage(name)`. `install` is for a version the person already confirmed in the tab: the install dialog opens at its check screen, without the spec form, names the plugin with `title` and `version` above the spec, which it shows in smaller monospace text, keeps that name on the progress and result screens, with the installed version once done, asks `registry` first for that install only and never remembers it, and offers **Retry** after a refusal; a hidden installation reopens instead. `openPackage` switches to **Installed** and opens the bundle's page when that tab lists it; a bundle the page leaves out, such as a built-in profile bundle, leaves the Installed list open. A confirmed install offers no GitHub mirror recovery, since that recovery reopens the spec form, and its back button cancels a running install. [`ui-plugin-market`](../ui-plugin-market/README.md) contributes the **Discover** tab here.
+
 -----
+
+Built-in illustrations follow the [feature preview authoring guide](../../../docs/cookbook/adding-a-plugin-preview.md): optional, one 640×300 SVG per language, with both English and Chinese required. The internal map and its asset test enforce the format; packages have no preview declaration interface.
 
 <a id="understand-the-implementation"></a>
 ## Understand the implementation
@@ -113,6 +119,8 @@ The Host entry exposes `pluginRegistryProbe.fastest()` through the generated Rem
 The browser plugin registers the `plugins` sidebar entry and its `main` panel through `ctx.slots.inject()`, so both follow late slot declaration, locale changes and teardown. The page is global and belongs to no Session. Display text comes from package metadata and the page's dictionary.
 
 The add control reuses `Button`, `Menu`, and `MenuItemButton`. Both installation actions call the same `openInstall` callback and use `InstallDialog` and `PluginManagerController`. The root-scoped list slot `plugins.add.actions` accepts contributed `MenuItemButton` rows after the install action; each contribution receives an `onDismiss()` callback to close the menu before starting its action.
+
+Other Client plugins can inject `pluginNavigation` and call `openList()` to select the Plugins main list, including when a detail page is already open. This browsing action preserves the current Session and opens no installation dialog. Installation remains an explicit action on the Plugins page.
 
 ### The store
 

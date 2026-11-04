@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-tool-cordis",
   "description": "Read-only runtime API inspection for Harness plugin development",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },

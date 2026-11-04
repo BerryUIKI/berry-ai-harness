@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-workflow",
   "description": "Workflow capability seam: ctx.workflowEngine service, run vocabulary, and workflow/* events",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },

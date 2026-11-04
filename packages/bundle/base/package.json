@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-base",
   "description": "The shared dsh core as a profile bundle: the first patch layer of base-backed profiles, inserting core rows over the empty profile root",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -58,6 +58,7 @@
     "@berry-ai/harness-goal": "workspace:*",
     "@berry-ai/harness-goal-round-driver": "workspace:*",
     "@berry-ai/harness-api-gateway": "workspace:*",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-llm-deepseek-api-key": "workspace:*",
     "@berry-ai/harness-llm-deepseek-account": "workspace:*",
@@ -127,7 +128,7 @@
     "@berry-ai/harness-otel": "workspace:*",
     "@berry-ai/harness-working-directory": "workspace:*",
     "@berry-ai/harness-tool-working-directory": "workspace:*",
-    "@berry-ai/harness-api-remote-access": "workspace:*"
+    "@berry-ai/harness-web-deepseek-api": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"

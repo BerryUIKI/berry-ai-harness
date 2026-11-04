@@ -15,6 +15,7 @@ import llmRemote from '@berry-ai/harness-llm/remote'
 import dynamicRemote from '@berry-ai/harness-cordis-host-runner/remote'
 import pluginManagerRemote from '@berry-ai/harness-plugin-manager/remote'
 import pluginRegistryProbeRemote from '@berry-ai/harness-client-ui-plugin-manager/remote'
+import pluginMarketRemote from '@berry-ai/harness-plugin-market/remote'
 import pluginInventoryRemote from '@berry-ai/harness-host-plugin-inventory/remote'
 import messageFeedbackRemote from '@berry-ai/harness-message-feedback/remote'
 import permissionPresetsRemote from '@berry-ai/harness-permission-presets/remote'
@@ -39,6 +40,11 @@ export type {
 } from '@berry-ai/harness-plugin-manager/types'
 export type {} from '@berry-ai/harness-plugin-manager/remote'
 export type {} from '@berry-ai/harness-client-ui-plugin-manager/remote'
+export type {} from '@berry-ai/harness-plugin-market/remote'
+export type {
+  MarketCompatibility, MarketIndexSummary, MarketInstallation, MarketInstallationStatus, MarketListingEntry, MarketListingVersion,
+  MarketQuery, MarketSearchResult, MarketSort,
+} from '@berry-ai/harness-plugin-market/types'
 export type { PluginInventorySnapshot } from '@berry-ai/harness-host-plugin-inventory/types'
 export type {} from '@berry-ai/harness-agent-preset-registry/remote'
 export type {} from '@berry-ai/harness-user-questions/remote'
@@ -182,7 +188,8 @@ export async function apply(ctx: Context): Promise<() => Promise<void>> {
     for (const contribution of [
       productAnalyticsRemote, agentPresetsRemote, commandsRemote, settingsControllerRemote, accountRemote,
       goalsRemote, llmRemote, dynamicRemote, scheduleRemote,
-      pluginInventoryRemote, pluginManagerRemote, pluginRegistryProbeRemote, messageFeedbackRemote, sessionFeedbackRemote,
+      pluginInventoryRemote, pluginManagerRemote, pluginMarketRemote, pluginRegistryProbeRemote,
+      messageFeedbackRemote, sessionFeedbackRemote,
       fileUploadsRemote, sessionReferencesRemote,
       permissionPresetsRemote, subagentsRemote, sessionRemote, jobRemote, workspaceRemote, workspaceFilesRemote, terminalRemote,
       officeToPdfRemote, userQuestionsRemote,

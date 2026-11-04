@@ -180,6 +180,8 @@ flowchart LR
   cfg --> plugin_dsh_base_web
   plugin_dsh_base_web_search_deepseek["web-search-deepseek<br/>@berry-ai/harness-web-search-deepseek"]
   cfg --> plugin_dsh_base_web_search_deepseek
+  plugin_dsh_base_web_deepseek_api["web-deepseek-api<br/>@berry-ai/harness-web-deepseek-api"]
+  cfg --> plugin_dsh_base_web_deepseek_api
   plugin_dsh_base_web_fetch_http["web-fetch-http<br/>@berry-ai/harness-web-fetch-http"]
   cfg --> plugin_dsh_base_web_fetch_http
   plugin_dsh_base_tool_web["tool-web<br/>@berry-ai/harness-tool-web"]
@@ -288,6 +290,7 @@ flowchart LR
 | `repeat-tool-reminder` | `@berry-ai/harness-repeat-tool-reminder` |
 | `web` | `@berry-ai/harness-web` |
 | `web-search-deepseek` | `@berry-ai/harness-web-search-deepseek` |
+| `web-deepseek-api` | `@berry-ai/harness-web-deepseek-api` |
 | `web-fetch-http` | `@berry-ai/harness-web-fetch-http` |
 | `tool-web` | `@berry-ai/harness-tool-web` |
 | `mcp-resources` | `@berry-ai/harness-mcp-resources` |

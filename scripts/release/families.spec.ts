@@ -73,6 +73,7 @@ describe('release families', () => {
       '@berry-ai/harness-hooks-codex',
       '@berry-ai/harness-experimental-inspector-profile',
       '@berry-ai/harness-experimental-inspector',
+      '@berry-ai/harness-experimental-plugin-market-bundle',
       '@berry-ai/harness-experimental-ptc-runtime-python',
       '@berry-ai/harness-experimental-ralph-bundle',
       '@berry-ai/harness-experimental-session-inspector',

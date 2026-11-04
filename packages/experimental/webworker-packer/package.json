@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-webworker-packer",
   "description": "Build-time packer for the browser runtime's base VFS image and ordered data-overlay archives",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -34,8 +34,8 @@
   "license": "MIT",
   "dependencies": {
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
+    "@berry-ai/harness-app-boot": "workspace:*",
     "@berry-ai/harness-experimental-webworker-runtime": "workspace:*",
-    "@berry-ai/harness-home-paths": "workspace:*",
     "@berry-ai/harness-session-format": "workspace:*",
     "@berry-ai/harness-session-format-catalog": "workspace:*",
     "@berry-ai/harness-session-format-v3-to-v4": "workspace:*",
