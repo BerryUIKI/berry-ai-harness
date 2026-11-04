@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-client-ui-claude-code-mods",
   "description": "Web band above the prompt for Claude Code mods: draws each session's mod tree and sends button presses back to the bridge",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -48,18 +48,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/cordis": "workspace:~",
-    "@berry-ai/harness-api-remotes": "workspace:*",
-    "@berry-ai/harness-api-session-controller": "workspace:*",
-    "@berry-ai/harness-client-locale": "workspace:*",
-    "@berry-ai/harness-client-ui-conversation": "workspace:*",
-    "@berry-ai/harness-client-ui-primitives": "workspace:*",
-    "@berry-ai/harness-client-ui-renderer": "workspace:*",
-    "@berry-ai/harness-client-ui-session": "workspace:*",
-    "@berry-ai/harness-client-ui-slots": "workspace:*",
-    "@berry-ai/harness-experimental-claude-code-mods": "workspace:*",
-    "@berry-ai/harness-session": "workspace:*",
-    "@berry-ai/harness-typert-protocol": "workspace:*"
+    "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",

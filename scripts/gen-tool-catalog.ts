@@ -70,6 +70,8 @@ import * as ToolTeam from '@berry-ai/harness-experimental-tool-agent-team'
 import * as ToolTodo from '@berry-ai/harness-tool-todo'
 import type PluginManager from '@berry-ai/harness-plugin-manager'
 import * as PluginManagerTools from '@berry-ai/harness-plugin-manager/tools'
+import type PluginMarket from '@berry-ai/harness-plugin-market'
+import * as PluginMarketTools from '@berry-ai/harness-plugin-market/tools'
 import SandboxPolicy from '@berry-ai/harness-sandbox-policy'
 import McpResources from '@berry-ai/harness-mcp-resources'
 import * as ToolSubagent from '@berry-ai/harness-tool-subagent'
@@ -198,6 +200,18 @@ const TOOL_PACKAGES: ToolPackage[] = [
       ctx.provide('pluginManager', {} as PluginManager)
       await ctx.plugin(SandboxPolicy)
       await ctx.plugin(PluginManagerTools)
+    },
+  },
+  {
+    pkg: '@berry-ai/harness-plugin-market',
+    dir: 'plugin-market',
+    source: 'packages/boot/plugin-market/src/tools.ts',
+    requires: ['ctx.tools', 'ctx.pluginMarket'],
+    writes: ['tool/call', 'tool/result'],
+    async mount(ctx) {
+      // Schema harvest never fetches an index.
+      ctx.provide('pluginMarket', {} as PluginMarket)
+      await ctx.plugin(PluginMarketTools)
     },
   },
   {

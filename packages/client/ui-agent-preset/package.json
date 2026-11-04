@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-agent-preset",
   "description": "Agent-preset surfaces: the default for later sessions, this session's seat, and the composition editor",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -56,6 +56,7 @@
     "@berry-ai/harness-api-session-controller": "workspace:*",
     "@berry-ai/harness-client-connection": "workspace:*",
     "@berry-ai/harness-client-locale": "workspace:*",
+    "@berry-ai/harness-client-product-analytics": "workspace:*",
     "@berry-ai/harness-client-store": "workspace:*",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
     "@berry-ai/harness-client-ui-conversation": "workspace:*",

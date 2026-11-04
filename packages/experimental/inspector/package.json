@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-inspector",
   "description": "Experimental cross-realm CDP hub for Host debugging and Client Runtime inspection",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "icon": "./icon.svg",
   "publishConfig": {
     "access": "public"
@@ -47,7 +47,6 @@
   "license": "MIT",
   "dependencies": {
     "@berry-ai/harness-app-boot": "workspace:*",
-    "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-util-crypto": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "open": "^11.0.2",
@@ -55,11 +54,7 @@
     "ws": "^8.21.3"
   },
   "peerDependencies": {
-    "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@berry-ai/harness-client-modules": "workspace:*",
-    "@berry-ai/harness-client-connection": "workspace:*",
-    "@berry-ai/harness-host-webserver": "workspace:*"
+    "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
     "chrome-devtools-frontend": "1.0.1638082",
@@ -82,6 +77,8 @@
     "@berry-ai/harness-client-connection": "workspace:*",
     "@types/ws": "^8.18.1",
     "playwright": "^1.49.0",
-    "tsx": "^4.23.13"
+    "tsx": "^4.23.13",
+    "@berry-ai/harness-brand": "workspace:*",
+    "@berry-ai/harness-client-modules": "workspace:*"
   }
 }

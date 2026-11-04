@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-client-ui-cot-translation",
   "description": "Optional machine translation of expanded reasoning, preserving original Session text",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -56,19 +56,15 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@berry-ai/harness-typert-protocol": "workspace:*",
-    "@berry-ai/harness-settings": "workspace:*",
-    "@berry-ai/harness-experimental-translator": "workspace:*",
-    "@berry-ai/harness-session": "workspace:*",
-    "@berry-ai/harness-api-session-controller": "workspace:*"
+    "@berry-ai/harness-experimental-translator": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
-    "zod": "^4.4.3"
+    "zod": "^4.4.3",
+    "@berry-ai/harness-typert-protocol": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
     "@berry-ai/harness-experimental-translator": "workspace:*",
     "@berry-ai/harness-api-remotes": "workspace:*",
@@ -81,17 +77,16 @@
     "@berry-ai/harness-client-ui-renderer": "workspace:*",
     "@berry-ai/harness-client-ui-settings": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
-    "@deepseek-ai/schemastery": "workspace:~",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "@testing-library/react": "^16.3.3",
     "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-api-remote-access": "workspace:*",
     "@berry-ai/harness-api-session-controller": "workspace:*",
     "@berry-ai/harness-agent-loop-testkit": "workspace:*",
     "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
-    "@berry-ai/harness-typert-registry": "workspace:*",
-    "@berry-ai/harness-api-remote-access": "workspace:*"
+    "@berry-ai/harness-typert-registry": "workspace:*"
   },
   "files": [
     "locale/*.json",

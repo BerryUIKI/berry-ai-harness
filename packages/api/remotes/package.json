@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-api-remotes",
   "description": "Remote BFF assembly for application-selected Host capabilities",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -81,6 +81,7 @@
     "@berry-ai/harness-permission-presets": "workspace:*",
     "@berry-ai/harness-schedule": "workspace:*",
     "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-session-reference": "workspace:*",
     "@berry-ai/harness-settings": "workspace:*",
     "@berry-ai/harness-subagent": "workspace:*",
@@ -92,11 +93,11 @@
     "@berry-ai/harness-command-feedback": "workspace:*",
     "@berry-ai/harness-api-terminal-controller": "workspace:*",
     "@berry-ai/harness-plugin-manager": "workspace:*",
+    "@berry-ai/harness-plugin-market": "workspace:*",
     "@berry-ai/harness-client-ui-plugin-manager": "workspace:*",
     "@berry-ai/harness-office-to-pdf": "workspace:*",
     "@berry-ai/harness-api-account-controller": "workspace:*",
     "@berry-ai/harness-deepseek-account": "workspace:*",
-    "@berry-ai/harness-client-product-analytics": "workspace:*",
-    "@berry-ai/harness-session": "workspace:*"
+    "@berry-ai/harness-client-product-analytics": "workspace:*"
   }
 }

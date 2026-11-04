@@ -131,3 +131,6 @@
           - id: tool-plugin-manager
             name: '@berry-ai/harness-plugin-manager/tools'
             disabled: !!js "!ctx.get('profileContext')"
+          - id: tool-plugin-market
+            name: '@berry-ai/harness-plugin-market/tools'
+            disabled: !!js "!ctx.get('profileContext')"

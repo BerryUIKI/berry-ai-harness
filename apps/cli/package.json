@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness",
-  "description": "Berry AI Harness CLI: profile launch, plugin management, and configuration inspection",
-  "version": "0.2.1-alpha.3",
+  "description": "dsh CLI: profile launch, plugin management, and configuration inspection",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -105,7 +105,8 @@
     "@berry-ai/harness-experimental-session-titles-bundle": "workspace:*",
     "@berry-ai/harness-experimental-terminal-bundle": "workspace:*",
     "@berry-ai/harness-experimental-session-search": "workspace:*",
-    "@berry-ai/harness-experimental-tool-worktree": "workspace:*"
+    "@berry-ai/harness-experimental-tool-worktree": "workspace:*",
+    "@berry-ai/harness-experimental-plugin-market-bundle": "workspace:*"
   },
   "devDependencies": {
     "@berry-ai/harness-skill-badge": "workspace:*",

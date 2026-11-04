@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-hmr",
   "description": "Web client graph synchronization and rebuilt-bundle reload transport",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -46,7 +46,8 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@berry-ai/harness-client-modules": "workspace:*",
     "@berry-ai/harness-host-webserver": "workspace:*",
-    "@deepseek-ai/cordis": "workspace:~"
+    "@deepseek-ai/cordis": "workspace:~",
+    "eventsource-parser": "^3.1.0"
   },
   "files": [
     "locale/*.json",

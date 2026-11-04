@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-api-terminal-controller",
   "description": "Session-owned interactive terminals with shell discovery, screen recovery and typed Remote control",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -58,11 +58,11 @@
     "@berry-ai/harness-deque": "workspace:*",
     "@berry-ai/harness-lazy-require": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
+    "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
-    "@xterm/headless": "^6.0.0",
     "@xterm/addon-serialize": "^0.14.0",
-    "zod": "4.4.3",
-    "@berry-ai/harness-util-values": "workspace:*"
+    "@xterm/headless": "^6.0.0",
+    "zod": "4.4.3"
   },
   "peerDependencies": {
     "@berry-ai/harness-subprocess": "workspace:*",
@@ -73,6 +73,7 @@
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-api-gateway": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
+    "@berry-ai/harness-client-connection": "workspace:*",
     "@berry-ai/harness-client-store": "workspace:*",
     "@berry-ai/harness-fs": "workspace:*",
     "@berry-ai/harness-remote-mock": "workspace:*",

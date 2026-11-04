@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-settings-general",
   "description": "Settings ownerless-copy and product onboarding plugin: the General section, shell trigger/header chrome content, settings dictionaries, and the versioned welcome notice",
-  "version": "0.2.1-alpha.3",
+  "version": "0.2.1-rc.5",
   "publishConfig": {
     "access": "public"
   },
@@ -37,7 +37,9 @@
         "@berry-ai/harness-client-connection",
         "@berry-ai/harness-api-remotes",
         "@berry-ai/harness-client-ui-sidebar",
-        "@berry-ai/harness-client-shortcuts"
+        "@berry-ai/harness-client-shortcuts",
+        "@berry-ai/harness-client-modules",
+        "@berry-ai/harness-client-ui-layout"
       ],
       "platform": "web"
     }
@@ -58,8 +60,11 @@
     "@berry-ai/harness-api-remotes": "workspace:*",
     "@berry-ai/harness-client-connection": "workspace:*",
     "@berry-ai/harness-client-locale": "workspace:*",
+    "@berry-ai/harness-client-modules": "workspace:*",
+    "@berry-ai/harness-client-product-analytics": "workspace:*",
     "@berry-ai/harness-client-store": "workspace:*",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
+    "@berry-ai/harness-client-ui-layout": "workspace:*",
     "@berry-ai/harness-client-ui-primitives": "workspace:*",
     "@berry-ai/harness-client-ui-renderer": "workspace:*",
     "@berry-ai/harness-client-ui-session": "workspace:*",

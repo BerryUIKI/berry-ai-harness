@@ -38,6 +38,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@berry-ai/harness-config-editor` | no | Persist plugin configuration through profile patches and Loader reconciliation |
 | `@berry-ai/harness-hmr` | yes | Coordinated module and profile configuration hot reload |
 | `@berry-ai/harness-plugin-manager` | yes | Current-profile plugin and bundle management shared by dsh CLI, Web and agent tools |
+| `@berry-ai/harness-plugin-market` | yes | Configured plugin market indexes for the Web Discover page and the plugin_market agent tool |
 
 ## browser-use
 
@@ -73,9 +74,11 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@berry-ai/harness-client-ui-chat` | no | Chat Conversation target, node definitions, renderers, and details surface |
 | `@berry-ai/harness-client-ui-commands` | no | Client command surface: global directory cache, '/' source, three command UI kinds, popupSelect registry |
 | `@berry-ai/harness-client-ui-conversation` | no | Target-neutral Conversation assembly, shell, composer, queue, and view navigation |
+| `@berry-ai/harness-client-ui-deepseek-model-label-1017` | no | Temporary 1017 release badge for official DeepSeek Flash model labels |
 | `@berry-ai/harness-client-ui-deliverables` | no | Changed-files card with per-file comparison tabs, delivery cards, and clickable final-response file references for Web |
 | `@berry-ai/harness-client-ui-directory-picker-browse` | no | In-app directory browsing surface: the workspace directory-flow owner rendering the host's listing and creation primitives |
 | `@berry-ai/harness-client-ui-directory-picker-native` | no | Native directory-picker surface: the renderless workspace directory-flow occupant driving the local Desktop or Host OS chooser |
+| `@berry-ai/harness-client-ui-entry-customization` | no | Customize plugin entries in the left sidebar, conversation views, and right sidebar, and quickly create new plugins. |
 | `@berry-ai/harness-client-ui-goal` | no | Session goal surface: GoalBar docked above the composer, read from the goal session projection |
 | `@berry-ai/harness-client-ui-input-trigger` | no | Input trigger pipeline: '/' and '@' detection, candidate menu, pick routing to registered sources |
 | `@berry-ai/harness-client-ui-jobs` | no | Session-header background-job list with on-demand streaming record panels |
@@ -86,6 +89,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@berry-ai/harness-client-ui-permission-presets` | no | Permission surfaces: a new-session default in General settings and a current-session /permission popup over the permissions projection |
 | `@berry-ai/harness-client-ui-plan` | no | Plan mode controls, persistent transcript plan cards, and sidebar Markdown previews |
 | `@berry-ai/harness-client-ui-plugin-manager` | yes | Plugin management for the dsh web client: the sidebar Plugins panel installs, enables, disables, retries, and composes installed plugin packages |
+| `@berry-ai/harness-client-ui-plugin-market` | no | Discover tab of the dsh web Plugins page: browse configured plugin market indexes and install their bundles |
 | `@berry-ai/harness-client-ui-reference` | no | Unified Web @file and @session reference source |
 | `@berry-ai/harness-client-ui-renderer` | no | Browser UI renderer: React slot bindings, ctx.uiRenderer, and the assembled application root |
 | `@berry-ai/harness-client-ui-schedule` | no | Host task management page and Session reminder catalog |
@@ -405,7 +409,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 |---|---|---|
 | `@berry-ai/harness-skill` | yes | Agent skill provider registry for the DeepSeek Harness |
 | `@berry-ai/harness-skill-filesystem` | yes | Local filesystem skill provider for the DeepSeek Harness |
-| `@berry-ai/harness-skill-office` | yes | Bundled Word, PowerPoint, and Excel workflows and structural checks |
+| `@berry-ai/harness-skill-office` | yes | Bundled Word, PowerPoint, and Excel workflows and LibreOffice Kit operations |
 | `@berry-ai/harness-tool-skill` | yes | Model-facing skill loading tool for the DeepSeek Harness |
 | `@berry-ai/harness-tool-workspace-dependencies` | yes | The load_workspace_dependencies tool: absolute paths into a bundled Python, Node.js, and pnpm payload |
 
@@ -491,6 +495,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 |---|---|---|
 | `@berry-ai/harness-tool-web` | yes | Model-facing web tools (web_search, web_fetch) over the DeepSeek Harness web capability seam (ctx.web) |
 | `@berry-ai/harness-web` | yes | Abstract web access capability seam (ctx.web) for the DeepSeek Harness — search/fetch provider registry, registration-order-independent selection, request/result vocabulary, and the WebError taxonomy |
+| `@berry-ai/harness-web-deepseek-api` | yes | DeepSeek Search and Fetch API providers for the DeepSeek Harness web capability seam (ctx.web) |
 | `@berry-ai/harness-web-fetch-http` | yes | Anonymous public HTTP(S) fetch provider for the DeepSeek Harness web capability seam (ctx.web) |
 | `@berry-ai/harness-web-search-deepseek` | yes | DeepSeek-backed search provider (native web_search via the Anthropic-compatible API) for the DeepSeek Harness web capability seam (ctx.web) |
 | `@berry-ai/harness-web-search-exa` | yes | Exa-backed search provider for the DeepSeek Harness web capability seam (ctx.web) |

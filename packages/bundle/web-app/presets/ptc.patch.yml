@@ -129,3 +129,6 @@
           - id: tool-plugin-manager
             name: '@berry-ai/harness-plugin-manager/tools'
             disabled: true
+          - id: tool-plugin-market
+            name: '@berry-ai/harness-plugin-market/tools'
+            disabled: true
