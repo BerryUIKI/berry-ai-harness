@@ -55,12 +55,16 @@ const SAFE_HOST_DEPENDENCY_EXPORTS = {
   '@berry-ai/harness-computer-use/brand': ['ComputerUseProviderName'],
   '@berry-ai/harness-credentials': ['credentialKey'],
   '@berry-ai/harness-deque': ['Deque'],
+  // Builds a dispatcher from the resolved proxy policy; the caller owns and closes it.
+  '@berry-ai/harness-http-proxy': ['createRouteDispatcher'],
   // The Liveshare wire codec and identity helpers are stateless functions over caller-owned values.
   '@berry-ai/harness-experimental-liveshare-protocol': [
     'LIVESHARE_CAPABILITIES', 'LIVESHARE_PROTOCOL_VERSION', 'parseRelayFrame', 'parseShareAccessState',
     'parseTunnelWorkerCommand', 'parseTunnelWorkerEvent', 'rawText', 'sendFrame', 'unsupportedFrameRefusal',
     'viewerRequestFields', 'identityFromKey', 'identityKeyOf',
   ],
+  // The shipped profile templates are plain data; a consumer reads their bundle names only.
+  '@berry-ai/harness-official-bundles': ['PROFILE_TEMPLATES'],
   '@berry-ai/harness-llm': ['callConfigEquals'],
   '@berry-ai/harness-session': ['SessionId'],
   '@berry-ai/harness-session-format': ['sessionFormatLogFilename'],

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness",
   "description": "dsh CLI: profile launch, plugin management, and configuration inspection",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -39,7 +39,6 @@
     "@berry-ai/harness-compaction-basic": "workspace:*",
     "@berry-ai/harness-compaction-tool-result-pruner": "workspace:*",
     "@berry-ai/harness-cordis-client-runner": "workspace:*",
-    "@berry-ai/harness-experimental-agent-team-profile": "workspace:*",
     "@berry-ai/harness-experimental-inspector-profile": "workspace:*",
     "@berry-ai/harness-fs-local": "workspace:*",
     "@berry-ai/harness-goal": "workspace:*",
@@ -129,9 +128,9 @@
     "@berry-ai/harness-bash-local": "workspace:*",
     "@berry-ai/harness-credentials-local": "workspace:*",
     "@berry-ai/harness-deepseek-llm-api-extensions": "workspace:*",
-    "@berry-ai/harness-experimental-agent-team": "workspace:*",
+    "@berry-ai/harness-agent-team": "workspace:*",
     "@berry-ai/harness-experimental-ptc-runtime-python": "workspace:*",
-    "@berry-ai/harness-experimental-tool-agent-team": "workspace:*",
+    "@berry-ai/harness-tool-agent-team": "workspace:*",
     "@berry-ai/harness-fs-observation-policy": "workspace:*",
     "@berry-ai/harness-fs-sandbox": "workspace:*",
     "@berry-ai/harness-host-frontend-static": "workspace:*",

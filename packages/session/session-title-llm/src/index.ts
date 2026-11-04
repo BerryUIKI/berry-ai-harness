@@ -6,6 +6,12 @@
  * @module @berry-ai/harness-session-title-llm
  */
 
+declare module '@berry-ai/harness-llm/types' {
+  interface LlmRequestPurposeMap {
+    'session-title': true
+  }
+}
+
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { createUserMessage, BlockAssembler } from '@berry-ai/harness-llm'

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-tool",
   "description": "Client Tool call-tree renderer and keyed per-tool presentation slot",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -32,7 +32,8 @@
         "@berry-ai/harness-api-workspace-controller",
         "@berry-ai/harness-client-connection",
         "@berry-ai/harness-client-locale",
-        "@berry-ai/harness-client-ui-conversation"
+        "@berry-ai/harness-client-ui-conversation",
+        "@berry-ai/harness-api-session-controller"
       ],
       "platform": "web"
     }
@@ -80,7 +81,9 @@
     "clsx": "^2.0.0",
     "@berry-ai/harness-ptc-runtime": "workspace:*",
     "@berry-ai/harness-token-meter": "workspace:*",
-    "@berry-ai/harness-user-questions": "workspace:*"
+    "@berry-ai/harness-user-questions": "workspace:*",
+    "@berry-ai/harness-client-ui-context-menu": "workspace:*",
+    "@berry-ai/harness-api-session-controller": "workspace:*"
   },
   "files": [
     "locale/*.json",

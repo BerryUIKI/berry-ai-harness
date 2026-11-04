@@ -6,6 +6,8 @@ export type {} from '@berry-ai/harness-client-product-analytics/remote'
 import agentPresetsRemote from '@berry-ai/harness-agent-preset-registry/remote'
 import userQuestionsRemote from '@berry-ai/harness-user-questions/remote'
 import commandsRemote from '@berry-ai/harness-commands/remote'
+import agentTeamsRemote from '@berry-ai/harness-agent-team/remote'
+export type {} from '@berry-ai/harness-agent-team/remote'
 import accountRemote from '@berry-ai/harness-api-account-controller/remote'
 import settingsControllerRemote from '@berry-ai/harness-api-settings-controller/remote'
 import officeToPdfRemote from '@berry-ai/harness-office-to-pdf/remote'
@@ -14,6 +16,7 @@ import scheduleRemote from '@berry-ai/harness-schedule/remote'
 import llmRemote from '@berry-ai/harness-llm/remote'
 import dynamicRemote from '@berry-ai/harness-cordis-host-runner/remote'
 import pluginManagerRemote from '@berry-ai/harness-plugin-manager/remote'
+import mcpManagerRemote from '@berry-ai/harness-mcp-manager/remote'
 import toolResultsRemote from '@berry-ai/harness-client-ui-trajectory/remote'
 import pluginRegistryProbeRemote from '@berry-ai/harness-client-ui-plugin-manager/remote'
 import pluginMarketRemote from '@berry-ai/harness-plugin-market/remote'
@@ -29,6 +32,7 @@ import jobRemote from '@berry-ai/harness-api-job-controller/remote'
 import workspaceRemote from '@berry-ai/harness-api-workspace-controller/remote'
 import terminalRemote from '@berry-ai/harness-api-terminal-controller/remote'
 import workspaceFilesRemote from '@berry-ai/harness-api-workspace-files/remote'
+import webRemote from '@berry-ai/harness-web/remote'
 import type { ClientRemote } from '@berry-ai/harness-api-gateway/client'
 
 export type { ClientRemote } from '@berry-ai/harness-api-gateway/client'
@@ -40,7 +44,9 @@ export type {
   PluginUpdateProgress, PluginUpdateResult, PluginUpdateStep, PluginVersion, PluginVersionList, RegistryAttempt,
   ReadOnlyReason, Registry, RestartReason,
 } from '@berry-ai/harness-plugin-manager/types'
+export type { McpManagedServerStatus, McpManagedServerView } from '@berry-ai/harness-mcp-manager/types'
 export type {} from '@berry-ai/harness-plugin-manager/remote'
+export type {} from '@berry-ai/harness-mcp-manager/remote'
 export type {} from '@berry-ai/harness-client-ui-plugin-manager/remote'
 export type {} from '@berry-ai/harness-client-ui-trajectory/remote'
 export type {} from '@berry-ai/harness-plugin-market/remote'
@@ -52,6 +58,7 @@ export type { PluginInventorySnapshot } from '@berry-ai/harness-host-plugin-inve
 export type {} from '@berry-ai/harness-agent-preset-registry/remote'
 export type {} from '@berry-ai/harness-user-questions/remote'
 export type {} from '@berry-ai/harness-commands/remote'
+export type {} from '@berry-ai/harness-web/remote'
 export type {} from '@berry-ai/harness-api-settings-controller/remote'
 export type {} from '@berry-ai/harness-api-account-controller/remote'
 export type {} from '@berry-ai/harness-goal/remote'
@@ -83,6 +90,7 @@ export type { ApiRemoteForwardedEvent } from '../types.ts'
 // signatures `$on` hands to a listener, so a consumer reads the very
 // declaration the Host emits rather than a flattened restatement of it.
 export type {} from '@berry-ai/harness-commands/types'
+export type {} from '@berry-ai/harness-web/types'
 export type {} from '@berry-ai/harness-cordis-host-runner/types'
 export type {} from '@berry-ai/harness-credentials/types'
 export type {} from '@berry-ai/harness-llm/types'
@@ -189,13 +197,14 @@ export async function apply(ctx: Context): Promise<() => Promise<void>> {
   const disposers: Array<() => Promise<void>> = []
   try {
     for (const contribution of [
-      productAnalyticsRemote, agentPresetsRemote, commandsRemote, settingsControllerRemote, accountRemote,
+      productAnalyticsRemote, agentPresetsRemote, commandsRemote, agentTeamsRemote, settingsControllerRemote, accountRemote,
       goalsRemote, llmRemote, dynamicRemote, scheduleRemote,
-      pluginInventoryRemote, pluginManagerRemote, pluginMarketRemote, pluginRegistryProbeRemote, toolResultsRemote,
+      pluginInventoryRemote, pluginManagerRemote, mcpManagerRemote, pluginMarketRemote, pluginRegistryProbeRemote,
+      toolResultsRemote,
       messageFeedbackRemote, sessionFeedbackRemote,
       fileUploadsRemote, sessionReferencesRemote,
       permissionPresetsRemote, subagentsRemote, sessionRemote, jobRemote, workspaceRemote, workspaceFilesRemote, terminalRemote,
-      officeToPdfRemote, userQuestionsRemote,
+      officeToPdfRemote, userQuestionsRemote, webRemote,
     ]) {
       disposers.push(await ctx.remote.$mount(contribution))
     }

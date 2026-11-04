@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-desktop-host",
   "description": "Private Node-mode host process for the Electron desktop application",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "private": true,
   "license": "MIT",
   "type": "module",
@@ -39,8 +39,6 @@
     "@berry-ai/harness-sandbox-policy": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
-    "@berry-ai/harness-tool-executor-native": "workspace:*",
-    "@types/ws": "^8.18.1",
-    "ws": "^8.21.3"
+    "@berry-ai/harness-tool-executor-native": "workspace:*"
   }
 }

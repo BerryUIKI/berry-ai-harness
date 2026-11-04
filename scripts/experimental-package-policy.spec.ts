@@ -28,8 +28,8 @@ describe('experimental package identities', () => {
   })
 
   it('keeps new experimental packages under their prefixed namespaces', () => {
-    expect(experimentalPackageRecordNamespace('@deepseek-ai/dsh-experimental-bridge')).toBe('bridge')
-    expect(hasExperimentalPackageReference('@deepseek-ai/dsh-core')).toBe(false)
+    expect(experimentalPackageRecordNamespace('@berry-ai/harness-experimental-bridge')).toBe('bridge')
+    expect(hasExperimentalPackageReference('@berry-ai/harness-core')).toBe(false)
   })
 
   it.each(Object.entries(EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS))('keeps %s record names independent of the retained npm name', (directory, name) => {

@@ -4,6 +4,12 @@
  * @module @berry-ai/harness-compaction-basic/types
  */
 
+declare module '@berry-ai/harness-llm/types' {
+  interface LlmRequestPurposeMap {
+    'compaction': true
+  }
+}
+
 import type { LlmCallConfig } from '@berry-ai/harness-llm'
 
 /** Policy fields shared by the default policy and exact model overrides. */

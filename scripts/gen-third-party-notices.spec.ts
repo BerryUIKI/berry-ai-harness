@@ -59,7 +59,7 @@ describe('tierExternalDeps', () => {
   it('discloses host-bundled OAR as runtime code and applies runtime license checks', () => {
     const { manifests, names } = workspace({
       'packages/experimental/subagent-oar/package.json': {
-        name: '@deepseek-ai/dsh-experimental-subagent-oar',
+        name: '@berry-ai/harness-experimental-subagent-oar',
         devDependencies: { '@botiverse/oar': '0.67.0', 'host-build-tool': '^1' },
       },
     })
@@ -75,7 +75,7 @@ describe('tierExternalDeps', () => {
   it('keeps unrelated OAR development declarations out of runtime disclosure', () => {
     const { manifests, names } = workspace({
       'packages/experimental/unrelated/package.json': {
-        name: '@deepseek-ai/dsh-experimental-unrelated',
+        name: '@berry-ai/harness-experimental-unrelated',
         devDependencies: { '@botiverse/oar': '0.67.0' },
       },
     })
@@ -85,12 +85,12 @@ describe('tierExternalDeps', () => {
   it('rejects an OAR embedding owner that omits its required dependency declaration', () => {
     const { manifests, names } = workspace({
       'packages/experimental/subagent-oar/package.json': {
-        name: '@deepseek-ai/dsh-experimental-subagent-oar',
+        name: '@berry-ai/harness-experimental-subagent-oar',
         devDependencies: { 'host-build-tool': '^1' },
       },
     })
     expect(() => tierExternalDeps(manifests, names))
-      .toThrow('@deepseek-ai/dsh-experimental-subagent-oar embeds @botiverse/oar but does not declare it')
+      .toThrow('@berry-ai/harness-experimental-subagent-oar embeds @botiverse/oar but does not declare it')
   })
 
   it('limits the LibreOffice exception to its reviewed package identity and MPL terms', () => {
@@ -104,7 +104,7 @@ describe('tierExternalDeps', () => {
     }
     for (const dependency of [
       { name: 'unrelated-library', license: 'MPL-2.0' },
-      { name: '@deepseek-ai/dsh-libreoffice-kit', license: 'MPL-2.0' },
+      { name: '@berry-ai/harness-libreoffice-kit', license: 'MPL-2.0' },
       { name: '@deepseek-ai/libreoffice-kit-unreviewed', license: 'MPL-2.0' },
       { name: '@deepseek-ai/libreoffice-kit', license: 'GPL-3.0-only' },
       { name: '@deepseek-ai/libreoffice-kit', license: 'UNKNOWN' },
@@ -154,7 +154,7 @@ describe('tierExternalDeps', () => {
       'website/package.json': { devDependencies: { 'site-tool': '^1' } },
       // A plugin package's runtime dependency ships even when no app mounts it by default.
       'packages/mcp/mcp-client/package.json': { name: '@berry-ai/harness-mcp-client', dependencies: { 'protocol-sdk': '^1' }, devDependencies: { 'protocol-fixture-server': '^1' } },
-      'apps/cli/package.json': { name: '@deepseek-ai/dsh-cli', dependencies: { 'cli-lib': '^1', '@berry-ai/harness-mcp-client': 'workspace:^' } },
+      'apps/cli/package.json': { name: '@berry-ai/harness-cli', dependencies: { 'cli-lib': '^1', '@berry-ai/harness-mcp-client': 'workspace:^' } },
     })
 
     expect(tierExternalDeps(manifests, names)).toEqual(new Map([
@@ -173,12 +173,12 @@ describe('tierExternalDeps', () => {
   it('keeps a package runtime when any shipping area declares it, and excludes workspace links', () => {
     const { manifests, names } = workspace({
       'package.json': { devDependencies: { shared: '^1' } },
-      'packages/interaction/tui/package.json': { name: '@deepseek-ai/dsh-tui', dependencies: { shared: '^1', '@deepseek-ai/dsh-cli': 'workspace:^' } },
-      'apps/cli/package.json': { name: '@deepseek-ai/dsh-cli' },
+      'packages/interaction/tui/package.json': { name: '@berry-ai/harness-tui', dependencies: { shared: '^1', '@berry-ai/harness-cli': 'workspace:^' } },
+      'apps/cli/package.json': { name: '@berry-ai/harness-cli' },
     })
 
     expect(tierExternalDeps(manifests, names).get('shared')).toBe(true)
-    expect(tierExternalDeps(manifests, names).has('@deepseek-ai/dsh-cli')).toBe(false)
+    expect(tierExternalDeps(manifests, names).has('@berry-ai/harness-cli')).toBe(false)
   })
 })
 

@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-forge-bundle",
   "description": "Experimental change request panel and worktree option for Sessions in Git repositories",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "icon": "./icon.svg",
   "publishConfig": {
     "access": "public"
@@ -27,6 +27,7 @@
   "files": [
     "icon.svg",
     "locale/*.json",
+    "docs",
     "lib/index.js",
     "cordis.patch.yml",
     "lib/types/**/*.d.ts"
@@ -37,6 +38,7 @@
     "@berry-ai/harness-experimental-forge": "workspace:*",
     "@berry-ai/harness-experimental-forge-github": "workspace:*",
     "@berry-ai/harness-experimental-forge-session": "workspace:*",
+    "@berry-ai/harness-experimental-tool-worktree": "workspace:*",
     "@berry-ai/harness-experimental-worktree": "workspace:*"
   },
   "peerDependencies": {

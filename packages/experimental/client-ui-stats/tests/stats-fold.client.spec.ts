@@ -1,12 +1,12 @@
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
-    'team-message': { readonly kind: 'team-message'; readonly senderName: string }
     'agent-message': { readonly kind: 'agent-message' }
   }
 }
 
 import { beforeEach, describe, expect, it } from 'vitest'
 import type { SessionEventLike } from '@berry-ai/harness-api-session-controller/client'
+import { TeamId, TeamMessageId } from '@berry-ai/harness-agent-team/types'
 import { AttachmentId } from '@berry-ai/harness-attachment'
 import {
   LlmAttemptId,
@@ -23,7 +23,7 @@ import {
 } from '@berry-ai/harness-llm'
 import { RetryId } from '@berry-ai/harness-llm-retry'
 import type {} from '@berry-ai/harness-llm-retry/types'
-import { SessionSeq, type SessionEventMap, type SessionEventType } from '@berry-ai/harness-session/types'
+import { SessionId, SessionSeq, type SessionEventMap, type SessionEventType } from '@berry-ai/harness-session/types'
 import type {} from '@berry-ai/harness-tool-executor-ptc/types'
 import {
   CALL_LIMIT, fallbackState, foldEvent, isCodeMode, newState, promptOf, stepMetrics, toolSpanUnion, triggerSenderOf,
@@ -726,10 +726,10 @@ describe('prompt helper', () => {
 describe('trigger sender helper', () => {
   it('names the teammate that sent a framed message', () => {
     expect(triggerSenderOf(userMessage([imageBlock(), textBlock('Team message from hfai-deploy: update')], {
-      kind: 'team-message', senderName: 'hfai-deploy',
+      kind: 'team-message', teamId: TeamId('team'), messageId: TeamMessageId('message'), senderId: SessionId('sender'), senderName: 'hfai-deploy',
     }))).toBe('hfai-deploy')
     expect(triggerSenderOf(userMessage([textBlock('Team message from  stack-rebase : go')], {
-      kind: 'team-message', senderName: 'stack-rebase',
+      kind: 'team-message', teamId: TeamId('team'), messageId: TeamMessageId('message'), senderId: SessionId('sender'), senderName: 'stack-rebase',
     }))).toBe('stack-rebase')
   })
 

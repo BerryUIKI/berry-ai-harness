@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-deliverables",
   "description": "Changed-files card with per-file comparison tabs, delivery cards, and clickable final-response file references for Web",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -37,7 +37,8 @@
         "@berry-ai/harness-client-ui-renderer",
         "@berry-ai/harness-client-ui-sidebar-right",
         "@berry-ai/harness-client-ui-tool",
-        "@berry-ai/harness-client-ui-settings"
+        "@berry-ai/harness-client-ui-settings",
+        "@berry-ai/harness-client-ui-context-menu"
       ],
       "platform": "web"
     }
@@ -80,7 +81,8 @@
     "@berry-ai/harness-fs-local": "workspace:*",
     "@berry-ai/harness-agent": "workspace:*",
     "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@berry-ai/harness-client-ui-settings": "workspace:*"
+    "@berry-ai/harness-client-ui-settings": "workspace:*",
+    "@berry-ai/harness-client-ui-context-menu": "workspace:*"
   },
   "files": [
     "locale/*.json",

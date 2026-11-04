@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-agent-instructions",
   "description": "Workspace context loader for AGENTS.md/CLAUDE.md instruction files",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -36,8 +36,7 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
-    "@berry-ai/harness-working-directory": "workspace:*",
-    "@berry-ai/harness-session-projection": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-util-values": "workspace:*",

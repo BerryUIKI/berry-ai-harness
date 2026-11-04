@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-hooks-claude-code",
   "description": "Bridge plugin: run a Claude Code hooks.json / settings hook config on the DeepSeek Harness interception seams",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -39,8 +39,7 @@
     "@berry-ai/harness-subagent": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@berry-ai/harness-working-directory": "workspace:*",
-    "@berry-ai/harness-session-projection": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   },
   "devDependencies": {
     "@berry-ai/harness-agent": "workspace:*",

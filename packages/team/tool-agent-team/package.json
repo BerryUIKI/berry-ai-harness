@@ -1,0 +1,64 @@
+{
+  "name": "@berry-ai/harness-tool-agent-team",
+  "description": "Scoped model-facing Agent Teams tools over ctx.agentTeams",
+  "version": "0.2.2-alpha.3",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/team/tool-agent-team"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "locale/*.json",
+    "lib/index.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@deepseek-ai/schemastery": "workspace:~"
+  },
+  "peerDependencies": {
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-agent-team": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
+    "@deepseek-ai/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@berry-ai/harness-agent": "workspace:*",
+    "@berry-ai/harness-agent-loop": "workspace:*",
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-session-projection": "workspace:*",
+    "@berry-ai/harness-session-persistence-jsonl": "workspace:*",
+    "@berry-ai/harness-session-query": "workspace:*",
+    "@berry-ai/harness-scope": "workspace:*",
+    "@berry-ai/harness-subagent": "workspace:*",
+    "@berry-ai/harness-subagent-fork-in-process": "workspace:*",
+    "@berry-ai/harness-subagent-spawn-in-process": "workspace:*",
+    "@berry-ai/harness-tool-subagent-control": "workspace:*",
+    "@berry-ai/harness-system-prompt": "workspace:*",
+    "@berry-ai/harness-agent-team": "workspace:*",
+    "@berry-ai/harness-tool-testkit": "workspace:*",
+    "@berry-ai/harness-tools": "workspace:*",
+    "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-llm": "workspace:*",
+    "@berry-ai/harness-llm-deepseek": "workspace:*"
+  }
+}

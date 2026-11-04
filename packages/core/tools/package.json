@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-tools",
   "description": "Tool registry and execution pipeline for the DeepSeek Harness",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -46,11 +46,7 @@
     "@berry-ai/harness-scope": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-system-prompt": "workspace:*",
-    "@berry-ai/harness-user-approval": "workspace:*",
-    "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@berry-ai/harness-sandbox": "workspace:*",
-    "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@berry-ai/harness-working-directory": "workspace:*"
+    "@berry-ai/harness-user-approval": "workspace:*"
   },
   "dependencies": {
     "@berry-ai/harness-brand": "workspace:*",
@@ -68,10 +64,6 @@
     "@berry-ai/harness-tool-executor-native": "workspace:*",
     "@berry-ai/harness-tool-testkit": "workspace:*",
     "@berry-ai/harness-user-approval": "workspace:*",
-    "@berry-ai/harness-agent-loop-testkit": "workspace:*",
-    "@berry-ai/harness-ptc-runtime": "workspace:*",
-    "@berry-ai/harness-sandbox": "workspace:*",
-    "@berry-ai/harness-sandbox-policy": "workspace:*",
-    "@berry-ai/harness-working-directory": "workspace:*"
+    "@berry-ai/harness-agent-loop-testkit": "workspace:*"
   }
 }

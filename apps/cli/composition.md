@@ -140,6 +140,10 @@ flowchart LR
   cfg --> plugin_dsh_base_command_compact
   plugin_dsh_base_subagent["subagent<br/>@berry-ai/harness-subagent"]
   cfg --> plugin_dsh_base_subagent
+  plugin_dsh_base_agent_team["agent-team<br/>@berry-ai/harness-agent-team"]
+  cfg --> plugin_dsh_base_agent_team
+  plugin_dsh_base_tool_agent_team["tool-agent-team<br/>@berry-ai/harness-tool-agent-team"]
+  cfg --> plugin_dsh_base_tool_agent_team
   plugin_dsh_base_subagent_spawn_in_process["subagent-spawn-in-process<br/>@berry-ai/harness-subagent-spawn-in-process"]
   cfg --> plugin_dsh_base_subagent_spawn_in_process
   plugin_dsh_base_subagent_fork_in_process["subagent-fork-in-process<br/>@berry-ai/harness-subagent-fork-in-process"]
@@ -272,6 +276,8 @@ flowchart LR
 | `compaction-basic` | `@berry-ai/harness-compaction-basic` |
 | `command-compact` | `@berry-ai/harness-command-compact` |
 | `subagent` | `@berry-ai/harness-subagent` |
+| `agent-team` | `@berry-ai/harness-agent-team` |
+| `tool-agent-team` | `@berry-ai/harness-tool-agent-team` |
 | `subagent-spawn-in-process` | `@berry-ai/harness-subagent-spawn-in-process` |
 | `subagent-fork-in-process` | `@berry-ai/harness-subagent-fork-in-process` |
 | `tool-subagent-control` | `@berry-ai/harness-tool-subagent-control` |

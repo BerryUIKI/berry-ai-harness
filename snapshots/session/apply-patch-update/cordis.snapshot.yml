@@ -1,0 +1,88 @@
+# Minimal keyless composition: real app and filesystem tools; replayed model.
+- id: llm-deepseek
+  name: '@berry-ai/harness-llm-deepseek-api-key'
+  disabled: true
+
+- insert:
+    - id: llm-replay
+      name: '@berry-ai/harness-llm-replay'
+      config:
+        providers:
+          - id: deepseek-official
+            name: DeepSeek
+            models:
+              - id: deepseek-v4-pro
+                contextWindow: 1000000
+                defaultMaxTokens: 256000
+                reasoningEfforts: [off, low, high, max]
+                defaultReasoningEffort: high
+
+- id: subprocess
+  name: '@berry-ai/harness-subprocess-local'
+
+- id: agent-default-model
+  name: '@berry-ai/harness-agent-default-model'
+  config:
+    provider: deepseek-official
+    model: deepseek-v4-pro
+
+- id: session-persistence-jsonl
+  name: '@berry-ai/harness-session-persistence-jsonl'
+  config:
+    root: !!js dshHomePath('sessions')
+    compression: none
+
+- id: agent-instructions
+  name: '@berry-ai/harness-agent-instructions'
+  disabled: true
+
+- id: system-prompt
+  name: '@berry-ai/harness-system-prompt'
+  config:
+    personaPrefix: You are a concise snapshot agent.
+
+- id: tool-jobs
+  name: '@berry-ai/harness-tool-jobs'
+  disabled: true
+
+- id: goal
+  name: '@berry-ai/harness-goal'
+  disabled: true
+
+- id: goal-round-driver
+  name: '@berry-ai/harness-goal-round-driver'
+  disabled: true
+
+- id: command-goal
+  name: '@berry-ai/harness-command-goal'
+  disabled: true
+
+- id: tool-goal
+  name: '@berry-ai/harness-tool-goal'
+  disabled: true
+
+- id: skill
+  name: '@berry-ai/harness-skill'
+  disabled: true
+
+- id: skill-filesystem
+  name: '@berry-ai/harness-skill-filesystem'
+  disabled: true
+
+- id: tool-skill
+  name: '@berry-ai/harness-tool-skill'
+  disabled: true
+
+- id: tool-fs
+
+- id: spill-local
+  name: '@berry-ai/harness-spill-local'
+  config:
+    root: !!js process.env.DSH_SNAPSHOT_SPILL_ROOT ?? './.spill'
+
+- insert:
+    - id: snapshot-spill-locators
+      name: ../../../scripts/snapshot-spill-locators.ts
+      config:
+        root: !!js process.env.DSH_SNAPSHOT_SPILL_ROOT
+        locatorRoot: !!js process.env.DSH_SNAPSHOT_SPILL_LOCATOR_ROOT

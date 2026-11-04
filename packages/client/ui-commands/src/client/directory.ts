@@ -7,7 +7,7 @@
  */
 import type { CommandDescriptor } from '@berry-ai/harness-commands/types'
 import type { SessionId } from '@berry-ai/harness-session/types'
-import { resolveCommand } from './resolution.ts'
+import { resolveCommand } from '@berry-ai/harness-commands/builtin'
 
 export type { CommandDescriptor } from '@berry-ai/harness-commands/types'
 

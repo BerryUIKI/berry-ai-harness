@@ -10,8 +10,8 @@ import { writeFixtureFile as write } from './fixture-file.ts'
 
 const roots: string[] = []
 const base = '@berry-ai/harness-base'
-const core = '@deepseek-ai/dsh-core'
-const candidate = '@deepseek-ai/dsh-candidate'
+const core = '@berry-ai/harness-core'
+const candidate = '@berry-ai/harness-candidate'
 const candidateDir = 'packages/core/candidate'
 const profile = 'packages/util/official-bundles/src/bundles.ts'
 const patch = 'packages/bundle/base/cordis.patch.yml'
@@ -38,7 +38,7 @@ function fixture(): string {
   const root = mkdtempSync(join(tmpdir(), 'dsh-product-use-'))
   roots.push(root)
   write(root, 'tsconfig.base.json', { compilerOptions: { moduleResolution: 'bundler', paths: {} } })
-  pkg(root, 'apps/cli', '@deepseek-ai/dsh')
+  pkg(root, 'apps/cli', '@berry-ai/harness')
   pkg(root, 'apps/desktop', '@fixture/desktop')
   pkg(root, 'apps/web', '@fixture/web')
   write(root, 'apps/cli/src/bin.ts', 'export {}\n')
@@ -72,7 +72,7 @@ describe('product package use', () => {
   it('rejects an orphan even when an app manifest installs it', () => {
     const root = fixture()
     pkg(root, candidateDir, candidate)
-    write(root, 'apps/cli/package.json', { name: '@deepseek-ai/dsh', dependencies: { [candidate]: '*' } })
+    write(root, 'apps/cli/package.json', { name: '@berry-ai/harness', dependencies: { [candidate]: '*' } })
     expect(failures(root)).toContain(`${candidateDir} (${candidate}): no product runtime use`)
     expect(failures(root, declarations())).toBe('')
   })
@@ -196,11 +196,11 @@ describe('product package use', () => {
 
   it.each(['shipped', 'on-demand'])('keeps %s optional selection and its runtime closure separate from default use', (delivery) => {
     const root = fixture()
-    const bundle = '@deepseek-ai/dsh-experimental-feature'
+    const bundle = '@berry-ai/harness-experimental-feature'
     pkg(root, 'packages/experimental/feature', bundle, { dsh: { bundle: { patch: './cordis.patch.yml' } } })
     pkg(root, candidateDir, candidate)
-    pkg(root, 'packages/core/indirect', '@deepseek-ai/dsh-indirect')
-    write(root, `${candidateDir}/src/index.ts`, "import '@deepseek-ai/dsh-indirect'")
+    pkg(root, 'packages/core/indirect', '@berry-ai/harness-indirect')
+    write(root, `${candidateDir}/src/index.ts`, "import '@berry-ai/harness-indirect'")
     write(root, 'packages/experimental/feature/cordis.patch.yml', [{ insert: [{ name: candidate }] }])
     profiles(root, delivery === 'shipped' ? [bundle] : [], delivery === 'on-demand' ? [bundle] : [])
     const result = verifyProductUse(root, declarations())
@@ -211,7 +211,7 @@ describe('product package use', () => {
 
   it.each(['shipped', 'on-demand'])('does not count a %s optional patch whose target is absent', (delivery) => {
     const root = fixture()
-    const bundle = '@deepseek-ai/dsh-experimental-feature'
+    const bundle = '@berry-ai/harness-experimental-feature'
     pkg(root, 'packages/experimental/feature', bundle, { dsh: { bundle: { patch: './cordis.patch.yml' } } })
     pkg(root, candidateDir, candidate)
     write(root, 'packages/experimental/feature/cordis.patch.yml', [{ id: 'absent', insert: [{ name: candidate }] }])
@@ -224,14 +224,14 @@ describe('product package use', () => {
     pkg(root, candidateDir, candidate, { exports: { './remote': {
       types: './lib/typert.remote-client.d.ts', default: './lib/typert.remote-client.js',
     } } })
-    pkg(root, 'packages/core/host-only', '@deepseek-ai/dsh-host-only')
-    write(root, `${candidateDir}/src/index.ts`, "import '@deepseek-ai/dsh-host-only'")
+    pkg(root, 'packages/core/host-only', '@berry-ai/harness-host-only')
+    write(root, `${candidateDir}/src/index.ts`, "import '@berry-ai/harness-host-only'")
     write(root, 'apps/web/src/main.ts', `import '${candidate}/remote'`)
     const result = verifyProductUse(root, {})
     expect(result.defaultPackages).toContain(candidateDir)
     expect(result.defaultPackages).not.toContain('packages/core/host-only')
     expect(result.failures).toEqual([
-      'packages/core/host-only (@deepseek-ai/dsh-host-only): no product runtime use; mount it, declare its maintained role, or move it to experimental',
+      'packages/core/host-only (@berry-ai/harness-host-only): no product runtime use; mount it, declare its maintained role, or move it to experimental',
     ])
   })
 
@@ -262,8 +262,8 @@ describe('product package use', () => {
     const picker = '@berry-ai/harness-host-directory-picker-auto'
     pkg(root, 'packages/host/directory-picker-auto', picker)
     pkg(root, candidateDir, candidate, { dsh: { client: { platform: 'web' } } })
-    pkg(root, 'packages/client/indirect', '@deepseek-ai/dsh-client-indirect')
-    write(root, `${candidateDir}/src/client.ts`, "import '@deepseek-ai/dsh-client-indirect'")
+    pkg(root, 'packages/client/indirect', '@berry-ai/harness-client-indirect')
+    write(root, `${candidateDir}/src/client.ts`, "import '@berry-ai/harness-client-indirect'")
     write(root, 'packages/host/directory-picker-auto/src/index.ts',
       `export const BACKEND_PACKAGES = { native: '${candidate}' }\nexport const SURFACE_PACKAGES = { native: '${candidate}' }\n`)
     write(root, patch, [{ insert: [{ name: core }, { name: picker }] }])

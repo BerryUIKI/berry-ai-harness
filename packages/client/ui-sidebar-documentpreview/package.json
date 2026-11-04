@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-sidebar-documentpreview",
   "description": "Extensible Sidebar previews for Office documents, spreadsheets, Markdown, code, images, PDF, HTML, and plain text",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -37,7 +37,8 @@
         "@berry-ai/harness-api-remotes",
         "@berry-ai/harness-client-locale",
         "@berry-ai/harness-client-ui-settings",
-        "@berry-ai/harness-client-ui-file-drag"
+        "@berry-ai/harness-client-ui-file-drag",
+        "@berry-ai/harness-client-ui-context-menu"
       ],
       "platform": "web"
     }
@@ -65,6 +66,7 @@
     "@berry-ai/harness-client-ui-renderer": "workspace:*",
     "@berry-ai/harness-client-ui-session": "workspace:*",
     "@berry-ai/harness-client-ui-settings": "workspace:*",
+    "@berry-ai/harness-client-ui-sidebar-files": "workspace:*",
     "@berry-ai/harness-client-ui-sidebar-right": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-office-to-pdf": "workspace:*",
@@ -86,7 +88,8 @@
     "react-dom": "^18.2.0",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
     "yaml": "^2.9.0",
-    "@berry-ai/harness-client-ui-file-drag": "workspace:*"
+    "@berry-ai/harness-client-ui-file-drag": "workspace:*",
+    "@berry-ai/harness-client-ui-context-menu": "workspace:*"
   },
   "files": [
     "locale/*.json",

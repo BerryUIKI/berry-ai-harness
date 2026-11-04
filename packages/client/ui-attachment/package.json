@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-attachment",
   "description": "Dynamic attachment presentation plugin for conversation input, message-image, and trajectory image slots",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -35,7 +35,8 @@
         "@berry-ai/harness-client-ui-renderer",
         "@berry-ai/harness-client-ui-trajectory",
         "@berry-ai/harness-client-ui-tool",
-        "@berry-ai/harness-client-ui-file-drag"
+        "@berry-ai/harness-client-ui-file-drag",
+        "@berry-ai/harness-client-ui-context-menu"
       ],
       "platform": "web"
     }
@@ -60,7 +61,8 @@
     "@berry-ai/harness-client-ui-tool": "workspace:*",
     "clsx": "^2.0.0",
     "@berry-ai/harness-client-ui-file-drag": "workspace:*",
-    "@berry-ai/harness-util-file-drag": "workspace:*"
+    "@berry-ai/harness-util-file-drag": "workspace:*",
+    "@berry-ai/harness-client-ui-context-menu": "workspace:*"
   },
   "files": [
     "locale/*.json",

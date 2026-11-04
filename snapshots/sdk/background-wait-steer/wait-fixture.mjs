@@ -6,7 +6,7 @@
  * (a throwing observer only logs), and asserted in `agent/turn-stopping`, whose
  * serial dispatch commits the turn — so a violated expectation fails the run.
  */
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage } from '@berry-ai/harness-llm'
 
 export const inject = ['jobs', 'tools']
 

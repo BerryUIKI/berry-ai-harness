@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-open-in-app",
   "description": "Web \"Open In...\" controls: the Session-header split button opening the workspace directory in an installed application, and the document preview's default-application controls for one file",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -49,7 +49,11 @@
         "@berry-ai/harness-client-ui-layout",
         "@berry-ai/harness-client-ui-renderer",
         "@berry-ai/harness-client-ui-session",
-        "@berry-ai/harness-client-ui-sidebar-documentpreview"
+        "@berry-ai/harness-client-ui-sidebar-documentpreview",
+        "@berry-ai/harness-client-ui-context-menu",
+        "@berry-ai/harness-client-ui-sidebar-right",
+        "@berry-ai/harness-api-workspace-files",
+        "@berry-ai/harness-client-ui-workspace"
       ],
       "platform": "web"
     }
@@ -78,6 +82,13 @@
     "react": "^18.2.0",
     "@berry-ai/harness-client-ui-deliverables": "workspace:*",
     "@berry-ai/harness-native-command": "workspace:*",
-    "@berry-ai/harness-client-shortcuts": "workspace:*"
+    "@berry-ai/harness-client-shortcuts": "workspace:*",
+    "@berry-ai/harness-client-ui-context-menu": "workspace:*",
+    "@berry-ai/harness-client-ui-file-actions": "workspace:*",
+    "@berry-ai/harness-util-workspace-path": "workspace:*",
+    "@berry-ai/harness-client-ui-sidebar-right": "workspace:*",
+    "@berry-ai/harness-api-workspace-files": "workspace:*",
+    "@berry-ai/harness-client-ui-sidebar-browser": "workspace:*",
+    "@berry-ai/harness-client-ui-workspace": "workspace:*"
   }
 }

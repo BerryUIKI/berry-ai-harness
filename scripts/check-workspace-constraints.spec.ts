@@ -31,8 +31,8 @@ const experimental = {
 } satisfies WorkspaceManifest
 
 describe('workspace dependency ranges', () => {
-  const dependency = { dir: 'packages/core/runtime', manifest: { name: '@deepseek-ai/dsh-runtime' } }
-  const cli = { dir: 'apps/cli', manifest: { name: '@deepseek-ai/dsh' } }
+  const dependency = { dir: 'packages/core/runtime', manifest: { name: '@berry-ai/harness-runtime' } }
+  const cli = { dir: 'apps/cli', manifest: { name: '@berry-ai/harness' } }
   const vendor = { dir: 'vendor/cordis', manifest: { name: '@deepseek-ai/cordis' } }
   const native = { dir: 'native/system', manifest: { name: '@deepseek-ai/node-addon-system' } }
   const platform = { dir: 'native/system/packages/darwin-arm64', manifest: { name: '@deepseek-ai/node-addon-system-darwin-arm64' } }
@@ -51,7 +51,7 @@ describe('workspace dependency ranges', () => {
         })
         const check = (name: string, range: string): string[] =>
           checkWorkspaceProtocol([dependency, cli, vendor, native, platform, unrelated, consumer(name, range)])
-        for (const name of ['@deepseek-ai/dsh', '@deepseek-ai/dsh-runtime']) {
+        for (const name of ['@berry-ai/harness', '@berry-ai/harness-runtime']) {
           expect(check(name, 'workspace:*')).toEqual([])
           for (const range of ['workspace:^', 'workspace:~', 'workspace:^0.1.7', '^0.1.7', '*']) {
             expect(check(name, range)).toEqual([
@@ -91,13 +91,13 @@ describe('workspace manifest discovery', () => {
     for (const dir of [...consumers, 'tools/excluded', 'unlisted/probe', 'packages/core/runtime']) {
       mkdirSync(join(root, dir), { recursive: true })
       writeFileSync(join(root, dir, 'package.json'), JSON.stringify(dir === 'packages/core/runtime'
-        ? { name: '@deepseek-ai/dsh-runtime' }
-        : { dependencies: { '@deepseek-ai/dsh-runtime': 'workspace:^' } }))
+        ? { name: '@berry-ai/harness-runtime' }
+        : { dependencies: { '@berry-ai/harness-runtime': 'workspace:^' } }))
     }
     const manifests = readWorkspaceManifests(root)
     expect(manifests.map(entry => entry.dir).sort()).toEqual([...consumers, 'packages/core/runtime'].sort())
     expect(checkWorkspaceProtocol(manifests).sort()).toEqual(consumers.map(dir =>
-      `${dir}: dependencies.@deepseek-ai/dsh-runtime must use workspace:*, got workspace:^`).sort())
+      `${dir}: dependencies.@berry-ai/harness-runtime must use workspace:*, got workspace:^`).sort())
   })
 
   it.each(['', 'null', '{}', 'packages: []', 'packages: [false]', 'packages: [""]', 'packages: wrong'])(
@@ -153,7 +153,7 @@ describe('experimental workspace constraints', () => {
   it.each(Object.values(EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS))('rejects retained runtime names and aliases: %s', (name) => {
     for (const dependencies of [{ [name]: 'workspace:*' }, { alias: `npm:${name}@1.0.0` }, { alias: `workspace:${name}@*` }]) {
       expect(checkExperimentalDependencyIsolation([{
-        dir: 'apps/cli', manifest: { name: '@deepseek-ai/dsh', dependencies },
+        dir: 'apps/cli', manifest: { name: '@berry-ai/harness', dependencies },
       }], [])).toEqual([expect.stringContaining('must not reference an experimental package')])
     }
   })
@@ -204,28 +204,28 @@ describe('experimental workspace constraints', () => {
       expect(checkExperimentalDependencyIsolation([experimental, {
         dir: 'packages/core/consumer',
         manifest: {
-          name: '@deepseek-ai/dsh-consumer',
+          name: '@berry-ai/harness-consumer',
           [section]: { [experimental.manifest.name]: 'workspace:^' },
         },
       }])).toEqual([
-        `@deepseek-ai/dsh-consumer: ${section}.${experimental.manifest.name} must not reference an experimental package`,
+        `@berry-ai/harness-consumer: ${section}.${experimental.manifest.name} must not reference an experimental package`,
       ])
     },
   )
 
   it('allows the dsh installation to ship the optional bundles the launcher names, and nothing else experimental', () => {
     const listed = { [experimental.manifest.name]: 'workspace:^' }
-    const installation = { dir: 'apps/cli', manifest: { name: '@deepseek-ai/dsh', dependencies: listed } } satisfies WorkspaceManifest
+    const installation = { dir: 'apps/cli', manifest: { name: '@berry-ai/harness', dependencies: listed } } satisfies WorkspaceManifest
     expect(checkExperimentalDependencyIsolation([experimental, installation], [experimental.manifest.name])).toEqual([])
     expect(checkExperimentalDependencyIsolation([experimental, installation], [])).toEqual([
-      `@deepseek-ai/dsh: dependencies.${experimental.manifest.name} must not reference an experimental package`,
+      `@berry-ai/harness: dependencies.${experimental.manifest.name} must not reference an experimental package`,
     ])
     // Only a plain dependency edge is offered; a peer would make the bundle a requirement of every consumer.
     expect(checkExperimentalDependencyIsolation([experimental, {
       dir: 'apps/cli',
-      manifest: { name: '@deepseek-ai/dsh', peerDependencies: listed },
+      manifest: { name: '@berry-ai/harness', peerDependencies: listed },
     }], [experimental.manifest.name])).toEqual([
-      `@deepseek-ai/dsh: peerDependencies.${experimental.manifest.name} must not reference an experimental package`,
+      `@berry-ai/harness: peerDependencies.${experimental.manifest.name} must not reference an experimental package`,
     ])
   })
 
@@ -233,25 +233,25 @@ describe('experimental workspace constraints', () => {
     const manifests: WorkspaceManifest[] = [experimental, {
       dir: 'packages/core/test-only',
       manifest: {
-        name: '@deepseek-ai/dsh-test-only',
+        name: '@berry-ai/harness-test-only',
         devDependencies: { [experimental.manifest.name]: 'workspace:^' },
       },
     }, {
       dir: 'packages/experimental/consumer',
       manifest: {
-        name: '@deepseek-ai/dsh-experimental-consumer',
+        name: '@berry-ai/harness-experimental-consumer',
         dependencies: { [experimental.manifest.name]: 'workspace:^' },
       },
     }, {
       dir: 'python/sdk-runtime',
       manifest: {
-        name: '@deepseek-ai/dsh-python-runtime',
+        name: '@berry-ai/harness-python-runtime',
         dependencies: { [experimental.manifest.name]: 'workspace:^' },
       },
     }]
 
     expect(checkExperimentalDependencyIsolation(manifests)).toEqual([
-      `@deepseek-ai/dsh-python-runtime: dependencies.${experimental.manifest.name} must not reference an experimental package`,
+      `@berry-ai/harness-python-runtime: dependencies.${experimental.manifest.name} must not reference an experimental package`,
     ])
   })
 })
@@ -266,9 +266,9 @@ describe('dsh family version coherence', () => {
 
   it('rejects the root-named CLI app on a stale shared version', () => {
     expect(checkDshFamilyVersion(
-      { name: '@deepseek-ai/dsh', version: '0.1.2-alpha.5' },
+      { name: '@berry-ai/harness', version: '0.1.2-alpha.5' },
       '0.1.2-rc.1',
-    )).toBe('@deepseek-ai/dsh: package.json version must match root version 0.1.2-rc.1')
+    )).toBe('@berry-ai/harness: package.json version must match root version 0.1.2-rc.1')
   })
 
   it('accepts a manifest carrying the shared version', () => {
@@ -307,8 +307,8 @@ describe('package payload constraints', () => {
     ])
   })
 
-  it('accepts the Agent Team icon payload and rejects its omission', () => {
-    const dir = 'packages/experimental/agent-team-profile'
+  it('accepts the Voice Input icon payload and rejects its omission', () => {
+    const dir = 'packages/experimental/voice-input-bundle'
     const manifest = JSON.parse(readFileSync(new URL(`../${dir}/package.json`, import.meta.url), 'utf8')) as WorkspaceManifest['manifest']
     expect(checkWorkspaceManifest({ dir, manifest })).toEqual([])
     expect(checkWorkspaceManifest({ dir, manifest: { ...manifest, files: manifest.files!.filter(file => file !== 'icon.svg') } }))
@@ -323,7 +323,7 @@ describe('package payload constraints', () => {
     { exports: { './locale/*.json': './locale/*.json', './search/locale/*.json': './locale/*.json' }, resources: ['locale/*.json'] },
     { exports: { './search/locale/*.json': './z/*.json', './locale/*.json': './a/*.json' }, resources: ['a/*.json', 'z/*.json'] },
   ])('includes declared locale resources in the canonical payload: $exports', ({ exports, resources }) => {
-    expect(expectedDshPackageFiles({ name: '@deepseek-ai/dsh-localized', exports })).toEqual([
+    expect(expectedDshPackageFiles({ name: '@berry-ai/harness-localized', exports })).toEqual([
       ...resources, 'lib/index.js', 'lib/types/**/*.d.ts',
     ])
   })
@@ -406,9 +406,9 @@ describe('package payload constraints', () => {
     })).toEqual(['lib/index.js', 'lib/types/**/*.d.ts'])
   })
 
-  it.each(['agent-team', 'agent-team-profile', 'auto-review', 'client-ui-agent-team', 'tool-agent-team'])(
+  it.each(['team/agent-team', 'experimental/voice-input-bundle', 'experimental/auto-review', 'client/ui-agent-team', 'team/tool-agent-team'])(
     'accepts the published locale files for %s and rejects their omission', (name) => {
-      const dir = `packages/experimental/${name}`
+      const dir = `packages/${name}`
       const manifest = JSON.parse(readFileSync(new URL(`../${dir}/package.json`, import.meta.url), 'utf8')) as WorkspaceManifest['manifest']
       expect(checkWorkspaceManifest({ dir, manifest })).toEqual([])
       expect(checkWorkspaceManifest({ dir, manifest: {
@@ -435,7 +435,7 @@ describe('package payload constraints', () => {
 
   it('includes a declared profile patch without a package-name allowlist', () => {
     expect(expectedDshPackageFiles({
-      name: '@deepseek-ai/dsh-private-profile',
+      name: '@berry-ai/harness-private-profile',
       dsh: { bundle: { patch: './cordis.patch.yml' } },
     })).toEqual([
       'lib/index.js',
@@ -443,7 +443,7 @@ describe('package payload constraints', () => {
       'lib/types/**/*.d.ts',
     ])
     expect(expectedDshPackageFiles({
-      name: '@deepseek-ai/dsh-private-profile',
+      name: '@berry-ai/harness-private-profile',
       dsh: { bundle: { patch: ['./cordis.patch.yml', './layers/web.patch.yml'] } },
     })).toEqual([
       'lib/index.js',
@@ -489,7 +489,7 @@ describe('package payload constraints', () => {
   it('rejects a package-asset export whose payload omits the built assets', () => {
     const dir = 'packages/client/probe'
     const manifest = {
-      name: '@deepseek-ai/dsh-client-probe',
+      name: '@berry-ai/harness-client-probe',
       type: 'module',
       main: 'lib/index.js',
       types: 'lib/types/index.d.ts',
@@ -506,7 +506,7 @@ describe('package payload constraints', () => {
       checkWorkspaceManifest({ dir, manifest: candidate }).filter(error => error.includes('package.json files must be'))
     expect(payloadErrors(manifest)).toEqual([])
     expect(payloadErrors({ ...manifest, files: manifest.files.filter(file => file !== 'lib/assets') })).toEqual([
-      expect.stringContaining('@deepseek-ai/dsh-client-probe: package.json files must be '
+      expect.stringContaining('@berry-ai/harness-client-probe: package.json files must be '
         + '["lib/index.js","lib/client.js","lib/assets","lib/types/**/*.d.ts"]'),
     ])
   })

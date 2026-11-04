@@ -281,7 +281,7 @@ describe('client build environment', () => {
       'process.env': '{}',
       [PROBE_KEY]: '"shared-value"',
     })
-    const node = configs.find(config => config.name === '@deepseek-ai/dsh-client-ui-sidebar')
+    const node = configs.find(config => config.name === '@berry-ai/harness-client-ui-sidebar')
     expect(node?.define).toMatchObject({ [PROBE_KEY]: '"shared-value"' })
     expect(node?.define).not.toHaveProperty(['process.env'])
 

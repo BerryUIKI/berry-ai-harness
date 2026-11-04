@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-cua",
   "description": "Shared Computer Use application objects, authorization, and logged tool execution",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -137,8 +137,7 @@
     "@berry-ai/harness-storage-json": "workspace:*",
     "@berry-ai/harness-client-ui-user-questions": "workspace:*",
     "@berry-ai/harness-client-ui-approval": "workspace:*",
-    "@berry-ai/harness-client-ui-conversation": "workspace:*",
-    "@berry-ai/harness-settings": "workspace:*"
+    "@berry-ai/harness-client-ui-conversation": "workspace:*"
   },
   "dsh": {
     "client": {

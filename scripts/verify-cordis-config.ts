@@ -196,8 +196,8 @@ export function exclusivePlaneRowIds(rows: unknown): Set<string> {
     }
     if (!isRecord(value)) return
     if (typeof value.id === 'string' && typeof value.name === 'string'
-      && value.name !== '@deepseek-ai/dsh-tool-executor-native'
-      && value.name !== '@deepseek-ai/dsh-tool-executor-ptc') ids.add(value.id)
+      && value.name !== '@berry-ai/harness-tool-executor-native'
+      && value.name !== '@berry-ai/harness-tool-executor-ptc') ids.add(value.id)
     walk(value.insert)
     if (isCordisGroupEntry(value)) walk(value.config)
   }

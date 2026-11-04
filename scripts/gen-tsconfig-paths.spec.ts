@@ -30,15 +30,15 @@ describe('generated tsconfig package aliases', () => {
 
   it('yields to a hand-written alias and closes without a trailing comma', () => {
     const aliases = [
-      { specifier: '@deepseek-ai/dsh-a', source: './packages/g/a/src' },
-      { specifier: '@deepseek-ai/dsh-b', source: './packages/g/b/src' },
-      { specifier: '@deepseek-ai/dsh-c', source: './packages/g/c/src' },
+      { specifier: '@berry-ai/harness-a', source: './packages/g/a/src' },
+      { specifier: '@berry-ai/harness-b', source: './packages/g/b/src' },
+      { specifier: '@berry-ai/harness-c', source: './packages/g/c/src' },
     ]
-    const body = renderAliases(aliases, new Set(['@deepseek-ai/dsh-a']))
+    const body = renderAliases(aliases, new Set(['@berry-ai/harness-a']))
 
     expect(body).toBe([
-      '      "@deepseek-ai/dsh-b": ["./packages/g/b/src"]',
-      '      "@deepseek-ai/dsh-c": ["./packages/g/c/src"]',
+      '      "@berry-ai/harness-b": ["./packages/g/b/src"]',
+      '      "@berry-ai/harness-c": ["./packages/g/c/src"]',
     ].join(',\n'))
     expect(body.endsWith(',')).toBe(false)
   })
@@ -70,11 +70,11 @@ describe('generated tsconfig package aliases', () => {
     // directory is skipped by the generator, so without this check it would
     // resolve through the workspace symlink to built lib/types instead.
     expect(uncoveredPackages(
-      ['@deepseek-ai/dsh-a', '@deepseek-ai/dsh-b'],
-      new Set(['@deepseek-ai/dsh-a']),
-    )).toEqual(['@deepseek-ai/dsh-b'])
+      ['@berry-ai/harness-a', '@berry-ai/harness-b'],
+      new Set(['@berry-ai/harness-a']),
+    )).toEqual(['@berry-ai/harness-b'])
 
-    expect(uncoveredPackages(['@deepseek-ai/dsh-a'], new Set(['@deepseek-ai/dsh-a']))).toEqual([])
+    expect(uncoveredPackages(['@berry-ai/harness-a'], new Set(['@berry-ai/harness-a']))).toEqual([])
   })
 
   it('covers every workspace package in the committed config', () => {
@@ -91,6 +91,6 @@ describe('generated tsconfig package aliases', () => {
     // A wildcard lists one candidate per group, so resolving a package late in
     // the list costs a filesystem probe — and under tsx a decorated module
     // error — for every group before it.
-    expect(config).not.toContain('"@deepseek-ai/dsh-*":')
+    expect(config).not.toContain('"@berry-ai/harness-*":')
   })
 })
