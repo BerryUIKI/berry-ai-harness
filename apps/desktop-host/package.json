@@ -29,6 +29,8 @@
     "@berry-ai/harness-plugin-manager": "workspace:*"
   },
   "devDependencies": {
+    "@types/ws": "8.18.1",
+    "ws": "8.21.3",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@berry-ai/harness-skill": "workspace:*",

@@ -194,6 +194,7 @@
       "@deepseek-ai/dsh-session-title/types": ["./packages/session/session-title/src/types.ts"],
       "@berry-ai/harness-session-title/client": ["./packages/session/session-title/src/client.ts"],
       "@deepseek-ai/dsh-session-title/client": ["./packages/session/session-title/src/client.ts"],
+      "@berry-ai/harness-subagent/src/*": ["./packages/subagent/subagent/src/*"],
       "@berry-ai/harness-subagent/client": ["./packages/subagent/subagent/src/client.ts"],
       "@deepseek-ai/dsh-subagent/client": ["./packages/subagent/subagent/src/client.ts"],
       "@berry-ai/harness-subagent/internal": ["./packages/subagent/subagent/src/internal.ts"],
