@@ -9543,9 +9543,6 @@ importers:
       '@berry-ai/harness-atomic-write':
         specifier: workspace:*
         version: link:../../util/atomic-write
-      '@berry-ai/harness-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
       '@berry-ai/harness-computer-use':
         specifier: workspace:*
         version: link:../../computer-use/computer-use
@@ -9555,9 +9552,6 @@ importers:
       '@berry-ai/harness-typert-protocol':
         specifier: workspace:*
         version: link:../../typert/protocol
-      '@berry-ai/harness-util-values':
-        specifier: workspace:*
-        version: link:../../util/values
       '@deepseek-ai/schemastery':
         specifier: link:../../../vendor/schemastery
         version: link:../../../vendor/schemastery
@@ -9592,6 +9586,9 @@ importers:
       '@berry-ai/harness-attachment-local':
         specifier: workspace:*
         version: link:../../attachment/attachment-local
+      '@berry-ai/harness-brand':
+        specifier: workspace:*
+        version: link:../../util/brand
       '@berry-ai/harness-client-locale':
         specifier: workspace:*
         version: link:../../client/locale
@@ -9691,6 +9688,9 @@ importers:
       '@berry-ai/harness-user-questions':
         specifier: workspace:*
         version: link:../../interaction/user-questions
+      '@berry-ai/harness-util-values':
+        specifier: workspace:*
+        version: link:../../util/values
       '@berry-ai/harness-working-directory':
         specifier: workspace:*
         version: link:../../session/working-directory
