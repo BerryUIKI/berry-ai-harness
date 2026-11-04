@@ -660,6 +660,7 @@
       "@berry-ai/harness-experimental-subagent-oar": ["./packages/experimental/subagent-oar/src"],
       "@berry-ai/harness-experimental-tool-subagent-oar": ["./packages/experimental/tool-subagent-oar/src"],
       "@berry-ai/harness-util-file-drag": ["./packages/util/file-drag/src"],
+      "@berry-ai/harness-mcp-client/types": ["./packages/mcp/mcp-client/src/types.ts"],
       "@berry-ai/harness-client-ui-agent-team/client": ["./packages/client/ui-agent-team/src/client/index.ts"],
       "@berry-ai/harness-client-ui-agent-team": ["./packages/client/ui-agent-team/src"],
       "@berry-ai/harness-tool-agent-team": ["./packages/team/tool-agent-team/src"],
