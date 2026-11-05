@@ -38,6 +38,8 @@ export const EXEMPT_PREFIXES: readonly string[] = [
   'scripts/snapshots/',
   'scripts/dependency-catalog/',
   'docs/dependency-catalog.json',
+  // Names the published package the README still tells users to run.
+  'scripts/gen-dependency-catalog.ts',
 ]
 
 /** This gate and its spec contain the rejected patterns by construction. */

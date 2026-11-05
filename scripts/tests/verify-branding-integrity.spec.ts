@@ -37,6 +37,7 @@ describe('verify-branding-integrity', () => {
       'scripts/snapshots/python-sdk-single-exe/advanced/session.v3.jsonl',
       'scripts/dependency-catalog/package-lock.json',
       'docs/dependency-catalog.json',
+      'scripts/gen-dependency-catalog.ts',
       'packages/example/tests/fixtures/recorded.json',
       'packages/example/tests/expected/notice.expected.md',
       'scripts/verify-branding-integrity.ts',
