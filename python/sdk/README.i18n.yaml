@@ -9,17 +9,20 @@
   en: d5f298c2f9b492f9
   zh: a13558d5db4af1ed
 /deepseek-harness-python-sdk/start-a-runtime:
-  en: a2e2c27b3b9e4df7
-  zh: d6c5aa151854dfab
+  en: d234504ecc592837
+  zh: 0ca44452b91afd94
+/deepseek-harness-python-sdk/run-text-and-commands:
+  en: b2c847c1452e137d
+  zh: c595c5e82151d0cb
 /deepseek-harness-python-sdk/client-approvals:
-  en: fc69be1beb8abff1
-  zh: 91b56781931a6f68
+  en: 1d18c09832dd4a42
+  zh: 6e7260b650a1f987
 /deepseek-harness-python-sdk/customize-plugins:
-  en: 525fb33035d0d04a
-  zh: 54914608667847df
+  en: a35edc9508a3c3d6
+  zh: d90d6df95dce3552
 /deepseek-harness-python-sdk/native-user-questions:
-  en: d9c60c5f43755782
-  zh: 78c82635209ed22d
+  en: 979ad00fe498b2be
+  zh: 4b656bd268292a13
 /deepseek-harness-python-sdk/results-and-notifications:
-  en: 6200490e7d95e2be
-  zh: 27edccabde5416a5
+  en: 5bb4389c339f72ca
+  zh: 4c22f92508a51596

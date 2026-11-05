@@ -8,7 +8,11 @@ import { parseArgs } from 'node:util'
 import { runCommandWithTimeout } from './benchmark-npm-resolution.ts'
 
 const ROOT = resolve(import.meta.dirname, '..')
-const PACKAGE = '@berry-ai/harness'
+// The catalog documents the package README tells users to run. The Berry scope
+// is unpublished, so this names the published upstream package; switch it with
+// README's `npx` instructions and a `gen-dependency-catalog` refresh at the
+// first Berry release.
+const PACKAGE = '@deepseek-ai/dsh'
 const ENTRY = `node_modules/${PACKAGE}`
 const REGISTRY = 'https://registry.npmjs.org/'
 const LOCK = 'scripts/dependency-catalog/package-lock.json'
