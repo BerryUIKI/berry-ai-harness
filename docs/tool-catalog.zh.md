@@ -55,7 +55,7 @@
 | `@berry-ai/harness-tool-workspace-dependencies` | `load_workspace_dependencies` | `ctx.tools` | `tool/call`, `tool/result` | - | - |
 | `@berry-ai/harness-tool-web` | `web_fetch`、`web_search` | `ctx.tools`、`ctx.web`、`ctx.systemPrompt` | `tool/call`、`tool/result` | - | web_search 和 web_fetch 将提供方选择置于 ctx.web 之后，使模型可见 schema 在更换后端时保持稳定。 |
 
-<a id="deepseek-aidsh-plugin-manager"></a>
+<a id="berry-aiharness-plugin-manager"></a>
 
 ## `@berry-ai/harness-plugin-manager`
 
@@ -125,7 +125,7 @@
 
 来源： [`packages/boot/plugin-manager/src/tools.ts`](../packages/boot/plugin-manager/src/tools.ts)
 
-<a id="deepseek-aidsh-plugin-market"></a>
+<a id="berry-aiharness-plugin-market"></a>
 
 ## `@berry-ai/harness-plugin-market`
 
@@ -175,7 +175,7 @@
 
 来源： [`packages/boot/plugin-market/src/tools.ts`](../packages/boot/plugin-market/src/tools.ts)
 
-<a id="deepseek-aidsh-mcp-resources"></a>
+<a id="berry-aiharness-mcp-resources"></a>
 
 ## `@berry-ai/harness-mcp-resources`
 
@@ -255,7 +255,7 @@
 
 来源： [`packages/mcp/mcp-resources/src/tools.ts`](../packages/mcp/mcp-resources/src/tools.ts)
 
-<a id="deepseek-aidsh-experimental-browser-use-stagehand-native"></a>
+<a id="berry-aiharness-experimental-browser-use-stagehand-native"></a>
 
 ## `@berry-ai/harness-experimental-browser-use-stagehand-native`
 
@@ -502,7 +502,7 @@
 
 来源：[`packages/experimental/browser-use-stagehand-native/src/index.ts`](../packages/experimental/browser-use-stagehand-native/src/index.ts)
 
-<a id="deepseek-aidsh-action-cards"></a>
+<a id="berry-aiharness-action-cards"></a>
 
 ## `@berry-ai/harness-action-cards`
 
@@ -545,7 +545,7 @@
 
 只向加载过已注册卡片种类 Skill 的 Agent 声明；各种类的包注册自己的动作，个性化推荐 Bundle 提供随产品发布的种类。
 
-<a id="deepseek-aidsh-tool-ask-user"></a>
+<a id="berry-aiharness-tool-ask-user"></a>
 
 ## `@berry-ai/harness-tool-ask-user`
 
@@ -619,7 +619,7 @@
 
 ask_user_question 默认保持原有阻塞行为；设置 `mode: timed` 后才启用前台超时与 pending 结果，同时问题仍可回答；timed 模式内 `timeout: -1` 让本次调用无限期阻塞。
 
-<a id="deepseek-aidsh-tool-executor-ptc"></a>
+<a id="berry-aiharness-tool-executor-ptc"></a>
 
 ## `@berry-ai/harness-tool-executor-ptc`
 
@@ -667,7 +667,7 @@ ask_user_question 默认保持原有阻塞行为；设置 `mode: timed` 后才�
 
 PTC 执行器只向模型公开 run_code，并在运行时语言生成的 SDK 中声明其他可见能力。程序绑定按提交顺序进入共享的受守卫工具流水线；并行安全的函数体最多重叠 maxParallelSubCalls 个，嵌套结果保持与外层程序关联。
 
-<a id="deepseek-aidsh-plan-mode"></a>
+<a id="berry-aiharness-plan-mode"></a>
 
 ## `@berry-ai/harness-plan-mode`
 
@@ -694,7 +694,7 @@ PTC 执行器只向模型公开 run_code，并在运行时语言生成的 SDK �
 
 规划未激活时，exit_plan_mode 仍保留在面向模型的 schema 中，这样状态转换不会在规划策略变更之外额外造成工具目录变动。其执行路径会拒绝规划模式之外的调用；在规划模式下，它通过用户交互 seam 提交计划（批准／根据反馈继续规划），批准后会在步骤边界记录规划模式已停用。
 
-<a id="deepseek-aidsh-tool-bash"></a>
+<a id="berry-aiharness-tool-bash"></a>
 
 ## `@berry-ai/harness-tool-bash`
 
@@ -738,7 +738,7 @@ PTC 执行器只向模型公开 run_code，并在运行时语言生成的 SDK �
 
 bash 工具是 bash 执行器 seam 面向模型的消费方。组合中有 job 注册表时，每次调用一启动就注册到通用 `ctx.jobs` 运行时，并通过 `job_*` 工具（来自 `@berry-ai/harness-tool-jobs`）收集／停止；没有注册表或 `enableRunInBackground: false` 时，工具注册不带 `run_in_background` 参数的纯前台 schema。
 
-<a id="deepseek-aidsh-tool-present"></a>
+<a id="berry-aiharness-tool-present"></a>
 
 ## `@berry-ai/harness-tool-present`
 
@@ -782,7 +782,7 @@ bash 工具是 bash 执行器 seam 面向模型的消费方。组合中有 job �
 
 交付归调用方 Session 所有；Web ui-deliverables 提供源文件打开与卡片。
 
-<a id="deepseek-aidsh-tool-pwsh"></a>
+<a id="berry-aiharness-tool-pwsh"></a>
 
 ## `@berry-ai/harness-tool-pwsh`
 
@@ -826,7 +826,7 @@ bash 工具是 bash 执行器 seam 面向模型的消费方。组合中有 job �
 
 pwsh 工具是 Windows 组合中 bash 执行器 seam 的 PowerShell 方言消费方（由 `@berry-ai/harness-pwsh-local` 等 PowerShell 执行器为 `ctx.shell` 提供后端）；除沙箱接口外，它逐项对应 bash 工具调用。使用 `run_in_background` 的运行会注册到通用 `ctx.jobs` 运行时，并通过 `job_*` 工具收集／停止；托管的 `DSH_*` 环境来自 `@berry-ai/harness-shell-env`。每次调用都在新进程中运行，不使用持久 PTY 会话。路径采用原生 `C:\...` 形式，变量采用 `$env:NAME`。
 
-<a id="deepseek-aidsh-tool-cordis"></a>
+<a id="berry-aiharness-tool-cordis"></a>
 
 ## `@berry-ai/harness-tool-cordis`
 
@@ -883,7 +883,7 @@ pwsh 工具是 Windows 组合中 bash 执行器 seam 的 PowerShell 方言消费
 
 创造模式提供两个只读运行时检查工具。Cordis host runner 提供检查注册表；Client 查询需要已连接页面。持久化变更编写为组合包，再通过 plugin_manager 安装。
 
-<a id="deepseek-aidsh-tool-bash-persistent"></a>
+<a id="berry-aiharness-tool-bash-persistent"></a>
 
 ## `@berry-ai/harness-tool-bash-persistent`
 
@@ -910,7 +910,7 @@ pwsh 工具是 Windows 组合中 bash 执行器 seam 的 PowerShell 方言消费
 
 一个按所有者隔离的持久 bash 工具；部署组合提供 PTY 后端，并可覆盖面向模型的环境描述。
 
-<a id="deepseek-aidsh-tool-pwsh-persistent"></a>
+<a id="berry-aiharness-tool-pwsh-persistent"></a>
 
 ## `@berry-ai/harness-tool-pwsh-persistent`
 
@@ -937,7 +937,7 @@ pwsh 工具是 Windows 组合中 bash 执行器 seam 的 PowerShell 方言消费
 
 一个按所有者隔离的持久 pwsh 工具，持久 bash 工具的 Windows 对应物；部署组合提供 pwsh 方言的 PTY 后端，并可覆盖面向模型的环境描述。
 
-<a id="deepseek-aidsh-tool-str-replace-editor"></a>
+<a id="berry-aiharness-tool-str-replace-editor"></a>
 
 ## `@berry-ai/harness-tool-str-replace-editor`
 
@@ -1045,7 +1045,7 @@ pwsh 工具是 Windows 组合中 bash 执行器 seam 的 PowerShell 方言消费
 
 基于文件系统 seam 的独立查看／创建／唯一字面量替换／按行插入工具；可与任何 shell 或终端接口组合。
 
-<a id="deepseek-aidsh-tool-fs"></a>
+<a id="berry-aiharness-tool-fs"></a>
 
 ## `@berry-ai/harness-tool-fs`
 
@@ -1183,7 +1183,7 @@ pwsh 工具是 Windows 组合中 bash 执行器 seam 的 PowerShell 方言消费
 
 先读后写／编辑策略由 `@berry-ai/harness-fs-observation-policy` 添加；它是一个 `fs/*` 事件门禁插件，不会改变 schema。随发行版交付的组合保持该行禁用，因此除非部署启用它，修改都是无条件的。没有 `ctx.attachments` 时图片工具不会注册；其 schema 与路由无关，执行时除非确切路由的模型声明图片输入，否则拒绝。`apply_patch` 仅在 `applyPatch: true` 时注册；目录为了记录其 schema 而开启该开关。`dsh-base` 与 Web 的 `standard` preset 开启它；Web 的 `ptc`、`cordis` preset 以及 PTC overlay 显式写出 `applyPatch: false`。
 
-<a id="deepseek-aidsh-tool-fs-search"></a>
+<a id="berry-aiharness-tool-fs-search"></a>
 
 ## `@berry-ai/harness-tool-fs-search`
 
@@ -1243,7 +1243,7 @@ pwsh 工具是 Windows 组合中 bash 执行器 seam 的 PowerShell 方言消费
 
 glob 和 grep 是无条件可用的发现工具，通过 ctx.subprocess spawn 随包提供的 ripgrep 二进制文件（`@vscode/ripgrep`），并作为普通前台调用运行，绝不作为后台任务；无需在宿主机安装 `rg`，也不经过 shell 层。本目录使用 `sampleOverCapGlobResults: true`；部署必须显式选择该行为。结果超过上限时，会通过可选的 ctx.spillStore 后端保存完整的格式化列表；在共置部署中，如果后端公开本地路径，返回的定位信息可供后续读取／搜索。
 
-<a id="deepseek-aidsh-experimental-tool-terminal"></a>
+<a id="berry-aiharness-tool-terminal"></a>
 
 ## `@berry-ai/harness-tool-terminal`
 
@@ -1408,7 +1408,7 @@ glob 和 grep 是无条件可用的发现工具，通过 ctx.subprocess spawn �
 
 这 6 个终端工具需要选择启用，用于补充一次性 bash／文件系统工具。`terminal_send(run_in_background: true)` 会注册到 `ctx.jobs`；schema 不包含 TUI、具名按键序列、BEL、调整尺寸、自动启动和跨 agent 共享。
 
-<a id="deepseek-aidsh-tool-goal"></a>
+<a id="berry-aiharness-tool-goal"></a>
 
 ## `@berry-ai/harness-tool-goal`
 
@@ -1502,7 +1502,7 @@ glob 和 grep 是无条件可用的发现工具，通过 ctx.subprocess spawn �
 
 create、edit、pause 和 resume 要求直接来自人类的根权限；complete 和 blocked 也接受确切的当前 Goal Round。blocked 的默认下限是 3 个获准的 Round。
 
-<a id="deepseek-aidsh-tool-schedule"></a>
+<a id="berry-aiharness-tool-schedule"></a>
 
 ## `@berry-ai/harness-tool-schedule`
 
@@ -1655,7 +1655,7 @@ create、edit、pause 和 resume 要求直接来自人类的根权限；complete
 
 preset 或 Agent scope 挂载本包，并决定哪些 Agent 获得工具。管理工具按 id 跨会话读写 Host 的任务。任务保存 RFC 5545 重复规则，执行位置可选已有会话、首次创建后复用的会话或每次运行新建的会话。委派子 Agent 不能调用这些工具。
 
-<a id="deepseek-aidsh-tool-lsp"></a>
+<a id="berry-aiharness-tool-lsp"></a>
 
 ## `@berry-ai/harness-tool-lsp`
 
@@ -1703,7 +1703,7 @@ preset 或 Agent scope 挂载本包，并决定哪些 Agent 获得工具。管�
 
 lsp 工具将提供方选择和语言服务器子进程置于 ctx.lsp 之后，因此其模型可见 schema 在更换提供方时保持稳定。运行时要求已注册提供方，例如 `@berry-ai/harness-lsp-stdio`；如果没有提供方，查询会返回结构化 `LSP_UNAVAILABLE` 错误，而不会改变 schema。
 
-<a id="deepseek-aidsh-experimental-tool-ralph"></a>
+<a id="berry-aiharness-tool-ralph"></a>
 
 ## `@berry-ai/harness-tool-ralph`
 
@@ -1734,7 +1734,7 @@ lsp 工具将提供方选择和语言服务器子进程置于 ctx.lsp 之后，�
 
 固定的前台工作流会在每个 Round 启动一个全新的结构化子级；模型只能选择不可变目标和可选的 Round 上限。
 
-<a id="deepseek-aidsh-tool-skill"></a>
+<a id="berry-aiharness-tool-skill"></a>
 
 ## `@berry-ai/harness-tool-skill`
 
@@ -1759,7 +1759,7 @@ lsp 工具将提供方选择和语言服务器子进程置于 ctx.lsp 之后，�
 
 来源：[`packages/skill/tool-skill/src/index.ts`](../packages/skill/tool-skill/src/index.ts)
 
-<a id="deepseek-aidsh-tool-session-query"></a>
+<a id="berry-aiharness-tool-session-query"></a>
 
 ## `@berry-ai/harness-tool-session-query`
 
@@ -1994,7 +1994,7 @@ lsp 工具将提供方选择和语言服务器子进程置于 ctx.lsp 之后，�
 
 这 5 个只读工具会隐藏提供方游标，并根据不可变的调用 agent 会话为每个结果授权。该包需要选择启用；需要强制截止时间或限制行内输出的组合还会挂载通用超时或 spill 策略。
 
-<a id="deepseek-aidsh-experimental-tool-subagent-oar"></a>
+<a id="berry-aiharness-experimental-tool-subagent-oar"></a>
 
 ## `@berry-ai/harness-experimental-tool-subagent-oar`
 
@@ -2039,7 +2039,7 @@ lsp 工具将提供方选择和语言服务器子进程置于 ctx.lsp 之后，�
 
 subagent_oar 工具在为外部提供方配置的别名之间选择。本目录展示 Codex 和 Claude Code 别名；每个部署自行选择提供方。原生模型和权限设置由所选提供方的配置决定。
 
-<a id="deepseek-aidsh-tool-subagent"></a>
+<a id="berry-aiharness-tool-subagent"></a>
 
 ## `@berry-ai/harness-tool-subagent`
 
@@ -2097,7 +2097,7 @@ subagent_oar 工具在为外部提供方配置的别名之间选择。本目录�
 
 加载时的 `toolName` 选择委派名称（默认为 `subagent`）；`modelSelection` 增加可选路由字段。`modelDiscovery` 默认关闭，每个作用域由一个实例注册共享发现工具。Web 与 Desktop preset 启用 spawn 发现和路由字段，并为 `subagent_fork` 保持路由字段关闭。Host 设置服务为每个新顶层 Session 记录授权；子 Session 继承该授权。没有已记录策略时，发现和显式选择只允许当前父级路由。每次委派都会立即返回子代理 id；本地子代理接受后续消息，外部后端自动汇报单次执行结果。
 
-<a id="deepseek-aidsh-tool-subagent-control"></a>
+<a id="berry-aiharness-tool-subagent-control"></a>
 
 ## `@berry-ai/harness-tool-subagent-control`
 
@@ -2181,7 +2181,7 @@ subagent_oar 工具在为外部提供方配置的别名之间选择。本目录�
 
 共享控制工具发现并联系 subagent 树中的 Agent，中断有权控制的后代，并等待调用者收件箱中的输入。绑定提供方的 `tool-subagent` 实例提供委派工具。
 
-<a id="deepseek-aidsh-tool-jobs"></a>
+<a id="berry-aiharness-tool-jobs"></a>
 
 ## `@berry-ai/harness-tool-jobs`
 
@@ -2254,7 +2254,7 @@ subagent_oar 工具在为外部提供方配置的别名之间选择。本目录�
 
 与任务种类无关的后台任务控制器：后台 bash 命令与 PTY 发送 都通过相同的 3 个工具读取、列出和终止。加载该插件会挂接控制器，从而启用生产方的 `ctx.jobs.start()`。
 
-<a id="deepseek-aidsh-tool-agent-team"></a>
+<a id="berry-aiharness-tool-agent-team"></a>
 
 ## `@berry-ai/harness-tool-agent-team`
 
@@ -2427,7 +2427,7 @@ subagent_oar 工具在为外部提供方配置的别名之间选择。本目录�
 
 四个任务板工具共享 subagent 树的根 Session。在根 Session 开启 Team 模式，会在标准子代理委派和控制工具之外增加任务板指导。标准子代理控制工具提供必需身份，不受 Team 模式影响。
 
-<a id="deepseek-aidsh-tool-todo"></a>
+<a id="berry-aiharness-tool-todo"></a>
 
 ## `@berry-ai/harness-tool-todo`
 
@@ -2477,7 +2477,7 @@ subagent_oar 工具在为外部提供方配置的别名之间选择。本目录�
 
 todo_write 是会话所有的状态；UI 将最新的 todo/write 事件渲染为检查清单。`allowParallelInProgress` 是没有默认值的必填项，因此本目录明确选择 `true`，对应描述允许同时存在多个 `in_progress` 项。选择 `false` 的部署会获得同一工具，但描述会要求只能有 1 个活动任务。
 
-<a id="deepseek-aidsh-tool-working-directory"></a>
+<a id="berry-aiharness-tool-working-directory"></a>
 
 ## `@berry-ai/harness-tool-working-directory`
 
@@ -2501,7 +2501,7 @@ todo_write 是会话所有的状态；UI 将最新的 todo/write 事件渲染为
 
 读取或改变调用方 Session 的目录。已有 shell 和进程保留自己的目录；原始元数据和权限根目录保持不变。
 
-<a id="deepseek-aidsh-experimental-tool-worktree"></a>
+<a id="berry-aiharness-experimental-tool-worktree"></a>
 
 ## `@berry-ai/harness-experimental-tool-worktree`
 
@@ -2529,7 +2529,7 @@ todo_write 是会话所有的状态；UI 将最新的 todo/write 事件渲染为
 
 在 Web 和 Desktop 上通过变更请求与工作树组合包启用；其他 profile 可以选择独立组合包。在现有写权限下从固定的本地提交创建新分支与检出目录，再改变 Session 工作目录。离开时保留分支与检出目录。
 
-<a id="deepseek-aidsh-tool-workflow"></a>
+<a id="berry-aiharness-tool-workflow"></a>
 
 ## `@berry-ai/harness-tool-workflow`
 
@@ -2625,7 +2625,7 @@ todo_write 是会话所有的状态；UI 将最新的 todo/write 事件渲染为
 
 来源：[`packages/workflow/tool-workflow/src/index.ts`](../packages/workflow/tool-workflow/src/index.ts)
 
-<a id="deepseek-aidsh-tool-workspace-dependencies"></a>
+<a id="berry-aiharness-tool-workspace-dependencies"></a>
 
 ## `@berry-ai/harness-tool-workspace-dependencies`
 
@@ -2642,7 +2642,7 @@ todo_write 是会话所有的状态；UI 将最新的 todo/write 事件渲染为
 
 来源：[`packages/skill/tool-workspace-dependencies/src/index.ts`](../packages/skill/tool-workspace-dependencies/src/index.ts)
 
-<a id="deepseek-aidsh-tool-web"></a>
+<a id="berry-aiharness-tool-web"></a>
 
 ## `@berry-ai/harness-tool-web`
 
