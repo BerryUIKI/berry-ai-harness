@@ -65,7 +65,7 @@
     "@berry-ai/harness-client-ui-renderer": "workspace:*",
     "@berry-ai/harness-client-ui-session": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@berry-ai/harness-client-ui-conversation": "workspace:*",
     "@berry-ai/harness-client-connection": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",

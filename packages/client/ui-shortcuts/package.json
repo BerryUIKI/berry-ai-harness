@@ -57,7 +57,7 @@
     "@berry-ai/harness-client-ui-settings": "workspace:*",
     "@berry-ai/harness-brand": "workspace:*",
     "clsx": "^2.1.1",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@berry-ai/harness-client-test-runtime": "workspace:*"
   },
   "files": [

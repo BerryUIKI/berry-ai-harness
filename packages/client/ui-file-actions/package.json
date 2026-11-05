@@ -49,7 +49,7 @@
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@berry-ai/harness-client-ui-primitives": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@berry-ai/harness-client-ui-slots": "workspace:*",

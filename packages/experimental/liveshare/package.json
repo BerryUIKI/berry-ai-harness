@@ -142,7 +142,7 @@
     "@berry-ai/harness-typert-registry": "workspace:*",
     "@berry-ai/harness-workspace": "workspace:*",
     "@types/ws": "^8.18.1",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "react-dom": "^18.2.0"
   },
   "dsh": {

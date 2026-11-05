@@ -60,7 +60,7 @@
     "@berry-ai/harness-llm": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@berry-ai/harness-client-shortcuts": "workspace:*"
   },
   "files": [

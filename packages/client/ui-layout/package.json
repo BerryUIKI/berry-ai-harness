@@ -55,7 +55,7 @@
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-client-ui-theme": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@berry-ai/harness-client-shortcuts": "workspace:*"
   },
   "files": [
