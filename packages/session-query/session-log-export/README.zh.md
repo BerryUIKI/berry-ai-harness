@@ -46,8 +46,8 @@ kind: "package-reference"
 包入口还导出 `formatSessionMarkdown(events, sourcePath?)`：面向已经持有完整已提交逻辑事件快照（按 seq 排序，包含任何继承前缀）的调用方的纯后端工具。它读取最新的 `session/title` 事件，返回以恰好一个换行结尾的 Markdown，不执行 IO、不启动插件或 Session，也不修改事件。可选的、由后端解析的 `sourcePath` 会原样写入标题后的动态围栏 `Session file:` 文本块；省略或空路径不添加该块。缺失或空白标题生成 `Untitled Session`。它只转换传入的事件；不读取子会话日志。
 
 ```ts
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import { formatSessionMarkdown } from '@deepseek-ai/dsh-session-log-export'
+import type { SessionEvent } from '@berry-ai/harness-session'
+import { formatSessionMarkdown } from '@berry-ai/harness-session-log-export'
 
 export function convertTranscript(events: readonly SessionEvent[], sourcePath?: string): string {
   return formatSessionMarkdown(events, sourcePath)

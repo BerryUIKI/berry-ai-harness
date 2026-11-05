@@ -9,13 +9,13 @@ Status: implemented
 对于"DeepSeek Harness 用户数据存放在哪里"，harness 里存在两套互不一致的约定：
 
 - `@deepseek-ai/dsh-home` 按 `configured ?? $DSH_HOME ?? ~/.dsh` 解析。
-- `@deepseek-ai/dsh-home-paths` 又提供了**第二个** `resolveDshHome`，优先级相同但额外做了波浪号展开——它几乎是 `dsh-home` 的重复实现，却没有任何门禁发现，因为两者分属不同的包，而且早已漂移（只有一个会展开波浪号）。
+- `@berry-ai/harness-home-paths` 又提供了**第二个** `resolveDshHome`，优先级相同但额外做了波浪号展开——它几乎是 `dsh-home` 的重复实现，却没有任何门禁发现，因为两者分属不同的包，而且早已漂移（只有一个会展开波浪号）。
 
 同一条横切事实有两个解析器，意味着不存在单一的 home 策略。
 
 ## 决策
 
-由一个解析器统一掌管 harness home，落在 `@deepseek-ai/dsh-home-paths`，采用单一根目录：
+由一个解析器统一掌管 harness home，落在 `@berry-ai/harness-home-paths`，采用单一根目录：
 
 ```
 explicit configured path  >  $DSH_HOME  >  ~/.dsh

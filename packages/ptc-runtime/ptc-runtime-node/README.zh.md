@@ -59,7 +59,7 @@ kind: "package-reference"
 
 [配置目录](../../../docs/config-catalog.zh.md#berry-aiharness-ptc-runtime-node)定义可接受的配置字段。`resolve(request)` 将 cwd 默认设为沙箱策略的工作区根目录，并补全数值或 null 截止选择与执行策略；`run(spec)` 接受这些已解析输入，不补缺省值。
 
-profile 编辑器可从 `@deepseek-ai/dsh-ptc-runtime-node/configuration` 导入 `resolvePersistentExecution`，根据当前有效程序格式选择持久执行设置。返回的两个设置必须原子合入：Script 保留原语法，函数体切换为 REPL。
+profile 编辑器可从 `@berry-ai/harness-ptc-runtime-node/configuration` 导入 `resolvePersistentExecution`，根据当前有效程序格式选择持久执行设置。返回的两个设置必须原子合入：Script 保留原语法，函数体切换为 REPL。
 
 ### 执行与结果
 
@@ -81,7 +81,7 @@ profile 编辑器可从 `@deepseek-ai/dsh-ptc-runtime-node/configuration` 导入
 <a id="persistent-repl"></a>
 ### 内存保留模式
 
-`persistent-in-memory` 模式和启用 `scriptPersistence: true` 的 Script 模式都按所有者保留状态。要选择 REPL 求值器，在现有 `@deepseek-ai/dsh-ptc-runtime-node` 插件上设置 `executionMode: persistent-in-memory`。所有模式都需要 `fs`、`subprocess`、`sandbox` 和 `sandboxPolicy`，并应用所选文件沙箱策略。通过配置档补丁显式启用：
+`persistent-in-memory` 模式和启用 `scriptPersistence: true` 的 Script 模式都按所有者保留状态。要选择 REPL 求值器，在现有 `@berry-ai/harness-ptc-runtime-node` 插件上设置 `executionMode: persistent-in-memory`。所有模式都需要 `fs`、`subprocess`、`sandbox` 和 `sandboxPolicy`，并应用所选文件沙箱策略。通过配置档补丁显式启用：
 
 ```yaml
 - id: ptc-runtime

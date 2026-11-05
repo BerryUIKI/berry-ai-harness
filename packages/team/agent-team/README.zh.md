@@ -3,7 +3,7 @@ description: "在开启 Team 的 Session 中通过持久化共享任务板协调
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-agent-team
+# @berry-ai/harness-agent-team
 
 [English](README.md) | 中文
 
@@ -31,7 +31,7 @@ kind: "package-reference"
 
 模式切换无需等待排队中的任务修改即可生效。每项修改在开始时检查当前模式：已经进入执行的操作继续完成，仍在排队的操作若开始时 Team 仍关闭则被拒绝。重新开启允许后续操作继续。保存失败时，已经追加的选择仍然有效；重试同一选择会再次保存，不重复记录模式。
 
-当 subagent 需要持久化共享任务归属和依赖关系时，添加此包。与 `@deepseek-ai/dsh-tool-agent-team` 一起挂载可提供模型工具。
+当 subagent 需要持久化共享任务归属和依赖关系时，添加此包。与 `@berry-ai/harness-tool-agent-team` 一起挂载可提供模型工具。
 
 ### 何时选择
 
@@ -41,12 +41,12 @@ kind: "package-reference"
 
 <a id="smallest-working-setup"></a>
 
-在已经提供 continuable subagent、其消息工具和持久会话存储的组合（例如基于 `@deepseek-ai/dsh-base` 的 profile）中挂载两个 Team 包：
+在已经提供 continuable subagent、其消息工具和持久会话存储的组合（例如基于 `@berry-ai/harness-base` 的 profile）中挂载两个 Team 包：
 
 ```yaml
 # smallest Team addition over a composition with continuable subagents
-- name: '@deepseek-ai/dsh-agent-team'
-- name: '@deepseek-ai/dsh-tool-agent-team'
+- name: '@berry-ai/harness-agent-team'
+- name: '@berry-ai/harness-tool-agent-team'
 ```
 
 例如，让模型启动子代理审查差异，并在任务板上跟踪工作。配置字段均为可选项，在启动时校验：

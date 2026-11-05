@@ -57,8 +57,8 @@ kind: "package-reference"
 Search 与 Fetch 每次操作各自从同一份设置快照解析端点和凭据，因此保存的设置、模型提供方变更、登录或存入的密钥从下一次操作开始生效。会话的路由是发起会话最近一次请求上下文的 `provider`；`ready()` 使用正在准备的模型请求的路由。
 
 - **单独配置。** 设置了非空 `*BaseURL` 或 `*ApiKeyEnv` 的能力在任何路由上都只以 `Authorization: Bearer` 把其 `*ApiKeyEnv`（未设置时为 `DEEPSEEK_API_KEY`）下的密钥发往其 `*BaseURL`（未设置时为 `https://api.deepseek.com/v1/tools`），从不发送账号令牌。没有该密钥时，操作失败，诊断信息点名该引用和 `*ApiKeyEnv` 字段。
-- **账号会话。** 在 `deepseek-account` 路由上，若模型提供方目录为 `deepseek-account` 列出了入口根部活动且有效的 `@deepseek-ai/dsh-llm-deepseek-account` Loader 条目，操作只发送 `ctx.deepseekAccount` 为该路由 origin 下的请求端点给出的令牌，通过 `x-dsh-auth-token` 发送；2026-10-16 公网 Search 与 Fetch 路由已接受该令牌。没有登录、账号服务或非空令牌，或没有该条目时，改为把下文的 API 密钥发往 API 密钥端点。账号令牌读取失败时操作失败，不再尝试密钥。条目活动但其设置被该路由自身的解析器拒绝时，操作在读取任何凭据前失败。
-- **其他会话**，包括 `deepseek-official` 上的会话、其他提供方上的会话以及会话之外的操作，以 `Authorization: Bearer` 把目录为 `deepseek-official` 列出的活动 `@deepseek-ai/dsh-llm-deepseek-api-key` 条目的 `apiKeyEnv`（默认 `DEEPSEEK_API_KEY`）下的密钥发往该路由的 origin，并按该路由的方式解析其选项。没有该条目或条目未激活时，把 `DEEPSEEK_API_KEY` 发往 `https://api.deepseek.com/v1/tools`。条目活动但其设置被该路由自身的解析器拒绝时，每个需要发送该密钥的操作都在读取密钥前失败，绝不改用官方端点或 `DEEPSEEK_API_KEY`。没有密钥时，操作失败，诊断信息点名模型页面、该引用和账号登录。
+- **账号会话。** 在 `deepseek-account` 路由上，若模型提供方目录为 `deepseek-account` 列出了入口根部活动且有效的 `@berry-ai/harness-llm-deepseek-account` Loader 条目，操作只发送 `ctx.deepseekAccount` 为该路由 origin 下的请求端点给出的令牌，通过 `x-dsh-auth-token` 发送；2026-10-16 公网 Search 与 Fetch 路由已接受该令牌。没有登录、账号服务或非空令牌，或没有该条目时，改为把下文的 API 密钥发往 API 密钥端点。账号令牌读取失败时操作失败，不再尝试密钥。条目活动但其设置被该路由自身的解析器拒绝时，操作在读取任何凭据前失败。
+- **其他会话**，包括 `deepseek-official` 上的会话、其他提供方上的会话以及会话之外的操作，以 `Authorization: Bearer` 把目录为 `deepseek-official` 列出的活动 `@berry-ai/harness-llm-deepseek-api-key` 条目的 `apiKeyEnv`（默认 `DEEPSEEK_API_KEY`）下的密钥发往该路由的 origin，并按该路由的方式解析其选项。没有该条目或条目未激活时，把 `DEEPSEEK_API_KEY` 发往 `https://api.deepseek.com/v1/tools`。条目活动但其设置被该路由自身的解析器拒绝时，每个需要发送该密钥的操作都在读取密钥前失败，绝不改用官方端点或 `DEEPSEEK_API_KEY`。没有密钥时，操作失败，诊断信息点名模型页面、该引用和账号登录。
 
 引用使用[共享 DeepSeek 凭据函数](../../llm/llm-deepseek/README.zh.md#account-credentials)：`ctx.credentials` 具有权威性，仅在该服务缺席时读取启动环境。路由密钥与单独配置的密钥均接受与模型请求相同的首尾空白规范化和格式校验；格式错误在发送请求前失败。
 
@@ -126,7 +126,7 @@ Search API 接收 `query`、`count`（配置的结果数，或请求中更小的
 - 查询和 URL 约束由远端服务执行。2026-10-16 抓取无法解析的目标域名时返回 HTTP 500，而非文档所述的 404，其失败信息与端点失败附带相同的端点指引。Fetch 既不暴露目标状态，也不暴露最终重定向 URL，因此结果报告 HTTP 200 和请求 URL；提供者丢弃 API 返回的页面标题。
 - `available()` 无法查询异步凭据存储；`ready()` 可以，因此凭据存储缺少密钥时，模型步骤会撤下这两个工具。直接调用 `ctx.web.search()` 或 `ctx.web.fetch()` 仍可能因凭据缺失失败。
 - Search 限速只约束单个插件实例内的发送时间。同一账号下的其他进程和客户端共享账号级 5 QPS 限制，彼此不协调，网络抖动也可能使请求集中到达；HTTP 429 会使该次搜索失败，随后 `dsh-tool-web` 会使整个多查询调用失败。Fetch 不限速，因此并行的 `web_fetch` 调用可能超过 Fetch 限制。
-- 路由端点与密钥只认入口根部的 `@deepseek-ai/dsh-llm-deepseek-api-key` 与 `@deepseek-ai/dsh-llm-deepseek-account` Loader 条目；以相同提供方 id 注册的其他包（例如测试回放适配器）视为没有路由，其会话使用 `DEEPSEEK_API_KEY` 与官方基础地址。
+- 路由端点与密钥只认入口根部的 `@berry-ai/harness-llm-deepseek-api-key` 与 `@berry-ai/harness-llm-deepseek-account` Loader 条目；以相同提供方 id 注册的其他包（例如测试回放适配器）视为没有路由，其会话使用 `DEEPSEEK_API_KEY` 与官方基础地址。
 
 <a id="dev-note"></a>
 ### 开发备注

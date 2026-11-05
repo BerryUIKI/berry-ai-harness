@@ -3,7 +3,7 @@ description: "为开启 Team 的 Session提供四个任务板工具和共享任�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-agent-team
+# @berry-ai/harness-tool-agent-team
 
 [English](README.md) | 中文
 
@@ -27,11 +27,11 @@ kind: "package-reference"
 
 仅当根 Session 开启 Team 模式时，各模型步骤才可使用 Team 工具。提示词提供方在求值时读取同一选择。普通 subagent 控制工具始终可用。
 
-模型需要共享任务板时，将此包与 `@deepseek-ai/dsh-agent-team` 一起挂载。根和后代接收相同的任务 schema 和任务策略。
+模型需要共享任务板时，将此包与 `@berry-ai/harness-agent-team` 一起挂载。根和后代接收相同的任务 schema 和任务策略。
 
 ### 何时选择
 
-只要挂载了 Team 领域包且模型需要使用任务板，就选择本包；没有它时，只能通过 `ctx.agentTeams` 访问任务板。teammate 通过标准 `subagent`、`subagent_fork`、`send_message`、`list_agents` 与 `interrupt_agent` 工具创建和联系，因此组合还需要 `@deepseek-ai/dsh-tool-subagent` 与 `@deepseek-ai/dsh-tool-subagent-control`。
+只要挂载了 Team 领域包且模型需要使用任务板，就选择本包；没有它时，只能通过 `ctx.agentTeams` 访问任务板。teammate 通过标准 `subagent`、`subagent_fork`、`send_message`、`list_agents` 与 `interrupt_agent` 工具创建和联系，因此组合还需要 `@berry-ai/harness-tool-subagent` 与 `@berry-ai/harness-tool-subagent-control`。
 
 ### 最小工作示例
 
@@ -39,7 +39,7 @@ kind: "package-reference"
 
 ```yaml
 - id: tool-agent-team
-  name: '@deepseek-ai/dsh-tool-agent-team'
+  name: '@berry-ai/harness-tool-agent-team'
 ```
 
 设置 `interrupt`、`freshProvider` 或 `forkProvider` 的配置行不会激活，dsh 会在启动警告中指出该键。[升级指南](../../../docs/upgrade-guide/v0.2.1-rc.2/agent-team-subagents/guide.zh.md)把已移除的工具与键对应到替代方式，生成的[配置目录](../../../docs/config-catalog.zh.md#berry-aiharness-tool-agent-team)记录空配置。
@@ -51,7 +51,7 @@ kind: "package-reference"
 任务工具补充普通 subagent 控制工具：
 
 - **管理任务板**——`team_task_create`、`team_task_list`、`team_task_get` 与 `team_task_update` 添加、浏览、读取与更新共享任务。
-- **等待收件箱输入** — `wait_agent` 属于 `@deepseek-ai/dsh-tool-subagent-control`，无需此包即可使用。
+- **等待收件箱输入** — `wait_agent` 属于 `@berry-ai/harness-tool-subagent-control`，无需此包即可使用。
 - **创建和联系队友**——`subagent`、`subagent_fork`、`send_message`、`list_agents` 和 `interrupt_agent` 来自子代理工具包，本包不修改它们。
 
 任务 `owner` 参数和 `ownerId` 结果使用 Session id。根可将任务重新分配给自身或任意可达的可继续执行后代；历史名册记录不授予权限。其他 agent 自行认领就绪任务。更新会检查归属和修订。

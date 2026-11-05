@@ -49,7 +49,7 @@ Web **设置 → 通用 → 在使用官方模型 API 时上传 Session Log** �
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-session-log-deepseek'
+import type {} from '@berry-ai/harness-session-log-deepseek'
 
 export function apply(ctx: Context): void {
   ctx.inject(['sessionLogDeepSeek'], (child) => {

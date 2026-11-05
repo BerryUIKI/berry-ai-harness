@@ -55,7 +55,7 @@ The Host's bundle `enabled` flag states whether the profile selected the bundle,
 
 The package declares the hiding intent in its own bundle manifest as `dsh.bundle.listedByDefault: false`; the manager keeps one generic visibility rule rather than a client-side name set. A bundle whose manifest does not declare `listedByDefault: false` is listed; one that declares it is listed only when the profile enables it, the installation carries it selected, or one of the rows its bundle patch declares is running (`pkg.rows.some(row => row.enabled)`). The filter applies before both lists are derived, so the name is absent from the main Experimental plugins group, the More page, Built-in plugin settings, and the Installed plugins group until one of those holds. The Host's `listBundles` contract, the profile format, and the installed package set are unchanged. `BundleInfo.rows` already joins each declared row with the Loader entry currently carrying it, and the client's `PackageView` carries whether that entry runs, so row state is the effective answer for both enable routes: removing the rows, disabling them, or deselecting the bundle stops them and the card leaves both lists again.
 
-A default-hidden bundle is not addressable by ID while its card is hidden: `openPkg` resolves only the listed inventory, so `pluginNavigation.openBundle('@deepseek-ai/dsh-experimental-liveshare')` renders no details until the same enablement conditions list it.
+A default-hidden bundle is not addressable by ID while its card is hidden: `openPkg` resolves only the listed inventory, so `pluginNavigation.openBundle('@berry-ai/harness-experimental-liveshare')` renders no details until the same enablement conditions list it.
 
 ### How shared work stays inside its grant
 

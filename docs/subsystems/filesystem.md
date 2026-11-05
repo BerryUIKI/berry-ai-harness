@@ -367,7 +367,7 @@ Filesystem failures use stable `FsErrorCode` strings carried by `FsError` (`Harn
 `FS_PATCH_MISMATCH` means a hunk failed inside the provider commit; its message names the patch line and failed search stage. `FS_SAME_TARGET` means a move source and destination share the resolved identity. Delete intent follows edit intent: unseen is `FS_NOT_OBSERVED`, observed absence is `FS_NOT_FOUND`, and present state supplies a version. Provider-side missing patch/delete/move sources use `FS_STALE_VERSION` even without a guard.
 
 ```ts
-import { FS_ERROR_CODES } from '@deepseek-ai/dsh-fs'
+import { FS_ERROR_CODES } from '@berry-ai/harness-fs'
 ```
 
 ```ts type-equiv
