@@ -367,7 +367,7 @@ interface FileReadOutcome {
 `FS_PATCH_MISMATCH` 表示 hunk 在提供方提交阶段未匹配；消息标明补丁行号与失败的搜索阶段。`FS_SAME_TARGET` 表示移动源与目标共享已解析身份。删除意图遵循编辑意图：未见为 `FS_NOT_OBSERVED`，观察到缺失为 `FS_NOT_FOUND`，存在状态提供版本。提供方收到缺失的补丁/删除/移动源时，即使没有防护也使用 `FS_STALE_VERSION`。
 
 ```ts
-import { FS_ERROR_CODES } from '@deepseek-ai/dsh-fs'
+import { FS_ERROR_CODES } from '@berry-ai/harness-fs'
 ```
 
 ```ts type-equiv

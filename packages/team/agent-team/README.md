@@ -3,7 +3,7 @@ description: "Coordinate subagents through a durable shared task board in Team-e
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-agent-team
+# @berry-ai/harness-agent-team
 
 English | [中文](README.zh.md)
 
@@ -31,7 +31,7 @@ Set `defaultEnabled: true` to enable new root Sessions, including ordinary forks
 
 Mode changes take effect without waiting for queued task mutations. Each mutation checks the current mode when it starts: an admitted operation finishes, while queued work is rejected if Team is still off when it starts. Enabling again permits subsequent operations. A failed save leaves an appended selection active; retrying the same selection saves without another mode record.
 
-Add this package when subagents need durable shared task ownership and dependencies. Mount it with `@deepseek-ai/dsh-tool-agent-team` for model tools.
+Add this package when subagents need durable shared task ownership and dependencies. Mount it with `@berry-ai/harness-tool-agent-team` for model tools.
 
 ### When to choose it
 
@@ -41,12 +41,12 @@ Choose it when delegated agents must divide and track shared work. Plain subagen
 
 <a id="smallest-working-setup"></a>
 
-Mount both Team packages in a composition that already provides continuable subagents, their messaging tools, and durable session storage, such as a profile built on `@deepseek-ai/dsh-base`:
+Mount both Team packages in a composition that already provides continuable subagents, their messaging tools, and durable session storage, such as a profile built on `@berry-ai/harness-base`:
 
 ```yaml
 # smallest Team addition over a composition with continuable subagents
-- name: '@deepseek-ai/dsh-agent-team'
-- name: '@deepseek-ai/dsh-tool-agent-team'
+- name: '@berry-ai/harness-agent-team'
+- name: '@berry-ai/harness-tool-agent-team'
 ```
 
 For example, ask the model to start a subagent to review the diff and track its work on the task board. Configuration fields are optional and validated at startup:

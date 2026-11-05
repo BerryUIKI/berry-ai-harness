@@ -49,7 +49,7 @@ pnpm dsh plugin --profile web remove @berry-ai/harness-experimental-auto-review
 为 headless profile 显式启用实验层：
 
 ```sh
-dsh plugin --profile headless add @deepseek-ai/dsh-experimental-auto-review
+dsh plugin --profile headless add @berry-ai/harness-experimental-auto-review
 dsh headless --permission-mode auto --approval-policy never --json - < task.txt > run.jsonl
 ```
 

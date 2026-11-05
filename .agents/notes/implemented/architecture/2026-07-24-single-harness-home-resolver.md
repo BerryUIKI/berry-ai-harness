@@ -9,13 +9,13 @@ English | [中文](2026-07-24-single-harness-home-resolver.zh.md)
 The harness had two inconsistent conventions for "where does DeepSeek Harness user data live":
 
 - `@deepseek-ai/dsh-home` resolved `configured ?? $DSH_HOME ?? ~/.dsh`.
-- `@deepseek-ai/dsh-home-paths` shipped a **second** `resolveDshHome` with the same precedence plus tilde expansion — a near-duplicate of `dsh-home` that no gate flagged because the two lived in different packages and had already drifted (only one expanded tildes).
+- `@berry-ai/harness-home-paths` shipped a **second** `resolveDshHome` with the same precedence plus tilde expansion — a near-duplicate of `dsh-home` that no gate flagged because the two lived in different packages and had already drifted (only one expanded tildes).
 
 Two resolvers for the same cross-cutting fact meant there was no single home policy.
 
 ## Decision
 
-One resolver owns the harness home, in `@deepseek-ai/dsh-home-paths`, single-root:
+One resolver owns the harness home, in `@berry-ai/harness-home-paths`, single-root:
 
 ```
 explicit configured path  >  $DSH_HOME  >  ~/.dsh

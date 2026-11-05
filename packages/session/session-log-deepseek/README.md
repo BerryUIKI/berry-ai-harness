@@ -49,7 +49,7 @@ Plugins can register synchronous, side-effect-free predicates with `ctx.sessionL
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-session-log-deepseek'
+import type {} from '@berry-ai/harness-session-log-deepseek'
 
 export function apply(ctx: Context): void {
   ctx.inject(['sessionLogDeepSeek'], (child) => {

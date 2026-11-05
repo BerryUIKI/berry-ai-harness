@@ -41,7 +41,7 @@ A code has exactly one declaration site, and the site follows from both who prod
 - **Produced by several packages**: when two or more packages throw the same code, the declaration lands in the lowest layer both already depend on. `session/not-found` lands in `@berry-ai/harness-session` (session-controller and workspace-controller both depend on it), and `workspace/not-found` lands in `@berry-ai/harness-workspace` (no dependency edge exists between the two API packages, so the capability package is their only shared layer).
 - **Single producer**: a code only one package throws lands in that producer. `subagent/not-found` and `agent-preset/conflict` therefore live in session-controller — it is their only thrower in the repository, and neither the subagent nor the agent-presets table declares them.
 
-What two domains share is validation logic, not a code. `session/invalid-time-zone` and `subagent/invalid-time-zone` are two codes each declared and thrown by its own domain, and both endpoints canonicalize through `canonicalClientTimeZone()` from `@deepseek-ai/dsh-util-time`; no client branches on this code, so splitting it costs nothing while merging it would recreate the reachability problem.
+What two domains share is validation logic, not a code. `session/invalid-time-zone` and `subagent/invalid-time-zone` are two codes each declared and thrown by its own domain, and both endpoints canonicalize through `canonicalClientTimeZone()` from `@berry-ai/harness-util-time`; no client branches on this code, so splitting it costs nothing while merging it would recreate the reachability problem.
 
 ## Discrimination by code
 

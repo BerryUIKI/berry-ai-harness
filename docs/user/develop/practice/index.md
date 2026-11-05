@@ -92,7 +92,7 @@ export interface MyCapResult {
 ```ts ignore-check
 // packages/my-cap/my-cap-local/src/index.ts
 import type { Context } from '@deepseek-ai/cordis'
-import { MyCapService, type MyCapRequest, type MyCapResult } from '@deepseek-ai/dsh-my-cap'
+import { MyCapService, type MyCapRequest, type MyCapResult } from '@berry-ai/harness-my-cap'
 
 class MyCapLocal extends MyCapService {
   async execute(request: MyCapRequest): Promise<MyCapResult> {
@@ -140,8 +140,8 @@ export function apply(ctx: Context) {
 ### Compose them in cordis.yml
 
 ```yaml
-- name: '@deepseek-ai/dsh-my-cap-local'
-- name: '@deepseek-ai/dsh-tool-my-cap'
+- name: '@berry-ai/harness-my-cap-local'
+- name: '@berry-ai/harness-tool-my-cap'
 ```
 
 ## Design points

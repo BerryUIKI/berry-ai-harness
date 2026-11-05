@@ -56,7 +56,7 @@ import { isSurfaceEligibleType } from '../../core/session/src/surface.ts'
 
 ```json
 {
-  "name": "@deepseek-ai/dsh-example",
+  "name": "@berry-ai/harness-example",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
@@ -69,7 +69,7 @@ import { isSurfaceEligibleType } from '../../core/session/src/surface.ts'
 手写的 `external` 清单——以及在它旁边为单个包新造的 `tsconfig.foo.json`——让扫描无从推导，构建产物与清单随之不再一致。
 
 ```json
-{ "name": "@deepseek-ai/dsh-example", "external": ["@deepseek-ai/*"] }
+{ "name": "@berry-ai/harness-example", "external": ["@deepseek-ai/*"] }
 ```
 
 ## `package.json` `exports` 使用标准键集合
@@ -130,10 +130,10 @@ python3 -c "import json,glob,collections; c=collections.Counter(); [c.update(jso
 pnpm run verify-package-dependencies
 
 # 2. The diagnostic names the manifest, the section, the dependency, and the expected range
-#    packages/example/package.json: dependencies.@deepseek-ai/dsh-base must use workspace:*, found workspace:~
+#    packages/example/package.json: dependencies.@berry-ai/harness-base must use workspace:*, found workspace:~
 
 # 3. The fix goes into the manifest, never into the policy file or the scan
-#    "dependencies": { "@deepseek-ai/dsh-base": "workspace:*" }
+#    "dependencies": { "@berry-ai/harness-base": "workspace:*" }
 
 # 4. Re-run the scan until every package matches the published policy
 pnpm run verify-package-dependencies
@@ -148,9 +148,9 @@ Restating a required-devDependency package list or the field rules on this page 
 
 ## 内部依赖写法按包族保证
 
-内部依赖写法按包族决定：`@deepseek-ai/dsh` 与 `@deepseek-ai/dsh-*` 用 `workspace:*`，其余内部包用 `workspace:~`，`workspace:^` 已退出。同一个依赖名在所有 workspace 内写法一致，不一致是扫描硬失败，不是评审可以放行的警告。写法统一才能保持一条解析路径，避免同一个依赖出现重复实例以及随之而来的解析差异。
+内部依赖写法按包族决定：`@berry-ai/harness` 与 `@berry-ai/harness-*` 用 `workspace:*`，其余内部包用 `workspace:~`，`workspace:^` 已退出。同一个依赖名在所有 workspace 内写法一致，不一致是扫描硬失败，不是评审可以放行的警告。写法统一才能保持一条解析路径，避免同一个依赖出现重复实例以及随之而来的解析差异。
 
-- 判定在 [verify-package-dependencies.ts](../../scripts/verify-package-dependencies.ts) 的 `workspaceRange()`：`@deepseek-ai/dsh` 与 `@deepseek-ai/dsh-*` 包族取 `workspace:*`，其余内部包取 `workspace:~`；扫描遍历受管清单，比对同一依赖名的每一处声明。
+- 判定在 [verify-package-dependencies.ts](../../scripts/verify-package-dependencies.ts) 的 `workspaceRange()`：`@berry-ai/harness` 与 `@berry-ai/harness-*` 包族取 `workspace:*`，其余内部包取 `workspace:~`；扫描遍历受管清单，比对同一依赖名的每一处声明。
 - 边界：同命名空间但不是 workspace 成员的包按普通第三方版本范围声明，不受包族规则约束——`@deepseek-ai/libreoffice-kit` 在 `apps/desktop-host/package.json`（dependencies）、`packages/bundle/web-app/package.json`（devDependencies）、`packages/document/office-to-pdf/package.json`（dependencies）、`packages/skill/skill-office/package.json`（dependencies）中声明为 `^0.1.5`。
 - 分布不在此复述；下面的复算命令会打印 `workspace:*`、`workspace:~`、`workspace:^` 的当前数量，以及族规则之外的精确版本声明。
 - 例外：门禁机械判定；确需例外意味着修改扫描与策略文件，并须经对应领域专家确认、在改动上说明理由。
@@ -165,12 +165,12 @@ python3 -c "import json,glob,collections; c=collections.Counter(); [c.update([r]
 ```json
 {
   "dependencies": {
-    "@deepseek-ai/dsh-base": "workspace:*",
+    "@berry-ai/harness-base": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/libreoffice-kit": "^0.1.5"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-typert-registry": "workspace:*"
+    "@berry-ai/harness-typert-registry": "workspace:*"
   }
 }
 ```
@@ -180,7 +180,7 @@ python3 -c "import json,glob,collections; c=collections.Counter(); [c.update([r]
 ```json
 {
   "dependencies": {
-    "@deepseek-ai/dsh-base": "workspace:~",
+    "@berry-ai/harness-base": "workspace:~",
     "@deepseek-ai/cordis": "^4.0.0"
   }
 }
@@ -214,7 +214,7 @@ not a confirmation.
 ```ts ignore-check
 // Added so one specifier resolves to the local source copy
 export async function resolve(specifier: string, parentURL: string, importAttributes: object) {
-  if (specifier === '@deepseek-ai/dsh-example') return { url: localSourceUrl, shortCircuit: true }
+  if (specifier === '@berry-ai/harness-example') return { url: localSourceUrl, shortCircuit: true }
   return defaultResolve(specifier, parentURL, importAttributes)
 }
 

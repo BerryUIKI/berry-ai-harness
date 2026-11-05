@@ -7,7 +7,7 @@ kind: "package-reference"
 
 [English](README.md) | 中文
 
-> **已弃用：** 新配置请直接挂载 `@deepseek-ai/dsh-tool-executor-native` 或 `@deepseek-ai/dsh-tool-executor-ptc`。现有配置仍受支持。迁移时，将本选择器条目替换为对应的 executor 条目，并移除 `config.mode`；不要在同一作用域同时加载两者。
+> **已弃用：** 新配置请直接挂载 `@berry-ai/harness-tool-executor-native` 或 `@berry-ai/harness-tool-executor-ptc`。现有配置仍受支持。迁移时，将本选择器条目替换为对应的 executor 条目，并移除 `config.mode`；不要在同一作用域同时加载两者。
 
 ## 概述
 
