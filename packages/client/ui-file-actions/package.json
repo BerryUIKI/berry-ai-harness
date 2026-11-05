@@ -1,0 +1,73 @@
+{
+  "name": "@berry-ai/harness-client-ui-file-actions",
+  "description": "Original-file saving and image clipboard actions for Web and Desktop",
+  "version": "0.2.2-alpha.3",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/client/ui-file-actions"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./types": {
+      "types": "./lib/types/types.d.ts"
+    }
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@berry-ai/harness-client-locale",
+        "@berry-ai/harness-client-ui-context-menu",
+        "@berry-ai/harness-api-workspace-files",
+        "@berry-ai/harness-api-session-controller"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "@berry-ai/harness-client-ui-primitives": "workspace:*",
+    "@deepseek-ai/cordis": "workspace:~",
+    "@berry-ai/harness-client-ui-slots": "workspace:*",
+    "@berry-ai/harness-api-session-controller": "workspace:*",
+    "@berry-ai/harness-client-test-runtime": "workspace:*",
+    "@berry-ai/harness-util-file-drag": "workspace:*",
+    "@berry-ai/harness-client-locale": "workspace:*",
+    "@berry-ai/harness-client-ui-context-menu": "workspace:*",
+    "@berry-ai/harness-api-workspace-files": "workspace:*",
+    "@berry-ai/harness-session": "workspace:*",
+    "@berry-ai/harness-util-workspace-path": "workspace:*",
+    "mime": "^4.1.0",
+    "@berry-ai/harness-client-ui-renderer": "workspace:*"
+  },
+  "files": [
+    "locale/*.json",
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ]
+}

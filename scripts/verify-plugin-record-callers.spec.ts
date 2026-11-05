@@ -46,7 +46,7 @@ function declaredRepository(source: string, extra: Record<string, string> = {}):
       include: ['packages/**/*.ts'],
     }),
     'packages/core/session/package.json': JSON.stringify({ name: '@berry-ai/harness-session' }),
-    'packages/experimental/bridge/package.json': JSON.stringify({ name: '@deepseek-ai/dsh-experimental-bridge' }),
+    'packages/experimental/bridge/package.json': JSON.stringify({ name: '@berry-ai/harness-experimental-bridge' }),
     'packages/core/session/src/types.ts': 'export interface PluginRecordMap {}\n',
     [OWNER_FILE]: "import type { PluginRecordMap } from './types.ts'\nexport function appendPluginRecord<K extends keyof PluginRecordMap>(session: object, type: K, data: NoInfer<PluginRecordMap[K]>): number { return 0 }\n",
     'packages/experimental/bridge/src/types.ts': [

@@ -258,7 +258,7 @@ class WorkspacePackageSet {
       if (!name.startsWith('@deepseek-ai/') && !name.startsWith('@berry-ai/')) {
         throw new Error(`${manifestPath} must name an @berry-ai or @deepseek-ai package`)
       }
-      if (name === '@deepseek-ai/dsh-root' || name === '@berry-ai/harness-root') {
+      if (name === '@berry-ai/harness-root' || name === '@berry-ai/harness-root') {
         throw new Error(`${manifestPath} unexpectedly selected the workspace root`)
       }
       if (names.has(name)) throw new Error(`duplicate package name: ${name}`)
@@ -449,7 +449,7 @@ class InstalledBundleSmoke {
         `--registry=${this.bundle.manifest.registry}`,
       ], consumerRoot, npmClientEnvironment())
 
-      const bin = resolve(consumerRoot, 'node_modules/@deepseek-ai/dsh/lib/bin.js')
+      const bin = resolve(consumerRoot, 'node_modules/@berry-ai/harness/lib/bin.js')
       assertPathWithin(consumerRoot, bin, 'installed dsh bin')
       const environment = installedArtifactEnvironment(consumerRoot)
       const version = this.runner.capture(
@@ -799,7 +799,7 @@ function parsePackedPackage(value: unknown, index: number): PackedPackage {
   if (origin !== 'harness' && origin !== 'vendor') {
     throw new Error(`invalid package origin in release manifest: ${JSON.stringify(origin)}`)
   }
-  if (origin === 'harness' && ((!name.startsWith('@deepseek-ai/') && !name.startsWith('@berry-ai/')) || name === '@deepseek-ai/dsh-root' || name === '@berry-ai/harness-root')) {
+  if (origin === 'harness' && ((!name.startsWith('@deepseek-ai/') && !name.startsWith('@berry-ai/')) || name === '@berry-ai/harness-root' || name === '@berry-ai/harness-root')) {
     throw new Error(`invalid package name in release manifest: ${name}`)
   }
   return {

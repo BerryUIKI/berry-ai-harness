@@ -1,4 +1,5 @@
 // @vitest-environment jsdom
+import { contextMenuHook } from '@berry-ai/harness-client-test-runtime'
 import type { ShortcutCatalogEntry, ShortcutCommandId } from '@berry-ai/harness-client-shortcuts/client'
 import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
@@ -116,6 +117,7 @@ function mount({
     usePanelInfo, useSessionRetainInfo: () => undefined, useResource,
     useWorkspaces: unusedHook,
     ...allowAllAccess,
+    useContextMenu: contextMenuHook(),
     wide,
     reconnect,
     openDesktopUpdate: () => {},

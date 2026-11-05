@@ -60,6 +60,8 @@
         id: parent
         plugins:
           - name: '@berry-ai/harness-tool-fs'
+            config:
+              applyPatch: true
           - name: '@berry-ai/harness-tool-fs-search'
             config:
               sampleOverCapGlobResults: false

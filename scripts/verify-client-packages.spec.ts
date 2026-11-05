@@ -33,7 +33,7 @@ function declaration(
   fields: Partial<Omit<ClientDeclaration, 'name' | 'manifest'>> = {},
 ): ClientDeclaration {
   return {
-    name: short.startsWith('@') ? short : '@deepseek-ai/dsh-client-' + short,
+    name: short.startsWith('@') ? short : '@berry-ai/harness-client-' + short,
     manifest: 'packages/client/' + short.replace(/^.*\//, '') + '/package.json',
     dynamic: true,
     platform: 'web',
@@ -102,34 +102,34 @@ describe('source package uses', () => {
 
   it('counts type imports, module augmentations, dynamic imports, and JSX', () => {
     const uses = collectSourcePackageUses('feature.tsx', [
-      "import type { A } from '@deepseek-ai/dsh-a/subpath'",
+      "import type { A } from '@berry-ai/harness-a/subpath'",
       "declare module '@berry-ai/harness-client-ui-slots' {}",
-      "const load = () => import('@deepseek-ai/dsh-b/remote')",
+      "const load = () => import('@berry-ai/harness-b/remote')",
       'export const view = <div />',
       "export type { Local } from './local.ts'",
     ].join('\n'))
 
     expect([...uses].sort()).toEqual([
-      '@deepseek-ai/dsh-a',
-      '@deepseek-ai/dsh-b',
+      '@berry-ai/harness-a',
+      '@berry-ai/harness-b',
       '@berry-ai/harness-client-ui-slots',
       'react',
     ])
     expect([...collectRuntimeSourcePackageUses('feature.tsx', [
-      "import type { A } from '@deepseek-ai/dsh-a/subpath'",
+      "import type { A } from '@berry-ai/harness-a/subpath'",
       "declare module '@berry-ai/harness-client-ui-slots' {}",
-      "const load = () => import('@deepseek-ai/dsh-b')",
+      "const load = () => import('@berry-ai/harness-b')",
       'export const view = <div />',
     ].join('\n'))].sort()).toEqual([
-      '@deepseek-ai/dsh-b',
+      '@berry-ai/harness-b',
       'react',
     ])
     expect([...collectRuntimeSourceSpecifiers('feature.tsx', [
-      "import type { A } from '@deepseek-ai/dsh-a/subpath'",
-      "const load = () => import('@deepseek-ai/dsh-b/remote')",
+      "import type { A } from '@berry-ai/harness-a/subpath'",
+      "const load = () => import('@berry-ai/harness-b/remote')",
       'export const view = <div />',
     ].join('\n'))].sort()).toEqual([
-      '@deepseek-ai/dsh-b/remote',
+      '@berry-ai/harness-b/remote',
       'react',
     ])
     expect([...collectLocalSourceSpecifiers('feature.ts', [
@@ -138,7 +138,7 @@ describe('source package uses', () => {
       "const load = () => import('./lazy.ts')",
       "const legacy = require('./legacy.ts')",
       "declare module './augmentation.ts' {}",
-      "import '@deepseek-ai/dsh-a'",
+      "import '@berry-ai/harness-a'",
     ].join('\n'))].sort()).toEqual([
       './lazy.ts',
       './legacy.ts',
@@ -185,7 +185,7 @@ describe('package modes', () => {
       parserPreloadIds: [],
     }))).toEqual([
       'packages/client/web/src/platform.ts: parser-preloaded external '
-      + '"@deepseek-ai/dsh-client-bootstrap/client" has no matching PARSER_PRELOAD_IDS row in '
+      + '"@berry-ai/harness-client-bootstrap/client" has no matching PARSER_PRELOAD_IDS row in '
       + 'packages/client/modules/src/index.ts',
     ])
   })
@@ -194,15 +194,15 @@ describe('package modes', () => {
 describe('module requests', () => {
   it('rejects runtime requests from one client feature package to another dynamic row', () => {
     const ui = declaration('ui', {
-      external: ['@deepseek-ai/dsh-client-slots/client'],
+      external: ['@berry-ai/harness-client-slots/client'],
       runtimeSourceUses: {
-        '@deepseek-ai/dsh-client-slots': ['packages/client/ui/src/client/index.ts'],
+        '@berry-ai/harness-client-slots': ['packages/client/ui/src/client/index.ts'],
       },
     })
     const slots = declaration('slots')
     expect(collectClientPackageViolations(facts([], { declarations: [ui, slots] }))).toEqual([
       ui.manifest + ': client feature package requests runtime external '
-      + '"@deepseek-ai/dsh-client-slots/client"; import shared types only or call an injected Cordis service',
+      + '"@berry-ai/harness-client-slots/client"; import shared types only or call an injected Cordis service',
     ])
   })
 
@@ -210,10 +210,10 @@ describe('module requests', () => {
     const gateway = {
       ...declaration('@berry-ai/harness-api-gateway'), manifest: 'packages/api/gateway/package.json',
     }
-    const stale = { ...declaration('@deepseek-ai/dsh-api-stale', {
+    const stale = { ...declaration('@berry-ai/harness-api-stale', {
       external: ['@berry-ai/harness-api-gateway/client'],
     }), manifest: 'packages/api/stale/package.json' }
-    const live = { ...declaration('@deepseek-ai/dsh-api-live', {
+    const live = { ...declaration('@berry-ai/harness-api-live', {
       external: ['@berry-ai/harness-api-gateway/client'],
       runtimeSourceUses: {
         '@berry-ai/harness-api-gateway': ['packages/api/live/src/client/index.ts'],
@@ -261,8 +261,8 @@ describe('module requests', () => {
 
   it('rejects duplicates, empty values, self-requests, and missing suppliers', () => {
     const ui = declaration('ui', {
-      external: ['', '@deepseek-ai/dsh-client-ui', '@deepseek-ai/dsh-missing', '@deepseek-ai/dsh-missing'],
-      inject: ['', '@deepseek-ai/dsh-a', '@deepseek-ai/dsh-a'],
+      external: ['', '@berry-ai/harness-client-ui', '@berry-ai/harness-missing', '@berry-ai/harness-missing'],
+      inject: ['', '@berry-ai/harness-a', '@berry-ai/harness-a'],
     })
     const found = collectClientPackageViolations(facts([], { declarations: [ui] }))
     expect(found).toHaveLength(6)
@@ -273,17 +273,17 @@ describe('module requests', () => {
   })
 
   it('rejects synchronous module-request cycles but ignores inject cycles', () => {
-    const a = { ...declaration('@deepseek-ai/dsh-api-a', {
-      external: ['@deepseek-ai/dsh-api-b'],
-      inject: ['@deepseek-ai/dsh-api-b'],
-      runtimeSourceUses: { '@deepseek-ai/dsh-api-b': ['packages/api/a/src/client.ts'] },
-      runtimeSourceSpecifiers: { '@deepseek-ai/dsh-api-b': ['packages/api/a/src/client.ts'] },
+    const a = { ...declaration('@berry-ai/harness-api-a', {
+      external: ['@berry-ai/harness-api-b'],
+      inject: ['@berry-ai/harness-api-b'],
+      runtimeSourceUses: { '@berry-ai/harness-api-b': ['packages/api/a/src/client.ts'] },
+      runtimeSourceSpecifiers: { '@berry-ai/harness-api-b': ['packages/api/a/src/client.ts'] },
     }), manifest: 'packages/api/a/package.json' }
-    const b = { ...declaration('@deepseek-ai/dsh-api-b', {
-      external: ['@deepseek-ai/dsh-api-a'],
-      inject: ['@deepseek-ai/dsh-api-a'],
-      runtimeSourceUses: { '@deepseek-ai/dsh-api-a': ['packages/client/b/src/client.ts'] },
-      runtimeSourceSpecifiers: { '@deepseek-ai/dsh-api-a': ['packages/client/b/src/client.ts'] },
+    const b = { ...declaration('@berry-ai/harness-api-b', {
+      external: ['@berry-ai/harness-api-a'],
+      inject: ['@berry-ai/harness-api-a'],
+      runtimeSourceUses: { '@berry-ai/harness-api-a': ['packages/client/b/src/client.ts'] },
+      runtimeSourceSpecifiers: { '@berry-ai/harness-api-a': ['packages/client/b/src/client.ts'] },
     }), manifest: 'packages/api/b/package.json' }
     const found = collectClientPackageViolations(facts([], { declarations: [a, b] }))
     expect(found).toHaveLength(1)
@@ -307,7 +307,7 @@ describe('package assets', () => {
       "import styles from './View.module.css'",
       "import font from './assets/font.woff2'",
       "import raw from './assets/raw.svg?raw'",
-      "import shared from '@deepseek-ai/dsh-client-other/assets/shared.svg'",
+      "import shared from '@berry-ai/harness-client-other/assets/shared.svg'",
       "import rooted from '/assets/rooted.svg'",
     ].join('\n'))]).toEqual([
       './assets/art.webp',
@@ -476,7 +476,7 @@ describe('manifest declarations', () => {
     const root = mkdtempSync(join(tmpdir(), 'client-packages-fix-'))
     roots.push(root)
     const subject = pkg('feature', {
-      external: ['', 'react', '@deepseek-ai/dsh-client-feature', '@deepseek-ai/dsh-missing'],
+      external: ['', 'react', '@berry-ai/harness-client-feature', '@berry-ai/harness-missing'],
       inject: ['', '@berry-ai/harness-agent', '@berry-ai/harness-agent'],
       sourceUses: {
         '@berry-ai/harness-agent': ['packages/client/feature/src/index.ts'],
@@ -517,7 +517,7 @@ describe('manifest declarations', () => {
       devDependencies: Record<string, string>
     }
     expect(fixed.dsh.client).toMatchObject({
-      external: ['@deepseek-ai/dsh-missing'],
+      external: ['@berry-ai/harness-missing'],
       inject: ['@berry-ai/harness-agent'],
     })
     expect(fixed.dependencies).toEqual(subject.dependencies)

@@ -1,4 +1,5 @@
 // @vitest-environment jsdom
+import { contextMenuHook } from '@berry-ai/harness-client-test-runtime'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import type { SessionListState } from '@berry-ai/harness-api-session-controller/client'
@@ -50,6 +51,7 @@ function mount(mode: TranscriptViewMode = 'standard', dictionary: typeof en | ty
     useSessionRetainInfo: () => undefined,
     useResource,
     ...allowAllAccess,
+    useContextMenu: contextMenuHook(),
     useTranscriptView: bindSnapshotSelector(source),
     useCollapseTiming: bindSnapshotSelector(collapseTiming),
     useFoldedReplies: bindSnapshotSelector(foldedReplies),

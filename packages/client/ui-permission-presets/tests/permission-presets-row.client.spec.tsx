@@ -1,4 +1,5 @@
 // @vitest-environment jsdom
+import { contextMenuHook } from '@berry-ai/harness-client-test-runtime'
 import type { GlobalStandardProps } from '@berry-ai/harness-client-ui-slots'
 import { createSnapshotStore } from '@berry-ai/harness-client-store'
 import { afterEach, describe, expect, it, vi } from 'vitest'
@@ -64,6 +65,7 @@ const runtime = {
   usePanelInfo, useSessionRetainInfo: () => undefined, useResource,
   useWorkspaces: (() => { throw new Error('unused') }) as never,
   ...allowAllAccess,
+  useContextMenu: contextMenuHook(),
 }
 
 function mount(controller: PermissionPresetSettingsController) {

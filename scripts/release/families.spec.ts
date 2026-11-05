@@ -50,8 +50,6 @@ describe('release families', () => {
       .filter(member => member.directory.startsWith('packages/experimental/'))
       .map(member => member.name)).toEqual([
       '@berry-ai/harness-action-cards',
-      '@berry-ai/harness-experimental-agent-team-profile',
-      '@berry-ai/harness-experimental-agent-team',
       '@berry-ai/harness-experimental-api-speech-to-text',
       '@berry-ai/harness-experimental-auto-review',
       '@berry-ai/harness-experimental-badge-skill-bundle',
@@ -61,7 +59,6 @@ describe('release families', () => {
       '@berry-ai/harness-experimental-browser-use-stagehand-native',
       '@berry-ai/harness-experimental-claude-code-mods',
       '@berry-ai/harness-client-ui-action-cards',
-      '@berry-ai/harness-experimental-client-ui-agent-team',
       '@berry-ai/harness-experimental-client-ui-claude-code-mods',
       '@berry-ai/harness-experimental-client-ui-cot-translation',
       '@berry-ai/harness-client-ui-creation-recommendations',
@@ -101,7 +98,6 @@ describe('release families', () => {
       '@berry-ai/harness-experimental-speech-to-text',
       '@berry-ai/harness-experimental-subagent-oar',
       '@berry-ai/harness-experimental-terminal-bundle',
-      '@berry-ai/harness-experimental-tool-agent-team',
       '@berry-ai/harness-tool-ralph',
       '@berry-ai/harness-tool-session-query',
       '@berry-ai/harness-experimental-tool-subagent-oar',
@@ -264,7 +260,7 @@ describe('release families', () => {
     const dsh = member('apps/cli', '@berry-ai/harness')
     const providers = ON_DEMAND_BUNDLES.map(name => member(`packages/subagent/${name}`, name))
     const plan = releaseFamily('dsh').publishOrder([dsh, ...providers])
-    expect(plan.order.map(entry => entry.name)).toEqual([...ON_DEMAND_BUNDLES, dsh.name])
+    expect(plan.order.map(entry => entry.name)).toEqual([...ON_DEMAND_BUNDLES.toSorted(), dsh.name])
     expect(dsh.manifest).toEqual({})
     expect(plan.droppedPeerEdges).toEqual([])
   })
@@ -280,8 +276,8 @@ describe('release families', () => {
       peerDependencies: { '@berry-ai/harness': 'workspace:*' },
     }))
     const plan = releaseFamily('dsh').publishOrder([dsh, ...providers])
-    expect(plan.order.map(entry => entry.name)).toEqual([...ON_DEMAND_BUNDLES, dsh.name])
-    expect(plan.droppedPeerEdges).toEqual(ON_DEMAND_BUNDLES.map(name => ({ consumer: name, peer: dsh.name })))
+    expect(plan.order.map(entry => entry.name)).toEqual([...ON_DEMAND_BUNDLES.toSorted(), dsh.name])
+    expect(plan.droppedPeerEdges).toEqual(ON_DEMAND_BUNDLES.toSorted().map(name => ({ consumer: name, peer: dsh.name })))
   })
 
   it.each(['dependencies', 'optionalDependencies', 'peerDependencies'])(

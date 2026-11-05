@@ -12,6 +12,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, waitFor } from '@testing-library/react'
 import { SlotTestRuntime } from '@berry-ai/harness-client-test-runtime'
 import { LocaleRuntime } from '@berry-ai/harness-client-locale/client'
+import { apply as menusApply, inject as menusInject } from '@berry-ai/harness-client-ui-context-menu/client'
 import type { SessionId } from '@berry-ai/harness-session/types'
 import { apply as resourcesApply, inject as resourcesInject } from '@berry-ai/harness-client-resources/src/client/index.ts'
 import { apply as sidebarApply, inject as sidebarInject } from '@berry-ai/harness-client-ui-sidebar-right/src/client/index.ts'
@@ -51,6 +52,7 @@ async function boot() {
   await rt.sessions.add({ id: SESSION })
   await rt.sessions.retainFor(rt.ctx, SESSION, { source: 'mainView' }).ready
   await rt.mount({ inject: [...resourcesInject], apply: resourcesApply })
+  await rt.mount({ inject: [...menusInject], apply: menusApply })
   await rt.mount({ inject: [...sidebarInject], apply: sidebarApply })
   await rt.mount({ inject: [...inject], apply })
   const view = rt.renderSlot('rightbar', { width: 600, viewportWidth: 1440, canShow: true })

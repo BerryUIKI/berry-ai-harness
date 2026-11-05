@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-experimental-claude-code-mods",
   "description": "Experimental bridge: load Claude Code mods (hooks modules) and run their hook chains on DeepSeek Harness extension points",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -70,8 +70,7 @@
     "@berry-ai/harness-tools": "workspace:*",
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-user-questions": "workspace:*",
-    "@berry-ai/harness-working-directory": "workspace:*",
-    "@berry-ai/harness-session-projection": "workspace:*"
+    "@berry-ai/harness-working-directory": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",

@@ -1,18 +1,18 @@
 - id: llm-deepseek
-  name: '@deepseek-ai/dsh-llm-deepseek-api-key'
+  name: '@berry-ai/harness-llm-deepseek-api-key'
   disabled: true
 
 - id: plugin-package-inventory-deepseek
   disabled: true
 
 - id: agent-default-model
-  name: '@deepseek-ai/dsh-agent-default-model'
+  name: '@berry-ai/harness-agent-default-model'
   config:
     provider: deepseek-official
     model: deepseek-v4-flash-vision-exp
 
 - id: session-persistence-jsonl
-  name: '@deepseek-ai/dsh-session-persistence-jsonl'
+  name: '@berry-ai/harness-session-persistence-jsonl'
   config:
     root: !!js dshHomePath('sessions')
     compression: none
@@ -24,7 +24,7 @@
   disabled: false
 
 - id: system-prompt
-  name: '@deepseek-ai/dsh-system-prompt'
+  name: '@berry-ai/harness-system-prompt'
   config:
     personaPrefix: |
       You are a coding assistant powered by the {{model}} model.
@@ -33,7 +33,7 @@
 
 - insert:
     - id: llm-replay
-      name: '@deepseek-ai/dsh-llm-replay'
+      name: '@berry-ai/harness-llm-replay'
       config:
         providers:
           - id: deepseek-official
@@ -43,19 +43,19 @@
                 inputModalities: [text, image]
 
 - id: attachment-local
-  name: '@deepseek-ai/dsh-attachment-local'
+  name: '@berry-ai/harness-attachment-local'
 
 - insert:
     - id: computer-use
-      name: '@deepseek-ai/dsh-computer-use'
+      name: '@berry-ai/harness-computer-use'
     - id: cua-native
-      name: '@deepseek-ai/dsh-experimental-cua-macos'
+      name: '@berry-ai/harness-experimental-cua-macos'
       config:
         agentPreset: false
         helperPath: !!js process.cwd() + '/native-helper.mjs'
 
 - id: user-questions
-  name: '@deepseek-ai/dsh-user-questions'
+  name: '@berry-ai/harness-user-questions'
 
 - insert:
     - id: cua-consent-fixture

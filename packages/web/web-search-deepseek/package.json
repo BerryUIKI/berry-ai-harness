@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-web-search-deepseek",
   "description": "DeepSeek-backed search provider (native web_search via the Anthropic-compatible API) for the DeepSeek Harness web capability seam (ctx.web)",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -33,6 +33,7 @@
     "@berry-ai/harness-credentials": "workspace:*",
     "@berry-ai/harness-deepseek-account": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
+    "@berry-ai/harness-llm-deepseek": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-web": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
@@ -46,6 +47,7 @@
     "@berry-ai/harness-credentials-local": "workspace:*",
     "@berry-ai/harness-deepseek-account": "workspace:*",
     "@berry-ai/harness-launch-environment": "workspace:*",
+    "@berry-ai/harness-llm-deepseek": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-web": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",

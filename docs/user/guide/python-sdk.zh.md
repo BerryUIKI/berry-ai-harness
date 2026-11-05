@@ -2,7 +2,7 @@
 
 [English](python-sdk.md) | 中文
 
-本教程安装已发布的 Python SDK，运行随附的独立极简 profile，并说明如何从自己的程序自定义同一个 `berry` profile。
+本教程安装已发布的 Python SDK，运行随附的独立极简 profile，并说明如何从自己的程序自定义同一个 `dsh` profile。
 
 ## 前置条件
 
@@ -39,7 +39,7 @@ python -m pip install berry-ai-harness-sdk
 
 :::
 
-安装内容包含匹配的原生运行时 wheel 与 `berry` 命令。普通 SDK 运行不需要系统 Node.js。需要构建产物的仓库贡献者应使用 [Python 贡献者工作流](../../../python/development.zh.md)。
+安装内容包含匹配的原生运行时 wheel 与 `dsh` 命令。普通 SDK 运行不需要系统 Node.js。需要构建产物的仓库贡献者应使用 [Python 贡献者工作流](../../../python/development.zh.md)。
 
 ## 运行检入示例
 
@@ -91,7 +91,7 @@ python python/sdk/examples/minimal.py `
 
 :::
 
-脚本会打印最终 assistant 响应。所选 home 会保存生成的 `sdk-minimal` profile、已安装插件，以及 `sessions/` 下的未压缩 JSONL 会话日志。示例与 SDK 绝不会静默读取 `~/.berry`。
+脚本会打印最终 assistant 响应或所选 profile 提供的命令结果。所选 home 会保存生成的 `sdk-minimal` profile、已安装插件，以及 `sessions/` 下的未压缩 JSONL 会话日志。示例与 SDK 绝不会静默读取 `~/.berry`。
 
 ## 在程序中使用 SDK
 
@@ -147,7 +147,7 @@ berry plugin --profile sdk-minimal add file:C:/work/my-plugin-bundle
 
 第一个命令初始化随附的独立 profile。第二个命令把包管理转发给 `pnpm`，然后记录所有导出 `dsh.bundle` 层的已安装包。只有执行此管理命令时才需要安装 `pnpm`；启动已安装 SDK 不需要它。持久配置项变更应编辑 `$BERRY_HOME/profiles/sdk-minimal/cordis.patch.yml`；单次启动变更则从 Python 传入 patch 文件。
 
-另一个 `profile` 只有包含 `@berry-ai/harness-sdk-app` 或另一个 JSON-RPC server 配置项时才有效。缺失 server 配置项、无法解析的插件和非法 patch 会在启动时失败，不会回退到其他组合。
+另一个 `profile` 只有包含 `@deepseek-ai/dsh-sdk-app` 或另一个 JSON-RPC server 配置项时才有效。缺失 server 配置项、无法解析的插件和非法 patch 会在启动时失败，不会回退到其他组合。
 
 <a id="opt-in-to-str_replace_editor"></a>
 ### 显式启用 `str_replace_editor`
@@ -156,12 +156,26 @@ berry plugin --profile sdk-minimal add file:C:/work/my-plugin-bundle
 
 ```yaml
 - insert:
-
     - id: tool-str-replace-editor
-      name: '@berry-ai/harness-tool-str-replace-editor'
+      name: '@deepseek-ai/dsh-tool-str-replace-editor'
 ```
 
 构造 `DeepSeekHarness(profile="sdk-minimal", ...)` 时传入 `patches=("/absolute/path/to/editor.patch.yml",)`，或将 patch 写入 `$BERRY_HOME/profiles/sdk-minimal/cordis.patch.yml` 以持久保存配置。下次运行时启动后，模型请求会在默认工具之外包含 `str_replace_editor`。本地文件系统后端以运行时工作目录解析相对路径；与极简 shell 一样，它不会将访问限制在该目录内。该 patch 也适用于标准 `sdk` profile。
+
+<a id="enable-team-mode"></a>
+### 启用 Team 模式
+
+使用 Agent Teams 时选择标准 `sdk` profile；`sdk-minimal` 不包含子代理或 Team 服务。将 [Team patch](../../../apps/cli/config/examples/team-mode.yml) 保存为 `team-mode.yml`：
+
+```yaml
+- id: agent-team
+  config:
+    defaultEnabled: true
+```
+
+选择 `profile="sdk"`，并在 SDK 的 `patches` 选项中传入其绝对路径。Python 使用 `patches=("/absolute/path/to/team-mode.yml",)`；TypeScript 使用 `patches: ["/absolute/path/to/team-mode.yml"]`。此 patch 替换 `agent-team` 配置项的整个配置，因此自定义 `maxTasks` 限制也应写在同一个映射中。
+
+创建新根 Session，让它创建并列出共享任务。首次模型请求即包含 Team 工具和协作提示词。根会话保存其模式，子代理共享该模式。恢复已有 Session 时保留其模式，即使它被明确关闭或从未启用；修改或移除此 patch 不会覆盖已保存的选择。模式和任务语义参见 [Team 服务参考](../../../packages/team/agent-team/README.zh.md#use-this-package)。
 
 ## 理解极简 profile
 
@@ -177,7 +191,7 @@ berry plugin --profile sdk-minimal add file:C:/work/my-plugin-bundle
 
 该 profile 的唯一组合包会在空根之上插入完整配置树，且不包含 `dsh-base`，因此基础 profile 以后新增的工具不会隐式出现。它包含 SDK 协议、一个由环境配置的 DeepSeek 适配器、本地执行与持久化；文本文件工具、settings、托管凭据、OTel 遥测、Web 工具、subagent、本地指令发现均不存在。[DeepSeek 会话日志贡献器](../../../packages/session/session-log-deepseek/README.zh.md)默认随 DeepSeek 请求上传未接受的日志事件，每次请求最多 `maxBytes`（8 MiB）；在 profile patch 中设置 `session-log-deepseek.enabled: false` 可将其关闭。它固定使用 `danger-full-access`，因此按平台选择的持久 shell 可以修改运行时可见的任何路径；应使用一次性 checkout 或容器。
 
-图片读取需要支持图片输入的路由。自动压缩保留完整 Session 日志；模型与存储影响见[组合包参考](../../../packages/bundle/sdk-minimal/README.zh.md)。SDK 提示词文本不会执行 `/compact` 或其他斜杠命令。
+图片读取需要支持图片输入的路由。自动压缩保留完整 Session 日志；模型与存储影响见[组合包参考](../../../packages/bundle/sdk-minimal/README.zh.md)。在这个 `sdk-minimal` 组合中，不支持的斜杠输入保持为普通提示词文本。
 
 已安装 wheel 仍会打包完整 `web` profile 与前端产物。如果 Python SDK 部署还需要浏览器应用，请针对显式 `BERRY_HOME` 运行 `berry web`；`web` 是独立 CLI 应用，不能为 Python SDK client 提供服务。
 

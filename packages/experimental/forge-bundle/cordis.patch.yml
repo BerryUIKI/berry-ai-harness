@@ -1,4 +1,8 @@
 - insert:
+    - id: worktree
+      name: '@berry-ai/harness-experimental-worktree'
+    - id: tool-worktree
+      name: '@berry-ai/harness-experimental-tool-worktree'
     - id: forge
       name: '@berry-ai/harness-experimental-forge'
     - id: forge-github

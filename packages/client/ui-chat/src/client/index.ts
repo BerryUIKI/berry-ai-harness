@@ -1,3 +1,4 @@
+import type {} from '@berry-ai/harness-client-ui-context-menu/client'
 /** Browser Chat target plugin. */
 export { apply, inject } from './apply.ts'
 export type {} from './conversation-nodes/assistant.ts'

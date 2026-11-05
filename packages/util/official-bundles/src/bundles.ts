@@ -38,6 +38,7 @@ export const RETIRED_BUNDLES: ReadonlySet<string> = new Set([
   // The Web composition mounts Schedule itself
   // ([upgrade guide](../../../../docs/upgrade-guide/v0.2.0-rc.2/schedule-bundle-retired/guide.md)).
   '@berry-ai/harness-experimental-schedule-bundle',
+  '@berry-ai/harness-experimental-agent-team-profile',
 ])
 
 /** The bundle list a `dsh plugin` init uses for a name with no shipped template. */
@@ -60,7 +61,6 @@ export const OPTIONAL_BUNDLES: readonly string[] = [
   '@berry-ai/harness-experimental-terminal-bundle',
   '@berry-ai/harness-experimental-badge-skill-bundle',
   '@berry-ai/harness-experimental-session-titles-bundle',
-  '@berry-ai/harness-experimental-agent-team-profile',
   '@berry-ai/harness-experimental-voice-input-bundle',
   '@berry-ai/harness-experimental-cot-translation-bundle',
   '@berry-ai/harness-experimental-auto-review',

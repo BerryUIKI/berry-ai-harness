@@ -3,7 +3,7 @@
  *
  * A served viewer page is the owner's own Web shell with the owner's client plugins; this roster is the
  * subset the viewer page specs need: the wire plugin, the Gateway, remote access, the Session/Workspace controllers,
- * the presentation plugins, and the Liveshare `./client` face, which mounts the viewer surfaces when the
+ * the menu service, presentation plugins, and the Liveshare `./client` face, which mounts the viewer surfaces when the
  * carrier names a share. Every row is the package's own `/client` face registered as a module-table
  * factory. It must be imported only after {@link prepareViewerRemoteFaces} answered the generated
  * `/remote` faces these plugins import.
@@ -24,6 +24,7 @@ import * as clientResources from '@berry-ai/harness-client-resources/client'
 import * as clientShortcuts from '@berry-ai/harness-client-shortcuts/client'
 import * as uiAttachment from '@berry-ai/harness-client-ui-attachment/client'
 import * as uiChat from '@berry-ai/harness-client-ui-chat/client'
+import * as uiContextMenu from '@berry-ai/harness-client-ui-context-menu/client'
 import * as uiConversation from '@berry-ai/harness-client-ui-conversation/client'
 import * as uiDeliverables from '@berry-ai/harness-client-ui-deliverables/client'
 import * as uiFileDrag from '@berry-ai/harness-client-ui-file-drag/client'
@@ -72,6 +73,7 @@ export const VIEWER_PAGE_ROSTER: readonly ViewerPageRosterRow[] = [
   { id: '@berry-ai/harness-client-ui-sidebar', exports: uiSidebar },
   { id: '@berry-ai/harness-client-ui-conversation', exports: uiConversation },
   { id: '@berry-ai/harness-client-ui-chat', exports: uiChat },
+  { id: '@berry-ai/harness-client-ui-context-menu', exports: uiContextMenu },
   { id: '@berry-ai/harness-client-ui-tool', exports: uiTool },
   { id: '@berry-ai/harness-client-ui-attachment', exports: uiAttachment },
   { id: '@berry-ai/harness-client-ui-file-drag', exports: uiFileDrag },

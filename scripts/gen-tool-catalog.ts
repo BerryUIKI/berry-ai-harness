@@ -15,6 +15,7 @@ import AgentRegistry from '@berry-ai/harness-agent'
 import type { Agent } from '@berry-ai/harness-agent'
 import { createScope } from '@berry-ai/harness-scope'
 import SessionStore, { SessionId } from '@berry-ai/harness-session'
+import SessionPersistence from '@berry-ai/harness-session-persistence'
 import SessionProjectionRegistry from '@berry-ai/harness-session-projection'
 import SqliteSessionQueryEngine from '@berry-ai/harness-session-query-sqlite'
 import GoalService from '@berry-ai/harness-goal'
@@ -37,7 +38,7 @@ import type { ImageAttachmentLimits, ImageAttachmentRef, SaveImageAttachment, St
 import UserQuestionService from '@berry-ai/harness-user-questions'
 import PlanModeController from '@berry-ai/harness-plan-mode'
 import WebRuntime from '@berry-ai/harness-web'
-import * as WebSearchExa from '@berry-ai/harness-web-search-exa'
+import * as WebDeepSeekApi from '@berry-ai/harness-web-deepseek-api'
 import * as WebFetchLocal from '@berry-ai/harness-web-fetch-http'
 import SubagentRuntime from '@berry-ai/harness-subagent'
 import type { SubagentProvider } from '@berry-ai/harness-subagent'
@@ -62,7 +63,7 @@ import TerminalSessionService from '@berry-ai/harness-terminal'
 import * as ToolPty from '@berry-ai/harness-tool-terminal'
 import * as ToolGoal from '@berry-ai/harness-tool-goal'
 import * as ToolSchedule from '@berry-ai/harness-tool-schedule'
-import type ScheduleService from '@berry-ai/harness-schedule'
+import ScheduleService from '@berry-ai/harness-schedule'
 import Lsp from '@berry-ai/harness-lsp'
 import * as ToolLsp from '@berry-ai/harness-tool-lsp'
 import * as ToolSkill from '@berry-ai/harness-tool-skill'
@@ -70,8 +71,8 @@ import * as ToolSessionQuery from '@berry-ai/harness-tool-session-query'
 import * as ToolJobs from '@berry-ai/harness-tool-jobs'
 import BrowserUseRegistry from '@berry-ai/harness-browser-use'
 import * as StagehandBrowserTools from '@berry-ai/harness-experimental-browser-use-stagehand-native'
-import type TeamService from '@berry-ai/harness-experimental-agent-team'
-import * as ToolTeam from '@berry-ai/harness-experimental-tool-agent-team'
+import TeamService from '@berry-ai/harness-agent-team'
+import * as ToolTeam from '@berry-ai/harness-tool-agent-team'
 import * as ToolTodo from '@berry-ai/harness-tool-todo'
 import type PluginManager from '@berry-ai/harness-plugin-manager'
 import * as PluginManagerTools from '@berry-ai/harness-plugin-manager/tools'
@@ -121,6 +122,20 @@ class CatalogWorkflowEngine extends WorkflowEngine {
   start(_request: WorkflowStartRequest): WorkflowRun {
     throw new Error('gen-tool-catalog: workflow execution is unavailable during schema harvest')
   }
+}
+
+/** Schema collection needs the persistence service but must never access stored Sessions. */
+class CatalogSessionPersistence extends SessionPersistence {
+  create = unavailableCatalogPersistence
+  open = unavailableCatalogPersistence
+  flush = unavailableCatalogPersistence
+  stat = unavailableCatalogPersistence
+  list = unavailableCatalogPersistence
+}
+
+/** Storage operations are unreachable during schema collection. */
+function unavailableCatalogPersistence(): never {
+  throw new Error('gen-tool-catalog: persistence access is unavailable during schema harvest')
 }
 
 /**
@@ -402,15 +417,15 @@ const TOOL_PACKAGES: ToolPackage[] = [
     dir: 'tool-fs',
     source: 'packages/fs/tool-fs/src/index.ts',
     requires: ['ctx.workingDirectory', 'ctx.tools', 'ctx.fs', 'ctx.systemPrompt', 'ctx.attachments (image-tool registration)', 'ctx.llm + an image-capable route (image-tool execution)'],
-    writes: ['tool/call', 'fs/write-intent or fs/edit-intent for mutations', 'fs/observed after read presence/absence or successful file operation', 'durable attachment (read_image)', 'tool/result'],
+    writes: ['tool/call', 'fs/write-intent, fs/edit-intent, or fs/delete-intent for mutations', 'fs/observed after read presence/absence or successful file operation', 'durable attachment (read_image)', 'tool/result'],
     async mount(ctx) {
       // The catalog seam marker opts into
       // the attachments-conditional image schema without attachment I/O.
       await ctx.plugin(CatalogAttachmentStore)
-      await ctx.plugin(ToolFs)
+      await ctx.plugin(ToolFs, { applyPatch: true })
     },
     note:
-      'The read-before-write/edit policy is added by `@berry-ai/harness-fs-observation-policy` (an `fs/*` event-gate plugin, no schema change); a deployment that loads these tools is expected to also load it. The image tool is not registered without `ctx.attachments`; its schema is route-independent, and execution refuses unless the exact routed model declares image input.',
+      'The read-before-write/edit policy is added by `@berry-ai/harness-fs-observation-policy` (an `fs/*` event-gate plugin, no schema change); the shipped compositions leave its row disabled, so mutations are unconditional unless a deployment enables it. The image tool is not registered without `ctx.attachments`; its schema is route-independent, and execution refuses unless the exact routed model declares image input. `apply_patch` registers only with `applyPatch: true`; the catalog sets it so the schema is documented. `dsh-base` and the Web `standard` preset enable it; the Web `ptc` and `cordis` presets and the PTC overlay state `applyPatch: false`.',
   },
   {
     pkg: '@berry-ai/harness-tool-fs-search',
@@ -461,20 +476,21 @@ const TOOL_PACKAGES: ToolPackage[] = [
     pkg: '@berry-ai/harness-tool-schedule',
     dir: 'tool-schedule',
     source: 'packages/schedule/tool-schedule/src/index.ts',
-    requires: ['ctx.tools', 'ctx.schedule'],
+    requires: ['ctx.tools', 'ctx.schedule', 'ctx.systemPrompt'],
     writes: ['tool/call', 'Schedule storage domain create, update, or delete', 'tool/result'],
     async mount(ctx) {
-      // Schema harvest never executes a tool, so the Host service is a
-      // declaration-only stub.
-      ctx.provide('schedule', {} as ScheduleService)
+      // Schema harvest never executes a tool, so the Host service is a stub that answers only the read of the
+      // default delivery limits, which the target description names when above the minimum.
+      ctx.provide('schedule', {
+        deliveryLimits: () => ({ newSessionIntervalSeconds: ScheduleService.Config({}).newSessionIntervalSeconds }),
+      } as ScheduleService)
       await ctx.plugin(ToolSchedule)
     },
     note:
-      'A preset or Agent scope mounts this package; the preset decides which agents receive the four '
-      + 'management tools. Each call acts on the calling Agent\'s Session. '
-      + 'Accepts after_seconds, explicit absolute at, bounded fixed-rate every_seconds, daily and weekly '
-      + 'local times in an explicit IANA zone, and cron as a five-field expression. '
-      + 'Management uses the Host storage domain; due messages resume the original Session.',
+      'A preset or Agent scope mounts this package and decides which agents receive its tools. '
+      + 'Management reads and writes Host tasks by id across Sessions. '
+      + 'Tasks store an RFC 5545 recurrence and an existing, first-created-and-reused, or per-run-new Session target. '
+      + 'Delegated subagents cannot call these tools.',
   },
   {
     pkg: '@berry-ai/harness-tool-lsp',
@@ -576,6 +592,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       interrupt_agent: 'packages/subagent/tool-subagent-control/src/index.ts',
       list_agents: 'packages/subagent/tool-subagent-control/src/list-agents.ts',
       send_message: 'packages/subagent/tool-subagent-control/src/index.ts',
+      wait_agent: 'packages/subagent/tool-subagent-control/src/wait-agent.ts',
     },
     requires: ['ctx.tools', 'ctx.subagents', 'ctx.agents'],
     writes: ['tool/call', 'tool/result', 'child session events through ctx.subagents'],
@@ -587,7 +604,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       await ctx.plugin(ToolSubagentControl)
     },
     note:
-      'The globally named discovery, interruption, and local-message tools over managed subagents: provider-bound `tool-subagent` instances register distinct delegation tools, while one instance of this package registers `send_message`, `interrupt_agent`, and `list_agents`.',
+      'The shared control tools discover and contact agents in the subagent tree, interrupt owned descendants, and wait for input in the caller’s inbox. Provider-bound `tool-subagent` instances supply delegation tools.',
   },
   {
     pkg: '@berry-ai/harness-tool-jobs',
@@ -603,26 +620,19 @@ const TOOL_PACKAGES: ToolPackage[] = [
       'The kind-agnostic background-job controller: background bash commands and PTY sends are read, listed, and killed through the same three tools. Loading the plugin attaches the controller that arms producers\' `ctx.jobs.start()`.',
   },
   {
-    pkg: '@berry-ai/harness-experimental-tool-agent-team',
+    pkg: '@berry-ai/harness-tool-agent-team',
     dir: 'tool-agent-team',
-    source: 'packages/experimental/tool-agent-team/src/index.ts',
-    requires: ['ctx.tools', 'ctx.systemPrompt', 'ctx.agentTeams', 'an exact live Team member Agent'],
-    writes: ['tool/call', 'team/member', 'team/task', 'agent/inbox/spliced', 'user/message on inbox claim', 'tool/result'],
+    source: 'packages/team/tool-agent-team/src/index.ts',
+    requires: ['ctx.tools', 'ctx.systemPrompt', 'ctx.agentTeams', 'ctx.subagents', 'an exact live Team member Agent'],
+    writes: ['tool/call', 'team/task', 'tool/result'],
     async mount(ctx) {
       await ctx.plugin(AgentRegistry)
       await ctx.plugin(SessionStore)
+      await ctx.plugin(SubagentRuntime)
+      await ctx.plugin(CatalogSessionPersistence)
+      await ctx.plugin(TeamService)
       const session = ctx.sessions.create(SessionId('tool-catalog-team-lead'))
       let agent!: Agent
-      const membership = {
-        get root() { return agent },
-        id: session.id,
-        role: 'lead' as const,
-        name: 'lead',
-      }
-      ctx.provide('agentTeams', {
-        tryMembership: (candidate: Agent) => candidate === agent ? membership : undefined,
-        membership: () => membership,
-      } as unknown as TeamService)
       await ctx.plugin(Object.assign(async (inner: Context) => {
         agent = {
           id: session.id,
@@ -633,12 +643,13 @@ const TOOL_PACKAGES: ToolPackage[] = [
         Object.assign(agent, { ctx: createScope(inner, agent).ctx })
         await inner.agents.register(agent)
       }, { inject: ['tools', 'systemPrompt', 'agents', 'agentTeams'] }))
+      await ctx.agentTeams.setEnabled(agent, true)
       await ctx.plugin(ToolTeam)
       catalogChildScopes.set(ctx, agent)
     },
     scope: ctx => catalogChildScopes.get(ctx) as Agent,
     note:
-      'All nine tools are scoped to implicit Team Leads and durable teammates. The shipped dsh-base bundle keeps the package disabled; the documented Agent Teams profile patch enables it while disabling the legacy continuable-child control names.',
+      'Four task-board tools share the subagent tree’s root Session. Enabling Team mode on the root Session adds task-board guidance alongside standard subagent delegation and control tools. Standard subagent controls provide required identity independently of Team mode.',
   },
   {
     pkg: '@berry-ai/harness-tool-todo',
@@ -675,7 +686,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       })
       await ctx.plugin(ToolWorktree)
     },
-    note: 'Explicit experimental composition only. Creates a new branch and checkout from a pinned local commit under existing write permissions, then changes the Session directory. Leaving retains the branch and checkout.',
+    note: 'Enabled through the Change requests & worktrees bundle on Web and Desktop; other profiles can select the standalone bundle. Creates a new branch and checkout from a pinned local commit under existing write permissions, then changes the Session directory. Leaving retains the branch and checkout.',
   },
   {
     pkg: '@berry-ai/harness-tool-workflow',
@@ -711,7 +722,7 @@ const TOOL_PACKAGES: ToolPackage[] = [
       // Mount search and fetch providers so both tools register. Their schemas
       // do not depend on provider identity or availability.
       await ctx.plugin(WebRuntime)
-      await ctx.plugin(WebSearchExa)
+      await ctx.plugin(WebDeepSeekApi)
       await ctx.plugin(WebFetchLocal)
       await ctx.plugin(ToolWeb)
     },

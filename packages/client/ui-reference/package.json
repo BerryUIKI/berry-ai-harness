@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-client-ui-reference",
   "description": "Unified Web @file and @session reference source",
-  "version": "0.2.2-alpha.2",
+  "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
   },
@@ -36,7 +36,8 @@
         "@berry-ai/harness-client-ui-conversation",
         "@berry-ai/harness-client-ui-renderer",
         "@berry-ai/harness-client-ui-input-trigger",
-        "@berry-ai/harness-client-ui-sidebar-right"
+        "@berry-ai/harness-client-ui-sidebar-right",
+        "@berry-ai/harness-client-ui-context-menu"
       ],
       "platform": "web"
     }
@@ -66,7 +67,8 @@
     "@berry-ai/harness-typert-protocol": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@berry-ai/harness-client-ui-sidebar-right": "workspace:*"
+    "@berry-ai/harness-client-ui-sidebar-right": "workspace:*",
+    "@berry-ai/harness-client-ui-context-menu": "workspace:*"
   },
   "files": [
     "locale/*.json",

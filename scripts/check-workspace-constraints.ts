@@ -195,17 +195,15 @@ const packageFileExtras: Readonly<Record<string, readonly string[]>> = {
   '@berry-ai/harness-experimental-subagent-oar': ['LICENSE-OAR'],
   // CUA publishes its client API and attributed native source for local macOS builds.
   '@berry-ai/harness-cua': ['lib/remote-types.js', 'lib/api.js', 'lib/bridge.js', 'lib/native-client.js', 'lib/protocol.js'],
-  '@berry-ai/harness-experimental-cua-macos': ['native/bin', 'native/Package.swift', 'native/Sources', 'native/tests/swift', 'native/tests/test_swift.py', 'native/LICENSE.cua-driver', 'native/upstream.json', 'native/README.md', 'native/README.zh.md', 'native/protocol.schema.json'],
+  '@berry-ai/harness-experimental-cua-macos': ['native/bin', 'cua-helper.json', 'native/Package.swift', 'native/Info.plist', 'native/DSHComputerUse.icns', 'native/build_app.py', 'native/Sources', 'native/tests/swift', 'native/tests/test_swift.py', 'native/LICENSE.cua-driver', 'native/LICENSE.computer-use-icon', 'native/upstream.json', 'native/README.md', 'native/README.zh.md', 'native/protocol.schema.json'],
   '@berry-ai/harness-webhook-github': ['examples/github-review/cordis.yml', 'examples/github-review/github-ready-review-rule.mjs'],
   // Liveshare publishes its built Relay gateway entry and the shared runtime
-  // chunk that entry imports, plus the declaration-plane entry and its chunk.
-  // Its `./types` export is a type-only module, so the emitted tree contributes
-  // that one runtime file; the declarations still ship as the whole tree.
+  // chunk that entry imports. Its `./types` export is a type-only module, so
+  // the emitted tree contributes that one runtime file; the declarations still
+  // ship as the whole tree.
   '@berry-ai/harness-experimental-liveshare': [
     'lib/owner-gateway/cli.js',
     'lib/retry-backoff-*.js',
-    'lib/viewer-declarations.js',
-    'lib/viewer-declarations-*.js',
   ],
   // Owned Worker bundles import this public bootstrap before their business entry.
   '@berry-ai/harness-app-boot': ['lib/worker/profile-resolution-bootstrap.js'],
