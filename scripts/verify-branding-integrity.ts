@@ -40,6 +40,9 @@ export const EXEMPT_PREFIXES: readonly string[] = [
   'docs/dependency-catalog.json',
   // Names the published package the README still tells users to run.
   'scripts/gen-dependency-catalog.ts',
+  // Maps the producer ids that released V3 sessions recorded, including the
+  // pre-rename scope those sessions carry.
+  'packages/session/session-format-v3-to-v4/src/sources.ts',
 ]
 
 /** This gate and its spec contain the rejected patterns by construction. */
