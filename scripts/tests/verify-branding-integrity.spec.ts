@@ -38,6 +38,7 @@ describe('verify-branding-integrity', () => {
       'scripts/dependency-catalog/package-lock.json',
       'docs/dependency-catalog.json',
       'scripts/gen-dependency-catalog.ts',
+      'packages/session/session-format-v3-to-v4/src/sources.ts',
       'packages/example/tests/fixtures/recorded.json',
       'packages/example/tests/expected/notice.expected.md',
       'scripts/verify-branding-integrity.ts',

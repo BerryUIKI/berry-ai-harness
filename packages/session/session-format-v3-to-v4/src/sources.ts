@@ -42,7 +42,15 @@ const RENAMED_PRODUCERS: Readonly<Record<string, string>> = Object.freeze({
   'tools-ptc': 'ptc-mode',
   'dsh-compaction-basic': 'compact-basic',
   '@berry-ai/harness-system-prompt': 'runtime-context',
+  // V3 sessions recorded before the scope rename carry the upstream package id.
+  '@deepseek-ai/dsh-system-prompt': 'runtime-context',
 })
+
+/** Released system-prompt producer ids: both scopes appear in V3 recordings. */
+const SYSTEM_PROMPT_PRODUCERS: ReadonlySet<string> = new Set([
+  '@berry-ai/harness-system-prompt',
+  '@deepseek-ai/dsh-system-prompt',
+])
 
 /** First-party V3 plugin identities that intentionally keep their current kind. */
 const RELEASED_SAME_NAME_PRODUCERS: ReadonlySet<string> = new Set([
@@ -57,7 +65,7 @@ const RELEASED_SAME_NAME_PRODUCERS: ReadonlySet<string> = new Set([
 
 /** Resolve the current producer kind for one released V3 plugin string. */
 function producerKind(plugin: string, role: SessionFormatJsonValue | undefined): string {
-  if (plugin === '@berry-ai/harness-system-prompt' && role === 'system') return 'system-prompt'
+  if (SYSTEM_PROMPT_PRODUCERS.has(plugin) && role === 'system') return 'system-prompt'
   const renamed = Object.hasOwn(RENAMED_PRODUCERS, plugin) ? RENAMED_PRODUCERS[plugin] : undefined
   if (renamed !== undefined) return renamed
   if (RELEASED_SAME_NAME_PRODUCERS.has(plugin)) return plugin
