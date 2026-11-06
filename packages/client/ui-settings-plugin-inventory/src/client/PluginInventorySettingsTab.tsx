@@ -73,6 +73,7 @@ function moduleShortName(moduleName: string): string {
     .replace(/^cordis:/, '')
     .replace(/^cordis-plugin-/, '')
     .replace(/^dsh-(?:host-|client-)?/, '')
+    .replace(/^harness-(?:host-|client-)?/, '')
 }
 
 /** Display an entry identity without the composition-only `include:` marker. */
