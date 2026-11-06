@@ -20,7 +20,7 @@ describe('experimental package identities', () => {
   })
 
   it.each(names)('does not extend the retained-name exception %s to another package', (name) => {
-    for (const reference of [`${name}-unrelated`, `other-${name}`, name.replace('@deepseek-ai/', '@other/')]) {
+    for (const reference of [`${name}-unrelated`, `other-${name}`, name.replace('@berry-ai/', '@other/')]) {
       expect(isExperimentalPackageName(reference)).toBe(false)
       expect(hasExperimentalPackageReference(reference)).toBe(false)
       expect(experimentalPackageRecordNamespace(reference)).toBeUndefined()

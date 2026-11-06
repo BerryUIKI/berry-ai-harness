@@ -47,7 +47,7 @@ export function isExperimentalPackageName(name: string): boolean {
  */
 export function hasExperimentalPackageReference(reference: string): boolean {
   const normalized = reference.replaceAll('\\', '/')
-  return [...normalized.matchAll(/(?:^|[/:\u0000])(@deepseek-ai\/[^/@?#:\s]+)(?=$|[/@?#:])/g)]
+  return [...normalized.matchAll(/(?:^|[/:\u0000])(@berry-ai\/harness[^/@?#:\s]*)(?=$|[/@?#:])/g)]
     .some(([, name]) => name !== undefined && isExperimentalPackageName(name))
 }
 
