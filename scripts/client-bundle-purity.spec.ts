@@ -218,7 +218,7 @@ function clientSourceMapPath(packagePath: string): string {
 function purityResolveId(dir = REQUESTING_PACKAGE_DIR): ResolveId {
   const configs = clientConfigs(dir)
   const plugins = (configs[0] as { plugins: { name: string; resolveId?: unknown }[] }).plugins
-  const gate = plugins.find(p => p.name === 'dsh-client-bundle-purity')
+  const gate = plugins.find(p => p.name === 'berry-client-bundle-purity')
   if (gate?.resolveId === undefined) throw new Error('purity plugin missing from client config')
   return gate.resolveId as ResolveId
 }
