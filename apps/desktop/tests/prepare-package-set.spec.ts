@@ -44,10 +44,10 @@ describe('desktop package-set selection', () => {
       ['@deepseek-ai/unused', packed('@deepseek-ai/unused')],
     ])
     expect(selectDesktopPackageClosure(available, { platform: 'win32', arch: 'x64' }).map(entry => entry.manifest.name)).toEqual([
-      '@deepseek-ai/cordis',
       '@berry-ai/harness',
       '@berry-ai/harness-base',
       '@berry-ai/harness-desktop-host',
+      '@deepseek-ai/cordis',
       '@deepseek-ai/platform-package',
     ])
   })
@@ -66,7 +66,7 @@ describe('desktop package-set selection', () => {
     expect(() => selectDesktopPackageClosure(available, { platform: 'win32', arch: 'x64' })).toThrow(/unpacked package/u)
     expect(() => selectDesktopPackageClosure(new Map([
       ['@berry-ai/harness', packed('@berry-ai/harness')],
-    ]), { platform: 'win32', arch: 'x64' })).toThrow(/omit @deepseek-ai\/dsh-desktop-host/u)
+    ]), { platform: 'win32', arch: 'x64' })).toThrow(/omit @berry-ai\/harness-desktop-host/u)
   })
 
   it('leaves independently published Office packages to npm resolution', () => {
@@ -143,7 +143,7 @@ it('copies no macOS tarball into the Windows package set', () => {
   const inputs = join(root, 'inputs')
   mkdirSync(inputs)
   for (const [name, entry] of targetManifests()) {
-    const stem = name.replace('@deepseek-ai/', '')
+    const stem = name.replace('@berry-ai/harness', 'dsh').replace('@deepseek-ai/dsh', 'dsh')
     const folder = join(root, stem, 'package')
     mkdirSync(folder, { recursive: true })
     writeFileSync(join(folder, 'package.json'), JSON.stringify(entry.manifest))
@@ -153,7 +153,7 @@ it('copies no macOS tarball into the Windows package set', () => {
         writeFileSync(join(folder, file), '')
       }
     }
-    execFileSync('tar', ['-czf', join(inputs, `${stem}.tgz`), '-C', join(folder, '..'), 'package'])
+    execFileSync('tar', ['-czf', `${stem}.tgz`, '-C', join(folder, '..'), 'package'], { cwd: inputs })
   }
   const output = join(root, 'output')
   prepareDesktopPackageSet([inputs], output, { platform: 'win32', arch: 'x64' })
