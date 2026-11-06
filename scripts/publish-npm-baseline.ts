@@ -258,7 +258,7 @@ class WorkspacePackageSet {
       if (!name.startsWith('@deepseek-ai/') && !name.startsWith('@berry-ai/')) {
         throw new Error(`${manifestPath} must name an @berry-ai or @deepseek-ai package`)
       }
-      if (name === '@berry-ai/harness-root' || name === '@deepseek-ai/dsh-root') {
+      if (name === '@berry-ai/harness-root') {
         throw new Error(`${manifestPath} unexpectedly selected the workspace root`)
       }
       if (names.has(name)) throw new Error(`duplicate package name: ${name}`)
@@ -799,7 +799,7 @@ function parsePackedPackage(value: unknown, index: number): PackedPackage {
   if (origin !== 'harness' && origin !== 'vendor') {
     throw new Error(`invalid package origin in release manifest: ${JSON.stringify(origin)}`)
   }
-  if (origin === 'harness' && ((!name.startsWith('@deepseek-ai/') && !name.startsWith('@berry-ai/')) || name === '@berry-ai/harness-root' || name === '@deepseek-ai/dsh-root')) {
+  if (origin === 'harness' && ((!name.startsWith('@deepseek-ai/') && !name.startsWith('@berry-ai/')) || name === '@berry-ai/harness-root')) {
     throw new Error(`invalid package name in release manifest: ${name}`)
   }
   return {
