@@ -102,9 +102,9 @@ describe('RepositoryCleaner', () => {
 
     await new RepositoryCleaner(root).clean()
 
-    expect(readdirSync(join(hoisted, '@deepseek-ai'))).toEqual(['dsh-live'])
-    expect(readdirSync(hoisted)).toEqual(['@deepseek-ai'])
-    expect(readdirSync(join(root, 'node_modules/@deepseek-ai'))).toEqual([])
+    expect(readdirSync(join(hoisted, '@berry-ai'))).toEqual(['harness-live'])
+    expect(readdirSync(hoisted)).toEqual(['@berry-ai'])
+    expect(readdirSync(join(root, 'node_modules/@berry-ai'))).toEqual([])
     expect(existsSync(join(hoisted, '@berry-ai/harness-live/package.json'))).toBe(true)
   })
 
