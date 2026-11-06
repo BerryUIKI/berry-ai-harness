@@ -12,8 +12,8 @@ const ROOT = resolve(import.meta.dirname, '..')
 // is unpublished, so this names the published upstream package; switch it with
 // README's `npx` instructions and a `gen-dependency-catalog` refresh at the
 // first Berry release.
-const PACKAGE = '@deepseek-ai/dsh'
-const ENTRY = `node_modules/${PACKAGE}`
+export const PUBLISHED_PACKAGE = '@deepseek-ai/dsh'
+const ENTRY = `node_modules/${PUBLISHED_PACKAGE}`
 const REGISTRY = 'https://registry.npmjs.org/'
 const LOCK = 'scripts/dependency-catalog/package-lock.json'
 const METADATA = 'scripts/dependency-catalog/resolution.json'
@@ -109,13 +109,13 @@ export function collectDependencies(input: unknown): { version: string; rows: De
   const packages = record(lock['packages'], 'packages')
   const consumer = record(packages[''], 'consumer')
   const requested = record(consumer['dependencies'], 'consumer dependencies')
-  if (Object.keys(requested).length !== 1 || requested[PACKAGE] !== 'latest') {
-    throw new Error(`dependency-catalog: consumer must request only ${PACKAGE}@latest`)
+  if (Object.keys(requested).length !== 1 || requested[PUBLISHED_PACKAGE] !== 'latest') {
+    throw new Error(`dependency-catalog: consumer must request only ${PUBLISHED_PACKAGE}@latest`)
   }
   const entries = new Map(Object.entries(packages).filter(([location]) => location !== '')
     .map(([location, entry]) => [location, parseEntry(entry, location)]))
   const cli = entries.get(ENTRY)
-  if (cli === undefined || cli.dev) throw new Error(`dependency-catalog: missing production ${PACKAGE}`)
+  if (cli === undefined || cli.dev) throw new Error(`dependency-catalog: missing production ${PUBLISHED_PACKAGE}`)
   const direct = new Set<string>()
   for (const name of Object.keys({ ...cli.dependencies, ...cli.optionalDependencies })) {
     const location = [`${ENTRY}/node_modules/${name}`, `node_modules/${name}`]
@@ -199,9 +199,9 @@ export function deduplicateDependencies(rows: readonly DependencyRow[]): {
 function renderCatalog(lock: unknown, metadata: ResolutionMetadata): string {
   const { version, rows } = collectDependencies(lock)
   return `${JSON.stringify({
-    package: PACKAGE,
+    package: PUBLISHED_PACKAGE,
     version,
-    requested: `${PACKAGE}@latest`,
+    requested: `${PUBLISHED_PACKAGE}@latest`,
     resolution: metadata,
     dependencies: deduplicateDependencies(rows),
   }, null, 2)}\n`
@@ -264,7 +264,7 @@ async function refreshResolution(): Promise<void> {
   const temporary = await mkdtemp(join(tmpdir(), 'dsh-dependency-catalog-'))
   try {
     writeFileSync(join(temporary, 'package.json'), `${JSON.stringify({
-      name: 'dsh-dependency-catalog', version: '0.0.0', private: true, dependencies: { [PACKAGE]: 'latest' },
+      name: 'dsh-dependency-catalog', version: '0.0.0', private: true, dependencies: { [PUBLISHED_PACKAGE]: 'latest' },
     }, null, 2)}\n`)
     const environment = createNpmResolutionEnvironment(temporary)
     const npm = await runNpm(['--version'], temporary, environment)
