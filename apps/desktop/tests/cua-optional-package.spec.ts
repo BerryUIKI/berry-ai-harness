@@ -54,7 +54,7 @@ it('fetches the macOS optional tarball only for Darwin, with an empty cache for 
   const packages = new Map<string, { manifest: Record<string, unknown>; bytes: Buffer }>()
   for (const manifest of manifests) {
     const name = String(manifest.name)
-    const directory = join(root, name.replace('@deepseek-ai/', ''))
+    const directory = join(root, name.replace(/^@[^/]+\//u, ''))
     await mkdir(directory)
     await writeFile(join(directory, 'package.json'), JSON.stringify(manifest))
     if (name === providerName) {
@@ -69,7 +69,7 @@ it('fetches the macOS optional tarball only for Darwin, with an empty cache for 
     const bytes = await readFile(join(directory, 'package.tgz'))
     packages.set(name, { manifest, bytes })
     if (name === providerName) {
-      const result = await execa('tar', ['-tzf', join(directory, 'package.tgz')])
+      const result = await execa('tar', ['-tzf', 'package.tgz'], { cwd: directory })
       expect(result.stdout).toContain('package/native/bin/darwin-arm64/current.json')
       expect(result.stdout).toContain(`package/${nativePayload}`)
     }
