@@ -69,7 +69,7 @@
     "@berry-ai/harness-session-persistence": "workspace:*",
     "@berry-ai/harness-session-query": "workspace:*",
     "@berry-ai/harness-session-title": "workspace:*",
-    "react": "^18.2.0"
+    "react": "^19.3.0"
   },
   "dsh": {
     "client": {

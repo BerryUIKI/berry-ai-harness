@@ -64,7 +64,7 @@
     "@berry-ai/harness-tool-executor-ptc": "workspace:*",
     "@berry-ai/harness-tools": "workspace:*",
     "@testing-library/react": "^16.1.0",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "react-dom": "^18.2.0",
     "@berry-ai/harness-compaction": "workspace:*",
     "@berry-ai/harness-session-stats": "workspace:*",

@@ -60,7 +60,7 @@
     "@berry-ai/harness-client-ui-session": "workspace:*",
     "@berry-ai/harness-client-ui-workspace": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "clsx": "^2.0.0",
     "@berry-ai/harness-client-shortcuts": "workspace:*",
     "@berry-ai/harness-client-product-analytics": "workspace:*"
