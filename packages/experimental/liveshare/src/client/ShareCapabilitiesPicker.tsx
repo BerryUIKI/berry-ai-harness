@@ -38,8 +38,7 @@ function humanize(value: string): string {
   /* v8 ignore next -- split returns at least one element, so pop() always yields a segment. */
   const segment = value.split('/').pop() ?? value
   const words = segment
-    .replace(/^dsh-/, '')
-    .replace(/^experimental-/, '')
+    .replace(/^(?:(?:harness|dsh|experimental)-)+/, '')
     .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
     .replace(/[-_]+/g, ' ')
     .trim()
@@ -62,7 +61,7 @@ export function pluginDisplayName(group: OfferedPlugin, language: string): strin
   if (localized !== undefined && localized !== '') return localized
   const english = titles?.en
   const packageSegment = group.package?.split('/').pop()
-  const packageWords = packageSegment?.replace(/^(dsh|experimental)-/, '')
+  const packageWords = packageSegment?.replace(/^(?:(?:harness|dsh|experimental)-)+/, '')
   if (english !== undefined && english !== '' && english !== packageSegment && english !== packageWords) {
     return english
   }

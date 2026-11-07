@@ -143,7 +143,7 @@ it('copies no macOS tarball into the Windows package set', () => {
   const inputs = join(root, 'inputs')
   mkdirSync(inputs)
   for (const [name, entry] of targetManifests()) {
-    const stem = name.replace('@berry-ai/harness', 'dsh').replace('@deepseek-ai/dsh', 'dsh')
+    const stem = name.replace('@berry-ai/harness', 'dsh')
     const folder = join(root, stem, 'package')
     mkdirSync(folder, { recursive: true })
     writeFileSync(join(folder, 'package.json'), JSON.stringify(entry.manifest))
