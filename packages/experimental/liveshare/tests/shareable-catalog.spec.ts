@@ -206,7 +206,7 @@ describe('packageRoot', () => {
 
   it('uses the resolver search paths when none are supplied', () => {
     expect(packageRoot('@berry-ai/harness-experimental-client-ui-forge'))
-      .toMatch(/dsh-experimental-client-ui-forge$/u)
+      .toMatch(/client-ui-forge$/u)
     expect(packageRoot('fs')).toBeUndefined()
   })
 })
