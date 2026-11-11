@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-tool-subagent-control",
   "description": "Shared messaging, interruption, and child discovery tools for subagents",
-  "version": "0.2.2-alpha.3",
+  "version": "0.2.2-rc.1",
   "publishConfig": {
     "access": "public"
   },
@@ -57,7 +57,6 @@
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
-    "@berry-ai/harness-brand": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*"
   }
 }

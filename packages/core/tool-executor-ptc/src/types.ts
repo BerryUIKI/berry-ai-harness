@@ -64,7 +64,7 @@ declare module '@berry-ai/harness-session/types' {
 
 declare module '@berry-ai/harness-llm' {
   interface MessageSourceMap {
-    /** Images deferred from a successful PTC subcall's final result. */
+    /** PTC context, including deferred subcall images and host environment-reset notices. */
     'ptc-mode': { kind: 'ptc-mode' }
   }
 }

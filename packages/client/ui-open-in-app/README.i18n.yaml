@@ -3,32 +3,32 @@
 # After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write packages/client/ui-open-in-app/README.md
 /:
-  en: be11314755d8f4f9
-  zh: dd75b03074eea543
+  en: 8caca7252f2cf5c7
+  zh: 47a157352d33265e
 /berry-ai-harness-client-ui-open-in-app:
   en: 3002cf7ea0c4023c
   zh: 09926594f1f876f8
 /berry-ai-harness-client-ui-open-in-app/summary:
-  en: e69e4c6df4ddffa1
-  zh: d1ef0a722f48e9bd
+  en: 1e68d4eb8f246ed2
+  zh: d8bf9abe0c1cccee
 /berry-ai-harness-client-ui-open-in-app/table-of-contents:
   en: d152484eb41ac6b4
   zh: 725b47765ee8f30b
 /berry-ai-harness-client-ui-open-in-app/use-this-package:
-  en: 056e2bd9e3c78dd8
-  zh: be35d2ba53be0442
+  en: b149da9963eb9837
+  zh: 2426ea37fbd0f8b7
 /berry-ai-harness-client-ui-open-in-app/use-this-package/what-to-expect:
-  en: 51e6019f011f394e
-  zh: 818391262086ae10
+  en: e07d3a607d54cb47
+  zh: 9a7342f05b64db38
 /berry-ai-harness-client-ui-open-in-app/understand-the-implementation:
-  en: d8069f15cf39f6b0
-  zh: 11edee18a820cbd5
+  en: 0015b075f8cd4c01
+  zh: 8768f7f8fa421a49
 /berry-ai-harness-client-ui-open-in-app/further-exploration:
-  en: 562c58d589fb7afa
-  zh: 9ba88b381160cc96
+  en: 720527877e452a97
+  zh: b2241c7a336a3eeb
 /berry-ai-harness-client-ui-open-in-app/model-experience:
-  en: 5f9e6e0fb0438628
-  zh: fc9a81185ea6cb14
+  en: aad141aa922e23f7
+  zh: 18432b4f70971fa7
 /berry-ai-harness-client-ui-open-in-app/model-experience/kv-cache-effect:
   en: ca75c51c89c2c9b0
   zh: c2241315dc0c89c9

@@ -82,7 +82,7 @@ function styleInjectionModule(
  * Everything else under the workspace scopes is either a module-table entry
  * (external) or a leak the purity gate rejects.
  */
-export const INLINE_SAFE = /^(?:@berry-ai\/harness-(?:file-reference|session|llm|tools|brand|official-bundles|deque|output-retention|typert-protocol|util-crypto|util-time|util-values|util-workspace-path)(?:\/|$)|@berry-ai\/harness-util-file-drag$|@berry-ai\/harness-token-meter\/client$|@berry-ai\/harness-commands\/builtin$|@berry-ai\/harness-native-command\/types$|@berry-ai\/harness-host-open-in-app\/shared$|@berry-ai\/harness-plugin-manager\/registry$|@berry-ai\/harness-agent-preset-registry\/display$|@berry-ai\/harness-api-workspace-controller\/default-workspace$|@berry-ai\/harness-spill-policy\/notice$)/
+export const INLINE_SAFE = /^(?:@berry-ai\/harness-(?:file-reference|fs-patch|session|llm|tools|brand|official-bundles|deque|output-retention|typert-protocol|util-crypto|util-time|util-values|util-workspace-path)(?:\/|$)|@berry-ai\/harness-util-file-drag$|@berry-ai\/harness-token-meter\/client$|@berry-ai\/harness-commands\/builtin$|@berry-ai\/harness-native-command\/types$|@berry-ai\/harness-host-open-in-app\/shared$|@berry-ai\/harness-plugin-manager\/registry$|@berry-ai\/harness-agent-preset-registry\/display$|@berry-ai\/harness-api-workspace-controller\/default-workspace$|@berry-ai\/harness-spill-policy\/notice$)/
 
 /**
  * Vendored framework libraries: rescoped into @deepseek-ai, so the gate below

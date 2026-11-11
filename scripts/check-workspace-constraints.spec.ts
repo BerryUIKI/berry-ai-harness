@@ -8,6 +8,7 @@ import {
   isPublicExperimentalPackageDirectory,
   PRIVATE_EXPERIMENTAL_PACKAGE_DIRECTORIES,
   EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS,
+  LEGACY_PREFIXED_EXPERIMENTAL_PACKAGE_DIRECTORIES,
 } from './experimental-package-policy.ts'
 import {
   checkDshFamilyVersion,
@@ -22,8 +23,11 @@ import {
   type WorkspaceManifest,
 } from './check-workspace-constraints.ts'
 
+const legacyManifests = LEGACY_PREFIXED_EXPERIMENTAL_PACKAGE_DIRECTORIES
+  .map(dir => ({ dir, manifest: { name: dir.replace('packages/experimental/', '@berry-ai/harness-experimental-') } }))
+
 const experimental = {
-  dir: 'packages/experimental/prototype',
+  dir: LEGACY_PREFIXED_EXPERIMENTAL_PACKAGE_DIRECTORIES[0]!,
   manifest: {
     name: '@berry-ai/harness-experimental-prototype',
     publishConfig: { access: 'public' },
@@ -118,36 +122,51 @@ describe('workspace manifest discovery', () => {
 })
 
 describe('experimental workspace constraints', () => {
-  it('requires the experimental package-name prefix', () => {
+  it('requires an unprefixed name to have a directory entry', () => {
     expect(checkExperimentalManifest({
       ...experimental,
       manifest: { ...experimental.manifest, name: '@berry-ai/harness-prototype' },
     })).toEqual([
-      '@berry-ai/harness-prototype: experimental package name must start with "@berry-ai/harness-experimental-" or match its declared directory exception',
+      '@berry-ai/harness-prototype: experimental package name must be declared for this directory in EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS (scripts/experimental-package-policy.ts)',
     ])
   })
 
   it.each(Object.entries(EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS))('retains %s only at its declared directory', (dir, name) => {
     expect(checkExperimentalManifest({ dir, manifest: { name, publishConfig: { access: 'public' } } })).toEqual([])
     expect(checkExperimentalManifest({ ...experimental, manifest: { ...experimental.manifest, name } }))
-      .toEqual([expect.stringContaining('declared directory exception')])
+      .toEqual([expect.stringContaining('declared for this directory')])
   })
 
-  it('rejects a missing manifest name even when the directory has no exception', () => {
-    expect(checkExperimentalManifest({ ...experimental, manifest: { publishConfig: { access: 'public' } } }))
-      .toEqual([expect.stringContaining('experimental package name must start')])
+  it('rejects the legacy prefix outside the legacy directory list', () => {
+    expect(checkExperimentalManifest({ ...experimental, dir: 'packages/experimental/prototype' })).toEqual([
+      '@berry-ai/harness-experimental-prototype: new experimental packages must not use the "@berry-ai/harness-experimental-" prefix; name it @berry-ai/harness-<name> and declare it in EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS (scripts/experimental-package-policy.ts)',
+    ])
   })
 
-  it('rejects stale, moved and duplicated retained-name declarations', () => {
+  it('rejects a missing manifest name', () => {
+    expect(checkExperimentalManifest({ dir: 'packages/experimental/prototype', manifest: { publishConfig: { access: 'public' } } }))
+      .toEqual(['packages/experimental/prototype: experimental package must declare a name'])
+  })
+
+  it('rejects stale, moved and duplicated unprefixed-name declarations', () => {
     const manifests = Object.entries(EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS).map(([dir, name]) => ({ dir, manifest: { name } }))
-    expect(checkExperimentalNameExceptions(manifests)).toEqual([])
+    expect(checkExperimentalNameExceptions([...manifests, ...legacyManifests])).toEqual([])
     const [first, ...rest] = manifests
     for (const invalid of [
       rest,
       [{ ...first!, manifest: { name: '@berry-ai/harness-experimental-replacement' } }, ...rest],
       [{ ...first!, dir: 'packages/core/replacement' }, ...rest],
       [...manifests, { ...first!, dir: 'packages/experimental/duplicate' }],
-    ]) expect(checkExperimentalNameExceptions(invalid)).toEqual([expect.stringContaining(first!.manifest.name)])
+    ]) expect(checkExperimentalNameExceptions([...invalid, ...legacyManifests])).toEqual([expect.stringContaining(first!.manifest.name)])
+  })
+
+  it('rejects a legacy directory without a prefixed package', () => {
+    const unprefixed = Object.entries(EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS).map(([dir, name]) => ({ dir, manifest: { name } }))
+    const others = legacyManifests.filter(entry => entry.dir !== experimental.dir)
+    for (const invalid of [others, [...others, { dir: experimental.dir, manifest: { name: '@berry-ai/harness-renamed' } }]]) {
+      expect(checkExperimentalNameExceptions([...unprefixed, ...invalid]))
+        .toEqual([`${experimental.dir}: remove this directory from LEGACY_PREFIXED_EXPERIMENTAL_PACKAGE_DIRECTORIES; no package with the legacy prefix lives here`])
+    }
   })
 
   it.each(Object.values(EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS))('rejects retained runtime names and aliases: %s', (name) => {
@@ -205,27 +224,27 @@ describe('experimental workspace constraints', () => {
         dir: 'packages/core/consumer',
         manifest: {
           name: '@berry-ai/harness-consumer',
-          [section]: { [experimental.manifest.name]: 'workspace:^' },
+          [section]: { '@berry-ai/harness-experimental-prototype': 'workspace:^' },
         },
       }])).toEqual([
-        `@berry-ai/harness-consumer: ${section}.${experimental.manifest.name} must not reference an experimental package`,
+        `@berry-ai/harness-consumer: ${section}.@berry-ai/harness-experimental-prototype must not reference an experimental package`,
       ])
     },
   )
 
   it('allows the dsh installation to ship the optional bundles the launcher names, and nothing else experimental', () => {
-    const listed = { [experimental.manifest.name]: 'workspace:^' }
+    const listed = { '@berry-ai/harness-experimental-prototype': 'workspace:^' }
     const installation = { dir: 'apps/cli', manifest: { name: '@berry-ai/harness', dependencies: listed } } satisfies WorkspaceManifest
-    expect(checkExperimentalDependencyIsolation([experimental, installation], [experimental.manifest.name])).toEqual([])
+    expect(checkExperimentalDependencyIsolation([experimental, installation], ['@berry-ai/harness-experimental-prototype'])).toEqual([])
     expect(checkExperimentalDependencyIsolation([experimental, installation], [])).toEqual([
-      `@berry-ai/harness: dependencies.${experimental.manifest.name} must not reference an experimental package`,
+      '@berry-ai/harness: dependencies.@berry-ai/harness-experimental-prototype must not reference an experimental package',
     ])
     // Only a plain dependency edge is offered; a peer would make the bundle a requirement of every consumer.
     expect(checkExperimentalDependencyIsolation([experimental, {
       dir: 'apps/cli',
       manifest: { name: '@berry-ai/harness', peerDependencies: listed },
-    }], [experimental.manifest.name])).toEqual([
-      `@berry-ai/harness: peerDependencies.${experimental.manifest.name} must not reference an experimental package`,
+    }], ['@berry-ai/harness-experimental-prototype'])).toEqual([
+      '@berry-ai/harness: peerDependencies.@berry-ai/harness-experimental-prototype must not reference an experimental package',
     ])
   })
 
@@ -234,24 +253,24 @@ describe('experimental workspace constraints', () => {
       dir: 'packages/core/test-only',
       manifest: {
         name: '@berry-ai/harness-test-only',
-        devDependencies: { [experimental.manifest.name]: 'workspace:^' },
+        devDependencies: { '@berry-ai/harness-experimental-prototype': 'workspace:^' },
       },
     }, {
       dir: 'packages/experimental/consumer',
       manifest: {
         name: '@berry-ai/harness-experimental-consumer',
-        dependencies: { [experimental.manifest.name]: 'workspace:^' },
+        dependencies: { '@berry-ai/harness-experimental-prototype': 'workspace:^' },
       },
     }, {
       dir: 'python/sdk-runtime',
       manifest: {
         name: '@berry-ai/harness-python-runtime',
-        dependencies: { [experimental.manifest.name]: 'workspace:^' },
+        dependencies: { '@berry-ai/harness-experimental-prototype': 'workspace:^' },
       },
     }]
 
     expect(checkExperimentalDependencyIsolation(manifests)).toEqual([
-      `@berry-ai/harness-python-runtime: dependencies.${experimental.manifest.name} must not reference an experimental package`,
+      '@berry-ai/harness-python-runtime: dependencies.@berry-ai/harness-experimental-prototype must not reference an experimental package',
     ])
   })
 })
@@ -527,7 +546,7 @@ it('publishes CLI runtime declarations and rejects a payload that omits them', (
   const manifest = JSON.parse(readFileSync(new URL('../apps/cli/package.json', import.meta.url), 'utf8')) as WorkspaceManifest['manifest']
   expect(checkWorkspaceManifest({ dir: 'apps/cli', manifest })).toEqual([])
   expect(checkWorkspaceManifest({ dir: 'apps/cli', manifest: { ...manifest, files: ['lib/*.js'] } }))
-    .toEqual([expect.stringContaining(`${manifest.name}: package.json files must be ["lib/*.js","lib/types/*.d.ts"]`)])
+    .toEqual([expect.stringContaining('@berry-ai/harness: package.json files must be ["lib/*.js","lib/types/*.d.ts"]')])
 })
 
 it('requires the shared Web injection entry in the published payload', () => {

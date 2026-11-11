@@ -9,20 +9,20 @@
   en: cb00e03f6263550c
   zh: d6fc9f948f6738ac
 /berry-ai-harness-tool-executor-ptc/summary:
-  en: 66e159c308afb6c1
-  zh: 29b1a646ae7f918a
+  en: 351b679ea266c40e
+  zh: 72337ba82be757df
 /berry-ai-harness-tool-executor-ptc/table-of-contents:
   en: d152484eb41ac6b4
   zh: 09388d293f9be9cb
 /berry-ai-harness-tool-executor-ptc/use-this-package:
-  en: a61df79f67c74025
-  zh: 1fb59dc095dc2786
+  en: 6c53eb05a358be20
+  zh: 40264cfe16feb8d3
 /berry-ai-harness-tool-executor-ptc/understand-the-implementation:
-  en: 9d4f61c351945d30
-  zh: 1c575526230b0e02
+  en: 78708b3779d999a9
+  zh: ad6173f9f01630de
 /berry-ai-harness-tool-executor-ptc/understand-the-implementation/ptc-mode:
-  en: 48f90d4c78ba69d7
-  zh: 5dcbbf23ebc1b803
+  en: 5623dd6cdd26bda2
+  zh: 0b93be49e84ef52c
 /berry-ai-harness-tool-executor-ptc/further-exploration:
   en: ee69078c38c655a9
   zh: fb0873407f23c8c5
@@ -33,20 +33,23 @@
   en: eaefd7303f22977d
   zh: 9c425f9501128224
 /berry-ai-harness-tool-executor-ptc/model-experience/ptc-mode-schema-and-system-prompt/what-the-model-sees:
-  en: d9169454723f6731
-  zh: 599f642091c7fa1d
+  en: f9db9c2d8a7372e2
+  zh: c724070ce85f0189
 /berry-ai-harness-tool-executor-ptc/model-experience/ptc-mode-schema-and-system-prompt/what-the-model-sees/typescript-ptc-mode-sdk-instructions-with-bash:
   en: 3a8df15e4ae32f9e
   zh: fc4a800ba363e835
+/berry-ai-harness-tool-executor-ptc/model-experience/ptc-mode-schema-and-system-prompt/what-the-model-sees/tool-call-allowance-exhausted:
+  en: 079e063e47dff7ed
+  zh: 271ee8bb3441eb2e
 /berry-ai-harness-tool-executor-ptc/model-experience/ptc-mode-schema-and-system-prompt/token-effect:
-  en: 12296fcafc14562c
-  zh: f8e9351bb8c6437d
+  en: 0ae2c687fcf8f300
+  zh: 8a1c5a88a1ca9bbe
 /berry-ai-harness-tool-executor-ptc/model-experience/ptc-mode-schema-and-system-prompt/kv-cache-effect:
-  en: 78906628d634441f
-  zh: 492f133aea50cfe3
+  en: 4bf1cd2890cfe6c4
+  zh: 5b230b0adc09ddfb
 /berry-ai-harness-tool-executor-ptc/known-limitations-and-deferred-work:
-  en: 5030c17a9c6a2a85
-  zh: 6334bbe1a1d19cb4
+  en: 86d79fbb28aced73
+  zh: aac0ffa1c3ad5e9a
 /berry-ai-harness-tool-executor-ptc/known-limitations-and-deferred-work/dev-note:
   en: e67f633dc6fe7773
   zh: 3bb0c20c93f16f98
