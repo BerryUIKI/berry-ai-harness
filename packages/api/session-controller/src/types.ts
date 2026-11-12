@@ -8,7 +8,7 @@ import type {
 import type { Branded } from '@berry-ai/harness-brand'
 import type { LlmAttemptId, MessageId } from '@berry-ai/harness-llm/brand'
 import type { LlmModelBadge, TextBlock } from '@berry-ai/harness-llm'
-import type { SessionId, SessionSeqCursor } from '@berry-ai/harness-session/types'
+import type { SessionId, SessionSeq, SessionSeqCursor } from '@berry-ai/harness-session/types'
 import type { SessionProjectionMap, SessionProjectionSummaryExcluded, SessionProjectionSummaryValues } from '@berry-ai/harness-session-projection/types'
 import type { Principal } from '@berry-ai/harness-typert-protocol'
 import type { JsonValue } from '@berry-ai/harness-util-values'
@@ -16,6 +16,8 @@ import type { WorkspaceId } from '@berry-ai/harness-workspace/types'
 
 declare module '@berry-ai/harness-session-projection/types' {
   interface SessionProjectionMap {
+    /** Eligible latest failed turn/end for an empty prompt, or null. */
+    conversationContinuation: SessionSeq | null
     /** Persisted facts used to summarize a Session without activating it. */
     sessionListMetadata: SessionListMetadata
     /**
@@ -320,11 +322,11 @@ export interface SessionForkValue {
 
 /** Session prompt request. */
 export interface SessionPromptRequest {
-  /** Client-minted identity persisted on the exact accepted user message. */
+  /** Client-minted identity persisted on the accepted inbox input, including empty continuation. */
   readonly requestId: SessionRequestId
   readonly sessionId: SessionId
   readonly mode: 'queue' | 'steer'
-  /** At least one non-whitespace text part or attachment. */
+  /** Non-whitespace text or attachments; an empty array continues an eligible failed idle Session. */
   readonly content: readonly PromptContentPart[]
   readonly clientTimeZone?: string
 }
@@ -396,6 +398,8 @@ declare module '@berry-ai/harness-llm' {
      * caller other than the owner, so an absent `principal` means the owner.
      */
     'user-rpc': { kind: 'user'; rpcId: SessionRequestId; clientTimeZone?: string; principal?: Principal }
+    /** Empty retry user message with browser prompt correlation and caller metadata. */
+    'retry-rpc': { kind: 'retry'; rpcId: SessionRequestId; clientTimeZone?: string; principal?: Principal }
   }
 }
 

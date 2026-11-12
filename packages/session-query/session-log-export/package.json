@@ -1,7 +1,7 @@
 {
   "name": "@berry-ai/harness-session-log-export",
   "description": "Web Session-log ZIP export and Session Markdown copy",
-  "version": "0.2.2-alpha.3",
+  "version": "0.2.2-rc.1",
   "publishConfig": {
     "access": "public"
   },
@@ -57,12 +57,12 @@
     "@berry-ai/harness-client-locale": "workspace:*",
     "@berry-ai/harness-client-store": "workspace:*",
     "@berry-ai/harness-client-ui-commands": "workspace:*",
+    "@berry-ai/harness-client-ui-context-menu": "workspace:*",
     "@berry-ai/harness-client-ui-conversation": "workspace:*",
     "@berry-ai/harness-client-ui-layout": "workspace:*",
     "@berry-ai/harness-client-ui-message-feedback": "workspace:*",
     "@berry-ai/harness-client-ui-primitives": "workspace:*",
     "@berry-ai/harness-client-ui-renderer": "workspace:*",
-    "@berry-ai/harness-client-ui-session": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-commands": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
@@ -76,10 +76,10 @@
       "inject": [
         "@berry-ai/harness-client-locale",
         "@berry-ai/harness-client-ui-commands",
+        "@berry-ai/harness-client-ui-context-menu",
         "@berry-ai/harness-client-ui-conversation",
         "@berry-ai/harness-client-ui-layout",
-        "@berry-ai/harness-client-ui-renderer",
-        "@berry-ai/harness-client-ui-session"
+        "@berry-ai/harness-client-ui-renderer"
       ],
       "platform": "web"
     }
