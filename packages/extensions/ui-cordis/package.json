@@ -63,7 +63,7 @@
     "@berry-ai/harness-client-ui-tool": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "react": "^18.2.0"
+    "react": "^19.3.0"
   },
   "files": [
     "locale/*.json",

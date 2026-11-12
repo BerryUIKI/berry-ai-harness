@@ -70,6 +70,6 @@
     "@berry-ai/harness-tool-workflow": "workspace:*",
     "@berry-ai/harness-workflow": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "react": "^18.2.0"
+    "react": "^19.3.0"
   }
 }

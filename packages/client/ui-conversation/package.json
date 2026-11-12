@@ -83,7 +83,7 @@
     "@berry-ai/harness-workspace": "workspace:*",
     "@berry-ai/harness-file-reference": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@lexical/headless": "^0.49.0",
     "react-dom": "^18.2.0",
     "lexical": "^0.49.0",

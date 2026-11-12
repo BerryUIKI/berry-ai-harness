@@ -49,7 +49,7 @@
     "@berry-ai/harness-client-ui-primitives": "workspace:*",
     "@berry-ai/harness-client-ui-renderer": "workspace:*",
     "@berry-ai/harness-client-ui-layout": "workspace:*",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
     "@berry-ai/harness-util-file-drag": "workspace:*",
     "@berry-ai/harness-util-crypto": "workspace:*",

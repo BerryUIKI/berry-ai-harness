@@ -127,7 +127,7 @@
     "@berry-ai/harness-client-ui-settings": "workspace:*",
     "@berry-ai/harness-client-ui-layout": "workspace:*",
     "@berry-ai/harness-client-test-runtime": "workspace:*",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "react-dom": "^18.2.0",
     "@testing-library/react": "^16.1.0",
     "@berry-ai/harness-loader-smoke": "workspace:*",
