@@ -81,7 +81,7 @@
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-util-workspace-path": "workspace:*",
     "clsx": "^2.0.0",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@berry-ai/harness-client-shortcuts": "workspace:*",
     "@berry-ai/harness-client-product-analytics": "workspace:*",
     "@berry-ai/harness-client-ui-context-menu": "workspace:*"

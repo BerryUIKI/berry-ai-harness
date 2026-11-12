@@ -57,7 +57,7 @@
     "@berry-ai/harness-remote-mock": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
-    "react": "^18.2.0"
+    "react": "^19.3.0"
   },
   "files": [
     "locale/*.json",

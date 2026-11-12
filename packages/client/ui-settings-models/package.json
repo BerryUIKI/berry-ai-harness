@@ -54,7 +54,7 @@
     "@berry-ai/harness-client-ui-settings": "workspace:*",
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@berry-ai/harness-client-ui-renderer": "workspace:*",
     "@berry-ai/harness-util-values": "workspace:*",
     "@berry-ai/harness-remote-mock": "workspace:*",

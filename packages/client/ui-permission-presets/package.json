@@ -65,7 +65,7 @@
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-permission-presets": "workspace:*",
     "clsx": "^2.0.0",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@berry-ai/harness-client-ui-renderer": "workspace:*",
     "@berry-ai/harness-client-ui-session": "workspace:*"
   },

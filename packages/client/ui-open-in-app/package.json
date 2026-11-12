@@ -79,7 +79,7 @@
     "@berry-ai/harness-client-ui-slots": "workspace:*",
     "@berry-ai/harness-host-open-in-app": "workspace:*",
     "@berry-ai/harness-session": "workspace:*",
-    "react": "^18.2.0",
+    "react": "^19.3.0",
     "@berry-ai/harness-client-ui-deliverables": "workspace:*",
     "@berry-ai/harness-native-command": "workspace:*",
     "@berry-ai/harness-client-shortcuts": "workspace:*",
